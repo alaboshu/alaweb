@@ -1,31 +1,33 @@
 import Vue from 'vue'
 import App from './App'
-import wxService from './api/wxService'
-import httpService from './api/httpService'
+
 
 Vue.config.productionTip = false
 App.mpType = 'app'
-Vue.mixin({
-  data() {
-    return {
-      service: '',
-      router: '',
-      imgSrc: ''
-    }
-  },
-  created() {
-    if (window) {
-      console.log('chrome')
-      this.service = httpService
-      this.router = '/#'
-      this.imgSrc = '../..'
-    } else {
-      console.log('wx')
-      this.service = wxService
-      this.imgSrc = '/static'
-    }
-  }
-})
+
+// import wxService from './api/wxService'
+// import httpService from './api/httpService'
+// Vue.mixin({
+//   data() {
+//     return {
+//       service: '',
+//       router: '',
+//       imgSrc: ''
+//     }
+//   },
+//   created() {
+//     if (window) {
+//       console.log('chrome')
+//       this.service = httpService
+//       this.router = '/#'
+//       this.imgSrc = '../..'
+//     } else {
+//       console.log('wx')
+//       this.service = wxService
+//       this.imgSrc = '/static'
+//     }
+//   }
+// })
 
 const app = new Vue(App)
 app.$mount()

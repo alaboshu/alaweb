@@ -25,7 +25,7 @@ function getEntry(rootSrc, pattern) {
 const appEntry = {
   app: resolve('./src/main.js')
 }
-const pagesEntry = getEntry(resolve('./src'), 'pages/**/main.js')
+const pagesEntry = getEntry(resolve('./src'), 'pages/**.vue')
 // const entry = Object.assign({}, appEntry, pagesEntry)
 
 
@@ -47,12 +47,14 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      vue: 'mpvue',
+      'vue': 'mpvue',
       src: path.resolve(__dirname, '../src'),
       static: path.resolve(__dirname, '../static'),
       '@': resolve('src')
     },
-    symlinks: false
+    symlinks: false,
+    aliasFields: ['mpvue', 'weapp', 'browser'],
+    mainFields: ['browser', 'module', 'main']
   },
   module: {
     rules: [{
