@@ -1,15 +1,21 @@
-const webpack = require('webpack')
-const merge = require('webpack-merge')
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
-const utils = require('./utils')
-const config = require('../config')
-const baseWebpackConfig = require('./webpack.base.conf')
+var utils = require('./utils')
+var webpack = require('webpack')
+var config = require('../config')
+var merge = require('webpack-merge')
+var baseWebpackConfig = require('./webpack.base.conf')
+// var HtmlWebpackPlugin = require('html-webpack-plugin')
+var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
 // copy from ./webpack.prod.conf.js
-const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+var path = require('path')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var CopyWebpackPlugin = require('copy-webpack-plugin')
+var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+
+// add hot-reload related code to entry chunks
+// Object.keys(baseWebpackConfig.entry).forEach(function (name) {
+//   baseWebpackConfig.entry[name] = ['./build/dev-client'].concat(baseWebpackConfig.entry[name])
+// })
 
 module.exports = merge(baseWebpackConfig, {
   module: {
@@ -23,6 +29,8 @@ module.exports = merge(baseWebpackConfig, {
   devtool: '#source-map',
   output: {
     path: config.build.assetsRoot,
+    // filename: utils.assetsPath('js/[name].[chunkhash].js'),
+    // chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
     filename: utils.assetsPath('js/[name].js'),
     chunkFilename: utils.assetsPath('js/[id].js')
   },
@@ -30,9 +38,11 @@ module.exports = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': config.dev.env
     }),
+
     // copy from ./webpack.prod.conf.js
     // extract css into its own file
     new ExtractTextPlugin({
+      // filename: utils.assetsPath('css/[name].[contenthash].css')
       filename: utils.assetsPath('css/[name].wxss')
     }),
     // Compress extracted CSS. We are using this plugin so that possible
@@ -65,7 +75,16 @@ module.exports = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ]),
+
+    // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
+    // new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    // https://github.com/ampedandwired/html-webpack-plugin
+    // new HtmlWebpackPlugin({
+    //   filename: 'index.html',
+    //   template: 'index.html',
+    //   inject: true
+    // }),
     new FriendlyErrorsPlugin()
   ]
 })

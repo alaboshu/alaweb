@@ -6,7 +6,6 @@ export default {
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    // eslint-disable-next-line
     console.log('app created and cache logs by setStorageSync')
   }
 }
