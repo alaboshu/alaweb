@@ -1,5 +1,5 @@
 <template>
-  <div>dddd</div>
+  <div>d对对对ddd</div>
 </template>
 <script>
 
@@ -137,7 +137,7 @@
     padding-bottom: 55px;
     top: 0px;
     /* margin-right: 15px;
-              margin-left: 15px; */
+                margin-left: 15px; */
     position: relative;
   }
   .chat_li {
