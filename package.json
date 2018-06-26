@@ -6,11 +6,11 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js ",
-    "devH5": "webpack-dev-server --inline --progress --config buildH5/webpack.devH5.conf.js",
+    "devH5": "webpack-dev-server --inline --progress --config build/webpack.devH5.conf.js",
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
     "all": "npm run dev && npm run devH5",
-    "buildH5": "cross-env NODE_ENV=production ENV=sit webpack --config buildH5/webpack.proH5.conf.js",
+    "buildH5": "cross-env NODE_ENV=production ENV=sit webpack --config build/webpack.proH5.conf.js",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
