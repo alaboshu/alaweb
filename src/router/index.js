@@ -10,5 +10,9 @@ export default new Router({
     path: '/',
     name: 'index',
     component: Chat,
+  }, {
+    path: '/test',
+    name: 'test',
+    component: '../pages/test1.vue'
   }]
 })
