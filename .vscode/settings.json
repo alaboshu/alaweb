@@ -15,12 +15,15 @@
   "prettier.eslintIntegration": true,
   "prettier.singleQuote": true,
   "eslint.run": "onSave",
-  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
   "vetur.format.styleInitialIndent": true,
   "vetur.format.scriptInitialIndent": true,
   "editor.wordWrapColumn": 300,
   "[markdown]": {
     "editor.wordWrap": "off",
     "editor.quickSuggestions": false
-  }
+  },
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "typescript.format.insertSpaceAfterConstructor": true,
+  "javascript.format.insertSpaceAfterConstructor": true
 }

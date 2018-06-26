@@ -12,6 +12,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     // 'no-tabs': 0,
     indent: 0,
+    'space-before-function-parentheses': 0,
     'no-multiple-empty-lines': 0,
 
     //  要求使用 === 和 !== (eqeqeq)  否则错误
