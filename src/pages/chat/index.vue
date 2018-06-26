@@ -1,5 +1,8 @@
 <template>
-  <div>d对对对ddd</div>
+  <div>
+    <a href="/test">测试连接</a>
+  </div>
+
 </template>
 <script>
 
@@ -137,7 +140,7 @@
     padding-bottom: 55px;
     top: 0px;
     /* margin-right: 15px;
-                margin-left: 15px; */
+                    margin-left: 15px; */
     position: relative;
   }
   .chat_li {

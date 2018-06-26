@@ -1,5 +1,5 @@
 <template>
   <div id="app">
-    <span>test</span>
+    <a href="/test">首页</a>
   </div>
 </template>
