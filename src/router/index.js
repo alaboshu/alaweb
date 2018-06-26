@@ -5,8 +5,7 @@ import Chat from '../pages/chat/index.vue'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'index',
       component: Chat
@@ -18,9 +17,10 @@ export default new Router({
         login: true
       },
       name: 'default',
-      component: function(resolve) {
+      component: function (resolve) {
         require(['../pages/test1.vue'], resolve)
       }
     }
-  ]
+  ],
+  mode: 'history' // 路由模式
 })

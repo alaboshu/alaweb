@@ -20,7 +20,9 @@ function getEntry(rootSrc, pattern) {
   }, {})
 }
 
-const appEntry = { app: resolve('./src/main.js') }
+const appEntry = {
+  app: resolve('./src/main.js')
+}
 const pagesEntry = getEntry(resolve('./src'), 'pages/**/main.js')
 const entry = Object.assign({}, appEntry, pagesEntry)
 
@@ -33,10 +35,8 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
-    publicPath:
-      process.env.NODE_ENV === 'production'
-        ? config.build.assetsPublicPath
-        : config.dev.assetsPublicPath
+    publicPath: process.env.NODE_ENV === 'production' ?
+      config.build.assetsPublicPath : config.dev.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -49,8 +49,7 @@ module.exports = {
     symlinks: false
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.vue$/,
         loader: 'mpvue-loader',
         options: vueLoaderConfig
