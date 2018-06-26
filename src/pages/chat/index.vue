@@ -1,7 +1,5 @@
 <template>
-  <div class="container">
-    测试页面
-  </div>
+  <div>dddd</div>
 </template>
 <script>
 
@@ -139,7 +137,7 @@
     padding-bottom: 55px;
     top: 0px;
     /* margin-right: 15px;
-        margin-left: 15px; */
+              margin-left: 15px; */
     position: relative;
   }
   .chat_li {
