@@ -1,5 +1,5 @@
 <template>
   <div id="app">
-    <a href="/test">首页</a>
+    <a href="/pages/main/chat/index">首页</a>
   </div>
 </template>

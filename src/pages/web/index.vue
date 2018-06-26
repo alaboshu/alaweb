@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a href="/pages/web/main">测试连接</a>
+    <a href="/pages/chat/main">测试连接</a>
   </div>
 
 </template>

@@ -26,10 +26,14 @@ const appEntry = {
 const pagesEntry = getEntry(resolve('./src'), 'pages/**/main.js')
 const entry = Object.assign({}, appEntry, pagesEntry)
 
+// const MpvueEntry = require('mpvue-entry')
+
 module.exports = {
   // 如果要自定义生成的 dist 目录里面的文件路径，
   // 可以将 entry 写成 {'toPath': 'fromPath'} 的形式，
   // toPath 为相对于 dist 的路径, 例：index/demo，则生成的文件地址为 dist/index/demo.js
+  // 通过 src/pages.js 来配置要打包的页面，
+  //entry: MpvueEntry.getEntry('./src/pages.js'),
   entry,
   target: require('mpvue-webpack-target'),
   output: {
