@@ -56,7 +56,6 @@ npm run build --report
 
 **移动端 & 小程序**
 
-![移动端](./static/res/readmeImg/demo_web.gif) ![小程序](./static/res/readmeImg/demo_wx.gif)
 
 ## Contribution
 

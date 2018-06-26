@@ -6,7 +6,7 @@ var baseWebpackConfig = require('./webpack.base.conf')
 // var HtmlWebpackPlugin = require('html-webpack-plugin')
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
-// copy from ./webpack.prod.conf.js
+// copy from ./webpack.pro.conf.js
 var path = require('path')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -39,7 +39,7 @@ module.exports = merge(baseWebpackConfig, {
       'process.env': config.dev.env
     }),
 
-    // copy from ./webpack.prod.conf.js
+    // copy from ./webpack.pro.conf.js
     // extract css into its own file
     new ExtractTextPlugin({
       // filename: utils.assetsPath('css/[name].[contenthash].css')
