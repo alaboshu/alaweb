@@ -2,8 +2,7 @@
   <div>
     <a href="/pages/web/main">测试连接</a>
     <a href="/pages/chat/index">首页</a>
-    <a href="/pages/product/index1">商品已</a>
-    <a href="/pages/product/index">商品已</a>
+    <a href="/pages/chat/index2">连接二</a>
   </div>
 
 </template>
@@ -143,7 +142,7 @@
     padding-bottom: 55px;
     top: 0px;
     /* margin-right: 15px;
-                                    margin-left: 15px; */
+                                  margin-left: 15px; */
     position: relative;
   }
   .chat_li {

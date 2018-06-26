@@ -11,31 +11,17 @@ function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
-function getEntry(rootSrc, pattern) {
-  var files = glob.sync(path.resolve(rootSrc, pattern))
-  console.info('文件', files)
-  return files.reduce((res, file) => {
-    var info = path.parse(file)
-    var key = info.dir.slice(rootSrc.length + 1) + '/' + info.name
-    res[key] = path.resolve(file)
-    return res
-  }, {})
-}
-
-const appEntry = {
-  app: resolve('./src/main.js')
-}
-const pagesEntry = getEntry(resolve('./src'), 'pages/**.vue')
-// const entry = Object.assign({}, appEntry, pagesEntry)
-
-
+console.info('base.config开始编译')
+var files = MpvueEntry.getEntry('./src/pages.js')
+console.info(files)
 
 module.exports = {
   // 如果要自定义生成的 dist 目录里面的文件路径，
   // 可以将 entry 写成 {'toPath': 'fromPath'} 的形式，
   // toPath 为相对于 dist 的路径, 例：index/demo，则生成的文件地址为 dist/index/demo.js
   // 通过 src/pages.js 来配置要打包的页面，
-  entry: MpvueEntry.getEntry('./src/pages.js'),
+  // // https://github.com/F-loat/mpvue-entry
+  entry: files,
   // entry,
   target: require('mpvue-webpack-target'),
   output: {
