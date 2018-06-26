@@ -1,49 +1,71 @@
-'use strict'
-// 文件操作，在微信小程序中，不引用
-var glob = require('glob')
-var ROOT_PATH = path.resolve(__dirname)
-var APP_PATH = path.resolve(ROOT_PATH, 'app')
 const fs = require('fs')
-export default {
-  // 写入文件
-  write(path, data) {
-    fs.writeFile(path, data, function (err) {
-      if (err) {
-        console.log(err)
-      } else {
-        console.log('ok')
-      }
-    })
-  },
-  // 读取文件
-  read(path) {
-    fs.readFile(path, function (err, data) {
-      if (err) {
-        console.log(err)
-      } else {
-        console.log(data)
-        console.log(data.length + 'bayes')
-      }
-    })
-  },
+const path = require('path')
 
-  resolve(dir) {
-    return path.join(__dirname, '..', dir)
+/**
+ * 文件监听函数
+ * @param {(String|String[])} files
+ * @param {Function} callback
+ */
+function watchFile(files, callback) {
+  [].concat(files).forEach((file) => {
+    let timer
+    fs.watch(file, () => {
+      if (timer) clearTimeout(timer)
+      timer = setTimeout(() => callback(file), 50)
+    })
+  })
+}
+
+/**
+ * 文件写入函数
+ * @param {String} file
+ * @param {*} data
+ */
+function writeFile(file, data) {
+  return new Promise((resolve, reject) => {
+    fs.writeFile(file, data, (err) => {
+      if (err) reject(err)
+      resolve()
+    })
+  })
+}
+
+/**
+ * 文件移除函数
+ * @param {(String|String[])} files
+ */
+function removeFile(files) {
+  return [].concat(files).map(file =>
+    new Promise((resolve, reject) => {
+      fs.unlink(file, (err) => {
+        if (err && err.code !== 'ENOENT') reject(err)
+        resolve()
+      })
+    }))
+}
+
+/**
+ * 依赖获取函数
+ * @param {String} file
+ */
+function resolveFile(file) {
+  const files = [file]
+  const fileDir = path.dirname(require.resolve(file))
+  const fileData = fs.readFileSync(file).toString()
+  const regexp = /require\(['|"](.*)['|"]\)/g
+
+  while (regexp.exec(fileData) !== null) {
+    const modulePath = path.join(fileDir, RegExp.$1)
+    files.push(require.resolve(modulePath))
   }
 
-  // 获取页面上所有的vue文件
-  // 示列：const pagesEntry = getEntry(resolve('./src'), 'pages/**.v
-  getPage(rootSrc, pattern) {
-    // 同步获取指定文件（App_PATH）夹下的文件（全部.js文件）
-    var entryFiles = glob.sync(APP_PATH + '/*.js')
-    var files = glob.sync(path.resolve(rootSrc, pattern))
-    console.info('文件', files)
-    return files.reduce((res, file) => {
-      var info = path.parse(file)
-      var key = info.dir.slice(rootSrc.length + 1) + '/' + info.name
-      res[key] = path.resolve(file)
-      return res
-    }, {})
-  }
+  return files
+}
 
+
+module.exports = {
+  watchFile,
+  writeFile,
+  removeFile,
+  resolveFile
 }
