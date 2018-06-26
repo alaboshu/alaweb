@@ -4,122 +4,13 @@
   </div>
 </template>
 <script>
-  import Chat from '../../services/chatService'
-  import util from '../../utils/util'
-  import { setTimeout } from 'timers';
+
   import store from '../../vuex/store'
   export default {
     name: "chat",
-    data () {
-      return {
-        chatService: new Chat(),
-        chatList: [{
-          position: 'left',
-          word: {
-            answer: '你好，欢迎和我聊天，有什么可以帮助你的吗？',
-            type: 'sentence'
-          },
-          type: 1,
-          dateTime: util.nowDate('yyyy-mm-dd hh:mm:ss')
-        }],
-        question: '',
-        userInfo: {},
-        height: '',
-        isInput: true,
-        qusList: [],
-        sendBtn: false,
-        isQusList: true,
-      }
-    },
-    methods: {
-      getAnswer (word) {
-        this.isInput = false;
-        let question = {
-          position: 'right',
-          word: word,
-          type: 1,
-          dateTime: util.nowDate('yyyy-mm-dd hh:mm:ss')
-        }
-        this.service.pageScrollTo();
-        this.chatList.push(question)
-        this.chatService.getChatAnswer(this.service, word).then(data => {
-          let answer = {
-            position: 'left',
-            word: data.data,
-            type: 1,
-            dateTime: util.nowDate('yyyy-mm-dd hh:mm:ss')
-          }
-          this.chatList.push(answer)
-          setTimeout(() => {
-            this.service.pageScrollTo().then(data => {
-              setTimeout(() => {
-                this.isInput = true;
-              }, 500)
-            })
-          }, 100);
-          this.question = ''
-        }).catch(err => {
-          console.log('接口错误', err)
-        })
-      },
-      autoReload () {
-        setTimeout(() => {
-          this.getQuestion()
-          this.autoReload()
-        }, 20000)
-      },
-      getUserInfo () {
-        this.service.getUserInfo().then(data => {
-          this.userInfo = data.userInfo;
-        })
-      },
-      getQuestion () {
-        this.isQusList = false;
-        this.chatService.getChatQus(this.service).then(data => {
-          this.isQusList = true;
-          this.qusList = data.data.questions;
-        }).catch(err => {
-          console.log('接口错误', err)
-        })
-      },
-      getDetail (item) {
-        store.commit('stockDetail', item)
-        this.service.navigatePageTo(this.router + '/pages/chatDetail/main')
-      },
-      getStockMsg (item) {
-        store.commit('stockDetail', item)
-        this.service.navigatePageTo(this.router + '/pages/chatDetail/main')
-      },
-      qusCtx (ctx) {
-        if (ctx != '') {
-          this.sendBtn = true;
-        } else {
-          this.sendBtn = false;
-        }
-      },
-      chatAttitue (item, att, index) {
-        let data = {
-          question: index >= 1 ? this.chatList[index - 1].word : '',
-          answer: typeof (item.word.answer) == 'string' ? item.word.answer : JSON.stringify(item.word.answer),
-          evaluation: att
-        }
-        this.chatService.getChatEvaluation(this.service, data).then(data => {
-          alert('反馈成功')
-        })
-      },
-      moreStock (index) {
-        let qus = this.chatList[index - 1].word;
-        this.service.navigatePageTo(this.router + '/pages/stockList/main?qus=' + qus)
-      },
-      upload (event) {
-        console.log('record', event)
-        let file = event.target.files[0];
-      }
-    },
+
     created () {
-      this.getUserInfo()
-      this.getQuestion()
-      this.autoReload()
+
     }
   }
 
@@ -248,7 +139,7 @@
     padding-bottom: 55px;
     top: 0px;
     /* margin-right: 15px;
-    margin-left: 15px; */
+        margin-left: 15px; */
     position: relative;
   }
   .chat_li {

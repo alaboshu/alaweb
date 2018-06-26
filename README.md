@@ -1,4 +1,4 @@
-# 选股机器人（移动端/小程序）
+# ZKWeb商城系统（移动端/小程序）
 
 **A Vue + Mpvue Project**（一体化移动端与小程序开发）
 
@@ -8,7 +8,7 @@
 
 ## 简介
 
-> [一个同时支持移动端与小程序的聊天机器人](https://www.jianshu.com/p/91e566bfeedf)
+> [一个同时支持移动端与小程序]
 
 ## Build Setup
 
@@ -35,21 +35,20 @@ npm run build --report
 ## 重要！！！
 
 - 请在`project.config.json`文件,`appid`处填写自己注册的微信 appid;
-- [echarts-for-weixin](https://github.com/ecomfe/echarts-for-weixin)**支持微信版本 >= 6.6.3，对应基础库版本 >= 1.9.91**。
+
 
 ## 特性
 
 - 使用 `Vue.js` 构建移动端应用
 - 使用 `mpvue` 复用代码构建小程序应用
 - 使用 [Vuex](https://github.com/vuejs/vuex) 数据管理方案，方便构建复杂应用
-- 使用 [webpack](https://github.com/webpack/webpack) 构建机制：自定义构建策略、开发阶段 hotReload
-- 支持使用 [npm](https://github.com/npm/npm) 外部依赖
+
 
 ## 插件
 
-- [Echarts](https://github.com/apache/incubator-echarts)
+-
   一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari 等），底层依赖轻量级的矢量图形库 ZRender，提供直观，交互丰富，可高度个性化定制的数据可视化图表。
-- [Day.js](https://github.com/iamkun/dayjs)
+-
   一个轻量的处理时间和日期的 JavaScript 库，和 Moment.js 的 API 设计保持完全一样. 如果您曾经用过 Moment.js, 那么您已经知道如何使用 Day.js
 
 ## 截图
@@ -59,11 +58,11 @@ npm run build --report
 
 ## Contribution
 
-[RuShi](https://github.com/zz570557024)
+
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
+
 
 ## 其它脚本
 
