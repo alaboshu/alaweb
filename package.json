@@ -8,6 +8,9 @@
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
+    "devH5": "webpack-dev-server --inline --progress --config buildH5/webpack.devH5.conf.js",
+    "buildH5": "cross-env NODE_ENV=production ENV=sit webpack --config buildH5/webpack.proH5.conf.js",
+    "all": "npm run dev && npm run devH5",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {

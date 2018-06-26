@@ -1,0 +1,26 @@
+{
+  "prettier.semi": false,
+  "explorer.confirmDelete": false,
+  "git.autofetch": true,
+  "explorer.confirmDragAndDrop": false,
+  "window.zoomLevel": 0,
+  "eslint.autoFixOnSave": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 3000,
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "eslint.run": "onSave",
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "vetur.format.styleInitialIndent": true,
+  "vetur.format.scriptInitialIndent": true,
+  "editor.wordWrapColumn": 300,
+  "[markdown]": {
+    "editor.wordWrap": "off",
+    "editor.quickSuggestions": false
+  }
+}
