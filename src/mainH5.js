@@ -5,7 +5,8 @@ import App from './AppH5'
 import router from './router'
 import wxService from './js/api/wxService'
 import httpService from './js/api/httpService'
-import weui from 'weui'
+import weui from './assets/weui/weui.less'
+
 
 Vue.config.productionTip = false
 Vue.use(weui)
