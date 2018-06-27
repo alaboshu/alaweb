@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App'
-
-import '../static/weui/weui.css'
+import weui from './assets/weui-wxss/weui.wxss'
 Vue.config.productionTip = false
 App.mpType = 'app'
+Vue.use(weui)
 
 // import wxService from './api/wxService'
 // import httpService from './api/httpService'
