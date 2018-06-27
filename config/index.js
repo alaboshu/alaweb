@@ -24,7 +24,7 @@ module.exports = {
   dev: {
     env: require('./dev.env'),
     host: 'localhost',
-    port: 8080,
+    port: 6500,
     // 在小程序开发者工具中不需要自动打开浏览器
     autoOpenBrowser: false,
     assetsSubDirectory: 'static',

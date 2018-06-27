@@ -2,7 +2,7 @@ module.exports = {
   dev: {
     assetsPublicPath: '/',
     host: '0.0.0.0',
-    port: 8080,
+    port: 2000,
     proxyTable: {
       //   '/**/*.api': "http://192.168.1.65:8188",
       //   '/**/*.cms': "http://47.98.18.135:8081",
