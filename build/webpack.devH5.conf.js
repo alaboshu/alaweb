@@ -1,5 +1,5 @@
 'use strict'
-const utils = require('./utils')
+const utils = require('./utils.h5')
 const webpack = require('webpack')
 const config = require('../config/index.h5');
 const merge = require('webpack-merge')

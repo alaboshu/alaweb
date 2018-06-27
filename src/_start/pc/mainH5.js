@@ -5,7 +5,7 @@ import App from './AppH5'
 import router from './router'
 import wxService from './js/api/wxService'
 import httpService from './js/api/httpService'
-import weui from './assets/style/h5/weui.less'
+import weui from './assets/weui/weui.less'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
