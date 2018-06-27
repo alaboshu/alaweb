@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App'
 
-import weui from './assets/weui-wxss/weui.wxss'
+import 'src/assets/weui-wxss/weui.css'
 Vue.config.productionTip = false
 App.mpType = 'app'
-App.use(weui)
+
 // import wxService from './api/wxService'
 // import httpService from './api/httpService'
 // Vue.mixin({
