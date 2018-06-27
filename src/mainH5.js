@@ -5,9 +5,10 @@ import App from './AppH5'
 import router from './router'
 import wxService from './js/api/wxService'
 import httpService from './js/api/httpService'
-import '../static/weui/weui.css'
+import weui from 'weui'
 
 Vue.config.productionTip = false
+Vue.use(weui)
 
 Vue.mixin({
   data() {
