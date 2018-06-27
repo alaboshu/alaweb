@@ -35,6 +35,7 @@ module.exports = {
     alias: {
       'vue': 'mpvue',
       src: path.resolve(__dirname, '../src'),
+      pages: path.resolve(__dirname, '../pages'),
       static: path.resolve(__dirname, '../static'),
       '@': resolve('src')
     },

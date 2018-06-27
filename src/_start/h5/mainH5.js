@@ -3,8 +3,8 @@
 import Vue from 'vue'
 import App from './AppH5'
 import router from './router'
-import wxService from './js/api/wxService'
-import httpService from './js/api/httpService'
+import wxService from './service/api/wxService'
+import httpService from './service/api/httpService'
 import weui from './assets/weui/weui.less'
 Vue.config.productionTip = false
 

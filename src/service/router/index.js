@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Chat from '../pages/chat/index.vue'
+import Chat from 'src/pages/chat/index.vue'
 
 Vue.use(Router)
 
@@ -18,7 +18,7 @@ export default new Router({
       },
       name: 'default',
       component: function (resolve) {
-        require(['../pages/test1.vue'], resolve)
+        require(['src/pages/test1.vue'], resolve)
       }
     }
   ],
