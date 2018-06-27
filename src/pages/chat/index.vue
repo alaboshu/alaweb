@@ -73,5 +73,17 @@
   }
 
 </script>
-<style>
+<style scoped lang='less'>
+  .center {
+    text-align: center;
+    padding-top: 20 * @rem;
+    color: #fff;
+    font-size: @h3-font-size;
+  }
+  .center img {
+    width: 100 * @rem;
+    height: 100 * @rem;
+    border-radius: 50%;
+    border: 4px solid #ececec;
+  }
 </style>

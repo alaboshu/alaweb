@@ -1,0 +1,93 @@
+/**
+* Tencent is pleased to support the open source community by making
+* WeUI-WXSS available.
+* 
+* Copyright (C) 2017 THL A29 Limited, a Tencent company.
+* All rights reserved.
+* 
+* Licensed under the MIT License (the "License"); you may not use
+* this file except in compliance with the License. You may obtain a copy of
+* the License at
+* 
+*       http://opensource.org/licenses/MIT
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+@import "../../base/fn.wxss";
+
+@weuiSearchBarHeight: 28px;
+
+.weui-search-bar {
+    position: relative;
+    padding: 8px 10px;
+    display: flex;
+    box-sizing: border-box;
+    background-color: #EFEFF4;
+    border-top: 1rpx solid #D7D6DC;
+    border-bottom: 1rpx solid #D7D6DC;
+}
+.weui-icon-search {
+    margin-right: 8px;
+    font-size:inherit;
+}
+.weui-icon-search_in-box {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+}
+.weui-search-bar__text{
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+}
+.weui-search-bar__form {
+    position: relative;
+    flex: auto;
+    border-radius: 5px;
+    background: #FFFFFF;
+    border: 1rpx solid #E6E6EA;
+}
+.weui-search-bar__box {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.weui-search-bar__input {
+    height: @weuiSearchBarHeight;
+    line-height: @weuiSearchBarHeight;
+    font-size: 14px;
+}
+.weui-icon-clear {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px 8px;
+    font-size: 0;
+}
+.weui-search-bar__label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    border-radius: 3px;
+    text-align: center;
+    color: #9B9B9B;
+    background: #FFFFFF;
+    line-height: @weuiSearchBarHeight;
+}
+.weui-search-bar__cancel-btn {
+    margin-left: 10px;
+    line-height: @weuiSearchBarHeight;
+    color: #09BB07;
+    white-space: nowrap;
+}
