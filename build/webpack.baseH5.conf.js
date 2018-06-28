@@ -24,7 +24,8 @@ module.exports = {
       src: path.resolve(__dirname, '../src'),
       pages: path.resolve(__dirname, '../pages'),
       static: path.resolve(__dirname, '../static'),
-      '@': resolve('src')
+      '@': resolve('src'),
+      'style': resolve('src/assets/style/h5'),
     }
   },
   externals: {
