@@ -2,14 +2,15 @@
 
 ## 想解决的痛点
 
-> 没有重复造轮子，其目的是为了更好的服务公司的商业项目，同时我们也希望能够帮助到您的商业项目。随带开源，我们主要借鉴 **Vux** 的形态并以此为基础，参考 Ratchet、Ionic、Onsen 各种不同的思路，强化功能，精简体积。此外还定制增强了一些工具类开源库。
-
-。
+- 维护一套代码，同时维护 PC、H5、小程序、安卓 App、苹果 App 减少代码负债
+- 用 vue.js 开发，支持多个终端
+- 通过可视化编辑，让客户个性化 DIY 各个终端
 
 ## 特别感谢
 
-- [F-loat](https://github.com/F-loat) mpvue-entry、 mpvue-wxParse的作者，mpvue的资深开拓者，资深前端架构师
-- [yangguangqishimi](https://github.com/yangguangqishimi) aros-cli的作者，精通weex开发
+- [F-loat](https://github.com/F-loat) mpvue-entry、 mpvue-wxParse 的作者，mpvue 的资深开拓者，资深前端架构师
+- [yangguangqishimi](https://github.com/yangguangqishimi) aros-cli 的作者，精通 weex 开发
+- 期待您的加入
 
 ## Build Setup
 
