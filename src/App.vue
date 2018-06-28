@@ -12,6 +12,8 @@ export default {
 </script>
 
 <style>
+@import '~style/common.less';
+
 .container {
   height: 100%;
   display: flex;
