@@ -1,35 +1,15 @@
 import Vue from 'vue'
 import App from './App'
+import XButton from '@/element/min/x-button'
+import XPicker from '@/element/min/x-picker'
 
 Vue.config.productionTip = false
 App.mpType = 'app'
 
-// import wxService from './api/wxService'
-// import httpService from './api/httpService'
-// Vue.mixin({
-//   data() {
-//     return {
-//       service: '',
-//       router: '',
-//       imgSrc: ''
-//     }
-//   },
-//   created() {
-//     if (window) {
-//       console.log('chrome')
-//       this.service = httpService
-//       this.router = '/#'
-//       this.imgSrc = '../..'
-//     } else {
-//       console.log('wx')
-//       this.service = wxService
-//       this.imgSrc = '/static'
-//     }
-//   }
-// })
+Vue.component('x-button', XButton)
+Vue.component('x-picker', XPicker)
 
-const app = new Vue(App)
-app.$mount()
+new Vue(App).$mount()
 
 export default {
   // 这个字段走 app.json

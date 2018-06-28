@@ -6,8 +6,8 @@
         <p class="page__desc">按钮</p>
       </div>
       <div class="page__bd page__bd_spacing">
-        <XButton type="primary" @click="pickerShow = true">单列选择器</XButton>
-        <XPicker :columns="pickerItems" value-key="name" :visible.sync="pickerShow"></XPicker>
+        <x-button type="primary" @click="pickerShow = true">单列选择器</x-button>
+        <x-picker :columns="pickerItems" value-key="name" :visible.sync="pickerShow"></x-picker>
         <a href="javascript:;" class="weui-btn weui-btn_primary">页面主操作 Normal</a>
         <a href="javascript:;" class="weui-btn weui-btn_primary weui-btn_loading">
           <i class="weui-loading"></i>页面主操作 Loading</a>
@@ -36,45 +36,41 @@
 </template>
 
 <script>
-import XButton from '@/element/x-button'
-import XPicker from '@/element/x-picker'
 
-export default {
-  components: {
-    XButton,
-    XPicker
-  },
-  data() {
-    return {
-      pickerShow: false,
-      pickerItems: [
-        {
-          values: [
-            {
-              name: 'Apple',
-              price: 1.3
-            },
-            {
-              name: 'Banana',
-              price: 2.0
-            },
-            {
-              name: 'Orange',
-              price: 10
-            },
-            {
-              name: 'Pear',
-              price: 0.5
-            }
-          ]
-        }
-      ]
+
+  export default {
+
+    data () {
+      return {
+        pickerShow: false,
+        pickerItems: [
+          {
+            values: [
+              {
+                name: 'Apple',
+                price: 1.3
+              },
+              {
+                name: 'Banana',
+                price: 2.0
+              },
+              {
+                name: 'Orange',
+                price: 10
+              },
+              {
+                name: 'Pear',
+                price: 0.5
+              }
+            ]
+          }
+        ]
+      }
+    },
+    mounted () {
+
     }
-  },
-  mounted () {
-
   }
-}
 </script>
 
 <style scoped lang='less'>
