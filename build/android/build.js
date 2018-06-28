@@ -1,3 +1,4 @@
+// hello world
 console.info('小程序运行....')
 require('./check-versions')()
 
