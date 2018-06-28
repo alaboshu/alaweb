@@ -3,25 +3,30 @@
     class="weui-picker__group"
     v-if="!divider"
     @touchstart="onTouchstart"
-    @touchmove.prevent="onTouchmove"
+    @touchmove.stop="onTouchmove"
     @touchend="onTouchend"
     @touchcancel="onTouchend"
     @click="onClick"
   >
-    <div class="weui-picker__mask" :style="pickerMaskStyle"/>
+    <div class="weui-picker__mask" :style="{
+        backgroundSize: '100% ' + Math.floor(this.visibleItemCount / 2) * ITEM_HEIGHT + 'px'
+      }"/>
     <div
       class="weui-picker__indicator"
       ref="indicator"
-      :style="pickerIndicatorStyle"
+      :style="{
+        top: Math.floor(this.visibleItemCount / 2) * ITEM_HEIGHT + 'px'
+      }"
     />
-    <div class="weui-picker__content" :style="wrapperStyle">
+    <div class="weui-picker__content" :style="{
+        transition,
+        transform: 'translate3d(0, ' + offset + 'px, 0)'
+      }">
       <div
         class="weui-picker__item"
         :class="{ 'weui-picker__item_disabled': isDisabled(option) }"
         v-for="(option, index) in options"
-        :key="index"
-        v-text="getOptionText(option)"
-      />
+        :key="index">{{[option[valueKey]]}}</div>
     </div>
   </div>
   <div class="wv-picker-column-divider" v-else v-html="content"/>
@@ -29,10 +34,12 @@
 
 <script>
 const range = (num, min, max) => Math.min(Math.max(num, min), max)
+
 // height of th option item
 const ITEM_HEIGHT = 34
 // default transition
 const DEFAULT_TRANSITION = 'all 150ms ease'
+
 export default {
   name: 'wv-picker-column',
   props: {
@@ -75,27 +82,14 @@ export default {
     }
   },
   computed: {
+    optionText () {
+      return this.getOptionText(this.option)
+    },
     minTranslateY () {
       return ITEM_HEIGHT * (Math.ceil(this.visibleItemCount / 2) - this.options.length)
     },
     maxTranslateY () {
       return ITEM_HEIGHT * Math.floor(this.visibleItemCount / 2)
-    },
-    wrapperStyle () {
-      return {
-        transition: this.transition,
-        transform: `translate3d(0, ${this.offset}px, 0)`
-      }
-    },
-    pickerIndicatorStyle () {
-      return {
-        top: Math.floor(this.visibleItemCount / 2) * ITEM_HEIGHT + 'px'
-      }
-    },
-    pickerMaskStyle () {
-      return {
-        backgroundSize: '100% ' + Math.floor(this.visibleItemCount / 2) * ITEM_HEIGHT + 'px'
-      }
     },
     count () {
       return this.options.length
@@ -104,14 +98,8 @@ export default {
       return this.options[this.currentIndex]
     }
   },
-  created () {
-    this.$parent && this.$parent.children.push(this)
-  },
   mounted () {
     this.setIndex(this.currentIndex)
-  },
-  destroyed () {
-    this.$parent && this.$parent.children.splice(this.$parent.children.indexOf(this), 1)
   },
   methods: {
     getOptionText (item) {

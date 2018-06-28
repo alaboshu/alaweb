@@ -11,7 +11,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 @import '~style/common.less';
 
 .container {

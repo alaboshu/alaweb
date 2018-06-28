@@ -23,7 +23,9 @@
             v-text="confirmText"
           />
         </div>
-        <div class="weui-picker__bd" :style="pickerBodyStyle">
+        <div class="weui-picker__bd" :style="{
+          height: this.visibleItemCount * ITEM_HEIGHT + 'px'
+        }">
           <wv-picker-column
             v-for="(column, index) in columns"
             :key="index"
@@ -46,6 +48,7 @@ import WvPickerColumn from './picker-column.vue'
 
 // height of th option item
 const ITEM_HEIGHT = 34
+
 export default {
   name: 'wv-picker',
   components: {
@@ -80,7 +83,6 @@ export default {
   },
   data () {
     return {
-      children: [],
       currentSlots: [],
       currentValue: this.value
     }
@@ -92,11 +94,6 @@ export default {
     columnCount () {
       return this.columns.filter(column => !column.divider).length
     },
-    pickerBodyStyle () {
-      return {
-        height: this.visibleItemCount * ITEM_HEIGHT + 'px'
-      }
-    }
   },
   created () {
     this.initialize()
@@ -110,10 +107,10 @@ export default {
       this.$emit('change', this, this.getValues(), columnIndex)
     },
     getColumn (columnIndex) {
-      let children = this.children
-      return children.find((child, index) => {
-        return (child.$options.name === 'wv-picker-column' && !child.divider && index === columnIndex)
-      })
+      // let children = this.children
+      // return children.find((child, index) => {
+      //   return (child.$options.name === 'wv-picker-column' && !child.divider && index === columnIndex)
+      // })
     },
     getColumnValue (columnIndex) {
       return (this.getColumn(columnIndex) || {}).currentValue
@@ -132,7 +129,7 @@ export default {
       }
     },
     getValues () {
-      return this.children.map(child => child.currentValue)
+      // return this.children.map(child => child.currentValue)
     },
     setValues (values) {
       if (this.columnCount !== values.length) {
@@ -150,7 +147,7 @@ export default {
       column && column.setIndex(index)
     },
     getIndexes () {
-      return this.children.map(child => child.currentIndex)
+      // return this.children.map(child => child.currentIndex)
     },
     setIndexes (indexes) {
       indexes.forEach((optionIndex, columnIndex) => {
@@ -178,7 +175,7 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
 @import '~style/widget/weui-picker/weui-picker.less';
 
 .weui-picker {
