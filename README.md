@@ -4,11 +4,12 @@
 
 > 没有重复造轮子，其目的是为了更好的服务公司的商业项目，同时我们也希望能够帮助到您的商业项目。随带开源，我们主要借鉴 **Vux** 的形态并以此为基础，参考 Ratchet、Ionic、Onsen 各种不同的思路，强化功能，精简体积。此外还定制增强了一些工具类开源库。
 
-同时 ZKUI 也是一款成长中的框架，大量吸收借鉴了一些优化前端工具以及框架的设计理念和思想。如果 ZKUI 有不足地方，或者你有更好的想法，欢迎提交 ISSUE 或者 PR。
+。
 
 ## 特别感谢
 
-- [F-loat](https://github.com/F-loat)  [mpvue-entry](https://github.com/F-loat/mpvue-entry)、 [mpvue-wxParse](https://github.com/F-loat/mpvue-wxParse)的作者，mpvue的资深开拓者
+- [F-loat](https://github.com/F-loat) mpvue-entry、 mpvue-wxParse的作者，mpvue的资深开拓者，资深前端架构师
+- [yangguangqishimi](https://github.com/yangguangqishimi) aros-cli的作者，精通weex开发
 
 ## Build Setup
 
