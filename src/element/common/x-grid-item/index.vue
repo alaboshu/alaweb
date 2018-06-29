@@ -10,7 +10,6 @@
   </router-link>
 </template>
 <script>
-
   export default {
     name: 'x-grid-item',
     props: {
@@ -20,7 +19,6 @@
     }
   }
 </script>
-
 <style scoped lang="less">
   .weui-grid {
     text-decoration: none;

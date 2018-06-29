@@ -1,5 +1,4 @@
 'use strict'
-console.info('开始h5编译')
 require('./check-versions')()
 
 process.env.NODE_ENV = 'production'
@@ -9,8 +8,7 @@ const rm = require('rimraf')
 const path = require('path')
 const chalk = require('chalk')
 const webpack = require('webpack')
-
-const config = require('./config/index')
+const config = require('../../config/h5')
 const webpackConfig = require('./webpack.prod.conf')
 
 const spinner = ora('building for production...')

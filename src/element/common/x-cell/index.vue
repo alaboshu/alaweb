@@ -25,7 +25,7 @@
       },
       to: String,
       isLink: Boolean
-    },
+    }
   }
 </script>
 <style scoped lang="less">

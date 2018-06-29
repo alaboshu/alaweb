@@ -1,17 +1,16 @@
 {
 	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": false,
-		"es6": true,
+		"urlCheck": true,
+		"es6": false,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
 	},
-	"miniprogramRoot": "./dist/",
+	"miniprogramRoot": "./dist/min",
 	"compileType": "miniprogram",
 	"appid": "touristappid",
-	"projectname": "zkweb",
-	"libVersion": "1.9.98",
+	"projectname": "zkweb_new",
 	"condition": {
 		"search": {
 			"current": -1,

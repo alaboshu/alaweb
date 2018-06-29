@@ -54,8 +54,8 @@
 </script>
 
 <style lang="less">
-  @import '~style/widget/weui-button/weui-button.less';
-  @import '~style/widget/weui-loading/weui-loading.less';
+  // @import '~style/widget/weui-button/weui-button.less';
+  // @import '~style/widget/weui-loading/weui-loading.less';
 
   .weui-btn.vux-x-button-no-border:after {
     display: none;

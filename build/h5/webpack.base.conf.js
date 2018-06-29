@@ -1,13 +1,18 @@
 'use strict'
-console.info('h5开始运行...')
 const path = require('path')
+const os = require('os')
+const HappyPack = require('happypack')
 const utils = require('./utils')
-const config = require('./config')
+const config = require('../../config/h5')
 const vueLoaderConfig = require('./vue-loader.conf')
 
-function resolve(dir) {
-  return path.join(__dirname, '..', dir)
+function resolve (dir) {
+  return path.join(__dirname, '../..', dir)
 }
+
+const happyThreadPool = HappyPack.ThreadPool({
+  size: os.cpus().length
+})
 
 const createLintingRule = () => ({
   test: /\.(js|vue)$/,
@@ -23,19 +28,23 @@ const createLintingRule = () => ({
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './../src/mainH5.js'
+    app: '../src/_start/h5/main.js'
   },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
-    publicPath: process.env.NODE_ENV === 'production' ?
-      config.build.assetsPublicPath : config.dev.assetsPublicPath
+    publicPath: process.env.NODE_ENV === 'production'
+      ? config.build.assetsPublicPath
+      : config.dev.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'elements/plt': resolve('src/elements/h5'),
+      'elements': resolve('src/elements/common'),
+      'src': resolve('src')
     }
   },
   module: {
@@ -77,6 +86,16 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new HappyPack({
+      id: 'happyBabel',
+      loaders: [{
+        loader: 'babel-loader?cacheDirectory=true'
+      }],
+      threadPool: happyThreadPool,
+      verbose: true
+    })
+  ],
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
     // source contains it (although only uses it if it's native).

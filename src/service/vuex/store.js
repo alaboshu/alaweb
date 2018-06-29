@@ -17,24 +17,24 @@ const store = new Vuex.Store({
     }
   },
   mutations: {
-    stockDetail(state, stock) {
-      state.stock.code = stock.code.split('.')[0];
-      state.stock.name = stock.name;
+    stockDetail (state, stock) {
+      state.stock.code = stock.code.split('.')[0]
+      state.stock.name = stock.name
       setStorage('code', stock.code.split('.')[0])
       setStorage('name', stock.name)
     },
-    newsDetail(state, news, type) {
-      state.news.title = news.title;
-      state.news.auth = news.auth;
-      state.news.date = news.dt;
-      state.news.detail = news.sum;
-      state.news.url = news.url;
-      state.news.type = type;
+    newsDetail (state, news, type) {
+      state.news.title = news.title
+      state.news.auth = news.auth
+      state.news.date = news.dt
+      state.news.detail = news.sum
+      state.news.url = news.url
+      state.news.type = type
     }
   }
 })
 
-function setStorage(key, value) {
+function setStorage (key, value) {
   if (window) {
     window.localStorage.setItem(key, value)
   } else {

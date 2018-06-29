@@ -22,13 +22,13 @@ npm install
 npm run dev
 
 # build H5 pages
-npm run devH5
+npm run dev:h5
 
 # build for production with minification for mini program
 npm run build
 
 # build for production with minification for H5 pages
-npm run buildH5
+npm run build:h5
 
 # build for production and view the bundle analyzer report
 npm run build --report

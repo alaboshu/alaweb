@@ -13,7 +13,7 @@
     props: {
       isOn: Boolean,
       to: String
-    },
+    }
   })
 </script>
 

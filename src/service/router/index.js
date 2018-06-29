@@ -6,21 +6,22 @@ Vue.use(Router)
 
 export default new Router({
   routes: [{
-      path: '/',
-      name: 'index',
-      component: Chat
+    path: '/',
+    name: 'index',
+    component: Chat
+  },
+  {
+    path: '/test',
+    meta: {
+      title: '会员中心',
+      login: true
     },
-    {
-      path: '/test',
-      meta: {
-        title: '会员中心',
-        login: true
-      },
-      name: 'default',
-      component: function (resolve) {
-        require(['src/pages/test1.vue'], resolve)
-      }
-    }
+    name: 'default',
+    component: Chat
+    // component: function (resolve) {
+    //   require(['src/pages/test1.vue'], resolve)
+    // }
+  }
   ],
   mode: 'history' // 路由模式
 })

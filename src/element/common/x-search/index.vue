@@ -40,46 +40,46 @@
       resultTextKey: String,
       result: Array
     },
-      data () {
-    return {
-      isActive: false,
-      currentValue: this.value
-    }
-  },
-   mounted () {
-    if (this.autofocus) {
-      this.isActive = true
-    }
-  },
-
-  methods: {
-    textClick () {
-      // focus the input
-      this.$refs.input.focus()
-      this.isActive = true
+    data () {
+      return {
+        isActive: false,
+        currentValue: this.value
+      }
+    },
+    mounted () {
+      if (this.autofocus) {
+        this.isActive = true
+      }
     },
 
-    // 清除输入
-    clear () {
-      this.currentValue = ''
+    methods: {
+      textClick () {
+        // focus the input
+        this.$refs.input.focus()
+        this.isActive = true
+      },
+
+      // 清除输入
+      clear () {
+        this.currentValue = ''
+      },
+
+      // 取消搜索
+      cancel () {
+        this.clear()
+        this.isActive = false
+      }
     },
 
-    // 取消搜索
-    cancel () {
-      this.clear()
-      this.isActive = false
-    }
-  },
+    watch: {
+      currentValue (val) {
+        this.$emit('input', val)
+      },
 
-  watch: {
-    currentValue (val) {
-      this.$emit('input', val)
-    },
-
-    value (val) {
-      this.currentValue = val
+      value (val) {
+        this.currentValue = val
+      }
     }
-  }
   }
 </script>
 <style lang="less" scoped>
@@ -101,4 +101,4 @@
     margin-top: 0;
     font-size: 14px;
   }
-  </style>
+</style>
