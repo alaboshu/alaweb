@@ -37,6 +37,8 @@ module.exports = {
       'vue': 'mpvue',
       '@': resolve('src'),
       'elements/plt': resolve('src/elements/min'),
+      flyio: 'flyio/dist/npm/wx',
+      wx: resolve('src/service/api/wx'),
       'elements': resolve('src/elements/')
     },
     symlinks: false,

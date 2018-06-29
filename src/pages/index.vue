@@ -1,21 +1,22 @@
 <template>
   <div class="container">
     <div class="weui-grids">
-      <block v-for="item in grids" :key="index">
+      <div v-for="item in grids" :key="index">
         <a url="" class="weui-grid" hover-class="weui-grid_active">
           <image class="weui-grid__icon" :src="item.src" />
           <div class="weui-grid__label">{{item.name}}</div>
         </a>
-      </block>
+      </div>
     </div>
 
-    <x-picker :range="array">
+    <!-- <x-picker :range="array">
       <x-button type="primary">x-picker</x-button>
-    </x-picker>
+    </x-picker> -->
   </div>
 </template>
 
 <script>
+  import api from '@/service/api/api'
   export default {
     data () {
       return {
@@ -33,7 +34,16 @@
         ]
       }
     },
+    mounted () {
+      this.ApiGet()
+    },
     methods: {
+      async  ApiGet () {
+        // let params = {
+        // }
+        var repsonse = await api.get('/user/getSingUser', 1)
+        console.log(repsonse.data)
+      }
     }
   }
 </script>
