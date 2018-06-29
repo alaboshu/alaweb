@@ -7,112 +7,112 @@
 </template>
 
 <script>
-  // import { getTouch } from '../../../service/utils'
-  // const THUMB_STROKE = 20 // 开关的行程
-  // export default {
-  //   name: 'x-switch',
-  //   props: {
-  //     title: String,
-  //     disabled: Boolean,
-  //     isInCell: {
-  //       type: Boolean,
-  //       default: true
-  //     },
-  //     value: Boolean
-  //   },
-  //   data () {
-  //     return {
-  //       currentValue: this.value,
-  //       startX: 0,
-  //       offset: 0,
-  //       startOffset: 0,
-  //       transition: ''
-  //     }
-  //   },
-  //   computed: {
-  //     thumbStyle () {
-  //       return {
-  //         transition: this.transition,
-  //         transform: `translate3d(${this.offset}px, 0, 0)`
-  //       }
-  //     }
-  //   },
-  //   mounted () {
-  //     this.offset = 0
-  //   },
+  import { getTouch } from '../../../service/utils'
+  const THUMB_STROKE = 20 // 开关的行程
+  export default {
+    name: 'x-switch',
+    props: {
+      title: String,
+      disabled: Boolean,
+      isInCell: {
+        type: Boolean,
+        default: true
+      },
+      value: Boolean
+    },
+    data () {
+      return {
+        currentValue: this.value,
+        startX: 0,
+        offset: 0,
+        startOffset: 0,
+        transition: ''
+      }
+    },
+    computed: {
+      thumbStyle () {
+        return {
+          transition: this.transition,
+          transform: `translate3d(${this.offset}px, 0, 0)`
+        }
+      }
+    },
+    mounted () {
+      this.offset = 0
+    },
 
-  //   methods: {
-  //     onClick (event) {
-  //       event.preventDefault()
-  //       if (this.disabled) return
+    methods: {
+      onClick (event) {
+        event.preventDefault()
+        if (this.disabled) return
 
-  //       this.currentValue = !this.currentValue
-  //     },
+        this.currentValue = !this.currentValue
+      },
 
-  //     onTouchstart (event) {
-  //       if (this.disabled) return
+      onTouchstart (event) {
+        if (this.disabled) return
 
-  //       const touch = getTouch(event)
+        const touch = getTouch(event)
 
-  //       this.startX = touch.clientX
-  //       this.startOffset = this.offset
-  //       this.transition = ''
-  //     },
+        this.startX = touch.clientX
+        this.startOffset = this.offset
+        this.transition = ''
+      },
 
-  //     onTouchmove (event) {
-  //       if (this.disabled) return
+      onTouchmove (event) {
+        if (this.disabled) return
 
-  //       const touch = getTouch(event)
-  //       const deltaX = touch.clientX - this.startX
+        const touch = getTouch(event)
+        const deltaX = touch.clientX - this.startX
 
-  //       const targetOffset = this.startOffset + deltaX
+        const targetOffset = this.startOffset + deltaX
 
-  //       if (targetOffset >= 0 && targetOffset <= THUMB_STROKE) {
-  //         this.offset = targetOffset
-  //       } else if (targetOffset < 0) {
-  //         this.offset = 0
-  //       } else if (targetOffset > THUMB_STROKE) {
-  //         this.offset = THUMB_STROKE
-  //       }
-  //     },
+        if (targetOffset >= 0 && targetOffset <= THUMB_STROKE) {
+          this.offset = targetOffset
+        } else if (targetOffset < 0) {
+          this.offset = 0
+        } else if (targetOffset > THUMB_STROKE) {
+          this.offset = THUMB_STROKE
+        }
+      },
 
-  //     onTouchend (event) {
-  //       if (this.disabled) return
+      onTouchend (event) {
+        if (this.disabled) return
 
-  //       const touch = getTouch(event)
+        const touch = getTouch(event)
 
-  //       let deltaX = touch.clientX - this.startX
+        let deltaX = touch.clientX - this.startX
 
-  //       this.transition = '-webkit-transform .35s cubic-bezier(0.4, 0.4, 0.25, 1.35)'
-  //       if (this.currentValue) {
-  //         if (deltaX < THUMB_STROKE / -2) {
-  //           this.currentValue = false
-  //         } else {
-  //           this.offset = THUMB_STROKE
-  //         }
-  //       } else {
-  //         if (deltaX > THUMB_STROKE / 2) {
-  //           this.currentValue = true
-  //         } else {
-  //           this.offset = 0
-  //         }
-  //       }
-  //     }
-  //   },
+        this.transition = '-webkit-transform .35s cubic-bezier(0.4, 0.4, 0.25, 1.35)'
+        if (this.currentValue) {
+          if (deltaX < THUMB_STROKE / -2) {
+            this.currentValue = false
+          } else {
+            this.offset = THUMB_STROKE
+          }
+        } else {
+          if (deltaX > THUMB_STROKE / 2) {
+            this.currentValue = true
+          } else {
+            this.offset = 0
+          }
+        }
+      }
+    },
 
-  //   watch: {
-  //     value (val) {
-  //       this.currentValue = val
-  //     },
+    watch: {
+      value (val) {
+        this.currentValue = val
+      },
 
-  //     currentValue (val) {
-  //       this.$emit('input', val)
-  //       this.$emit('change', val)
+      currentValue (val) {
+        this.$emit('input', val)
+        this.$emit('change', val)
 
-  //       this.offset = val ? THUMB_STROKE : 0
-  //     }
-  //   }
-  // }
+        this.offset = val ? THUMB_STROKE : 0
+      }
+    }
+  }
 </script>
 
 <style lang="less" scoped>
