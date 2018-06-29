@@ -18,49 +18,36 @@
 * limitations under the License.
 */
 
-@import "../../../base/fn.wxss";
+@import "../../../base/fn.less";
 
-.weui-cell_input{
-    padding-top: 0;
-    padding-bottom: 0;
+.weui-cell_select {
+    padding: 0;
 }
-.weui-label{
-    width:@weuiCellLabelWidth;
-    .text_wrap();
-}
-.weui-input{
+.weui-select {
+    position: relative;
+    padding-left: @weuiCellGapH;
+    padding-right: 30px;
+
     height: @weuiCellHeightEm;
     min-height: @weuiCellHeightEm;
     line-height: @weuiCellHeightEm;
+
+    border-right: 1rpx solid @weuiCellBorderColor;
+
+    &:before{
+        content: " ";
+        .setArrow(right, 6px, #C8C8CD, 2px);
+
+        position: absolute;
+        top: 50%;
+        right: @weuiCellGapH;
+        margin-top: -4px;
+    }
+    &_in-select-after{
+        padding-left: 0;
+    }
 }
-.weui-toptips{
-    //display: none; // 通过 wx:if 来控制
-    position: fixed;
-    transform: translateZ(0);
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 5px;
-    font-size: 14px;
-    text-align: center;
-    color: #FFFFFF;
-    z-index: 5000;
-    .text_wrap();
-}
-.weui-toptips_warn{
-    background-color: @weuiColorWarn;
-}
-.weui-textarea{
-    display: block;
-    width: 100%;
-}
-.weui-textarea-counter{
-    color: @weuiTextColorTips;
-    text-align: right;
-}
-.weui-textarea-counter_warn{
-    color: @weuiTextColorWarn;
-}
-.weui-cell_warn{
-    color: @weuiTextColorWarn;
+.weui-cell__hd_in-select-after,
+.weui-cell__bd_in-select-before{
+    padding-left: @weuiCellGapH;
 }

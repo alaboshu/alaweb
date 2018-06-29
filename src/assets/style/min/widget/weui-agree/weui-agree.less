@@ -18,18 +18,36 @@
 * limitations under the License.
 */
 
-@import "../../base/fn.wxss";
-@import "weui-navbar.wxss";
+@import "../../base/fn.less";
 
-.weui-tab {
-    position: relative;
-    height: 100%;
+.weui-agree{
+    display: block;
+    padding: .5em 15px;
+    font-size: 13px;
 }
-
-.weui-tab__panel{
-    box-sizing: border-box;
-    height: 100%;
-    padding-top: 50px;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
+.weui-agree__text{
+    color: @weuiTextColorGray;
+}
+.weui-agree__link{
+    display: inline;
+    color: @weuiLinkColorDefault;
+}
+.weui-agree__checkbox{
+    position: absolute;
+    left: -9999px;
+}
+.weui-agree__checkbox-icon{
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    border: 1px solid #D1D1D1;
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    width: 11px;
+    height: 11px;
+}
+.weui-agree__checkbox-icon-check{
+    position: absolute;
+    top: 1px;
+    left: 1px;
 }

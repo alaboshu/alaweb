@@ -18,21 +18,9 @@
 * limitations under the License.
 */
 
-@import "../../base/fn.wxss";
+@import "../../base/fn.less";
 
-.weui-badge {
-    display: inline-block;
-    padding: .15em .4em;
-    min-width: 8px;
-    border-radius: 18px;
-    background-color: @weuiColorWarn;
-    color: #FFFFFF;
-    line-height: 1.2;
-    text-align: center;
-    font-size: 12px;
-    vertical-align: middle;
-}
-.weui-badge_dot {
-    padding: .4em;
-    min-width: 0;
+.weui-cell_switch{
+    padding-top: (@weuiCellHeight - @weuiSwitchHeight) / 2;
+    padding-bottom: (@weuiCellHeight - @weuiSwitchHeight) / 2;
 }

@@ -18,28 +18,37 @@
 * limitations under the License.
 */
 
-@import "../../../base/fn.wxss";
+@import "../../base/fn.less";
 
-.weui-cell_vcode {
-    padding-right: 0;
-}
-.weui-vcode-img{
-    margin-left: 5px;
-    height: unit(@weuiCellHeight / @weuiCellFontSize, em);
-    vertical-align: middle;
-}
-.weui-vcode-btn {
-    display: inline-block;
-    height: unit(@weuiCellHeight / @weuiCellFontSize, em);
-    margin-left: 5px;
-    padding: 0 0.6em 0 0.7em;
-    border-left: 1px solid @weuiLineColorLight;
-    line-height: unit(@weuiCellHeight / @weuiCellFontSize, em);
-    vertical-align: middle;
-    font-size: @weuiCellFontSize;
-    color: @weuiDialogLinkColor;
-    white-space: nowrap;
-    &:active {
-        color: desaturate(@weuiDialogLinkColor, 30%);
+
+.weui-panel {
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    &:first-child {
+        margin-top: 0;
+    }
+
+    position: relative;
+    overflow: hidden;
+    &:before {
+        .setTopLine(@weuiLineColorLight);
+    }
+    &:after {
+        .setBottomLine(@weuiLineColorLight);
     }
 }
+
+.weui-panel__hd {
+    padding: 14px 15px 10px;
+    color: @weuiTextColorGray;
+    font-size: 13px;
+    position: relative;
+    &:after {
+        .setBottomLine(@weuiLineColorLight);
+        left: 15px;
+    }
+}
+
+
+
+

@@ -1,6 +1,8 @@
 <template>
   <div class="page">
-    <x-header title="头部"></x-header>
+    <XButton type="primary" @click="pickerShow = true">单列选择器</XButton>
+    <XPicker :columns="pickerItems" value-key="name" :visible.sync="pickerShow"></XPicker>
+    <!-- <x-header title="头部"></x-header>
     <div class="page button js_show">
       <div class="page__hd">
         <h1 class="page__title">Button</h1>
@@ -44,7 +46,7 @@
         <x-cell title="title" value="value" to="" />
         <x-cell title="title" value="value" to="" />
       </x-group>
-    </x-popup>
+    </x-popup> -->
     <!-- <x-tabbar :fixed="false">
       <x-tabbar-item to="/baidu" isOn>
         <span slot="icon" style="display: inline-block; position: relative;">
@@ -75,7 +77,15 @@
 </template>
 
 <script>
+  import XButton from '@/element/min/x-button'
+  import XPicker from '@/element/min/x-picker'
+
   export default {
+    components: {
+      XButton,
+      XPicker
+    },
+
     data () {
       return {
         switchValue3: false,

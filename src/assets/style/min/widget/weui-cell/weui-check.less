@@ -18,36 +18,31 @@
 * limitations under the License.
 */
 
-@import "../../base/fn.wxss";
+@import "../../base/fn.less";
 
-.weui-agree{
-    display: block;
-    padding: .5em 15px;
-    font-size: 13px;
+// icon
+.weui-icon-radio{
+    margin-left: 3.2px;
+    margin-right: 3.2px;
 }
-.weui-agree__text{
-    color: @weuiTextColorGray;
+.weui-icon-checkbox_circle,
+.weui-icon-checkbox_success{
+    margin-left: 4.6px;
+    margin-right: 4.6px;
 }
-.weui-agree__link{
-    display: inline;
-    color: @weuiLinkColorDefault;
+
+.weui-check__label{
+    &:active{
+        background-color: @weuiCellActiveBg;
+    }
 }
-.weui-agree__checkbox{
+.weui-check{
     position: absolute;
     left: -9999px;
 }
-.weui-agree__checkbox-icon{
-    position: relative;
-    top: 2px;
-    display: inline-block;
-    border: 1px solid #D1D1D1;
-    background-color: #FFFFFF;
-    border-radius: 3px;
-    width: 11px;
-    height: 11px;
+.weui-check__hd_in-checkbox{
+    padding-right: @weuiCellInnerGapH;
 }
-.weui-agree__checkbox-icon-check{
-    position: absolute;
-    top: 1px;
-    left: 1px;
+.weui-cell__ft_in-radio{
+    padding-left: @weuiCellInnerGapH;
 }
