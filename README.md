@@ -38,6 +38,12 @@ npm run lint
 
 # eslint 自动修复
 npm run fix
+
+# build app pages, run debug service
+npm run dev:app
+
+# 打包app js包到android和ios工程
+npm run pack:app
 ```
 
 ## 特性
