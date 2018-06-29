@@ -14,7 +14,6 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "axios": "^0.18.0",
     "flyio": "^0.5.9",
     "mpvue": "^1.0.0",
     "mpvue-router-patch": "^0.2.1",
