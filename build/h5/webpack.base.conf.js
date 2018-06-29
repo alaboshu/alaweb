@@ -34,8 +34,7 @@ module.exports = {
     path: config.build.assetsRoot,
     filename: '[name].js',
     publicPath: process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+      ? config.build.assetsPublicPath : config.dev.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -44,6 +43,8 @@ module.exports = {
       '@': resolve('src'),
       'elements/plt': resolve('src/elements/h5'),
       'elements': resolve('src/elements/common'),
+      flyio: 'flyio/dist/npm/wx',
+      wx: resolve('src/service/api/wx'),
       'src': resolve('src')
     }
   },
