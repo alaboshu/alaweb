@@ -1,5 +1,5 @@
 // 公共函数
-import store from 'src/store/index'
+// import store from 'src/store/index'
 
 exports.install = function (Vue, options) {
   // 操作错误信息提示，跳转到信息提示页面，并显示错误信息
@@ -14,7 +14,7 @@ exports.install = function (Vue, options) {
   }
   // 当前登录用户 this.LoginUser() 获取
   Vue.prototype.LoginUser = function () {
-    return store.state.userStore.loginUser
+    //  return store.state.userStore.loginUser
   }
   // 操作成功信息提示，跳转到信息提示页面，并显示成功信息
   Vue.prototype.messageSuccess = function (message) {
