@@ -14,6 +14,7 @@
 
 <script>
   import { getTouch } from '../../../service/utils'
+  const THUMB_STROKE = 20 // 开关的行程
   export default {
     name: 'x-switch',
     props: {
@@ -43,7 +44,7 @@
       }
     },
     mounted () {
-      this.offset = this.currentValue ? THUMB_STROKE : 0
+      this.offset = 0
     },
 
     methods: {

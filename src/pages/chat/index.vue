@@ -6,6 +6,7 @@
         <h1 class="page__title">Button</h1>
         <p class="page__desc">按钮</p>
       </div>
+      <x-divider></x-divider>
       <div class="page__bd page__bd_spacing">
 
         <x-grid>
@@ -31,12 +32,20 @@
         </x-group>
 
         <div class="standalone-switches">
-          <x-switch v-model="switchValue3" :is-in-cell="false" />
-          <x-switch v-model="switchValue4" :is-in-cell="false" disabled/>
+          <x-switch v-model="switchValue3" :is-in-cell="false" :vlaue="true" />
         </div>
       </div>
     </div>
-    <x-tabbar :fixed="false">
+    <x-divider></x-divider>
+    <x-button type="primary" @click="popupVisible1 = true">默认弹出层</x-button>
+    <x-popup :visible.sync="popupVisible1">
+      <x-group>
+        <x-switch title="关闭" v-model="popupVisible1" />
+        <x-cell title="title" value="value" to="" />
+        <x-cell title="title" value="value" to="" />
+      </x-group>
+    </x-popup>
+    <!-- <x-tabbar :fixed="false">
       <x-tabbar-item to="/baidu" isOn>
         <span slot="icon" style="display: inline-block; position: relative;">
           <img class="weui-tabbar__icon" src="" slot="icon">
@@ -61,7 +70,7 @@
         </span>
         x-tabbar-item
       </x-tabbar-item>
-    </x-tabbar>
+    </x-tabbar> -->
   </div>
 </template>
 
@@ -69,11 +78,9 @@
   export default {
     data () {
       return {
-        switchValue1: true,
-        switchValue2: false,
         switchValue3: false,
-        switchValue4: true,
         pickerShow: false,
+        popupVisible1: false,
         pickerItems: [
           {
             values: [
