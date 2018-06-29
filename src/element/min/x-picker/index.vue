@@ -152,7 +152,7 @@
 </script>
 
 <style lang="less">
-  // @import '~style/widget/weui-picker/weui-picker.less';
+  @import '~style/weui';
 
   .weui-picker {
     transform: none;
