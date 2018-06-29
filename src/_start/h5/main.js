@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from '@/router'
 import weui from '@/assets/style/h5/weui.less'
+import global from '@/service/core/global' // 公共函数,全局函数
 
 import XHeader from '@/elements/common/x-header'
 import XTabbar from '@/elements/common/x-tabbar'
@@ -38,6 +39,7 @@ Vue.component('x-from', XFrom)
 Vue.component('x-icon', XIcon)
 
 Vue.use(weui)
+Vue.use(global)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
