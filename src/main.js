@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import App from './App'
+// import element from 'src/element/min/index'
 import XButton from '@/element/min/x-button'
 import XPicker from '@/element/min/x-picker'
 
-Vue.config.productionTip = false
-App.mpType = 'app'
-
 Vue.component('x-button', XButton)
 Vue.component('x-picker', XPicker)
+
+Vue.config.productionTip = false
+App.mpType = 'app'
 
 new Vue(App).$mount()
 
