@@ -12,3 +12,46 @@ yarn-error.log*
 *.njsproj
 *.sln
 /package-lock.json
+
+
+# app
+ip.txt
+
+.DS_Store
+*.iml
+
+# Android Studio
+.idea/
+local.properties
+build/
+.idea/
+.gradle/
+
+
+# IOS
+# Xcode
+*/build/*
+*.pbxuser
+*.pbxprog
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
+
+#CocoaPods
+Pods
+
+*.xccheckout
+*.xcworkspacedata
+*.xcworkspace
+Podfile.lock
+# END IOS

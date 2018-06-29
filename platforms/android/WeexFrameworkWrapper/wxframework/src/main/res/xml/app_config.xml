@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<app_config version="1">
+    <!--weex-component-->
+    <component name="bm-view">com.benmu.framework.extend.components.BMView</component>
+    <component name="bmtext">com.benmu.framework.extend.components.BMWXText</component>
+    <component name="bmmask">com.benmu.framework.extend.components.BMMask</component>
+    <component name="bmpop">com.benmu.framework.extend.components.BMPop</component>
+    <component name="bmrichtext">com.benmu.framework.extend.components.BMRich</component>
+    <component name="bmspan">com.benmu.framework.extend.components.BMSpan</component>
+    <component name="bmcalendar">com.benmu.framework.extend.components.BMCalendar</component>
+
+    <!--weex-module-->
+    <module name="bmRouter">com.benmu.framework.extend.module.RouterModule</module>
+    <module name="bmNavigator">com.benmu.framework.extend.module.TitleModule</module>
+    <module name="bmAxios">com.benmu.framework.extend.module.AxiosModule</module>
+    <module name="bmGeolocation">com.benmu.framework.extend.module.GeolocationModule</module>
+    <module name="bmModal">com.benmu.framework.extend.module.ModalModule</module>
+    <module name="bmImage">com.benmu.framework.extend.module.ImageModule</module>
+    <module name="bmPay">com.benmu.framework.extend.module.PayModule</module>
+    <module name="bmStorage">com.benmu.framework.extend.module.StorageModule</module>
+    <module name="bmShare">com.benmu.framework.extend.module.ShareModule</module>
+    <module name="bmFont">com.benmu.framework.extend.module.AppConfigModule</module>
+    <module name="bmEvents">com.benmu.framework.extend.module.EventModule</module>
+    <module name="bmBrowserImg">com.benmu.framework.extend.module.BrowserImgModule</module>
+    <module name="bmTool">com.benmu.framework.extend.module.ToolModule</module>
+    <module name="bmAuth">com.benmu.framework.extend.module.OAuthModule</module>
+    <module name="bmCommunication">com.benmu.framework.extend.module.CommunicationModule</module>
+    <module name="bmCamera">com.benmu.framework.extend.module.CameraModule</module>
+    <module name="bmWebSocket">com.benmu.framework.extend.module.WebSocketModule</module>
+
+    <component name="svg">com.benmu.framework.extend.components.svg.component.WXSvgContainer</component>
+    <component name="path">com.benmu.framework.extend.components.svg.component.WXSvgPath</component>
+    <component name="line">com.benmu.framework.extend.components.svg.component.WXSvgLine</component>
+    <component name="rect">com.benmu.framework.extend.components.svg.component.WXSvgRect</component>
+    <component name="ellipse">com.benmu.framework.extend.components.svg.component.WXSvgEllipse</component>
+    <component name="polygon">com.benmu.framework.extend.components.svg.component.WXSvgPolygon</component>
+    <component name="polyline">com.benmu.framework.extend.components.svg.component.WXSvgPolyLine</component>
+    <component name="defs">com.benmu.framework.extend.components.svg.component.WXSvgDefs</component>
+    <component name="stop">com.benmu.framework.extend.components.svg.component.WXSvgStop</component>
+    <component name="linearGradient">com.benmu.framework.extend.components.svg.component.WXSvgLinearGradient</component>
+    <component name="radialGradient">com.benmu.framework.extend.components.svg.component.WXSvgRadialGradient</component>
+    <component name="circle">com.benmu.framework.extend.components.svg.component.WXSvgCircle</component>
+
+    <component name="weex-amap-marker">com.benmu.framework.extend.components.map.WXMapMarkerComponent</component>
+    <component name="weex-amap">com.benmu.framework.extend.components.map.WXMapViewComponent</component>
+    <component name="scroller-header">com.benmu.framework.extend.components.WXScrollerHeaderComponent</component>
+    <component name="picker">com.benmu.framework.extend.module.WXIOSPickerModule</component>
+    <module name="amap">com.benmu.framework.extend.module.WXMapModule</module>
+</app_config>

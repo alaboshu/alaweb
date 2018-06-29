@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.benmu.widget.view.BMPartLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                    android:orientation="vertical"
+                                    android:layout_width="110dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/c_f2f2f2"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:id="@+id/rl_root"
+        >
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/rl_container"
+            >
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv"
+                android:layout_centerHorizontal="true"
+                />
+
+        <com.benmu.widget.view.BMReceiverTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c_666666"
+                android:textSize="@dimen/size_15"
+                android:id="@+id/tv"
+                android:layout_below="@+id/iv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                />
+    </RelativeLayout>
+
+</com.benmu.widget.view.BMPartLayout>

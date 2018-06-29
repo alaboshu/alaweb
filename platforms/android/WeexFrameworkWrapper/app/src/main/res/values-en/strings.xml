@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SolarApp</string>
+    <string name="update_download">Download Installer</string>
+    <string name="download_finished">Download Finish</string>
+    <string name="downloading">Downloading...</string>
+    <string name="download_failed">Download Failed</string>
+</resources>
