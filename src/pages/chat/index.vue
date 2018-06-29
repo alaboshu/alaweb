@@ -29,9 +29,14 @@
         <x-group title="Group+Cell">
           <x-cell title="cell标题" value="cell说明文字" to="/baidu"></x-cell>
         </x-group>
+
+        <div class="standalone-switches">
+          <x-switch v-model="switchValue3" :is-in-cell="false" />
+          <x-switch v-model="switchValue4" :is-in-cell="false" disabled/>
+        </div>
       </div>
     </div>
-    <x-tabbar>
+    <x-tabbar :fixed="false">
       <x-tabbar-item to="/baidu" isOn>
         <span slot="icon" style="display: inline-block; position: relative;">
           <img class="weui-tabbar__icon" src="" slot="icon">
@@ -64,6 +69,10 @@
   export default {
     data () {
       return {
+        switchValue1: true,
+        switchValue2: false,
+        switchValue3: false,
+        switchValue4: true,
         pickerShow: false,
         pickerItems: [
           {
