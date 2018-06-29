@@ -7,12 +7,7 @@
 </template>
 
 <script>
-  import XPicker from 'elements/plt/x-picker'
-
   export default {
-    components: {
-      XPicker
-    },
     data () {
       return {
         array: ['美国', '中国', '巴西', '日本']

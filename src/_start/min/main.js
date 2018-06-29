@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import MpvueRouterPatch from 'mpvue-router-patch'
+import elements from '@/elements/min/index.js'
 import App from './App'
 import store from '@/store'
 
@@ -8,7 +9,10 @@ App.store = store
 
 Vue.use(MpvueRouterPatch)
 
-const app = new Vue(App)
+const app = new Vue({
+  App,
+  elements
+})
 app.$mount()
 
 export default {
