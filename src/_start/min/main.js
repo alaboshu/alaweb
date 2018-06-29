@@ -3,11 +3,13 @@ import MpvueRouterPatch from 'mpvue-router-patch'
 import weui from '@/assets/style/min/weui.less'
 import App from './App'
 import store from '@/store'
-import XButton from '@/elements/min/x-button' // 按钮
-import XPicker from '@/elements/min/x-picker' // 选择器
+import XButton from '@/elements/min/x-button'
+import XPicker from '@/elements/min/x-picker'
+import XIcon from '@/elements/common/x-icon'
 
 Vue.component('x-button', XButton)
 Vue.component('x-picker', XPicker)
+Vue.component('x-icon', XIcon)
 
 Vue.use(MpvueRouterPatch)
 Vue.use(weui)
