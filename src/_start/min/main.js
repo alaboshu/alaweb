@@ -7,7 +7,7 @@ import XButton from '@/elements/min/x-button'
 import XPicker from '@/elements/min/x-picker'
 import XIcon from '@/elements/common/x-icon'
 import ZkGrid from '@/components/core/zk-grid/index.vue'
-import ZkImage from '@/components/common/zk-image/index.vue'
+import ZkImage from '@/components/core/zk-image/index.vue'
 // import ZkGrid from 'src/components/core/zk-grid/index.vue'
 import {
   api,

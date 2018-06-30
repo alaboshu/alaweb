@@ -29,7 +29,7 @@ import XButton from '@/elements/common/x-button'
 import XFrom from '@/elements/common/x-from'
 import XIcon from '@/elements/common/x-icon'
 import ZkGrid from '@/components/core/zk-grid/index.vue'
-import ZkImage from '@/components/common/zk-image/index.vue'
+import ZkImage from '@/components/core/zk-image/index.vue'
 console.log(config)
 
 Vue.component('x-header', XHeader)

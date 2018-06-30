@@ -20,7 +20,7 @@
     },
     methods: {
       async  init () {
-        var para = {
+        const para = {
           diyKey: 'grid_index'
         }
         this.viewModel = await this.$api.get(DIY_GETLINK, para)
