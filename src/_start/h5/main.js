@@ -1,12 +1,17 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
+
 import Toast from 'vue2-toast'
 import 'vue2-toast/lib/toast.css'
 import App from './App'
 import router from '@/router'
 import global from '@/service/core/global' // 公共函数,全局函数
-import { api, apiUrl, config } from '@/service/api'
+import {
+  api,
+  apiUrl,
+  config
+} from '@/service/api'
 
 import XHeader from '@/elements/common/x-header'
 import XTabbar from '@/elements/common/x-tabbar'
@@ -24,6 +29,7 @@ import XButton from '@/elements/common/x-button'
 import XFrom from '@/elements/common/x-from'
 import XIcon from '@/elements/common/x-icon'
 import ZkGrid from '@/components/core/zk-grid/index.vue'
+import ZkImage from '@/components/common/zk-image/index.vue'
 console.log(config)
 
 Vue.component('x-header', XHeader)
@@ -42,9 +48,11 @@ Vue.component('x-button', XButton)
 Vue.component('x-from', XFrom)
 Vue.component('x-icon', XIcon)
 Vue.component('zk-grid', ZkGrid)
+Vue.component('zk-image', ZkImage)
 
 Vue.use(global)
 Vue.use(Toast)
+
 Vue.config.productionTip = false
 Vue.prototype.$api = api
 Vue.prototype.$apiUrl = apiUrl

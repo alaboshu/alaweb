@@ -34,15 +34,16 @@
 </script>
 
 <style scoped lang="less">
+  @import '~_style/index.less'; // 颜色、边框、大小请尽可能的使用变量
   .weui-grid {
-  	text-decoration: none;
-  	color: #000;
+    text-decoration: none;
+    color: @brand;
   }
   .weui-cell:visited {
-  	color: #000;
+    color: #000;
   }
   .weui-grid__label {
-  	text-decoration: none;
-  	color: #000;
+    text-decoration: none;
+    color: #000;
   }
 </style>

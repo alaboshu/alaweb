@@ -57,6 +57,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@/elements/plt': resolve('src/elements/h5'),
+      '_style': resolve('src/assets/style/h5'),
       '@': resolve('src'),
       flyio: 'flyio/dist/npm/fly',
       wx: resolve('src/utils/wx')
