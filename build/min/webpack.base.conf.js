@@ -7,6 +7,7 @@ const HappyPack = require('happypack')
 const utils = require('./utils')
 const config = require('../../config/min')
 const vueLoaderConfig = require('./vue-loader.conf')
+const glob = require('glob')
 
 function resolve (dir) {
   return path.join(__dirname, '../..', dir)
@@ -16,10 +17,23 @@ const happyThreadPool = HappyPack.ThreadPool({
   size: os.cpus().length
 })
 
+function getEntry (rootSrc, pattern) {
+  const files = glob.sync(path.resolve(rootSrc, pattern))
+  return files.map((file) => {
+    return {
+      path: path.relative(rootSrc, file).replace(/\\/g, '/').replace('.vue', '')
+    }
+  })
+}
+
+const routes = getEntry(resolve('./src'), 'pages/**/*.vue')
+const routesStr = JSON.stringify(routes, null, '  ')
+fs.writeFileSync(resolve('./src/router/routes.json'), routesStr)
+
 module.exports = {
   // 通过 src/pages.js 来配置要打包的页面，
   entry: MpvueEntry.getEntry({
-    pages: '../src/router/routes.js',
+    pages: '../src/router/routes.json',
     template: '../src/_start/min/main.js',
     app: '../dist/min/app.json'
   }),

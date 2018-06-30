@@ -1,10 +1,12 @@
 'use strict'
-const path = require('path')
+const fs = require('fs')
 const os = require('os')
+const path = require('path')
 const HappyPack = require('happypack')
 const utils = require('./utils')
 const config = require('../../config/h5')
 const vueLoaderConfig = require('./vue-loader.conf')
+const glob = require('glob')
 
 function resolve (dir) {
   return path.join(__dirname, '../..', dir)
@@ -13,6 +15,18 @@ function resolve (dir) {
 const happyThreadPool = HappyPack.ThreadPool({
   size: os.cpus().length
 })
+
+function getEntry (rootSrc, pattern) {
+  const files = glob.sync(path.resolve(rootSrc, pattern))
+  return files.map((file) => {
+    const relativePath = path.relative(rootSrc, file).replace(/\\/g, '/').replace('.vue', '')
+    return {
+      path: `/${relativePath}`,
+      name: relativePath.replace(/\/(.)/g, (match, $1) => $1.toUpperCase()),
+      component: `${relativePath}.vue`
+    }
+  })
+}
 
 const createLintingRule = () => ({
   test: /\.(js|vue)$/,
@@ -24,6 +38,10 @@ const createLintingRule = () => ({
     emitWarning: !config.dev.showEslintErrorsInOverlay
   }
 })
+
+const routes = getEntry(resolve('./src'), 'pages/**/*.vue')
+const routesStr = JSON.stringify(routes, null, '  ')
+fs.writeFileSync(resolve('./src/router/routes.js'), `/* eslint-disable */\nmodule.exports = ${routesStr.replace(/"component": "(.*)"/g, '"component": () => import("@/$1")')}`)
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
