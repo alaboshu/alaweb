@@ -6,13 +6,20 @@ import store from '@/store'
 import XButton from '@/elements/min/x-button'
 import XPicker from '@/elements/min/x-picker'
 import XIcon from '@/elements/common/x-icon'
+import ZkGrid from '@/components/core/zk-grid/index.vue'
+import ZkImage from '@/components/common/zk-image/index.vue'
 // import ZkGrid from 'src/components/core/zk-grid/index.vue'
-import { api, apiUrl, config } from '@/service/api'
+import {
+  api,
+  apiUrl,
+  config
+} from '@/service/api'
 
 Vue.component('x-button', XButton)
 Vue.component('x-picker', XPicker)
 Vue.component('x-icon', XIcon)
-// Vue.component('zk-grid', ZkGrid)
+Vue.component('zk-grid', ZkGrid)
+Vue.component('zk-image', ZkImage)
 
 Vue.use(MpvueRouterPatch)
 Vue.use(global)

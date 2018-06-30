@@ -6,7 +6,6 @@ export default {
   async get (apiUrl, data) {
     var response = await request.get(apiUrl, data)
     console.info('get数据', response)
-    this.$toast('请求陈宫')
     if (response.status === 1) {
       return response
     } else {

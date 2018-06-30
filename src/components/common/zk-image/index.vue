@@ -3,8 +3,7 @@
 </template>
 
 <script>
-  import api from '@/service/api/api'
-  import { DIY_GETLINK } from '@/service/api/apiUrl'
+  // import { DIY_GETLINK } from '@/service/api/apiUrl' // 引入Api接口常量
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
@@ -19,10 +18,10 @@
     },
     methods: {
       async  init () {
-        var para = {
-          diyKey: 'grid_index'
-        }
-        this.viewModel = await api.get(DIY_GETLINK, para)
+        // var para = {
+        //   diyKey: 'grid_index'
+        // }
+        this.viewModel = await this.$api.get('api/user/info?id=1')
       }
     }
   }

@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <zk-grid></zk-grid>
+    <zk-image></zk-image>
     <span>{{clientType}}</span>
   </div>
 </template>
 
 <script>
-  import api from '@/service/api/api'
   export default {
     config: {
       'navigationBarBackgroundColor': '#ffffff',
@@ -25,8 +25,8 @@
     },
     methods: {
       async  ApiGet () {
-        var data = await api.get('api/user/info?id=1')
-        console.info('data', data)
+        // var data = await api.get('api/user/info?id=1')
+        // console.info('data', data)
       }
     }
   }
