@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import MpvueRouterPatch from 'mpvue-router-patch'
-import weui from '@/assets/style/min/weui.less'
 import global from '@/service/core/global' // 公共函数,全局函数
 import App from './App'
 import store from '@/store'
@@ -15,7 +14,6 @@ Vue.component('x-icon', XIcon)
 // Vue.component('zk-grid', ZkGrid)
 
 Vue.use(MpvueRouterPatch)
-Vue.use(weui)
 Vue.use(global)
 Vue.config.productionTip = false
 App.store = store

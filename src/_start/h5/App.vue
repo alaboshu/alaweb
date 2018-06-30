@@ -10,6 +10,10 @@
   }
 </script>
 
-<style>
-  /* @import "~style/weui.min.css"; */
+<style lang="less">
+  @import '~@/assets/style/h5/index.less';
+
+  .container {
+    padding: 20px;
+  }
 </style>
