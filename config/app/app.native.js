@@ -13,7 +13,7 @@ module.exports = {
   },
   'page': {
     'homePage': '/pages/app.js',
-    'mediatorPage': '/mediator/index.js',
+    'mediatorPage': '/pages/mediator/index.js',
     'navBarColor': '#309bf8',
     'navItemColor': '#ffffff'
   },
