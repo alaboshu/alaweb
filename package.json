@@ -16,14 +16,14 @@
     "pack:app": "node build/app/pack.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
     "flyio": "^0.5.9",
     "mpvue": "^1.0.0",
     "mpvue-router-patch": "^0.2.1",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.0",
-    "weui": "^1.1.3"
+    "weui": "^1.1.3",
+    "xml-loader": "^1.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
