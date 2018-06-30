@@ -9,8 +9,7 @@
 
 <script>
   import api from '@/service/api/api'
-  console.log()
-  api.getNewsList()
+
   export default {
     data () {
       return {

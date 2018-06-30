@@ -16,7 +16,7 @@ const happyThreadPool = HappyPack.ThreadPool({
   size: os.cpus().length
 })
 
-function getEntry (rootSrc, pattern) {
+function getRoutes (rootSrc, pattern) {
   const files = glob.sync(path.resolve(rootSrc, pattern))
   return files.map((file) => {
     const relativePath = path.relative(rootSrc, file).replace(/\\/g, '/').replace('.vue', '')
@@ -39,7 +39,7 @@ const createLintingRule = () => ({
   }
 })
 
-const routes = getEntry(resolve('./src'), 'pages/**/*.vue')
+const routes = getRoutes(resolve('./src'), 'pages/**/*.vue')
 const routesStr = JSON.stringify(routes, null, '  ')
 fs.writeFileSync(resolve('./src/router/routes.js'), `/* eslint-disable */\nmodule.exports = ${routesStr.replace(/"component": "(.*)"/g, '"component": () => import("@/$1")')}`)
 

@@ -17,7 +17,7 @@ const happyThreadPool = HappyPack.ThreadPool({
   size: os.cpus().length
 })
 
-function getEntry (rootSrc, pattern) {
+function getRoutes (rootSrc, pattern) {
   const files = glob.sync(path.resolve(rootSrc, pattern))
   return files.map((file) => {
     return {
@@ -26,7 +26,7 @@ function getEntry (rootSrc, pattern) {
   })
 }
 
-const routes = getEntry(resolve('./src'), 'pages/**/*.vue')
+const routes = getRoutes(resolve('./src'), 'pages/**/*.vue')
 const routesStr = JSON.stringify(routes, null, '  ')
 fs.writeFileSync(resolve('./src/router/routes.json'), routesStr)
 
