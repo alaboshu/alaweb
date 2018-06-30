@@ -37,3 +37,17 @@
     name: 'zk-grid'
   }
 </script>
+
+<style scoped lang="less">
+  .weui-grid {
+    text-decoration: none;
+    color: #000;
+  }
+  .weui-cell:visited {
+    color: #000;
+  }
+  .weui-grid__label {
+    text-decoration: none;
+    color: #000;
+  }
+</style>

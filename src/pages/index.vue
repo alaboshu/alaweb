@@ -4,7 +4,6 @@
     <x-icon name="zk-classification" link='/index'></x-icon>
     <zk-grid></zk-grid>
     <span>{{clientType}}</span>
-    <x-icon></x-icon>
   </div>
 </template>
 
