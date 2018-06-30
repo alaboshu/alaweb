@@ -21,6 +21,7 @@ import XNodata from '@/elements/common/x-nodata'
 import XButton from '@/elements/common/x-button'
 import XFrom from '@/elements/common/x-from'
 import XIcon from '@/elements/common/x-icon'
+import ZkGrid from 'src/components/core/zk-grid/index.vue'
 
 Vue.component('x-header', XHeader)
 Vue.component('x-tabbar', XTabbar)
@@ -37,6 +38,7 @@ Vue.component('x-nodata', XNodata)
 Vue.component('x-button', XButton)
 Vue.component('x-from', XFrom)
 Vue.component('x-icon', XIcon)
+Vue.component('zk-grid', ZkGrid)
 
 Vue.use(weui)
 Vue.use(global)

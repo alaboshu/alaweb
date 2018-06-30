@@ -7,10 +7,12 @@ import store from '@/store'
 import XButton from '@/elements/min/x-button'
 import XPicker from '@/elements/min/x-picker'
 import XIcon from '@/elements/common/x-icon'
+import ZkGrid from 'src/components/core/zk-grid/index.vue'
 
 Vue.component('x-button', XButton)
 Vue.component('x-picker', XPicker)
 Vue.component('x-icon', XIcon)
+Vue.component('zk-grid', ZkGrid)
 
 Vue.use(MpvueRouterPatch)
 Vue.use(weui)
