@@ -27,9 +27,7 @@ const createLintingRule = () => ({
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
-  entry: {
-    app: '../src/_start/h5/main.js'
-  },
+  entry: '../src/_start/h5/main.js',
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -40,12 +38,10 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
+      '@/elements/plt': resolve('src/elements/h5'),
       '@': resolve('src'),
-      'elements/plt': resolve('src/elements/h5'),
-      'elements': resolve('src/elements/common'),
-      flyio: 'flyio/dist/npm/wx',
-      wx: resolve('src/service/api/wx'),
-      'src': resolve('src')
+      flyio: 'flyio/dist/npm/fly',
+      wx: resolve('src/service/api/wx')
     }
   },
   module: {

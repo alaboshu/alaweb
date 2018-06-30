@@ -35,11 +35,10 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue': 'mpvue',
+      '@/elements/plt': resolve('src/elements/min'),
       '@': resolve('src'),
-      'elements/plt': resolve('src/elements/min'),
       flyio: 'flyio/dist/npm/wx',
-      wx: resolve('src/service/api/wx'),
-      'elements': resolve('src/elements/')
+      wx: resolve('src/service/api/wx')
     },
     symlinks: false,
     aliasFields: ['mpvue', 'weapp', 'browser'],
