@@ -27,7 +27,7 @@ module.exports = {
     switch: true
   },
   localZipFolder: {
-    iOS: '',
+    iOS: 'ios/WeexEros/WeexEros',
     android: 'android/WeexFrameworkWrapper/app/src/main/assets'
   }
 }
