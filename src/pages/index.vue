@@ -2,6 +2,7 @@
   <div class="container">
     <img class="child-image" src="http://admin.czhait.com/wwwroot/assets/svg/zk-classification.svg"></img>
     <x-icon name="zk-classification" link='/index'></x-icon>
+    <zk-grid></zk-grid>
     <span>{{clientType}}</span>
     <x-icon></x-icon>
   </div>
