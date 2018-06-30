@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-export default wx || {
+export default window ? {
   startPullDownRefresh () {
     console.log('startPullDownRefresh')
   },
@@ -17,4 +17,4 @@ export default wx || {
   stopPullDownRefresh () {
     console.log('stopPullDownRefresh')
   }
-}
+} : wx

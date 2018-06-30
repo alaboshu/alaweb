@@ -1,6 +1,8 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
+import Toast from 'vue2-toast'
+import 'vue2-toast/lib/toast.css'
 import App from './App'
 import router from '@/router'
 import global from '@/service/core/global' // 公共函数,全局函数
@@ -40,6 +42,7 @@ Vue.component('x-icon', XIcon)
 Vue.component('zk-grid', ZkGrid)
 
 Vue.use(global)
+Vue.use(Toast)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

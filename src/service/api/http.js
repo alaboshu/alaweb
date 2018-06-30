@@ -1,4 +1,4 @@
-// import wx from 'wx'
+import wx from 'wx'
 import Fly from 'flyio'
 
 const request = new Fly()
@@ -11,22 +11,22 @@ request.interceptors.request.use((config, promise) => {
 request.config.baseURL = 'http://localhost:8080'
 
 request.interceptors.request.use((request) => {
-  // wx.showNavigationBarLoading()
+  wx.showNavigationBarLoading()
   return request
 })
 
 request.interceptors.response.use(
   (response, promise) => {
-    // wx.hideNavigationBarLoading()
+    wx.hideNavigationBarLoading()
     return promise.resolve(response.data)
   },
   (err, promise) => {
     if (err) {
-      // wx.hideNavigationBarLoading()
-      // wx.showToast({
-      //   title: err.message,
-      //   icon: 'none'
-      // })
+      wx.hideNavigationBarLoading()
+      wx.showToast({
+        title: err.message,
+        icon: 'none'
+      })
     }
     return promise.resolve()
   }
