@@ -30,6 +30,7 @@ import XFrom from '@/elements/common/x-from'
 import XIcon from '@/elements/common/x-icon'
 import ZkGrid from '@/components/core/zk-grid/index.vue'
 import ZkImage from '@/components/core/zk-image/index.vue'
+import ZkAddress from '@/components/core/zk-address/index.vue'
 console.log(config)
 
 Vue.component('x-header', XHeader)
@@ -49,6 +50,7 @@ Vue.component('x-from', XFrom)
 Vue.component('x-icon', XIcon)
 Vue.component('zk-grid', ZkGrid)
 Vue.component('zk-image', ZkImage)
+Vue.component('zk-address', ZkAddress)
 
 Vue.use(global)
 Vue.use(Toast)
