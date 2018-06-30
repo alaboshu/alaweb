@@ -23,7 +23,6 @@ ip.txt
 # Android Studio
 .idea/
 local.properties
-build/
 .idea/
 .gradle/
 
