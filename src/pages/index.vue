@@ -8,9 +8,16 @@
 </template>
 
 <script>
-  import api from '@/service/api/api'
+  // import api from '@/service/api/api'
 
   export default {
+    config: {
+      'navigationBarBackgroundColor': '#ffffff',
+      'navigationBarTextStyle': 'black',
+      'navigationBarTitleText': '微信接口功能演示',
+      'backgroundColor': '#eeeeee',
+      'backgroundTextStyle': 'light'
+    },
     data () {
       return {
         clientType: ''

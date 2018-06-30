@@ -17,11 +17,23 @@ const happyThreadPool = HappyPack.ThreadPool({
   size: os.cpus().length
 })
 
+function trimStr (str) {
+  return str.trim().replace(/['|"],?/g, '')
+}
+
 function getRoutes (rootSrc, pattern) {
   const files = glob.sync(path.resolve(rootSrc, pattern))
   return files.map((file) => {
+    const configMatched = fs.readFileSync(file).toString().match(/config: {([^]*?)}/)
+    const config = configMatched && RegExp.$1.match(/['|"]?(.*)['|"]?: ?['|"]?(.*)['|"]?/g).reduce((result, current) => {
+      const configArr = current.replace(' ', '').split(':')
+      return Object.assign(result, {
+        [trimStr(configArr[0])]: configArr[1] === 'true' ? true : trimStr(configArr[1])
+      })
+    }, {})
     return {
-      path: path.relative(rootSrc, file).replace(/\\/g, '/').replace('.vue', '')
+      path: path.relative(rootSrc, file).replace(/\\/g, '/').replace('.vue', ''),
+      config: config || {}
     }
   })
 }
