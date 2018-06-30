@@ -35,13 +35,13 @@ module.exports = {
       ? config.build.assetsPublicPath : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json', '.less'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@/elements/plt': resolve('src/elements/h5'),
       '@': resolve('src'),
       flyio: 'flyio/dist/npm/fly',
-      wx: resolve('src/service/api/wx')
+      wx: resolve('src/utils/wx')
     }
   },
   module: {

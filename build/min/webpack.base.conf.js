@@ -32,13 +32,13 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json', '.less'],
     alias: {
       'vue': 'mpvue',
       '@/elements/plt': resolve('src/elements/min'),
       '@': resolve('src'),
       flyio: 'flyio/dist/npm/wx',
-      wx: resolve('src/service/api/wx')
+      wx: resolve('src/utils/wx')
     },
     symlinks: false,
     aliasFields: ['mpvue', 'weapp', 'browser'],

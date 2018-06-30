@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import { getTouch } from '../../../service/utils'
+  import { getTouch } from '@/utils'
   const THUMB_STROKE = 20 // 开关的行程
   export default {
     name: 'x-switch',
