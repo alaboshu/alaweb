@@ -26,9 +26,11 @@ function getRoutes (rootSrc, pattern) {
   return files.map((file) => {
     const configMatched = fs.readFileSync(file).toString().match(/config: {([^]*?)}/)
     const config = configMatched && RegExp.$1.match(/['|"]?(.*)['|"]?: ?['|"]?(.*)['|"]?/g).reduce((result, current) => {
-      const configArr = current.replace(' ', '').split(':')
+      const configParsed = current.replace(' ', '').split(':')
+      const configKey = trimStr(configParsed[0])
+      const configVal = trimStr(configParsed[1])
       return Object.assign(result, {
-        [trimStr(configArr[0])]: configArr[1] === 'true' ? true : trimStr(configArr[1])
+        [configKey]: configVal === 'true' ? true : configVal
       })
     }, {})
     return {
