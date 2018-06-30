@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-export default {
+export default window ? {
   startPullDownRefresh () {
     console.log('startPullDownRefresh')
   },
@@ -11,12 +11,10 @@ export default {
     if (!document.querySelector('.lx-load-mark')) return
     Vue.prototype.$loading.close()
   },
-  showToast ({
-    title
-  }) {
+  showToast ({ title }) {
     Vue.prototype.$toast.center(title)
   },
   stopPullDownRefresh () {
     console.log('stopPullDownRefresh')
   }
-}
+} : wx

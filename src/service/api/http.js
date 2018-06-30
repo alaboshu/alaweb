@@ -8,7 +8,7 @@ request.interceptors.request.use((config, promise) => {
   return config
 })
 // 配置请求基地址
-request.config.baseURL = 'http://localhost:9011'
+request.config.baseURL = 'http://localhost:8080'
 
 request.interceptors.request.use((request) => {
   wx.showNavigationBarLoading()
@@ -21,11 +21,13 @@ request.interceptors.response.use(
     return promise.resolve(response.data)
   },
   (err, promise) => {
-    wx.hideNavigationBarLoading()
-    wx.showToast({
-      title: err.message,
-      icon: 'none'
-    })
+    if (err) {
+      wx.hideNavigationBarLoading()
+      wx.showToast({
+        title: err.message,
+        icon: 'none'
+      })
+    }
     return promise.resolve()
   }
 )

@@ -8,7 +8,9 @@
 </template>
 
 <script>
-  // import api from '@/utils/api'
+  import api from '@/service/api/api'
+  console.log()
+  api.getNewsList()
   export default {
     data () {
       return {
@@ -20,7 +22,7 @@
     },
     methods: {
       async  ApiGet () {
-        this.clientType = this.clientType()
+        // this.clientType = this.clientType()
         // var data = api.getNewsList()
         // console.info('fly', data)
       }
@@ -28,8 +30,5 @@
   }
 </script>
 
-<style scoped>
-  .container {
-    padding: 20px;
-  }
+<style scoped lang="less">
 </style>

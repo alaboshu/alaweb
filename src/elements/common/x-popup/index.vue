@@ -6,7 +6,7 @@
   </transition>
 </template>
 <script>
-  import PopupMixin from '../../../../src/service/mixins/popup'
+  import PopupMixin from '@/mixins/popup'
   export default {
     name: 'x-popup',
     mixins: [PopupMixin],

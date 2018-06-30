@@ -1,9 +1,10 @@
 <script>
-export default {
-  name: 'App',
-  mpType: 'app'
-}
+  export default {
+    name: 'App',
+    mpType: 'app'
+  }
 </script>
 
-<style>
+<style lang="less">
+  @import '~@/assets/style/min/index.less';
 </style>
