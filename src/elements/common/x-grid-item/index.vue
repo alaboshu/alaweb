@@ -27,4 +27,8 @@
   .weui-cell:visited {
     color: #000;
   }
+  .weui-grid__label {
+    text-decoration: none;
+    color: #000;
+  }
 </style>

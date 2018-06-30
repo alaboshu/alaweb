@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        buildConfigField "String","PAGE_PREFIX" , "\"${APPLICATION_ID}\""
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile "com.android.support:appcompat-v7:${PROJECT_SUPPORTLIBVERSION}"
+    compile "com.android.support:support-v4:${PROJECT_SUPPORTLIBVERSION}"
+    compile "com.android.support:recyclerview-v7:${PROJECT_SUPPORTLIBVERSION}"
+
+    compile project(':sdk')
+    compile 'com.squareup.okhttp:okhttp-ws:2.3.0'
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile files('libs/libammsdk.jar')
+//    compile files('libs/SocialSDK_WeChat_Simplify.jar')
+    compile files('libs/otto-1.3.5.jar')
+    compile 'com.github.bumptech.glide:glide:4.6.1'
+}

@@ -1,6 +1,7 @@
 <template>
-  <img class="svg-icon" src="http://admin.czhait.com/wwwroot/assets/svg/zk-classification.svg"></img>
+  <img class="svg-icon" :class="{Iclass:true}" src="http://admin.czhait.com/wwwroot/assets/svg/zk-classification.svg" @click="onClick" :style="'width:'+fontSize">
 </template>
+
 <script>
   export default {
     name: 'x-icon',
@@ -14,12 +15,14 @@
       link: [String, Object],
       size: {
         type: String,
-        default: '1.5rem'
+        default: '30px'
       }
     },
     data () {
       return {
-        fontSize: this.size
+        fontSize: this.size,
+        Isrc: this.src,
+        Iclass: this.class
       }
     },
     methods: {

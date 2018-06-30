@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ProgressBar
+            android:id="@+id/pb_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/c_f2f2f2"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/ic_refresh" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_refresh"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:text="@string/str_reload" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/c_eff3f4"
+        >
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/c_eff3f4"
+            >
+
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="调试页面"
+                android:textColor="@color/c_666666"
+                android:textSize="18sp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center_horizontal"
+                android:background="#ffffff"
+                />
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:layout_marginTop="20dp"
+                >
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="版本信息"
+                    android:textColor="@color/c_666666"
+                    android:textSize="15sp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/tv_title_version"
+                    />
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="App版本号："
+                    android:textColor="@color/c_666666"
+                    android:textSize="15sp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/tv_title_version"
+                    android:id="@+id/tv_title_appversion"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/c_666666"
+                    android:textSize="15sp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@+id/tv_title_version"
+                    android:layout_toRightOf="@+id/tv_title_appversion"
+                    android:id="@+id/tv_appversion"
+                    />
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="js版本号："
+                    android:textColor="@color/c_666666"
+                    android:textSize="15sp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/tv_title_appversion"
+                    android:id="@+id/tv_tilte_jsversion"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/c_666666"
+                    android:textSize="15sp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_alignLeft="@+id/tv_appversion"
+                    android:layout_below="@+id/tv_appversion"
+                    android:id="@+id/tv_jsverision"
+                    />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:layout_marginTop="20dp"
+
+                >
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="拦截器开关"
+                    android:textColor="@color/c_666666"
+                    android:textSize="15sp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/tv_title_intercept"
+                    />
+
+            <CheckBox
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/cb_inter"
+                    android:layout_below="@+id/tv_title_intercept"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/c_666666"
+                    android:textSize="15sp"
+                    android:text="Interceptor"
+                    android:layout_toRightOf="@+id/cb_inter"
+                    android:layout_alignBaseline="@+id/cb_inter"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            <CheckBox
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/cb_hotrefresh"
+                android:layout_below="@+id/cb_inter"
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c_666666"
+                android:textSize="15sp"
+                android:text="hotRefresh"
+                android:layout_toRightOf="@+id/cb_hotrefresh"
+                android:layout_alignBaseline="@+id/cb_hotrefresh"
+                android:layout_marginLeft="10dp"
+                />
+        </RelativeLayout>
+
+        <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:background="#20000000"-->
+                <!--android:orientation="vertical">-->
+
+            <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:padding="20dp"-->
+                    <!--android:textColor="@color/c_666666"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:id="@+id/tv_current"-->
+                    <!--android:gravity="center_horizontal"-->
+                    <!--android:background="@color/c_ffffffff"-->
+                    <!--/>-->
+
+            <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/c_ffffffff"-->
+                    <!--android:gravity="center_horizontal"-->
+                    <!--android:paddingBottom="10dp"-->
+                    <!--android:paddingTop="10dp"-->
+                    <!--android:text="环境选择"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:textColor="@color/c_666666"-->
+                    <!--android:textSize="15sp"/>-->
+
+
+            <!--<TextView-->
+                    <!--android:id="@+id/tv_test1"-->
+                    <!--android:onClick="onClick"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/c_ffffffff"-->
+                    <!--android:padding="20dp"-->
+                    <!--android:text="test1"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:textColor="@color/c_666666"-->
+                    <!--android:textSize="15sp"/>-->
+
+            <!--<TextView-->
+                    <!--android:id="@+id/tv_test2"-->
+                    <!--android:onClick="onClick"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:background="@color/c_ffffffff"-->
+                    <!--android:padding="20dp"-->
+                    <!--android:text="test2"-->
+                    <!--android:textColor="@color/c_666666"-->
+                    <!--android:textSize="15sp"/>-->
+
+            <!--<TextView-->
+                    <!--android:id="@+id/tv_test3"-->
+                    <!--android:onClick="onClick"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:background="@color/c_ffffffff"-->
+                    <!--android:padding="20dp"-->
+                    <!--android:text="test3"-->
+                    <!--android:textColor="@color/c_666666"-->
+                    <!--android:textSize="15sp"/>-->
+
+            <!--<TextView-->
+                    <!--android:id="@+id/tv_test4"-->
+                    <!--android:onClick="onClick"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:background="@color/c_ffffffff"-->
+                    <!--android:padding="20dp"-->
+                    <!--android:text="test4"-->
+                    <!--android:textColor="@color/c_666666"-->
+                    <!--android:textSize="15sp"/>-->
+
+            <!--<TextView-->
+                    <!--android:id="@+id/tv_test5"-->
+                    <!--android:onClick="onClick"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:background="@color/c_ffffffff"-->
+                    <!--android:padding="20dp"-->
+                    <!--android:text="test5"-->
+                    <!--android:textColor="@color/c_666666"-->
+                    <!--android:textSize="15sp"/>-->
+
+            <!--<TextView-->
+                    <!--android:id="@+id/tv_wechat"-->
+                    <!--android:onClick="onClick"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:background="@color/c_ffffffff"-->
+                    <!--android:padding="20dp"-->
+                    <!--android:text="wechat"-->
+                    <!--android:textColor="@color/c_666666"-->
+                    <!--android:textSize="15sp"/>-->
+
+        <!--</LinearLayout>-->
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/toolbar_container"
+              android:background="#00b4cb"
+              android:orientation="horizontal"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp"
+        >
+
+
+    <RelativeLayout
+            android:id="@+id/toolbar_left"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            >
+
+        <ImageView
+                android:id="@+id/toolbar_left_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/icon_backnav"
+                android:scaleType="fitCenter"
+                android:padding="5dp"
+                />
+
+        <com.benmu.widget.view.BMReceiverTextView
+                android:id="@+id/action_bar_tvitem_webclose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:layout_toRightOf="@+id/toolbar_left_icon"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/size_15"
+                android:visibility="gone"
+                android:textStyle="bold"
+                />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            >
+
+        <com.benmu.widget.view.BMReceiverTextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffffff"
+                android:lines="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/size_16"
+                />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+            android:id="@+id/toolbar_right"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            >
+
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                >
+
+            <com.benmu.widget.view.BMReceiverTextView
+                    android:id="@+id/toolbar_right_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/size_15"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:visibility="gone"
+                    />
+
+            <ImageView
+                    android:id="@+id/toolbar_right_icon"
+                    android:layout_width="55dp"
+                    android:layout_height="35dp"
+                    android:clickable="true"
+                    android:layout_toRightOf="@+id/toolbar_right_text"
+                    android:layout_marginLeft="6dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="6dp"
+                    android:visibility="gone"
+                    />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
