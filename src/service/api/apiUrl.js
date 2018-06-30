@@ -6,3 +6,5 @@ export const USER_UPDATE_PUT = 'Api/User/Update' // 会员信息更新
 
 // ArticleApiController中的Api接口
 export const ARTICLE_GET_GET = 'Api/Article/Get' // 文章获取
+
+export const DIY_GETLINK = 'Api/Diy/Getlink' // 链接获取

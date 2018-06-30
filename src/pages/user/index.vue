@@ -17,7 +17,7 @@
     data () {
       return {
         clientType: ''
-      };
+      }
     },
     mounted () {
       this.ApiGet()

@@ -1,14 +1,11 @@
 <template>
-  <img class="svg-icon" :class="{Iclass:true}" src="http://admin.czhait.com/wwwroot/assets/svg/zk-classification.svg" @click="onClick" :style="'width:'+fontSize">
+  <img class="svg-icon" :src="Isrc" @click="onClick" :style="'width:'+fontSize">
 </template>
 
 <script>
   export default {
     name: 'x-icon',
     props: {
-      class: {
-        type: String
-      },
       src: {
         type: String
       },
@@ -37,7 +34,7 @@
 
 <style>
   .svg-icon {
-    display: inline-block;
-    fill: currentColor;
+  	display: inline-block;
+  	fill: currentColor;
   }
 </style>

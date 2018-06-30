@@ -8,7 +8,7 @@ request.interceptors.request.use((config, promise) => {
   return config
 })
 // 配置请求基地址
-request.config.baseURL = 'http://localhost:8080'
+request.config.baseURL = 'http://admin.czhait.com/'
 
 request.interceptors.request.use((request) => {
   wx.showNavigationBarLoading()
