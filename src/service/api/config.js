@@ -1,9 +1,9 @@
-const { Url, Id, Key } = process.env
+const { CLIENT_URL, CLIENT_ID, CLIENT_KEY } = process.env
 
 console.log(process.env)
 
 export default {
-  url: Url || 'http://admin.czhait.com/',
-  id: Id || 'test_id',
-  key: Key || 'test_key'
+  url: CLIENT_URL || 'http://admin.czhait.com/',
+  id: CLIENT_ID || 'test_id',
+  key: CLIENT_KEY || 'test_key'
 }
