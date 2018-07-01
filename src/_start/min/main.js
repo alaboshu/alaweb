@@ -7,6 +7,7 @@ import XButton from '@/elements/min/x-button'
 import XPicker from '@/elements/min/x-picker'
 import XIcon from '@/elements/common/x-icon'
 // import ZkGrid from 'src/components/core/zk-grid/index.vue'
+import { api, apiUrl, config } from '@/service/api'
 
 Vue.component('x-button', XButton)
 Vue.component('x-picker', XPicker)
@@ -17,7 +18,9 @@ Vue.use(MpvueRouterPatch)
 Vue.use(global)
 Vue.config.productionTip = false
 App.store = store
-Vue.prototype.$store = store
+Vue.prototype.$api = api
+Vue.prototype.$apiUrl = apiUrl
+Vue.prototype.$url = config.url
 const app = new Vue(App)
 app.$mount()
 

@@ -1,4 +1,4 @@
-import request from './http.js'
+import request from './request'
 export default {
 
   //  Get方法：查
