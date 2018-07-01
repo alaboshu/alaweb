@@ -12,6 +12,7 @@
     "build:h5": "node build/h5/build.js",
     "all": "npm run dev && npm run devH5",
     "lint": "eslint --ext .js,.vue src",
+    "fix": "eslint --ext .js,.vue src --fix",
     "dev:app": "node build/app/dev.js",
     "pack:app": "node build/app/pack.js"
   },
