@@ -19,16 +19,16 @@
 npm install
 
 # build mini program
-npm run dev
+npm run dev:min
 
 # build H5 pages
-npm run dev:h5
+npm run dev
 
 # build for production with minification for mini program
-npm run build
+npm run build:min
 
 # build for production with minification for H5 pages
-npm run build:h5
+npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report

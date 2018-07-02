@@ -1,6 +1,4 @@
 export const editSetting = {
-  '_id': '5b38126e6119b33e10ce1e29',
-  'CreateTime': '2018-06-30T23:29:50.801Z',
   'Name': 'zk-search',
   'Path': null,
   'Key': 'zk-search',
@@ -17,5 +15,7 @@ export const editSetting = {
   'Events': [{
     'Type': 3,
     'Name': '初始化'
-  }]
+  }],
+  'Id': '5b3ab4c722452131b4017eda',
+  'CreateTime': '2018-07-03 07:27:03'
 }
