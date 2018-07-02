@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <zk-grid></zk-grid>
-    <zk-image></zk-image>
     <zk-address></zk-address>
     <span>{{clientType}}</span>
   </div>
