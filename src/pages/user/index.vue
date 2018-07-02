@@ -1,32 +1,51 @@
 <template>
   <div class="container">
-    <img class="child-image" src="http://admin.czhait.com/wwwroot/assets/svg/zk-classification.svg"></img>
-    <x-icon name="zk-classification" link='/index'></x-icon>
-    <zk-grid></zk-grid>
-
+    <component :is="current"></component>
   </div>
 </template>
 
 <script>
-  // import api from '@/service/api/api'
-
+  import Vue from 'vue'
   export default {
     config: {
       title: '会员中心'
     },
     data () {
       return {
-        clientType: ''
+        clientType: '',
+        template: '',
+        current: ''
       }
     },
     mounted () {
-      this.ApiGet()
+      var comp = [{
+        key: '/core/zk-grid/index.vue',
+        name: 'root',
+        position: { left: 100, top: 0 }
+      }, {
+        key: '/core/zk-grid/index.vue',
+        name: 'root',
+        position: { left: 100, top: 0 }
+      }]
+
+      for (var i = 0; i < comp.length; i++) {
+        console.log(comp[i])
+        this.recur(comp[i])
+      }
+      var myComponent = Vue.extend({
+        template: '<div>' + this.template + '</div>'
+        // components: {}
+      })
+      this.current = myComponent
     },
     methods: {
-      async ApiGet () {
-        // this.clientType = this.clientType()
-        // var data = api.getNewsList()
-        // console.info('fly', data)
+      recur (component) {
+        if (component != null) {
+          var citem = require('@/components' + component.key + '').default
+          Vue.component(component.name, citem)
+          this.template += '<' + component.name + '></' + component.name + '>'
+          // console.log(this.template)
+        }
       }
     }
   }
