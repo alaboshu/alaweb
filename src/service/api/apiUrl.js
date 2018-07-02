@@ -1,10 +1,223 @@
-// 系统Api地址，自动与服务器同步，命名方式App_方法名_类型(put,get,post,delete)
-// UserApiController中的Api接口
-export const USER_LOGIN_POST = 'Api/User/Login' // 会员登录
-export const USER_REG_POST = 'Api/User/Reg' // 会员注册
-export const USER_UPDATE_PUT = 'Api/User/Update' // 会员信息更新
+//  UserAddress相关的API接口
+export const USERADDRESS_ADD = 'Api/UserAddress/Add'
+export const USERADDRESS_GET = 'Api/UserAddress/Get'
+export const USERADDRESS_DELETE = 'Api/UserAddress/Delete'
+export const USERADDRESS_UPDATE = 'Api/UserAddress/Update'
+export const USERADDRESS_SETDEFAULT = 'Api/UserAddress/SetDefault'
+export const USERADDRESS_SINGLE = 'Api/UserAddress/Single'
+export const USERADDRESS_ADD_POST = 'Api/UserAddress/Add'
+export const USERADDRESS_GET_GET = 'Api/UserAddress/Get'
+export const USERADDRESS_DELETE_DELETE = 'Api/UserAddress/Delete'
+export const USERADDRESS_UPDATE_PUT = 'Api/UserAddress/Update'
+export const USERADDRESS_SETDEFAULT_POST = 'Api/UserAddress/SetDefault'
+export const USERADDRESS_SINGLE_GET = 'Api/UserAddress/Single'
 
-// ArticleApiController中的Api接口
-export const ARTICLE_GET_GET = 'Api/Article/Get' // 文章获取
+//  User相关的API接口
+export const USER_LOGIN = 'Api/User/Login'
+export const USER_LOGINBYOPENID = 'Api/User/LoginByOpenId'
+export const USER_REG = 'Api/User/Reg'
+export const USER_UPDATE = 'Api/User/Update'
+export const USER_CHANGEPASSWORD = 'Api/User/ChangePassword'
+export const USER_FINDPASSWORD = 'Api/User/FindPassword'
+export const USER_VIEW = 'Api/User/View'
+export const USER_INFO = 'Api/User/Info'
+export const USER_ADDACTION = 'Api/User/AddAction'
+export const USER_GETACTION = 'Api/User/GetAction'
+export const USER_REMOVEACTION = 'Api/User/RemoveAction'
+export const USER_LOGIN_POST = 'Api/User/Login'
+export const USER_LOGINBYOPENID_POST = 'Api/User/LoginByOpenId'
+export const USER_REG_POST = 'Api/User/Reg'
+export const USER_UPDATE_PUT = 'Api/User/Update'
+export const USER_CHANGEPASSWORD_PUT = 'Api/User/ChangePassword'
+export const USER_FINDPASSWORD_PUT = 'Api/User/FindPassword'
+export const USER_VIEW_GET = 'Api/User/View'
+export const USER_INFO_GET = 'Api/User/Info'
+export const USER_ADDACTION_POST = 'Api/User/AddAction'
+export const USER_GETACTION_GET = 'Api/User/GetAction'
+export const USER_REMOVEACTION_DELETE = 'Api/User/RemoveAction'
 
-export const DIY_GETLINK = 'Api/Diy/Getlink' // 链接获取
+//  UserDetail相关的API接口
+export const USERDETAIL_QRCODE = 'Api/UserDetail/QrCode'
+export const USERDETAIL_TREE = 'Api/UserDetail/Tree'
+export const USERDETAIL_IDENTITY = 'Api/UserDetail/Identity'
+export const USERDETAIL_GETIDENTITY = 'Api/UserDetail/GetIdentity'
+export const USERDETAIL_QRCODE_GET = 'Api/UserDetail/QrCode'
+export const USERDETAIL_TREE_GET = 'Api/UserDetail/Tree'
+export const USERDETAIL_IDENTITY_POST = 'Api/UserDetail/Identity'
+export const USERDETAIL_GETIDENTITY_GET = 'Api/UserDetail/GetIdentity'
+
+//  UserType相关的API接口
+export const USERTYPE_GETSINGLE = 'Api/UserType/GetSingle'
+export const USERTYPE_GETLIST = 'Api/UserType/GetList'
+export const USERTYPE_GETSINGLE_GET = 'Api/UserType/GetSingle'
+export const USERTYPE_GETLIST_GET = 'Api/UserType/GetList'
+
+//  ShareOrder相关的API接口
+export const SHAREORDER_GETSINGLE = 'Api/ShareOrder/GetSingle'
+export const SHAREORDER_GETLIST = 'Api/ShareOrder/GetList'
+export const SHAREORDER_GETSINGLE_GET = 'Api/ShareOrder/GetSingle'
+export const SHAREORDER_GETLIST_GET = 'Api/ShareOrder/GetList'
+
+//  BankCard相关的API接口
+export const BANKCARD_GETBANKTYPE = 'Api/BankCard/GetBankType'
+export const BANKCARD_ADD = 'Api/BankCard/Add'
+export const BANKCARD_GETLIST = 'Api/BankCard/GetList'
+export const BANKCARD_DELETE = 'Api/BankCard/Delete'
+export const BANKCARD_UPDATE = 'Api/BankCard/Update'
+export const BANKCARD_GET = 'Api/BankCard/Get'
+export const BANKCARD_GETBANKTYPE_GET = 'Api/BankCard/GetBankType'
+export const BANKCARD_ADD_POST = 'Api/BankCard/Add'
+export const BANKCARD_GETLIST_GET = 'Api/BankCard/GetList'
+export const BANKCARD_DELETE_DELETE = 'Api/BankCard/Delete'
+export const BANKCARD_UPDATE_PUT = 'Api/BankCard/Update'
+export const BANKCARD_GET_GET = 'Api/BankCard/Get'
+
+//  Pay相关的API接口
+export const PAY_GETLIST = 'Api/Pay/GetList'
+export const PAY_PAY = 'Api/Pay/Pay'
+export const PAY_GETLIST_GET = 'Api/Pay/GetList'
+export const PAY_PAY_POST = 'Api/Pay/Pay'
+
+//  Recharge相关的API接口
+export const RECHARGE_GETACCOUNTTYPE = 'Api/Recharge/GetAccountType'
+export const RECHARGE_ADDOFFONLINE = 'Api/Recharge/AddOffOnline'
+export const RECHARGE_ADDONLINE = 'Api/Recharge/AddOnline'
+export const RECHARGE_DELETE = 'Api/Recharge/Delete'
+export const RECHARGE_GET = 'Api/Recharge/Get'
+export const RECHARGE_GETACCOUNTTYPE_GET = 'Api/Recharge/GetAccountType'
+export const RECHARGE_ADDOFFONLINE_POST = 'Api/Recharge/AddOffOnline'
+export const RECHARGE_ADDONLINE_POST = 'Api/Recharge/AddOnline'
+export const RECHARGE_DELETE_DELETE = 'Api/Recharge/Delete'
+export const RECHARGE_GET_GET = 'Api/Recharge/Get'
+
+//  User/account相关的API接口
+export const USER_ACCOUNT_ALLACCOUNTS = 'Api/User/account/AllAccounts'
+export const USER_ACCOUNT_BILL = 'Api/User/account/Bill'
+export const USER_ACCOUNT_BILLVIEW = 'Api/User/account/BillView'
+export const USER_ACCOUNT_TRANSFER = 'Api/User/account/Transfer'
+export const USER_ACCOUNT_ALLACCOUNTS_GET = 'Api/User/account/AllAccounts'
+export const USER_ACCOUNT_BILL_GET = 'Api/User/account/Bill'
+export const USER_ACCOUNT_BILLVIEW_GET = 'Api/User/account/BillView'
+export const USER_ACCOUNT_TRANSFER_GET = 'Api/User/account/Transfer'
+
+//  WithDraw相关的API接口
+export const WITHDRAW_GETACCOUNTTYPE = 'Api/WithDraw/GetAccountType'
+export const WITHDRAW_ADD = 'Api/WithDraw/Add'
+export const WITHDRAW_GETUSERLIST = 'Api/WithDraw/GetUserList'
+export const WITHDRAW_DELETE = 'Api/WithDraw/Delete'
+export const WITHDRAW_GET = 'Api/WithDraw/Get'
+export const WITHDRAW_GETACCOUNTTYPE_GET = 'Api/WithDraw/GetAccountType'
+export const WITHDRAW_ADD_POST = 'Api/WithDraw/Add'
+export const WITHDRAW_GETUSERLIST_GET = 'Api/WithDraw/GetUserList'
+export const WITHDRAW_DELETE_DELETE = 'Api/WithDraw/Delete'
+export const WITHDRAW_GET_GET = 'Api/WithDraw/Get'
+
+//  Common相关的API接口
+export const COMMON_SENDMOBILEVERIFIYCODE = 'Api/Common/SendMobileVerifiyCode'
+export const COMMON_UPLOAD = 'Api/Common/Upload'
+export const COMMON_GETAUTOCONFIG = 'Api/Common/GetAutoConfig'
+export const COMMON_GET0 = 'Api/Common/GetApi'
+export const COMMON_SENDMOBILEVERIFIYCODE_POST = 'Api/Common/SendMobileVerifiyCode'
+export const COMMON_UPLOAD_POST = 'Api/Common/Upload'
+export const COMMON_GETAUTOCONFIG_GET = 'Api/Common/GetAutoConfig'
+export const COMMON_GETGET = 'Api/Common/GetApi'
+
+//  ApiStore相关的API接口
+export const APISTORE_LOGIN = 'Api/ApiStore/Login'
+export const APISTORE_WEIXINPUBLOGIN = 'Api/ApiStore/WeixinPubLogin'
+export const APISTORE_LOGIN_GET = 'Api/ApiStore/Login'
+export const APISTORE_WEIXINPUBLOGIN_GET = 'Api/ApiStore/WeixinPubLogin'
+
+//  User/Debt相关的API接口
+export const USER_DEBT_APPLY = 'Api/User/Debt/Apply'
+export const USER_DEBT_DELETE = 'Api/User/Debt/Delete'
+export const USER_DEBT_LIST = 'Api/User/Debt/List'
+export const USER_DEBT_DEBTBULLETIN = 'Api/User/Debt/DebtBulletin'
+export const USER_DEBT_COUNT = 'Api/User/Debt/Count'
+export const USER_DEBT_SHOW = 'Api/User/Debt/Show'
+export const USER_DEBT_SOLUTION = 'Api/User/Debt/Solution'
+export const USER_DEBT_APPLY_POST = 'Api/User/Debt/Apply'
+export const USER_DEBT_DELETE_GET = 'Api/User/Debt/Delete'
+export const USER_DEBT_LIST_GET = 'Api/User/Debt/List'
+export const USER_DEBT_DEBTBULLETIN_GET = 'Api/User/Debt/DebtBulletin'
+export const USER_DEBT_COUNT_GET = 'Api/User/Debt/Count'
+export const USER_DEBT_SHOW_GET = 'Api/User/Debt/Show'
+export const USER_DEBT_SOLUTION_POST = 'Api/User/Debt/Solution'
+
+//  UserStock相关的API接口
+export const USERSTOCK_GETLIST = 'Api/UserStock/GetList'
+export const USERSTOCK_GETPRODUCTLIST = 'Api/UserStock/GetProductList'
+export const USERSTOCK_OFFLINEDELIVERYPRODUCT = 'Api/UserStock/OfflineDeliveryProduct'
+export const USERSTOCK_OFFLINEDELIVERY = 'Api/UserStock/OfflineDelivery'
+export const USERSTOCK_GETLIST_GET = 'Api/UserStock/GetList'
+export const USERSTOCK_GETPRODUCTLIST_GET = 'Api/UserStock/GetProductList'
+export const USERSTOCK_OFFLINEDELIVERYPRODUCT_GET = 'Api/UserStock/OfflineDeliveryProduct'
+export const USERSTOCK_OFFLINEDELIVERY_POST = 'Api/UserStock/OfflineDelivery'
+
+//  Product相关的API接口
+export const PRODUCT_SHOW = 'Api/Product/Show'
+export const PRODUCT_LIST = 'Api/Product/List'
+export const PRODUCT_CLASS = 'Api/Product/Class'
+export const PRODUCT_FAVORITEPRODUCT = 'Api/Product/FavoriteProduct'
+export const PRODUCT_FOOTPRINTPRODUCT = 'Api/Product/FootprintProduct'
+export const PRODUCT_PRODUCTCARTPRODUCT = 'Api/Product/ProductCartProduct'
+export const PRODUCT_SHOW_GET = 'Api/Product/Show'
+export const PRODUCT_LIST_GET = 'Api/Product/List'
+export const PRODUCT_CLASS_GET = 'Api/Product/Class'
+export const PRODUCT_FAVORITEPRODUCT_GET = 'Api/Product/FavoriteProduct'
+export const PRODUCT_FOOTPRINTPRODUCT_GET = 'Api/Product/FootprintProduct'
+export const PRODUCT_PRODUCTCARTPRODUCT_GET = 'Api/Product/ProductCartProduct'
+
+//  Cart相关的API接口
+export const CART_ADDCART = 'Api/Cart/AddCart'
+export const CART_GETCART = 'Api/Cart/GetCart'
+export const CART_REMOVECART = 'Api/Cart/RemoveCart'
+export const CART_UPDATECART = 'Api/Cart/UpdateCart'
+export const CART_ADDCART_POST = 'Api/Cart/AddCart'
+export const CART_GETCART_GET = 'Api/Cart/GetCart'
+export const CART_REMOVECART_DELETE = 'Api/Cart/RemoveCart'
+export const CART_UPDATECART_PUT = 'Api/Cart/UpdateCart'
+
+//  Order相关的API接口
+export const ORDER_INDEX = 'Api/Order/Index'
+export const ORDER_CANCEL = 'Api/Order/Cancel'
+export const ORDER_SHOW = 'Api/Order/Show'
+export const ORDER_GETPRICE = 'Api/Order/GetPrice'
+export const ORDER_BUY = 'Api/Order/Buy'
+export const ORDER_BUYINFO = 'Api/Order/BuyInfo'
+export const ORDER_RATE = 'Api/Order/Rate'
+export const ORDER_CONFIRM = 'Api/Order/Confirm'
+export const ORDER_INDEX_GET = 'Api/Order/Index'
+export const ORDER_CANCEL_GET = 'Api/Order/Cancel'
+export const ORDER_SHOW_GET = 'Api/Order/Show'
+export const ORDER_GETPRICE_POST = 'Api/Order/GetPrice'
+export const ORDER_BUY_POST = 'Api/Order/Buy'
+export const ORDER_BUYINFO_POST = 'Api/Order/BuyInfo'
+export const ORDER_RATE_POST = 'Api/Order/Rate'
+export const ORDER_CONFIRM_POST = 'Api/Order/Confirm'
+
+//  GroupBuy相关的API接口
+export const GROUPBUY_PRODUCTRECORD = 'Api/GroupBuy/ProductRecord'
+export const GROUPBUY_LIST = 'Api/GroupBuy/List'
+export const GROUPBUY_PRODUCTS = 'Api/GroupBuy/Products'
+export const GROUPBUY_ORDERGROUPUSER = 'Api/GroupBuy/OrderGroupUser'
+export const GROUPBUY_PRODUCTRECORD_GET = 'Api/GroupBuy/ProductRecord'
+export const GROUPBUY_LIST_GET = 'Api/GroupBuy/List'
+export const GROUPBUY_PRODUCTS_GET = 'Api/GroupBuy/Products'
+export const GROUPBUY_ORDERGROUPUSER_GET = 'Api/GroupBuy/OrderGroupUser'
+
+//  User/Reward相关的API接口
+export const USER_REWARD_LIST = 'Api/User/Reward/List'
+export const USER_REWARD_SHOW = 'Api/User/Reward/Show'
+export const USER_REWARD_LIST_GET = 'Api/User/Reward/List'
+export const USER_REWARD_SHOW_GET = 'Api/User/Reward/Show'
+
+//  Diy相关的API接口
+export const DIY_SEARCHKEYWORD = 'Api/Diy/SearchKeyWord'
+export const DIY_GETLINK = 'Api/Diy/GetLink'
+export const DIY_GETLIST = 'Api/Diy/GetList'
+export const DIY_GETLISTBYLOGIN = 'Api/Diy/GetListByLogin'
+export const DIY_SEARCHKEYWORD_GET = 'Api/Diy/SearchKeyWord'
+export const DIY_GETLINK_GET = 'Api/Diy/GetLink'
+export const DIY_GETLIST_GET = 'Api/Diy/GetList'
+export const DIY_GETLISTBYLOGIN_GET = 'Api/Diy/GetListByLogin'
