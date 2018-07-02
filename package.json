@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "start": "npm run dev",
-    "dev": "node build/min/dev.js ",
-    "build": "node build/min/build.js",
+    "dev": "cross-env MODE=min node build/min/dev.js ",
+    "build": "cross-env MODE=min node build/min/build.js",
     "dev:h5": "webpack-dev-server --inline --progress --config build/h5/webpack.dev.conf.js",
     "build:h5": "node build/h5/build.js",
     "all": "npm run dev && npm run devH5",
@@ -43,6 +43,7 @@
     "chalk": "^2.4.0",
     "connect": "^3.6.6",
     "copy-webpack-plugin": "^4.5.2",
+    "cross-env": "^5.2.0",
     "cryptlib": "^1.0.3",
     "css-loader": "^0.28.0",
     "cssnano": "^3.10.0",
