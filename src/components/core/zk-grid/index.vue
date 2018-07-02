@@ -1,11 +1,22 @@
 <template>
   <div class="weui-grids">
-    <a :href="item.url" class="weui-grid" v-for="(item,index) in viewModel.result" :key="index">
+    <!-- <a :href="item.url" class="weui-grid" v-for="(item,index) in viewModel.result" :key="index">
       <div class="weui-grid__icon">
         <x-icon :src="item.imageUrl"></x-icon>
       </div>
       <p class="weui-grid__label">{{item.name}}</p>
-    </a>
+    </a> -->
+
+    <div class="page__bd">
+      <div class="weui-grids">
+        <block v-for="item in grids" :key="index">
+          <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" :src="item.src" />
+            <div class="weui-grid__label">{{item.name}}</div>
+          </navigator>
+        </block>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -15,7 +26,17 @@
     name: 'zk-grid',
     data () {
       return {
-        viewModel: ''
+        viewModel: '',
+        grids: [
+          { src: 'http://zqingchun.yiqipingou.com//wwwroot/Uploads/Core/2018/04/e03dfeb126b5406e866bdaf14c81d3f7.png', name: 'Button' },
+          { src: 'http://zqingchun.yiqipingou.com//wwwroot/Uploads/Core/2018/04/e03dfeb126b5406e866bdaf14c81d3f7.png', name: 'Cell' },
+          { src: 'http://zqingchun.yiqipingou.com//wwwroot/Uploads/Core/2018/04/e03dfeb126b5406e866bdaf14c81d3f7.png', name: 'Toast' },
+          { src: 'http://zqingchun.yiqipingou.com//wwwroot/Uploads/Core/2018/04/e03dfeb126b5406e866bdaf14c81d3f7.png', name: 'Dialog' },
+          { src: 'http://zqingchun.yiqipingou.com//wwwroot/Uploads/Core/2018/04/e03dfeb126b5406e866bdaf14c81d3f7.png', name: 'Progress' },
+          { src: 'http://zqingchun.yiqipingou.com//wwwroot/Uploads/Core/2018/04/e03dfeb126b5406e866bdaf14c81d3f7.png', name: 'Msg' },
+          { src: 'http://zqingchun.yiqipingou.com//wwwroot/Uploads/Core/2018/04/e03dfeb126b5406e866bdaf14c81d3f7.png', name: 'Article' },
+          { src: 'http://zqingchun.yiqipingou.com//wwwroot/Uploads/Core/2018/04/e03dfeb126b5406e866bdaf14c81d3f7.png', name: 'ActionSheet' }
+        ]
       }
     },
     mounted () {
@@ -39,6 +60,9 @@
     color: @brand;
     width: 25%;
     padding: 10px 10px;
+    .weui-grid__icon {
+      margin: 0 auto;
+    }
   }
   .weui-cell:visited {
     color: #000;

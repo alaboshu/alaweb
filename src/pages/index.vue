@@ -3,7 +3,10 @@
     <zk-grid></zk-grid>
     <!-- <zk-image></zk-image> -->
     <!-- <span>{{clientType}}</span> -->
-    <zk-product-item></zk-product-item>
+    <!-- <zk-product-item></zk-product-item> -->
+    <zk-swiper></zk-swiper>
+    <zk-image></zk-image>
+    <zk-footer></zk-footer>
   </div>
 </template>
 

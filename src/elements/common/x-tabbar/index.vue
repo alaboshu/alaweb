@@ -1,5 +1,5 @@
 <template>
-  <div class="weui-tabbar" :style="{ position: fixed ? 'fixed' : 'absolute' }">
+  <div class="weui-tabbar" style="position:fixed">
     <slot />
   </div>
 </template>
@@ -9,7 +9,8 @@
     name: 'x-tabbar',
     props: {
       props: {
-        fixed: Boolean
+        fixed: Boolean,
+        default: true
       }
     }
   })

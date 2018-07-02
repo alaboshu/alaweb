@@ -6,7 +6,7 @@
           <dl class="content">
             <dt>
               <router-link to="" class="content-img-box">
-                <img src="" class="cimg">
+                <img src="http://zqingchun.yiqipingou.com//wwwroot/Uploads/Product/2018/06/e2f9dc3cbfbc43c096d84dc158f7fec7.jpg_320X320.jpg" class="cimg">
               </router-link>
             </dt>
             <dd class="itemTitle">
@@ -54,6 +54,46 @@
 
 <style scoped lang="less">
   @import '~_style/index.less'; // 颜色、边框、大小请使用assets/style/variable.less 和theme.less中的变量
+  a,
+  article,
+  aside,
+  b,
+  body,
+  button,
+  dd,
+  div,
+  dl,
+  dt,
+  em,
+  figcaption,
+  figure,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  i,
+  input,
+  li,
+  nav,
+  p,
+  section,
+  select,
+  span,
+  textarea,
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+    font-style: normal;
+    font-family: -apple-system-font, Helvetica Neue, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+  }
   .zk-product-item {
     font-size: @font-size-base;
     .zkui-product-item__1 {

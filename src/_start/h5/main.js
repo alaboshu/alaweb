@@ -29,11 +29,13 @@ import XButton from '@/elements/common/x-button'
 import XFrom from '@/elements/common/x-from'
 import XIcon from '@/elements/common/x-icon'
 import XSwipe from '@/elements/common/x-swipe'
-// import XSwipeItem from '@/elements/common/x-swipe-item'
+import XSwipeItem from '@/elements/common/x-swipe-item'
 import ZkGrid from '@/components/core/zk-grid/index.vue'
 import ZkImage from '@/components/core/zk-image/index.vue'
 import ZkAddress from '@/components/core/zk-address/index.vue'
 import ZkProductItem from '@/components/core/zk-product-item/index.vue'
+import ZkFooter from '@/components/core/zk-footer/index.vue'
+import ZkSwiper from '@/components/core/zk-swiper/index.vue'
 
 console.log(config)
 
@@ -56,8 +58,10 @@ Vue.component('zk-grid', ZkGrid)
 Vue.component('zk-image', ZkImage)
 Vue.component('zk-address', ZkAddress)
 Vue.component('zk-product-item', ZkProductItem)
+Vue.component('zk-footer', ZkFooter)
 Vue.component('x-swipe', XSwipe)
-// Vue.component('x-swipeitem', XSwipeItem)
+Vue.component('x-swipe-item', XSwipeItem)
+Vue.component('zk-swiper', ZkSwiper)
 
 Vue.use(global)
 Vue.use(Toast)

@@ -12,7 +12,10 @@
     name: 'x-tabbar-item',
     props: {
       isOn: Boolean,
-      to: String
+      to: {
+        type: String,
+        default: '/'
+      }
     }
   })
 </script>
