@@ -1,9 +1,9 @@
 export const editSetting = {
-  '_id': '5b38126e6119b33e10ce1e1e',
-  'CreateTime': '2018-06-30T23:29:50.784Z',
-  'Name': 'zk-grid',
+  '_id': '5b38126e6119b33e10ce1e1a',
+  'CreateTime': '2018-06-30T23:29:50.75Z',
+  'Name': 'zk-product-item',
   'Path': null,
-  'Key': 'zk-grid',
+  'Key': 'zk-product-item',
   'Editors': [{
     'GroupName': '基本设置',
     'Items': [{

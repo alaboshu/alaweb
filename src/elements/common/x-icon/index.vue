@@ -1,5 +1,5 @@
 <template>
-  <img class="svg-icon" :src="Isrc" @click="onClick" :style="'width:'+fontSize">
+  <img class="svg-icon" :src="Isrc" @click="onClick" :style="'width:'+fontSize+';height:'+fontSize">
 </template>
 
 <script>

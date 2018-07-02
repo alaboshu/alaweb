@@ -7,12 +7,12 @@ import 'vue2-toast/lib/toast.css'
 import App from './App'
 import router from '@/router'
 import global from '@/service/core/global' // 公共函数,全局函数
+import '@/service/core/rem'
 import {
   api,
   apiUrl,
   config
 } from '@/service/api'
-
 import XHeader from '@/elements/common/x-header'
 import XTabbar from '@/elements/common/x-tabbar'
 import XTabbarItem from '@/elements/common/x-tabbar-item'
@@ -28,9 +28,13 @@ import XNodata from '@/elements/common/x-nodata'
 import XButton from '@/elements/common/x-button'
 import XFrom from '@/elements/common/x-from'
 import XIcon from '@/elements/common/x-icon'
+import XSwipe from '@/elements/common/x-swipe'
+// import XSwipeItem from '@/elements/common/x-swipe-item'
 import ZkGrid from '@/components/core/zk-grid/index.vue'
 import ZkImage from '@/components/core/zk-image/index.vue'
 import ZkAddress from '@/components/core/zk-address/index.vue'
+import ZkProductItem from '@/components/core/zk-product-item/index.vue'
+
 console.log(config)
 
 Vue.component('x-header', XHeader)
@@ -51,6 +55,9 @@ Vue.component('x-icon', XIcon)
 Vue.component('zk-grid', ZkGrid)
 Vue.component('zk-image', ZkImage)
 Vue.component('zk-address', ZkAddress)
+Vue.component('zk-product-item', ZkProductItem)
+Vue.component('x-swipe', XSwipe)
+// Vue.component('x-swipeitem', XSwipeItem)
 
 Vue.use(global)
 Vue.use(Toast)

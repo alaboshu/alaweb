@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <zk-grid></zk-grid>
-    <zk-image></zk-image>
-    <zk-address></zk-address>
-    <span>{{clientType}}</span>
+    <!-- <zk-image></zk-image> -->
+    <!-- <span>{{clientType}}</span> -->
+    <zk-product-item></zk-product-item>
   </div>
 </template>
 

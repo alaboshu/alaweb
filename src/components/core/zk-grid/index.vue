@@ -6,7 +6,6 @@
       </div>
       <p class="weui-grid__label">{{item.name}}</p>
     </a>
-
   </div>
 </template>
 <script>
@@ -38,6 +37,8 @@
   .weui-grid {
     text-decoration: none;
     color: @brand;
+    width: 25%;
+    padding: 10px 10px;
   }
   .weui-cell:visited {
     color: #000;
