@@ -55,32 +55,56 @@ export const APISTORE_LOGIN_GET = 'Api/ApiStore/Login' // 微信小程序登录�
 export const APISTORE_WEIXINPUBLOGIN_GET = 'Api/ApiStore/WeixinPubLogin' // 微信公众号登录
 
 //  User/Debt相关的API接口
-export const USER_DEBT_APPLY_POST = 'Api/User/Debt/Apply' // 债事提交
-export const USER_DEBT_DELETE_GET = 'Api/User/Debt/Delete' // 债事删除
-export const USER_DEBT_LIST_GET = 'Api/User/Debt/List' // 我的债事
-export const USER_DEBT_DEBTBULLETIN_GET = 'Api/User/Debt/DebtBulletin' // 债事详细
-export const USER_DEBT_COUNT_GET = 'Api/User/Debt/Count' // 数据统计
-export const USER_DEBT_SHOW_GET = 'Api/User/Debt/Show' // 债事显示
-export const USER_DEBT_SOLUTION_POST = 'Api/User/Debt/Solution' // 解决方案选择
+export const USER_DEBT_APPLY_POST = 'Api/User/Debt/Apply'
+export const USER_DEBT_DELETE_GET = 'Api/User/Debt/Delete'
+export const USER_DEBT_LIST_GET = 'Api/User/Debt/List'
+export const USER_DEBT_DEBTBULLETIN_GET = 'Api/User/Debt/DebtBulletin'
+export const USER_DEBT_COUNT_GET = 'Api/User/Debt/Count'
+export const USER_DEBT_SHOW_GET = 'Api/User/Debt/Show'
+export const USER_DEBT_SOLUTION_POST = 'Api/User/Debt/Solution'
+
+//  UserStock相关的API接口
+export const USERSTOCK_GETLIST_GET = 'Api/UserStock/GetList'
+export const USERSTOCK_GETPRODUCTLIST_GET = 'Api/UserStock/GetProductList'
+export const USERSTOCK_OFFLINEDELIVERYPRODUCT_GET = 'Api/UserStock/OfflineDeliveryProduct'
+export const USERSTOCK_OFFLINEDELIVERY_POST = 'Api/UserStock/OfflineDelivery'
+
+//  Product相关的API接口
+export const PRODUCT_SHOW_GET = 'Api/Product/Show'
+export const PRODUCT_LIST_GET = 'Api/Product/List'
+export const PRODUCT_CLASS_GET = 'Api/Product/Class'
+export const PRODUCT_FAVORITEPRODUCT_GET = 'Api/Product/FavoriteProduct'
+export const PRODUCT_FOOTPRINTPRODUCT_GET = 'Api/Product/FootprintProduct'
+export const PRODUCT_PRODUCTCARTPRODUCT_GET = 'Api/Product/ProductCartProduct'
 
 //  Cart相关的API接口
-export const CART_ADDCART_POST = 'Api/Cart/AddCart' // 添加商品到购物车
-export const CART_GETCART_GET = 'Api/Cart/GetCart' // 获取购物车数据
-export const CART_REMOVECART_DELETE = 'Api/Cart/RemoveCart' // 删除购物车
-export const CART_UPDATECART_PUT = 'Api/Cart/UpdateCart' // 更新购物车
+export const CART_ADDCART_POST = 'Api/Cart/AddCart'
+export const CART_GETCART_GET = 'Api/Cart/GetCart'
+export const CART_REMOVECART_DELETE = 'Api/Cart/RemoveCart'
+export const CART_UPDATECART_PUT = 'Api/Cart/UpdateCart'
+
+//  Order相关的API接口
+export const ORDER_INDEX_GET = 'Api/Order/Index'
+export const ORDER_CANCEL_GET = 'Api/Order/Cancel'
+export const ORDER_SHOW_GET = 'Api/Order/Show'
+export const ORDER_GETPRICE_POST = 'Api/Order/GetPrice'
+export const ORDER_BUY_POST = 'Api/Order/Buy'
+export const ORDER_BUYINFO_POST = 'Api/Order/BuyInfo'
+export const ORDER_RATE_POST = 'Api/Order/Rate'
+export const ORDER_CONFIRM_POST = 'Api/Order/Confirm'
 
 //  GroupBuy相关的API接口
-export const GROUPBUY_PRODUCTRECORD_GET = 'Api/GroupBuy/ProductRecord' // 拼团记录，根据商品id获取商品id获取商品的拼团记录
-export const GROUPBUY_LIST_GET = 'Api/GroupBuy/List' // 拼团记录列表
-export const GROUPBUY_PRODUCTS_GET = 'Api/GroupBuy/Products' // 拼团商品列表
-export const GROUPBUY_ORDERGROUPUSER_GET = 'Api/GroupBuy/OrderGroupUser' // 订单拼团用户，根据订单id获取订单拼团用户
+export const GROUPBUY_PRODUCTRECORD_GET = 'Api/GroupBuy/ProductRecord'
+export const GROUPBUY_LIST_GET = 'Api/GroupBuy/List'
+export const GROUPBUY_PRODUCTS_GET = 'Api/GroupBuy/Products'
+export const GROUPBUY_ORDERGROUPUSER_GET = 'Api/GroupBuy/OrderGroupUser'
 
 //  User/Reward相关的API接口
-export const USER_REWARD_LIST_GET = 'Api/User/Reward/List' // 列出指定的参数
-export const USER_REWARD_SHOW_GET = 'Api/User/Reward/Show' // 列出指定的参数
+export const USER_REWARD_LIST_GET = 'Api/User/Reward/List'
+export const USER_REWARD_SHOW_GET = 'Api/User/Reward/Show'
 
 //  Diy相关的API接口
-export const DIY_SEARCHKEYWORD_GET = 'Api/Diy/SearchKeyWord' // 获取搜索关键字
-export const DIY_GETLINK_GET = 'Api/Diy/GetLink' // 获取链接地址，比如轮播图，首页链接地址等
-export const DIY_GETLIST_GET = 'Api/Diy/GetList' // 获取ZKList数据，不需要会员登录
-export const DIY_GETLISTBYLOGIN_GET = 'Api/Diy/GetListByLogin' // 获取ZKList数据，需要会员登录
+export const DIY_SEARCHKEYWORD_GET = 'Api/Diy/SearchKeyWord'
+export const DIY_GETLINK_GET = 'Api/Diy/GetLink'
+export const DIY_GETLIST_GET = 'Api/Diy/GetList'
+export const DIY_GETLISTBYLOGIN_GET = 'Api/Diy/GetListByLogin'
