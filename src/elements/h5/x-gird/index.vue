@@ -24,7 +24,7 @@
     methods: {
       async  ApiGet () {
         var para = {
-          diyKey: 'grid_index'
+          diyKey: 'grid_index'//text
         }
         this.viewModel = await api.get(DIY_GETLINK, para)
       }
