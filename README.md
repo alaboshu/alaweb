@@ -79,6 +79,7 @@ npm run pack:app
 
 * 轮播(zk-swiper),已支持小程序、h5
 * 图标导航(zk-grid),已支持小程序、h5
+* x-verifiy-phone
 
 一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari 等）
 

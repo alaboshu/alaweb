@@ -1,6 +1,6 @@
 <template>
 
-  <div class="wv-switch" :class="{ 'wv-switch-on': currentValue, 'wv-switch-disabled': disabled }" @click="onClick" v-else>
+  <div class="wv-switch" :class="{ 'wv-switch-on': currentValue, 'wv-switch-disabled': disabled }" @click="onClick">
     <div class="background" />
     <div class="thumb" :style="thumbStyle" @touchstart="onTouchstart" @touchmove="onTouchmove" @touchend="onTouchend" @touchcancel="onTouchend" />
   </div>
