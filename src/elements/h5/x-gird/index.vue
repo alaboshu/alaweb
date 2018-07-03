@@ -9,8 +9,8 @@
   </div>
 </template>
 <script>
-  import api from '@/service/api/api'
-  import { DIY_GETLINK } from '@/service/api/apiUrl'
+  // import api from '@/service/api/api'
+  // import { DIY_GETLINK } from '@/service/api/apiUrl'
   export default {
     name: 'zk-grid',
     data () {
@@ -19,15 +19,15 @@
       }
     },
     mounted () {
-      this.ApiGet()
+      // this.ApiGet()
     },
     methods: {
-      async  ApiGet () {
-        var para = {
-          diyKey: 'grid_index'
-        }
-        this.viewModel = await api.get(DIY_GETLINK, para)
-      }
+      // async  ApiGet () {
+      //   var para = {
+      //     diyKey: 'grid_index'
+      //   }
+      //   this.viewModel = await api.get(DIY_GETLINK, para)
+      // }
     }
   }
 </script>
