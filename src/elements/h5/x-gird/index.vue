@@ -1,6 +1,11 @@
 <template>
-  <div>
-    <x-grid></x-grid>
+  <div class="weui-grids">
+    <a :href="item.url" class="weui-grid" v-for="(item,index) in viewModel.result" :key="index">
+      <div class="weui-grid__icon">
+        <x-icon :src="item.imageUrl"></x-icon>
+      </div>
+      <p class="weui-grid__label">{{item.name}}</p>
+    </a>
   </div>
 </template>
 <script>
