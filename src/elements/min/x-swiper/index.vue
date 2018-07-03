@@ -1,18 +1,21 @@
 <template>
-  <div class="zk-swiper" :style="styles">
-    <x-swiper></x-swiper>
+  <div>
+    <div class="page__bd page__bd_spacing">
+      <swiper :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval" :duration="duration" :circular="circular" @change="swiperChange" @animationfinish="animationfinish">
+        <div v-for="(item, index) in imgUrls" :key="index">
+          <swiper-item>
+            <image :src="item" class="slide-image" />
+          </swiper-item>
+        </div>
+      </swiper>
+    </div>
   </div>
 </template>
 
 <script>
-  import { DIY_GETLINK } from '@/service/api/apiUrl' // 引入Api接口常量
-  import { editSetting } from './property'
   export default {
-    name: editSetting.key,
     data () {
       return {
-        viewModel: '', // 数据模型
-        styles: {}, // 可视化编辑样式
         indicatorDots: true,
         autoplay: true,
         interval: 5000,
@@ -26,15 +29,8 @@
       }
     },
     mounted () {
-      this.init()
     },
     methods: {
-      async  init () {
-        const para = {
-          diyKey: 'grid_index'
-        }
-        this.viewModel = await this.$api.get(DIY_GETLINK, para)
-      },
       swiperChange (e) {
         console.log('第' + e.mp.detail.current + '张轮播图发生了滑动')
       },
