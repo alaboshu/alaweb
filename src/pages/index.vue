@@ -5,6 +5,8 @@
     <zk-swiper></zk-swiper>
     <zk-image></zk-image>
     <zk-footer></zk-footer>
+    <zk-input></zk-input>
+    <zk-label></zk-label>
   </div>
 </template>
 
