@@ -5,11 +5,14 @@
     </div>
   </transition>
 </template>
+
 <script>
   import PopupMixin from '@/mixins/popup'
   export default {
-    name: 'x-popup',
+    name: 'wv-popup',
+
     mixins: [PopupMixin],
+
     props: {
       height: {
         type: [String, Number],
@@ -17,6 +20,9 @@
         validator: (val) => {
           return /^(auto)|(\d+(px|vh|%)?)$/.test(val)
         }
+      },
+      visible: {
+        default: true
       },
       mask: {
         default: true
@@ -31,9 +37,11 @@
         default: 'weui-mask'
       }
     },
+
     computed: {
       style () {
         let ret = {}
+
         if (/^\d+$/.test(this.height)) {
           ret.height = parseInt(this.height) + 'px'
         } else {
@@ -43,6 +51,7 @@
         return ret
       }
     },
+
     mounted () {
       if (this.visible) {
         this.open()
