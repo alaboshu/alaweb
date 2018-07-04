@@ -22,12 +22,21 @@
       // this.ApiGet()
     },
     methods: {
+<<<<<<< HEAD
+      async  ApiGet () {
+        var para = {
+          diyKey: 'grid_index'//text
+        }
+        this.viewModel = await api.get(DIY_GETLINK, para)
+      }
+=======
       // async  ApiGet () {
       //   var para = {
       //     diyKey: 'grid_index'
       //   }
       //   this.viewModel = await api.get(DIY_GETLINK_GET, para)
       // }
+>>>>>>> 5d9be8eea296194dfb83c8c6da0afb53153be379
     }
   }
 </script>

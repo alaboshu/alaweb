@@ -146,4 +146,13 @@
 </script>
 
 <style scoped lang="less">
+  @import '~_style/index.less';
+  .weui-cell {
+    font-size: @font-size-base;
+    .weui-input{ 
+      border:1px solid #ccc;
+      width: 150px;
+      background-color: #fff;
+    }
+  }
 </style>
