@@ -12,8 +12,4 @@
 
 <style lang="less">
   @import '~@/assets/style/h5/index.less';
-
-  .container {
-    padding: 20px;
-  }
 </style>
