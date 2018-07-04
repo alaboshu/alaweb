@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <zk-grid></zk-grid>
-    <zk-product-item></zk-product-item>
     <zk-swiper></zk-swiper>
     <zk-image></zk-image>
+    <zk-product-item></zk-product-item>
     <zk-footer></zk-footer>
     <zk-input></zk-input>
     <zk-label></zk-label>

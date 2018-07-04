@@ -16,8 +16,6 @@ import {
 import XHeader from '@/elements/common/x-header'
 import XTabbar from '@/elements/common/x-tabbar'
 import XTabbarItem from '@/elements/common/x-tabbar-item'
-import XGrid from '@/elements/common/x-grid'
-import XGridItem from '@/elements/common/x-grid-item'
 import XCell from '@/elements/common/x-cell'
 import XGroup from '@/elements/common/x-group'
 import XSearch from '@/elements/common/x-search'
@@ -27,13 +25,15 @@ import XDivider from '@/elements/common/x-divider'
 import XNodata from '@/elements/common/x-nodata'
 import XButton from '@/elements/common/x-button'
 import XFrom from '@/elements/common/x-from'
+import ZkAddress from '@/components/core/zk-address/index.vue'
 import XIcon from '@/elements/common/x-icon'
 import XSwipe from '@/elements/common/x-swipe'
 import XSwipeItem from '@/elements/common/x-swipe-item'
+import XSwiper from '@/elements/common/x-swiper'
+import XGrid from '@/elements/common/x-grid'
 import ZkGrid from '@/components/core/zk-grid/index.vue'
-import ZkImage from '@/components/core/zk-image/index.vue'
-import ZkAddress from '@/components/core/zk-address/index.vue'
 import ZkProductItem from '@/components/core/zk-product-item/index.vue'
+import ZkImage from '@/components/core/zk-image/index.vue'
 import ZkFooter from '@/components/core/zk-footer/index.vue'
 import ZkSwiper from '@/components/core/zk-swiper/index.vue'
 import XInput from '@/elements/common/x-input/index.vue'
@@ -43,9 +43,6 @@ console.log(config)
 
 Vue.component('x-header', XHeader)
 Vue.component('x-tabbar', XTabbar)
-Vue.component('x-tabbar-item', XTabbarItem)
-Vue.component('x-grid', XGrid)
-Vue.component('x-grid-item', XGridItem)
 Vue.component('x-cell', XCell)
 Vue.component('x-group', XGroup)
 Vue.component('x-search', XSearch)
@@ -55,14 +52,17 @@ Vue.component('x-divider', XDivider)
 Vue.component('x-nodata', XNodata)
 Vue.component('x-button', XButton)
 Vue.component('x-from', XFrom)
+Vue.component('zk-address', ZkAddress)
+Vue.component('x-tabbar-item', XTabbarItem)
+Vue.component('x-grid', XGrid)
 Vue.component('x-icon', XIcon)
 Vue.component('zk-grid', ZkGrid)
 Vue.component('zk-image', ZkImage)
-Vue.component('zk-address', ZkAddress)
 Vue.component('zk-product-item', ZkProductItem)
 Vue.component('zk-footer', ZkFooter)
 Vue.component('x-swipe', XSwipe)
 Vue.component('x-swipe-item', XSwipeItem)
+Vue.component('x-swiper', XSwiper)
 Vue.component('zk-swiper', ZkSwiper)
 Vue.component('zk-input', XInput)
 Vue.component('zk-label', Xlable)

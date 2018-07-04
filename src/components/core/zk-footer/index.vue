@@ -1,34 +1,47 @@
 <template>
   <div class="zk-footer" :style="styles">
-    <!-- <div class="weui-tabbar">
-      <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
-        <span style="display: inline-block;position: relative;">
-          <img src="" alt="" class="weui-tabbar__icon">
-          <span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
-        </span>
-        <p class="weui-tabbar__label">微信</p>
-      </a>
-      <a href="javascript:;" class="weui-tabbar__item">
-        <img src="" alt="" class="weui-tabbar__icon">
-        <p class="weui-tabbar__label">通讯录</p>
-      </a>
-      <a href="javascript:;" class="weui-tabbar__item">
-        <span style="display: inline-block;position: relative;">
-          <img src="" alt="" class="weui-tabbar__icon">
-          <span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
-        </span>
-        <p class="weui-tabbar__label">发现</p>
-      </a>
-      <a href="javascript:;" class="weui-tabbar__item">
-        <img src="" alt="" class="weui-tabbar__icon">
-        <p class="weui-tabbar__label">我</p>
-      </a>
-    </div> -->
+    <div class="zkweb-footer">
+      <div class="zkweb-tabbar">
+        <a href="" class="tabbar__item">
+          <span style="display: inline-block; position: relative;">
+            <img src="" alt="" class="tabbar__icon">
+          </span>
+          <p class="tabbar__label">
+            微信
+          </p>
+        </a>
+        <a href="" class="tabbar__item">
+          <span style="display: inline-block; position: relative;">
+            <img src="" alt="" class="tabbar__icon">
+          </span>
+          <p class="tabbar__label">
+            微信
+          </p>
+        </a>
+        <a href="" class="tabbar__item">
+          <span style="display: inline-block; position: relative;">
+            <img src="" alt="" class="tabbar__icon">
+          </span>
+          <p class="tabbar__label">
+            微信
+          </p>
+        </a>
+        <a href="" class="tabbar__item">
+          <span style="display: inline-block; position: relative;">
+            <img src="" alt="" class="tabbar__icon">
+          </span>
+          <p class="tabbar__label">
+            微信
+          </p>
+        </a>
+      </div>
+          <div class="footer-placeholder "></div>
+    </div>
   </div>
 </template>
 
 <script>
-  import { DIY_GETLINK } from '@/service/api/apiUrl' // 引入Api接口常量
+  import { DIY_GETLINK_GET } from '@/service/api/apiUrl' // 引入Api接口常量
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
@@ -46,7 +59,7 @@
         const para = {
           diyKey: 'grid_index'
         }
-        this.viewModel = await this.$api.get(DIY_GETLINK, para)
+        this.viewModel = await this.$api.get(DIY_GETLINK_GET, para)
       }
     }
   }
@@ -54,11 +67,52 @@
 
 <style scoped lang="less">
   @import '~_style/index.less'; // 颜色、边框、大小请使用assets/style/variable.less 和theme.less中的变量
-  .zk-footer {
-    font-size: @font-size-base;
-    .footer-placeholder {
-      height: 56px;
+.zkweb-footer{
+  font-size:123px;
+  .footer-placeholder{
+    height:56px;
+  }
+  .zkweb-tabbar{
+    position: fixed;
+    bottom:0;
+    left:0;
+    z-index:500;
+    width: 100%;
+    background-color: #F7F7FA;
+    display:flex;
+    .tabbar__item{
+      display: block;
+      flex: 1;
+      padding: 5px 0 0;
+      font-size: 0;
+      color: #999999;
+      text-align: center;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      .tabbar__icon{
+        display: inline-block;
+        width: 27px;
+        height: 27px;
+      }
+      .tabbar__label{
+        text-align: center;
+        color: #999999;
+        font-size: 14px;
+        line-height: 1.8;
+      }
     }
   }
+  .zkweb-tabbar:before{
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #C0BFC4;
+    color: #C0BFC4;
+    transform-origin: 0 0;
+    transform: scaleY(0.5);
+  }
+}
 </style>
 

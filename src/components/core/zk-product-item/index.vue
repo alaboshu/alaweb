@@ -48,7 +48,7 @@
 </template>
 
 <script>
-  import { DIY_GETLINK } from '@/service/api/apiUrl' // 引入Api接口常量
+  import { DIY_GETLINK_GET } from '@/service/api/apiUrl' // 引入Api接口常量
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
@@ -66,7 +66,7 @@
         const para = {
           diyKey: 'grid_index'
         }
-        this.viewModel = await this.$api.get(DIY_GETLINK, para)
+        this.viewModel = await this.$api.get(DIY_GETLINK_GET, para)
       }
     }
   }
