@@ -35,7 +35,7 @@
       onClick () {
         // !this.disabled && go(this.link, this.$router)
         /* istanbul ignore next */
-        window.location.href = this.link
+        // window.location.href = this.link
       }
     }
   }
@@ -43,7 +43,7 @@
 
 <style>
   .svg-icon {
-    display: inline-block;
-    fill: currentColor;
+  	display: inline-block;
+  	fill: currentColor;
   }
 </style>

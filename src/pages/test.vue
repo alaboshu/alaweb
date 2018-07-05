@@ -1,9 +1,6 @@
 <template>
   <div class="page">
-    <wxc-button text="Open Popup" @wxcButtonClicked="buttonClicked">
-    </wxc-button>
-    <wxc-popup width="500" pos="left" :show="isShow" @wxcPopupOverlayClicked="overlayClicked">
-    </wxc-popup>
+
     <div class="page__hd">
       <div class="page__title">Toast</div>
       <div class="page__desc">弹出式提示，采用小程序原生的toast</div>
@@ -18,9 +15,7 @@
 </template>
 
 <script>
-  import { WxcButton, WxcPopup } from 'weex-ui'
   export default {
-    components: { WxcButton, WxcPopup },
     data () {
       return {
       }
