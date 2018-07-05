@@ -23,6 +23,7 @@ export const USER_GETLIST_GET = 'Api/User/GetList' // 获取单条记录
 export const USER_ADD_POST = 'Api/User/Add' // 增加单条记录
 export const USER_UPDATE_GET = 'Api/User/Update' // 修改单条记录
 export const USER_DELETE_GET = 'Api/User/Delete' // 删除单条记录
+export const USER_GETREGFORM_GET = 'Api/User/GetRegForm' // 获取会员注册视图
 
 //  UserDetail相关的API接口
 export const USERDETAIL_QRCODE_GET = 'Api/UserDetail/QrCode' // 二维码
@@ -106,6 +107,7 @@ export const WIDGET_GETLIST_GET = 'Api/Widget/GetList' // 获取单条记录
 export const WIDGET_ADD_POST = 'Api/Widget/Add' // 增加单条记录
 export const WIDGET_UPDATE_GET = 'Api/Widget/Update' // 修改单条记录
 export const WIDGET_DELETE_GET = 'Api/Widget/Delete' // 删除单条记录
+export const WIDGET_CLASS_GET = 'Api/Widget/Class' // 模块分类
 
 //  Theme相关的API接口
 export const THEME_GET_GET = 'Api/Theme/Get' // 获取单条记录
