@@ -1,5 +1,5 @@
 <template>
-  <zk-product-class>
+  <div class="zk-product-class">
     <tab :line-width=2 active-color='#0090ff' v-model="index" class="zk-class-tab-left">
       <tab-item class="vux-center" :selected="demo2 === item" v-for="(item, index) in list2" @click="demo2 = item" :key="index">{{item}}</tab-item>
     </tab>
@@ -16,7 +16,7 @@
         </grid>
       </swiper-item>
     </swiper>
-  </zk-product-class>
+  </div>
 </template>
 <script>
   import { PRODUCT_CLASS_GET } from '@/service/api/apiUrl'
@@ -40,7 +40,9 @@
       async  getData () {
         let response = await PRODUCT_CLASS_GET.class()
         this.listDatas = response.data.result
+        console.log(1111)
         console.log(this.listDatas)
+        console.log(222)
         this.demo2 = this.listDatas[0].name
         console.dir(this.listDatas) // 通过这个来查看数据结构
         for (var i = 0; i < this.listDatas.length; i++) {
