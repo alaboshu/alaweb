@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="to" class="weui-cell" :class="{'weui-cell_access': isLink}">
+  <div class="weui-cell" :class="{'weui-cell_access': isLink}" @click="onClick">
     <div class="weui-cell_hd">
       <slot name="icon" />
     </div>
@@ -11,11 +11,16 @@
     <div class="weui-cell__ft">
       <slot name="ft">{{ value }}</slot>
     </div>
-  </router-link>
+  </div>
 </template>
+
 <script>
+  import RouterLink from '@/mixins/router-link'
   export default {
-    name: 'x-group',
+    name: 'x-cell',
+
+    mixins: [RouterLink],
+
     props: {
       title: {
         type: [String, Number]
@@ -23,22 +28,17 @@
       value: {
         type: [String, Number]
       },
-      to: String,
       isLink: Boolean
-    }
-  }
-</script>
-<style scoped lang="less">
-  .weui-cell {
-    height: 25px;
-    text-decoration: none;
-    .weui-cell__bd {
-      p {
-        color: #2c3e50;
+    },
+
+    methods: {
+      onClick () {
+        this.$emit('click')
+        this.routerLink()
       }
     }
   }
-  .weui-cell:visited {
-    color: #2c3e50;
-  }
+</script>
+
+<style scoped lang="less">
 </style>
