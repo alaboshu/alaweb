@@ -1,3 +1,6 @@
+// URL参数查询：支持=,>,<,>=,<=等操作符，多个参数之间用&隔开
+// 示范：classId=12&userId=1
+
 //  UserAddress相关的API接口
 export const USERADDRESS_ADD_POST = 'Api/UserAddress/Add' // 添加商品到用户地址
 export const USERADDRESS_GET_GET = 'Api/UserAddress/Get' // 获取用户地址数据
@@ -69,6 +72,7 @@ export const RECHARGE_ADDOFFONLINE_POST = 'Api/Recharge/AddOffOnline' // 线下�
 export const RECHARGE_ADDONLINE_POST = 'Api/Recharge/AddOnline' // 线上充值
 export const RECHARGE_DELETE_DELETE = 'Api/Recharge/Delete' // 删除用户充值
 export const RECHARGE_GET_GET = 'Api/Recharge/Get' // 获取充值详情
+export const RECHARGE_GETWITHDRAWVIEW_GET = 'Api/Recharge/GetWithDrawView' // 获取充值视图
 
 //  Transfer相关的API接口
 export const TRANSFER_GETTRANSFERCONFIS_GET = 'Api/Transfer/GetTransferConfis'
@@ -77,6 +81,7 @@ export const TRANSFER_GET_GET = 'Api/Transfer/Get' // 获取单条记录
 export const TRANSFER_GETLIST_GET = 'Api/Transfer/GetList' // 获取单条记录
 export const TRANSFER_UPDATE_GET = 'Api/Transfer/Update' // 修改单条记录
 export const TRANSFER_DELETE_GET = 'Api/Transfer/Delete' // 删除单条记录
+export const TRANSFER_GETREGFORM_GET = 'Api/Transfer/GetRegForm' // 获取会员注册视图
 
 //  User/account相关的API接口
 export const USER_ACCOUNT_ALLACCOUNTS_GET = 'Api/User/account/AllAccounts' // 所有S the accounts
@@ -90,6 +95,7 @@ export const WITHDRAW_ADD_POST = 'Api/WithDraw/Add' // 用户申请提现
 export const WITHDRAW_GETUSERLIST_GET = 'Api/WithDraw/GetUserList' // 获取用户所有提现数据
 export const WITHDRAW_DELETE_DELETE = 'Api/WithDraw/Delete' // 删除用户提现
 export const WITHDRAW_GET_GET = 'Api/WithDraw/Get' // 获取提现详情
+export const WITHDRAW_GETWITHDRAWVIEW_GET = 'Api/WithDraw/GetWithDrawView' // 获取转账视图
 
 //  Common相关的API接口
 export const COMMON_SENDMOBILEVERIFIYCODE_POST = 'Api/Common/SendMobileVerifiyCode' // 发送手机验证码
