@@ -1,5 +1,6 @@
 <template>
   <div class="page">
+
     <div class="page__hd">
       <div class="page__title">Toast</div>
       <div class="page__desc">弹出式提示，采用小程序原生的toast</div>
