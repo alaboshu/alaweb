@@ -34,5 +34,8 @@
     .weui-cells {
       margin-top: 0;
     }
+    .wv-popup {
+      z-index: 111111;
+    }
   }
 </style>

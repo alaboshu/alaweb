@@ -12,7 +12,7 @@
       link: [String, Object],
       size: {
         type: String,
-        default: '30px'
+        default: '100%'
       }
     },
     data () {
@@ -34,7 +34,7 @@
 
 <style>
   .svg-icon {
-  	display: inline-block;
-  	fill: currentColor;
+    display: inline-block;
+    fill: currentColor;
   }
 </style>
