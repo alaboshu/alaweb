@@ -12,7 +12,7 @@
       link: [String, Object],
       size: {
         type: String,
-        default: '18px'
+        default: '100%'
       }
     },
     created () {
@@ -43,7 +43,7 @@
 
 <style>
   .svg-icon {
-  	display: inline-block;
-  	fill: currentColor;
+    display: inline-block;
+    fill: currentColor;
   }
 </style>

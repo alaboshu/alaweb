@@ -5,7 +5,7 @@
     <show-parameter></show-parameter>
     <show-Intro></show-Intro>
     <show-recommend></show-recommend>
-    <show-bar></show-bar>
+    <!-- <show-bar></show-bar> -->
   </div>
 </template>
 
