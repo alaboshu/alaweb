@@ -1,4 +1,4 @@
-// Get,GetList等接口，动态参数查询
+// Get,GetList等接口，动态参数查询，字段名与数据库一致，不区分大小写
 //  == ：Operator.Equal（等于），可省去，默认
 //  << ：Operator.Less（小于）
 //  <= ：Operator.LessEqual（小于等于）
