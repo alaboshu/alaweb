@@ -1,16 +1,15 @@
-# ZKWeb 商城系统（移动端/小程序）
+# ZKWeb:同一套 Vue 代码， PC、H5、小程序、安卓 App、苹果 App （High quality Weex、MpVue）
+
+![图片](https://raw.githubusercontent.com/zwwill/yanxuan-weex-demo/master/banner.png)
 
 ## 想解决的痛点
 
 * 维护一套代码，同时维护 PC、H5、小程序、安卓 App、苹果 App 减少代码负债
 * 用 vue.js 开发，支持多个终端
 * 通过可视化编辑，让客户个性化 DIY 各个终端
-
-## 特别感谢
-
-* [F-loat](https://github.com/F-loat) mpvue-entry、 mpvue-wxParse 的作者，mpvue 的资深开拓者，资深前端架构师
-* [yangguangqishimi](https://github.com/yangguangqishimi) aros-cli 的作者，精通 weex 开发
-* 期待您的加入
+* 开发同一份代码，可以在不同的端上分别执行，避免了多端的重复研发成本
+* 使用同一种开发体验，包括语法设计和工程链路等,减低人员培训成本
+* 同一套组件：设计基于小程序、 iOS、Android、H5、PC，有一定的通用性和普遍性
 
 ## Build Setup
 
@@ -83,8 +82,8 @@ npm run pack:app
 
 一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari 等）
 
-## 截图
+## 特别感谢
 
-## 重要
-
-* 请在`project.config.json`文件,`appid`处填写自己注册的微信 appid;
+* [F-loat](https://github.com/F-loat) mpvue-entry、 mpvue-wxParse 的作者，mpvue 的资深开拓者，资深前端架构师
+* [yangguangqishimi](https://github.com/yangguangqishimi) aros-cli 的作者，精通 weex 开发
+* 期待您的加入
