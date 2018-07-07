@@ -1,10 +1,10 @@
-# 一套 Vue 代码， 支持 PC、H5、小程序、安卓 App、苹果 App
+## 一套 Vue 代码， 支持 PC、H5、小程序、安卓 App、苹果 App
 
 ![图片](https://raw.githubusercontent.com/zhongku/zkweb/master/src/assets/img/github/banner.png)
 
 > （High quality Weex、MpVue）
 
-# 后台 DIY 系统，所见即所得、最大程度的复用代码
+## 后台 DIY 系统，所见即所得、最大程度的复用代码
 
 ![图片](https://raw.githubusercontent.com/zhongku/zkweb/master/src/assets/img/github/diy.jpg)
 
@@ -92,4 +92,4 @@ npm run pack:app
 
 * [F-loat](https://github.com/F-loat) mpvue-entry、 mpvue-wxParse 的作者，mpvue 的资深开拓者，资深前端架构师
 * [yangguangqishimi](https://github.com/yangguangqishimi) aros-cli 的作者，精通 weex 开发
-* 期待您的加入
+* 期待您的加入,交流 QQ 群：783374676
