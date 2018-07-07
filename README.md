@@ -1,6 +1,12 @@
-# ZKWeb:同一套 Vue 代码， PC、H5、小程序、安卓 App、苹果 App （High quality Weex、MpVue）
+# 一套 Vue 代码， 支持 PC、H5、小程序、安卓 App、苹果 App
 
-![图片](https://raw.githubusercontent.com/zwwill/yanxuan-weex-demo/master/banner.png)
+![图片](https://raw.githubusercontent.com/zhongku/zkweb/master/src/assets/img/github/banner.png)
+
+> （High quality Weex、MpVue）
+
+# 后台 DIY 系统，所见即所得、最大程度的复用代码
+
+![图片](https://raw.githubusercontent.com/zhongku/zkweb/master/src/assets/img/github/diy.jpg)
 
 ## 想解决的痛点
 
