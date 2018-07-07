@@ -32,7 +32,7 @@ export const USER_GETREGFORM_GET = 'Api/User/GetRegForm' // 获取会员注册�
 export const USERDETAIL_QRCODE_GET = 'Api/UserDetail/QrCode' // 二维码
 export const USERDETAIL_TREE_GET = 'Api/UserDetail/Tree' // 组织架构图函数
 export const USERDETAIL_IDENTITY_POST = 'Api/UserDetail/Identity' // 实名认证
-export const USERDETAIL_GETIDENTITY_GET = 'Api/UserDetail/GetIdentity' // 获取实名认证信息
+export const USERDETAIL_GETIDENTITY_GET = 'Api/UserDetail/GetIdentity' // 获取实名认证信息 
 
 //  UserType相关的API接口
 export const USERTYPE_GETSINGLE_GET = 'Api/UserType/GetSingle' // 查询单个用户类型的详细信息，包括部门相信信息，员工详细信息等
@@ -86,7 +86,7 @@ export const TRANSFER_GETREGFORM_GET = 'Api/Transfer/GetRegForm' // 获取会员
 //  User/account相关的API接口
 export const USER_ACCOUNT_ALLACCOUNTS_GET = 'Api/User/account/AllAccounts' // 所有S the accounts
 export const USER_ACCOUNT_BILL_GET = 'Api/User/account/Bill' // bill  the  soecified parameter
-export const USER_ACCOUNT_BILLVIEW_GET = 'Api/User/account/BillView' // bills the 视图
+export const USER_ACCOUNT_BILLVIEW_GET = 'Api/User/account/BillView' // bills the 视图 
 export const USER_ACCOUNT_TRANSFER_GET = 'Api/User/account/Transfer' // transfers the specified parameter
 
 //  WithDraw相关的API接口
@@ -144,6 +144,7 @@ export const SITEPAGE_GETLIST_GET = 'Api/SitePage/GetList' // 获取单条记录
 export const SITEPAGE_ADD_POST = 'Api/SitePage/Add' // 增加单条记录
 export const SITEPAGE_UPDATE_GET = 'Api/SitePage/Update' // 修改单条记录
 export const SITEPAGE_DELETE_GET = 'Api/SitePage/Delete' // 删除单条记录
+export const SITEPAGE_GETSITEPAGELIST_GET = 'Api/SitePage/GetSitePageList' // 获取当前终端的页面，构建左侧菜单
 
 //  SystemPage相关的API接口
 export const SYSTEMPAGE_GET_GET = 'Api/SystemPage/Get' // 获取单条记录
@@ -287,3 +288,4 @@ export const ACTIVITY_GETLIST_GET = 'Api/Activity/GetList' // 获取单条记录
 export const ACTIVITY_ADD_POST = 'Api/Activity/Add' // 增加单条记录
 export const ACTIVITY_UPDATE_GET = 'Api/Activity/Update' // 修改单条记录
 export const ACTIVITY_DELETE_GET = 'Api/Activity/Delete' // 删除单条记录
+
