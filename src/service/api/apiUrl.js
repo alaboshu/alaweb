@@ -12,6 +12,7 @@ export const USERADDRESS_SINGLE_GET = 'Api/UserAddress/Single' // id值为空获
 //  User相关的API接口
 export const USER_LOGIN_POST = 'Api/User/Login' // 会员登录
 export const USER_LOGINBYOPENID_POST = 'Api/User/LoginByOpenId' // 使用openid 完成会员登录
+export const USER_GETREGFORM_GET = 'Api/User/GetRegForm' // 获取会员注册视图
 export const USER_REG_POST = 'Api/User/Reg' // 会员注册
 export const USER_UPDATE_PUT = 'Api/User/Update' // 修改用户信息
 export const USER_CHANGEPASSWORD_PUT = 'Api/User/ChangePassword' // 修改密码，密码传入明文
@@ -21,12 +22,11 @@ export const USER_INFO_GET = 'Api/User/Info' // 会员详细信息、包括用�
 export const USER_ADDACTION_POST = 'Api/User/AddAction' // 添加操作纪律，比如添加购物车 添加收藏夹等等
 export const USER_GETACTION_GET = 'Api/User/GetAction' // 获取操作记录 添加收藏夹等等
 export const USER_REMOVEACTION_DELETE = 'Api/User/RemoveAction' // 移除操作记录 比如删除购物车等
-export const USER_GET_GET = 'Api/User/Get' // 获取单条记录
-export const USER_GETLIST_GET = 'Api/User/GetList' // 获取单条记录
+export const USER_GET_GET = 'Api/User/Get' // 根据Url获取单条记录
+export const USER_GETLIST_GET = 'Api/User/GetList' // 根据Url获取列表
 export const USER_ADD_POST = 'Api/User/Add' // 增加单条记录
 export const USER_UPDATE_GET = 'Api/User/Update' // 修改单条记录
 export const USER_DELETE_GET = 'Api/User/Delete' // 删除单条记录
-export const USER_GETREGFORM_GET = 'Api/User/GetRegForm' // 获取会员注册视图
 
 //  UserDetail相关的API接口
 export const USERDETAIL_QRCODE_GET = 'Api/UserDetail/QrCode' // 二维码
@@ -37,7 +37,7 @@ export const USERDETAIL_GETIDENTITY_GET = 'Api/UserDetail/GetIdentity' // 获取
 //  UserType相关的API接口
 export const USERTYPE_GETSINGLE_GET = 'Api/UserType/GetSingle' // 查询单个用户类型的详细信息，包括部门相信信息，员工详细信息等
 export const USERTYPE_GETLIST_GET = 'Api/UserType/GetList' // 查询用户类型列表，根据条件查询用户类型（部门、员工）列表
-export const USERTYPE_GET_GET = 'Api/UserType/Get' // 获取单条记录
+export const USERTYPE_GET_GET = 'Api/UserType/Get' // 根据Url获取单条记录
 export const USERTYPE_ADD_POST = 'Api/UserType/Add' // 增加单条记录
 export const USERTYPE_UPDATE_GET = 'Api/UserType/Update' // 修改单条记录
 export const USERTYPE_DELETE_GET = 'Api/UserType/Delete' // 删除单条记录
@@ -45,7 +45,7 @@ export const USERTYPE_DELETE_GET = 'Api/UserType/Delete' // 删除单条记录
 //  ShareOrder相关的API接口
 export const SHAREORDER_GETSINGLE_GET = 'Api/ShareOrder/GetSingle' // 查询单个订单的详细信息，包括任务执行进度、状态等
 export const SHAREORDER_GETLIST_GET = 'Api/ShareOrder/GetList' // 查询分润订单列表，根据条件查询分润订单列表
-export const SHAREORDER_GET_GET = 'Api/ShareOrder/Get' // 获取单条记录
+export const SHAREORDER_GET_GET = 'Api/ShareOrder/Get' // 根据Url获取单条记录
 export const SHAREORDER_ADD_POST = 'Api/ShareOrder/Add' // 增加单条记录
 export const SHAREORDER_UPDATE_GET = 'Api/ShareOrder/Update' // 修改单条记录
 export const SHAREORDER_DELETE_GET = 'Api/ShareOrder/Delete' // 删除单条记录
@@ -77,11 +77,11 @@ export const RECHARGE_GETWITHDRAWVIEW_GET = 'Api/Recharge/GetWithDrawView' // �
 //  Transfer相关的API接口
 export const TRANSFER_GETTRANSFERCONFIS_GET = 'Api/Transfer/GetTransferConfis'
 export const TRANSFER_ADD_POST = 'Api/Transfer/Add' // 增加单条记录
-export const TRANSFER_GET_GET = 'Api/Transfer/Get' // 获取单条记录
-export const TRANSFER_GETLIST_GET = 'Api/Transfer/GetList' // 获取单条记录
+export const TRANSFER_GETREGFORM_GET = 'Api/Transfer/GetRegForm' // 获取会员注册视图
+export const TRANSFER_GET_GET = 'Api/Transfer/Get' // 获取会员注册视图
+export const TRANSFER_GETLIST_GET = 'Api/Transfer/GetList' // 根据Url获取列表
 export const TRANSFER_UPDATE_GET = 'Api/Transfer/Update' // 修改单条记录
 export const TRANSFER_DELETE_GET = 'Api/Transfer/Delete' // 删除单条记录
-export const TRANSFER_GETREGFORM_GET = 'Api/Transfer/GetRegForm' // 获取会员注册视图
 
 //  User/account相关的API接口
 export const USER_ACCOUNT_ALLACCOUNTS_GET = 'Api/User/account/AllAccounts' // 所有S the accounts
@@ -108,89 +108,89 @@ export const APISTORE_LOGIN_GET = 'Api/ApiStore/Login' // 微信小程序登录�
 export const APISTORE_WEIXINPUBLOGIN_GET = 'Api/ApiStore/WeixinPubLogin' // 微信公众号登录
 
 //  Widget相关的API接口
-export const WIDGET_GET_GET = 'Api/Widget/Get' // 获取单条记录
-export const WIDGET_GETLIST_GET = 'Api/Widget/GetList' // 获取单条记录
+export const WIDGET_CLASS_GET = 'Api/Widget/Class' // 模块分类
+export const WIDGET_GET_GET = 'Api/Widget/Get' // 根据Url获取单条记录
+export const WIDGET_GETLIST_GET = 'Api/Widget/GetList' // 根据Url获取列表
 export const WIDGET_ADD_POST = 'Api/Widget/Add' // 增加单条记录
 export const WIDGET_UPDATE_GET = 'Api/Widget/Update' // 修改单条记录
 export const WIDGET_DELETE_GET = 'Api/Widget/Delete' // 删除单条记录
-export const WIDGET_CLASS_GET = 'Api/Widget/Class' // 模块分类
 
 //  Theme相关的API接口
-export const THEME_GET_GET = 'Api/Theme/Get' // 获取单条记录
-export const THEME_GETLIST_GET = 'Api/Theme/GetList' // 获取单条记录
+export const THEME_GET_GET = 'Api/Theme/Get' // 根据Url获取单条记录
+export const THEME_GETLIST_GET = 'Api/Theme/GetList' // 根据Url获取列表
 export const THEME_ADD_POST = 'Api/Theme/Add' // 增加单条记录
 export const THEME_UPDATE_GET = 'Api/Theme/Update' // 修改单条记录
 export const THEME_DELETE_GET = 'Api/Theme/Delete' // 删除单条记录
 
 //  Site相关的API接口
-export const SITE_GET_GET = 'Api/Site/Get' // 获取单条记录
-export const SITE_GETLIST_GET = 'Api/Site/GetList' // 获取单条记录
+export const SITE_GET_GET = 'Api/Site/Get' // 根据Url获取单条记录
+export const SITE_GETLIST_GET = 'Api/Site/GetList' // 根据Url获取列表
 export const SITE_ADD_POST = 'Api/Site/Add' // 增加单条记录
 export const SITE_UPDATE_GET = 'Api/Site/Update' // 修改单条记录
 export const SITE_DELETE_GET = 'Api/Site/Delete' // 删除单条记录
 
 //  PageAction相关的API接口
-export const PAGEACTION_GET_GET = 'Api/PageAction/Get' // 获取单条记录
-export const PAGEACTION_GETLIST_GET = 'Api/PageAction/GetList' // 获取单条记录
+export const PAGEACTION_GET_GET = 'Api/PageAction/Get' // 根据Url获取单条记录
+export const PAGEACTION_GETLIST_GET = 'Api/PageAction/GetList' // 根据Url获取列表
 export const PAGEACTION_ADD_POST = 'Api/PageAction/Add' // 增加单条记录
 export const PAGEACTION_UPDATE_GET = 'Api/PageAction/Update' // 修改单条记录
 export const PAGEACTION_DELETE_GET = 'Api/PageAction/Delete' // 删除单条记录
 
 //  SitePage相关的API接口
 export const SITEPAGE_GETSITEPAGE_GET = 'Api/SitePage/GetSitePage' // 获取当前页面的配置信息
+export const SITEPAGE_GETSITEPAGELIST_GET = 'Api/SitePage/GetSitePageList' // 获取当前终端的页面，构建左侧菜单
 export const SITEPAGE_SAVE_POST = 'Api/SitePage/Save' // Diy保存
-export const SITEPAGE_GET_GET = 'Api/SitePage/Get' // 获取单条记录
-export const SITEPAGE_GETLIST_GET = 'Api/SitePage/GetList' // 获取单条记录
+export const SITEPAGE_GET_GET = 'Api/SitePage/Get' // 根据Url获取单条记录
+export const SITEPAGE_GETLIST_GET = 'Api/SitePage/GetList' // 根据Url获取列表
 export const SITEPAGE_ADD_POST = 'Api/SitePage/Add' // 增加单条记录
 export const SITEPAGE_UPDATE_GET = 'Api/SitePage/Update' // 修改单条记录
 export const SITEPAGE_DELETE_GET = 'Api/SitePage/Delete' // 删除单条记录
-export const SITEPAGE_GETSITEPAGELIST_GET = 'Api/SitePage/GetSitePageList' // 获取当前终端的页面，构建左侧菜单
 
 //  SystemPage相关的API接口
-export const SYSTEMPAGE_GET_GET = 'Api/SystemPage/Get' // 获取单条记录
-export const SYSTEMPAGE_GETLIST_GET = 'Api/SystemPage/GetList' // 获取单条记录
+export const SYSTEMPAGE_GET_GET = 'Api/SystemPage/Get' // 根据Url获取单条记录
+export const SYSTEMPAGE_GETLIST_GET = 'Api/SystemPage/GetList' // 根据Url获取列表
 export const SYSTEMPAGE_ADD_POST = 'Api/SystemPage/Add' // 增加单条记录
 export const SYSTEMPAGE_UPDATE_GET = 'Api/SystemPage/Update' // 修改单条记录
 export const SYSTEMPAGE_DELETE_GET = 'Api/SystemPage/Delete' // 删除单条记录
 
 //  Layout相关的API接口
-export const LAYOUT_GET_GET = 'Api/Layout/Get' // 获取单条记录
-export const LAYOUT_GETLIST_GET = 'Api/Layout/GetList' // 获取单条记录
+export const LAYOUT_GET_GET = 'Api/Layout/Get' // 根据Url获取单条记录
+export const LAYOUT_GETLIST_GET = 'Api/Layout/GetList' // 根据Url获取列表
 export const LAYOUT_ADD_POST = 'Api/Layout/Add' // 增加单条记录
 export const LAYOUT_UPDATE_GET = 'Api/Layout/Update' // 修改单条记录
 export const LAYOUT_DELETE_GET = 'Api/Layout/Delete' // 删除单条记录
 
 //  Union相关的API接口
-export const UNION_GET_GET = 'Api/Union/Get' // 获取单条记录
-export const UNION_GETLIST_GET = 'Api/Union/GetList' // 获取单条记录
+export const UNION_GET_GET = 'Api/Union/Get' // 根据Url获取单条记录
+export const UNION_GETLIST_GET = 'Api/Union/GetList' // 根据Url获取列表
 export const UNION_ADD_POST = 'Api/Union/Add' // 增加单条记录
 export const UNION_UPDATE_GET = 'Api/Union/Update' // 修改单条记录
 export const UNION_DELETE_GET = 'Api/Union/Delete' // 删除单条记录
 
 //  Element相关的API接口
-export const ELEMENT_GET_GET = 'Api/Element/Get' // 获取单条记录
-export const ELEMENT_GETLIST_GET = 'Api/Element/GetList' // 获取单条记录
+export const ELEMENT_GET_GET = 'Api/Element/Get' // 根据Url获取单条记录
+export const ELEMENT_GETLIST_GET = 'Api/Element/GetList' // 根据Url获取列表
 export const ELEMENT_ADD_POST = 'Api/Element/Add' // 增加单条记录
 export const ELEMENT_UPDATE_GET = 'Api/Element/Update' // 修改单条记录
 export const ELEMENT_DELETE_GET = 'Api/Element/Delete' // 删除单条记录
 
 //  Component相关的API接口
-export const COMPONENT_GET_GET = 'Api/Component/Get' // 获取单条记录
-export const COMPONENT_GETLIST_GET = 'Api/Component/GetList' // 获取单条记录
+export const COMPONENT_GET_GET = 'Api/Component/Get' // 根据Url获取单条记录
+export const COMPONENT_GETLIST_GET = 'Api/Component/GetList' // 根据Url获取列表
 export const COMPONENT_ADD_POST = 'Api/Component/Add' // 增加单条记录
 export const COMPONENT_UPDATE_GET = 'Api/Component/Update' // 修改单条记录
 export const COMPONENT_DELETE_GET = 'Api/Component/Delete' // 删除单条记录
 
 //  Border相关的API接口
-export const BORDER_GET_GET = 'Api/Border/Get' // 获取单条记录
-export const BORDER_GETLIST_GET = 'Api/Border/GetList' // 获取单条记录
+export const BORDER_GET_GET = 'Api/Border/Get' // 根据Url获取单条记录
+export const BORDER_GETLIST_GET = 'Api/Border/GetList' // 根据Url获取列表
 export const BORDER_ADD_POST = 'Api/Border/Add' // 增加单条记录
 export const BORDER_UPDATE_GET = 'Api/Border/Update' // 修改单条记录
 export const BORDER_DELETE_GET = 'Api/Border/Delete' // 删除单条记录
 
 //  ApiAddress相关的API接口
-export const APIADDRESS_GET_GET = 'Api/ApiAddress/Get' // 获取单条记录
-export const APIADDRESS_GETLIST_GET = 'Api/ApiAddress/GetList' // 获取单条记录
+export const APIADDRESS_GET_GET = 'Api/ApiAddress/Get' // 根据Url获取单条记录
+export const APIADDRESS_GETLIST_GET = 'Api/ApiAddress/GetList' // 根据Url获取列表
 export const APIADDRESS_ADD_POST = 'Api/ApiAddress/Add' // 增加单条记录
 export const APIADDRESS_UPDATE_GET = 'Api/ApiAddress/Update' // 修改单条记录
 export const APIADDRESS_DELETE_GET = 'Api/ApiAddress/Delete' // 删除单条记录
@@ -198,8 +198,8 @@ export const APIADDRESS_DELETE_GET = 'Api/ApiAddress/Delete' // 删除单条记�
 //  WorkOrder相关的API接口
 export const WORKORDER_FEEDBACK_GET = 'Api/WorkOrder/FeedBack'
 export const WORKORDER_FEEDBACK_POST = 'Api/WorkOrder/FeedBack'
-export const WORKORDER_GET_GET = 'Api/WorkOrder/Get' // 获取单条记录
-export const WORKORDER_GETLIST_GET = 'Api/WorkOrder/GetList' // 获取单条记录
+export const WORKORDER_GET_GET = 'Api/WorkOrder/Get' // 根据Url获取单条记录
+export const WORKORDER_GETLIST_GET = 'Api/WorkOrder/GetList' // 根据Url获取列表
 export const WORKORDER_ADD_POST = 'Api/WorkOrder/Add' // 增加单条记录
 export const WORKORDER_UPDATE_GET = 'Api/WorkOrder/Update' // 修改单条记录
 export const WORKORDER_DELETE_GET = 'Api/WorkOrder/Delete' // 删除单条记录
@@ -207,8 +207,8 @@ export const WORKORDER_DELETE_GET = 'Api/WorkOrder/Delete' // 删除单条记录
 //  Article相关的API接口
 export const ARTICLE_ARTICLEDETAIL_GET = 'Api/Article/ArticleDetail' // 内容详情页面
 export const ARTICLE_ABOUTDETAIL_GET = 'Api/Article/AboutDetail' // 帮助内容
-export const ARTICLE_GET_GET = 'Api/Article/Get' // 获取单条记录
-export const ARTICLE_GETLIST_GET = 'Api/Article/GetList' // 获取单条记录
+export const ARTICLE_GET_GET = 'Api/Article/Get' // 根据Url获取单条记录
+export const ARTICLE_GETLIST_GET = 'Api/Article/GetList' // 根据Url获取列表
 export const ARTICLE_ADD_POST = 'Api/Article/Add' // 增加单条记录
 export const ARTICLE_UPDATE_GET = 'Api/Article/Update' // 修改单条记录
 export const ARTICLE_DELETE_GET = 'Api/Article/Delete' // 删除单条记录
@@ -227,7 +227,7 @@ export const USERSTOCK_GETLIST_GET = 'Api/UserStock/GetList' // 查询用户库�
 export const USERSTOCK_GETPRODUCTLIST_GET = 'Api/UserStock/GetProductList' // 查询摘要
 export const USERSTOCK_OFFLINEDELIVERYPRODUCT_GET = 'Api/UserStock/OfflineDeliveryProduct' // 根据订单，查询订单发货商品以及发货商品数量
 export const USERSTOCK_OFFLINEDELIVERY_POST = 'Api/UserStock/OfflineDelivery' // 线下发货
-export const USERSTOCK_GET_GET = 'Api/UserStock/Get' // 获取单条记录
+export const USERSTOCK_GET_GET = 'Api/UserStock/Get' // 根据Url获取单条记录
 export const USERSTOCK_ADD_POST = 'Api/UserStock/Add' // 增加单条记录
 export const USERSTOCK_UPDATE_GET = 'Api/UserStock/Update' // 修改单条记录
 export const USERSTOCK_DELETE_GET = 'Api/UserStock/Delete' // 删除单条记录
@@ -249,8 +249,8 @@ export const PRODUCT_CLASS_GET = 'Api/Product/Class' // 商品分类Api接口
 export const PRODUCT_FAVORITEPRODUCT_GET = 'Api/Product/FavoriteProduct' // 我的分类收藏夹
 export const PRODUCT_FOOTPRINTPRODUCT_GET = 'Api/Product/FootprintProduct' // 我的足迹
 export const PRODUCT_PRODUCTCARTPRODUCT_GET = 'Api/Product/ProductCartProduct' // 我的购物车
-export const PRODUCT_GET_GET = 'Api/Product/Get' // 获取单条记录
-export const PRODUCT_GETLIST_GET = 'Api/Product/GetList' // 获取单条记录
+export const PRODUCT_GET_GET = 'Api/Product/Get' // 根据Url获取单条记录
+export const PRODUCT_GETLIST_GET = 'Api/Product/GetList' // 根据Url获取列表
 export const PRODUCT_ADD_POST = 'Api/Product/Add' // 增加单条记录
 export const PRODUCT_UPDATE_GET = 'Api/Product/Update' // 修改单条记录
 export const PRODUCT_DELETE_GET = 'Api/Product/Delete' // 删除单条记录
@@ -270,8 +270,8 @@ export const ORDER_BUY_POST = 'Api/Order/Buy' // 立即购买，商品购买，�
 export const ORDER_BUYINFO_POST = 'Api/Order/BuyInfo' // 商品的SKUid，确认订单页面，获取商品购买信息，每次修改价格通过此方法计算，在/order/buy页面使用
 export const ORDER_RATE_POST = 'Api/Order/Rate' // 用户评论
 export const ORDER_CONFIRM_POST = 'Api/Order/Confirm' // 收货确认
-export const ORDER_GET_GET = 'Api/Order/Get' // 获取单条记录
-export const ORDER_GETLIST_GET = 'Api/Order/GetList' // 获取单条记录
+export const ORDER_GET_GET = 'Api/Order/Get' // 根据Url获取单条记录
+export const ORDER_GETLIST_GET = 'Api/Order/GetList' // 根据Url获取列表
 export const ORDER_ADD_POST = 'Api/Order/Add' // 增加单条记录
 export const ORDER_UPDATE_GET = 'Api/Order/Update' // 修改单条记录
 export const ORDER_DELETE_GET = 'Api/Order/Delete' // 删除单条记录
@@ -283,8 +283,8 @@ export const GROUPBUY_PRODUCTS_GET = 'Api/GroupBuy/Products' // 拼团商品列�
 export const GROUPBUY_ORDERGROUPUSER_GET = 'Api/GroupBuy/OrderGroupUser' // 订单拼团用户，根据订单id获取订单拼团用户
 
 //  Activity相关的API接口
-export const ACTIVITY_GET_GET = 'Api/Activity/Get' // 获取单条记录
-export const ACTIVITY_GETLIST_GET = 'Api/Activity/GetList' // 获取单条记录
+export const ACTIVITY_GET_GET = 'Api/Activity/Get' // 根据Url获取单条记录
+export const ACTIVITY_GETLIST_GET = 'Api/Activity/GetList' // 根据Url获取列表
 export const ACTIVITY_ADD_POST = 'Api/Activity/Add' // 增加单条记录
 export const ACTIVITY_UPDATE_GET = 'Api/Activity/Update' // 修改单条记录
 export const ACTIVITY_DELETE_GET = 'Api/Activity/Delete' // 删除单条记录
