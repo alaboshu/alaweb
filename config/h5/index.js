@@ -48,7 +48,7 @@ module.exports = {
     index: path.resolve(__dirname, '../../dist/h5/index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../../dist/h5'),
+    assetsRoot: path.resolve(__dirname, `../../dist/${process.env.MODE || 'h5'}`),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
 

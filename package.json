@@ -6,17 +6,20 @@
   "private": true,
   "scripts": {
     "start": "npm run dev",
-    "dev:min": "cross-env MODE=min node build/min/dev.js ",
-    "build:min": "cross-env MODE=min node build/min/build.js",
     "dev": "webpack-dev-server --inline --progress --config build/h5/webpack.dev.conf.js",
     "build": "node build/h5/build.js",
+    "dev:pc": "cross-env MODE=pc npm run dev",
+    "build:pc": "cross-env MODE=pc npm run build",
+    "dev:min": "cross-env MODE=min node build/min/dev.js ",
+    "build:min": "cross-env MODE=min node build/min/build.js",
+    "dev:app": "node build/app/dev.js",
+    "pack:app": "node build/app/pack.js",
     "all": "npm run dev && npm run devH5",
     "lint": "eslint --ext .js,.vue src",
-    "fix": "eslint --ext .js,.vue src --fix",
-    "dev:app": "node build/app/dev.js",
-    "pack:app": "node build/app/pack.js"
+    "fix": "eslint --ext .js,.vue src --fix"
   },
   "dependencies": {
+    "element-ui": "^2.4.3",
     "flyio": "^0.5.9",
     "mpvue": "^1.0.0",
     "mpvue-router-patch": "^0.2.1",

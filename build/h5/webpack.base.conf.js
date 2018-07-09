@@ -39,13 +39,13 @@ const createLintingRule = () => ({
   }
 })
 
-const routes = getRoutes(resolve('./src'), 'pages/**/*.vue')
+const routes = getRoutes(resolve('./src'), process.env.MODE === 'pc' ? 'views/**/*.vue' : 'pages/**/*.vue')
 const routesStr = JSON.stringify(routes, null, '  ')
 fs.writeFileSync(resolve('./src/router/routes.js'), `/* eslint-disable */\nmodule.exports = ${routesStr.replace(/"component": "(.*)"/g, '"component": () => import("@/$1")')}`)
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
-  entry: '../src/_start/h5/main.js',
+  entry: `../src/_start/${process.env.MODE || 'h5'}/main.js`,
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -56,8 +56,8 @@ module.exports = {
     extensions: ['.js', '.vue', '.json', '.less'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@/elements/plt': resolve('src/elements/h5'),
-      '_style': resolve('src/assets/style/h5'),
+      '@/elements/plt': resolve(`src/elements/${process.env.MODE || 'h5'}`),
+      '_style': resolve(`src/assets/style/${process.env.MODE || 'h5'}`),
       '@': resolve('src'),
       flyio: 'flyio/dist/npm/fly',
       wx: resolve('src/utils/wx')

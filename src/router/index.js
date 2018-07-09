@@ -4,7 +4,11 @@ import routes from './routes'
 
 Vue.use(Router)
 
-routes.push({ path: '/', redirect: '/pages/index' })
+if (process.env.MODE === 'pc') {
+  routes.push({ path: '/', redirect: '/views/index' })
+} else {
+  routes.push({ path: '/', redirect: '/pages/index' })
+}
 
 export default new Router({
   routes,
