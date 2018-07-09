@@ -11,6 +11,5 @@ if (process.env.MODE === 'pc') {
 }
 
 export default new Router({
-  routes,
-  mode: 'history'
+  routes
 })
