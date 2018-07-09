@@ -29,8 +29,8 @@
         </div>
         <div class="sale-botton-placeholder "></div>
         <div class="sale-botton">
-          <x-button class="sale-btn-left">加入购物车</x-button>
-          <x-button class="sale-btn-right">立即购买</x-button>
+          <x-button>加入购物车</x-button>
+          <x-button>立即购买</x-button>
         </div>
       </div>
     </x-popup>
