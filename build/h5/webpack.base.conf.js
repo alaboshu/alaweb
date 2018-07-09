@@ -19,9 +19,11 @@ const happyThreadPool = HappyPack.ThreadPool({
 function getRoutes (rootSrc, pattern) {
   const files = glob.sync(path.resolve(rootSrc, pattern))
   return files.map((file) => {
-    const relativePath = path.relative(rootSrc, file).replace(/\\/g, '/').replace('.vue', '')
+    const relativePath = path.relative(rootSrc, file)
+      .replace(/\\/g, '/')
+      .replace(/\.vue$/, '')
     return {
-      path: `/${relativePath}`,
+      path: `/${relativePath.replace(/^views/, 'pages')}`,
       name: relativePath.replace(/\/(.)/g, (match, $1) => $1.toUpperCase()),
       component: `${relativePath}.vue`
     }
