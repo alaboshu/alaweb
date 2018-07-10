@@ -4,23 +4,35 @@
       <div class="page__bd">
         <div class="weui-tab">
           <div class="weui-navbar">
-            <block v-for="(item,index) in tabs" :key="index">
+            <block v-for="(item,index) in viewModel.result" :key="index">
               <div :id="index" :class="{'weui-bar__item_on':activeIndex == index}" class="weui-navbar__item" @click="tabClick">
-                <div class="weui-navbar__title">{{item}}</div>
+                <div class="weui-navbar__title">{{item.name}}</div>
               </div>
             </block>
             <!-- <div class="weui-navbar__slider" :class="navbarSliderClass"></div> -->
           </div>
-          <div class="weui-tab__panel" :style="'width:'+fontSize+'px'">
-            <div class="weui-tab__content" :hidden="activeIndex != 0">
+          <div class="weui-tab__panel">
+            <div class="weui-tab__content" v-for="(items,indexs) in viewModel.result" :key="indexs" :hidden="activeIndex != indexs">
               <div class="weui-tab__content_title">
-                选项一
+                {{items.name}}
               </div>
               <div class="weui-tab__content_grid">
-                <x-grid :gWidth=3></x-grid>
+                <!-- <x-grid :gWidth=3></x-grid> -->
+                <div class="weui-grids">
+                  <div class="page__bd">
+                    <div class="weui-grids">
+                      <block v-for="(t,i) in items.childClass" :key="i">
+                        <a url="" class="weui-grid" hover-class="weui-grid_active" style="'width:33.3'%'">
+                          <image class="weui-grid__icon" :src="t.icon" />
+                          <div class="weui-grid__label">{{t.name}}</div>
+                        </a>
+                      </block>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="weui-tab__content" :hidden="activeIndex != 1">
+            <!-- <div class="weui-tab__content" :hidden="activeIndex != 1">
               <div class="weui-tab__content_title">
                 选项二
               </div>
@@ -35,7 +47,7 @@
               <div class="weui-tab__content_grid">
                 <x-grid :gWidth=3></x-grid>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -44,13 +56,16 @@
 </template>
 
 <script>
+  import { PRODUCT_CLASS_GET } from '@/service/api/apiUrl' // 引入Api接口常量
   export default {
     name: 'e-tab-swiper',
     data () {
       return {
         tabs: ['选项一', '选项二', '选项三'],
         activeIndex: 0,
-        fontSize: 30
+        fontSize: 30,
+        viewModel: '', // 数据模型
+        styles: {} // 可视化编辑样式
       }
     },
     props: {
@@ -71,9 +86,13 @@
       }
     },
     mounted () {
-      console.log()
+      this.init()
     },
     methods: {
+      async  init () {
+        this.viewModel = await this.$api.get(PRODUCT_CLASS_GET)
+        console.log('this.viewModel', this.viewModel)
+      },
       tabClick (e) {
         console.log(e)
         this.activeIndex = e.currentTarget.id
@@ -149,6 +168,13 @@
     .weui-bar__item_on {
       color: @brand;
       background: #fff;
+    }
+    .weui-tab__content_grid {
+      padding-top: 10px;
+    }
+    .weui-grid__icon {
+      width: 40px;
+      height: 40px;
     }
   }
 </style>
