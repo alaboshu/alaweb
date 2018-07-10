@@ -1,5 +1,5 @@
 <template>
-  <div class="zk-slider" :style="styles">
+  <div class="zk-slider" :style="styles" component-path="core/zk-slider">
     <div class="">{{viewModel}}</div>
   </div>
 </template>
@@ -9,6 +9,7 @@
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
+    props: ['widgetDataId'],
     data () {
       return {
         viewModel: '', // 数据模型
@@ -20,10 +21,7 @@
     },
     methods: {
       async  init () {
-        const para = {
-          diyKey: 'grid_index'
-        }
-        this.viewModel = await this.$api.get(DIY_GETLINK_GET, para)
+        this.viewModel = await this.$api.get(DIY_GETLINK_GET, this.widgetDataId)
       }
     }
   }
@@ -32,7 +30,7 @@
 <style scoped lang="less">
   @import '~_style/index.less'; // 颜色、边框、大小请使用assets/style/variable.less 和theme.less中的变量
   .zk-slider {
-    font-size: @font-size-base;
+  	font-size: @font-size-base;
   }
 </style>
 

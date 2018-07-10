@@ -86,6 +86,7 @@ export const RECHARGE_ADDONLINE_POST = 'Api/Recharge/AddOnline' // 线上充值
 export const RECHARGE_DELETE_DELETE = 'Api/Recharge/Delete' // 删除用户充值
 export const RECHARGE_GET_GET = 'Api/Recharge/Get' // 获取充值详情
 export const RECHARGE_GETWITHDRAWVIEW_GET = 'Api/Recharge/GetWithDrawView' // 获取充值视图
+export const RECHARGE_GETRECHARGEVIEW_GET = 'Api/Recharge/GetRechargeView' // 获取充值视图
 
 //  Transfer相关的API接口
 export const TRANSFER_GETTRANSFERCONFIS_GET = 'Api/Transfer/GetTransferConfis'
@@ -115,6 +116,7 @@ export const COMMON_SENDMOBILEVERIFIYCODE_POST = 'Api/Common/SendMobileVerifiyCo
 export const COMMON_UPLOAD_POST = 'Api/Common/Upload' // 获取上传状态
 export const COMMON_GETAUTOCONFIG_GET = 'Api/Common/GetAutoConfig' // 获取参数格式
 export const COMMON_GETGET = 'Api/Common/GetApi' // 获取所有的Api地址
+export const COMMON_GETKEYVALUESBYENUM_GET = 'Api/Common/GetKeyValuesByEnum' // 根据枚举获取KeyValues
 
 //  ApiStore相关的API接口
 export const APISTORE_LOGIN_GET = 'Api/ApiStore/Login' // 微信小程序登录，微信公众号登录
@@ -301,3 +303,48 @@ export const ACTIVITY_GETLIST_GET = 'Api/Activity/GetList' // 根据Url获取列
 export const ACTIVITY_ADD_POST = 'Api/Activity/Add' // 增加单条记录
 export const ACTIVITY_UPDATE_GET = 'Api/Activity/Update' // 修改单条记录
 export const ACTIVITY_DELETE_GET = 'Api/Activity/Delete' // 删除单条记录
+
+//  ThemePage相关的API接口
+export const THEMEPAGE_GETTHEMEPAGE_GET = 'Api/ThemePage/GetThemePage' // 获取当前页面的配置信息
+export const THEMEPAGE_GETTHEMEPAGELIST_GET = 'Api/ThemePage/GetThemePageList' // 获取当前终端的页面，构建左侧菜单
+export const THEMEPAGE_SAVE_POST = 'Api/ThemePage/Save' // Diy保存
+export const THEMEPAGE_GET_GET = 'Api/ThemePage/Get' // 根据Url获取单条记录
+export const THEMEPAGE_GETLIST_GET = 'Api/ThemePage/GetList' // 根据Url获取列表
+export const THEMEPAGE_ADD_POST = 'Api/ThemePage/Add' // 增加单条记录
+export const THEMEPAGE_UPDATE_GET = 'Api/ThemePage/Update' // 修改单条记录
+export const THEMEPAGE_DELETE_GET = 'Api/ThemePage/Delete' // 删除单条记录
+
+//  Users相关的API接口
+export const USERS_LOGIN_POST = 'Api/Users/Login' // 会员登录
+export const USERS_LOGINBYOPENID_POST = 'Api/Users/LoginByOpenId' // 使用openid 完成会员登录
+export const USERS_GETREGFORM_GET = 'Api/Users/GetRegForm' // 获取会员注册视图
+export const USERS_REG_POST = 'Api/Users/Reg' // 会员注册
+export const USERS_UPDATE_PUT = 'Api/Users/Update' // 修改用户信息
+export const USERS_CHANGEPASSWORD_PUT = 'Api/Users/ChangePassword' // 修改密码，密码传入明文
+export const USERS_FINDPASSWORD_PUT = 'Api/Users/FindPassword' // 找回密码，密码传入明文
+export const USERS_VIEW_GET = 'Api/Users/View' // 获取推荐会员详情
+export const USERS_INFO_GET = 'Api/Users/Info' // 会员详细信息、包括用户名、姓名、手机号地址等新
+export const USERS_ADDACTION_POST = 'Api/Users/AddAction' // 添加操作纪律，比如添加购物车 添加收藏夹等等
+export const USERS_GETACTION_GET = 'Api/Users/GetAction' // 获取操作记录 添加收藏夹等等
+export const USERS_REMOVEACTION_DELETE = 'Api/Users/RemoveAction' // 移除操作记录 比如删除购物车等
+
+//  WidgetData相关的API接口
+export const WIDGETDATA_GET_GET = 'Api/WidgetData/Get' // 根据Url获取单条记录
+export const WIDGETDATA_GETLIST_GET = 'Api/WidgetData/GetList' // 根据Url获取列表
+export const WIDGETDATA_ADD_POST = 'Api/WidgetData/Add' // 增加单条记录
+export const WIDGETDATA_UPDATE_GET = 'Api/WidgetData/Update' // 修改单条记录
+export const WIDGETDATA_DELETE_GET = 'Api/WidgetData/Delete' // 删除单条记录
+
+//  WidgetSystemData相关的API接口
+export const WIDGETSYSTEMDATA_GET_GET = 'Api/WidgetSystemData/Get' // 根据Url获取单条记录
+export const WIDGETSYSTEMDATA_GETLIST_GET = 'Api/WidgetSystemData/GetList' // 根据Url获取列表
+export const WIDGETSYSTEMDATA_ADD_POST = 'Api/WidgetSystemData/Add' // 增加单条记录
+export const WIDGETSYSTEMDATA_UPDATE_GET = 'Api/WidgetSystemData/Update' // 修改单条记录
+export const WIDGETSYSTEMDATA_DELETE_GET = 'Api/WidgetSystemData/Delete' // 删除单条记录
+
+//  PageData相关的API接口
+export const PAGEDATA_GET_GET = 'Api/PageData/Get' // 根据Url获取单条记录
+export const PAGEDATA_GETLIST_GET = 'Api/PageData/GetList' // 根据Url获取列表
+export const PAGEDATA_ADD_POST = 'Api/PageData/Add' // 增加单条记录
+export const PAGEDATA_UPDATE_GET = 'Api/PageData/Update' // 修改单条记录
+export const PAGEDATA_DELETE_GET = 'Api/PageData/Delete' // 删除单条记录

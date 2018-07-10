@@ -1,7 +1,7 @@
 export const editSetting = {
-  'Name': 'zk-image',
+  'Name': 'zk-table',
   'Path': null,
-  'Key': 'zk-image',
+  'Key': 'zk-table',
   'Editors': [{
     'GroupName': '基本设置',
     'Items': [{
@@ -16,6 +16,8 @@ export const editSetting = {
     'Type': 3,
     'Name': '初始化'
   }],
-  'Id': '5b3ab4c722452131b4017ec8',
-  'CreateTime': '2018-07-03 07:27:03'
+  'Type': 0,
+  'EventName': null,
+  'Id': '5b4462f283077821e4b3c312',
+  'CreateTime': '2018-07-10 15:40:34'
 }
