@@ -15,6 +15,7 @@
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
+    props: ['widgetDataId'],
     data () {
       return {
         viewModel: '', // 数据模型
@@ -26,10 +27,7 @@
     },
     methods: {
       async  init () {
-        const para = {
-          diyKey: 'grid_index'
-        }
-        this.viewModel = await this.$api.get(DIY_GETLINK_GET, para)
+        this.viewModel = await this.$api.get(DIY_GETLINK_GET, this.widgetDataId)
       }
     }
   }
@@ -38,31 +36,31 @@
 <style scoped lang="less">
   @import '~_style/index.less'; // 颜色、边框、大小请使用assets/style/variable.less 和theme.less中的变量
   .zk-image {
-    font-size: @font-size-base;
-    .lazyload-list {
-      display: block;
-      overflow: hidden;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-      text-align: center;
-      list-style: none;
+  	font-size: @font-size-base;
+  	.lazyload-list {
+  		display: block;
+  		overflow: hidden;
+  		width: 100%;
+  		padding: 0;
+  		margin: 0;
+  		text-align: center;
+  		list-style: none;
 
-      .lazyload-list-item {
-        width: 100%;
-        margin: 5px auto;
-      }
+  		.lazyload-list-item {
+  			width: 100%;
+  			margin: 5px auto;
+  		}
 
-      .lazyload-image {
-        display: block;
-        width: 100%;
-        height: 180px;
-        // &[lazy='loading'] {
-        //   width: 40px;
-        //   height: 300px;
-        //   margin: auto;
-        // }
-      }
-    }
+  		.lazyload-image {
+  			display: block;
+  			width: 100%;
+  			height: 180px;
+  			// &[lazy='loading'] {
+  			//   width: 40px;
+  			//   height: 300px;
+  			//   margin: auto;
+  			// }
+  		}
+  	}
   }
 </style>

@@ -18,6 +18,6 @@ export const editSetting = {
   }],
   'Type': 0,
   'EventName': null,
-  'Id': '5b445dbd15b52f4ba8b04422',
-  'CreateTime': '2018-07-10 15:18:21'
+  'Id': '5b4462f283077821e4b3c312',
+  'CreateTime': '2018-07-10 15:40:34'
 }
