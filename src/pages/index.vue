@@ -7,6 +7,7 @@
     <zk-footer></zk-footer>
     <zk-input></zk-input>
     <zk-label></zk-label>
+    <!-- <zk-product-class></zk-product-class> -->
   </div>
 </template>
 
@@ -37,4 +38,7 @@
 </script>
 
 <style scoped lang="less">
+  .container {
+    height: 100%;
+  }
 </style>

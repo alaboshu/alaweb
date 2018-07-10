@@ -1,6 +1,8 @@
 <template>
   <div class="zk-product-class" :style="styles">
-    <div class="">{{viewModel}}</div>
+    <x-searchbar></x-searchbar>
+    <e-tab-swiper></e-tab-swiper>
+    <zk-footer></zk-footer>
   </div>
 </template>
 

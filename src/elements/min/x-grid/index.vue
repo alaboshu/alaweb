@@ -3,7 +3,7 @@
     <div class="page__bd">
       <div class="weui-grids">
         <block v-for="item in grids" :key="index">
-          <a url="" class="weui-grid" hover-class="weui-grid_active">
+          <a url="" class="weui-grid" hover-class="weui-grid_active" :style="'width:'+100/gWidth+'%'">
             <image class="weui-grid__icon" :src="item.src" />
             <div class="weui-grid__label">{{item.name}}</div>
           </a>
@@ -17,6 +17,14 @@
   import { DIY_GETLINK_GET } from '@/service/api/apiUrl'
   export default {
     name: 'zk-grid',
+    props: {
+      gWidth: {
+        type: Number,
+        default: 4
+      }
+    },
+    created () {
+    },
     data () {
       return {
         viewModel: '',
