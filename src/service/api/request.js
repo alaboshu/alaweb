@@ -8,21 +8,14 @@ request.interceptors.request.use((config, promise) => {
   return config
 })
 // 配置请求基地址
-request.config.baseURL = 'http://admin.czhait.com/'
-
-request.interceptors.request.use((request) => {
-  wx.showNavigationBarLoading()
-  return request
-})
+request.config.baseURL = 'http://lll.5ug.com/'
 
 request.interceptors.response.use(
   (response, promise) => {
-    wx.hideNavigationBarLoading()
     return promise.resolve(response.data)
   },
   (err, promise) => {
     if (err) {
-      wx.hideNavigationBarLoading()
       wx.showToast({
         title: err.message,
         icon: 'none'
