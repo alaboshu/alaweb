@@ -136,6 +136,7 @@ export const THEME_GETLIST_GET = 'Api/Theme/GetList' // 根据Url获取列表
 export const THEME_ADD_POST = 'Api/Theme/Add' // 增加单条记录
 export const THEME_UPDATE_GET = 'Api/Theme/Update' // 修改单条记录
 export const THEME_DELETE_GET = 'Api/Theme/Delete' // 删除单条记录
+export const THEME_GETLINK_GET = 'Api/Theme/GetLink' // 链接
 
 //  Site相关的API接口
 export const SITE_GET_GET = 'Api/Site/Get' // 根据Url获取单条记录
@@ -334,6 +335,7 @@ export const WIDGETDATA_GETLIST_GET = 'Api/WidgetData/GetList' // 根据Url获�
 export const WIDGETDATA_ADD_POST = 'Api/WidgetData/Add' // 增加单条记录
 export const WIDGETDATA_UPDATE_GET = 'Api/WidgetData/Update' // 修改单条记录
 export const WIDGETDATA_DELETE_GET = 'Api/WidgetData/Delete' // 删除单条记录
+export const WIDGETDATA_GETVIEW_GET = 'Api/WidgetData/GetView' // 视图
 
 //  WidgetSystemData相关的API接口
 export const WIDGETSYSTEMDATA_GET_GET = 'Api/WidgetSystemData/Get' // 根据Url获取单条记录
@@ -348,3 +350,10 @@ export const PAGEDATA_GETLIST_GET = 'Api/PageData/GetList' // 根据Url获取列
 export const PAGEDATA_ADD_POST = 'Api/PageData/Add' // 增加单条记录
 export const PAGEDATA_UPDATE_GET = 'Api/PageData/Update' // 修改单条记录
 export const PAGEDATA_DELETE_GET = 'Api/PageData/Delete' // 删除单条记录
+
+//  OpenTheme相关的API接口
+export const OPENTHEME_GET_GET = 'Api/OpenTheme/Get' // 根据Url获取单条记录
+export const OPENTHEME_GETLIST_GET = 'Api/OpenTheme/GetList' // 根据Url获取列表
+export const OPENTHEME_ADD_POST = 'Api/OpenTheme/Add' // 增加单条记录
+export const OPENTHEME_UPDATE_GET = 'Api/OpenTheme/Update' // 修改单条记录
+export const OPENTHEME_DELETE_GET = 'Api/OpenTheme/Delete' // 删除单条记录
