@@ -18,6 +18,7 @@
   import { editSetting } from './property'
   import * as zkAfComps from './zk-af-comps'
   import typeMap from './type-map'
+  import regMap from './reg-map'
 
   export default {
     name: editSetting.key,
@@ -48,11 +49,31 @@
         if (data.status !== 1) return
         this.form = data.result
         this.initModel()
+        this.initRules()
       },
       initModel () {
         this.form.groups.forEach(group => {
           group.items.forEach(item => {
             this.$set(this.model, item.field, item.value)
+          })
+        })
+      },
+      initRules () {
+        this.rules = {}
+        this.form.groups.forEach(group => {
+          group.items.forEach(item => {
+            if (item.validType) {
+              this.$set(this.rules, item.field, [{
+                validator: (rule, value, callback) => {
+                  if (regMap[item.validType].test(value)) {
+                    callback()
+                  } else {
+                    callback(new Error('数据不合法!'))
+                  }
+                },
+                trigger: 'blur'
+              }])
+            }
           })
         })
       },
