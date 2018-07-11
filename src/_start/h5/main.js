@@ -38,7 +38,12 @@ import ZkFooter from '@/components/core/zk-footer/index.vue'
 import ZkSwiper from '@/components/core/zk-swiper/index.vue'
 import XInput from '@/elements/common/x-input/index.vue'
 import Xlable from '@/elements/common/x-label'
-
+import ETabSwiper from '@/elements/common/e-tab-swiper'
+import ZkProductClass from '@/components/shop/zk-product-class/index.vue'
+import XNavbar from '@/elements/common/x-navbar'
+import XNavbarItem from '@/elements/common/x-navbar-item'
+import XSearchbar from '@/elements/common/x-searchbar'
+import XPreview from '@/elements/common/x-preview'
 console.log(config)
 
 Vue.component('x-header', XHeader)
@@ -66,6 +71,12 @@ Vue.component('x-swiper', XSwiper)
 Vue.component('zk-swiper', ZkSwiper)
 Vue.component('zk-input', XInput)
 Vue.component('zk-label', Xlable)
+Vue.component('zk-product-class', ZkProductClass)
+Vue.component('e-tab-swiper', ETabSwiper)
+Vue.component('x-navbar', XNavbar)
+Vue.component('x-navbar-item', XNavbarItem)
+Vue.component('x-searchbar', XSearchbar)
+Vue.component('x-preview', XPreview)
 
 Vue.use(global)
 Vue.use(Toast)

@@ -1,8 +1,8 @@
 <template>
   <div class="zk-product-class" :style="styles">
-    <x-searchbar></x-searchbar>
+    <!-- <x-searchbar></x-searchbar> -->
     <e-tab-swiper></e-tab-swiper>
-    <zk-footer></zk-footer>
+    <zk-footer :placeholderHeight=0></zk-footer>
   </div>
 </template>
 
@@ -32,7 +32,7 @@
 <style scoped lang="less">
   @import '~_style/index.less'; // 颜色、边框、大小请使用assets/style/variable.less 和theme.less中的变量
   .zk-product-class {
-  	font-size: @font-size-base;
+    font-size: @font-size-base;
   }
 </style>
 

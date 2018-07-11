@@ -35,7 +35,7 @@
           </p>
         </a>
       </div>
-          <div class="footer-placeholder "></div>
+          <div class="footer-placeholder " :style="'height:'+placeholderHeight+'px'"></div>
     </div>
   </div>
 </template>
@@ -49,6 +49,12 @@
       return {
         viewModel: '', // 数据模型
         styles: {} // 可视化编辑样式
+      }
+    },
+    props: {
+      placeholderHeight: {
+        type: Number,
+        default: 56
       }
     },
     mounted () {
@@ -69,9 +75,6 @@
   @import '~_style/index.less'; // 颜色、边框、大小请使用assets/style/variable.less 和theme.less中的变量
 .zkweb-footer{
   font-size:123px;
-  .footer-placeholder{
-    height:56px;
-  }
   .zkweb-tabbar{
     position: fixed;
     bottom:0;
