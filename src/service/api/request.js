@@ -10,19 +10,12 @@ request.interceptors.request.use((config, promise) => {
 // 配置请求基地址
 request.config.baseURL = 'http://admin.czhait.com/'
 
-request.interceptors.request.use((request) => {
-  wx.showNavigationBarLoading()
-  return request
-})
-
 request.interceptors.response.use(
   (response, promise) => {
-    wx.hideNavigationBarLoading()
     return promise.resolve(response.data)
   },
   (err, promise) => {
     if (err) {
-      wx.hideNavigationBarLoading()
       wx.showToast({
         title: err.message,
         icon: 'none'
