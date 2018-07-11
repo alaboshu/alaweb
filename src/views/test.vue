@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <zk-auto-form dataUri="Api/Recharge/GetRechargeView" />
-    <zk-auto-form dataUri="api/users/getregform" />
+    <zk-auto-form viewApi="Api/Recharge/GetRechargeView" />
+    <zk-auto-form viewApi="api/users/getregform" />
   </div>
 </template>
 

@@ -26,10 +26,15 @@
       ...zkAfComps
     },
     props: {
-      dataUri: {
+      viewApi: {
         type: String,
         required: true
-      }
+      },
+      postApi: {
+        type: String,
+        required: true
+      },
+      successReturn: String
     },
     data () {
       return {
@@ -45,7 +50,7 @@
     },
     methods: {
       async init () {
-        const data = await this.$api.get(this.dataUri)
+        const data = await this.$api.get(this.viewApi)
         if (data.status !== 1) return
         this.form = data.result
         this.initModel()
