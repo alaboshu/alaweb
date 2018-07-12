@@ -32,7 +32,7 @@ import XSwipeItem from '@/elements/common/x-swipe-item'
 import XSwiper from '@/elements/common/x-swiper'
 import XGrid from '@/elements/common/x-grid'
 import ZkGrid from '@/components/core/zk-grid/index.vue'
-import ZkProductItem from '@/components/core/zk-product-item/index.vue'
+import ZkProductItem from '@/components/shop/zk-product-item/index.vue'
 import ZkImage from '@/components/core/zk-image/index.vue'
 import ZkFooter from '@/components/core/zk-footer/index.vue'
 import ZkSwiper from '@/components/core/zk-swiper/index.vue'
@@ -44,6 +44,7 @@ import XNavbar from '@/elements/common/x-navbar'
 import XNavbarItem from '@/elements/common/x-navbar-item'
 import XSearchbar from '@/elements/common/x-searchbar'
 import XPreview from '@/elements/common/x-preview'
+import XNumber from '@/elements/common/x-number'
 console.log(config)
 
 Vue.component('x-header', XHeader)
@@ -77,6 +78,7 @@ Vue.component('x-navbar', XNavbar)
 Vue.component('x-navbar-item', XNavbarItem)
 Vue.component('x-searchbar', XSearchbar)
 Vue.component('x-preview', XPreview)
+Vue.component('x-number', XNumber)
 
 Vue.use(global)
 Vue.use(Toast)

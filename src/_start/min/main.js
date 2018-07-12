@@ -16,7 +16,7 @@ import XPreview from '@/elements/min/x-preview'
 // 组件部分
 import XIcon from '@/elements/common/x-icon'
 import ZkImage from '@/components/core/zk-image/index.vue'
-import ZkProductItem from '@/components/core/zk-product-item/index.vue'
+import ZkProductItem from '@/components/shop/zk-product-item/index.vue'
 import ZkSwiper from '@/components/core/zk-swiper/index.vue'
 import ZkFooter from '@/components/core/zk-footer/index.vue'
 import ZkGrid from '@/components/core/zk-grid/index.vue'

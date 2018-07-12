@@ -1,17 +1,22 @@
 <template>
   <div class="container">
-    <!-- <zk-grid></zk-grid>
+    <zk-grid></zk-grid>
     <zk-swiper></zk-swiper>
     <zk-image></zk-image>
     <zk-product-item></zk-product-item>
-    <zk-footer></zk-footer> -->
+    <zk-footer></zk-footer>
     <!-- <zk-input></zk-input>
     <zk-label></zk-label> -->
-    <zk-product-class></zk-product-class>
+    <!-- <div @click=" showSuccess ()">
+      <x-number v-model="num"></x-number>
+    </div> -->
+    <!-- <zk-product-class></zk-product-class> -->
   </div>
 </template>
 
 <script>
+  // import Toast from ''
+  // import Toast from '@/elements/common/x-toast/toast'
   export default {
     config: {
       'navigationBarBackgroundColor': '#ffffff',
@@ -22,7 +27,8 @@
     },
     data () {
       return {
-        clientType: ''
+        clientType: '',
+        num: 2
       }
     },
     mounted () {
@@ -32,6 +38,9 @@
       async  ApiGet () {
         // var data = await api.get('api/user/info?id=1')
         // console.info('data', data)
+      },
+      showSuccess () {
+        // Toast.success('操作成功')
       }
     }
   }
