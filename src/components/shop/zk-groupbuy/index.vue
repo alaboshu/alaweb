@@ -24,7 +24,7 @@
                           <p class="price_now">￥{{item.displayPrice}}</p>
                           <div class="flex">
                             <span class="price_old flex_one "> ￥{{item.marketPrice}} </span>
-                            <x-button class="go-groupbuy-btn" :link="showUrl+item.id">去拼团</x-button>
+                            <x-button class="go-groupbuy-btn" :href="showUrl+item.id">去拼团</x-button>
                           </div>
                         </div>
                       </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="zk-preview" :style="styles" component-path="core/zk-preview">
-    <div class="">{{viewModel}}</div>
+    <x-preview></x-preview>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="zk-cell" :style="styles">
-    <div class="">{{viewModel}}</div>
+    <x-cell></x-cell>
   </div>
 </template>
 

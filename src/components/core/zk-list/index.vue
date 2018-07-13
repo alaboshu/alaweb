@@ -1,6 +1,6 @@
 <template>
   <div class="zk-list" :style="styles" component-path="core/zk-list">
-    <div class="">{{viewModel}}</div>
+    <x-cell></x-cell>
   </div>
 </template>
 

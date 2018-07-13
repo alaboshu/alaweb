@@ -13,6 +13,8 @@ import XSwiper from '@/elements/min/x-swiper'
 import XNavbar from '@/elements/min/x-navbar'
 import XSearchbar from '@/elements/min/x-searchbar'
 import XPreview from '@/elements/min/x-preview'
+import XInput from '@/elements/min/x-input'
+import XCell from '@/elements/min/x-cell'
 import XVerifiyPhone from '@/elements/common/x-verifiy-phone'
 // 组件部分
 import XIcon from '@/elements/common/x-icon'
@@ -38,6 +40,8 @@ Vue.component('x-navbar', XNavbar)
 Vue.component('x-searchbar', XSearchbar)
 Vue.component('x-preview', XPreview)
 Vue.component('x-verifiy-phone', XVerifiyPhone)
+Vue.component('x-input', XInput)
+Vue.component('x-cell', XCell)
 // 组件部分
 Vue.component('x-icon', XIcon)
 Vue.component('zk-image', ZkImage)
@@ -46,6 +50,7 @@ Vue.component('zk-footer', ZkFooter)
 Vue.component('zk-swiper', ZkSwiper)
 Vue.component('zk-grid', ZkGrid)
 Vue.component('zk-product-class', ZkProductClass)
+
 
 Vue.use(MpvueRouterPatch)
 Vue.use(global)

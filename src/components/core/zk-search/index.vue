@@ -1,6 +1,6 @@
 <template>
   <div class="zk-search" :style="styles" component-path="core/zk-search">
-    <div class="">{{viewModel}}</div>
+    <x-searchbar></x-searchbar>
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="weui-cell" :class="{'weui-cell_access': isLink}" @click="onClick">
-    <div class="weui-cell_hd">
-      <slot name="icon" />
+    <div class="weui-cell_hd" v-if="icon">
+      <img :src="icon" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;" />
     </div>
     <div class="weui-cell__bd">
       <slot name="bd">
@@ -28,7 +28,10 @@
       value: {
         type: [String, Number]
       },
-      isLink: Boolean
+      isLink: Boolean,
+      icon: {
+        type: String
+      }
     },
 
     methods: {

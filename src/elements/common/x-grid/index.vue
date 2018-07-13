@@ -1,6 +1,6 @@
 <template>
   <div class="weui-grids">
-    <a :href="item.url" class="weui-grid" v-for="(item,index) in viewModel.result" :key="index">
+    <a :href="item.url" class="weui-grid" v-for="(item,index) in viewModel.result" :key="index" :style="'width:'+100/gWidth+'%'">
       <div class="weui-grid__icon">
         <x-icon :src="item.imageUrl"></x-icon>
       </div>
@@ -13,6 +13,12 @@
   import { DIY_GETLINK_GET } from '@/service/api/apiUrl'
   export default {
     name: 'zk-grid',
+    props: {
+      gWidth: {
+        type: Number,
+        default: 4
+      }
+    },
     data () {
       return {
         viewModel: ''

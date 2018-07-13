@@ -1,7 +1,7 @@
 <template>
   <div class="weui-cell" :class="{ 'weui-cell_warn': !valid }">
     <div class="weui-cell__hd">
-      <label class="weui-label" v-html="label" v-if="label" :style="{ width: labelWidth + 'px' }" />
+      <label class="weui-label" v-html="title" v-if="title" :style="{ width: labelWidth + 'px' }" />
     </div>
     <div class="weui-cell__bd">
       <input class="weui-input" ref="input" :type="type" :auto-complete="autoComplete" :autofocus="autofocus" :placeholder="placeholder" :value="currentValue" :readonly="readonly" :number="type === 'number'" :maxlength="maxlength" :minlength="minlength" @focus="onFocus" @blur="onBlur" @change="onChange" @input="handleInput">
@@ -22,7 +22,7 @@
         type: String,
         default: 'text'
       },
-      label: String,
+      title: String,
       labelWidth: {
         type: Number,
         default: 105
@@ -149,8 +149,8 @@
   @import '~_style/index.less';
   .weui-cell {
     font-size: @font-size-base;
-    .weui-input{ 
-      border:1px solid #ccc;
+    .weui-input {
+      border: 1px solid #ccc;
       width: 150px;
       background-color: #fff;
     }
