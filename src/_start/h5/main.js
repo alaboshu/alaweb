@@ -45,6 +45,8 @@ import XNavbarItem from '@/elements/common/x-navbar-item'
 import XSearchbar from '@/elements/common/x-searchbar'
 import XPreview from '@/elements/common/x-preview'
 import XNumber from '@/elements/common/x-number'
+import XVerifiyPhone from '@/elements/common/x-verifiy-phone'
+import ZkGroupbuy from '@/components/shop/zk-groupbuy/index.vue'
 console.log(config)
 
 Vue.component('x-header', XHeader)
@@ -79,6 +81,8 @@ Vue.component('x-navbar-item', XNavbarItem)
 Vue.component('x-searchbar', XSearchbar)
 Vue.component('x-preview', XPreview)
 Vue.component('x-number', XNumber)
+Vue.component('x-verifiy-phone', XVerifiyPhone)
+Vue.component('zk-groupbuy', ZkGroupbuy)
 
 Vue.use(global)
 Vue.use(Toast)

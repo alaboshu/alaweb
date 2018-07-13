@@ -1,16 +1,18 @@
 <template>
   <div class="container">
-    <zk-grid></zk-grid>
+    <!-- <zk-grid></zk-grid>
     <zk-swiper></zk-swiper>
     <zk-image></zk-image>
     <zk-product-item></zk-product-item>
-    <zk-footer></zk-footer>
+    <zk-footer></zk-footer> -->
     <!-- <zk-input></zk-input>
     <zk-label></zk-label> -->
     <!-- <div @click=" showSuccess ()">
       <x-number v-model="num"></x-number>
     </div> -->
     <!-- <zk-product-class></zk-product-class> -->
+    <!-- <x-verifiy-phone v-model="data" :mobile="mobile"></x-verifiy-phone> -->
+    <zk-groupbuy></zk-groupbuy>
   </div>
 </template>
 
@@ -28,7 +30,9 @@
     data () {
       return {
         clientType: '',
-        num: 2
+        num: 2,
+        mobile: '13763166594',
+        data: '555555'
       }
     },
     mounted () {

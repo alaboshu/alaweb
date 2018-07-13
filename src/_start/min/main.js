@@ -13,6 +13,7 @@ import XSwiper from '@/elements/min/x-swiper'
 import XNavbar from '@/elements/min/x-navbar'
 import XSearchbar from '@/elements/min/x-searchbar'
 import XPreview from '@/elements/min/x-preview'
+import XVerifiyPhone from '@/elements/common/x-verifiy-phone'
 // 组件部分
 import XIcon from '@/elements/common/x-icon'
 import ZkImage from '@/components/core/zk-image/index.vue'
@@ -36,6 +37,7 @@ Vue.component('x-swiper', XSwiper)
 Vue.component('x-navbar', XNavbar)
 Vue.component('x-searchbar', XSearchbar)
 Vue.component('x-preview', XPreview)
+Vue.component('x-verifiy-phone', XVerifiyPhone)
 // 组件部分
 Vue.component('x-icon', XIcon)
 Vue.component('zk-image', ZkImage)
