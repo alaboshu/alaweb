@@ -4,7 +4,7 @@
       <div class="weui-label" v-if="title">{{title}}</div>
     </div>
     <div class="weui-cell__bd">
-      <input class="weui-input" :type="type" v-model="qwe" :number="type === 'number'" :placeholder="placeholder" :value="currentValue" :maxlength="maxlength" :minlength="minlength" :readonly="readonly" :disabled="disabled"/>
+      <input class="weui-input" :type="type" v-model="qwe" :number="type === 'number'" :placeholder="placeholder" :value="currentValue" :maxlength="maxlength" :minlength="minlength" :readonly="readonly" :disabled="disabled" />
     </div>
   </div>
 </template>
@@ -22,7 +22,7 @@
       readonly: Boolean,
       disabled: Boolean,
       maxlength: Number,
-      minlength: Number,
+      minlength: Number
     },
     data () {
       return {

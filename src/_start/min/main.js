@@ -51,7 +51,6 @@ Vue.component('zk-swiper', ZkSwiper)
 Vue.component('zk-grid', ZkGrid)
 Vue.component('zk-product-class', ZkProductClass)
 
-
 Vue.use(MpvueRouterPatch)
 Vue.use(global)
 Vue.config.productionTip = false
