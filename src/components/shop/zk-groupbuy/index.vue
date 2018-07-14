@@ -1,7 +1,6 @@
 <template>
   <div class="zk-groupbuy" :style="styles" component-path="shop/zk-groupbuy">
     <div class="order_buy_product ">
-      <!-- <cell class="border-bottom"> </cell> -->
       <div class="item-contnet">
         <ul>
           <li class="zkui-order-cart-item" v-for="(item,index) in viewModel" :key="index">
