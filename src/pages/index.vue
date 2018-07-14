@@ -23,7 +23,7 @@
     <x-group title="qaaz">
       <x-cell title="qwe" value="123"></x-cell>
     </x-group>
-    <x-input title="最大长度10"></x-input>
+    <x-input title="最大长度10" :maxlength=10></x-input>
   </div>
 </template>
 
