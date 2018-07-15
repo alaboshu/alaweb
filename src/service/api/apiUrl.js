@@ -336,6 +336,7 @@ export const WIDGETDATA_ADD_POST = 'Api/WidgetData/Add' // 增加单条记录
 export const WIDGETDATA_UPDATE_GET = 'Api/WidgetData/Update' // 修改单条记录
 export const WIDGETDATA_DELETE_GET = 'Api/WidgetData/Delete' // 删除单条记录
 export const WIDGETDATA_GETVIEW_GET = 'Api/WidgetData/GetView' // 视图
+export const WIDGETDATA_SAVE_POST = 'Api/WidgetData/Save' // 模块数据保存
 
 //  WidgetSystemData相关的API接口
 export const WIDGETSYSTEMDATA_GET_GET = 'Api/WidgetSystemData/Get' // 根据Url获取单条记录

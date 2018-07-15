@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+
+    <zk-swiper></zk-swiper>
+    
     <!-- <x-header title="志伟">
       <div class="btn-back" slot="left">
         <i class="iconfont icon-back" @click="$router.push('/baidu.com')">
