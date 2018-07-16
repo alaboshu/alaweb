@@ -1,14 +1,20 @@
 import wx from 'wx'
 import Fly from 'flyio'
-
+import {
+  apiBaseUrl,
+  projectId,
+  key,
+  privateKey
+} from '@/service/api/config'
 const request = new Fly()
 request.interceptors.request.use((config, promise) => {
-  // 给所有请求添加自定义header
-  config.headers['X-Tag'] = 'flyio'
+  config.headers['Zk-Project-Id'] = projectId
+  config.headers['Zk-Key'] = key
+  config.headers['Zk-Private-Key'] = privateKey
   return config
 })
 // 配置请求基地址
-request.config.baseURL = 'http://lll.5ug.com/'
+request.config.baseURL = apiBaseUrl
 
 request.interceptors.response.use(
   (response, promise) => {

@@ -1,9 +1,7 @@
-const { CLIENT_URL, CLIENT_ID, CLIENT_KEY } = process.env
+export const apiBaseUrl = 'http://localhost:9011/'
 
-console.log(process.env)
-
-export default {
-  url: CLIENT_URL || 'http://admin.czhait.com/',
-  id: CLIENT_ID || 'test_id',
-  key: CLIENT_KEY || 'test_key'
-}
+// 项目Id与秘钥，联系服务获取
+export const projectId = '3090C620-9D5F-4B95-8591-0305F9DE39B0'
+export const key = 'R11NZZU9FKHKUXJHWSQM0EC741PHRVKVUXZDXNFHT7QAAMQHXRGVV7LXY4T7UNSTAV06XPTINJ22YLHSKITAPYAXMMODEHWGPWAOVTTRHIIVET9MXBWMD1OLVDUUBQDP'
+// 私钥自定义，与后台对应
+export const privateKey = '3090C620'
