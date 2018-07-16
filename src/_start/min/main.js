@@ -25,9 +25,7 @@ import ZkFooter from '@/components/core/zk-footer/index.vue'
 import ZkGrid from '@/components/core/zk-grid/index.vue'
 import ZkProductClass from '@/components/shop/zk-product-class/index.vue'
 import {
-  api,
-  apiUrl,
-  config
+  api
 } from '@/service/api'
 
 // 元件部分
@@ -56,8 +54,7 @@ Vue.use(global)
 Vue.config.productionTip = false
 App.store = store
 Vue.prototype.$api = api
-Vue.prototype.$apiUrl = apiUrl
-Vue.prototype.$url = config.url
+Vue.prototype.$client = 'WeChatLite'
 const app = new Vue(App)
 app.$mount()
 

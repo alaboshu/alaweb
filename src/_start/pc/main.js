@@ -11,9 +11,7 @@ import router from '@/router'
 import global from '@/service/core/global' // 公共函数,全局函数
 import '@/service/core/rem'
 import {
-  api,
-  apiUrl,
-  config
+  api
 } from '@/service/api'
 
 Vue.use(global)
@@ -22,8 +20,7 @@ Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 Vue.prototype.$api = api
-Vue.prototype.$apiUrl = apiUrl
-Vue.prototype.$url = config.url
+Vue.prototype.$client = 'PcWeb'
 
 /* eslint-disable no-new */
 new Vue({

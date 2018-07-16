@@ -9,9 +9,7 @@ import router from '@/router'
 import global from '@/service/core/global' // 公共函数,全局函数
 import '@/service/core/rem'
 import {
-  api,
-  apiUrl,
-  config
+  api
 } from '@/service/api'
 import XHeader from '@/elements/common/x-header'
 import XTabbar from '@/elements/common/x-tabbar'
@@ -47,7 +45,6 @@ import XPreview from '@/elements/common/x-preview'
 import XNumber from '@/elements/common/x-number'
 import XVerifiyPhone from '@/elements/common/x-verifiy-phone'
 import ZkGroupbuy from '@/components/shop/zk-groupbuy/index.vue'
-console.log(config)
 
 Vue.component('x-header', XHeader)
 Vue.component('x-tabbar', XTabbar)
@@ -89,8 +86,7 @@ Vue.use(Toast)
 
 Vue.config.productionTip = false
 Vue.prototype.$api = api
-Vue.prototype.$apiUrl = apiUrl
-Vue.prototype.$url = config.url
+Vue.prototype.$client = 'WapH5'
 
 /* eslint-disable no-new */
 new Vue({

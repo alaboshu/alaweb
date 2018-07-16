@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
+  <div class="containera">
 
-    <zk-swiper></zk-swiper>
+    <!-- <zk-swiper></zk-swiper> -->
 
     <!-- <x-header title="志伟">
       <div class="btn-back" slot="left">
@@ -37,7 +37,7 @@
     config: {
       'navigationBarBackgroundColor': '#ffffff',
       'navigationBarTextStyle': 'black',
-      'navigationBarTitleText': '微信接口功能演示',
+      'navigationBarTitleText': '首页',
       'backgroundColor': '#eeeeee',
       'backgroundTextStyle': true
     },
@@ -54,8 +54,9 @@
     },
     methods: {
       async  ApiGet () {
+        // console.info('当前终端', this.ClientType())
         console.info('当前页面', this.$route.path)
-        console.info('当前终端', this.ClientType())
+        console.info('当前终端', 'this.ClientType()')
         // var data = await api.get('api/user/info?id=1')
         // console.info('data', data)
       },
