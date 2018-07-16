@@ -2,7 +2,7 @@
   <div class="container">
 
     <zk-swiper></zk-swiper>
-    
+
     <!-- <x-header title="志伟">
       <div class="btn-back" slot="left">
         <i class="iconfont icon-back" @click="$router.push('/baidu.com')">
@@ -54,6 +54,8 @@
     },
     methods: {
       async  ApiGet () {
+        console.info('当前页面', this.$route.path)
+        console.info('当前终端', this.ClientType())
         // var data = await api.get('api/user/info?id=1')
         // console.info('data', data)
       },
@@ -66,6 +68,6 @@
 
 <style scoped lang="less">
   .container {
-    height: 100%;
+  	height: 100%;
   }
 </style>
