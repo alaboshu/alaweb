@@ -50,10 +50,10 @@
       }
     },
     mounted () {
-      this.ApiGet()
+      this.init()
     },
     methods: {
-      async  ApiGet () {
+      async  init () {
         // console.info('当前终端', this.ClientType())
         console.info('当前页面', this.$route.path)
         console.info('当前终端', this.$client)
