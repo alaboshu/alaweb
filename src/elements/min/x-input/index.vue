@@ -60,9 +60,9 @@
     methods: {
       handleInput (event) {
         // 当有最大长度属性时，限制过长的输入
-        console.log('event',event)
-        console.log('event.target.value',event.target.value)
-        console.log('event.target.value',event.target.value)
+        console.log('event', event)
+        console.log('event.target.value', event.target.value)
+        console.log('event.target.value', event.target.value)
         if (this.maxlength && event.target.value.length >= this.maxlength) {
           this.currentValue = ''
           this.currentValue = event.target.value.substr(0, this.maxlength)
@@ -127,7 +127,7 @@
         this.valid = true
       }
     },
-      watch: {
+    watch: {
       currentValue (val) {
         this.$emit('input', val)
       },
@@ -141,6 +141,6 @@
 
 <style scoped>
   .weui-form-preview {
-    margin-bottom: 25px;
+  	margin-bottom: 25px;
   }
 </style>
