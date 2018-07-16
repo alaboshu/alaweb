@@ -56,7 +56,7 @@
       async  ApiGet () {
         // console.info('当前终端', this.ClientType())
         console.info('当前页面', this.$route.path)
-        console.info('当前终端', 'this.ClientType()')
+        console.info('当前终端', this.$client)
         // var data = await api.get('api/user/info?id=1')
         // console.info('data', data)
       },
