@@ -56,7 +56,7 @@
 </template>
 
 <script>
-  import { PRODUCT_CLASS_GET } from '@/service/api/apiUrl' // 引入Api接口常量
+  import { PRODUCT_CLASS_GET } from '@/service/api/apiUrl' 
   export default {
     name: 'e-tab-swiper',
     data () {

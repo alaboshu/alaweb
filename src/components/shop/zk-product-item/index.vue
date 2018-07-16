@@ -48,7 +48,7 @@
 </template>
 
 <script>
-  import { DIY_GETLINK_GET } from '@/service/api/apiUrl' // 引入Api接口常量
+  import { DIY_GETLINK_GET } from '@/service/api/apiUrl'
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
@@ -75,78 +75,78 @@
 <style scoped lang="less">
   @import '~_style/index.less'; // 颜色、边框、大小请使用assets/style/variable.less 和theme.less中的变量
   .zk-product-item {
-    // font-size: @font-size-base;
-    .zkui-product-item__1 {
-      background: #ffffff;
-      .item-box::after {
-        content: '';
-        display: block;
-        clear: both;
-      }
-      .item-box {
-        padding-bottom: 5px;
-        list-style: none;
-      }
-      .item {
-        display: block;
-        float: left;
-        width: 47%;
-        // height: 20rem;
-        margin: 2% 0 0 2%;
-        padding-bottom: 10px;
-        border-radius: 2px;
-        border: 1px solid rgba(229, 229, 229, 0.4);
-        .content {
-          .content-img-box {
-            display: block;
-            .cimg {
-              width: 100%;
-              display: block;
-            }
-          }
+  	// font-size: @font-size-base;
+  	.zkui-product-item__1 {
+  		background: #ffffff;
+  		.item-box::after {
+  			content: '';
+  			display: block;
+  			clear: both;
+  		}
+  		.item-box {
+  			padding-bottom: 5px;
+  			list-style: none;
+  		}
+  		.item {
+  			display: block;
+  			float: left;
+  			width: 47%;
+  			// height: 20rem;
+  			margin: 2% 0 0 2%;
+  			padding-bottom: 10px;
+  			border-radius: 2px;
+  			border: 1px solid rgba(229, 229, 229, 0.4);
+  			.content {
+  				.content-img-box {
+  					display: block;
+  					.cimg {
+  						width: 100%;
+  						display: block;
+  					}
+  				}
 
-          .itemTitle {
-            .titme-test {
-              display: block;
-              margin: 5px;
-              color: #000;
-              font-size: 16px;
-              height: 25px;
-              word-break: break-all;
-              text-overflow: ellipsis;
-              display: -webkit-box;
-              -webkit-box-orient: vertical;
-              -webkit-line-clamp: 1;
-              overflow: hidden;
-            }
-          }
-          .itemPrice {
-            padding-left: 10px;
-            height: 20px;
-            .price-box {
-              display: flex;
-              color: #000;
-              height: 20px;
-              flex-wrap: wrap;
-              font-size: 14px;
-              .price-old {
-                font-size: 14px;
-                padding-left: 5px;
-                text-decoration: line-through;
-                color: @metal;
-                word-break: break-all;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 1;
-                overflow: hidden;
-                font-weight: normal;
-              }
-            }
-          }
-        }
-      }
-    }
+  				.itemTitle {
+  					.titme-test {
+  						display: block;
+  						margin: 5px;
+  						color: #000;
+  						font-size: 16px;
+  						height: 25px;
+  						word-break: break-all;
+  						text-overflow: ellipsis;
+  						display: -webkit-box;
+  						-webkit-box-orient: vertical;
+  						-webkit-line-clamp: 1;
+  						overflow: hidden;
+  					}
+  				}
+  				.itemPrice {
+  					padding-left: 10px;
+  					height: 20px;
+  					.price-box {
+  						display: flex;
+  						color: #000;
+  						height: 20px;
+  						flex-wrap: wrap;
+  						font-size: 14px;
+  						.price-old {
+  							font-size: 14px;
+  							padding-left: 5px;
+  							text-decoration: line-through;
+  							color: @metal;
+  							word-break: break-all;
+  							text-overflow: ellipsis;
+  							display: -webkit-box;
+  							-webkit-box-orient: vertical;
+  							-webkit-line-clamp: 1;
+  							overflow: hidden;
+  							font-weight: normal;
+  						}
+  					}
+  				}
+  			}
+  		}
+  	}
   }
 </style>
 

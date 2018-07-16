@@ -15,7 +15,7 @@
 
 <script>
   /* eslint-disable */
-  import { COMMON_SENDMOBILEVERIFIYCODE_POST } from '@/service/api/apiUrl' // 引入Api接口常量
+  import { COMMON_SENDMOBILEVERIFIYCODE_POST } from '@/service/api/apiUrl' 
   // import apiService from 'src/service/api/common.api'
   export default {
     data () {

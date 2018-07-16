@@ -4,9 +4,9 @@
     <div class="zkweb-class-box">
       <div class="class-left">
         <x-navbar v-model="navbar_selected" active-color="red">
-          <x-navbar-item v-for="(item,index) in viewModel.result " :key="index" :id="item.id" >
-            <div  @click="bindingId(item.id)">{{item.name}}</div> 
-            </x-navbar-item>
+          <x-navbar-item v-for="(item,index) in viewModel.result " :key="index" :id="item.id">
+            <div @click="bindingId(item.id)">{{item.name}}</div>
+          </x-navbar-item>
           <!-- <x-navbar-item id="navbar2_item2">选项2</x-navbar-item>
           <x-navbar-item id="navbar2_item3">选项3</x-navbar-item> -->
         </x-navbar>
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-  import { PRODUCT_CLASS_GET } from '@/service/api/apiUrl' // 引入Api接口常量
+  import { PRODUCT_CLASS_GET } from '@/service/api/apiUrl'
   export default {
     name: 'e-tab-swiper',
     data () {
@@ -67,54 +67,54 @@
 <style scoped lang="less">
   @import '~_style/index.less'; // 颜色、边框、大小请使用assets/style/variable.less 和theme.less中的变量
   .zkweb-e-tab-swiper {
-    height:100vh;
-    padding-bottom:65px;
-    display:flex;
-    flex-direction:column;
-    .zkweb-class-box {
-      flex:1;
-      display: flex;
-      .class-left {
-        width: 20%;
-        .wv-navbar {
-          display: block;
-          background: #efeff4;
-          overflow:auto;
-          height:100%;
-          .wv-navbar__item {
-            padding: 0;
-            text-align: center;
-            height: 45px;
-            line-height: 45px;
-            border-bottom: 1px solid #e5e5e5 !important;
-          }
-        }
-      }
-      .class-right {
-        flex: 1;
-        .class-right-title{
-          height:45px;
-          line-height:45px;
-          padding-left:20px;
-          border-bottom:1px solid #e5e5e5;
-        }
-      }
-    }
-      .weui-grid {
-  	text-decoration: none;
-  	color: @brand;
-  	width: 33.3333333%;
-  	padding: 10px 10px;
-  	.weui-grid__icon {
-  		margin: 0 auto;
+  	height: 100vh;
+  	padding-bottom: 65px;
+  	display: flex;
+  	flex-direction: column;
+  	.zkweb-class-box {
+  		flex: 1;
+  		display: flex;
+  		.class-left {
+  			width: 20%;
+  			.wv-navbar {
+  				display: block;
+  				background: #efeff4;
+  				overflow: auto;
+  				height: 100%;
+  				.wv-navbar__item {
+  					padding: 0;
+  					text-align: center;
+  					height: 45px;
+  					line-height: 45px;
+  					border-bottom: 1px solid #e5e5e5 !important;
+  				}
+  			}
+  		}
+  		.class-right {
+  			flex: 1;
+  			.class-right-title {
+  				height: 45px;
+  				line-height: 45px;
+  				padding-left: 20px;
+  				border-bottom: 1px solid #e5e5e5;
+  			}
+  		}
   	}
-  }
-  .weui-cell:visited {
-  	color: #000;
-  }
-  .weui-grid__label {
-  	text-decoration: none;
-  	color: #000;
-  }
+  	.weui-grid {
+  		text-decoration: none;
+  		color: @brand;
+  		width: 33.3333333%;
+  		padding: 10px 10px;
+  		.weui-grid__icon {
+  			margin: 0 auto;
+  		}
+  	}
+  	.weui-cell:visited {
+  		color: #000;
+  	}
+  	.weui-grid__label {
+  		text-decoration: none;
+  		color: #000;
+  	}
   }
 </style>

@@ -137,6 +137,7 @@ export const THEME_ADD_POST = 'Api/Theme/Add' // 增加单条记录
 export const THEME_UPDATE_GET = 'Api/Theme/Update' // 修改单条记录
 export const THEME_DELETE_GET = 'Api/Theme/Delete' // 删除单条记录
 export const THEME_GETLINK_GET = 'Api/Theme/GetLink' // 链接
+export const THEME_GETPAGE_GET = 'Api/Theme/GetPage' // 获取页面配置
 
 //  Site相关的API接口
 export const SITE_GET_GET = 'Api/Site/Get' // 根据Url获取单条记录
