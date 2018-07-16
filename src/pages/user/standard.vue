@@ -1,5 +1,6 @@
 <template>
     <div class="pages-user-standard">
+
     </div>
 </template>
 
@@ -18,8 +19,9 @@
             this.init()
         },
         methods: {
-            async  init () {
-                this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&path=' + this.$route.path)
+            async init () {
+                console.dir('ddddd')
+                this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
                 console.info('页面信息', this.pageInfo)
             }
         }

@@ -330,3 +330,4 @@ export const ACTIVITY_GETLIST_GET = 'Api/Activity/GetList' // 根据Url获取列
 export const ACTIVITY_ADD_POST = 'Api/Activity/Add' // 增加单条记录
 export const ACTIVITY_UPDATE_GET = 'Api/Activity/Update' // 修改单条记录
 export const ACTIVITY_DELETE_GET = 'Api/Activity/Delete' // 删除单条记录
+
