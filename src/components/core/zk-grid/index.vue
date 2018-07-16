@@ -5,7 +5,7 @@
 </template>
 <script>
   import api from '@/service/api/api'
-  import { DIY_GETLINK_GET } from '@/service/api/apiUrl'
+  import { THEME_GETLINK_GET } from '@/service/api/apiUrl'
   export default {
     name: 'zk-grid',
     data () {
@@ -21,7 +21,7 @@
         var para = {
           diyKey: 'grid_index'
         }
-        this.viewModel = await api.get(DIY_GETLINK_GET, para)
+        this.viewModel = await api.get(THEME_GETLINK_GET, para)
       }
     }
   }

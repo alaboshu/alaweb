@@ -7,10 +7,12 @@ import {
   privateKey
 } from '@/service/api/config'
 const request = new Fly()
+const timestamp = Math.round(new Date().getTime() / 1000)
 request.interceptors.request.use((config, promise) => {
-  config.headers['Zk-Project-Id'] = projectId
-  config.headers['Zk-Key'] = key
-  config.headers['Zk-Private-Key'] = privateKey
+  config.headers['zk-project-id'] = projectId
+  config.headers['zk-key'] = key
+  config.headers['zk-private-key'] = privateKey
+  config.headers['zk-timestamp'] = timestamp
   return config
 })
 // 配置请求基地址

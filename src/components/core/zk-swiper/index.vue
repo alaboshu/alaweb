@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import { DIY_GETLINK_GET } from '@/service/api/apiUrl' 
+  import { THEME_GETLINK_GET } from '@/service/api/apiUrl' 
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
@@ -33,7 +33,7 @@
         const para = {
           diyKey: 'grid_index'
         }
-        this.viewModel = await this.$api.get(DIY_GETLINK_GET, para)
+        this.viewModel = await this.$api.get(THEME_GETLINK_GET, para)
       },
       swiperChange (e) {
         console.log('第' + e.mp.detail.current + '张轮播图发生了滑动')
