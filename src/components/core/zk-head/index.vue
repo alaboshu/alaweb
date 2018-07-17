@@ -1,6 +1,6 @@
 <template>
   <div class="zk-head" :style="styles">
-    <x-header title="志伟">
+    <x-header title="志伟"></x-header>
   </div>
 </template>
 
@@ -32,7 +32,7 @@
 <style scoped lang="less">
   @import '~_style/index.less'; // 颜色、边框、大小请使用assets/style/variable.less 和theme.less中的变量
   .zk-head {
-  	font-size: @font-size-base;
+    font-size: @font-size-base;
   }
 </style>
 
