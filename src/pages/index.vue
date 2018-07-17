@@ -1,6 +1,6 @@
 <template>
   <div class="containera">
-
+    <a href="/pages/user/standard">标准页面</a>
     <!-- <zk-swiper></zk-swiper> -->
 
     <!-- <x-header title="志伟">

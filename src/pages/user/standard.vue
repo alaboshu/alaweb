@@ -1,6 +1,6 @@
 <template>
     <div class="pages-user-standard">
-
+        <zk-head></zk-head>
     </div>
 </template>
 
@@ -8,19 +8,19 @@
     import { THEME_GETPAGE_GET } from '@/service/api/apiUrl'
     export default {
         config: {
-            'navigationBarTitleText': '标准页面'
+            'navigationBarTitleText': 'this.title'
         },
         data () {
             return {
-                pageInfo: ''
+                pageInfo: '',
+                title: '标准'
             }
         },
-        mounted () {
+        beforeMount () {
             this.init()
         },
         methods: {
             async init () {
-                console.dir('ddddd')
                 this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
                 console.info('页面信息', this.pageInfo)
             }

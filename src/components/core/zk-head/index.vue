@@ -1,6 +1,6 @@
 <template>
   <div class="zk-head" :style="styles">
-    <div class="">{{viewModel}}</div>
+    <x-header title="志伟">
   </div>
 </template>
 
