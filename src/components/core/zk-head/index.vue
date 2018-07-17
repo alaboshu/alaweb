@@ -35,6 +35,7 @@
     methods: {
       // 设置标题 
       async  init () {
+        // console.info('路由标题', this.$route.meta.title)
         if (this.title === undefined) {
           if (this.$route.meta !== undefined) {
             let routerTitle = this.$route.meta.title

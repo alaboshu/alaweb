@@ -58,7 +58,6 @@
     methods: {
       async  init () {
         this.tempComponent = window.top.localStorage.getItem('tempComponent')
-        this.$local.setStore('wewe', 'dddddddd')
         console.info('缓存', this.tempComponent)
       }
     }
@@ -67,6 +66,6 @@
 
 <style scoped lang="less">
   .container {
-    height: 100%;
+  	height: 100%;
   }
 </style>
