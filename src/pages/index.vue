@@ -1,5 +1,6 @@
 <template>
   <div class="containera">
+    <span>{{ tempComponent}}</span>
     <a href="/pages/user/standard">标准页面</a>
     <x-group></x-group>
     <!-- <zk-swiper></zk-swiper> -->
@@ -45,6 +46,7 @@
     data () {
       return {
         clientType: '',
+        tempComponent: '',
         num: 2,
         mobile: '13763166594',
         data: '555555'
@@ -55,14 +57,9 @@
     },
     methods: {
       async  init () {
-        // console.info('当前终端', this.ClientType())
-        console.info('当前页面', this.$route.path)
-        console.info('当前终端', this.$client)
-        // var data = await api.get('api/user/info?id=1')
-        // console.info('data', data)
-      },
-      showSuccess () {
-        // Toast.success('操作成功')
+        this.tempComponent = window.top.localStorage.getItem('tempComponent')
+        this.$local.setStore('wewe', 'dddddddd')
+        console.info('缓存', this.tempComponent)
       }
     }
   }

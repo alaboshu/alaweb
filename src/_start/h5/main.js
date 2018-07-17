@@ -6,7 +6,9 @@ import Toast from 'vue2-toast'
 import 'vue2-toast/lib/toast.css'
 import App from './App'
 import router from '@/router'
-import global from '@/service/core/global' // 公共函数,全局函数
+import global from '@/service/core/global'
+import local from '@/service/core/local'
+
 import '@/service/core/rem'
 import {
   api
@@ -46,6 +48,7 @@ import XNumber from '@/elements/common/x-number'
 import XVerifiyPhone from '@/elements/common/x-verifiy-phone'
 import ZkGroupbuy from '@/components/shop/zk-groupbuy/index.vue'
 import ZhHead from '@/components/core/zk-head'
+
 
 Vue.component('x-header', XHeader)
 Vue.component('x-tabbar', XTabbar)
@@ -89,6 +92,7 @@ Vue.use(Toast)
 Vue.config.productionTip = false
 Vue.prototype.$api = api
 Vue.prototype.$client = 'WapH5'
+Vue.prototype.$local = local
 
 /* eslint-disable no-new */
 new Vue({

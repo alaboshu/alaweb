@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import MpvueRouterPatch from 'mpvue-router-patch'
-import global from '@/service/core/global' // 公共函数,全局函数
+import global from '@/service/core/global'
+import local from '@/service/core/local'
 import '@/service/core/rem'
 import App from './App'
 import store from '@/store'
@@ -55,6 +56,7 @@ Vue.config.productionTip = false
 App.store = store
 Vue.prototype.$api = api
 Vue.prototype.$client = 'WeChatLite'
+Vue.prototype.$local = local
 const app = new Vue(App)
 app.$mount()
 
