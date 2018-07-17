@@ -147,10 +147,6 @@ export const WIDGETSYSTEMDATA_ADD_POST = 'Api/WidgetSystemData/Add' // 增加单
 export const WIDGETSYSTEMDATA_UPDATE_GET = 'Api/WidgetSystemData/Update' // 修改单条记录
 export const WIDGETSYSTEMDATA_DELETE_GET = 'Api/WidgetSystemData/Delete' // 删除单条记录
 
-//  OpenTheme相关的API接口
-export const OPENTHEME_GETTHEME_GET = 'Api/OpenTheme/GetTheme' // 获取模板
-export const OPENTHEME_GETTHEMEPAGE_GET = 'Api/OpenTheme/GetThemePage' // 获取模板
-
 //  Site相关的API接口
 export const SITE_GET_GET = 'Api/Site/Get' // 根据Url获取单条记录
 export const SITE_GETLIST_GET = 'Api/Site/GetList' // 根据Url获取列表

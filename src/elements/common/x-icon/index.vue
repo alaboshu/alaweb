@@ -1,5 +1,5 @@
 <template>
-  <img class="svg-icon" :src="src" @click="onClick" :style="'width:'+size+'px;height:'+size+'px'">
+  <img :class="clazz" :src="src" @click="onClick" :style="'width:'+size+'px;height:'+size+'px'">
 </template>
 
 <script>
@@ -20,6 +20,14 @@
     },
     data () {
       return {
+      }
+    },
+    computed: {
+      clazz () {
+        return {
+          'svg-icon': true,
+          spin: this.spin
+        }
       }
     },
     methods: {
@@ -43,7 +51,7 @@
 <style scoped lang="less">
   @import '~_style/index.less';
   .svg-icon {
-    display: inline-block;
-    fill: currentColor;
+  	display: inline-block;
+  	fill: currentColor;
   }
 </style>

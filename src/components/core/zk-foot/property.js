@@ -1,6 +1,6 @@
 export const editSetting = {
   'Name': 'zk-foot',
-  'Path': null,
+  'Path': 'core/zk-foot',
   'Key': 'zk-foot',
   'Editors': [{
     'GroupName': '基本设置',
@@ -16,6 +16,8 @@ export const editSetting = {
     'Type': 3,
     'Name': '初始化'
   }],
-  'Id': '5b3ab4c722452131b4017ecd',
-  'CreateTime': '2018-07-03 07:27:03'
+  'Type': 0,
+  'EventName': null,
+  'Id': '784e77fb351f4da15dcb4802',
+  'CreateTime': '2018-07-17 19:12:14'
 }
