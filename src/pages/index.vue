@@ -1,6 +1,7 @@
 <template>
   <div class="containera">
     <a href="/pages/user/standard">标准页面</a>
+    <x-group></x-group>
     <!-- <zk-swiper></zk-swiper> -->
 
     <!-- <x-header title="志伟">
@@ -22,11 +23,11 @@
     </div> -->
     <!-- <zk-product-class></zk-product-class> -->
     <!-- <x-verifiy-phone v-model="data" :mobile="mobile"></x-verifiy-phone> -->
-    <zk-groupbuy></zk-groupbuy>
+    <!-- <zk-groupbuy></zk-groupbuy>
     <x-group title="qaaz">
       <x-cell title="qwe" value="123"></x-cell>
     </x-group>
-    <x-input title="最大长度10" :maxlength=10></x-input>
+    <x-input title="最大长度10" :maxlength=10></x-input> -->
   </div>
 </template>
 
@@ -69,6 +70,6 @@
 
 <style scoped lang="less">
   .container {
-  	height: 100%;
+    height: 100%;
   }
 </style>
