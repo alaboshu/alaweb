@@ -1,6 +1,10 @@
 <template>
   <div class="zk-head" :style="styles">
-    <x-header :title="title"></x-header>
+    <x-header :title="title">
+      <div class="btn-back" slot="left">
+        <img src="../../../assets/svg/zkweb-arrows.svg" alt="" @click="$router.push(goBackUrl)"> {{backText}}
+      </div>
+    </x-header>
   </div>
 </template>
 
@@ -21,6 +25,10 @@
       backgroundColor: {
         type: String,
         default: '#21292c'
+      },
+      goBackUrl: {
+        type: String,
+        default: '/'
       }
     },
     data () {
@@ -33,7 +41,7 @@
       this.init()
     },
     methods: {
-      // 设置标题 
+      // 设置标题
       async  init () {
         if (this.title === undefined) {
           if (this.$route.meta !== undefined) {
@@ -54,7 +62,15 @@
 <style scoped lang="less">
   @import '~_style/index.less'; // 颜色、边框、大小请使用assets/style/variable.less 和theme.less中的变量
   .zk-head {
-  	font-size: @font-size-base;
+    font-size: @font-size-base;
+    .btn-back {
+      display: flex;
+      align-items: center;
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
   }
 </style>
 

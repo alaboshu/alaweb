@@ -1,5 +1,5 @@
 <template>
-  <img class="svg-icon" :src="src" @click="onClick" :style="'width:'+size+'px;height:'+size+'px'">
+  <img class="svg-icon" :src="imgUrl" @click="onClick" :style="'width:'+size+'px;height:'+size+'px'">
 </template>
 
 <script>
@@ -20,14 +20,19 @@
     },
     data () {
       return {
-        Iclass: this.class
+        Iclass: this.class,
+        imgUrl: ''
       }
     },
     methods: {
       init () {
         console.info('x-icon', this.src)
+
         if (this.src.indexOf('/') <= 0) {
-          this.src = 'src/assets/svg/' + this.src
+          // this.src = 'src/assets/svg/' + this.src
+          this.imgUrl = 'src/assets/svg/' + this.src + '.svg'
+        } else {
+          this.imgUrl = this.src
         }
       },
       onClick () {
@@ -41,7 +46,7 @@
 
 <style>
   .svg-icon {
-  	display: inline-block;
-  	fill: currentColor;
+    display: inline-block;
+    fill: currentColor;
   }
 </style>
