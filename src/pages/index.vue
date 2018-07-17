@@ -16,7 +16,7 @@
     <zk-swiper></zk-swiper>
     <zk-image></zk-image>
     <zk-product-item></zk-product-item>
-    <zk-footer></zk-footer> -->
+    <zk-foot></zk-foot> -->
     <!-- <zk-input></zk-input>
     <zk-label></zk-label> -->
     <!-- <div @click=" showSuccess ()">

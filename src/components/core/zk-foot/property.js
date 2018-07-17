@@ -1,7 +1,7 @@
 export const editSetting = {
-  'Name': 'zk-footer',
+  'Name': 'zk-foot',
   'Path': null,
-  'Key': 'zk-footer',
+  'Key': 'zk-foot',
   'Editors': [{
     'GroupName': '基本设置',
     'Items': [{

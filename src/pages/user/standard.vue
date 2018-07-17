@@ -1,6 +1,7 @@
 <template>
     <div class="pages-user-standard">
         <zk-head :title="pageInfo.title" v-if="asyncFlag" backText="首页"></zk-head>
+        <zk-foot></zk-foot>
     </div>
 </template>
 

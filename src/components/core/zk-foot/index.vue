@@ -1,37 +1,37 @@
 <template>
-  <div class="zk-footer" :style="styles">
+  <div class="zk-foot" :style="styles">
     <div class="zkweb-footer">
       <div class="zkweb-tabbar">
-        <a href="" class="tabbar__item">
+        <a href="/pages/index" class="tabbar__item">
           <span style="display: inline-block; position: relative;">
-            <img src="" alt="" class="tabbar__icon">
+            <x-icon src="zk-home" class="brand"></x-icon>
           </span>
           <p class="tabbar__label">
-            微信
+            首页
+          </p>
+        </a>
+        <a href="/pages/product/class" class="tabbar__item">
+          <span style="display: inline-block; position: relative;">
+            <x-icon src="zk-classification"></x-icon>
+          </span>
+          <p class="tabbar__label">
+            分类
           </p>
         </a>
         <a href="" class="tabbar__item">
           <span style="display: inline-block; position: relative;">
-            <img src="" alt="" class="tabbar__icon">
+            <x-icon src="zk-cart" class="brand"></x-icon>
           </span>
           <p class="tabbar__label">
-            微信
+            购物车
           </p>
         </a>
         <a href="" class="tabbar__item">
           <span style="display: inline-block; position: relative;">
-            <img src="" alt="" class="tabbar__icon">
+            <x-icon src="zk-me" class="brand"></x-icon>
           </span>
           <p class="tabbar__label">
-            微信
-          </p>
-        </a>
-        <a href="" class="tabbar__item">
-          <span style="display: inline-block; position: relative;">
-            <img src="" alt="" class="tabbar__icon">
-          </span>
-          <p class="tabbar__label">
-            微信
+            我的
           </p>
         </a>
       </div>
@@ -72,7 +72,7 @@
 </script>
 
 <style scoped lang="less">
-  @import '~_style/index.less'; // 颜色、边框、大小请使用assets/style/variable.less 和theme.less中的变量
+  @import '~_style/index.less';
   .zkweb-footer {
   	font-size: 123px;
   	.zkweb-tabbar {

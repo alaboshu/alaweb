@@ -65,7 +65,7 @@
 </script>
 
 <style scoped lang="less">
-  @import '~_style/index.less'; // 颜色、边框、大小请使用assets/style/variable.less 和theme.less中的变量
+  @import '~_style/index.less';
   .zkweb-e-tab-swiper {
   	height: 100vh;
   	padding-bottom: 65px;
