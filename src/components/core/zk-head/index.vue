@@ -2,7 +2,9 @@
   <div class="zk-head" :style="styles">
     <x-header :title="title">
       <div class="btn-back" slot="left">
-        <img src="../../../assets/svg/zkweb-arrows.svg" alt="" @click="$router.push(goBackUrl)"> {{backText}}
+        <div @click="$router.push(goBackUrl)" class="btn-back-left">
+          <x-icon src="zk-arrows-left" size="20"></x-icon>{{backText}}
+        </div>
       </div>
     </x-header>
   </div>
@@ -39,6 +41,7 @@
     },
     mounted () {
       this.init()
+      console.log('goBackUrl', this.goBackUrl)
     },
     methods: {
       // 设置标题
@@ -65,8 +68,10 @@
   .zk-head {
     font-size: @font-size-base;
     .btn-back {
-      display: flex;
-      align-items: center;
+      .btn-back-left {
+        display: flex;
+        align-items: center;
+      }
       img {
         width: 18px;
         height: 18px;

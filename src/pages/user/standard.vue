@@ -1,6 +1,7 @@
 <template>
   <div class="pages-user-standard">
-    <zk-head :title="pageInfo.result.title" v-if="asyncFlag" backText="首页" goBackUrl="/"></zk-head>
+    <zk-head backText="首页" goBackUrl="/baidu.com"></zk-head>
+    <zk-foot></zk-foot>
   </div>
 </template>
 
