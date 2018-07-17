@@ -26,6 +26,7 @@
       init () {
         // console.info('x-icon', this.src)
         if (this.src.indexOf('/') <= 0) {
+          // 不是远程图标，使用本地图标
           this.src = '/static/svg/' + this.src + '.svg'
           // console.info('x-icon', this.src)
         }
