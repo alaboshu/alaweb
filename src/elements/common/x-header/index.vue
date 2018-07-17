@@ -9,7 +9,6 @@
     </div>
   </header>
 </template>
-
 <script>
   export default {
     name: 'x-header',
@@ -18,6 +17,10 @@
       fixed: {
         type: Boolean,
         default: true
+      },
+      backText: {
+        type: String,
+        default: '#21292c'
       },
       backgroundColor: {
         type: String,
@@ -29,39 +32,39 @@
 
 <style scoped lang="less">
   .wv-header {
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    width: 100%;
-    height: 50px;
-    line-height: 1;
-    padding: 0 10px;
-    margin: 0;
-    color: white;
-    position: relative;
-    white-space: nowrap;
-    z-index: 500;
+  	display: flex;
+  	align-items: center;
+  	box-sizing: border-box;
+  	width: 100%;
+  	height: 50px;
+  	line-height: 1;
+  	padding: 0 10px;
+  	margin: 0;
+  	color: white;
+  	position: relative;
+  	white-space: nowrap;
+  	z-index: 500;
 
-    .left {
-      display: block;
-      overflow: hidden;
-      float: left;
-      font-size: 35px;
-      line-height: 35px;
-      font-weight: 100;
-    }
+  	.left {
+  		display: block;
+  		overflow: hidden;
+  		float: left;
+  		font-size: 35px;
+  		line-height: 35px;
+  		font-weight: 100;
+  	}
 
-    .wv-header-title {
-      font-size: 23px;
-      font-weight: 0;
-      text-align: center;
-      flex: 1;
-    }
+  	.wv-header-title {
+  		font-size: 23px;
+  		font-weight: 0;
+  		text-align: center;
+  		flex: 1;
+  	}
 
-    &.is-fixed {
-      position: fixed;
-      left: 0;
-      top: 0;
-    }
+  	&.is-fixed {
+  		position: fixed;
+  		left: 0;
+  		top: 0;
+  	}
   }
 </style>

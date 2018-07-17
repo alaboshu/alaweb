@@ -1,6 +1,6 @@
 <template>
     <div class="pages-user-standard">
-        <zk-head></zk-head>
+        <zk-head :title="pageInfo.result.title" v-if="asyncFlag" backText="首页"></zk-head>
     </div>
 </template>
 
@@ -13,6 +13,7 @@
         data () {
             return {
                 pageInfo: '',
+                asyncFlag: false,
                 title: '标准'
             }
         },
@@ -22,7 +23,8 @@
         methods: {
             async init () {
                 this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
-                console.info('页面信息', this.pageInfo)
+                this.asyncFlag = true
+                console.info('页面信息', this.pageInfo.result.title)
             }
         }
     }
