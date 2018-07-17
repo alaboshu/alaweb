@@ -2,7 +2,7 @@
   <div class="zk-product-class" :style="styles">
     <!-- <x-searchbar></x-searchbar> -->
     <e-tab-swiper></e-tab-swiper>
-    <zk-footer :placeholderHeight=0></zk-footer>
+    <zk-foot :placeholderHeight=0></zk-foot>
   </div>
 </template>
 
@@ -30,7 +30,7 @@
 </script>
 
 <style scoped lang="less">
-  @import '~_style/index.less'; // 颜色、边框、大小请使用assets/style/variable.less 和theme.less中的变量
+  @import '~_style/index.less';
   .zk-product-class {
   	font-size: @font-size-base;
   }

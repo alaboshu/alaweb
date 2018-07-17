@@ -73,7 +73,7 @@
 </script>
 
 <style scoped lang="less">
-  @import '~_style/index.less'; // 颜色、边框、大小请使用assets/style/variable.less 和theme.less中的变量
+  @import '~_style/index.less';
   .zk-product-item {
   	// font-size: @font-size-base;
   	.zkui-product-item__1 {

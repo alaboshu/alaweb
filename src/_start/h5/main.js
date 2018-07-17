@@ -34,7 +34,7 @@ import XGrid from '@/elements/common/x-grid'
 import ZkGrid from '@/components/core/zk-grid/index.vue'
 import ZkProductItem from '@/components/shop/zk-product-item/index.vue'
 import ZkImage from '@/components/core/zk-image/index.vue'
-import ZkFooter from '@/components/core/zk-footer/index.vue'
+import ZkFooter from '@/components/core/zk-foot/index.vue'
 import ZkSwiper from '@/components/core/zk-swiper/index.vue'
 import XInput from '@/elements/common/x-input/index.vue'
 import Xlable from '@/elements/common/x-label'
@@ -68,7 +68,7 @@ Vue.component('x-icon', XIcon)
 Vue.component('zk-grid', ZkGrid)
 Vue.component('zk-image', ZkImage)
 Vue.component('zk-product-item', ZkProductItem)
-Vue.component('zk-footer', ZkFooter)
+Vue.component('zk-foot', ZkFooter)
 Vue.component('x-swipe', XSwipe)
 Vue.component('x-swipe-item', XSwipeItem)
 Vue.component('x-swiper', XSwiper)

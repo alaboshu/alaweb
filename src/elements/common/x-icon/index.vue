@@ -1,5 +1,5 @@
 <template>
-  <img class="svg-icon" :src="imgUrl" @click="onClick" :style="'width:'+size+'px;height:'+size+'px'">
+  <img class="svg-icon" :src="src" @click="onClick" :style="'width:'+size+'px;height:'+size+'px'">
 </template>
 
 <script>
@@ -12,27 +12,23 @@
       link: [String, Object],
       size: {
         type: String,
-        default: '18'
+        default: '24'
       }
     },
-    created () {
+    mounted () {
       this.init()
     },
     data () {
       return {
-        Iclass: this.class,
-        imgUrl: ''
       }
     },
     methods: {
       init () {
-        console.info('x-icon', this.src)
-
+        // console.info('x-icon', this.src)
         if (this.src.indexOf('/') <= 0) {
-          // this.src = 'src/assets/svg/' + this.src
-          this.imgUrl = 'src/assets/svg/' + this.src + '.svg'
-        } else {
-          this.imgUrl = this.src
+          // 不是远程图标，使用本地图标
+          this.src = '/static/svg/' + this.src + '.svg'
+          // console.info('x-icon', this.src)
         }
       },
       onClick () {
@@ -44,7 +40,8 @@
   }
 </script>
 
-<style>
+<style scoped lang="less">
+  @import '~_style/index.less';
   .svg-icon {
     display: inline-block;
     fill: currentColor;

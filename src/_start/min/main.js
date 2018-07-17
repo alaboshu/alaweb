@@ -22,7 +22,7 @@ import XIcon from '@/elements/common/x-icon'
 import ZkImage from '@/components/core/zk-image/index.vue'
 import ZkProductItem from '@/components/shop/zk-product-item/index.vue'
 import ZkSwiper from '@/components/core/zk-swiper/index.vue'
-import ZkFooter from '@/components/core/zk-footer/index.vue'
+import ZkFooter from '@/components/core/zk-foot/index.vue'
 import ZkGrid from '@/components/core/zk-grid/index.vue'
 import ZkProductClass from '@/components/shop/zk-product-class/index.vue'
 import {
@@ -45,7 +45,7 @@ Vue.component('x-cell', XCell)
 Vue.component('x-icon', XIcon)
 Vue.component('zk-image', ZkImage)
 Vue.component('zk-product-item', ZkProductItem)
-Vue.component('zk-footer', ZkFooter)
+Vue.component('zk-foot', ZkFooter)
 Vue.component('zk-swiper', ZkSwiper)
 Vue.component('zk-grid', ZkGrid)
 Vue.component('zk-product-class', ZkProductClass)

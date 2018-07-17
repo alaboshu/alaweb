@@ -43,6 +43,7 @@
     methods: {
       // 设置标题
       async  init () {
+        // console.info('路由标题', this.$route.meta.title)
         if (this.title === undefined) {
           if (this.$route.meta !== undefined) {
             let routerTitle = this.$route.meta.title
@@ -60,7 +61,7 @@
 </script>
 
 <style scoped lang="less">
-  @import '~_style/index.less'; // 颜色、边框、大小请使用assets/style/variable.less 和theme.less中的变量
+  @import '~_style/index.less';
   .zk-head {
     font-size: @font-size-base;
     .btn-back {

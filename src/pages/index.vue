@@ -16,7 +16,7 @@
     <zk-swiper></zk-swiper>
     <zk-image></zk-image>
     <zk-product-item></zk-product-item>
-    <zk-footer></zk-footer> -->
+    <zk-foot></zk-foot> -->
     <!-- <zk-input></zk-input>
     <zk-label></zk-label> -->
     <!-- <div @click=" showSuccess ()">
@@ -58,7 +58,6 @@
     methods: {
       async  init () {
         this.tempComponent = window.top.localStorage.getItem('tempComponent')
-        this.$local.setStore('wewe', 'dddddddd')
         console.info('缓存', this.tempComponent)
       }
     }
@@ -67,6 +66,6 @@
 
 <style scoped lang="less">
   .container {
-    height: 100%;
+  	height: 100%;
   }
 </style>
