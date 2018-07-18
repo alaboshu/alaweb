@@ -7,6 +7,7 @@
         </div>
       </div>
     </x-header>
+    <div class="head-placeholder "></div>
   </div>
 </template>
 
@@ -67,6 +68,9 @@
   @import '~_style/index.less';
   .zk-head {
     font-size: @font-size-base;
+    .head-placeholder {
+      height: 50px;
+    }
     .btn-back {
       .btn-back-left {
         display: flex;
