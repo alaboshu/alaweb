@@ -1,12 +1,10 @@
 <template>
   <div class="zk-image" :style="styles">
-    <div class="page">
-      <ul class="lazyload-list">
-        <li class="lazyload-list-item" v-for="(item,index) in viewModel" :key="index">
-          <img class="lazyload-image" :src="item.Image">
-        </li>
-      </ul>
-    </div>
+    <ul class="lazyload-list">
+      <li class="lazyload-list-item" v-for="(item,index) in viewModel" :key="index">
+        <img class="lazyload-image" :src="item.Image">
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -31,9 +29,8 @@
           dataId: this.dataId,
           defaultId: '5b406cddfef00000a0000004'
         }
-
         this.viewModel = await this.$api.get(THEME_GETVALUE_GET, para)
-        console.info('组件数据image', this.viewModel)
+        // console.info('组件数据image', this.viewModel)
         this.asyncflag = true
       }
     }

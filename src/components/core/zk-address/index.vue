@@ -1,19 +1,24 @@
 <template>
-  <div class="zk-address" :style="styles" component-path="core/zk-address">
-    <div class="">{{viewModel}}</div>
+  <div class="zk-address" :style="styles" component-path="core/zk-address" v-if="asyncflag">
+   {{viewModel}}
   </div>
 </template>
 
 <script>
-  import { THEME_GETLINK_GET } from '@/service/api/apiUrl'
+  import { THEME_GETVALUE_GET } from '@/service/api/apiUrl'
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
-    props: ['widgetDataId'],
+    props: {
+      dataId: {
+        type: String
+      }
+    },
     data () {
       return {
-        viewModel: '', // 数据模型
-        styles: {} // 可视化编辑样式
+        viewModel: '',
+        asyncflag: false,
+        styles: {}
       }
     },
     mounted () {
@@ -21,16 +26,22 @@
     },
     methods: {
       async  init () {
-        this.viewModel = await this.$api.get(THEME_GETLINK_GET, this.widgetDataId)
+        const parameter = {
+          dataId: this.dataId,
+          defaultId: '5b406cddfef00000a0000001'
+        }
+        this.viewModel = await this.$api.get(THEME_GETVALUE_GET, parameter)
+        this.asyncflag = true
+        // console.info('core/zk-address数据',this.viewModel)
       }
     }
   }
 </script>
 
 <style scoped lang="less">
-  @import '~_style/index.less';
+  @import '~_style/index.less'; 
   .zk-address {
-  	font-size: @font-size-base;
+    font-size: @font-size-base;
   }
 </style>
 

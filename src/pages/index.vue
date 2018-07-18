@@ -20,6 +20,7 @@
       </div>
     </x-header> -->
     <zk-grid></zk-grid>
+    <zk-address></zk-address>
     <zk-swiper></zk-swiper>
     <zk-image></zk-image>
     <zk-product-item></zk-product-item>
@@ -101,9 +102,9 @@
 
 <style scoped lang="less">
   .container {
-    height: 100%;
+  	height: 100%;
   }
   .test {
-    font-size: 14px;
+  	font-size: 14px;
   }
 </style>

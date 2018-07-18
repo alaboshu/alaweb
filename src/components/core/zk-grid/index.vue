@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <x-grid :col="columnCount" :dataList="viewModel" v-if="asyncflag">
-    </x-grid>
-  </div>
+  <x-grid :col="columnCount" :dataList="viewModel" v-if="asyncflag"></x-grid>
 </template>
 <script>
   import { THEME_GETVALUE_GET } from '@/service/api/apiUrl'
@@ -10,7 +7,7 @@
     name: 'zk-grid',
     data () {
       return {
-        viewModel: '123',
+        viewModel: '',
         asyncflag: false
       }
     },
