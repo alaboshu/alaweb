@@ -1,5 +1,5 @@
 <template>
-  <div class="pages--elements">
+  <div class="pages--test3">
     <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
     <zk-grid></zk-grid>
     <zk-foot></zk-foot>
@@ -10,7 +10,7 @@
   import { THEME_GETPAGE_GET } from '@/service/api/apiUrl'
   export default {
     config: {
-      'navigationBarTitleText': '元件'
+      'navigationBarTitleText': '测试三'
     },
     data () {
       return {
@@ -34,7 +34,7 @@
 </script>
 
 <style scoped lang="less">
-  .pages--elements {
+  .pages--test3 {
   	width: 100%;
   }
 </style>

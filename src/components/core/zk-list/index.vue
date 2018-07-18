@@ -1,6 +1,6 @@
 <template>
   <div class="zk-list" :style="styles" component-path="core/zk-list" v-if="asyncflag">
-   {{viewModel}}
+    {{viewModel}}
   </div>
 </template>
 
@@ -47,9 +47,9 @@
 </script>
 
 <style scoped lang="less">
-  @import '~_style/index.less'; 
+  @import '~_style/index.less';
   .zk-list {
-    font-size: @font-size-base;
+  	font-size: @font-size-base;
   }
 </style>
 

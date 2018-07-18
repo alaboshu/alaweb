@@ -1,6 +1,6 @@
 <template>
   <div class="zk-cell" :style="styles" component-path="core/zk-cell" v-if="asyncflag">
-   {{viewModel}}
+    <x-cell></x-cell>
   </div>
 </template>
 
@@ -47,9 +47,9 @@
 </script>
 
 <style scoped lang="less">
-  @import '~_style/index.less'; 
+  @import '~_style/index.less';
   .zk-cell {
-    font-size: @font-size-base;
+  	font-size: @font-size-base;
   }
 </style>
 

@@ -4,7 +4,7 @@ module.exports = {
   webpackWarnings: false,
   exports: [
     'config/index.js',
-    'pages/app.vue',
+    'pages/index.vue',
     'pages/mediator/index.vue'
   ],
   alias: {

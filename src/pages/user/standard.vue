@@ -1,6 +1,6 @@
 <template>
   <div class="pages-user-standard">
-    <zk-head backText="首页" goBackUrl="/baidu.com" :title="pageInfo&&pageInfo.title"></zk-head>
+    <zk-head backText="首页" goBackUrl="/baidu.com" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
     <zk-grid></zk-grid>
     <zk-foot></zk-foot>
   </div>
@@ -19,7 +19,7 @@
         title: '标准'
       }
     },
-    beforeMount () {
+    mounted () {
       this.init()
     },
     methods: {
@@ -36,6 +36,6 @@
 
 <style scoped lang="less">
   .pages-user-standard {
-  	height: 100%;
+  	width: 100%;
   }
 </style>

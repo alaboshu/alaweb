@@ -1,43 +1,41 @@
 <template>
-  <div class="page">
-
-    <div class="page__hd">
-      <div class="page__title">Toast</div>
-      <div class="page__desc">弹出式提示，采用小程序原生的toast</div>
-    </div>
-    <div class="page__bd">
-      <div class="weui-btn-area">
-        <button class="weui-btn" type="default" @click="openToast">成功提示</button>
-        <button class="weui-btn" type="default" @click="openLoading">加载中提示</button>
-      </div>
-    </div>
+  <div class="pages--test">
+    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
+    <zk-grid></zk-grid>
+    <zk-foot></zk-foot>
   </div>
 </template>
 
 <script>
+  import { THEME_GETPAGE_GET } from '@/service/api/apiUrl'
   export default {
+    config: {
+      'navigationBarTitleText': '测试'
+    },
     data () {
       return {
+        pageInfo: '',
+        asyncFlag: false
       }
     },
+    mounted () {
+      this.init()
+    },
     methods: {
-      openToast () {
-        wx.showToast({
-          title: '已完成',
-          icon: 'success',
-          duration: 3000
-        })
-      },
-      openLoading () {
-        wx.showToast({
-          title: '数据加载中',
-          icon: 'loading',
-          duration: 3000
-        })
+      async init () {
+        this.$loading = true
+        this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
+        this.$loading = false
+        this.asyncFlag = true
+        // console.info('测试一页面', this.pageInfo)
       }
     }
   }
 </script>
 
-<style>
+<style scoped lang="less">
+  .pages--test {
+  	width: 100%;
+  }
 </style>
+
