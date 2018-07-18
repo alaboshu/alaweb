@@ -1,6 +1,6 @@
 <template>
   <div class="zk-address" :style="styles" component-path="core/zk-address" v-if="asyncflag">
-   {{viewModel}}
+    {{viewModel}}
   </div>
 </template>
 
@@ -12,7 +12,8 @@
     props: {
       dataId: {
         type: String
-      }
+      },
+      pageValues: {}
     },
     data () {
       return {
@@ -26,11 +27,15 @@
     },
     methods: {
       async  init () {
-        const parameter = {
-          dataId: this.dataId,
-          defaultId: '5b406cddfef00000a0000001'
+        if (this.pageValues !== undefined) {
+          this.viewModel = this.pageValues
+        } else {
+          const parameter = {
+            dataId: this.dataId,
+            defaultId: '5b406cddfef00000a0000001'
+          }
+          this.viewModel = await this.$api.get(THEME_GETVALUE_GET, parameter)
         }
-        this.viewModel = await this.$api.get(THEME_GETVALUE_GET, parameter)
         this.asyncflag = true
         // console.info('core/zk-address数据',this.viewModel)
       }
@@ -39,9 +44,9 @@
 </script>
 
 <style scoped lang="less">
-  @import '~_style/index.less'; 
+  @import '~_style/index.less';
   .zk-address {
-    font-size: @font-size-base;
+  	font-size: @font-size-base;
   }
 </style>
 

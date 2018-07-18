@@ -1,5 +1,5 @@
 <template>
-  <div class="zk-tab" :style="styles" component-path="core/zk-tab" v-if="asyncflag">
+  <div class="zk-video" :style="styles" component-path="core/zk-video" v-if="asyncflag">
    {{viewModel}}
   </div>
 </template>
@@ -37,7 +37,7 @@
           this.viewModel = await this.$api.get(THEME_GETVALUE_GET, parameter)
         }
         this.asyncflag = true
-        // console.info('zk-tab数据',this.viewModel)
+        // console.info('zk-video数据',this.viewModel)
       }
     }
   }
@@ -45,7 +45,7 @@
 
 <style scoped lang="less">
   @import '~_style/index.less'; 
-  .zk-tab {
+  .zk-video {
     font-size: @font-size-base;
   }
 </style>
