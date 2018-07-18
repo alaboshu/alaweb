@@ -54,6 +54,7 @@ import ZkGroupbuy from '@/components/shop/zk-groupbuy/index.vue'
 import ZhHead from '@/components/core/zk-head'
 import XCol from '@/elements/common/x-col'
 import XRow from '@/elements/common/x-row'
+import XScroll from '@/elements/h5/x-scroll'
 Vue.use(Toast)
 
 
@@ -95,6 +96,7 @@ Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-head', ZhHead)
 Vue.component('x-col', XCol)
 Vue.component('x-row', XRow)
+Vue.component('x-scroll', XScroll)
 
 Vue.use(global)
 Vue.use(MintUI)
