@@ -2,7 +2,12 @@
   <div class="containera">
     <span>{{ tempComponent}}</span>
     <a href="/pages/user/standard">标准页面</a>
-    <x-group></x-group>
+    <!-- <x-group></x-group>
+    <div @click="ceshi()">被测试的志伟</div> -->
+    <!-- <button @click="openTop()">top</button>
+    <button @click="openCenter()">center</button>
+    <button @click="openBottom()">bottom</button>
+    <button @click="openLoading()">loading</button> -->
     <!-- <zk-swiper></zk-swiper> -->
 
     <!-- <x-header title="志伟">
@@ -35,6 +40,7 @@
 <script>
   // import Toast from ''
   // import Toast from '@/elements/common/x-toast/toast'
+  import { Toast } from 'mint-ui'
   export default {
     config: {
       'navigationBarBackgroundColor': '#ffffff',
@@ -56,9 +62,36 @@
       this.init()
     },
     methods: {
+      ceshi () {
+        Toast({
+          message: '操作成功',
+          iconClass: 'icon icon-success',
+          duration: 5000
+        })
+        // this.messageSuccess('志伟')
+      },
       async  init () {
         // this.tempComponent = window.top.localStorage.getItem('tempComponent')
         // console.info('缓存', this.tempComponent)
+      },
+      openTop () {
+        this.$toast.top('top')
+      },
+      openCenter () {
+        this.$toast.center('center')
+      },
+      openBottom () {
+        this.$toast.bottom('bottom')
+      },
+      openLoading () {
+        this.$loading('loading...')
+        let self = this
+        setTimeout(function () {
+          self.closeLoading()
+        }, 2000)
+      },
+      closeLoading () {
+        this.$loading.close()
       }
     }
   }
@@ -66,6 +99,6 @@
 
 <style scoped lang="less">
   .container {
-  	height: 100%;
+    height: 100%;
   }
 </style>

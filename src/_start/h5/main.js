@@ -8,6 +8,9 @@ import local from '@/service/core/local'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import '@/service/core/rem'
+import Toast from 'vue2-toast'
+import 'vue2-toast/lib/toast.css'
+
 import {
   api
 } from '@/service/api'
@@ -86,6 +89,7 @@ Vue.component('zk-head', ZhHead)
 
 Vue.use(global)
 Vue.use(MintUI)
+Vue.use(Toast)
 
 Vue.config.productionTip = false
 Vue.prototype.$api = api
