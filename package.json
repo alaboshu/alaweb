@@ -21,13 +21,13 @@
   "dependencies": {
     "element-ui": "^2.4.3",
     "flyio": "^0.5.9",
+    "mint-ui": "^2.2.13",
     "mpvue": "^1.0.0",
     "mpvue-router-patch": "^0.2.1",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
     "vue2-toast": "^1.3.2",
     "vuex": "^3.0.0",
-    "weex": "0.0.0",
     "weui": "^1.1.3",
     "weui-wxss": "^1.1.1",
     "xml-loader": "^1.2.1"

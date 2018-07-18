@@ -57,8 +57,8 @@
     },
     methods: {
       async  init () {
-        this.tempComponent = window.top.localStorage.getItem('tempComponent')
-        console.info('缓存', this.tempComponent)
+        // this.tempComponent = window.top.localStorage.getItem('tempComponent')
+        // console.info('缓存', this.tempComponent)
       }
     }
   }

@@ -4,7 +4,7 @@
       <div class="zkweb-tabbar">
         <a href="/pages/index" class="tabbar__item">
           <span style="display: inline-block; position: relative; height:20px">
-            <x-icon src="zk-home" class="brand" size="20"></x-icon>
+            <x-icon src="zk-home" x-class="brand" size="20"></x-icon>
           </span>
           <p class="tabbar__label">
             首页
@@ -20,7 +20,7 @@
         </a>
         <a href="" class="tabbar__item">
           <span style="display: inline-block; position: relative; height:20px">
-            <x-icon src="zk-cart" class="brand" size="20"></x-icon>
+            <x-icon src="zk-cart" x-class="brand" size="20"></x-icon>
           </span>
           <p class="tabbar__label">
             购物车
@@ -28,7 +28,7 @@
         </a>
         <a href="" class="tabbar__item">
           <span style="display: inline-block; position: relative; height:20px">
-            <x-icon src="zk-me" class="brand" size="20"></x-icon>
+            <x-icon src="zk-me" x-class="brand" size="20"></x-icon>
           </span>
           <p class="tabbar__label">
             我的

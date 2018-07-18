@@ -1,14 +1,12 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-
-import Toast from 'vue2-toast'
-import 'vue2-toast/lib/toast.css'
 import App from './App'
 import router from '@/router'
 import global from '@/service/core/global'
 import local from '@/service/core/local'
-
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
 import '@/service/core/rem'
 import {
   api
@@ -87,7 +85,7 @@ Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-head', ZhHead)
 
 Vue.use(global)
-Vue.use(Toast)
+Vue.use(MintUI)
 
 Vue.config.productionTip = false
 Vue.prototype.$api = api
