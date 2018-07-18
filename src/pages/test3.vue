@@ -1,7 +1,8 @@
 <template>
   <div class="pages--test3">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
+    <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
     <zk-grid></zk-grid>
+    <zk-list></zk-list>
     <zk-foot></zk-foot>
   </div>
 </template>
