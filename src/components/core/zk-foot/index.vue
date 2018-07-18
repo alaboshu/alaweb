@@ -37,7 +37,6 @@
           dataId: this.dataId,
           defaultId: '5b406cddfef00000a0000002'
         }
-        console.info(para)
         this.viewModel = await this.$api.get(THEME_GETVALUE_GET, para)
         console.info('组件数据', this.viewModel)
       }
