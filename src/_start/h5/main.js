@@ -49,6 +49,8 @@ import XNumber from '@/elements/common/x-number'
 import XVerifiyPhone from '@/elements/common/x-verifiy-phone'
 import ZkGroupbuy from '@/components/shop/zk-groupbuy/index.vue'
 import ZhHead from '@/components/core/zk-head'
+import XCol from '@/elements/common/x-col'
+import XRow from '@/elements/common/x-row'
 
 
 Vue.component('x-header', XHeader)
@@ -86,6 +88,8 @@ Vue.component('x-number', XNumber)
 Vue.component('x-verifiy-phone', XVerifiyPhone)
 Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-head', ZhHead)
+Vue.component('x-col', XCol)
+Vue.component('x-row', XRow)
 
 Vue.use(global)
 Vue.use(MintUI)

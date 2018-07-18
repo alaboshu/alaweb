@@ -2,6 +2,9 @@
   <div class="containera">
     <span>{{ tempComponent}}</span>
     <a href="/pages/user/standard">标准页面</a>
+    <x-row :gutter="50" xClass="test">
+      <x-col :col="12" xClass="test">123</x-col>
+    </x-row>
     <!-- <x-group></x-group>
     <div @click="ceshi()">被测试的志伟</div> -->
     <!-- <button @click="openTop()">top</button>
@@ -100,5 +103,8 @@
 <style scoped lang="less">
   .container {
     height: 100%;
+  }
+  .test {
+    font-size: 14px;
   }
 </style>
