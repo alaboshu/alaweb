@@ -1,11 +1,11 @@
 <template>
   <div class="zk-swiper" :style="styles">
-    <x-swiper></x-swiper>
+    <x-swiper :dataList="viewModel" v-if="asyncflag"></x-swiper>
   </div>
 </template>
 
 <script>
-  import { THEME_GETLINK_GET } from '@/service/api/apiUrl' 
+  import { THEME_GETVALUE_GET } from '@/service/api/apiUrl'
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
@@ -18,28 +18,23 @@
         interval: 5000,
         duration: 900,
         circular: true,
-        imgUrls: [
-          'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-          'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-          'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-        ]
+        asyncflag: false
       }
     },
+    props: ['dataId'],
     mounted () {
-      this.init()
+      this.ApiGet()
     },
     methods: {
-      async  init () {
+      async  ApiGet () {
         const para = {
-          diyKey: 'grid_index'
+          dataId: this.dataId,
+          defaultId: '5b406cddfef00000a0000004'
         }
-        this.viewModel = await this.$api.get(THEME_GETLINK_GET, para)
-      },
-      swiperChange (e) {
-        console.log('第' + e.mp.detail.current + '张轮播图发生了滑动')
-      },
-      animationfinish (e) {
-        console.log('第' + e.mp.detail.current + '张轮播图滑动结束')
+        console.info(para)
+        this.viewModel = await this.$api.get(THEME_GETVALUE_GET, para)
+        console.info('组件数据', this.viewModel)
+        this.asyncflag = true
       }
     }
   }

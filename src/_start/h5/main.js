@@ -2,8 +2,10 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import Toast from 'vue2-toast'
+// import Toast from 'vue2-toast'
+// import 'vue2-toast/lib/toast.css'
 import 'vue2-toast/lib/toast.css'
+import Toast from 'vue2-toast'
 import router from '@/router'
 import global from '@/service/core/global'
 import local from '@/service/core/local'
@@ -51,6 +53,7 @@ import ZkGroupbuy from '@/components/shop/zk-groupbuy/index.vue'
 import ZhHead from '@/components/core/zk-head'
 import XCol from '@/elements/common/x-col'
 import XRow from '@/elements/common/x-row'
+Vue.use(Toast)
 
 
 Vue.component('x-header', XHeader)
@@ -94,6 +97,7 @@ Vue.component('x-row', XRow)
 Vue.use(global)
 Vue.use(MintUI)
 Vue.use(Toast)
+
 
 Vue.config.productionTip = false
 Vue.prototype.$api = api

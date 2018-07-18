@@ -2,8 +2,8 @@
   <div class="zk-image" :style="styles">
     <div class="page">
       <ul class="lazyload-list">
-        <li class="lazyload-list-item">
-          <img class="lazyload-image" src="http://zqingchun.yiqipingou.com//wwwroot/Uploads/Core/2018/04/e03dfeb126b5406e866bdaf14c81d3f7.png">
+        <li class="lazyload-list-item" v-for="(item,index) in viewModel" :key="index">
+          <img class="lazyload-image" :src="item.Image">
         </li>
       </ul>
     </div>
@@ -11,23 +11,30 @@
 </template>
 
 <script>
-  import { THEME_GETLINK_GET } from '@/service/api/apiUrl'
+  import { THEME_GETVALUE_GET } from '@/service/api/apiUrl'
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
-    props: ['widgetDataId'],
     data () {
       return {
         viewModel: '', // 数据模型
         styles: {} // 可视化编辑样式
       }
     },
+    props: ['dataId'],
     mounted () {
-      this.init()
+      this.ApiGet()
     },
     methods: {
-      async  init () {
-        this.viewModel = await this.$api.get(THEME_GETLINK_GET, this.widgetDataId)
+      async  ApiGet () {
+        const para = {
+          dataId: this.dataId,
+          defaultId: '5b406cddfef00000a0000004'
+        }
+        console.info(para)
+        this.viewModel = await this.$api.get(THEME_GETVALUE_GET, para)
+        console.info('组件数据image', this.viewModel)
+        this.asyncflag = true
       }
     }
   }
@@ -36,31 +43,29 @@
 <style scoped lang="less">
   @import '~_style/index.less';
   .zk-image {
-  	font-size: @font-size-base;
-  	.lazyload-list {
-  		display: block;
-  		overflow: hidden;
-  		width: 100%;
-  		padding: 0;
-  		margin: 0;
-  		text-align: center;
-  		list-style: none;
-
-  		.lazyload-list-item {
-  			width: 100%;
-  			margin: 5px auto;
-  		}
-
-  		.lazyload-image {
-  			display: block;
-  			width: 100%;
-  			height: 180px;
-  			// &[lazy='loading'] {
-  			//   width: 40px;
-  			//   height: 300px;
-  			//   margin: auto;
-  			// }
-  		}
-  	}
+    font-size: @font-size-base;
+    .lazyload-list {
+      display: block;
+      overflow: hidden;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      list-style: none;
+      margin: 5px 0;
+      .lazyload-list-item {
+        width: 100%;
+      }
+      .lazyload-image {
+        display: block;
+        width: 100%;
+        height: 180px;
+        // &[lazy='loading'] {
+        //   width: 40px;
+        //   height: 300px;
+        //   margin: auto;
+        // }
+      }
+    }
   }
 </style>

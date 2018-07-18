@@ -41,6 +41,8 @@
           // 不是远程图标，使用本地图标
           this.imgSrc = '/static/svg/' + this.src + '.svg'
           // console.info('x-icon', this.src)
+        } else {
+          this.imgSrc = this.src
         }
       },
       onClick () {

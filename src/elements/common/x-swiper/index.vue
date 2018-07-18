@@ -1,10 +1,10 @@
 <template>
   <div>
     <x-swipe class="demo-swipe" :height="height" :autoplay="4000">
-      <x-swipe-item style="background-color: #f44336" />
-      <x-swipe-item style="background-color: #ffc107" />
-      <x-swipe-item style="background-color: #f44336;">
-        <div class="tips">只有一张 :)</div>
+      <x-swipe-item v-for="(item,index) in dataList" :key="index">
+        <div class="tips">
+          <img :src="item.Image" alt="">
+        </div>
       </x-swipe-item>
     </x-swipe>
   </div>
@@ -16,7 +16,13 @@
       height: {
         type: Number,
         default: 180
+      },
+      dataList: {
+        type: Array
       }
+    },
+    mounted () {
+      console.log('zk-swiper', this.dataList)
     }
   }
 </script>

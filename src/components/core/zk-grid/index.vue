@@ -1,27 +1,41 @@
 <template>
   <div>
-    <x-grid></x-grid>
+    <x-grid ref="xGrid" :gWidth="itemGuantity" :dataList="viewModel" v-if="asyncflag">
+    </x-grid>
   </div>
 </template>
 <script>
-  import api from '@/service/api/api'
-  import { THEME_GETLINK_GET } from '@/service/api/apiUrl'
+  import { THEME_GETVALUE_GET } from '@/service/api/apiUrl'
   export default {
     name: 'zk-grid',
     data () {
       return {
-        viewModel: ''
+        viewModel: '123',
+        asyncflag: false
       }
     },
-    mounted () {
+    props: {
+      dataId: {
+        type: String
+      },
+      itemGuantity: {
+        type: Number,
+        default: 4
+      }
+    },
+    created () {
       this.ApiGet()
     },
     methods: {
       async  ApiGet () {
-        var para = {
-          diyKey: 'grid_index'
+        const para = {
+          dataId: this.dataId,
+          defaultId: '5b406cddfef00000a0000001'
         }
-        this.viewModel = await api.get(THEME_GETLINK_GET, para)
+        console.info(para)
+        this.viewModel = await this.$api.get(THEME_GETVALUE_GET, para)
+        console.info('组件数据', this.viewModel)
+        this.asyncflag = true
       }
     }
   }
