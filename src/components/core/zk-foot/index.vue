@@ -35,13 +35,13 @@
           </p>
         </a>
       </div>
-      <div class="footer-placeholder " :style="'height:'+placeholderHeight+'px'"></div>
+      <div class="footer-placeholder " :style="'height:46px'"></div>
     </div>
   </div>
 </template>
 
 <script>
-  import { THEME_GETLINK_GET } from '@/service/api/apiUrl'
+  import { THEME_GETVALUE_GET } from '@/service/api/apiUrl'
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
@@ -51,21 +51,19 @@
         styles: {} // 可视化编辑样式
       }
     },
-    props: {
-      placeholderHeight: {
-        type: Number,
-        default: 46
-      }
-    },
+    props: ['dataId'],
     mounted () {
       this.init()
     },
     methods: {
       async  init () {
         const para = {
-          diyKey: 'grid_index'
+          dataId: this.dataId,
+          defaultId: '5b406cddfef00000a0000002'
         }
-        this.viewModel = await this.$api.get(THEME_GETLINK_GET, para)
+        console.info(para)
+        this.viewModel = await this.$api.get(THEME_GETVALUE_GET, para)
+        console.info('组件数据', this.viewModel)
       }
     }
   }

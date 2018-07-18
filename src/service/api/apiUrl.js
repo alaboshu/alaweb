@@ -276,6 +276,7 @@ export const THEME_GETLIST_GET = 'Api/Theme/GetList' // 根据Url获取列表
 export const THEME_ADD_POST = 'Api/Theme/Add' // 增加单条记录
 export const THEME_UPDATE_GET = 'Api/Theme/Update' // 修改单条记录
 export const THEME_DELETE_GET = 'Api/Theme/Delete' // 删除单条记录
+export const THEME_GETVALUE_GET = 'Api/Theme/GetValue' // 链接
 
 //  ThemePageWidget相关的API接口
 export const THEMEPAGEWIDGET_SAVEASYNC_POST = 'Api/ThemePageWidget/SaveAsync' // 保存模块
