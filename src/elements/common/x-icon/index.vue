@@ -1,5 +1,5 @@
 <template>
-  <img :class="clazz" :src="imgSrc" @click="onClick" :style="'width:'+size+'px;height:'+size+'px'">
+  <img :class="xClass" :src="imgSrc" @click="onClick" :style="'width:'+size+'px;height:'+size+'px'">
 </template>
 
 <script>
@@ -7,6 +7,9 @@
     name: 'x-icon',
     props: {
       src: {
+        type: String
+      },
+      xClass: {
         type: String
       },
       link: [String, Object],
@@ -52,7 +55,7 @@
 <style scoped lang="less">
   @import '~_style/index.less';
   .svg-icon {
-  	display: inline-block;
-  	fill: currentColor;
+    display: inline-block;
+    fill: currentColor;
   }
 </style>

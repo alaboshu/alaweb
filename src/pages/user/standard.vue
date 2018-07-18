@@ -47,7 +47,9 @@
     },
     methods: {
       async init () {
+        this.$loading = true
         this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
+        this.$loading = false
         this.asyncFlag = true
         console.info('页面信息', this.pageInfo)
       }
@@ -57,6 +59,6 @@
 
 <style scoped lang="less">
   .pages-user-standard {
-  	height: 100%;
+    height: 100%;
   }
 </style>

@@ -2,6 +2,8 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import Toast from 'vue2-toast'
+import 'vue2-toast/lib/toast.css'
 import router from '@/router'
 import global from '@/service/core/global'
 import local from '@/service/core/local'
@@ -95,6 +97,9 @@ Vue.config.productionTip = false
 Vue.prototype.$api = api
 Vue.prototype.$client = 'WapH5'
 Vue.prototype.$local = local
+Vue.prototype.$toast = local
+Vue.prototype.$message = local
+Vue.prototype.$loading = true
 
 /* eslint-disable no-new */
 new Vue({
