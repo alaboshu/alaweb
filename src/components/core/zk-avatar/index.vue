@@ -1,18 +1,28 @@
 <template>
-  <div class="zk-avatar" :style="styles">
-    <div class="">{{viewModel}}</div>
+  <div class="zk-avatar" :style="styles" component-path="core/zk-avatar" v-if="asyncflag">
+   {{viewModel}}
   </div>
 </template>
 
 <script>
-  import { THEME_GETLINK_GET } from '@/service/api/apiUrl' 
+  import { THEME_GETVALUE_GET } from '@/service/api/apiUrl'
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
+    props: {
+      dataId: {
+        type: String
+      },
+      widgetId: {
+        type: String
+      },
+      pageValues: {}
+    },
     data () {
       return {
-        viewModel: '', // 数据模型
-        styles: {} // 可视化编辑样式
+        viewModel: '',
+        asyncflag: false,
+        styles: {}
       }
     },
     mounted () {
@@ -20,17 +30,24 @@
     },
     methods: {
       async  init () {
-        const para = {
-          diyKey: 'grid_index'
+        if (this.pageValues !== undefined) {
+          this.viewModel = this.pageValues
+        } else {
+          const parameter = {
+            dataId: this.dataId,
+            defaultId: '5b406cddfef00000a0000001'
+          }
+          this.viewModel = await this.$api.get(THEME_GETVALUE_GET, parameter)
         }
-        this.viewModel = await this.$api.get(THEME_GETLINK_GET, para)
+        this.asyncflag = true
+        // console.info('zk-avatar数据',this.viewModel)
       }
     }
   }
 </script>
 
 <style scoped lang="less">
-  @import '~_style/index.less';
+  @import '~_style/index.less'; 
   .zk-avatar {
     font-size: @font-size-base;
   }

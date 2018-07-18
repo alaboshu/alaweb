@@ -13,6 +13,9 @@
       dataId: {
         type: String
       },
+      widgetId: {
+        type: String
+      },
       pageValues: {}
     },
     data () {

@@ -1,6 +1,6 @@
 <template>
   <div class="zk-address" :style="styles" component-path="core/zk-address" v-if="asyncflag">
-    {{viewModel}}
+   {{viewModel}}
   </div>
 </template>
 
@@ -11,6 +11,9 @@
     name: editSetting.key,
     props: {
       dataId: {
+        type: String
+      },
+      widgetId: {
         type: String
       },
       pageValues: {}
@@ -37,16 +40,16 @@
           this.viewModel = await this.$api.get(THEME_GETVALUE_GET, parameter)
         }
         this.asyncflag = true
-        // console.info('core/zk-address数据',this.viewModel)
+        // console.info('zk-address数据',this.viewModel)
       }
     }
   }
 </script>
 
 <style scoped lang="less">
-  @import '~_style/index.less';
+  @import '~_style/index.less'; 
   .zk-address {
-  	font-size: @font-size-base;
+    font-size: @font-size-base;
   }
 </style>
 
