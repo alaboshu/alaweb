@@ -1,30 +1,7 @@
 <template>
   <div class="pages-user-standard">
-    <zk-head backText="首页" goBackUrl="/baidu.com"></zk-head>
-    <div class="container">
-      <div class="doc-title zan-hairline--bottom zan-hairline--bottom">BADGE</div>
-      <div class="demo">
-        <div class="demo__item">
-          <div class="demo__icon zan-badge">
-          </div>
-        </div>
-        <div class="demo__item">
-          <div class="demo__icon zan-badge">
-            <div class="zan-badge__count">9</div>
-          </div>
-        </div>
-        <div class="demo__item">
-          <div class="demo__icon zan-badge">
-            <div class="zan-badge__count">19</div>
-          </div>
-        </div>
-        <div class="demo__item">
-          <div class="demo__icon zan-badge">
-            <div class="zan-badge__count">99+</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <zk-head backText="首页" goBackUrl="/baidu.com" :title="pageInfo&&pageInfo.title"></zk-head>
+    <zk-grid></zk-grid>
     <zk-foot></zk-foot>
   </div>
 </template>
@@ -59,6 +36,6 @@
 
 <style scoped lang="less">
   .pages-user-standard {
-    height: 100%;
+  	height: 100%;
   }
 </style>
