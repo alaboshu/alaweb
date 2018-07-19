@@ -25,7 +25,7 @@
     methods: {
       async init () {
         this.widget = {
-          apiUrl: 'Api/Reward/RewardList'
+          apiUrl: 'Api/User/Recommend'
         }
         this.asyncFlag = true
       }
@@ -35,7 +35,7 @@
 
 <style scoped lang="less">
   .pages--test3 {
-    width: 100%;
+  	width: 100%;
   }
 </style>
 
