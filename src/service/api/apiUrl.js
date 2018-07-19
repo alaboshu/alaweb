@@ -35,6 +35,7 @@ export const USER_INFO_GET = '/api/user/info' // 会员详细信息、包括用�
 export const USER_ADDACTION_POST = '/api/user/addaction' // 添加操作纪律，比如添加购物车 添加收藏夹等等
 export const USER_GETACTION_GET = '/api/user/getaction' // 获取操作记录 添加收藏夹等等
 export const USER_REMOVEACTION_DELETE = '/api/user/removeaction' // 移除操作记录 比如删除购物车等
+export const USER_RECOMMEND_GET = '/api/user/recommend' // 推荐会员
 
 //  UserDetail相关的API接口
 export const USERDETAIL_QRCODE_GET = '/api/userdetail/qrcode' // 二维码
@@ -327,4 +328,14 @@ export const ACTIVITY_GETLIST_GET = '/api/activity/getlist' // 根据Url获取�
 export const ACTIVITY_ADD_POST = '/api/activity/add' // 增加单条记录
 export const ACTIVITY_UPDATE_GET = '/api/activity/update' // 修改单条记录
 export const ACTIVITY_DELETE_GET = '/api/activity/delete' // 删除单条记录
+
+//  Reward相关的API接口
+export const REWARD_REWARDLIST_GET = '/api/reward/rewardlist' // 分润数据
+export const REWARD_LIST_GET = '/api/reward/list' // 列出指定的参数
+export const REWARD_SHOW_GET = '/api/reward/show' // 列出指定的参数
+export const REWARD_GET_GET = '/api/reward/get' // 根据Url获取单条记录
+export const REWARD_GETLIST_GET = '/api/reward/getlist' // 根据Url获取列表
+export const REWARD_ADD_POST = '/api/reward/add' // 增加单条记录
+export const REWARD_UPDATE_GET = '/api/reward/update' // 修改单条记录
+export const REWARD_DELETE_GET = '/api/reward/delete' // 删除单条记录
 
