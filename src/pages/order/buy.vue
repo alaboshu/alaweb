@@ -1,7 +1,11 @@
 <template>
   <div class="pages-order-buy">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <zk-grid></zk-grid>
+    <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
+    <zk-buy-address></zk-buy-address>
+    <!-- <x-divider></x-divider> -->
+    <x-group>
+      <x-cell title="志伟" class="border-bottom"></x-cell>
+    </x-group>
     <zk-foot></zk-foot>
   </div>
 </template>
@@ -34,8 +38,15 @@
 </script>
 
 <style scoped lang="less">
+  @import '~_style/index.less';
   .pages-order-buy {
-  	width: 100%;
+    width: 100%;
+  }
+  .flex_one {
+    flex: 1;
+  }
+  .flex {
+    display: flex;
   }
 </style>
 

@@ -51,6 +51,8 @@ import XNumber from '@/elements/common/x-number'
 import XVerifiyPhone from '@/elements/common/x-verifiy-phone'
 import ZkGroupbuy from '@/components/shop/zk-groupbuy/index.vue'
 import ZhHead from '@/components/core/zk-head'
+import ZkKeyword from '@/components/core/zk-keyword'
+import ZkBuyAddress from '@/components/core/zk-buy-address'
 import XCol from '@/elements/common/x-col'
 import XRow from '@/elements/common/x-row'
 import XScroll from '@/elements/h5/x-scroll'
@@ -97,6 +99,8 @@ Vue.component('zk-head', ZhHead)
 Vue.component('x-col', XCol)
 Vue.component('x-row', XRow)
 Vue.component('x-scroll', XScroll)
+Vue.component('zk-keyword', ZkKeyword)
+Vue.component('zk-buy-address', ZkBuyAddress)
 
 Vue.use(global)
 Vue.use(MintUI)

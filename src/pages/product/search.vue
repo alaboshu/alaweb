@@ -1,7 +1,8 @@
 <template>
   <div class="pages-product-search">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <zk-grid></zk-grid>
+    <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
+    <x-searchbar v-model="searchValue" @on-submit="submit()"></x-searchbar>
+    <zk-keyword></zk-keyword>
     <zk-foot></zk-foot>
   </div>
 </template>
@@ -15,7 +16,8 @@
     data () {
       return {
         pageInfo: '',
-        asyncFlag: false
+        asyncFlag: false,
+        searchValue: ''
       }
     },
     mounted () {
@@ -28,6 +30,9 @@
         this.$loading = false
         this.asyncFlag = true
         // console.info('测试一页面', this.pageInfo)
+      },
+      submit () {
+        console.log('提交')
       }
     }
   }
@@ -35,7 +40,7 @@
 
 <style scoped lang="less">
   .pages-product-search {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 

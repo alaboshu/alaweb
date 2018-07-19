@@ -1,7 +1,7 @@
 <template>
   <div class="pages-product-class">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <zk-grid></zk-grid>
+    <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
+    <zk-product-class></zk-product-class>
     <zk-foot></zk-foot>
   </div>
 </template>
@@ -35,7 +35,7 @@
 
 <style scoped lang="less">
   .pages-product-class {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 
