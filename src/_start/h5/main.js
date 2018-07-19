@@ -2,16 +2,14 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-// import Toast from 'vue2-toast'
-// import 'vue2-toast/lib/toast.css'
-import 'vue2-toast/lib/toast.css'
-import Toast from 'vue2-toast'
 import router from '@/router'
 import global from '@/service/core/global'
 import local from '@/service/core/local'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import '@/service/core/rem'
+import 'vue2-toast/lib/toast.css'
+import Toast from 'vue2-toast'
 
 import {
   api

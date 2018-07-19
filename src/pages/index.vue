@@ -1,16 +1,17 @@
 <template>
   <div class="containera">
     <!-- <span>{{ tempComponent}}</span>
-    <a href="/pages/user/standard">标准页面</a>
+    <a href="/pages/user/standard">标准页面</a>-->
     <x-row :gutter="50" xClass="test">
       <x-col :col="12" xClass="test">123</x-col>
-    </x-row> -->
-    <!-- <x-group></x-group>
-    <div @click="ceshi()">被测试的志伟</div> -->
-    <!-- <button @click="openTop()">top</button>
+      <x-col :col="12" xClass="test">123</x-col>
+    </x-row>
+    <!-- <x-group></x-group> -->
+    <div @click="ceshi()">被测试的志伟</div>
+    <button @click="openTop()">top</button>
     <button @click="openCenter()">center</button>
     <button @click="openBottom()">bottom</button>
-    <button @click="openLoading()">loading</button> -->
+    <button @click="openLoading()">loading</button>
     <!-- <zk-swiper></zk-swiper> -->
     <!-- <x-header title="志伟">
       <div class="btn-back" slot="left">
@@ -43,7 +44,7 @@
 <script>
   // import Toast from ''
   // import Toast from '@/elements/common/x-toast/toast'
-  import { Toast } from 'mint-ui'
+  // import { Toast } from 'mint-ui'
   export default {
     config: {
       'navigationBarBackgroundColor': '#ffffff',
@@ -66,11 +67,11 @@
     },
     methods: {
       ceshi () {
-        Toast({
-          message: '操作成功',
-          iconClass: 'icon icon-success',
-          duration: 5000
-        })
+        // Toast({
+        //   message: '操作成功',
+        //   iconClass: 'icon icon-success',
+        //   duration: 5000
+        // })
         // this.messageSuccess('志伟')
       },
       async  init () {
@@ -102,9 +103,9 @@
 
 <style scoped lang="less">
   .container {
-  	height: 100%;
+    height: 100%;
   }
   .test {
-  	font-size: 14px;
+    font-size: 14px;
   }
 </style>

@@ -32,7 +32,7 @@
           defaultId: '5b406cddfef00000a0000004'
         }
         this.viewModel = await this.$api.get(THEME_GETVALUE_GET, para)
-        // console.info('组件数据', this.viewModel)
+        console.info('组件数据swiper', this.viewModel)
         this.asyncflag = true
       }
     }
@@ -42,21 +42,21 @@
 <style scoped lang="less">
   @import '~_style/index.less';
   .zk-swiper {
-  	font-size: @font-size-base;
-  	.tips {
-  		display: flex;
-  		height: 100%;
-  		color: white;
-  		justify-content: center;
-  		align-items: center;
-  	}
-  	.tipsImg {
-  		width: 100%;
-  		height: 100%;
-  	}
+    font-size: @font-size-base;
+    .tips {
+      display: flex;
+      height: 100%;
+      color: white;
+      justify-content: center;
+      align-items: center;
+    }
+    .tipsImg {
+      width: 100%;
+      height: 100%;
+    }
   }
   .slide-image {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 

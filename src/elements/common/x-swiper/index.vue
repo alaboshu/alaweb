@@ -22,7 +22,6 @@
       }
     },
     mounted () {
-      console.log('zk-swiper', this.dataList)
     }
   }
 </script>
