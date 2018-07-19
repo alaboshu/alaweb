@@ -33,6 +33,7 @@ import XSwipeItem from '@/elements/common/x-swipe-item'
 import XSwiper from '@/elements/common/x-swiper'
 import XGrid from '@/elements/common/x-grid'
 import ZkGrid from '@/components/core/zk-grid/index.vue'
+import ZkPreview from '@/components/core/zk-preview/index.vue'
 import ZkProductItem from '@/components/shop/zk-product-item/index.vue'
 import ZkImage from '@/components/core/zk-image/index.vue'
 import ZkFooter from '@/components/core/zk-foot/index.vue'
@@ -97,6 +98,7 @@ Vue.component('zk-head', ZhHead)
 Vue.component('x-col', XCol)
 Vue.component('x-row', XRow)
 Vue.component('x-scroll', XScroll)
+Vue.component('zk-preview', ZkPreview)
 
 Vue.use(global)
 Vue.use(MintUI)

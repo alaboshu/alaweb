@@ -7,7 +7,6 @@
 </template>
 
 <script>
-    import { THEME_GETPAGE_GET } from '@/service/api/apiUrl'
     export default {
         config: {
             'navigationBarTitleText': '会员详情'
@@ -23,12 +22,11 @@
         },
         methods: {
             async init () {
-                this.$loading = true
                 console.info('路由参数', this.$route.query.id)
-                this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
-                this.$loading = false
+                this.widget = {
+                    apiUrl: 'Api/User/Recommend'
+                }
                 this.asyncFlag = true
-                // console.info('测试一页面', this.pageInfo)
             }
         }
     }
