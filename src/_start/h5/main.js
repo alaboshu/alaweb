@@ -37,6 +37,7 @@ import ZkProductItem from '@/components/shop/zk-product-item/index.vue'
 import ZkImage from '@/components/core/zk-image/index.vue'
 import ZkFooter from '@/components/core/zk-foot/index.vue'
 import ZkSwiper from '@/components/core/zk-swiper/index.vue'
+import ZkCell from '@/components/core/zk-cell/index.vue'
 import ZkList from '@/components/core/zk-list/index.vue'
 import XInput from '@/elements/common/x-input/index.vue'
 import Xlable from '@/elements/common/x-label'
@@ -79,6 +80,7 @@ Vue.component('x-swipe', XSwipe)
 Vue.component('x-swipe-item', XSwipeItem)
 Vue.component('x-swiper', XSwiper)
 Vue.component('zk-swiper', ZkSwiper)
+Vue.component('zk-cell', ZkCell)
 Vue.component('zk-list', ZkList)
 Vue.component('x-input', XInput)
 Vue.component('zk-label', Xlable)

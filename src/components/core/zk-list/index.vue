@@ -84,40 +84,10 @@
     .mescroll-upwarp {
       display: none !important;
     }
-    .ZKList-Items {
-      .weui-media-box {
-        padding: 0.5rem;
-      }
-      .weui-media-box__hd {
-        margin: 10px auto;
-        .brand {
-          // width: 50 * @rem;
-          // height: 50 * @rem;
-          padding-top: 0.1rem;
-          border-radius: 50%;
-        }
-      }
-
+    .weui-media-box__bd {
+      padding-left: 0.1rem;
       .weui-media-box__title {
-        // color: @black;
-      }
-      .weui-media-box__bd {
-        padding-left: 0.1rem;
-      }
-      .weui-media-box__desc {
-        padding-top: 0.3rem;
-        font-size: @h6-font-size;
-        word-break: break-all;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        overflow: hidden;
-      }
-      .weui-media-box__title__extra {
-        font-size: @h5-font-size;
-        font-weight: bold;
-        float: right;
+        color: @brand;
       }
     }
   }
