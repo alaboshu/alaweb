@@ -1,22 +1,16 @@
 <template>
   <div class="zk-preview" :style="styles" component-path="core/zk-preview" v-if="asyncflag">
-   {{viewModel}}
+    <x-preview :elementData="viewModel"></x-preview>
   </div>
 </template>
 
 <script>
-  import { THEME_GETVALUE_GET } from '@/service/api/apiUrl'
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
     props: {
-      dataId: {
-        type: String
-      },
-      widgetId: {
-        type: String
-      },
-      pageValues: {}
+      widget: {},
+      previewId: {}
     },
     data () {
       return {
@@ -30,26 +24,33 @@
     },
     methods: {
       async  init () {
-        if (this.pageValues !== undefined) {
-          this.viewModel = this.pageValues
-        } else {
-          const parameter = {
-            dataId: this.dataId,
-            defaultId: '5b406cddfef00000a0000001'
+        if (this.widget !== undefined) {
+          if (this.widget.value !== undefined) {
+            this.viewModel = this.widget.value
+          } else {
+            const parameter = {
+              dataId: this.widget.dataId,
+              loginUserId: 0,
+              id: this.previewId
+            }
+            console.info('previewId参数', parameter)
+            var result = await this.$api.get(this.widget.apiUrl, parameter)
+            this.viewModel = result
           }
-          this.viewModel = await this.$api.get(THEME_GETVALUE_GET, parameter)
+        } else {
+          console.error('错误:请传入priview数据!!')
         }
         this.asyncflag = true
-        // console.info('zk-preview数据',this.viewModel)
+        console.info('zk-priview数据', this.viewModel)
       }
     }
   }
 </script>
 
 <style scoped lang="less">
-  @import '~_style/index.less'; 
+  @import '~_style/index.less';
   .zk-preview {
-    font-size: @font-size-base;
+  	font-size: @font-size-base;
   }
 </style>
 

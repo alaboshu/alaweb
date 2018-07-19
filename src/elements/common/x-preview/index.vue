@@ -1,45 +1,29 @@
 <template>
   <div class="weui-form-preview">
-    <div class="weui-form-preview__hd">
-      <label class="weui-form-preview__label" v-html="title"/>
-      <em class="weui-form-preview__value" v-html="value"/>
+    <div class="weui-form-preview__hd" v-for="(item, index) in elementData" :key="index" v-if="index==0">
+      <label class="weui-form-preview__label">{{ item.name }}</label>
+      <em class="weui-form-preview__value">{{ item.value }}</em>
     </div>
     <div class="weui-form-preview__bd">
-      <div class="weui-form-preview__item" v-for="(item, key, index) in dataItems" :key="key">
-        <label class="weui-form-preview__label">{{ item.label }}</label>
+      <div class="weui-form-preview__item" v-for="(item, index) in elementData" :key="index" v-if="index>0">
+        <label class="weui-form-preview__label">{{ item.name }}</label>
         <span class="weui-form-preview__value">{{ item.value }}</span>
       </div>
     </div>
-    <!-- <div class="weui-form-preview__ft">
-      <div
-        class="weui-form-preview__btn"
-        v-for="(button, index) in buttons"
-        :key="index"
-        :class="button.type === 'primary' ? 'weui-form-preview__btn_primary' : 'weui-form-preview__btn_default'"
-        v-text="button.text"
-        @click="button.action"
-      />
-    </div>-->
-  </div> 
+  </div>
 </template>
 
 <script>
-export default {
-  name: 'x-form-preview',
-
-  props: {
-    title: String,
-    value: String,
-    dataItems: {
-      type: Array,
-      default: () => []
-    },
-    buttons: {
-      type: Array,
-      default: () => []
+  export default {
+    name: 'x-preview',
+    props: {
+      elementData: {},
+      buttons: {
+        type: Array,
+        default: () => []
+      }
     }
   }
-}
 </script>
 
 <style scoped lang="less">

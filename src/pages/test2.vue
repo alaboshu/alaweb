@@ -1,13 +1,12 @@
 <template>
   <div class="pages--test2">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <zk-grid></zk-grid>
+    <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
+    <zk-preview v-if="asyncFlag" :widget="widget" :previewId="previewId"></zk-preview>
     <zk-foot></zk-foot>
   </div>
 </template>
 
 <script>
-  import { THEME_GETPAGE_GET } from '@/service/api/apiUrl'
   export default {
     config: {
       'navigationBarTitleText': '测试二'
@@ -15,6 +14,8 @@
     data () {
       return {
         pageInfo: '',
+        widget: '',
+        previewId: '',
         asyncFlag: false
       }
     },
@@ -23,11 +24,11 @@
     },
     methods: {
       async init () {
-        this.$loading = true
-        this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
-        this.$loading = false
+        this.widget = {
+          apiUrl: 'Api/User/Preview'
+        }
+        this.previewId = 42
         this.asyncFlag = true
-        // console.info('测试一页面', this.pageInfo)
       }
     }
   }

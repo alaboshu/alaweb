@@ -36,6 +36,7 @@ export const USER_ADDACTION_POST = '/api/user/addaction' // 添加操作纪律�
 export const USER_GETACTION_GET = '/api/user/getaction' // 获取操作记录 添加收藏夹等等
 export const USER_REMOVEACTION_DELETE = '/api/user/removeaction' // 移除操作记录 比如删除购物车等
 export const USER_RECOMMEND_GET = '/api/user/recommend' // 推荐会员
+export const USER_PREVIEW_GET = '/api/user/preview' // 获取推荐会员详情
 
 //  UserDetail相关的API接口
 export const USERDETAIL_QRCODE_GET = '/api/userdetail/qrcode' // 二维码
