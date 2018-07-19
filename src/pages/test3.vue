@@ -1,14 +1,12 @@
 <template>
   <div class="pages--test3">
     <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <zk-grid></zk-grid>
-    <zk-list></zk-list>
+    <zk-list v-if="asyncFlag" :widget="widget">></zk-list>
     <zk-foot></zk-foot>
   </div>
 </template>
 
 <script>
-  import { THEME_GETPAGE_GET } from '@/service/api/apiUrl'
   export default {
     config: {
       'navigationBarTitleText': '测试三'
@@ -16,6 +14,7 @@
     data () {
       return {
         pageInfo: '',
+        widget: '',
         asyncFlag: false
       }
     },
@@ -24,11 +23,10 @@
     },
     methods: {
       async init () {
-        this.$loading = true
-        this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
-        this.$loading = false
+        this.widget = {
+          apiUrl: 'Api/Reward/RewardList'
+        }
         this.asyncFlag = true
-        // console.info('测试一页面', this.pageInfo)
       }
     }
   }
@@ -36,7 +34,7 @@
 
 <style scoped lang="less">
   .pages--test3 {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 
