@@ -1,12 +1,12 @@
 <template>
-  <div class="h5-x-scroll  weui-form-preview" element-path="h5/x-scroll">
+  <div class="[[clientType]]-x-toast  weui-form-preview" element-path="common/x-toast">
   {{elementData}}
   </div>
 </template>
 
 <script>
   export default {
-    name: 'x-scroll',
+    name: 'x-toast',
     props: {
       elementData: {}
     },
@@ -25,7 +25,7 @@
 </script>
 <style scoped lang="less">
   @import '~_style/index.less';
-  .h5-x-scroll {
+  .[[clientType]]-x-toast {
   	font-size: @font-size-base;
   }
 </style>
