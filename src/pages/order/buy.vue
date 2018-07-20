@@ -1,6 +1,6 @@
 <template>
   <div class="pages-order-buy">
-    <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
+    <zk-head backText="首页" :title="pageInfo.title"></zk-head>
     <zk-buy-address></zk-buy-address>
     <!-- <x-divider></x-divider> -->
     <x-group>
@@ -34,8 +34,29 @@
           <li></li>
         </ul>
       </div>
-      <x-cell title="志伟" @click="ceshi()"></x-cell>
+      <x-cell title="请选择快递方式" @click="ceshi()" isLink></x-cell>
+      <x-textarea placeholder="给卖家留言" :rows="1" :show-counter="false" v-model="leaveMessage" />
+      <div class="order-buy-account ">
+        <div class="account-content">
+          共
+          <span class="brand">1</span>件-运费
+          <span class="brand">￥0</span>-小计
+          <span class="brand">￥330</span>
+        </div>
+      </div>
     </x-group>
+    <div class="order-buy-bottom">
+      <div class="buy-bottom_left">
+        总计：
+        <span class="brand">
+          ￥317
+        </span>
+        共1件商品
+      </div>
+      <div class="buy-bottom_right">
+        <button>提交订单</button>
+      </div>
+    </div>
     <div class="order-buy_modal" @click="popupVisible1=false" v-if="popupVisible1===true">
 
     </div>
@@ -57,6 +78,7 @@
         pageInfo: '',
         asyncFlag: false,
         popupVisible1: false,
+        leaveMessage: '',
         value: 'hello',
         options: [{
           label: '对象值',
@@ -83,7 +105,7 @@
     },
     methods: {
       ceshi () {
-        this.popupVisible1 = !this.popupVisible1
+        this.popupVisible1 = true
       },
       async init () {
         this.$loading = true
@@ -109,6 +131,9 @@
   }
   .flex {
     display: flex;
+  }
+  .brand {
+    color: @brand;
   }
   .border-bottom:after {
     content: ' ';
@@ -188,6 +213,75 @@
     position: relative;
     z-index: 999;
     background: #fff;
+  }
+  .order-buy-account {
+    height: 40px;
+    position: relative;
+    .account-content {
+      height: 100%;
+      line-height: 40px;
+      text-align: right;
+      padding-right: 5px;
+      color: #909399;
+      .brand {
+        color: @brand;
+      }
+    }
+  }
+  .order-buy-account::before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #e5e5e5;
+    color: #e5e5e5;
+    transform-origin: 0 0;
+    transform: scaleY(0.5);
+  }
+  .order-buy-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background: #f7f7fa;
+    .buy-bottom_left {
+      flex: 1;
+      height: 100%;
+      line-height: 50px;
+      color: @metal;
+      font-weight: bold;
+      font-size: @h5-font-size;
+      padding-left: 10px;
+      .brand {
+        font-size: @h4-font-size;
+      }
+    }
+    .buy-bottom_right {
+      width: 110px;
+      height: 100%;
+      button {
+        width: 100%;
+        height: 100%;
+        color: @light;
+        background: @brand;
+      }
+    }
+  }
+  .order-buy-bottom::before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 0.08333333rem;
+    border-top: 1px solid #c0bfc4;
+    color: #c0bfc4;
+    transform-origin: 0 0;
+    transform: scaleY(0.5);
   }
 </style>
 
