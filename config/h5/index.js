@@ -3,7 +3,7 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
-
+console.info('process.env.MODE', process.env.MODE)
 module.exports = {
   dev: {
 
