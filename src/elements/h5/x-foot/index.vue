@@ -1,5 +1,5 @@
 <template>
-  <div class="zk-foot" :style="styles">
+  <div class="zk-foot">
     <div class="zkweb-footer">
       <div class="zkweb-tabbar">
         <a :href="item.Url" class="tabbar__item" v-for="(item,index) in viewModel" :key="index">
