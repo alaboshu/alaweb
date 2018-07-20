@@ -1,6 +1,6 @@
 <template>
   <div class="zk-swiper" :style="styles">
-    <x-swiper :dataList="viewModel" v-if="asyncflag"></x-swiper>
+    <x-swiper :elementData="viewModel" v-if="asyncflag"></x-swiper>
   </div>
 </template>
 

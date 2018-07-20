@@ -1,7 +1,7 @@
 <template>
   <div>
     <x-swipe class="demo-swipe" :height="height" :autoplay="4000">
-      <x-swipe-item v-for="(item,index) in dataList" :key="index">
+      <x-swipe-item v-for="(item,index) in elementData" :key="index">
         <div class="tips">
           <img :src="item.Image" alt="">
         </div>
@@ -17,7 +17,7 @@
         type: Number,
         default: 180
       },
-      dataList: {
+      elementData: {
         type: Array
       }
     },

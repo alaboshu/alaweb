@@ -1,5 +1,5 @@
 <template>
-  <x-grid :col="columnCount" :dataList="viewModel" v-if="asyncflag"></x-grid>
+  <x-grid :col="columnCount" :elementData="viewModel" v-if="asyncflag"></x-grid>
 </template>
 <script>
   import { THEME_GETVALUE_GET } from '@/service/api/apiUrl'
