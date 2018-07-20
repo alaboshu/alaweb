@@ -1,7 +1,5 @@
 <template>
-  <div class="container">
-    PC 版
-  </div>
+  <x-foot></x-foot>
 </template>
 
 <script>
