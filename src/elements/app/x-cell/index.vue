@@ -1,12 +1,12 @@
 <template>
-  <div class="[[clientType]]-x-toast  weui-form-preview" element-path="common/x-toast">
+  <div class="app-x-cell  weui-form-preview" element-path="app/x-cell">
   {{elementData}}
   </div>
 </template>
 
 <script>
   export default {
-    name: 'x-toast',
+    name: 'x-cell',
     props: {
       elementData: {}
     },
@@ -25,7 +25,7 @@
 </script>
 <style scoped lang="less">
   @import '~_style/index.less';
-  .[[clientType]]-x-toast {
+  .app-x-cell {
   	font-size: @font-size-base;
   }
 </style>

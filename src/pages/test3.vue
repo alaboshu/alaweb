@@ -1,10 +1,10 @@
 <template>
   <div class="pages--test3">
     <zk-head backText="首页" title="首页" v-if="asyncFlag"></zk-head>
-    <zk-buy-address></zk-buy-address>
-    <!-- <zk-cell></zk-cell> -->
-    <!-- <x-cell value="qwe" title="123" icon="http://zqingchun.yiqipingou.com//wwwroot/static/images/avator/man_64.png" isLink></x-cell> -->
-    <!-- <zk-list v-if="asyncFlag" :widget="widget"></zk-list> -->
+    <!-- <zk-buy-address></zk-buy-address> -->
+    <zk-grid></zk-grid>
+    <zk-cell></zk-cell>
+    <zk-list v-if="asyncFlag" :widget="widget"></zk-list>
     <zk-foot></zk-foot>
   </div>
 </template>
@@ -37,7 +37,7 @@
 
 <style scoped lang="less">
   .pages--test3 {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 

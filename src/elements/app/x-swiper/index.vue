@@ -1,12 +1,12 @@
 <template>
-  <div class="h5-x-scroll  weui-form-preview" element-path="h5/x-scroll">
+  <div class="app-x-swiper  weui-form-preview" element-path="app/x-swiper">
   {{elementData}}
   </div>
 </template>
 
 <script>
   export default {
-    name: 'x-scroll',
+    name: 'x-swiper',
     props: {
       elementData: {}
     },
@@ -25,7 +25,7 @@
 </script>
 <style scoped lang="less">
   @import '~_style/index.less';
-  .h5-x-scroll {
+  .app-x-swiper {
   	font-size: @font-size-base;
   }
 </style>
