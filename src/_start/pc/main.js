@@ -1,27 +1,171 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+// 自动同步，请勿手动修改
 import Vue from 'vue'
-import Toast from 'vue2-toast'
-import 'vue2-toast/lib/toast.css'
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
-
 import App from './App'
 import router from '@/router'
-import global from '@/service/core/global' // 公共函数,全局函数
+import global from '@/service/core/global'
+import local from '@/service/core/local'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import '@/service/core/rem'
+import 'vue2-toast/lib/toast.css'
+import Toast from 'vue2-toast'
 import {
   api
 } from '@/service/api'
+
+import ZkAddress from '@/components/core/zk-address'
+import ZkAudio from '@/components/core/zk-audio'
+import ZkAutoForm from '@/components/core/zk-auto-form'
+import ZkAvatar from '@/components/core/zk-avatar'
+import ZkBuyAddress from '@/components/core/zk-buy-address'
+import ZkCard from '@/components/core/zk-card'
+import ZkCell from '@/components/core/zk-cell'
+import ZkCountdown from '@/components/core/zk-countdown'
+import ZkFoot from '@/components/core/zk-foot'
+import ZkGrid from '@/components/core/zk-grid'
+import ZkHead from '@/components/core/zk-head'
+import ZkHtml from '@/components/core/zk-html'
+import ZkImage from '@/components/core/zk-image'
+import ZkKeyword from '@/components/core/zk-keyword'
+import ZkList from '@/components/core/zk-list'
+import ZkMarquee from '@/components/core/zk-marquee'
+import ZkMask from '@/components/core/zk-mask'
+import ZkNodata from '@/components/core/zk-nodata'
+import ZkNotice from '@/components/core/zk-notice'
+import ZkPay from '@/components/core/zk-pay'
+import ZkPreview from '@/components/core/zk-preview'
+import ZkRater from '@/components/core/zk-rater'
+import ZkResult from '@/components/core/zk-result'
+import ZkSearch from '@/components/core/zk-search'
+import ZkSlider from '@/components/core/zk-slider'
+import ZkSwiper from '@/components/core/zk-swiper'
+import ZkTab from '@/components/core/zk-tab'
+import ZkTable from '@/components/core/zk-table'
+import ZkText from '@/components/core/zk-text'
+import ZkTitle from '@/components/core/zk-title'
+import ZkVideo from '@/components/core/zk-video'
+import ZkGroupbuy from '@/components/shop/zk-groupbuy'
+import ZkProductClass from '@/components/shop/zk-product-class'
+import ZkProductItem from '@/components/shop/zk-product-item'
+
+import XAddress from '@/elements/pc/x-address'
+import XAudio from '@/elements/pc/x-audio'
+import XAutoForm from '@/elements/pc/x-auto-form'
+import XAvatar from '@/elements/pc/x-avatar'
+import XBuyAddress from '@/elements/pc/x-buy-address'
+import XCard from '@/elements/pc/x-card'
+import XCell from '@/elements/pc/x-cell'
+import XCountdown from '@/elements/pc/x-countdown'
+import XFoot from '@/elements/pc/x-foot'
+import XGrid from '@/elements/pc/x-grid'
+import XGroupbuy from '@/elements/pc/x-groupbuy'
+import XHead from '@/elements/pc/x-head'
+import XHtml from '@/elements/pc/x-html'
+import XImage from '@/elements/pc/x-image'
+import XKeyword from '@/elements/pc/x-keyword'
+import XList from '@/elements/pc/x-list'
+import XMarquee from '@/elements/pc/x-marquee'
+import XMask from '@/elements/pc/x-mask'
+import XNodata from '@/elements/pc/x-nodata'
+import XNotice from '@/elements/pc/x-notice'
+import XPay from '@/elements/pc/x-pay'
+import XPreview from '@/elements/pc/x-preview'
+import XProductClass from '@/elements/pc/x-product-class'
+import XProductItem from '@/elements/pc/x-product-item'
+import XRater from '@/elements/pc/x-rater'
+import XResult from '@/elements/pc/x-result'
+import XSearch from '@/elements/pc/x-search'
+import XSlider from '@/elements/pc/x-slider'
+import XSwiper from '@/elements/pc/x-swiper'
+import XTab from '@/elements/pc/x-tab'
+import XTable from '@/elements/pc/x-table'
+import XText from '@/elements/pc/x-text'
+import XTitle from '@/elements/pc/x-title'
+import XVideo from '@/elements/pc/x-video'
+
+Vue.component('zk-address', ZkAddress)
+Vue.component('zk-audio', ZkAudio)
+Vue.component('zk-auto-form', ZkAutoForm)
+Vue.component('zk-avatar', ZkAvatar)
+Vue.component('zk-buy-address', ZkBuyAddress)
+Vue.component('zk-card', ZkCard)
+Vue.component('zk-cell', ZkCell)
+Vue.component('zk-countdown', ZkCountdown)
+Vue.component('zk-foot', ZkFoot)
+Vue.component('zk-grid', ZkGrid)
+Vue.component('zk-head', ZkHead)
+Vue.component('zk-html', ZkHtml)
+Vue.component('zk-image', ZkImage)
+Vue.component('zk-keyword', ZkKeyword)
+Vue.component('zk-list', ZkList)
+Vue.component('zk-marquee', ZkMarquee)
+Vue.component('zk-mask', ZkMask)
+Vue.component('zk-nodata', ZkNodata)
+Vue.component('zk-notice', ZkNotice)
+Vue.component('zk-pay', ZkPay)
+Vue.component('zk-preview', ZkPreview)
+Vue.component('zk-rater', ZkRater)
+Vue.component('zk-result', ZkResult)
+Vue.component('zk-search', ZkSearch)
+Vue.component('zk-slider', ZkSlider)
+Vue.component('zk-swiper', ZkSwiper)
+Vue.component('zk-tab', ZkTab)
+Vue.component('zk-table', ZkTable)
+Vue.component('zk-text', ZkText)
+Vue.component('zk-title', ZkTitle)
+Vue.component('zk-video', ZkVideo)
+Vue.component('zk-groupbuy', ZkGroupbuy)
+Vue.component('zk-product-class', ZkProductClass)
+Vue.component('zk-product-item', ZkProductItem)
+
+Vue.component('x-address', XAddress)
+Vue.component('x-audio', XAudio)
+Vue.component('x-auto-form', XAutoForm)
+Vue.component('x-avatar', XAvatar)
+Vue.component('x-buy-address', XBuyAddress)
+Vue.component('x-card', XCard)
+Vue.component('x-cell', XCell)
+Vue.component('x-countdown', XCountdown)
+Vue.component('x-foot', XFoot)
+Vue.component('x-grid', XGrid)
+Vue.component('x-groupbuy', XGroupbuy)
+Vue.component('x-head', XHead)
+Vue.component('x-html', XHtml)
+Vue.component('x-image', XImage)
+Vue.component('x-keyword', XKeyword)
+Vue.component('x-list', XList)
+Vue.component('x-marquee', XMarquee)
+Vue.component('x-mask', XMask)
+Vue.component('x-nodata', XNodata)
+Vue.component('x-notice', XNotice)
+Vue.component('x-pay', XPay)
+Vue.component('x-preview', XPreview)
+Vue.component('x-product-class', XProductClass)
+Vue.component('x-product-item', XProductItem)
+Vue.component('x-rater', XRater)
+Vue.component('x-result', XResult)
+Vue.component('x-search', XSearch)
+Vue.component('x-slider', XSlider)
+Vue.component('x-swiper', XSwiper)
+Vue.component('x-tab', XTab)
+Vue.component('x-table', XTable)
+Vue.component('x-text', XText)
+Vue.component('x-title', XTitle)
+Vue.component('x-video', XVideo)
+
 
 Vue.use(global)
 Vue.use(Toast)
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false
-Vue.prototype.$api = api
 Vue.prototype.$client = 'PcWeb'
-
+Vue.prototype.$api = api
+Vue.prototype.$client = 'WapH5'
+Vue.prototype.$local = local
+Vue.prototype.$toast = local
+Vue.prototype.$message = local
+Vue.prototype.$loading = true
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -31,3 +175,4 @@ new Vue({
   },
   template: '<App/>'
 })
+

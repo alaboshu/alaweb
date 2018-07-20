@@ -1,10 +1,14 @@
 // 自动同步，请勿手动修改
 import Vue from 'vue'
-import MpvueRouterPatch from 'mpvue-router-patch'
+import App from './App'
+import router from '@/router'
 import global from '@/service/core/global'
 import local from '@/service/core/local'
-import App from './App'
-import store from '@/store'
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+import '@/service/core/rem'
+import 'vue2-toast/lib/toast.css'
+import Toast from 'vue2-toast'
 import {
   api
 } from '@/service/api'
@@ -172,27 +176,25 @@ Vue.component('x-title', XTitle)
 Vue.component('x-video', XVideo)
 
 
-Vue.use(MpvueRouterPatch)
 Vue.use(global)
+Vue.use(MintUI)
+Vue.use(Toast)
+
 Vue.config.productionTip = false
-
-App.store = store
 Vue.prototype.$api = api
-Vue.prototype.$client = 'WeChatLite'
+Vue.prototype.$client = 'App'
 Vue.prototype.$local = local
-const app = new Vue(App)
-app.$mount()
+Vue.prototype.$toast = local
+Vue.prototype.$message = local
+Vue.prototype.$loading = true
 
-export default {
-  // 这个字段走 app.json
-  config: {
-    pages: ['^pages/index'],
-    window: {
-      backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
-    }
-  }
-}
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  components: {
+    App
+  },
+  template: '<App/>'
+})
 
