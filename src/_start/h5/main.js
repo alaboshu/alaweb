@@ -48,14 +48,6 @@ import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
 import ZkProductItem from '@/components/shop/zk-product-item'
 
-import XBadge from '@/elements/common/x-badge'
-import XBox from '@/elements/common/x-box'
-import XCol from '@/elements/common/x-col'
-import XColor from '@/elements/common/x-color'
-import XIcon from '@/elements/common/x-icon'
-import XNodata from '@/elements/common/x-nodata'
-import XRow from '@/elements/common/x-row'
-import XVerifiyPhone from '@/elements/common/x-verifiy-phone'
 import ETabSwiper from '@/elements/h5/e-tab-swiper'
 import XButton from '@/elements/h5/x-button'
 import XCell from '@/elements/h5/x-cell'
@@ -92,6 +84,14 @@ import XToast from '@/elements/h5/x-toast'
 import XToastIcon from '@/elements/h5/x-toast-icon'
 import XUpload from '@/elements/h5/x-upload'
 import XVerifiy from '@/elements/h5/x-verifiy'
+import XBadge from '@/elements/h5min/x-badge'
+import XBox from '@/elements/h5min/x-box'
+import XCol from '@/elements/h5min/x-col'
+import XColor from '@/elements/h5min/x-color'
+import XIcon from '@/elements/h5min/x-icon'
+import XNodata from '@/elements/h5min/x-nodata'
+import XRow from '@/elements/h5min/x-row'
+import XVerifiyPhone from '@/elements/h5min/x-verifiy-phone'
 
 Vue.component('zk-address', ZkAddress)
 Vue.component('zk-audio', ZkAudio)
@@ -128,14 +128,6 @@ Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
 Vue.component('zk-product-item', ZkProductItem)
 
-Vue.component('x-badge', XBadge)
-Vue.component('x-box', XBox)
-Vue.component('x-col', XCol)
-Vue.component('x-color', XColor)
-Vue.component('x-icon', XIcon)
-Vue.component('x-nodata', XNodata)
-Vue.component('x-row', XRow)
-Vue.component('x-verifiy-phone', XVerifiyPhone)
 Vue.component('e-tab-swiper', ETabSwiper)
 Vue.component('x-button', XButton)
 Vue.component('x-cell', XCell)
@@ -172,6 +164,14 @@ Vue.component('x-toast', XToast)
 Vue.component('x-toast-icon', XToastIcon)
 Vue.component('x-upload', XUpload)
 Vue.component('x-verifiy', XVerifiy)
+Vue.component('x-badge', XBadge)
+Vue.component('x-box', XBox)
+Vue.component('x-col', XCol)
+Vue.component('x-color', XColor)
+Vue.component('x-icon', XIcon)
+Vue.component('x-nodata', XNodata)
+Vue.component('x-row', XRow)
+Vue.component('x-verifiy-phone', XVerifiyPhone)
 
 
 Vue.use(global)
