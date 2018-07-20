@@ -1,6 +1,6 @@
 <template>
   <div class="zk-audio" :style="styles" component-path="core/zk-audio" v-if="asyncflag">
-   {{viewModel}}
+<x-audio></x-audio>
   </div>
 </template>
 
