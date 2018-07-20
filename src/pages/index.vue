@@ -2,16 +2,11 @@
   <div class="containera">
     <!-- <span>{{ tempComponent}}</span>
     <a href="/pages/user/standard">标准页面</a>-->
-    <x-row :gutter="50" xClass="test">
+    <!-- <x-row :gutter="50" xClass="test">
       <x-col :col="12" xClass="test">123</x-col>
       <x-col :col="12" xClass="test">123</x-col>
-    </x-row>
+    </x-row> -->
     <!-- <x-group></x-group> -->
-    <div @click="ceshi()">被测试的志伟</div>
-    <button @click="openTop()">top</button>
-    <button @click="openCenter()">center</button>
-    <button @click="openBottom()">bottom</button>
-    <button @click="openLoading()">loading</button>
     <!-- <zk-swiper></zk-swiper> -->
     <!-- <x-header title="志伟">
       <div class="btn-back" slot="left">
@@ -77,25 +72,6 @@
       async  init () {
         // this.tempComponent = window.top.localStorage.getItem('tempComponent')
         // console.info('缓存', this.tempComponent)
-      },
-      openTop () {
-        this.$toast.top('top')
-      },
-      openCenter () {
-        this.$toast.center('center')
-      },
-      openBottom () {
-        this.$toast.bottom('bottom')
-      },
-      openLoading () {
-        this.$loading('loading...')
-        let self = this
-        setTimeout(function () {
-          self.closeLoading()
-        }, 2000)
-      },
-      closeLoading () {
-        this.$loading.close()
       }
     }
   }

@@ -1,11 +1,5 @@
 <template>
-  <div class="zk-image" :style="styles">
-    <ul class="lazyload-list">
-      <li class="lazyload-list-item" v-for="(item,index) in viewModel" :key="index">
-        <img class="lazyload-image" :src="item.Image">
-      </li>
-    </ul>
-  </div>
+  <x-image :elementData="viewModel" v-if="asyncflag"></x-image>
 </template>
 
 <script>
@@ -16,7 +10,8 @@
     data () {
       return {
         viewModel: '', // 数据模型
-        styles: {} // 可视化编辑样式
+        styles: {}, // 可视化编辑样式
+        asyncflag: false
       }
     },
     props: ['dataId'],
