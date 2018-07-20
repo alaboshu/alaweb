@@ -1,6 +1,6 @@
 <template>
   <div class="zk-address" :style="styles" component-path="core/zk-address" v-if="asyncflag">
-    <!-- {{viewModel}} -->
+   <x-address></x-address>
   </div>
 </template>
 
