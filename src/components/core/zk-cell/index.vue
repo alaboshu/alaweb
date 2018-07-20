@@ -1,20 +1,6 @@
 <template>
   <div class="zk-cell" :style="styles" component-path="core/zk-cell">
-    <div>
-      <div class="weui-cell" :class="{'weui-cell_access': item.Url!==''}" @click="onClick(item.Url)" v-for="(item,index) in viewModel" :key="index">
-        <div class="weui-cell_hd" v-if="item.Image!=''">
-          <img :src="item.Image" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;" />
-        </div>
-        <div class="weui-cell__bd">
-          <slot name="bd">
-            <p v-html="item.Name" />
-          </slot>
-        </div>
-        <div class="weui-cell__ft">
-          <slot name="ft"></slot>
-        </div>
-      </div>
-    </div>
+    <x-cell :elementData="viewModel"></x-cell>
   </div>
 </template>
 
@@ -59,6 +45,7 @@
             defaultId: '5b406cddfef00000a0000006'
           }
           this.viewModel = await this.$api.get(THEME_GETVALUE_GET, parameter)
+          console.info('zk-cell数据', this.viewModel)
         }
       }
     }

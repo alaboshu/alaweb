@@ -50,7 +50,7 @@
 <style scoped lang="less">
   @import '~_style/index.less';
   .zk-preview {
-  	font-size: @font-size-base;
+    font-size: @font-size-base;
   }
 </style>
 
