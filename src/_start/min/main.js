@@ -34,15 +34,12 @@ import ZkNodata from '@/components/core/zk-nodata'
 import ZkNotice from '@/components/core/zk-notice'
 import ZkPay from '@/components/core/zk-pay'
 import ZkPreview from '@/components/core/zk-preview'
-import ZkRater from '@/components/core/zk-rater'
 import ZkResult from '@/components/core/zk-result'
 import ZkSearch from '@/components/core/zk-search'
-import ZkSlider from '@/components/core/zk-slider'
 import ZkSwiper from '@/components/core/zk-swiper'
 import ZkTab from '@/components/core/zk-tab'
 import ZkTable from '@/components/core/zk-table'
 import ZkText from '@/components/core/zk-text'
-import ZkTitle from '@/components/core/zk-title'
 import ZkVideo from '@/components/core/zk-video'
 import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
@@ -115,15 +112,12 @@ Vue.component('zk-nodata', ZkNodata)
 Vue.component('zk-notice', ZkNotice)
 Vue.component('zk-pay', ZkPay)
 Vue.component('zk-preview', ZkPreview)
-Vue.component('zk-rater', ZkRater)
 Vue.component('zk-result', ZkResult)
 Vue.component('zk-search', ZkSearch)
-Vue.component('zk-slider', ZkSlider)
 Vue.component('zk-swiper', ZkSwiper)
 Vue.component('zk-tab', ZkTab)
 Vue.component('zk-table', ZkTable)
 Vue.component('zk-text', ZkText)
-Vue.component('zk-title', ZkTitle)
 Vue.component('zk-video', ZkVideo)
 Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)

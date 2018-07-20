@@ -1,19 +1,22 @@
 <template>
-  <div class="zk-search" :style="styles" component-path="core/zk-search">
-    <x-searchbar></x-searchbar>
+  <div class="zk-search" :style="styles" component-path="core/zk-search" v-if="asyncflag">
+    <x-search :elementData="viewModel"></x-search>
   </div>
 </template>
 
 <script>
-  import { THEME_GETLINK_GET } from '@/service/api/apiUrl' 
+  import { THEME_GETVALUE_GET } from '@/service/api/apiUrl'
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
-    props: ['widgetDataId'],
+    props: {
+      widget: {}
+    },
     data () {
       return {
-        viewModel: '', // 数据模型
-        styles: {} // 可视化编辑样式
+        viewModel: '',
+        asyncflag: false,
+        styles: {}
       }
     },
     mounted () {
@@ -21,16 +24,26 @@
     },
     methods: {
       async  init () {
-        this.viewModel = await this.$api.get(THEME_GETLINK_GET, this.widgetDataId)
+        if (this.widget !== undefined && this.widget.value !== undefined) {
+          this.viewModel = this.widget.value
+        } else {
+          const parameter = {
+            dataId: this.widget && this.widget.dataId,
+            defaultId: '5b406cddfef00000a0000001'
+          }
+          this.viewModel = await this.$api.get(THEME_GETVALUE_GET, parameter)
+        }
+        this.asyncflag = true
+        // console.info('zk-search数据',this.viewModel)
       }
     }
   }
 </script>
 
 <style scoped lang="less">
-  @import '~_style/index.less';
+  @import '~_style/index.less'; 
   .zk-search {
-  	font-size: @font-size-base;
+    font-size: @font-size-base;
   }
 </style>
 
