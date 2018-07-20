@@ -8,6 +8,7 @@
 
 <script>
   import { THEME_GETPAGE_GET } from '@/service/api/apiUrl'
+  import { setTitle } from '@/utils'
   export default {
     config: {
       'navigationBarTitleText': 'this.title'
@@ -28,6 +29,7 @@
         this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
         this.$loading = false
         this.asyncFlag = true
+        setTitle(this.pageInfo.title)
         console.info('页面信息', this.pageInfo)
       }
     }
@@ -36,6 +38,6 @@
 
 <style scoped lang="less">
   .pages-user-standard {
-  	width: 100%;
+    width: 100%;
   }
 </style>
