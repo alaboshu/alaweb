@@ -41,24 +41,24 @@
           <span class="nexttothere show_icon"></span>
           <span>下次怎么来?</span>
           <h3>
-            记住域名：
+            <span>记住域名：</span>
             <a href="//www.zhe800.com" add_params="utm_content=zhe800_bottom" target="_blank">
-              <em>zhe800.com</em>
+              <em class="em">zhe800.com</em>
             </a>
           </h3>
           <h4>
-            百度搜索：
-            <a rel="nofollow" href="//www.baidu.com/s?tn=baiduhome_pg&amp;ie=utf-8&amp;bs=%E6%8A%98800&amp;f=8&amp;rsv_bp=1&amp;rsv_spt=1&amp;wd=%E6%8A%98800&amp;inputT=0" target="_blank">折800</a>
+            <span> 百度搜索：</span>
+            <a rel="nofollow" href="//www.baidu.com/s?tn=baiduhome_pg&amp;ie=utf-8&amp;bs=%E6%8A%98800&amp;f=8&amp;rsv_bp=1&amp;rsv_spt=1&amp;wd=%E6%8A%98800&amp;inputT=0" target="_blank" class="search_link">折800</a>
           </h4>
           <a class="desktop" rel="nofollow" href="//www.zhe800.com/download_tao800?fn=%E6%8A%98800.url" title="下载桌面快捷方式" target="_blank">下载桌面快捷方式</a>
           <h5>
-            收藏本站：
+            <span>收藏本站：</span>
             <a id="clt" href="javascript:$.addfavorite()">
               <u>加入收藏</u>
             </a>
           </h5>
           <h6>
-            订阅本站：
+            <span>订阅本站:</span>
             <br>
             <input type="text" class="txt" placeholder="输入您的邮件" id="subscribe_email"><input type="button" onclick="$.tao_dingyue()" class="smt dysmt" value="订阅"></h6>
         </li>
@@ -98,6 +98,75 @@
 <style scoped lang="less">
   @import '~_style/index.less';
   .pc-x-foot {
-  	font-size: @font-size-base;
+    font-size: @font-size-base;
+  }
+
+  .about {
+    max-width: 1280px;
+    min-width: 1080px;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 18px;
+  }
+  .area {
+    display: flex;
+    flex: 4;
+  }
+  .em,
+  .search_link {
+    color: red;
+  }
+  .area .lw span,
+  .area .lw a {
+    display: block;
+    line-height: 28px;
+  }
+  .area .lw a {
+    color: #b5b5b5;
+  }
+  .lw {
+    width: 200px;
+  }
+  .lw span,
+  .w3 span:nth-child(2) {
+    display: block;
+    margin: 20px 0 20px 0;
+    font-size: 22px;
+    color: #000;
+  }
+  .txt {
+    width: 97px;
+    height: 23px;
+    border: 1px solid #999;
+    outline: none;
+    padding-left: 5px;
+    color: #cbcbcb;
+    font-size: 12px;
+  }
+  .smt {
+    width: 41px;
+    height: 23px;
+    background: #f9f9f9;
+    border: 1px solid #999;
+    border-left: none;
+    color: #999999;
+  }
+  .w3 h3 span,
+  .w3 h4 span,
+  .w3 h5 span,
+  .w3 h6 span,
+  .w3 .desktop {
+    color: #b5b5b5;
+  }
+  u {
+    text-decoration: none;
+    color: #b5b5b5;
+  }
+  .show-icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .show-icon .aboutus {
+    background-image: url('../../../../static/svg/foot_icon.png');
   }
 </style>
