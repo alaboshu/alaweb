@@ -1,12 +1,16 @@
 <template>
-  <div class="h5-x-image" element-path="h5/x-image">
-  {{viewModel}}
+  <div class="zk-image" :style="styles">
+    <ul class="lazyload-list">
+      <li class="lazyload-list-item" v-for="(item,index) in elementData" :key="index">
+        <img class="lazyload-image" :src="item.Image">
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'x-cell',
+    name: 'x-image',
     props: {
       elementData: {}
     },
@@ -16,21 +20,40 @@
       }
     },
     mounted () {
-      this.init()
+      this.viewModel = this.elementData
     },
     methods: {
-      async init () {
-        if (this.elementData === undefined) {
-          this.viewModel = this.elementData
-        }
-      }
     }
   }
 </script>
 
+
 <style scoped lang="less">
   @import '~_style/index.less';
-  .h5-x-image {
-  	font-size: @font-size-base;
+  .zk-image {
+    font-size: @font-size-base;
+    .lazyload-list {
+      display: block;
+      overflow: hidden;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      list-style: none;
+      margin: 5px 0;
+      .lazyload-list-item {
+        width: 100%;
+      }
+      .lazyload-image {
+        display: block;
+        width: 100%;
+        height: 180px;
+        // &[lazy='loading'] {
+        //   width: 40px;
+        //   height: 300px;
+        //   margin: auto;
+        // }
+      }
+    }
   }
 </style>

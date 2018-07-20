@@ -1,6 +1,6 @@
 <template>
   <div class="zk-cell" :style="styles" component-path="core/zk-cell">
-    <x-cell :elementData="viewModel"></x-cell>
+    <x-cell :elementData="viewModel" v-if="asyncflag"></x-cell>
   </div>
 </template>
 
@@ -45,6 +45,7 @@
             defaultId: '5b406cddfef00000a0000006'
           }
           this.viewModel = await this.$api.get(THEME_GETVALUE_GET, parameter)
+          this.asyncflag = true
           console.info('zk-cell数据', this.viewModel)
         }
       }
