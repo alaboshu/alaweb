@@ -1,10 +1,14 @@
 // 自动同步，请勿手动修改
 import Vue from 'vue'
-import MpvueRouterPatch from 'mpvue-router-patch'
+import App from './App'
+import router from '@/router'
 import global from '@/service/core/global'
 import local from '@/service/core/local'
-import App from './App'
-import store from '@/store'
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+import '@/service/core/rem'
+import 'vue2-toast/lib/toast.css'
+import Toast from 'vue2-toast'
 import {
   api
 } from '@/service/api'
@@ -53,16 +57,42 @@ import XNodata from '@/elements/h5min/x-nodata'
 import XRow from '@/elements/h5min/x-row'
 import XVerifiyPhone from '@/elements/h5min/x-verifiy-phone'
 import ETabSwiper from '@/elements/min/e-tab-swiper'
+import XAddress from '@/elements/min/x-address'
+import XAudio from '@/elements/min/x-audio'
+import XAutoForm from '@/elements/min/x-auto-form'
+import XAvatar from '@/elements/min/x-avatar'
 import XButton from '@/elements/min/x-button'
+import XBuyAddress from '@/elements/min/x-buy-address'
+import XCard from '@/elements/min/x-card'
 import XCell from '@/elements/min/x-cell'
+import XCountdown from '@/elements/min/x-countdown'
+import XFoot from '@/elements/min/x-foot'
 import XGrid from '@/elements/min/x-grid'
 import XGroup from '@/elements/min/x-group'
+import XGroupbuy from '@/elements/min/x-groupbuy'
+import XHead from '@/elements/min/x-head'
+import XHtml from '@/elements/min/x-html'
+import XImage from '@/elements/min/x-image'
 import XInput from '@/elements/min/x-input'
+import XKeyword from '@/elements/min/x-keyword'
+import XList from '@/elements/min/x-list'
+import XMarquee from '@/elements/min/x-marquee'
+import XMask from '@/elements/min/x-mask'
 import XNavbar from '@/elements/min/x-navbar'
+import XNotice from '@/elements/min/x-notice'
+import XPay from '@/elements/min/x-pay'
 import XPicker from '@/elements/min/x-picker'
 import XPreview from '@/elements/min/x-preview'
+import XProductClass from '@/elements/min/x-product-class'
+import XProductItem from '@/elements/min/x-product-item'
+import XRater from '@/elements/min/x-rater'
+import XResult from '@/elements/min/x-result'
 import XSearchbar from '@/elements/min/x-searchbar'
+import XSlider from '@/elements/min/x-slider'
 import XSwiper from '@/elements/min/x-swiper'
+import XText from '@/elements/min/x-text'
+import XTitle from '@/elements/min/x-title'
+import XVideo from '@/elements/min/x-video'
 
 Vue.component('zk-address', ZkAddress)
 Vue.component('zk-audio', ZkAudio)
@@ -108,39 +138,63 @@ Vue.component('x-nodata', XNodata)
 Vue.component('x-row', XRow)
 Vue.component('x-verifiy-phone', XVerifiyPhone)
 Vue.component('e-tab-swiper', ETabSwiper)
+Vue.component('x-address', XAddress)
+Vue.component('x-audio', XAudio)
+Vue.component('x-auto-form', XAutoForm)
+Vue.component('x-avatar', XAvatar)
 Vue.component('x-button', XButton)
+Vue.component('x-buy-address', XBuyAddress)
+Vue.component('x-card', XCard)
 Vue.component('x-cell', XCell)
+Vue.component('x-countdown', XCountdown)
+Vue.component('x-foot', XFoot)
 Vue.component('x-grid', XGrid)
 Vue.component('x-group', XGroup)
+Vue.component('x-groupbuy', XGroupbuy)
+Vue.component('x-head', XHead)
+Vue.component('x-html', XHtml)
+Vue.component('x-image', XImage)
 Vue.component('x-input', XInput)
+Vue.component('x-keyword', XKeyword)
+Vue.component('x-list', XList)
+Vue.component('x-marquee', XMarquee)
+Vue.component('x-mask', XMask)
 Vue.component('x-navbar', XNavbar)
+Vue.component('x-notice', XNotice)
+Vue.component('x-pay', XPay)
 Vue.component('x-picker', XPicker)
 Vue.component('x-preview', XPreview)
+Vue.component('x-product-class', XProductClass)
+Vue.component('x-product-item', XProductItem)
+Vue.component('x-rater', XRater)
+Vue.component('x-result', XResult)
 Vue.component('x-searchbar', XSearchbar)
+Vue.component('x-slider', XSlider)
 Vue.component('x-swiper', XSwiper)
+Vue.component('x-text', XText)
+Vue.component('x-title', XTitle)
+Vue.component('x-video', XVideo)
 
 
-Vue.use(MpvueRouterPatch)
 Vue.use(global)
+Vue.use(MintUI)
+Vue.use(Toast)
+
 Vue.config.productionTip = false
-
-App.store = store
 Vue.prototype.$api = api
-Vue.prototype.$client = 'WeChatLite'
+Vue.prototype.$client = 'App'
 Vue.prototype.$local = local
-const app = new Vue(App)
-app.$mount()
+Vue.prototype.$toast = local
+Vue.prototype.$message = local
+Vue.prototype.$loading = true
 
-export default {
-  // 这个字段走 app.json
-  config: {
-    pages: ['^pages/index'],
-    window: {
-      backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
-    }
-  }
-}
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  components: {
+    App
+  },
+  template: '<App/>'
+})
 
