@@ -15,8 +15,8 @@
         </div>
       </div>
     </div>
-    <div class="weui-cell" v-if="!isArray" :class="{'weui-cell_access': isLink}" @click="onClick">
-      <div class="weui-cell_hd">
+    <div class="weui-cell" v-if="!isArray" :class="{'weui-cell_access': isLink}" @click="onClick(link)">
+      <div class="weui-cell_hd" v-if="icon">
         <x-icon :src="icon" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></x-icon>
       </div>
       <div class="weui-cell__bd">
@@ -41,7 +41,8 @@
       value: {},
       title: {},
       isLink: Boolean,
-      icon: {}
+      icon: {},
+      link: {}
     },
     data () {
       return {
@@ -61,9 +62,14 @@
         }
       },
       onClick (url) {
-        // this.$emit('click')
+        this.$emit('click')
         // this.routerLink()
-        this.$router.push(url)
+
+        if (this.isArray === true) {
+          this.$router.push(url)
+        } else if (this.link !== undefined) {
+          this.$router.push(url)
+        }
       }
     }
   }

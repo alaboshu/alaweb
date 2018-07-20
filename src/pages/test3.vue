@@ -4,8 +4,14 @@
     <!-- <zk-buy-address></zk-buy-address> -->
     <zk-grid></zk-grid>
     <zk-cell></zk-cell>
+    <div class="height:50px" @click="popupVisible1=true">
+      jsiodjaioshdaioshdio
+    </div>
     <zk-list v-if="asyncFlag" :widget="widget"></zk-list>
-    <zk-foot></zk-foot>
+    <x-popup :visible.sync="popupVisible1" class="popup-radio">
+      123123132123123132
+    </x-popup>
+    <!-- <zk-foot></zk-foot> -->
   </div>
 </template>
 
@@ -18,7 +24,8 @@
       return {
         pageInfo: '',
         widget: '',
-        asyncFlag: false
+        asyncFlag: false,
+        popupVisible1: false
       }
     },
     mounted () {
