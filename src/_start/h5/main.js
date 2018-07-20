@@ -49,27 +49,50 @@ import ZkProductClass from '@/components/shop/zk-product-class'
 import ZkProductItem from '@/components/shop/zk-product-item'
 
 import ETabSwiper from '@/elements/h5/e-tab-swiper'
+import XAddress from '@/elements/h5/x-address'
+import XAudio from '@/elements/h5/x-audio'
+import XAutoForm from '@/elements/h5/x-auto-form'
+import XAvatar from '@/elements/h5/x-avatar'
 import XButton from '@/elements/h5/x-button'
+import XBuyAddress from '@/elements/h5/x-buy-address'
+import XCard from '@/elements/h5/x-card'
 import XCell from '@/elements/h5/x-cell'
 import XChecklist from '@/elements/h5/x-checklist'
+import XCountdown from '@/elements/h5/x-countdown'
 import XDivider from '@/elements/h5/x-divider'
+import XFoot from '@/elements/h5/x-foot'
 import XFrom from '@/elements/h5/x-from'
 import XGrid from '@/elements/h5/x-grid'
 import XGridItem from '@/elements/h5/x-grid-item'
 import XGroup from '@/elements/h5/x-group'
+import XGroupbuy from '@/elements/h5/x-groupbuy'
+import XHead from '@/elements/h5/x-head'
 import XHeader from '@/elements/h5/x-header'
+import XHtml from '@/elements/h5/x-html'
+import XImage from '@/elements/h5/x-image'
 import XInput from '@/elements/h5/x-input'
+import XKeyword from '@/elements/h5/x-keyword'
 import XLabel from '@/elements/h5/x-label'
 import XLightbox from '@/elements/h5/x-lightbox'
+import XList from '@/elements/h5/x-list'
+import XMarquee from '@/elements/h5/x-marquee'
+import XMask from '@/elements/h5/x-mask'
 import XMore from '@/elements/h5/x-more'
 import XNavbar from '@/elements/h5/x-navbar'
 import XNavbarItem from '@/elements/h5/x-navbar-item'
+import XNotice from '@/elements/h5/x-notice'
 import XNumber from '@/elements/h5/x-number'
+import XPay from '@/elements/h5/x-pay'
 import XPopup from '@/elements/h5/x-popup'
 import XPreview from '@/elements/h5/x-preview'
+import XProductClass from '@/elements/h5/x-product-class'
+import XProductItem from '@/elements/h5/x-product-item'
 import XRadio from '@/elements/h5/x-radio'
+import XRater from '@/elements/h5/x-rater'
+import XResult from '@/elements/h5/x-result'
 import XSearch from '@/elements/h5/x-search'
 import XSearchbar from '@/elements/h5/x-searchbar'
+import XSlider from '@/elements/h5/x-slider'
 import XSpinner from '@/elements/h5/x-spinner'
 import XSwipe from '@/elements/h5/x-swipe'
 import XSwipeItem from '@/elements/h5/x-swipe-item'
@@ -79,11 +102,14 @@ import XTab from '@/elements/h5/x-tab'
 import XTabbar from '@/elements/h5/x-tabbar'
 import XTabbarItem from '@/elements/h5/x-tabbar-item'
 import XTable from '@/elements/h5/x-table'
+import XText from '@/elements/h5/x-text'
 import XTextarea from '@/elements/h5/x-textarea'
+import XTitle from '@/elements/h5/x-title'
 import XToast from '@/elements/h5/x-toast'
 import XToastIcon from '@/elements/h5/x-toast-icon'
 import XUpload from '@/elements/h5/x-upload'
 import XVerifiy from '@/elements/h5/x-verifiy'
+import XVideo from '@/elements/h5/x-video'
 import XBadge from '@/elements/h5min/x-badge'
 import XBox from '@/elements/h5min/x-box'
 import XCol from '@/elements/h5min/x-col'
@@ -129,27 +155,50 @@ Vue.component('zk-product-class', ZkProductClass)
 Vue.component('zk-product-item', ZkProductItem)
 
 Vue.component('e-tab-swiper', ETabSwiper)
+Vue.component('x-address', XAddress)
+Vue.component('x-audio', XAudio)
+Vue.component('x-auto-form', XAutoForm)
+Vue.component('x-avatar', XAvatar)
 Vue.component('x-button', XButton)
+Vue.component('x-buy-address', XBuyAddress)
+Vue.component('x-card', XCard)
 Vue.component('x-cell', XCell)
 Vue.component('x-checklist', XChecklist)
+Vue.component('x-countdown', XCountdown)
 Vue.component('x-divider', XDivider)
+Vue.component('x-foot', XFoot)
 Vue.component('x-from', XFrom)
 Vue.component('x-grid', XGrid)
 Vue.component('x-grid-item', XGridItem)
 Vue.component('x-group', XGroup)
+Vue.component('x-groupbuy', XGroupbuy)
+Vue.component('x-head', XHead)
 Vue.component('x-header', XHeader)
+Vue.component('x-html', XHtml)
+Vue.component('x-image', XImage)
 Vue.component('x-input', XInput)
+Vue.component('x-keyword', XKeyword)
 Vue.component('x-label', XLabel)
 Vue.component('x-lightbox', XLightbox)
+Vue.component('x-list', XList)
+Vue.component('x-marquee', XMarquee)
+Vue.component('x-mask', XMask)
 Vue.component('x-more', XMore)
 Vue.component('x-navbar', XNavbar)
 Vue.component('x-navbar-item', XNavbarItem)
+Vue.component('x-notice', XNotice)
 Vue.component('x-number', XNumber)
+Vue.component('x-pay', XPay)
 Vue.component('x-popup', XPopup)
 Vue.component('x-preview', XPreview)
+Vue.component('x-product-class', XProductClass)
+Vue.component('x-product-item', XProductItem)
 Vue.component('x-radio', XRadio)
+Vue.component('x-rater', XRater)
+Vue.component('x-result', XResult)
 Vue.component('x-search', XSearch)
 Vue.component('x-searchbar', XSearchbar)
+Vue.component('x-slider', XSlider)
 Vue.component('x-spinner', XSpinner)
 Vue.component('x-swipe', XSwipe)
 Vue.component('x-swipe-item', XSwipeItem)
@@ -159,11 +208,14 @@ Vue.component('x-tab', XTab)
 Vue.component('x-tabbar', XTabbar)
 Vue.component('x-tabbar-item', XTabbarItem)
 Vue.component('x-table', XTable)
+Vue.component('x-text', XText)
 Vue.component('x-textarea', XTextarea)
+Vue.component('x-title', XTitle)
 Vue.component('x-toast', XToast)
 Vue.component('x-toast-icon', XToastIcon)
 Vue.component('x-upload', XUpload)
 Vue.component('x-verifiy', XVerifiy)
+Vue.component('x-video', XVideo)
 Vue.component('x-badge', XBadge)
 Vue.component('x-box', XBox)
 Vue.component('x-col', XCol)
