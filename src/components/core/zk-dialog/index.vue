@@ -1,6 +1,6 @@
 <template>
   <div class="zk-dialog" :style="styles" component-path="core/zk-dialog" v-if="asyncflag">
-    <x-dialog :elementData="viewModel"></x-dialog>
+    <x-dialog :elementData="viewModel" :width="width" :title="title"></x-dialog>
   </div>
 </template>
 
@@ -10,7 +10,15 @@
   export default {
     name: editSetting.key,
     props: {
-      widget: {}
+      widget: {},
+      width: {
+        type: String,
+        default: '60%'
+      },
+      title: {
+        type: String,
+        default: 'zkweb'
+      }
     },
     data () {
       return {
@@ -41,9 +49,9 @@
 </script>
 
 <style scoped lang="less">
-  @import '~_style/index.less'; 
+  @import '~_style/index.less';
   .zk-dialog {
-    font-size: @font-size-base;
+  	font-size: @font-size-base;
   }
 </style>
 

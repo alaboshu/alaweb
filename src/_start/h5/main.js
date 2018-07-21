@@ -67,7 +67,6 @@ import XGridItem from '@/elements/h5/x-grid-item'
 import XGroup from '@/elements/h5/x-group'
 import XGroupbuy from '@/elements/h5/x-groupbuy'
 import XHead from '@/elements/h5/x-head'
-import XHeader from '@/elements/h5/x-header'
 import XHtml from '@/elements/h5/x-html'
 import XImage from '@/elements/h5/x-image'
 import XInput from '@/elements/h5/x-input'
@@ -173,7 +172,6 @@ Vue.component('x-grid-item', XGridItem)
 Vue.component('x-group', XGroup)
 Vue.component('x-groupbuy', XGroupbuy)
 Vue.component('x-head', XHead)
-Vue.component('x-header', XHeader)
 Vue.component('x-html', XHtml)
 Vue.component('x-image', XImage)
 Vue.component('x-input', XInput)

@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'x-cell',
+    name: 'x-notice',
     props: {
       elementData: {}
     },

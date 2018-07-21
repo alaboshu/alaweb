@@ -1,6 +1,6 @@
 <template>
-  <div class="pc-x-swiper  weui-form-preview" element-path="pc/x-swiper">
-  {{elementData}}
+  <div class="pc-x-swiper" element-path="pc/x-swiper">
+  {{viewModel}}
   </div>
 </template>
 
@@ -12,6 +12,7 @@
     },
     data () {
       return {
+        viewModel: ''
       }
     },
     mounted () {
@@ -19,10 +20,14 @@
     },
     methods: {
       async init () {
+        if (this.elementData === undefined) {
+          this.viewModel = this.elementData
+        }
       }
     }
   }
 </script>
+
 <style scoped lang="less">
   @import '~_style/index.less';
   .pc-x-swiper {

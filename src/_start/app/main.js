@@ -47,36 +47,6 @@ import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
 import ZkProductItem from '@/components/shop/zk-product-item'
 
-import XAddress from '@/elements/app/x-address'
-import XAudio from '@/elements/app/x-audio'
-import XAutoForm from '@/elements/app/x-auto-form'
-import XAvatar from '@/elements/app/x-avatar'
-import XBuyAddress from '@/elements/app/x-buy-address'
-import XCard from '@/elements/app/x-card'
-import XCell from '@/elements/app/x-cell'
-import XCountdown from '@/elements/app/x-countdown'
-import XDialog from '@/elements/app/x-dialog'
-import XFoot from '@/elements/app/x-foot'
-import XGrid from '@/elements/app/x-grid'
-import XGroupbuy from '@/elements/app/x-groupbuy'
-import XHead from '@/elements/app/x-head'
-import XHtml from '@/elements/app/x-html'
-import XImage from '@/elements/app/x-image'
-import XKeyword from '@/elements/app/x-keyword'
-import XList from '@/elements/app/x-list'
-import XMarquee from '@/elements/app/x-marquee'
-import XMask from '@/elements/app/x-mask'
-import XNotice from '@/elements/app/x-notice'
-import XPay from '@/elements/app/x-pay'
-import XProductClass from '@/elements/app/x-product-class'
-import XProductItem from '@/elements/app/x-product-item'
-import XRater from '@/elements/app/x-rater'
-import XResult from '@/elements/app/x-result'
-import XSlider from '@/elements/app/x-slider'
-import XSwiper from '@/elements/app/x-swiper'
-import XText from '@/elements/app/x-text'
-import XTitle from '@/elements/app/x-title'
-import XVideo from '@/elements/app/x-video'
 
 Vue.component('zk-address', ZkAddress)
 Vue.component('zk-audio', ZkAudio)
@@ -112,36 +82,6 @@ Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
 Vue.component('zk-product-item', ZkProductItem)
 
-Vue.component('x-address', XAddress)
-Vue.component('x-audio', XAudio)
-Vue.component('x-auto-form', XAutoForm)
-Vue.component('x-avatar', XAvatar)
-Vue.component('x-buy-address', XBuyAddress)
-Vue.component('x-card', XCard)
-Vue.component('x-cell', XCell)
-Vue.component('x-countdown', XCountdown)
-Vue.component('x-dialog', XDialog)
-Vue.component('x-foot', XFoot)
-Vue.component('x-grid', XGrid)
-Vue.component('x-groupbuy', XGroupbuy)
-Vue.component('x-head', XHead)
-Vue.component('x-html', XHtml)
-Vue.component('x-image', XImage)
-Vue.component('x-keyword', XKeyword)
-Vue.component('x-list', XList)
-Vue.component('x-marquee', XMarquee)
-Vue.component('x-mask', XMask)
-Vue.component('x-notice', XNotice)
-Vue.component('x-pay', XPay)
-Vue.component('x-product-class', XProductClass)
-Vue.component('x-product-item', XProductItem)
-Vue.component('x-rater', XRater)
-Vue.component('x-result', XResult)
-Vue.component('x-slider', XSlider)
-Vue.component('x-swiper', XSwiper)
-Vue.component('x-text', XText)
-Vue.component('x-title', XTitle)
-Vue.component('x-video', XVideo)
 
 
 Vue.use(global)

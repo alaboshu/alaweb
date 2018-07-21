@@ -1,12 +1,12 @@
 <template>
   <div class="pc-x-video" element-path="pc/x-video">
-  {{viewModel}}
+    {{viewModel}}
   </div>
 </template>
 
 <script>
   export default {
-    name: 'x-cell',
+    name: 'x-video',
     props: {
       elementData: {}
     },

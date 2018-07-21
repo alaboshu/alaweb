@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'x-cell',
+    name: 'x-auto-form',
     props: {
       elementData: {}
     },
