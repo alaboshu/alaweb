@@ -1,5 +1,5 @@
 <template>
-  <div class="pages--user-login">
+  <div class="pages-user-login">
     <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
     <zk-grid></zk-grid>
     <zk-foot></zk-foot>
@@ -34,7 +34,7 @@
 </script>
 
 <style scoped lang="less">
-  .pages--user-login {
+  .pages-user-login {
   	width: 100%;
   }
 </style>

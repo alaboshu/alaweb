@@ -246,6 +246,10 @@ export const ARTICLE_GETLIST_GET = '/api/article/getlist' // 根据Url获取列�
 export const ARTICLE_ADD_POST = '/api/article/add' // 增加单条记录
 export const ARTICLE_UPDATE_GET = '/api/article/update' // 修改单条记录
 export const ARTICLE_DELETE_GET = '/api/article/delete' // 删除单条记录
+export const ARTICLE_USERNOTICELIST_GET = '/api/article/usernoticelist' // 公告
+export const ARTICLE_TOPLINELIST_GET = '/api/article/toplinelist' // 头条列表
+export const ARTICLE_ARTICLELIST_GET = '/api/article/articlelist' // 文章列表
+export const ARTICLE_HELPLIST_GET = '/api/article/helplist' // 客服列表
 
 //  User/Debt相关的API接口
 export const USER_DEBT_APPLY_POST = '/api/user/debt/apply' // 债事提交

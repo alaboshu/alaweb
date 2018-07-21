@@ -1,31 +1,38 @@
 <template>
-  <div class="container">
-    <zk-auto-form viewApi="Api/Recharge/GetRechargeView" />
-    <zk-auto-form viewApi="api/users/getregform" />
+  <div class="pages-test">
+    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
+    <zk-grid></zk-grid>
+    <zk-foot></zk-foot>
   </div>
 </template>
 
 <script>
-  import zkAutoForm from '@/components/core/zk-auto-form'
-
+  import { THEME_GETPAGE_GET } from '@/service/api/apiUrl'
   export default {
-    components: {
-      zkAutoForm
-    },
     data () {
       return {
-        clientType: ''
+        pageInfo: '',
+        asyncFlag: false
       }
     },
     mounted () {
-      this.ApiGet()
+      this.init()
     },
     methods: {
-      async ApiGet () {
+      async init () {
+        this.$loading = true
+        this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
+        this.$loading = false
+        this.asyncFlag = true
+        // console.info('测试一页面', this.pageInfo)
       }
     }
   }
 </script>
 
 <style scoped lang="less">
+  .pages-test {
+  	width: 100%;
+  }
 </style>
+

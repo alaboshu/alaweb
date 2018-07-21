@@ -1,55 +1,41 @@
 <template>
-  <div class="container">
-    <!-- <component :is="current"></component> -->
+  <div class="pages-user-index">
+    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
+    <zk-grid></zk-grid>
+    <zk-foot></zk-foot>
   </div>
 </template>
 
 <script>
-  // import Vue from 'vue'
-  // export default {
-  //   config: {
-  //     title: '会员中心'
-  //   },
-  //   data () {
-  //     return {
-  //       clientType: '',
-  //       template: '',
-  //       current: ''
-  //     }
-  //   },
-  //   mounted () {
-  //     var comp = [{
-  //       key: '/core/zk-grid/index.vue',
-  //       name: 'root',
-  //       position: { left: 100, top: 0 }
-  //     }, {
-  //       key: '/core/zk-grid/index.vue',
-  //       name: 'root',
-  //       position: { left: 100, top: 0 }
-  //     }]
-
-  //     for (var i = 0; i < comp.length; i++) {
-  //       console.log(comp[i])
-  //       this.recur(comp[i])
-  //     }
-  //     var myComponent = Vue.extend({
-  //       template: '<div>' + this.template + '</div>'
-  //       // components: {}
-  //     })
-  //     this.current = myComponent
-  //   },
-  //   methods: {
-  //     recur (component) {
-  //       if (component != null) {
-  //         var citem = require('@/components' + component.key + '').default
-  //         Vue.component(component.name, citem)
-  //         this.template += '<' + component.name + '></' + component.name + '>'
-  //         // console.log(this.template)
-  //       }
-  //     }
-  //   }
-  // }
+  import { THEME_GETPAGE_GET } from '@/service/api/apiUrl'
+  export default {
+    config: {
+      'navigationBarTitleText': '会员中心'
+    },
+    data () {
+      return {
+        pageInfo: '',
+        asyncFlag: false
+      }
+    },
+    mounted () {
+      this.init()
+    },
+    methods: {
+      async init () {
+        this.$loading = true
+        this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
+        this.$loading = false
+        this.asyncFlag = true
+        // console.info('测试一页面', this.pageInfo)
+      }
+    }
+  }
 </script>
 
 <style scoped lang="less">
+  .pages-user-index {
+  	width: 100%;
+  }
 </style>
+

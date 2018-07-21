@@ -9,9 +9,6 @@
 <script>
   import { THEME_GETPAGE_GET } from '@/service/api/apiUrl'
   export default {
-    config: {
-      'navigationBarTitleText': '组件'
-    },
     data () {
       return {
         pageInfo: '',
