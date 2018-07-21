@@ -9,12 +9,12 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: 'http://127.0.0.1:2000/',
+    assetsPublicPath: process.env.MODE === 'pc' ? 'http://127.0.0.1:2008/' : 'http://127.0.0.1:2000/',
     proxyTable: {},
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: process.env.MODE === 'pc' ? 6000 : 2000, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: process.env.MODE === 'pc' ? 2008 : 2000, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
@@ -50,6 +50,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, `../../dist/${process.env.MODE || 'h5'}`),
     assetsSubDirectory: 'static',
+    // assetsPublicPath: process.env.MODE === 'pc' ? 'http://127.0.0.1:2008/' : 'http://127.0.0.1:2000/',
     assetsPublicPath: 'http://127.0.0.1:2000/',
 
     /**

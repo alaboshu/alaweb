@@ -176,7 +176,6 @@ Vue.prototype.$api = api
 Vue.prototype.$client = 'WapH5'
 Vue.prototype.$local = local
 Vue.prototype.$toast = local
-Vue.prototype.$message = local
 Vue.prototype.$loading = true
 /* eslint-disable no-new */
 new Vue({
