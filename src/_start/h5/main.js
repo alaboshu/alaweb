@@ -21,6 +21,7 @@ import ZkBuyAddress from '@/components/core/zk-buy-address'
 import ZkCard from '@/components/core/zk-card'
 import ZkCell from '@/components/core/zk-cell'
 import ZkCountdown from '@/components/core/zk-countdown'
+import ZkDialog from '@/components/core/zk-dialog'
 import ZkFoot from '@/components/core/zk-foot'
 import ZkGrid from '@/components/core/zk-grid'
 import ZkHead from '@/components/core/zk-head'
@@ -33,6 +34,7 @@ import ZkMask from '@/components/core/zk-mask'
 import ZkNodata from '@/components/core/zk-nodata'
 import ZkNotice from '@/components/core/zk-notice'
 import ZkPay from '@/components/core/zk-pay'
+import ZkPopup from '@/components/core/zk-popup'
 import ZkPreview from '@/components/core/zk-preview'
 import ZkResult from '@/components/core/zk-result'
 import ZkSearch from '@/components/core/zk-search'
@@ -56,6 +58,7 @@ import XCard from '@/elements/h5/x-card'
 import XCell from '@/elements/h5/x-cell'
 import XChecklist from '@/elements/h5/x-checklist'
 import XCountdown from '@/elements/h5/x-countdown'
+import XDialog from '@/elements/h5/x-dialog'
 import XDivider from '@/elements/h5/x-divider'
 import XFoot from '@/elements/h5/x-foot'
 import XFrom from '@/elements/h5/x-from'
@@ -124,6 +127,7 @@ Vue.component('zk-buy-address', ZkBuyAddress)
 Vue.component('zk-card', ZkCard)
 Vue.component('zk-cell', ZkCell)
 Vue.component('zk-countdown', ZkCountdown)
+Vue.component('zk-dialog', ZkDialog)
 Vue.component('zk-foot', ZkFoot)
 Vue.component('zk-grid', ZkGrid)
 Vue.component('zk-head', ZkHead)
@@ -136,6 +140,7 @@ Vue.component('zk-mask', ZkMask)
 Vue.component('zk-nodata', ZkNodata)
 Vue.component('zk-notice', ZkNotice)
 Vue.component('zk-pay', ZkPay)
+Vue.component('zk-popup', ZkPopup)
 Vue.component('zk-preview', ZkPreview)
 Vue.component('zk-result', ZkResult)
 Vue.component('zk-search', ZkSearch)
@@ -159,6 +164,7 @@ Vue.component('x-card', XCard)
 Vue.component('x-cell', XCell)
 Vue.component('x-checklist', XChecklist)
 Vue.component('x-countdown', XCountdown)
+Vue.component('x-dialog', XDialog)
 Vue.component('x-divider', XDivider)
 Vue.component('x-foot', XFoot)
 Vue.component('x-from', XFrom)

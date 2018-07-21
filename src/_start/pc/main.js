@@ -21,6 +21,7 @@ import ZkBuyAddress from '@/components/core/zk-buy-address'
 import ZkCard from '@/components/core/zk-card'
 import ZkCell from '@/components/core/zk-cell'
 import ZkCountdown from '@/components/core/zk-countdown'
+import ZkDialog from '@/components/core/zk-dialog'
 import ZkFoot from '@/components/core/zk-foot'
 import ZkGrid from '@/components/core/zk-grid'
 import ZkHead from '@/components/core/zk-head'
@@ -33,6 +34,7 @@ import ZkMask from '@/components/core/zk-mask'
 import ZkNodata from '@/components/core/zk-nodata'
 import ZkNotice from '@/components/core/zk-notice'
 import ZkPay from '@/components/core/zk-pay'
+import ZkPopup from '@/components/core/zk-popup'
 import ZkPreview from '@/components/core/zk-preview'
 import ZkResult from '@/components/core/zk-result'
 import ZkSearch from '@/components/core/zk-search'
@@ -55,6 +57,7 @@ import XBuyAddress from '@/elements/pc/x-buy-address'
 import XCard from '@/elements/pc/x-card'
 import XCell from '@/elements/pc/x-cell'
 import XCountdown from '@/elements/pc/x-countdown'
+import XDialog from '@/elements/pc/x-dialog'
 import XFoot from '@/elements/pc/x-foot'
 import XGrid from '@/elements/pc/x-grid'
 import XGroupbuy from '@/elements/pc/x-groupbuy'
@@ -69,6 +72,7 @@ import XNav from '@/elements/pc/x-nav'
 import XNodata from '@/elements/pc/x-nodata'
 import XNotice from '@/elements/pc/x-notice'
 import XPay from '@/elements/pc/x-pay'
+import XPopup from '@/elements/pc/x-popup'
 import XPreview from '@/elements/pc/x-preview'
 import XProductClass from '@/elements/pc/x-product-class'
 import XProductItem from '@/elements/pc/x-product-item'
@@ -91,6 +95,7 @@ Vue.component('zk-buy-address', ZkBuyAddress)
 Vue.component('zk-card', ZkCard)
 Vue.component('zk-cell', ZkCell)
 Vue.component('zk-countdown', ZkCountdown)
+Vue.component('zk-dialog', ZkDialog)
 Vue.component('zk-foot', ZkFoot)
 Vue.component('zk-grid', ZkGrid)
 Vue.component('zk-head', ZkHead)
@@ -103,6 +108,7 @@ Vue.component('zk-mask', ZkMask)
 Vue.component('zk-nodata', ZkNodata)
 Vue.component('zk-notice', ZkNotice)
 Vue.component('zk-pay', ZkPay)
+Vue.component('zk-popup', ZkPopup)
 Vue.component('zk-preview', ZkPreview)
 Vue.component('zk-result', ZkResult)
 Vue.component('zk-search', ZkSearch)
@@ -125,6 +131,7 @@ Vue.component('x-buy-address', XBuyAddress)
 Vue.component('x-card', XCard)
 Vue.component('x-cell', XCell)
 Vue.component('x-countdown', XCountdown)
+Vue.component('x-dialog', XDialog)
 Vue.component('x-foot', XFoot)
 Vue.component('x-grid', XGrid)
 Vue.component('x-groupbuy', XGroupbuy)
@@ -139,6 +146,7 @@ Vue.component('x-nav', XNav)
 Vue.component('x-nodata', XNodata)
 Vue.component('x-notice', XNotice)
 Vue.component('x-pay', XPay)
+Vue.component('x-popup', XPopup)
 Vue.component('x-preview', XPreview)
 Vue.component('x-product-class', XProductClass)
 Vue.component('x-product-item', XProductItem)
