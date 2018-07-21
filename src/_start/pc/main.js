@@ -34,20 +34,19 @@ import ZkNodata from '@/components/core/zk-nodata'
 import ZkNotice from '@/components/core/zk-notice'
 import ZkPay from '@/components/core/zk-pay'
 import ZkPreview from '@/components/core/zk-preview'
-import ZkRater from '@/components/core/zk-rater'
 import ZkResult from '@/components/core/zk-result'
 import ZkSearch from '@/components/core/zk-search'
-import ZkSlider from '@/components/core/zk-slider'
 import ZkSwiper from '@/components/core/zk-swiper'
 import ZkTab from '@/components/core/zk-tab'
 import ZkTable from '@/components/core/zk-table'
 import ZkText from '@/components/core/zk-text'
-import ZkTitle from '@/components/core/zk-title'
 import ZkVideo from '@/components/core/zk-video'
+import ZkNav from '@/components/pc/zk-nav'
 import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
 import ZkProductItem from '@/components/shop/zk-product-item'
 
+import PNav from '@/elements/pc/p-nav'
 import XAddress from '@/elements/pc/x-address'
 import XAudio from '@/elements/pc/x-audio'
 import XAutoForm from '@/elements/pc/x-auto-form'
@@ -66,6 +65,7 @@ import XKeyword from '@/elements/pc/x-keyword'
 import XList from '@/elements/pc/x-list'
 import XMarquee from '@/elements/pc/x-marquee'
 import XMask from '@/elements/pc/x-mask'
+import XNav from '@/elements/pc/x-nav'
 import XNodata from '@/elements/pc/x-nodata'
 import XNotice from '@/elements/pc/x-notice'
 import XPay from '@/elements/pc/x-pay'
@@ -104,20 +104,19 @@ Vue.component('zk-nodata', ZkNodata)
 Vue.component('zk-notice', ZkNotice)
 Vue.component('zk-pay', ZkPay)
 Vue.component('zk-preview', ZkPreview)
-Vue.component('zk-rater', ZkRater)
 Vue.component('zk-result', ZkResult)
 Vue.component('zk-search', ZkSearch)
-Vue.component('zk-slider', ZkSlider)
 Vue.component('zk-swiper', ZkSwiper)
 Vue.component('zk-tab', ZkTab)
 Vue.component('zk-table', ZkTable)
 Vue.component('zk-text', ZkText)
-Vue.component('zk-title', ZkTitle)
 Vue.component('zk-video', ZkVideo)
+Vue.component('zk-nav', ZkNav)
 Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
 Vue.component('zk-product-item', ZkProductItem)
 
+Vue.component('p-nav', PNav)
 Vue.component('x-address', XAddress)
 Vue.component('x-audio', XAudio)
 Vue.component('x-auto-form', XAutoForm)
@@ -136,6 +135,7 @@ Vue.component('x-keyword', XKeyword)
 Vue.component('x-list', XList)
 Vue.component('x-marquee', XMarquee)
 Vue.component('x-mask', XMask)
+Vue.component('x-nav', XNav)
 Vue.component('x-nodata', XNodata)
 Vue.component('x-notice', XNotice)
 Vue.component('x-pay', XPay)

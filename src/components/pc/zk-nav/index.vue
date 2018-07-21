@@ -1,6 +1,6 @@
 <template>
-  <div class="zk-title" :style="styles" component-path="core/zk-title" v-if="asyncflag">
-   {{viewModel}}
+  <div class="zk-nav" :style="styles" component-path="pc/zk-nav" v-if="asyncflag">
+    <p-nav :elementData="viewModel"></p-nav>
   </div>
 </template>
 
@@ -10,13 +10,7 @@
   export default {
     name: editSetting.key,
     props: {
-      dataId: {
-        type: String
-      },
-      widgetId: {
-        type: String
-      },
-      pageValues: {}
+      widget: {}
     },
     data () {
       return {
@@ -30,17 +24,17 @@
     },
     methods: {
       async  init () {
-        if (this.pageValues !== undefined) {
-          this.viewModel = this.pageValues
+        if (this.widget !== undefined && this.widget.value !== undefined) {
+          this.viewModel = this.widget.value
         } else {
           const parameter = {
-            dataId: this.dataId,
+            dataId: this.widget && this.widget.dataId,
             defaultId: '5b406cddfef00000a0000001'
           }
           this.viewModel = await this.$api.get(THEME_GETVALUE_GET, parameter)
         }
         this.asyncflag = true
-        // console.info('zk-title数据',this.viewModel)
+        // console.info('zk-nav数据',this.viewModel)
       }
     }
   }
@@ -48,7 +42,7 @@
 
 <style scoped lang="less">
   @import '~_style/index.less'; 
-  .zk-title {
+  .zk-nav {
     font-size: @font-size-base;
   }
 </style>

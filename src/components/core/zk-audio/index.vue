@@ -1,6 +1,6 @@
 <template>
   <div class="zk-audio" :style="styles" component-path="core/zk-audio" v-if="asyncflag">
-   {{viewModel}}
+    <x-audio :elementData="viewModel"></x-audio>
   </div>
 </template>
 
@@ -10,13 +10,7 @@
   export default {
     name: editSetting.key,
     props: {
-      dataId: {
-        type: String
-      },
-      widgetId: {
-        type: String
-      },
-      pageValues: {}
+      widget: {}
     },
     data () {
       return {
@@ -30,11 +24,11 @@
     },
     methods: {
       async  init () {
-        if (this.pageValues !== undefined) {
-          this.viewModel = this.pageValues
+        if (this.widget !== undefined && this.widget.value !== undefined) {
+          this.viewModel = this.widget.value
         } else {
           const parameter = {
-            dataId: this.dataId,
+            dataId: this.widget && this.widget.dataId,
             defaultId: '5b406cddfef00000a0000001'
           }
           this.viewModel = await this.$api.get(THEME_GETVALUE_GET, parameter)

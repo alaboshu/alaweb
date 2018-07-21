@@ -1,4 +1,5 @@
 'use strict'
+
 const fs = require('fs')
 const os = require('os')
 const path = require('path')
@@ -11,6 +12,7 @@ const glob = require('glob')
 function resolve (dir) {
   return path.join(__dirname, '../..', dir)
 }
+
 
 const happyThreadPool = HappyPack.ThreadPool({
   size: os.cpus().length
@@ -47,12 +49,15 @@ fs.writeFileSync(resolve('./src/router/routes.js'), `/* eslint-disable */\nmodul
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
-  entry: `../src/_start/${process.env.MODE || 'h5'}/main.js`,
+  entry: {
+    app: `../src/_start/${process.env.MODE || 'h5'}/main.js`,
+  },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
     publicPath: process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath : config.dev.assetsPublicPath
+      ? config.build.assetsPublicPath
+      : config.dev.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json', '.less'],
