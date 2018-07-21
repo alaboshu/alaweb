@@ -44,11 +44,13 @@ import ZkTable from '@/components/core/zk-table'
 import ZkText from '@/components/core/zk-text'
 import ZkVideo from '@/components/core/zk-video'
 import ZkNav from '@/components/pc/zk-nav'
+import ZkOrderAddress from '@/components/pc/zk-order-address'
 import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
 import ZkProductItem from '@/components/shop/zk-product-item'
 
 import PNav from '@/elements/pc/p-nav'
+import POrderAddress from '@/elements/pc/p-order-address'
 import XAddress from '@/elements/pc/x-address'
 import XAudio from '@/elements/pc/x-audio'
 import XAutoForm from '@/elements/pc/x-auto-form'
@@ -118,11 +120,13 @@ Vue.component('zk-table', ZkTable)
 Vue.component('zk-text', ZkText)
 Vue.component('zk-video', ZkVideo)
 Vue.component('zk-nav', ZkNav)
+Vue.component('zk-order-address', ZkOrderAddress)
 Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
 Vue.component('zk-product-item', ZkProductItem)
 
 Vue.component('p-nav', PNav)
+Vue.component('p-order-address', POrderAddress)
 Vue.component('x-address', XAddress)
 Vue.component('x-audio', XAudio)
 Vue.component('x-auto-form', XAutoForm)
