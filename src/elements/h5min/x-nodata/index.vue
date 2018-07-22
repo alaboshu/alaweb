@@ -3,6 +3,10 @@
     <p>暂无数据</p>
   </div>
 </template>
+
+<script>
+</script>
+
 <style scoped lang="less">
   .x-nodata {
     margin: 0 auto;
