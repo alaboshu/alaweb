@@ -1,28 +1,32 @@
 <template>
   <div class="x-auto-form" :style="styles">
-    <el-form ref="form" :model="model" :rules="rules" label-width="120px" v-if="form.groups">
-      <div>{{form.name}}</div>
+    <div v-if="form.groups">
       <div v-for="(group, gIndex) of form.groups" :key="gIndex">
         <div class="group-title">{{group.groupName}}</div>
-        <component :is="`x-af-${typeMap[item.type]}`" v-for="(item, iIndex) of group.items" :key="iIndex" :item="item" />
+        <div v-for="(item, iIndex) of group.items" :key="iIndex">
+          <xAfPassword :item="item" v-if="typeMap[item.type] === 'password'" />
+          <xAfTextBox :item="item" v-if="typeMap[item.type] === 'textBox'" />
+        </div>
       </div>
-      <el-form-item>
-        <el-button type="primary" @click="submitForm">提交</el-button>
-        <el-button @click="resetForm">重置</el-button>
-      </el-form-item>
-    </el-form>
+      <div>
+        <x-button type="primary" @click="submitForm">提交</x-button>
+        <x-button @click="resetForm">重置</x-button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-  import * as xAfComps from './x-af-comps'
   import typeMap from './type-map'
   import regMap from './reg-map'
+  import xAfPassword from './x-af-comps/x-af-password'
+  import xAfTextBox from './x-af-comps/x-af-text-box'
 
   export default {
     name: 'x-auto-form',
     components: {
-      ...xAfComps
+      xAfPassword,
+      xAfTextBox
     },
     props: {
       viewApi: {
@@ -32,7 +36,8 @@
       postApi: {
         type: String,
         required: true
-      }
+      },
+      successReturn: String
     },
     data () {
       return {
@@ -80,20 +85,16 @@
           })
         })
       },
-      submitForm () {
-        this.$refs.form.validate(async (valid) => {
-          if (!valid) return false
-          console.log(this.model)
-          const data = await this.$api.post(this.postApi, this.model)
-          if (data) {
-            this.$emit('postSuccess', data)
-          } else {
-            this.$emit('postFailed')
-          }
-        })
+      async submitForm () {
+        console.log(this.model)
+        const data = await this.$api.post(this.postApi, this.model)
+        if (data) {
+          this.$emit('postSuccess', data)
+        } else {
+          this.$emit('postFailed')
+        }
       },
       resetForm () {
-        this.$refs.form.resetFields()
         this.initModel()
       }
     }
