@@ -1,16 +1,12 @@
-// 自动同步，请勿手动修改
 import Vue from 'vue'
+import MpvueRouterPatch from 'mpvue-router-patch'
+import global from '@/service/core/global' 
 import App from './App'
-import router from '@/router'
-import global from '@/service/core/global'
-import local from '@/service/core/local'
-import MintUI from 'mint-ui'
-import 'mint-ui/lib/style.css'
-import '@/service/core/rem'
-import 'vue2-toast/lib/toast.css'
-import Toast from 'vue2-toast'
+import store from '@/store'
 import {
-  api
+  api,
+  apiUrl,
+  config
 } from '@/service/api'
 
 import ZkAddress from '@/components/core/zk-address'
@@ -137,26 +133,26 @@ Vue.component('x-product-item', XProductItem)
 Vue.component('x-searchbar', XSearchbar)
 Vue.component('x-swiper', XSwiper)
 
-
+Vue.use(MpvueRouterPatch)
 Vue.use(global)
-Vue.use(MintUI)
-Vue.use(Toast)
-
 Vue.config.productionTip = false
+App.store = store
 Vue.prototype.$api = api
-Vue.prototype.$client = 'App'
-Vue.prototype.$local = local
-Vue.prototype.$toast = local
-Vue.prototype.$message = local
-Vue.prototype.$loading = true
+Vue.prototype.$apiUrl = apiUrl
+Vue.prototype.$url = config.url
+const app = new Vue(App)
+app.$mount()
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: {
-    App
-  },
-  template: '<App/>'
-})
+export default {
+  // 这个字段走 app.json
+  config: {
+    pages: ['^pages/index'],
+    window: {
+      backgroundTextStyle: 'light',
+      navigationBarBackgroundColor: '#fff',
+      navigationBarTitleText: 'WeChat',
+      navigationBarTextStyle: 'black'
+    }
+  }
+}
 
