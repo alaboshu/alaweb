@@ -1,12 +1,12 @@
 <template>
   <div class="zk-head" :style="styles">
-    <x-header :title="title">
+    <x-head :title="title">
       <div class="btn-back" slot="left">
         <div @click="$router.push(goBackUrl)" class="btn-back-left">
           <x-icon src="zk-arrows-left" size="20"></x-icon>{{backText}}
         </div>
       </div>
-    </x-header>
+    </x-head>
     <div class="head-placeholder "></div>
   </div>
 </template>

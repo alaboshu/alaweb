@@ -1,11 +1,8 @@
 <template>
-  <!-- <div class="wv-navbar" :style="style">
+  <div class="wv-navbar" :style="style">
     <slot />
-    <div class="wv-navbar-underline" v-if="animate" :style="lineStyle" /> -->
-  <div class="wv-navbar">
-    <slot />
-    <div class="wv-navbar-underline" v-if="animate" />
-  </div> 
+    <div class="wv-navbar-underline" v-if="animate" :style="lineStyle" />
+  </div>
 </template>
 
 <script>
@@ -22,7 +19,7 @@
         type: String,
         default: '#fff'
       },
-      activeColor: { // 激活的字体颜色
+      activeColor: {
         type: String,
         default: '#2196f3'
       },
@@ -30,7 +27,7 @@
         type: String,
         default: '#cfcfcf'
       },
-      lineWidth: { // 下划线
+      lineWidth: {
         type: Number,
         default: 2
       },
@@ -51,8 +48,8 @@
     computed: {
       style () {
         let ret = {
-          // position: this.fixed ? 'fixed' : 'absolute',
-          // backgroundColor: this.backgroundColor
+          position: this.fixed ? 'fixed' : 'absolute',
+          backgroundColor: this.backgroundColor
         }
         if (this.fixed) {
           ret.top = 0
