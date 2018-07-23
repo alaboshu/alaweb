@@ -20,10 +20,10 @@ module.exports = {
   },
   server: {
     path: './',
-    port: 8889
+    port: 7889
   },
   socketServer: {
-    port: 8890,
+    port: 7890,
     switch: true
   },
   localZipFolder: {
