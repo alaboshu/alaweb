@@ -3,7 +3,7 @@ module.exports = {
   eslint: false,
   webpackWarnings: false,
   exports: [
-    'config/index.js',
+    '_start/app/main.js',
     'pages/index.vue',
     'pages/mediator/index.vue'
   ],
