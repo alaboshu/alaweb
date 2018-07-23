@@ -87,7 +87,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   .weui-search-bar__label {
     transform-origin: 0px 0px 0px;
     opacity: 1;

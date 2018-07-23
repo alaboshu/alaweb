@@ -26,7 +26,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   .tips {
     display: flex;
     height: 100%;

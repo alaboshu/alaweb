@@ -7,7 +7,7 @@
 <script>
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   .x-nodata {
     margin: 0 auto;
     p {

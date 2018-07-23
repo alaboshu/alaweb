@@ -51,7 +51,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   @import '../../../assets/iconfont/iconfont.css';
   .wv-spinner {
     display: inline-block;

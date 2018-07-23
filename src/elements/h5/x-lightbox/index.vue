@@ -23,7 +23,7 @@
     }
   }
 </script>
-<style scoped lang="less">
+<style lang="less">
   @import '~_style/index.less';
   .common-x-lightbox {
   	font-size: @font-size-base;

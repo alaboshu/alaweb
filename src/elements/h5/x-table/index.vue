@@ -23,7 +23,7 @@
     }
   }
 </script>
-<style scoped lang="less">
+<style lang="less">
   @import '~_style/index.less';
   .common-x-table {
   	font-size: @font-size-base;

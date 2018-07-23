@@ -71,7 +71,7 @@
   }
 </script>
 
-<style scoped>
+<style>
   .searchbar-result {
     margin-top: 0;
     font-size: 14px;

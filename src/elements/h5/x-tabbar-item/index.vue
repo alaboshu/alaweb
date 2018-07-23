@@ -20,7 +20,7 @@
   })
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   .weui-tabbar__item {
     text-decoration: none;
   }

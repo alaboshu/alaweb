@@ -40,10 +40,10 @@
   }
 </script>
 
-<style scoped lang="less">
+<style  lang="less">
   @import '~_style/index.less';
   .zk-backtop {
-    font-size: @font-size-base;
+  	font-size: @font-size-base;
   }
 </style>
 

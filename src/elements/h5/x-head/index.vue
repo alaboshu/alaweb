@@ -29,7 +29,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   .wv-header {
     display: flex;
     align-items: center;

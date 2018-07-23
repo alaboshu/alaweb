@@ -52,7 +52,7 @@
   }
 </script>
 
-<style scoped>
+<style>
   page,
   .page,
   .page__bd {

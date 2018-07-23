@@ -19,7 +19,7 @@
     }
   }
 </script>
-<style scoped lang="less">
+<style lang="less">
   .weui-grid {
     text-decoration: none;
     color: #000;

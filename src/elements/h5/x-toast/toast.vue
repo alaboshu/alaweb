@@ -55,7 +55,7 @@
   }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
   .weui-icon_toast {
     font-size: 40px;
   }

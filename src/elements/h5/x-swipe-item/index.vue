@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   .wv-swipe-item {
     float: left;
     height: 100%;

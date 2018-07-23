@@ -54,7 +54,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   @import '~_style/index.less';
   .svg-icon {
     display: inline-block;

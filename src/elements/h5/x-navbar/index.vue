@@ -96,7 +96,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   .wv-navbar {
     display: flex;
     width: 100%;

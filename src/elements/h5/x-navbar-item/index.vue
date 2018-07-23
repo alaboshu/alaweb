@@ -40,7 +40,7 @@ export default{
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   .wv-navbar__item {
     position: relative;
     display: block;

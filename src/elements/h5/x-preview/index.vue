@@ -32,7 +32,7 @@
     }
   }
 </script>
-<style scoped lang="less">
+<style lang="less">
   @import '~_style/index.less';
   .common-x-preview {
   	font-size: @font-size-base;

@@ -2,8 +2,6 @@
   <div>
     <text class="title">Hello Weex !</text>
     <text class="title">Hello Weex !</text>
-    <a href="pages/mediator/index.js">测试页面</a>
-    <wxc-icon name="success"></wxc-icon>
   </div>
 </template>
 

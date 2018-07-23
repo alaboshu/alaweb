@@ -1,7 +1,7 @@
 <template>
   <p class="x-divider"></p>
 </template>
-<style scoped lang="less">
+<style lang="less">
   .x-divider {
     background: #f7f7f7;
     height: 5px;
