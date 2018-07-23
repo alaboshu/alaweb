@@ -43,6 +43,7 @@ import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
 import ZkProductItem from '@/components/shop/zk-product-item'
 
+import XAutoForm from '@/elements/h5min/x-auto-form'
 import XBadge from '@/elements/h5min/x-badge'
 import XBox from '@/elements/h5min/x-box'
 import XCol from '@/elements/h5min/x-col'
@@ -105,6 +106,7 @@ Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
 Vue.component('zk-product-item', ZkProductItem)
 
+Vue.component('x-auto-form', XAutoForm)
 Vue.component('x-badge', XBadge)
 Vue.component('x-box', XBox)
 Vue.component('x-col', XCol)

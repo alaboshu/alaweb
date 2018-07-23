@@ -1,8 +1,7 @@
 <template>
   <div class="pages--test">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
+    <zk-help-row></zk-help-row>
     <zk-grid></zk-grid>
-    <zk-foot></zk-foot>
   </div>
 </template>
 
@@ -35,7 +34,7 @@
 
 <style scoped lang="less">
   .pages--test {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 

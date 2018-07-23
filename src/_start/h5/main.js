@@ -50,7 +50,7 @@ import ZkProductItem from '@/components/shop/zk-product-item'
 import ETabSwiper from '@/elements/h5/e-tab-swiper'
 import XAddress from '@/elements/h5/x-address'
 import XAudio from '@/elements/h5/x-audio'
-import XAutoForm from '@/elements/h5min/x-auto-form'
+import XAutoForm from '@/elements/h5/x-auto-form'
 import XAvatar from '@/elements/h5/x-avatar'
 import XButton from '@/elements/h5/x-button'
 import XBuyAddress from '@/elements/h5/x-buy-address'
@@ -109,6 +109,7 @@ import XToastIcon from '@/elements/h5/x-toast-icon'
 import XUpload from '@/elements/h5/x-upload'
 import XVerifiy from '@/elements/h5/x-verifiy'
 import XVideo from '@/elements/h5/x-video'
+import XAutoForm from '@/elements/h5min/x-auto-form'
 import XBadge from '@/elements/h5min/x-badge'
 import XBox from '@/elements/h5min/x-box'
 import XCol from '@/elements/h5min/x-col'
@@ -214,6 +215,7 @@ Vue.component('x-toast-icon', XToastIcon)
 Vue.component('x-upload', XUpload)
 Vue.component('x-verifiy', XVerifiy)
 Vue.component('x-video', XVideo)
+Vue.component('x-auto-form', XAutoForm)
 Vue.component('x-badge', XBadge)
 Vue.component('x-box', XBox)
 Vue.component('x-col', XCol)
@@ -233,7 +235,7 @@ Vue.prototype.$api = api
 Vue.prototype.$client = 'WapH5'
 Vue.prototype.$local = local
 Vue.prototype.$toast = local
-Vue.prototype.$message = local
+//Vue.prototype.$message = local
 Vue.prototype.$loading = true
 
 /* eslint-disable no-new */
