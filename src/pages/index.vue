@@ -2,6 +2,7 @@
   <div>
     <text class="title">zkweb !</text>
     <text class="title">宋和珈 </text>
+    <text class="title">宋和珈 !</text>
     <text class="title">Hello Weex !</text>
   </div>
 </template>
