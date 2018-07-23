@@ -20,6 +20,9 @@
   },
   "dependencies": {
     "element-ui": "^2.4.3",
+    "bui-weex": "^0.2.5",
+    "eros-widget": "^1.0.2-beta.2",
+    "weex-ui": "^0.6.0beta-2",
     "flyio": "^0.5.9",
     "mint-ui": "^2.2.13",
     "mpvue": "^1.0.0",
