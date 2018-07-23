@@ -5,7 +5,7 @@ module.exports = {
   exports: [
     '_start/app/main.js',
     'pages/index.vue',
-    'pages/mediator/index.vue'
+    '_start/app/mediator/index.vue'
   ],
   alias: {
     Components: 'components',
