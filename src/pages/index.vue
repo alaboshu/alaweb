@@ -1,6 +1,7 @@
 <template>
   <div>
-    <text class="title">Hello d Weex !</text>
+    <text class="title">zkweb !</text>
+    <text class="title">zkweb !</text>
     <text class="title">Hello Weex !</text>
   </div>
 </template>
