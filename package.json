@@ -13,7 +13,7 @@
     "dev:min": "cross-env MODE=min node build/min/dev.js ",
     "build:min": "cross-env MODE=min node build/min/build.js",
     "dev:app": "node build/app/dev.js",
-    "pack:app": "node build/app/pack.js",
+    "build:app": "node build/app/pack.js",
     "all": "npm run dev && npm run devH5",
     "lint": "eslint --ext .js,.vue src",
     "fix": "eslint --ext .js,.vue src --fix"
