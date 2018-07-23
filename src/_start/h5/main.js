@@ -245,3 +245,4 @@ new Vue({
   },
   template: '<App/>'
 })
+

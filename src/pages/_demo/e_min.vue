@@ -1,0 +1,32 @@
+<template>
+  <div class="pages--components">
+      <x-badge></x-badge>
+      <x-box></x-box>
+      <x-col></x-col>
+      <x-color></x-color>
+      <x-icon></x-icon>
+      <x-nodata></x-nodata>
+      <x-row></x-row>
+      <x-verifiy-phone></x-verifiy-phone>
+      <e-tab-swiper></e-tab-swiper>
+      <x-address></x-address>
+      <x-auto-form></x-auto-form>
+      <x-button></x-button>
+      <x-buy-address></x-buy-address>
+      <x-cell></x-cell>
+      <x-foot></x-foot>
+      <x-grid></x-grid>
+      <x-groupbuy></x-groupbuy>
+      <x-head></x-head>
+      <x-image></x-image>
+      <x-list></x-list>
+      <x-navbar></x-navbar>
+      <x-picker></x-picker>
+      <x-preview></x-preview>
+      <x-product-class></x-product-class>
+      <x-product-item></x-product-item>
+      <x-searchbar></x-searchbar>
+      <x-swiper></x-swiper>
+
+  </div>
+</template>
