@@ -1,6 +1,6 @@
 <template>
   <div class="pages--components">
-      <e-tab-swiper></e-tab-swiper>
+	      <e-tab-swiper></e-tab-swiper>
       <x-address></x-address>
       <x-audio></x-audio>
       <x-auto-form></x-auto-form>
@@ -73,3 +73,7 @@
 
   </div>
 </template>
+<script>
+  export default {
+  }
+</script>

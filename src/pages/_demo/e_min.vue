@@ -1,6 +1,6 @@
 <template>
   <div class="pages--components">
-      <x-badge></x-badge>
+	      <x-badge></x-badge>
       <x-box></x-box>
       <x-col></x-col>
       <x-color></x-color>
@@ -30,3 +30,7 @@
 
   </div>
 </template>
+<script>
+  export default {
+  }
+</script>

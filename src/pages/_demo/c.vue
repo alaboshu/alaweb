@@ -1,6 +1,6 @@
 <template>
   <div class="pages--components">
-      <zk-address></zk-address>
+	      <zk-address></zk-address>
       <zk-audio></zk-audio>
       <zk-auto-form></zk-auto-form>
       <zk-avatar></zk-avatar>
@@ -40,3 +40,7 @@
 
   </div>
 </template>
+<script>
+  export default {
+  }
+</script>

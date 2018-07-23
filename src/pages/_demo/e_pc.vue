@@ -1,6 +1,6 @@
 <template>
   <div class="pages--components">
-      <p-backtop></p-backtop>
+	      <p-backtop></p-backtop>
       <p-help-row></p-help-row>
       <p-nav></p-nav>
       <p-top-nav></p-top-nav>
@@ -41,3 +41,7 @@
 
   </div>
 </template>
+<script>
+  export default {
+  }
+</script>
