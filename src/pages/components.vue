@@ -1,5 +1,5 @@
 <template>
-  <div class="pages--components">
+  <div class="pages-components">
     <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
     <zk-grid></zk-grid>
     <zk-foot></zk-foot>
@@ -34,7 +34,7 @@
 </script>
 
 <style scoped lang="less">
-  .pages--components {
+  .pages-components {
   	width: 100%;
   }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="pages-user-recuser">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <zk-grid></zk-grid>
+    <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
+    <zk-list v-if="asyncFlag" :widget="widget"></zk-list>
     <zk-foot></zk-foot>
   </div>
 </template>
@@ -15,6 +15,7 @@
     data () {
       return {
         pageInfo: '',
+        widget: '',
         asyncFlag: false
       }
     },
@@ -23,11 +24,11 @@
     },
     methods: {
       async init () {
-        this.$loading = true
+        this.widget = {
+          apiUrl: 'Api/User/Recommend'
+        }
         this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
-        this.$loading = false
         this.asyncFlag = true
-        // console.info('测试一页面', this.pageInfo)
       }
     }
   }
@@ -35,7 +36,7 @@
 
 <style scoped lang="less">
   .pages-user-recuser {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 
