@@ -1,20 +1,18 @@
 <template>
   <div class="pages--components">
-	      <x-badge></x-badge>
-      <x-box></x-box>
-      <x-col></x-col>
-      <x-color></x-color>
+	      <x-col></x-col>
       <x-icon></x-icon>
-      <x-nodata></x-nodata>
       <x-row></x-row>
-      <x-verifiy-phone></x-verifiy-phone>
+      <x-badge></x-badge>
+      <x-box></x-box>
+      <x-color></x-color>
+      <x-nodata></x-nodata>
       <e-tab-swiper></e-tab-swiper>
       <x-address></x-address>
       <x-auto-form></x-auto-form>
       <x-button></x-button>
       <x-buy-address></x-buy-address>
       <x-cell></x-cell>
-      <x-foot></x-foot>
       <x-grid></x-grid>
       <x-groupbuy></x-groupbuy>
       <x-head></x-head>
@@ -27,6 +25,8 @@
       <x-product-item></x-product-item>
       <x-searchbar></x-searchbar>
       <x-swiper></x-swiper>
+      <x-foot></x-foot>
+      <x-verifiy-phone></x-verifiy-phone>
 
   </div>
 </template>

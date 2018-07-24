@@ -51,6 +51,9 @@ import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
 import ZkProductItem from '@/components/shop/zk-product-item'
 
+import XCol from '@/elements/all/x-col'
+import XIcon from '@/elements/all/x-icon'
+import XRow from '@/elements/all/x-row'
 import PBacktop from '@/elements/pc/p-backtop'
 import PHelpRow from '@/elements/pc/p-help-row'
 import PNav from '@/elements/pc/p-nav'
@@ -69,7 +72,6 @@ import XGrid from '@/elements/pc/x-grid'
 import XGroupbuy from '@/elements/pc/x-groupbuy'
 import XHead from '@/elements/pc/x-head'
 import XHtml from '@/elements/pc/x-html'
-import XIcon from '@/elements/pc/x-icon'
 import XImage from '@/elements/pc/x-image'
 import XKeyword from '@/elements/pc/x-keyword'
 import XList from '@/elements/pc/x-list'
@@ -128,6 +130,9 @@ Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
 Vue.component('zk-product-item', ZkProductItem)
 
+Vue.component('x-col', XCol)
+Vue.component('x-icon', XIcon)
+Vue.component('x-row', XRow)
 Vue.component('p-backtop', PBacktop)
 Vue.component('p-help-row', PHelpRow)
 Vue.component('p-nav', PNav)
@@ -146,7 +151,6 @@ Vue.component('x-grid', XGrid)
 Vue.component('x-groupbuy', XGroupbuy)
 Vue.component('x-head', XHead)
 Vue.component('x-html', XHtml)
-Vue.component('x-icon', XIcon)
 Vue.component('x-image', XImage)
 Vue.component('x-keyword', XKeyword)
 Vue.component('x-list', XList)

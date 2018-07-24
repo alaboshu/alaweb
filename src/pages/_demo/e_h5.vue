@@ -1,6 +1,9 @@
 <template>
   <div class="pages--components">
-	      <e-tab-swiper></e-tab-swiper>
+	      <x-col></x-col>
+      <x-icon></x-icon>
+      <x-row></x-row>
+      <e-tab-swiper></e-tab-swiper>
       <x-address></x-address>
       <x-audio></x-audio>
       <x-auto-form></x-auto-form>
@@ -13,7 +16,6 @@
       <x-countdown></x-countdown>
       <x-dialog></x-dialog>
       <x-divider></x-divider>
-      <x-foot></x-foot>
       <x-from></x-from>
       <x-grid></x-grid>
       <x-grid-item></x-grid-item>
@@ -64,11 +66,9 @@
       <x-video></x-video>
       <x-badge></x-badge>
       <x-box></x-box>
-      <x-col></x-col>
       <x-color></x-color>
-      <x-icon></x-icon>
       <x-nodata></x-nodata>
-      <x-row></x-row>
+      <x-foot></x-foot>
       <x-verifiy-phone></x-verifiy-phone>
 
   </div>

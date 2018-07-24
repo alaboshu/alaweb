@@ -1,6 +1,9 @@
 <template>
   <div class="pages--components">
-	      <p-backtop></p-backtop>
+	      <x-col></x-col>
+      <x-icon></x-icon>
+      <x-row></x-row>
+      <p-backtop></p-backtop>
       <p-help-row></p-help-row>
       <p-nav></p-nav>
       <p-top-nav></p-top-nav>
@@ -18,7 +21,6 @@
       <x-groupbuy></x-groupbuy>
       <x-head></x-head>
       <x-html></x-html>
-      <x-icon></x-icon>
       <x-image></x-image>
       <x-keyword></x-keyword>
       <x-list></x-list>
