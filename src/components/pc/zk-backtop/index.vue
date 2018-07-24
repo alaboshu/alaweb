@@ -24,6 +24,7 @@
     },
     methods: {
       async  init () {
+        console.info('zk-backtop')
         if (this.widget !== undefined && this.widget.value !== undefined) {
           this.viewModel = this.widget.value
         } else {
@@ -43,7 +44,7 @@
 <style  lang="less">
   @import '~_style/index.less';
   .zk-backtop {
-  	font-size: @font-size-base;
+    font-size: @font-size-base;
   }
 </style>
 

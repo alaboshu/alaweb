@@ -51,9 +51,6 @@ import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
 import ZkProductItem from '@/components/shop/zk-product-item'
 
-import XCol from '@/elements/all/x-col'
-import XIcon from '@/elements/all/x-icon'
-import XRow from '@/elements/all/x-row'
 import PBacktop from '@/elements/pc/p-backtop'
 import PHelpRow from '@/elements/pc/p-help-row'
 import PNav from '@/elements/pc/p-nav'
@@ -130,9 +127,6 @@ Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
 Vue.component('zk-product-item', ZkProductItem)
 
-Vue.component('x-col', XCol)
-Vue.component('x-icon', XIcon)
-Vue.component('x-row', XRow)
 Vue.component('p-backtop', PBacktop)
 Vue.component('p-help-row', PHelpRow)
 Vue.component('p-nav', PNav)

@@ -1,6 +1,6 @@
 <template>
   <div class="pc-p-backtop" element-path="pc/p-backtop">
-  {{viewModel}}
+    backtop
   </div>
 </template>
 
@@ -31,6 +31,6 @@
 <style lang="less">
   @import '~_style/index.less';
   .pc-p-backtop {
-  	font-size: @font-size-base;
+    font-size: @font-size-base;
   }
 </style>
