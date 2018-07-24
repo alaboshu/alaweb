@@ -1,9 +1,6 @@
 <template>
   <div>
-    <text class="title">zkweb !</text>
     <div class="title">宋和珈 ！</div>
-    <zk-backtop></zk-backtop>
-    <zk-help-row></zk-help-row>
   </div>
 </template>
 
