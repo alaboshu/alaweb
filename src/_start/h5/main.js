@@ -60,7 +60,6 @@ import XChecklist from '@/elements/h5/x-checklist'
 import XCountdown from '@/elements/h5/x-countdown'
 import XDialog from '@/elements/h5/x-dialog'
 import XDivider from '@/elements/h5/x-divider'
-import XFoot from '@/elements/h5/x-foot'
 import XFrom from '@/elements/h5/x-from'
 import XGrid from '@/elements/h5/x-grid'
 import XGridItem from '@/elements/h5/x-grid-item'
@@ -111,12 +110,8 @@ import XVerifiy from '@/elements/h5/x-verifiy'
 import XVideo from '@/elements/h5/x-video'
 import XBadge from '@/elements/h5min/x-badge'
 import XBox from '@/elements/h5min/x-box'
-import XCol from '@/elements/h5min/x-col'
 import XColor from '@/elements/h5min/x-color'
-import XIcon from '@/elements/h5min/x-icon'
 import XNodata from '@/elements/h5min/x-nodata'
-import XRow from '@/elements/h5min/x-row'
-import XVerifiyPhone from '@/elements/h5min/x-verifiy-phone'
 
 Vue.component('zk-address', ZkAddress)
 Vue.component('zk-audio', ZkAudio)
@@ -165,7 +160,6 @@ Vue.component('x-checklist', XChecklist)
 Vue.component('x-countdown', XCountdown)
 Vue.component('x-dialog', XDialog)
 Vue.component('x-divider', XDivider)
-Vue.component('x-foot', XFoot)
 Vue.component('x-from', XFrom)
 Vue.component('x-grid', XGrid)
 Vue.component('x-grid-item', XGridItem)
@@ -216,12 +210,8 @@ Vue.component('x-verifiy', XVerifiy)
 Vue.component('x-video', XVideo)
 Vue.component('x-badge', XBadge)
 Vue.component('x-box', XBox)
-Vue.component('x-col', XCol)
 Vue.component('x-color', XColor)
-Vue.component('x-icon', XIcon)
 Vue.component('x-nodata', XNodata)
-Vue.component('x-row', XRow)
-Vue.component('x-verifiy-phone', XVerifiyPhone)
 
 
 Vue.use(global)
@@ -245,3 +235,4 @@ new Vue({
   },
   template: '<App/>'
 })
+

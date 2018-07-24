@@ -1,6 +1,6 @@
 <template>
   <div class="pages-order-buy">
-    <zk-head backText="首页" :title="pageInfo.title"></zk-head>
+    <zk-head backText="首页" title="123"></zk-head>
     <zk-buy-address></zk-buy-address>
     <!-- <x-divider></x-divider> -->
     <x-group>
@@ -31,7 +31,6 @@
               </div>
             </div>
           </li>
-          <li></li>
         </ul>
       </div>
       <x-cell title="请选择快递方式" @click="ceshi()" isLink></x-cell>

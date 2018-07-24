@@ -1,7 +1,6 @@
 <template>
   <div class="pc-p-help-row" element-path="pc/p-help-row">
     <span>ddd</span>
-    {{viewModel}}
   </div>
 </template>
 
@@ -29,7 +28,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   @import '~_style/index.less';
   .pc-p-help-row {
     font-size: @font-size-base;

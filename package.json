@@ -13,13 +13,16 @@
     "dev:min": "cross-env MODE=min node build/min/dev.js ",
     "build:min": "cross-env MODE=min node build/min/build.js",
     "dev:app": "node build/app/dev.js",
-    "pack:app": "node build/app/pack.js",
+    "build:app": "node build/app/pack.js",
     "all": "npm run dev && npm run devH5",
     "lint": "eslint --ext .js,.vue src",
     "fix": "eslint --ext .js,.vue src --fix"
   },
   "dependencies": {
     "element-ui": "^2.4.3",
+    "bui-weex": "^0.2.5",
+    "eros-widget": "^1.0.2-beta.2",
+    "weex-ui": "^0.6.0beta-2",
     "flyio": "^0.5.9",
     "mint-ui": "^2.2.13",
     "mpvue": "^1.0.0",

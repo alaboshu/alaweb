@@ -28,7 +28,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   @import '~_style/index.less';
   .pc-p-nav {
   	font-size: @font-size-base;

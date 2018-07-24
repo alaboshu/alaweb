@@ -1,7 +1,6 @@
 <template>
   <div class="pages--test">
     <zk-help-row></zk-help-row>
-    <zk-grid></zk-grid>
   </div>
 </template>
 

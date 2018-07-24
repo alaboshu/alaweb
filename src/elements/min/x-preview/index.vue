@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .weui-form-preview {
   margin-bottom: 25px;
 }

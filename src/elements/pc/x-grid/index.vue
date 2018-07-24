@@ -2,7 +2,6 @@
   <div class="weui-grids">
     <a :href="item.Url" class="weui-grid" v-for="(item,index) in viewModel" :key="index" :style="'width:'+100/col+'%'">
       <div class="weui-grid__icon">
-        <x-icon :src="item.Image"></x-icon>
       </div>
       <p class="weui-grid__label">{{item.Name}}</p>
     </a>
@@ -33,7 +32,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   @import '~_style/index.less'; // 颜色、边框、大小请尽可能的使用变量
   .weui-grid {
     text-decoration: none;

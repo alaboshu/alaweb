@@ -158,7 +158,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   .wv-number-spinner {
     display: flex;
     font-size: 13px;

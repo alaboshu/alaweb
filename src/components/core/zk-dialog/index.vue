@@ -48,7 +48,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style  lang="less">
   @import '~_style/index.less';
   .zk-dialog {
   	font-size: @font-size-base;

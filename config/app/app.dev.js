@@ -3,9 +3,9 @@ module.exports = {
   eslint: false,
   webpackWarnings: false,
   exports: [
-    'config/index.js',
+    '_start/app/main.js',
     'pages/index.vue',
-    'pages/mediator/index.vue'
+    '_start/app/mediator/index.vue'
   ],
   alias: {
     Components: 'components',
@@ -20,10 +20,10 @@ module.exports = {
   },
   server: {
     path: './',
-    port: 8889
+    port: 2001
   },
   socketServer: {
-    port: 8890,
+    port: 2002,
     switch: true
   },
   localZipFolder: {

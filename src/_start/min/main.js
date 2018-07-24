@@ -45,19 +45,14 @@ import ZkProductItem from '@/components/shop/zk-product-item'
 
 import XBadge from '@/elements/h5min/x-badge'
 import XBox from '@/elements/h5min/x-box'
-import XCol from '@/elements/h5min/x-col'
 import XColor from '@/elements/h5min/x-color'
-import XIcon from '@/elements/h5min/x-icon'
 import XNodata from '@/elements/h5min/x-nodata'
-import XRow from '@/elements/h5min/x-row'
-import XVerifiyPhone from '@/elements/h5min/x-verifiy-phone'
 import ETabSwiper from '@/elements/min/e-tab-swiper'
 import XAddress from '@/elements/min/x-address'
 import XAutoForm from '@/elements/min/x-auto-form'
 import XButton from '@/elements/min/x-button'
 import XBuyAddress from '@/elements/min/x-buy-address'
 import XCell from '@/elements/min/x-cell'
-import XFoot from '@/elements/min/x-foot'
 import XGrid from '@/elements/min/x-grid'
 import XGroupbuy from '@/elements/min/x-groupbuy'
 import XHead from '@/elements/min/x-head'
@@ -107,19 +102,14 @@ Vue.component('zk-product-item', ZkProductItem)
 
 Vue.component('x-badge', XBadge)
 Vue.component('x-box', XBox)
-Vue.component('x-col', XCol)
 Vue.component('x-color', XColor)
-Vue.component('x-icon', XIcon)
 Vue.component('x-nodata', XNodata)
-Vue.component('x-row', XRow)
-Vue.component('x-verifiy-phone', XVerifiyPhone)
 Vue.component('e-tab-swiper', ETabSwiper)
 Vue.component('x-address', XAddress)
 Vue.component('x-auto-form', XAutoForm)
 Vue.component('x-button', XButton)
 Vue.component('x-buy-address', XBuyAddress)
 Vue.component('x-cell', XCell)
-Vue.component('x-foot', XFoot)
 Vue.component('x-grid', XGrid)
 Vue.component('x-groupbuy', XGroupbuy)
 Vue.component('x-head', XHead)

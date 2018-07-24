@@ -51,7 +51,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   @import '~_style/index.less'; // 颜色、边框、大小请尽可能的使用变量
   .weui-grid {
     text-decoration: none;

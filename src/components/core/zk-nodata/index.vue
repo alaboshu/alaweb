@@ -40,7 +40,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style  lang="less">
   @import '~_style/index.less'; 
   .zk-nodata {
     font-size: @font-size-base;

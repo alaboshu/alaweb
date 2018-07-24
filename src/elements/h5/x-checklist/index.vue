@@ -78,7 +78,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   .weui-check__label-disabled {
     background-color: rgba(0, 0, 0, 0.1);
   }

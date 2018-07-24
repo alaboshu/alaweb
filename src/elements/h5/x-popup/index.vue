@@ -60,7 +60,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   .wv {
     &-modal {
       position: fixed;

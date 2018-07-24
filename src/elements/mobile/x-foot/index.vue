@@ -35,7 +35,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   @import '~_style/index.less';
   .h5-x-foot {
     font-size: @font-size-base;

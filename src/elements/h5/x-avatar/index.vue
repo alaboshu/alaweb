@@ -1,6 +1,6 @@
 <template>
   <div class="h5-x-avatar" element-path="h5/x-avatar">
-  {{viewModel}}
+    {{viewModel}}
   </div>
 </template>
 
@@ -28,7 +28,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   @import '~_style/index.less';
   .h5-x-avatar {
   	font-size: @font-size-base;

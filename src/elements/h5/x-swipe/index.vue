@@ -222,7 +222,7 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   .wv-swipe {
     overflow: hidden;
     position: relative;

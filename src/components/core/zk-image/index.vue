@@ -32,7 +32,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style  lang="less">
   @import '~_style/index.less';
   .zk-image {
     font-size: @font-size-base;

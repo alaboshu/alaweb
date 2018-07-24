@@ -101,7 +101,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   @import '~_style/index.less';
   .zkweb-e-tab-swiper {
     position: fixed;

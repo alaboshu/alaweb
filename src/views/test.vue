@@ -1,8 +1,8 @@
 <template>
   <div class="pages-test">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <zk-grid></zk-grid>
+    <zk-help-row></zk-help-row>
     <zk-foot></zk-foot>
+    <zk-backtop></zk-backtop>
   </div>
 </template>
 
@@ -32,7 +32,7 @@
 
 <style scoped lang="less">
   .pages-test {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 

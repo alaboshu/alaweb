@@ -40,7 +40,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   @import '~_style/index.less';
   .pc-x-buy-address {
   	font-size: @font-size-base;

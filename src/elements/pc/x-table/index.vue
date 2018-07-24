@@ -28,7 +28,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   @import '~_style/index.less';
   .pc-x-table {
   	font-size: @font-size-base;

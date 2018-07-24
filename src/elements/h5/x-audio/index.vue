@@ -1,6 +1,6 @@
 <template>
   <div class="h5-x-audio" element-path="h5/x-audio">
-  {{viewModel}}
+    {{viewModel}}
   </div>
 </template>
 
@@ -28,7 +28,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   @import '~_style/index.less';
   .h5-x-audio {
   	font-size: @font-size-base;

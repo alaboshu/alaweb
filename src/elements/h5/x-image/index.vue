@@ -1,5 +1,5 @@
 <template>
-  <div class="zk-image" :style="styles">
+  <div class="zk-image" >
     <ul class="lazyload-list">
       <li class="lazyload-list-item" v-for="(item,index) in elementData" :key="index">
         <img class="lazyload-image" :src="item.Image">
@@ -28,7 +28,7 @@
 </script>
 
 
-<style scoped lang="less">
+<style lang="less">
   @import '~_style/index.less';
   .zk-image {
     font-size: @font-size-base;

@@ -66,7 +66,7 @@
   }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
   @import '~_style/index.less';
   .h5-x-product-item {
     font-size: @font-size-base;

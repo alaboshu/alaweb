@@ -1,6 +1,6 @@
 module.exports = {
-  'appName': 'aros-demo',
-  'appBoard': '/config/index.js',
+  'appName': 'zkweb',
+  'appBoard': '/_start/app/main.js',
   // android 监听全局事件homeBack 如果为true 安卓端需要自行调用router.finish方法来关闭应用
   'androidIsListenHomeBack': 'true',
   'version': {
@@ -12,7 +12,7 @@ module.exports = {
     'iOS': '1'
   },
   'page': {
-    'homePage': '/pages/app.js',
+    'homePage': '/pages/index.js',
     'mediatorPage': '/pages/mediator/index.js',
     'navBarColor': '#309bf8',
     'navItemColor': '#ffffff'
