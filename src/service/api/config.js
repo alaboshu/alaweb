@@ -1,5 +1,5 @@
-  export const apiBaseUrl = 'http://localhost:9011'
-  // export const apiBaseUrl = 'http://lll.5ug.com'
+  // export const apiBaseUrl = 'http://localhost:9011'
+  export const apiBaseUrl = 'http://lll.5ug.com'
 
   // 项目Id与秘钥，联系服务获取
   export const projectId = 'B93900E2-26AD-4AE0-BC3F-E639C2D482A0'

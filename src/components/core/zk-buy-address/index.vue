@@ -41,7 +41,7 @@
 </script>
 
 <style  lang="less">
-  @import '~_style/index.less'; 
+  @import '~_style/index.less';
   .zk-buy-address {
     font-size: @font-size-base;
   }

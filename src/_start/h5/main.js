@@ -111,6 +111,7 @@ import XToastIcon from '@/elements/h5/x-toast-icon'
 import XUpload from '@/elements/h5/x-upload'
 import XVerifiy from '@/elements/h5/x-verifiy'
 import XVideo from '@/elements/h5/x-video'
+import XPicker from '@/elements/h5/x-picker'
 import XBadge from '@/elements/h5min/x-badge'
 import XBox from '@/elements/h5min/x-box'
 import XColor from '@/elements/h5min/x-color'
@@ -216,6 +217,7 @@ Vue.component('x-toast-icon', XToastIcon)
 Vue.component('x-upload', XUpload)
 Vue.component('x-verifiy', XVerifiy)
 Vue.component('x-video', XVideo)
+Vue.component('x-picker', XPicker)
 Vue.component('x-badge', XBadge)
 Vue.component('x-box', XBox)
 Vue.component('x-color', XColor)
@@ -245,4 +247,3 @@ new Vue({
   },
   template: '<App/>'
 })
-

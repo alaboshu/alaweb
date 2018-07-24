@@ -2,8 +2,9 @@
   <div class="pages-order-buy">
     <zk-head backText="首页" title="123"></zk-head>
     <zk-buy-address></zk-buy-address>
+    <zk-grid></zk-grid>
     <!-- <x-divider></x-divider> -->
-    <x-group>
+    <x-group :mTop="0">
       <x-cell title="志伟" class="border-bottom"></x-cell>
       <div class="order-buy-content">
         <ul class="content-item_box">
@@ -209,7 +210,7 @@
     z-index: 950;
   }
   .popup-radio {
-    position: relative;
+    // position: relative;
     z-index: 999;
     background: #fff;
   }
