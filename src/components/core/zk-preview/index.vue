@@ -33,15 +33,15 @@
               loginUserId: 0,
               id: this.previewId
             }
-            console.info('previewId参数', parameter)
             var result = await this.$api.get(this.widget.apiUrl, parameter)
+            console.info('zk-priview数据', result)
             this.viewModel = result
           }
         } else {
           console.error('错误:请传入priview数据!!')
         }
         this.asyncflag = true
-        console.info('zk-priview数据', this.viewModel)
+        //  console.info('zk-priview数据', this.viewModel)
       }
     }
   }
