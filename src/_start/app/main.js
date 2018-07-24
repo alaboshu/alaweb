@@ -1,9 +1,14 @@
 // 自动同步，请勿手动修改
 import Vue from 'vue'
 import App from './App'
-import router from '@router'
+import router from '@/router'
 import global from '@/service/core/global'
 import local from '@/service/core/local'
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+import '@/service/core/rem'
+import 'vue2-toast/lib/toast.css'
+import Toast from 'vue2-toast'
 import {
   api
 } from '@/service/api'
@@ -42,15 +47,6 @@ import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
 import ZkProductItem from '@/components/shop/zk-product-item'
 
-import XCol from '@/elements/all/x-col'
-import XIcon from '@/elements/all/x-icon'
-import XRow from '@/elements/all/x-row'
-import XBadge from '@/elements/h5min/x-badge'
-import XBox from '@/elements/h5min/x-box'
-import XColor from '@/elements/h5min/x-color'
-import XNodata from '@/elements/h5min/x-nodata'
-import XFoot from '@/elements/mobile/x-foot'
-import XVerifiyPhone from '@/elements/mobile/x-verifiy-phone'
 
 Vue.component('zk-address', ZkAddress)
 Vue.component('zk-audio', ZkAudio)
@@ -86,21 +82,15 @@ Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
 Vue.component('zk-product-item', ZkProductItem)
 
-Vue.component('x-col', XCol)
-Vue.component('x-icon', XIcon)
-Vue.component('x-row', XRow)
-Vue.component('x-badge', XBadge)
-Vue.component('x-box', XBox)
-Vue.component('x-color', XColor)
-Vue.component('x-nodata', XNodata)
-Vue.component('x-foot', XFoot)
-Vue.component('x-verifiy-phone', XVerifiyPhone)
+
 
 Vue.use(global)
+Vue.use(MintUI)
+Vue.use(Toast)
 
 Vue.config.productionTip = false
 Vue.prototype.$api = api
-Vue.prototype.$client = 'App'
+Vue.prototype.$client = 'WapH5'
 Vue.prototype.$local = local
 Vue.prototype.$toast = local
 Vue.prototype.$message = local

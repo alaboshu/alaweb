@@ -1,15 +1,16 @@
 <template>
   <div>
-    <text class="title">zkweb !</text>
-    <text class="title">宋和珈 ！</text>
-    <text class="title">Hello Weex !</text>
-    <wxc-cell title="发送请求 (开发模式才有效果)" desc="$fetch 支持 restful 标准, 高度自定义，支持 cookie 等。">
-    </wxc-cell>
+    <div class="title">宋和珈 ！</div>
   </div>
 </template>
 
+<script>
+  export default {
 
-<style scoped>
+  }
+</script>
+
+<style >
   .title {
     font-size: 72px;
     padding: 50px;

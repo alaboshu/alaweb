@@ -47,9 +47,6 @@ import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
 import ZkProductItem from '@/components/shop/zk-product-item'
 
-import XCol from '@/elements/all/x-col'
-import XIcon from '@/elements/all/x-icon'
-import XRow from '@/elements/all/x-row'
 import ETabSwiper from '@/elements/h5/e-tab-swiper'
 import XAddress from '@/elements/h5/x-address'
 import XAudio from '@/elements/h5/x-audio'
@@ -116,8 +113,6 @@ import XBadge from '@/elements/h5min/x-badge'
 import XBox from '@/elements/h5min/x-box'
 import XColor from '@/elements/h5min/x-color'
 import XNodata from '@/elements/h5min/x-nodata'
-import XFoot from '@/elements/mobile/x-foot'
-import XVerifiyPhone from '@/elements/mobile/x-verifiy-phone'
 
 Vue.component('zk-address', ZkAddress)
 Vue.component('zk-audio', ZkAudio)
@@ -153,9 +148,6 @@ Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
 Vue.component('zk-product-item', ZkProductItem)
 
-Vue.component('x-col', XCol)
-Vue.component('x-icon', XIcon)
-Vue.component('x-row', XRow)
 Vue.component('e-tab-swiper', ETabSwiper)
 Vue.component('x-address', XAddress)
 Vue.component('x-audio', XAudio)
@@ -222,8 +214,6 @@ Vue.component('x-badge', XBadge)
 Vue.component('x-box', XBox)
 Vue.component('x-color', XColor)
 Vue.component('x-nodata', XNodata)
-Vue.component('x-foot', XFoot)
-Vue.component('x-verifiy-phone', XVerifiyPhone)
 
 
 Vue.use(global)

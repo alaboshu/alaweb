@@ -1,7 +1,6 @@
 <template>
   <div class="pc-p-help-row" element-path="pc/p-help-row">
     <span>ddd</span>
-    {{viewModel}}
   </div>
 </template>
 

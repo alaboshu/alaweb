@@ -15,6 +15,7 @@
     data () {
       return {
         pageInfo: '',
+        widget: '',
         asyncFlag: false
       }
     },
@@ -23,11 +24,11 @@
     },
     methods: {
       async init () {
-        this.$loading = true
+        this.widget = {
+          apiUrl: 'Api/User/account/Bill'
+        }
         this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
-        this.$loading = false
         this.asyncFlag = true
-        // console.info('测试一页面', this.pageInfo)
       }
     }
   }
