@@ -5817,7 +5817,7 @@ mpvue-entry@^1.3.0:
   dependencies:
     webpack "*"
 
-mpvue-loader@^1.1.1:
+mpvue-loader@^1.0.15:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/mpvue-loader/-/mpvue-loader-1.1.1.tgz#d6d535b93cffb5966b4a2fac930042f8b61b2878"
   dependencies:
