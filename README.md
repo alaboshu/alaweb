@@ -22,6 +22,8 @@
 ```bash
 # install dependencies
 npm install
+npm install --global yarn
+yarn install
 
 # build mini program
 npm run dev:min
