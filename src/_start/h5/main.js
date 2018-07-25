@@ -7,11 +7,10 @@ import local from '@/service/core/local'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import '@/service/core/rem'
-import 'vue2-toast/lib/toast.css'
-import Toast from 'vue2-toast'
 import {
   api
 } from '@/service/api'
+import toast from '@/service/h5/toast'
 
 import ZkAddress from '@/components/core/zk-address'
 import ZkAudio from '@/components/core/zk-audio'
@@ -223,16 +222,15 @@ Vue.component('x-nodata', XNodata)
 Vue.component('x-foot', XFoot)
 Vue.component('x-verifiy-phone', XVerifiyPhone)
 
-
 Vue.use(global)
 Vue.use(MintUI)
-Vue.use(Toast)
+Vue.use(toast)
 
 Vue.config.productionTip = false
 Vue.prototype.$api = api
 Vue.prototype.$client = 'WapH5'
 Vue.prototype.$local = local
-Vue.prototype.$toast = local
+Vue.prototype.$toast = toast
 // Vue.prototype.$message = local
 Vue.prototype.$loading = true
 
@@ -245,4 +243,3 @@ new Vue({
   },
   template: '<App/>'
 })
-
