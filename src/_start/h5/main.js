@@ -53,6 +53,8 @@ import XAudio from '@/elements/h5/x-audio'
 import XAutoForm from '@/elements/h5/x-auto-form'
 import XAvatar from '@/elements/h5/x-avatar'
 import XButton from '@/elements/h5/x-button'
+import XIcon from '@/elements/all/x-icon'
+import XFoot from '@/elements/mobile/x-foot'
 import XBuyAddress from '@/elements/h5/x-buy-address'
 import XCard from '@/elements/h5/x-card'
 import XCell from '@/elements/h5/x-cell'
@@ -214,6 +216,8 @@ Vue.component('x-badge', XBadge)
 Vue.component('x-box', XBox)
 Vue.component('x-color', XColor)
 Vue.component('x-nodata', XNodata)
+Vue.component('x-icon', XIcon)
+Vue.component('x-foot', XFoot)
 
 
 Vue.use(global)

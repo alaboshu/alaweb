@@ -1,24 +1,6 @@
 <template>
   <div class="zk-list" :style="styles" component-path="core/zk-list" v-if="asyncflag">
-    <div class="weui-panel weui-panel_access" v-for="(item,index) in viewModel" :key="index">
-      <div class="weui-panel__bd">
-        <a :href="item.url" class="weui-media-box weui-media-box_appmsg">
-          <div class="weui-media-box__hd">
-            <a :href="item.url">
-              <img :src="item.image" alt="" class="weui-media-box__thumb">
-            </a>
-          </div>
-          <div class="weui-media-box__bd">
-            <a :href="item.url">
-              <h4 class="weui-media-box__title">
-                {{item.title}}</h4>
-            </a>
-            <p class="weui-media-box__desc">{{item.intro}}</p>
-            <p class="weui-media-box__desc" style="text-align: right">{{item.extra}}</p>
-          </div>
-        </a>
-      </div>
-    </div>
+    <x-list :elementData="viewModel" v-if="asyncflag"></x-list>
   </div>
 </template>
 

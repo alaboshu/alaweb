@@ -35,6 +35,6 @@
 <style lang="less">
   @import '~_style/index.less';
   .common-x-preview {
-  	font-size: @font-size-base;
+    font-size: @font-size-base;
   }
 </style>

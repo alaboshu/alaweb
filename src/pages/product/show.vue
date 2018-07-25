@@ -1,21 +1,40 @@
 <template>
   <div class="pages-product-show">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <zk-grid></zk-grid>
-    <zk-foot></zk-foot>
+    <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
+    <show-thumbnail :height="bodyWidth"></show-thumbnail>
+    <show-title></show-title>
+    <ShowParameter></ShowParameter>
+    <show-intro></show-intro>
+    <show-recommend></show-recommend>
+    <show-bar></show-bar>
   </div>
 </template>
 
 <script>
   import { THEME_GETPAGE_GET } from '@/service/api/apiUrl'
+  import ShowThumbnail from './_h5/show_thumbnail'
+  import ShowTitle from './_h5/show_title'
+  import ShowParameter from './_h5/show_parameter'
+  import ShowIntro from './_h5/show_intro'
+  import ShowRecommend from './_h5/show_recommend'
+  import ShowBar from './_h5/show_bar'
   export default {
     config: {
       'navigationBarTitleText': '商品详情'
     },
+    components: {
+      ShowThumbnail,
+      ShowTitle,
+      ShowParameter,
+      ShowIntro,
+      ShowRecommend,
+      ShowBar
+    },
     data () {
       return {
         pageInfo: '',
-        asyncFlag: false
+        asyncFlag: false,
+        bodyWidth: document.body.clientWidth
       }
     },
     mounted () {
@@ -35,7 +54,7 @@
 
 <style scoped lang="less">
   .pages-product-show {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 

@@ -24,6 +24,7 @@
     },
     methods: {
       async  init () {
+        console.log('widget', this.widget)
         if (this.widget !== undefined) {
           if (this.widget.value !== undefined) {
             this.viewModel = this.widget.value
@@ -33,6 +34,7 @@
               loginUserId: 0,
               id: this.previewId
             }
+            console.log('parameter', parameter)
             var result = await this.$api.get(this.widget.apiUrl, parameter)
             console.info('zk-priview数据', result)
             this.viewModel = result

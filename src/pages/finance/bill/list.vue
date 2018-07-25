@@ -1,7 +1,7 @@
 <template>
   <div class="pages-finance-bill-list">
     <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <x-list></x-list>
+    <zk-list :widget="widget" v-if="asyncFlag"></zk-list>
     <zk-foot></zk-foot>
   </div>
 </template>
