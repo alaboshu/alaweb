@@ -34,11 +34,7 @@
               loginUserId: 0,
               id: this.previewId
             }
-<<<<<<< HEAD
-            console.info('previewId参数', parameter)
-=======
             console.log('parameter', parameter)
->>>>>>> f384f92c4543d4848938d5f501c01b1785141d4b
             var result = await this.$api.get(this.widget.apiUrl, parameter)
             this.viewModel = result
           }

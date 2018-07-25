@@ -37,6 +37,7 @@
       <x-notice></x-notice>
       <x-number></x-number>
       <x-pay></x-pay>
+      <x-picker></x-picker>
       <x-popup></x-popup>
       <x-preview></x-preview>
       <x-product-class></x-product-class>
@@ -59,8 +60,6 @@
       <x-text></x-text>
       <x-textarea></x-textarea>
       <x-title></x-title>
-      <x-toast></x-toast>
-      <x-toast-icon></x-toast-icon>
       <x-upload></x-upload>
       <x-verifiy></x-verifiy>
       <x-video></x-video>

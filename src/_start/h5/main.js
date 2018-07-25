@@ -7,10 +7,10 @@ import local from '@/service/core/local'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import '@/service/core/rem'
+import toast from '@/service/h5/toast'
 import {
   api
 } from '@/service/api'
-import toast from '@/service/h5/toast'
 
 import ZkAddress from '@/components/core/zk-address'
 import ZkAudio from '@/components/core/zk-audio'
@@ -55,8 +55,6 @@ import XAudio from '@/elements/h5/x-audio'
 import XAutoForm from '@/elements/h5/x-auto-form'
 import XAvatar from '@/elements/h5/x-avatar'
 import XButton from '@/elements/h5/x-button'
-import XIcon from '@/elements/all/x-icon'
-import XFoot from '@/elements/mobile/x-foot'
 import XBuyAddress from '@/elements/h5/x-buy-address'
 import XCard from '@/elements/h5/x-card'
 import XCell from '@/elements/h5/x-cell'
@@ -85,6 +83,7 @@ import XNavbarItem from '@/elements/h5/x-navbar-item'
 import XNotice from '@/elements/h5/x-notice'
 import XNumber from '@/elements/h5/x-number'
 import XPay from '@/elements/h5/x-pay'
+import XPicker from '@/elements/h5/x-picker'
 import XPopup from '@/elements/h5/x-popup'
 import XPreview from '@/elements/h5/x-preview'
 import XProductClass from '@/elements/h5/x-product-class'
@@ -107,8 +106,6 @@ import XTable from '@/elements/h5/x-table'
 import XText from '@/elements/h5/x-text'
 import XTextarea from '@/elements/h5/x-textarea'
 import XTitle from '@/elements/h5/x-title'
-import XToast from '@/elements/h5/x-toast'
-import XToastIcon from '@/elements/h5/x-toast-icon'
 import XUpload from '@/elements/h5/x-upload'
 import XVerifiy from '@/elements/h5/x-verifiy'
 import XVideo from '@/elements/h5/x-video'
@@ -190,6 +187,7 @@ Vue.component('x-navbar-item', XNavbarItem)
 Vue.component('x-notice', XNotice)
 Vue.component('x-number', XNumber)
 Vue.component('x-pay', XPay)
+Vue.component('x-picker', XPicker)
 Vue.component('x-popup', XPopup)
 Vue.component('x-preview', XPreview)
 Vue.component('x-product-class', XProductClass)
@@ -212,8 +210,6 @@ Vue.component('x-table', XTable)
 Vue.component('x-text', XText)
 Vue.component('x-textarea', XTextarea)
 Vue.component('x-title', XTitle)
-Vue.component('x-toast', XToast)
-Vue.component('x-toast-icon', XToastIcon)
 Vue.component('x-upload', XUpload)
 Vue.component('x-verifiy', XVerifiy)
 Vue.component('x-video', XVideo)
@@ -221,14 +217,9 @@ Vue.component('x-badge', XBadge)
 Vue.component('x-box', XBox)
 Vue.component('x-color', XColor)
 Vue.component('x-nodata', XNodata)
-<<<<<<< HEAD
 Vue.component('x-foot', XFoot)
 Vue.component('x-verifiy-phone', XVerifiyPhone)
-=======
-Vue.component('x-icon', XIcon)
-Vue.component('x-foot', XFoot)
 
->>>>>>> f384f92c4543d4848938d5f501c01b1785141d4b
 
 Vue.use(global)
 Vue.use(MintUI)
@@ -251,3 +242,4 @@ new Vue({
   },
   template: '<App/>'
 })
+
