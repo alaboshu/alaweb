@@ -18,7 +18,7 @@
 
 <script>
   export default {
-    name: 'x-cell',
+    name: 'x-foot',
     props: {
       elementData: {}
     },
