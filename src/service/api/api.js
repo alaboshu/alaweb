@@ -1,16 +1,15 @@
 import request from './request'
-
+import Vue from 'vue'
 export default {
   //  Get方法：查
   // islocal==true时，先请求本地sqlite数据，如果内容存在，延时30s(页面完全打开后)，请求远程数据，同时把最新的数据保存到sqlite中
   async get (apiUrl, data) {
     var response = await request.get(apiUrl, data)
-    this.$toast.succee('成功')
     // console.info('get数据', response)
     if (response.status === 1) {
       return response.result
     } else {
-      this.toast(response.data.message)
+      Vue.prototype.$toast.succee(response.data.message)
     }
   },
   //  Post方法 :增
@@ -19,7 +18,7 @@ export default {
     if (response.data.status === 1) {
       return response.result
     } else {
-      this.toast(response.data.message)
+      Vue.prototype.$toast(response.data.message)
     }
   },
   //  Put方法：改
@@ -28,7 +27,7 @@ export default {
     if (response.data.status === 1) {
       return response
     } else {
-      this.toast(response.data.message)
+      Vue.prototype.$toast(response.data.message)
     }
   },
   //  delete方法：删
@@ -37,7 +36,7 @@ export default {
     if (response.data.status === 1) {
       return response
     } else {
-      this.toast(response.data.message)
+      Vue.prototype.$toast(response.data.message)
     }
   }
 }

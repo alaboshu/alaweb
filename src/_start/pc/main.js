@@ -7,8 +7,7 @@ import local from '@/service/core/local'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/service/core/rem'
-import 'vue2-toast/lib/toast.css'
-import Toast from 'vue2-toast'
+import toast from 'toast'
 import {
   api
 } from '@/service/api'
@@ -173,7 +172,7 @@ Vue.component('x-video', XVideo)
 
 
 Vue.use(global)
-Vue.use(Toast)
+Vue.use(toast)
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false
@@ -181,7 +180,7 @@ Vue.prototype.$client = 'PcWeb'
 Vue.prototype.$api = api
 Vue.prototype.$client = 'WapH5'
 Vue.prototype.$local = local
-Vue.prototype.$toast = local
+Vue.prototype.$toast = toast
 Vue.prototype.$loading = true
 /* eslint-disable no-new */
 new Vue({
@@ -192,4 +191,3 @@ new Vue({
   },
   template: '<App/>'
 })
-

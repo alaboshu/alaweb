@@ -50,7 +50,7 @@ fs.writeFileSync(resolve('./src/router/routes.js'), `/* eslint-disable */\nmodul
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: `../src/_start/${process.env.MODE || 'h5'}/main.js`,
+    app: `../src/_start/${process.env.MODE || 'h5'}/main.js`
   },
   output: {
     path: config.build.assetsRoot,
@@ -65,6 +65,7 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@/elements/plt': resolve(`src/elements/${process.env.MODE || 'h5'}`),
       '_style': resolve(`src/assets/style/${process.env.MODE || 'h5'}`),
+      'toast': resolve(`src/service/${process.env.MODE || 'h5'}/toast.js`),
       '@': resolve('src'),
       flyio: 'flyio/dist/npm/fly',
       wx: resolve('src/utils/wx')
