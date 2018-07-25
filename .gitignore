@@ -12,7 +12,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 /package-lock.json
-/yarn.lock
 
 
 # app
