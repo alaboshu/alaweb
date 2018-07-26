@@ -103,6 +103,7 @@
     z-index: 5000;
     background-color: #fff;
     position: relative;
+    height: 36px;
 
     .wv-navbar-underline {
       display: block;

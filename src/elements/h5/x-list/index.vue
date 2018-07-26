@@ -1,8 +1,5 @@
 <template>
   <div class="h5-x-list" element-path="h5/x-list">
-<<<<<<< HEAD
-  {{viewModel}}
-=======
     <div class="weui-panel weui-panel_access" v-for="(item,index) in viewModel" :key="index">
       <div class="weui-panel__bd">
         <a :href="item.url" class="weui-media-box weui-media-box_appmsg">
@@ -22,7 +19,6 @@
         </a>
       </div>
     </div>
->>>>>>> f384f92c4543d4848938d5f501c01b1785141d4b
   </div>
 </template>
 
@@ -54,6 +50,6 @@
 <style lang="less">
   @import '~_style/index.less';
   .h5-x-list {
-  	font-size: @font-size-base;
+    font-size: @font-size-base;
   }
 </style>

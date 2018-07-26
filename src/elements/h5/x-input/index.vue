@@ -1,13 +1,13 @@
 <template>
   <div class="weui-cell" :class="{ 'weui-cell_warn': !valid }">
     <div class="weui-cell__hd">
-      <label class="weui-label" v-html="title" v-if="title" :style="{ width: labelWidth + 'px' }" />
+      <label class="weui-label" v-html="label" v-if="label" :style="{ width: labelWidth + 'px' }" />
     </div>
     <div class="weui-cell__bd">
       <input class="weui-input" ref="input" :type="type" :auto-complete="autoComplete" :autofocus="autofocus" :placeholder="placeholder" :value="currentValue" :readonly="readonly" :number="type === 'number'" :maxlength="maxlength" :minlength="minlength" @focus="onFocus" @blur="onBlur" @change="onChange" @input="handleInput">
     </div>
     <div class="weui-cell__ft">
-      <wv-icon type="warn" v-if="!valid" />
+      <x-icon src="zk-warn" size="18" v-if="!valid" />
       <slot name="ft" />
     </div>
   </div>
@@ -15,14 +15,14 @@
 
 <script>
   export default {
-    name: 'x-input',
+    name: 'wv-input',
 
     props: {
       type: {
         type: String,
         default: 'text'
       },
-      title: String,
+      label: String,
       labelWidth: {
         type: Number,
         default: 105
@@ -64,7 +64,6 @@
         currentValue: this.value
       }
     },
-
     methods: {
       handleInput (event) {
         // 当有最大长度属性时，限制过长的输入
@@ -145,14 +144,5 @@
   }
 </script>
 
-<style lang="less">
-  @import '~_style/index.less';
-  .weui-cell {
-    font-size: @font-size-base;
-    .weui-input {
-      border: 1px solid #ccc;
-      width: 150px;
-      background-color: #fff;
-    }
-  }
+<style scoped lang="less">
 </style>
