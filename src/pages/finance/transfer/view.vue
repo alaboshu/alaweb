@@ -1,7 +1,7 @@
 <template>
   <div class="pages-finance-transfer-view">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <zk-grid></zk-grid>
+    <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
+    <zk-preview v-if="asyncFlag" :widget="widget" :previewId="previewId"></zk-preview>
     <zk-foot></zk-foot>
   </div>
 </template>
@@ -15,7 +15,9 @@
     data () {
       return {
         pageInfo: '',
-        asyncFlag: false
+        asyncFlag: false,
+        widget: '',
+        previewId: ''
       }
     },
     mounted () {
@@ -26,6 +28,10 @@
         this.$loading = true
         this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
         this.$loading = false
+        this.widget = {
+          apiUrl: 'Api/Transfer/Get'
+        }
+        this.previewId = this.$route.query.Id
         this.asyncFlag = true
         // console.info('测试一页面', this.pageInfo)
       }
@@ -35,7 +41,7 @@
 
 <style scoped lang="less">
   .pages-finance-transfer-view {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 
