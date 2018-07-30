@@ -47,9 +47,9 @@ fs.writeFileSync(resolve('./src/router/routes.json'), routesStr)
 module.exports = {
   // 通过 src/pages.js 来配置要打包的页面，
   entry: MpvueEntry.getEntry({
-    pages: '../src/router/routes.json',
-    template: '../src/_start/min/main.js',
-    app: '../dist/min/app.json'
+    pages: '../../src/router/routes.json',
+    template: '../../src/_start/min/main.js',
+    app: '../../dist/min/app.json'
   }),
   target: require('mpvue-webpack-target'),
   output: {
