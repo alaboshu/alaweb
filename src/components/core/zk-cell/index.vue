@@ -5,12 +5,12 @@
 </template>
 
 <script>
-  import RouterLink from '@/mixins/router-link'
+  // import RouterLink from '@/mixins/router-link'
   import { THEME_GETVALUE_GET } from '@/service/api/apiUrl'
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
-    mixins: [RouterLink],
+    // mixins: [RouterLink],
     props: {
       dataId: {
         type: String

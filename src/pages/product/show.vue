@@ -1,35 +1,35 @@
 <template>
   <div class="pages-product-show">
     <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <show-thumbnail :height="bodyWidth"></show-thumbnail>
+    <!-- <show-thumbnail :height="bodyWidth"></show-thumbnail>
     <show-title></show-title>
     <ShowParameter></ShowParameter>
     <show-intro></show-intro>
     <show-recommend></show-recommend>
-    <show-bar></show-bar>
+    <show-bar></show-bar> -->
   </div>
 </template>
 
 <script>
   import { THEME_GETPAGE_GET } from '@/service/api/apiUrl'
-  import ShowThumbnail from './_h5/show_thumbnail'
-  import ShowTitle from './_h5/show_title'
-  import ShowParameter from './_h5/show_parameter'
-  import ShowIntro from './_h5/show_intro'
-  import ShowRecommend from './_h5/show_recommend'
-  import ShowBar from './_h5/show_bar'
+  // import ShowThumbnail from './_h5/show_thumbnail'
+  // import ShowTitle from './_h5/show_title'
+  // import ShowParameter from './_h5/show_parameter'
+  // import ShowIntro from './_h5/show_intro'
+  // import ShowRecommend from './_h5/show_recommend'
+  // import ShowBar from './_h5/show_bar'
   export default {
     config: {
       'navigationBarTitleText': '商品详情'
     },
-    components: {
-      ShowThumbnail,
-      ShowTitle,
-      ShowParameter,
-      ShowIntro,
-      ShowRecommend,
-      ShowBar
-    },
+    // components: {
+    //   ShowThumbnail,
+    //   ShowTitle,
+    //   ShowParameter,
+    //   ShowIntro,
+    //   ShowRecommend,
+    //   ShowBar
+    // },
     data () {
       return {
         pageInfo: '',
