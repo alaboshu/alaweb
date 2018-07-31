@@ -41,11 +41,11 @@
 </template>
 <script>
   export default {
-
   }
 </script>
+
 <style lang="less" scoped>
-  @import '~_style/index.less'; // 颜色、边框、大小请使用assets/style/variable.less 和theme.less中的变量
+  @import '~_style/index.less';
   .zkweb-show_bar {
     height: 50px;
     .show_bar-placeholder {

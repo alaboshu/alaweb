@@ -7,9 +7,9 @@
 </template>
 <script>
   export default {
-
   }
 </script>
+
 <style lang="less" scoped>
   .zkweb-show_recommend {
     .recommend-title {
