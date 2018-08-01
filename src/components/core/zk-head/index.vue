@@ -1,9 +1,11 @@
 <template>
   <div class="zk-head" :style="styles">
     <x-head :title="title">
-      <div class="btn-back" slot="left">
-        <div @click="$router.push(goBackUrl)" class="btn-back-left">
-          <x-icon src="zk-arrows-left" size="20"></x-icon>{{backText}}
+      <div slot="left">
+        <div class="btnleft">
+          <div @click="$router.push(goBackUrl)" class="btn-back-left">
+            <x-icon src="zk-arrows-left" size="20"></x-icon>{{backText}}
+          </div>
         </div>
       </div>
     </x-head>
@@ -71,7 +73,7 @@
     .head-placeholder {
       height: 50px;
     }
-    .btn-back {
+    .btnleft {
       .btn-back-left {
         display: flex;
         align-items: center;

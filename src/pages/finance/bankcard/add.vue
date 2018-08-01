@@ -4,7 +4,7 @@
     <x-group>
       <x-input label="持卡人姓名" placeholder="请输入持卡人姓名" v-model="myBankcard.name" required/>
       <x-cell title="选择银行" is-link @click.native="fruitPickerShow = true" :value="fruit.name"></x-cell>
-      <x-picker :visible.sync="fruitPickerShow" :columns="fruitColumns" value-key="name" @confirm="confirmPerson" />
+      <!-- <x-picker :visible.sync="fruitPickerShow" :columns="fruitColumns" value-key="name" @confirm="confirmPerson" /> -->
       <x-input label="银行卡号" placeholder="请输入银行卡号" type="number" :maxlength="19" v-model="myBankcard.number" required/>
       <x-textarea placeholder="请输入详细地址" :maxLength="20"></x-textarea>
     </x-group>

@@ -155,7 +155,7 @@
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
     }
 
-    &.wv-switch-on {
+    .wv-switch-on {
       border-color: #04be02;
       background-color: #04be02;
 
@@ -170,7 +170,7 @@
   }
 
   .wv-switch-disabled {
-    &.wv-switch-on {
+    .wv-switch-on {
       border-color: #dedede;
       background-color: #dedede;
     }

@@ -3,9 +3,9 @@
     <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
     <x-group>
       <x-cell title="银行卡" is-link @click.native="bankTypePickerShow = true" :value="bank.name"></x-cell>
-      <x-picker :visible.sync="bankTypePickerShow" :columns="bankType" value-key="name" @confirm="confirmPerson" />
+      <!-- <x-picker :visible.sync="bankTypePickerShow" :columns="bankType" value-key="name" @confirm="confirmPerson" /> -->
       <x-cell title="提现账户" is-link @click.native="withdrawTypePickerShow = true" :value="withdrawAccount.name"></x-cell>
-      <x-picker :visible.sync="withdrawTypePickerShow" :columns="withdrawType" value-key="name" @confirm="confirmPersonA" />
+      <!-- <x-picker :visible.sync="withdrawTypePickerShow" :columns="withdrawType" value-key="name" @confirm="confirmPersonA" /> -->
       <x-input label="提现金额" placeholder="请输入提现金额" type="number" required/>
       <x-input label="支付密码" placeholder="请输入支付密码" type="number" required/>
       <x-input label="提现留言" placeholder="" type="number" required/>

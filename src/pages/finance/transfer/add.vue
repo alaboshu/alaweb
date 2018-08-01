@@ -3,7 +3,7 @@
     <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
     <x-group>
       <x-cell title="转账类型" is-link @click.native="transferTypePickerShow = true" :value="transfer .name"></x-cell>
-      <x-picker :visible.sync="transferTypePickerShow" :columns="transferType" value-key="name" @confirm="confirmPerson" />
+      <!-- <x-picker :visible.sync="transferTypePickerShow" :columns="transferType" value-key="name" @confirm="confirmPerson" /> -->
       <x-input label="对方用户" placeholder="请输入对方用户" required/>
       <x-input label="转出金额" placeholder="请输入转出金额" type="number" required/>
       <x-input label="转出支付密码" placeholder="请输入支付密码" type="password" required/>

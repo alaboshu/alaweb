@@ -10,7 +10,7 @@
     </div>
     <x-group v-if="isonLine">
       <x-cell title="账户类型" is-link @click.native="bankTypePickerShow = true" :value="bank.name"></x-cell>
-      <x-picker :visible.sync="bankTypePickerShow" :columns="bankType" value-key="name" @confirm="confirmPerson" />
+      <!-- <x-picker :visible.sync="bankTypePickerShow" :columns="bankType" value-key="name" @confirm="confirmPerson" /> -->
       <x-input label="充值金额" placeholder="请输入充值金额" type="number" required/>
       <x-input label="备注" placeholder="" required/>
       <div class="recharge-add_btn">
@@ -19,10 +19,10 @@
     </x-group>
     <x-group v-if="!isonLine">
       <x-cell title="账户类型" is-link @click.native="bankTypePickerShow = true" :value="bank.name"></x-cell>
-      <x-picker :visible.sync="bankTypePickerShow" :columns="bankType" value-key="name" @confirm="confirmPerson" />
+      <!-- <x-picker :visible.sync="bankTypePickerShow" :columns="bankType" value-key="name" @confirm="confirmPerson" /> -->
       <x-input label="充值金额" placeholder="请输入充值金额" type="number" required/>
       <x-cell title="银行类型" is-link @click.native="bankTypePickerShow = true" :value="bank.name"></x-cell>
-      <x-picker :visible.sync="bankTypePickerShow" :columns="bankType" value-key="name" @confirm="confirmPerson" />
+      <!-- <x-picker :visible.sync="bankTypePickerShow" :columns="bankType" value-key="name" @confirm="confirmPerson" /> -->
       <x-input label="银行卡号" placeholder="请输入银行卡号" type="number" :maxlength="19" required/>
       <x-input label="持卡人姓名" placeholder="请输入持卡人姓名" required/>
       <x-input label="备注" placeholder="" required/>

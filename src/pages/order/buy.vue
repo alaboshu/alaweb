@@ -4,7 +4,8 @@
     <zk-buy-address></zk-buy-address>
     <!-- <x-divider></x-divider> -->
     <x-group>
-      <x-cell title="志伟" class="border-bottom"></x-cell>
+      <x-cell title="志伟"></x-cell>
+      <div class="border-bottom"></div>
       <div class="order-buy-content">
         <ul class="content-item_box">
           <li class="content-item flex">
@@ -59,9 +60,9 @@
     <div class="order-buy_modal" @click="popupVisible1=false" v-if="popupVisible1===true">
 
     </div>
-    <x-popup :visible.sync="popupVisible1" class="popup-radio">
+    <!-- <x-popup :visible.sync="popupVisible1" class="popup-radio">
       <x-radio title="选择快递方式" v-model="value" :options="options" @change="onChange" />
-    </x-popup>
+    </x-popup> -->
     <!-- <zk-foot></zk-foot> -->
   </div>
 </template>

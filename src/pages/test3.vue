@@ -8,9 +8,9 @@
       jsiodjaioshdaioshdio
     </div>
     <zk-list v-if="asyncFlag" :widget="widget"></zk-list>
-    <x-popup :visible.sync="popupVisible1" class="popup-radio">
+    <!-- <x-popup :visible.sync="popupVisible1" class="popup-radio">
       123123132123123132
-    </x-popup>
+    </x-popup> -->
     <!-- <zk-foot></zk-foot> -->
   </div>
 </template>
