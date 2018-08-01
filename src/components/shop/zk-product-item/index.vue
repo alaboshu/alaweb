@@ -1,5 +1,5 @@
 <template>
-  <x-product-item :elementData="viewModel"></x-product-item>
+    <x-product-item :elementData="viewModel"></x-product-item>
 </template>
 
 <script>
@@ -23,6 +23,7 @@
           diyKey: 'grid_index'
         }
         this.viewModel = await this.$api.get(THEME_GETLINK_GET, para)
+        console.log('productItem', this.viewModel)
         this.asyncflag = true
       }
     }

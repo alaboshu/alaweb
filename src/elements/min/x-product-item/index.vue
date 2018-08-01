@@ -1,6 +1,6 @@
 <template>
   <div class="min-x-product-item" element-path="min/x-product-item">
-  {{viewModel}}
+    {{viewModel}}
   </div>
 </template>
 
@@ -31,6 +31,6 @@
 <style lang="less">
   @import '~_style/index.less';
   .min-x-product-item {
-  	font-size: @font-size-base;
+    font-size: @font-size-base;
   }
 </style>

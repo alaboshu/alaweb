@@ -6,6 +6,8 @@ import global from '@/service/core/global'
 import local from '@/service/core/local'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import '@/service/core/rem'
 import toast from '@/service/h5/toast'
 import {
@@ -223,6 +225,7 @@ Vue.component('x-verifiy-phone', XVerifiyPhone)
 
 Vue.use(global)
 Vue.use(MintUI)
+Vue.use(ElementUI)
 Vue.use(toast)
 
 Vue.config.productionTip = false
@@ -242,4 +245,3 @@ new Vue({
   },
   template: '<App/>'
 })
-

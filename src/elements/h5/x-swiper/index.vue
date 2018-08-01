@@ -1,5 +1,6 @@
 <template>
   <div>
+    789
     <x-swipe class="demo-swipe" :height="height" :autoplay="4000">
       <x-swipe-item v-for="(item,index) in elementData" :key="index">
         <div class="tips">
