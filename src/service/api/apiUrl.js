@@ -273,6 +273,12 @@ export const USERSTOCK_DELETE_GET = '/api/userstock/delete' // 删除单条记�
 //  User/Reward相关的API接口
 export const USER_REWARD_LIST_GET = '/api/user/reward/list' // 列出指定的参数
 export const USER_REWARD_SHOW_GET = '/api/user/reward/show' // 列出指定的参数
+export const USER_REWARD_REWARDLIST_GET = '/api/user/reward/rewardlist' // 分润数据
+export const USER_REWARD_GET_GET = '/api/user/reward/get' // 根据Url获取单条记录
+export const USER_REWARD_GETLIST_GET = '/api/user/reward/getlist' // 根据Url获取列表
+export const USER_REWARD_ADD_POST = '/api/user/reward/add' // 增加单条记录
+export const USER_REWARD_UPDATE_GET = '/api/user/reward/update' // 修改单条记录
+export const USER_REWARD_DELETE_GET = '/api/user/reward/delete' // 删除单条记录
 
 //  Theme相关的API接口
 export const THEME_GETPAGE_GET = '/api/theme/getpage' // 获取页面配置
@@ -343,4 +349,10 @@ export const REWARD_GETLIST_GET = '/api/reward/getlist' // 根据Url获取列表
 export const REWARD_ADD_POST = '/api/reward/add' // 增加单条记录
 export const REWARD_UPDATE_GET = '/api/reward/update' // 修改单条记录
 export const REWARD_DELETE_GET = '/api/reward/delete' // 删除单条记录
+
+//  Diy相关的API接口
+export const DIY_SEARCHKEYWORD_GET = '/api/diy/searchkeyword' // 获取搜索关键字
+export const DIY_GETLINK_GET = '/api/diy/getlink' // 获取链接地址，比如轮播图，首页链接地址等
+export const DIY_GETLIST_GET = '/api/diy/getlist' // 获取ZKList数据，不需要会员登录
+export const DIY_GETLISTBYLOGIN_GET = '/api/diy/getlistbylogin' // 获取ZKList数据，需要会员登录
 
