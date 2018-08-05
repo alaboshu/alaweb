@@ -1,5 +1,5 @@
 <template>
-  <div class="zk-product-item" :style="styles">
+  <div class="zk-product-item" :style="styles" id="x-product-item">
     <div class="zkui-product-item__1">
       <ul class="item-box">
         <li class="item">

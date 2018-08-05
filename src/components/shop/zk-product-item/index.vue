@@ -1,5 +1,7 @@
 <template>
+  <div component-path="shop/zk-product-item">
     <x-product-item :elementData="viewModel"></x-product-item>
+  </div>
 </template>
 
 <script>
