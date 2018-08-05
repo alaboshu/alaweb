@@ -7,7 +7,8 @@ import local from '@/service/core/local'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/service/core/rem'
-import toast from 'toast'
+import 'vue2-toast/lib/toast.css'
+import Toast from 'vue2-toast'
 import {
   api
 } from '@/service/api'
@@ -50,9 +51,6 @@ import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
 import ZkProductItem from '@/components/shop/zk-product-item'
 
-import XCol from '@/elements/all/x-col'
-import XIcon from '@/elements/all/x-icon'
-import XRow from '@/elements/all/x-row'
 import PBacktop from '@/elements/pc/p-backtop'
 import PHelpRow from '@/elements/pc/p-help-row'
 import PNav from '@/elements/pc/p-nav'
@@ -129,9 +127,6 @@ Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
 Vue.component('zk-product-item', ZkProductItem)
 
-Vue.component('x-col', XCol)
-Vue.component('x-icon', XIcon)
-Vue.component('x-row', XRow)
 Vue.component('p-backtop', PBacktop)
 Vue.component('p-help-row', PHelpRow)
 Vue.component('p-nav', PNav)
@@ -172,7 +167,7 @@ Vue.component('x-video', XVideo)
 
 
 Vue.use(global)
-Vue.use(toast)
+Vue.use(Toast)
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false
@@ -180,7 +175,7 @@ Vue.prototype.$client = 'PcWeb'
 Vue.prototype.$api = api
 Vue.prototype.$client = 'WapH5'
 Vue.prototype.$local = local
-Vue.prototype.$toast = toast
+Vue.prototype.$toast = local
 Vue.prototype.$loading = true
 /* eslint-disable no-new */
 new Vue({
@@ -191,3 +186,4 @@ new Vue({
   },
   template: '<App/>'
 })
+
