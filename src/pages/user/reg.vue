@@ -1,7 +1,7 @@
 <template>
   <div class="pages-user-reg">
-    <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <zk-auto-form></zk-auto-form>
+    <zk-head backText="首页" :title="pageInfo.title"></zk-head>
+    <zk-auto-form :viewApi="viewApi" v-if="asyncFlag" :postApi="postApi"></zk-auto-form>
     <zk-foot></zk-foot>
   </div>
 </template>
@@ -15,6 +15,8 @@
     data () {
       return {
         pageInfo: '',
+        viewApi: 'Api/User/GetRegForm',
+        postApi: 'Api/User/Reg',
         asyncFlag: false
       }
     },
