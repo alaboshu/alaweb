@@ -102,6 +102,6 @@
 </script>
 
 <style lang="less">
-  @import '~_style/index.less'; 
+  @import '~_style/index.less';
 </style>
 

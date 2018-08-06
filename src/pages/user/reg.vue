@@ -1,7 +1,7 @@
 <template>
   <div class="pages-user-reg">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <zk-grid></zk-grid>
+    <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
+    <zk-auto-form></zk-auto-form>
     <zk-foot></zk-foot>
   </div>
 </template>
@@ -35,7 +35,7 @@
 
 <style scoped lang="less">
   .pages-user-reg {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 

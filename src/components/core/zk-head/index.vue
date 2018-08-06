@@ -44,7 +44,6 @@
     },
     mounted () {
       this.init()
-      console.log('goBackUrl', this.goBackUrl)
     },
     methods: {
       // 设置标题
