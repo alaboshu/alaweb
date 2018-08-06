@@ -4,7 +4,7 @@
       <label class="weui-label" v-html="label" v-if="label" :style="{ width: labelWidth + 'px' }" />
     </div>
     <div class="weui-cell__bd">
-      <input class="weui-input" ref="input" :type="type" :auto-complete="autoComplete" :autofocus="autofocus" :placeholder="placeholder" :value="currentValue" :readonly="readonly" :number="type === 'number'" :maxlength="maxlength" :minlength="minlength" @focus="onFocus" @blur="onBlur" @change="onChange" @input="handleInput">
+      <input class="weui-input" ref="input" :type="type" :auto-complete="autoComplete" :autofocus="autofocus" :placeHolder="placeHolder" :value="currentValue" :readonly="readonly" :number="type === 'number'" :maxlength="maxlength" :minlength="minlength" @focus="onFocus" @blur="onBlur" @change="onChange" @input="handleInput">
     </div>
     <div class="weui-cell__ft">
       <x-icon src="zk-warn" size="18" v-if="!valid" />
@@ -16,7 +16,6 @@
 <script>
   export default {
     name: 'wv-input',
-
     props: {
       type: {
         type: String,
@@ -27,7 +26,7 @@
         type: Number,
         default: 105
       },
-      placeholder: String,
+      placeHolder: String,
       value: String,
       name: String,
       autoComplete: {

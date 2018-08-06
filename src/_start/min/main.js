@@ -43,6 +43,9 @@ import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
 import ZkProductItem from '@/components/shop/zk-product-item'
 
+import XCol from '@/elements/all/x-col'
+import XIcon from '@/elements/all/x-icon'
+import XRow from '@/elements/all/x-row'
 import XBadge from '@/elements/h5min/x-badge'
 import XBox from '@/elements/h5min/x-box'
 import XColor from '@/elements/h5min/x-color'
@@ -65,6 +68,8 @@ import XProductClass from '@/elements/min/x-product-class'
 import XProductItem from '@/elements/min/x-product-item'
 import XSearchbar from '@/elements/min/x-searchbar'
 import XSwiper from '@/elements/min/x-swiper'
+import XFoot from '@/elements/mobile/x-foot'
+import XVerifiyPhone from '@/elements/mobile/x-verifiy-phone'
 
 Vue.component('zk-address', ZkAddress)
 Vue.component('zk-audio', ZkAudio)
@@ -100,6 +105,9 @@ Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
 Vue.component('zk-product-item', ZkProductItem)
 
+Vue.component('x-col', XCol)
+Vue.component('x-icon', XIcon)
+Vue.component('x-row', XRow)
 Vue.component('x-badge', XBadge)
 Vue.component('x-box', XBox)
 Vue.component('x-color', XColor)
@@ -122,6 +130,8 @@ Vue.component('x-product-class', XProductClass)
 Vue.component('x-product-item', XProductItem)
 Vue.component('x-searchbar', XSearchbar)
 Vue.component('x-swiper', XSwiper)
+Vue.component('x-foot', XFoot)
+Vue.component('x-verifiy-phone', XVerifiyPhone)
 
 Vue.use(MpvueRouterPatch)
 Vue.use(global)

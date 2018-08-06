@@ -1,5 +1,8 @@
 <template>
   <div class="pages--components">
+      <x-col></x-col>
+      <x-icon></x-icon>
+      <x-row></x-row>
       <x-badge></x-badge>
       <x-box></x-box>
       <x-color></x-color>
@@ -22,6 +25,8 @@
       <x-product-item></x-product-item>
       <x-searchbar></x-searchbar>
       <x-swiper></x-swiper>
+      <x-foot></x-foot>
+      <x-verifiy-phone></x-verifiy-phone>
 
   </div>
 </template>

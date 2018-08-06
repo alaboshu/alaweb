@@ -1,11 +1,10 @@
 <template>
   <div class="zk-auto-form" component-path="core/zk-auto-form" :viewApi="viewApi" :postApi="postApi" @postSuccess="postSuccess" @postFailed="postFailed">
     <div v-if="form.groups">
-      <div v-for="(group, gIndex) of form.groups" :key="gIndex">
-        <div class="group-title">{{group.groupName}}</div>
-        <div v-for="(item, iIndex) of group.items" :key="iIndex">
-          <xAfPassword :item="item" v-if="typeMap[item.type] === 'password'" />
-          <xAfTextBox :item="item" v-if="typeMap[item.type] === 'textBox'" />
+      <div v-for="(group, groupIndex) of form.groups" :key="groupIndex">
+        <x-group :title="group.groupName"></x-group>
+        <div v-for="(field, fieldIndex) of group.items" :key="fieldIndex">
+          <x-input v-if="field.type===2" :label="field.name" :placeHolder="field.placeHolder" ></x-input>
         </div>
       </div>
       <div>
@@ -50,6 +49,7 @@
         const data = await this.$api.get(this.viewApi)
         if (!data) return
         this.form = data
+        console.info('表单数据', data)
         this.initModel()
         this.initRules()
       },

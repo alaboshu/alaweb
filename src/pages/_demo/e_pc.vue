@@ -1,5 +1,8 @@
 <template>
   <div class="pages--components">
+      <x-col></x-col>
+      <x-icon></x-icon>
+      <x-row></x-row>
       <p-backtop></p-backtop>
       <p-help-row></p-help-row>
       <p-nav></p-nav>
