@@ -4,7 +4,7 @@
       <div v-for="(group, groupIndex) of form.groups" :key="groupIndex">
         <x-group :title="group.groupName"></x-group>
         <div v-for="(field, fieldIndex) of group.items" :key="fieldIndex">
-          <x-input v-if="field.type===2" :label="field.name" :placeHolder="field.placeHolder" :required="item.required"></x-input>
+          <x-input v-if="field.type===2" :label="field.name" :placeHolder="field.placeHolder" :required="field.required"></x-input>
           <x-input title="密码" required type="password" :min="6" :max="16" v-if="field.type===12"></x-input>
         </div>
       </div>
@@ -17,7 +17,7 @@
 
 <script>
   import { editSetting } from './property'
-  import typeMap from './type-map'
+  import typeMap from './type-map'/*  */
   import regMap from './reg-map'
   export default {
     name: editSetting.key,
