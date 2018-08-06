@@ -50,6 +50,7 @@
         const data = await this.$api.get(this.viewApi)
         if (!data) return
         this.form = data
+        console.info('表单数据', this.form)
         this.initModel()
         this.initRules()
       },
