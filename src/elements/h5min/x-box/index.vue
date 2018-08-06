@@ -1,6 +1,6 @@
 <template>
   <div class="common-x-box  weui-form-preview" element-path="common/x-box">
-    {{elementData}}
+    <slot></slot>
   </div>
 </template>
 
@@ -26,6 +26,6 @@
 <style lang="less">
   @import '~_style/index.less';
   .common-x-box {
-  	font-size: @font-size-base;
+    font-size: @font-size-base;
   }
 </style>

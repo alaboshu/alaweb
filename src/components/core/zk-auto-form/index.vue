@@ -4,13 +4,13 @@
       <div v-for="(group, groupIndex) of form.groups" :key="groupIndex">
         <x-group :title="group.groupName"></x-group>
         <div v-for="(field, fieldIndex) of group.items" :key="fieldIndex">
-          <x-input v-if="field.type===2" :label="field.name" :placeHolder="field.placeHolder" ></x-input>
+          <x-input v-if="field.type===2" :label="field.name" :placeHolder="field.placeHolder" :required="item.required"></x-input>
+          <x-input title="密码" required type="password" :min="6" :max="16" v-if="field.type===12"></x-input>
         </div>
       </div>
-      <div>
+      <x-box>
         <x-button type="primary" @click="submitForm">提交</x-button>
-        <x-button @click="resetForm">重置</x-button>
-      </div>
+      </x-box>
     </div>
   </div>
 </template>
@@ -93,9 +93,6 @@
         } else {
           this.$emit('postFailed')
         }
-      },
-      resetForm () {
-        this.initModel()
       }
     }
   }
