@@ -46,6 +46,7 @@ import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
 import ZkProductItem from '@/components/shop/zk-product-item'
 
+import XAgree from '@/elements/all/x-agree'
 import XCol from '@/elements/all/x-col'
 import XIcon from '@/elements/all/x-icon'
 import XRow from '@/elements/all/x-row'
@@ -150,6 +151,7 @@ Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
 Vue.component('zk-product-item', ZkProductItem)
 
+Vue.component('x-agree', XAgree)
 Vue.component('x-col', XCol)
 Vue.component('x-icon', XIcon)
 Vue.component('x-row', XRow)

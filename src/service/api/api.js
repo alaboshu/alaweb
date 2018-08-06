@@ -18,7 +18,7 @@ export default {
         if (response.status === 1) {
             return response.result
         } else {
-            Vue.prototype.$toast(response.data.message)
+          //  Vue.prototype.$toast(response.data.message)
         }
     },
     //  Put方法：改

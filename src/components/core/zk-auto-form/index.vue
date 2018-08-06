@@ -6,6 +6,7 @@
         <div v-for="(field, fieldIndex) of group.items" :key="fieldIndex">
           <x-input v-if="field.type===2" :label="field.field" :placeHolder="field.placeHolder" :required="field.required" v-model="formModel[field.field]"></x-input>
           <x-input v-if="field.type===12" :label="field.field" :placeHolder="field.placeHolder" required type="password" :min="6" :max="16"></x-input>
+          <x-agree></x-agree>
         </div>
       </div>
       <x-box>
@@ -49,8 +50,6 @@
         const data = await this.$api.get(this.viewApi)
         if (!data) return
         this.form = data
-        // console.info('表单数据', this.form)
-        // console.info('表单数据groups', this.form.groups)
         this.initModel()
         this.initRules()
       },
@@ -68,7 +67,6 @@
             this.$set(this.formModel, item.field, item.value)
           })
         })
-        console.info('初始化formModel', this.formModel)
       },
       initRules () {
         this.rules = {}
@@ -94,7 +92,6 @@
         this.initModel()
         console.log('数据模型', this.formModel)
         const response = await this.$api.post(this.postApi, this.formModel)
-        console.info('表单数据提交', response)
         if (response.status === 1) {
           this.$emit('postSuccess', response)
         } else {
