@@ -4,8 +4,8 @@
       <div v-for="(group, groupIndex) of form.groups" :key="groupIndex">
         <x-group :title="group.groupName"></x-group>
         <div v-for="(field, fieldIndex) of group.items" :key="fieldIndex">
-          <x-input v-if="field.type===2" :label="field.name" :placeHolder="field.placeHolder" :required="field.required"></x-input>
-          <x-input title="密码" required type="password" :min="6" :max="16" v-if="field.type===12"></x-input>
+          <x-input v-if="field.type===2" :label="field.name" :placeHolder="field.placeHolder" :required="field.required" v-model="model[field.field]"></x-input>
+          <x-input v-if="field.type===12" :label="field.name" :placeHolder="field.placeHolder" required type="password" :min="6" :max="16" ></x-input>
         </div>
       </div>
       <x-box>
@@ -49,7 +49,8 @@
         const data = await this.$api.get(this.viewApi)
         if (!data) return
         this.form = data
-        console.info('表单数据', data)
+        console.info('表单数据', this.form)
+        // console.info('表单数据groups', this.form.groups)
         this.initModel()
         this.initRules()
       },
@@ -62,6 +63,7 @@
       initModel () {
         this.form.groups.forEach(group => {
           group.items.forEach(item => {
+            console.info('设置值', item.field, item.value)
             this.$set(this.model, item.field, item.value)
           })
         })
@@ -86,10 +88,11 @@
         })
       },
       async submitForm () {
-        console.log(this.model)
-        const data = await this.$api.post(this.postApi, this.model)
-        if (data) {
-          this.$emit('postSuccess', data)
+        this.initModel()
+        console.log('数据模型', this.model)
+        const response = await this.$api.post(this.postApi, this.model)
+        if (response.status === 1) {
+          this.$emit('postSuccess', response)
         } else {
           this.$emit('postFailed')
         }
