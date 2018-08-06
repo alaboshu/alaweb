@@ -4,12 +4,12 @@
       <div v-for="(group, groupIndex) of form.groups" :key="groupIndex">
         <x-group :title="group.groupName"></x-group>
         <div v-for="(field, fieldIndex) of group.items" :key="fieldIndex">
-          <x-input v-if="field.type===2" :label="field.name" :placeHolder="field.placeHolder" :required="field.required" v-model="model[field.field]"></x-input>
+          <x-input v-if="field.type===2" :label="field.name" :placeHolder="field.placeHolder" :required="field.required" v-model="viewModel[field.field]"></x-input>
           <x-input v-if="field.type===12" :label="field.name" :placeHolder="field.placeHolder" required type="password" :min="6" :max="16"></x-input>
         </div>
       </div>
       <x-box>
-        <x-button type="primary" @click="submitForm">提交</x-button>
+        <x-button type="primary" @click="submitForm">{{form.bottonText}}</x-button>
       </x-box>
     </div>
   </div>
@@ -35,7 +35,7 @@
     data () {
       return {
         form: {},
-        model: {},
+        viewModel: {},
         rules: {},
         styles: {},
         typeMap
@@ -64,7 +64,7 @@
         this.form.groups.forEach(group => {
           group.items.forEach(item => {
             console.info('设置值', item.field, item.value)
-            this.$set(this.model, item.field, item.value)
+            this.$set(this.viewModel, item.field, item.value)
           })
         })
       },
@@ -89,8 +89,8 @@
       },
       async submitForm () {
         this.initModel()
-        console.log('数据模型', this.model)
-        const response = await this.$api.post(this.postApi, this.model)
+        console.log('数据模型', this.viewModel)
+        const response = await this.$api.post(this.postApi, this.viewModel)
         if (response.status === 1) {
           this.$emit('postSuccess', response)
         } else {
