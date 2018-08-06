@@ -1,6 +1,7 @@
 <template>
   <div class="zk-auto-form" component-path="core/zk-auto-form" :viewApi="viewApi" :postApi="postApi" @postSuccess="postSuccess" @postFailed="postFailed">
     <div v-if="form.groups">
+      <h2 v-if="form.title">{{form.title}}</h2>
       <div v-for="(group, groupIndex) of form.groups" :key="groupIndex">
         <x-group :title="group.groupName"></x-group>
         <div v-for="(field, fieldIndex) of group.items" :key="fieldIndex">
@@ -12,6 +13,11 @@
       <x-box>
         <x-button type="primary" @click="submitForm">{{form.bottonText}}</x-button>
       </x-box>
+      <div class="weui-footer">
+        <p class="weui-footer__links">
+          <a :href="item.url" v-for="(item, index) of form.viewLinks" :key="index">{{item.name}}</a>
+        </p>
+      </div>
     </div>
   </div>
 </template>
