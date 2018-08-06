@@ -4,8 +4,8 @@
       <div v-for="(group, groupIndex) of form.groups" :key="groupIndex">
         <x-group :title="group.groupName"></x-group>
         <div v-for="(field, fieldIndex) of group.items" :key="fieldIndex">
-          <x-input v-if="field.type===2" :label="field.name" :placeHolder="field.placeHolder" :required="field.required" v-model="viewModel[field.field]"></x-input>
-          <x-input v-if="field.type===12" :label="field.name" :placeHolder="field.placeHolder" required type="password" :min="6" :max="16"></x-input>
+          <x-input v-if="field.type===2" :label="field.field" :placeHolder="field.placeHolder" :required="field.required" v-model="formModel[field.field]"></x-input>
+          <x-input v-if="field.type===12" :label="field.field" :placeHolder="field.placeHolder" required type="password" :min="6" :max="16"></x-input>
         </div>
       </div>
       <x-box>
@@ -35,7 +35,7 @@
     data () {
       return {
         form: {},
-        viewModel: {},
+        formModel: {},
         rules: {},
         styles: {},
         typeMap
@@ -49,7 +49,7 @@
         const data = await this.$api.get(this.viewApi)
         if (!data) return
         this.form = data
-        console.info('表单数据', this.form)
+        // console.info('表单数据', this.form)
         // console.info('表单数据groups', this.form.groups)
         this.initModel()
         this.initRules()
@@ -60,13 +60,15 @@
       postFailed () {
         this.$emit('postFailed')
       },
+      // 初始化formModel
       initModel () {
         this.form.groups.forEach(group => {
           group.items.forEach(item => {
             console.info('设置值', item.field, item.value)
-            this.$set(this.viewModel, item.field, item.value)
+            this.$set(this.formModel, item.field, item.value)
           })
         })
+        console.info('初始化formModel', this.formModel)
       },
       initRules () {
         this.rules = {}
@@ -87,10 +89,12 @@
           })
         })
       },
+      // 表单提交
       async submitForm () {
         this.initModel()
-        console.log('数据模型', this.viewModel)
-        const response = await this.$api.post(this.postApi, this.viewModel)
+        console.log('数据模型', this.formModel)
+        const response = await this.$api.post(this.postApi, this.formModel)
+        console.info('表单数据提交', response)
         if (response.status === 1) {
           this.$emit('postSuccess', response)
         } else {
