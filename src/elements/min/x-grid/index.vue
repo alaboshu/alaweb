@@ -1,13 +1,13 @@
 <template>
   <div class="weui-grids">
-      <div class="weui-grids">
-        <block v-for="(item,index) in grids" :key="index">
-          <a url="" class="weui-grid" hover-class="weui-grid_active" :style="'width:'+100/gWidth+'%'">
-            <image class="weui-grid__icon" :src="item.src" />
-            <div class="weui-grid__label">{{item.name}}</div>
-          </a>
-        </block>
-      </div>
+    <div class="weui-grids">
+      <block v-for="(item,index) in grids" :key="index">
+        <a url="" class="weui-grid" hover-class="weui-grid_active" :style="'width:'+100/gWidth+'%'">
+          <image class="weui-grid__icon" :src="item.src" />
+          <div class="weui-grid__label">{{item.name}}</div>
+        </a>
+      </block>
+    </div>
   </div>
 </template>
 <script>
@@ -52,7 +52,7 @@
 </script>
 
 <style lang="less">
-  @import '~_style/index.less'; // 颜色、边框、大小请尽可能的使用变量
+  @import '~_style/index.less';
   .weui-grid {
     text-decoration: none;
     color: @brand;

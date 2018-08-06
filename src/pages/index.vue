@@ -1,6 +1,6 @@
 <template>
   <div>
-    tabel132 {{viewModel}}
+    <zk-grid></zk-grid>
     <zk-product-item></zk-product-item>
     <zk-swiper></zk-swiper>
     <x-product-item :elementData="viewModel"></x-product-item>
