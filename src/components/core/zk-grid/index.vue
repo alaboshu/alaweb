@@ -1,5 +1,7 @@
 <template>
-  <x-grid :col="columnCount" :elementData="viewModel" v-if="asyncflag"></x-grid>
+  <div class="zk-grid" :style="styles" component-path="core/zk-grid" v-if="asyncflag" data-id="5b406cddfef00000a0000001">
+    <x-grid :col="columnCount" :elementData="viewModel" v-if="asyncflag"></x-grid>
+  </div>
 </template>
 <script>
   import { THEME_GETVALUE_GET } from '@/service/api/apiUrl'
