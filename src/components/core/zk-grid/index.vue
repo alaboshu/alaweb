@@ -1,5 +1,5 @@
 <template>
-  <div class="zk-grid" :style="styles" component-path="core/zk-grid" v-if="asyncflag" data-id="5b406cddfef00000a0000001">
+  <div class="zk-grid" :style="styles" component-path="core/zk-grid" v-if="asyncflag" :data-id="dataId">
     <x-grid :col="columnCount" :elementData="viewModel" v-if="asyncflag"></x-grid>
   </div>
 </template>
@@ -16,7 +16,8 @@
     },
     props: {
       dataId: {
-        type: String
+        type: String,
+        default: '5b406cddfef00000a0000001'
       },
       columnCount: {
         type: Number,
@@ -28,12 +29,8 @@
     },
     methods: {
       async  ApiGet () {
-        const para = {
-          dataId: this.dataId,
-          defaultId: '5b406cddfef00000a0000001'
-        }
-        this.viewModel = await this.$api.get(THEME_GETLINK_GET, para)
-        // console.info('组件数据', this.viewModel)
+        console.info('数据Id', this.dataId)
+        this.viewModel = await this.$api.get(THEME_GETLINK_GET, 'dataId=' + this.dataId)
         this.asyncflag = true
       }
     }

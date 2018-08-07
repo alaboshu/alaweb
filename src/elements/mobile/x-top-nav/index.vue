@@ -28,7 +28,6 @@
     },
     methods: {
       async init () {
-        console.info('系统数据', this.elementData)
         if (this.elementData !== undefined) {
           this.viewModel = this.elementData
         }

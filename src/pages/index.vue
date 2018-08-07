@@ -2,7 +2,7 @@
   <div>
     <zk-top-nav></zk-top-nav>
     <zk-swiper></zk-swiper>
-    <zk-grid></zk-grid>
+    <zk-grid dataId="5b406cddfef00000a0000001"></zk-grid>
     <zk-image></zk-image>
     <zk-product-item></zk-product-item>
     <zk-foot></zk-foot>
