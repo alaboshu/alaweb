@@ -3,14 +3,14 @@
 </template>
 
 <script>
-  import { THEME_GETVALUE_GET } from '@/service/api/apiUrl'
+  import { THEME_GETLINK_GET } from '@/service/api/apiUrl'
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
     data () {
       return {
         viewModel: '', // 数据模型
-        styles: {}, 
+        styles: {},
         asyncflag: false
       }
     },
@@ -24,7 +24,7 @@
           dataId: this.dataId,
           defaultId: '5b406cddfef00000a0000004'
         }
-        this.viewModel = await this.$api.get(THEME_GETVALUE_GET, para)
+        this.viewModel = await this.$api.get(THEME_GETLINK_GET, para)
         // console.info('组件数据image', this.viewModel)
         this.asyncflag = true
       }
