@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import { THEME_GETVALUE_GET } from '@/service/api/apiUrl'
+  import { COMMON_GETAUTOCONFIG_GET } from '@/service/api/apiUrl'
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
@@ -27,23 +27,20 @@
         if (this.widget !== undefined && this.widget.value !== undefined) {
           this.viewModel = this.widget.value
         } else {
-          const parameter = {
-            dataId: this.widget && this.widget.dataId,
-            defaultId: '5b406cddfef00000a0000001'
-          }
-          this.viewModel = await this.$api.get(THEME_GETVALUE_GET, parameter)
+          // 获取配置
+          this.viewModel = await this.$api.get(COMMON_GETAUTOCONFIG_GET, 'configKey=WebSiteConfig')
         }
         this.asyncflag = true
-        // console.info('zk-top-nav数据',this.viewModel)
+        console.info('zk-top-nav数据', this.viewModel)
       }
     }
   }
 </script>
 
 <style scoped lang="less">
-  @import '~_style/index.less'; 
+  @import '~_style/index.less';
   .zk-top-nav {
-    font-size: @font-size-base;
+  	font-size: @font-size-base;
   }
 </style>
 

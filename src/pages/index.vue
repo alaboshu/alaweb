@@ -1,6 +1,6 @@
 <template>
   <div>
- 
+    <zk-top-nav></zk-top-nav>
     <zk-swiper></zk-swiper>
     <zk-grid></zk-grid>
     <zk-image></zk-image>
@@ -45,35 +45,35 @@
 
 <style >
   .title {
-    font-size: 72px;
-    padding: 50px;
-    width: 750px;
-    color: #309bf8;
-    text-align: center;
+  	font-size: 72px;
+  	padding: 50px;
+  	width: 750px;
+  	color: #309bf8;
+  	text-align: center;
   }
   diy {
-    position: relative;
+  	position: relative;
   }
   .diy_box {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    z-index: 99999;
-    outline: 1px solid #4aa3cc;
-    background: rgba(192, 222, 237, 0.5);
+  	position: absolute;
+  	width: 500px;
+  	height: 500px;
+  	z-index: 99999;
+  	outline: 1px solid #4aa3cc;
+  	background: rgba(192, 222, 237, 0.5);
   }
   .diy_box-item {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: flex;
+  	position: absolute;
+  	right: 0;
+  	top: 0;
+  	display: flex;
   }
   .diy_box-item li {
-    background: #666;
-    border-right: 1px solid #000;
-    font-size: 14px;
-    color: #fff;
-    padding: 2px 5px;
-    cursor: pointer;
+  	background: #666;
+  	border-right: 1px solid #000;
+  	font-size: 14px;
+  	color: #fff;
+  	padding: 2px 5px;
+  	cursor: pointer;
   }
 </style>

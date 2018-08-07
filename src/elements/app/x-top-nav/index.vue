@@ -1,6 +1,6 @@
 <template>
   <div class="app-x-top-nav" element-path="app/x-top-nav">
-  {{viewModel}}
+    {{viewModel}}
   </div>
 </template>
 
@@ -20,7 +20,7 @@
     },
     methods: {
       async init () {
-        if (this.elementData === undefined) {
+        if (this.elementData !== undefined) {
           this.viewModel = this.elementData
         }
       }
