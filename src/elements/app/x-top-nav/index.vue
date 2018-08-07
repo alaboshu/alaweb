@@ -1,12 +1,12 @@
 <template>
-  <div class="pc-p-top-nav" element-path="pc/p-top-nav">
+  <div class="app-x-top-nav" element-path="app/x-top-nav">
   {{viewModel}}
   </div>
 </template>
 
 <script>
   export default {
-    name: 'p-top-nav',
+    name: 'x-top-nav',
     props: {
       elementData: {}
     },
@@ -28,9 +28,9 @@
   }
 </script>
 
-<style lang="less">
+<style scoped lang="less">
   @import '~_style/index.less';
-  .pc-p-top-nav {
+  .app-x-top-nav {
   	font-size: @font-size-base;
   }
 </style>

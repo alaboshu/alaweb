@@ -42,6 +42,7 @@ import ZkSwiper from '@/components/core/zk-swiper'
 import ZkTab from '@/components/core/zk-tab'
 import ZkTable from '@/components/core/zk-table'
 import ZkText from '@/components/core/zk-text'
+import ZkTopNav from '@/components/core/zk-top-nav'
 import ZkVideo from '@/components/core/zk-video'
 import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
@@ -51,7 +52,9 @@ import XAgree from '@/elements/all/x-agree'
 import XCol from '@/elements/all/x-col'
 import XIcon from '@/elements/all/x-icon'
 import XRow from '@/elements/all/x-row'
+import XTopNav from '@/elements/app/x-top-nav'
 import XFoot from '@/elements/mobile/x-foot'
+import XTopNav from '@/elements/mobile/x-top-nav'
 import XVerifiyPhone from '@/elements/mobile/x-verifiy-phone'
 
 Vue.component('zk-address', ZkAddress)
@@ -83,6 +86,7 @@ Vue.component('zk-swiper', ZkSwiper)
 Vue.component('zk-tab', ZkTab)
 Vue.component('zk-table', ZkTable)
 Vue.component('zk-text', ZkText)
+Vue.component('zk-top-nav', ZkTopNav)
 Vue.component('zk-video', ZkVideo)
 Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
@@ -92,7 +96,9 @@ Vue.component('x-agree', XAgree)
 Vue.component('x-col', XCol)
 Vue.component('x-icon', XIcon)
 Vue.component('x-row', XRow)
+Vue.component('x-top-nav', XTopNav)
 Vue.component('x-foot', XFoot)
+Vue.component('x-top-nav', XTopNav)
 Vue.component('x-verifiy-phone', XVerifiyPhone)
 
 

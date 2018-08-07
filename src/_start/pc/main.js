@@ -42,11 +42,11 @@ import ZkSwiper from '@/components/core/zk-swiper'
 import ZkTab from '@/components/core/zk-tab'
 import ZkTable from '@/components/core/zk-table'
 import ZkText from '@/components/core/zk-text'
+import ZkTopNav from '@/components/core/zk-top-nav'
 import ZkVideo from '@/components/core/zk-video'
 import ZkBacktop from '@/components/pc/zk-backtop'
 import ZkHelpRow from '@/components/pc/zk-help-row'
 import ZkNav from '@/components/pc/zk-nav'
-import ZkTopNav from '@/components/pc/zk-top-nav'
 import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
 import ZkProductItem from '@/components/shop/zk-product-item'
@@ -58,7 +58,6 @@ import XRow from '@/elements/all/x-row'
 import PBacktop from '@/elements/pc/p-backtop'
 import PHelpRow from '@/elements/pc/p-help-row'
 import PNav from '@/elements/pc/p-nav'
-import PTopNav from '@/elements/pc/p-top-nav'
 import XAddress from '@/elements/pc/x-address'
 import XAudio from '@/elements/pc/x-audio'
 import XAutoForm from '@/elements/pc/x-auto-form'
@@ -91,6 +90,7 @@ import XSwiper from '@/elements/pc/x-swiper'
 import XTab from '@/elements/pc/x-tab'
 import XTable from '@/elements/pc/x-table'
 import XText from '@/elements/pc/x-text'
+import XTopNav from '@/elements/pc/x-top-nav'
 import XVideo from '@/elements/pc/x-video'
 
 Vue.component('zk-address', ZkAddress)
@@ -122,11 +122,11 @@ Vue.component('zk-swiper', ZkSwiper)
 Vue.component('zk-tab', ZkTab)
 Vue.component('zk-table', ZkTable)
 Vue.component('zk-text', ZkText)
+Vue.component('zk-top-nav', ZkTopNav)
 Vue.component('zk-video', ZkVideo)
 Vue.component('zk-backtop', ZkBacktop)
 Vue.component('zk-help-row', ZkHelpRow)
 Vue.component('zk-nav', ZkNav)
-Vue.component('zk-top-nav', ZkTopNav)
 Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
 Vue.component('zk-product-item', ZkProductItem)
@@ -138,7 +138,6 @@ Vue.component('x-row', XRow)
 Vue.component('p-backtop', PBacktop)
 Vue.component('p-help-row', PHelpRow)
 Vue.component('p-nav', PNav)
-Vue.component('p-top-nav', PTopNav)
 Vue.component('x-address', XAddress)
 Vue.component('x-audio', XAudio)
 Vue.component('x-auto-form', XAutoForm)
@@ -171,6 +170,7 @@ Vue.component('x-swiper', XSwiper)
 Vue.component('x-tab', XTab)
 Vue.component('x-table', XTable)
 Vue.component('x-text', XText)
+Vue.component('x-top-nav', XTopNav)
 Vue.component('x-video', XVideo)
 
 

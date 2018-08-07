@@ -69,6 +69,7 @@
       <x-color></x-color>
       <x-nodata></x-nodata>
       <x-foot></x-foot>
+      <x-top-nav></x-top-nav>
       <x-verifiy-phone></x-verifiy-phone>
 
   </div>

@@ -7,7 +7,6 @@
       <p-backtop></p-backtop>
       <p-help-row></p-help-row>
       <p-nav></p-nav>
-      <p-top-nav></p-top-nav>
       <x-address></x-address>
       <x-audio></x-audio>
       <x-auto-form></x-auto-form>
@@ -40,6 +39,7 @@
       <x-tab></x-tab>
       <x-table></x-table>
       <x-text></x-text>
+      <x-top-nav></x-top-nav>
       <x-video></x-video>
 
   </div>

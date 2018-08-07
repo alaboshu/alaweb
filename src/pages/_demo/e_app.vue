@@ -4,7 +4,9 @@
       <x-col></x-col>
       <x-icon></x-icon>
       <x-row></x-row>
+      <x-top-nav></x-top-nav>
       <x-foot></x-foot>
+      <x-top-nav></x-top-nav>
       <x-verifiy-phone></x-verifiy-phone>
 
   </div>

@@ -1,6 +1,6 @@
 export const editSetting = {
   'Name': 'zk-top-nav',
-  'Path': 'pc/zk-top-nav',
+  'Path': 'core/zk-top-nav',
   'Key': 'zk-top-nav',
   'Editors': [{
     'GroupName': '基本设置',
@@ -18,6 +18,6 @@ export const editSetting = {
   }],
   'Type': 0,
   'EventName': null,
-  'Id': '2f21b3b745c96cdf1651d60b',
-  'CreateTime': '2018-07-23 11:14:55'
+  'Id': '79ec9c35cd4aead0082cdaf7',
+  'CreateTime': '2018-08-08 06:14:16'
 }

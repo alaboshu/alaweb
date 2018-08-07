@@ -1,6 +1,6 @@
 <template>
-  <div class="zk-top-nav" :style="styles" component-path="pc/zk-top-nav" v-if="asyncflag">
-    <p-top-nav :elementData="viewModel"></p-top-nav>
+  <div class="zk-top-nav" :style="styles" component-path="core/zk-top-nav" v-if="asyncflag">
+    <x-top-nav :elementData="viewModel"></x-top-nav>
   </div>
 </template>
 
@@ -40,7 +40,7 @@
   }
 </script>
 
-<style  lang="less">
+<style scoped lang="less">
   @import '~_style/index.less'; 
   .zk-top-nav {
     font-size: @font-size-base;

@@ -29,11 +29,11 @@
       <zk-tab></zk-tab>
       <zk-table></zk-table>
       <zk-text></zk-text>
+      <zk-top-nav></zk-top-nav>
       <zk-video></zk-video>
       <zk-backtop></zk-backtop>
       <zk-help-row></zk-help-row>
       <zk-nav></zk-nav>
-      <zk-top-nav></zk-top-nav>
       <zk-groupbuy></zk-groupbuy>
       <zk-product-class></zk-product-class>
       <zk-product-item></zk-product-item>

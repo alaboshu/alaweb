@@ -38,6 +38,7 @@ import ZkSwiper from '@/components/core/zk-swiper'
 import ZkTab from '@/components/core/zk-tab'
 import ZkTable from '@/components/core/zk-table'
 import ZkText from '@/components/core/zk-text'
+import ZkTopNav from '@/components/core/zk-top-nav'
 import ZkVideo from '@/components/core/zk-video'
 import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
@@ -69,7 +70,9 @@ import XProductClass from '@/elements/min/x-product-class'
 import XProductItem from '@/elements/min/x-product-item'
 import XSearchbar from '@/elements/min/x-searchbar'
 import XSwiper from '@/elements/min/x-swiper'
+import XTopNav from '@/elements/min/x-top-nav'
 import XFoot from '@/elements/mobile/x-foot'
+import XTopNav from '@/elements/mobile/x-top-nav'
 import XVerifiyPhone from '@/elements/mobile/x-verifiy-phone'
 
 Vue.component('zk-address', ZkAddress)
@@ -101,6 +104,7 @@ Vue.component('zk-swiper', ZkSwiper)
 Vue.component('zk-tab', ZkTab)
 Vue.component('zk-table', ZkTable)
 Vue.component('zk-text', ZkText)
+Vue.component('zk-top-nav', ZkTopNav)
 Vue.component('zk-video', ZkVideo)
 Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
@@ -132,7 +136,9 @@ Vue.component('x-product-class', XProductClass)
 Vue.component('x-product-item', XProductItem)
 Vue.component('x-searchbar', XSearchbar)
 Vue.component('x-swiper', XSwiper)
+Vue.component('x-top-nav', XTopNav)
 Vue.component('x-foot', XFoot)
+Vue.component('x-top-nav', XTopNav)
 Vue.component('x-verifiy-phone', XVerifiyPhone)
 
 Vue.use(MpvueRouterPatch)
