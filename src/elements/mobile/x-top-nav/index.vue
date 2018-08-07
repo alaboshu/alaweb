@@ -1,11 +1,11 @@
 <template>
   <div class="mobile-x-top-nav" element-path="mobile/x-top-nav">
     <x-row>
-      <x-col col="12">
+      <x-col :col=12>
         <img :src="viewModel.apiImagesUrl+'/'+viewModel.mobileLogo" alt="">
         <span>{{viewModel.webSiteName}}</span>
       </x-col>
-      <x-col col="12">
+      <x-col :col=12>
         <a to="/user/index"> 会员中心</a>
       </x-col>
     </x-row>

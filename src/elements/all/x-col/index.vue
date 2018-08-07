@@ -10,7 +10,8 @@
         type: String
       },
       col: {
-        type: Number
+        type: Number,
+        default: 12
       }
     },
     computed: {
@@ -36,7 +37,7 @@
 <style lang="less">
   @import '~_style/index.less';
   .zkweb-col {
-    float: left;
+  	float: left;
   }
 </style>
 

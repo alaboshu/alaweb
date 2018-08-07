@@ -31,7 +31,6 @@
           this.viewModel = await this.$api.get(COMMON_GETAUTOCONFIG_GET, 'configKey=WebSiteConfig')
         }
         this.asyncflag = true
-        console.info('zk-top-nav数据', this.viewModel)
       }
     }
   }

@@ -89,7 +89,6 @@ import XPicker from '@/elements/h5/x-picker'
 import XPopup from '@/elements/h5/x-popup'
 import XPreview from '@/elements/h5/x-preview'
 import XProductClass from '@/elements/h5/x-product-class'
-import XProductItem from '@/elements/h5/x-product-item'
 import XRadio from '@/elements/h5/x-radio'
 import XRater from '@/elements/h5/x-rater'
 import XResult from '@/elements/h5/x-result'
@@ -116,6 +115,7 @@ import XBox from '@/elements/h5min/x-box'
 import XColor from '@/elements/h5min/x-color'
 import XNodata from '@/elements/h5min/x-nodata'
 import XFoot from '@/elements/mobile/x-foot'
+import XProductItem from '@/elements/mobile/x-product-item'
 import XTopNav from '@/elements/mobile/x-top-nav'
 import XVerifiyPhone from '@/elements/mobile/x-verifiy-phone'
 
@@ -196,7 +196,6 @@ Vue.component('x-picker', XPicker)
 Vue.component('x-popup', XPopup)
 Vue.component('x-preview', XPreview)
 Vue.component('x-product-class', XProductClass)
-Vue.component('x-product-item', XProductItem)
 Vue.component('x-radio', XRadio)
 Vue.component('x-rater', XRater)
 Vue.component('x-result', XResult)
@@ -223,6 +222,7 @@ Vue.component('x-box', XBox)
 Vue.component('x-color', XColor)
 Vue.component('x-nodata', XNodata)
 Vue.component('x-foot', XFoot)
+Vue.component('x-product-item', XProductItem)
 Vue.component('x-top-nav', XTopNav)
 Vue.component('x-verifiy-phone', XVerifiyPhone)
 

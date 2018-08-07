@@ -42,7 +42,6 @@
       <x-popup></x-popup>
       <x-preview></x-preview>
       <x-product-class></x-product-class>
-      <x-product-item></x-product-item>
       <x-radio></x-radio>
       <x-rater></x-rater>
       <x-result></x-result>
@@ -69,6 +68,7 @@
       <x-color></x-color>
       <x-nodata></x-nodata>
       <x-foot></x-foot>
+      <x-product-item></x-product-item>
       <x-top-nav></x-top-nav>
       <x-verifiy-phone></x-verifiy-phone>
 
