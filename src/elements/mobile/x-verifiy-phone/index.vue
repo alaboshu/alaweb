@@ -1,7 +1,7 @@
 <template>
   <div class="weui-cell weui-cell_vcode">
     <div class="weui-cell__hd">
-      <label class="weui-label" style="width:4rem;">验证码</label>
+      <label class="weui-label" :style="{ width: labelWidth + 'px' }">验证码</label>
     </div>
     <div class="weui-cell__bd">
       <input class="weui-input" type="number" required maxlength="6" minlength="6" v-model="currentValue" placeholder="输入六位数手机验证码">
@@ -15,7 +15,7 @@
 
 <script>
   /* eslint-disable */
-  import { COMMON_SENDMOBILEVERIFIYCODE_POST } from '@/service/api/apiUrl' 
+  import { COMMON_SENDMOBILEVERIFIYCODE_POST } from '@/service/api/apiUrl'
   // import apiService from 'src/service/api/common.api'
   export default {
     data () {
@@ -27,6 +27,10 @@
       }
     },
     props: {
+      labelWidth: {
+        type: Number,
+        default: 105
+      },
       mobile: {
         type: String,
         default: ''
@@ -76,7 +80,7 @@
 <style lang="less">
   @import '~_style/index.less';
   .weui-vcode-btn {
-    color: @brand;
+    color: @brand !important;
   }
 </style>
 

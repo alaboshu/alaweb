@@ -6,7 +6,10 @@
         <x-group :title="group.groupName"></x-group>
         <div v-for="(field, fieldIndex) of group.items" :key="fieldIndex">
           <x-input v-if="field.type===2" :label="field.name" :placeHolder="field.placeHolder" :required="field.required" v-model="formModel[field.field]"></x-input>
-          <x-input v-if="field.type===12" :label="field.field" :placeHolder="field.placeHolder" required type="password" :min="6" :max="16"></x-input>
+          <x-input v-if="field.type===12" :label="field.name" :placeHolder="field.placeHolder" required type="password" :min="6" :max="16"></x-input>
+          <x-input v-if="field.type===34" :label="field.name" :placeHolder="field.placeHolder" required></x-input>
+          <x-input v-if="field.type===54" :label="field.name" :placeHolder="field.placeHolder" required></x-input>
+          <x-verifiy-phone v-if="field.type===55"></x-verifiy-phone>
           <x-agree></x-agree>
         </div>
       </div>
