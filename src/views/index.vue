@@ -42,7 +42,7 @@
       height: 500px;
       z-index: 99999;
       outline: 1px solid #4aa3cc;
-      background: rgba(192, 222, 237, 0.5);
+      background: rgba(192, 222, 237, 0.2);
       .diy_box-item {
         position: absolute;
         right: 0;
