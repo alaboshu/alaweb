@@ -65,7 +65,7 @@
         activeIndex: 0,
         fontSize: 30,
         viewModel: '', // 数据模型
-        styles: {} // 可视化编辑样式
+        styles: {} 
       }
     },
     props: {

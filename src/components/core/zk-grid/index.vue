@@ -10,6 +10,7 @@
     data () {
       return {
         viewModel: '',
+        styles: {}, 
         asyncflag: false
       }
     },

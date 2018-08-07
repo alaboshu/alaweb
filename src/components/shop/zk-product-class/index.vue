@@ -15,7 +15,7 @@
     data () {
       return {
         viewModel: '', // 数据模型
-        styles: {} // 可视化编辑样式
+        styles: {} 
       }
     },
     mounted () {

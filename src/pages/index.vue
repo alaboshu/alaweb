@@ -1,9 +1,9 @@
 <template>
   <div>
-    <zk-grid></zk-grid>
-    <zk-product-item></zk-product-item>
     <zk-swiper></zk-swiper>
-    <x-product-item :elementData="viewModel"></x-product-item>
+    <zk-grid></zk-grid>
+    <zk-image></zk-image>
+    <zk-product-item></zk-product-item>
   </div>
 </template>
 
