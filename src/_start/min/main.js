@@ -38,6 +38,7 @@ import ZkSwiper from '@/components/core/zk-swiper'
 import ZkTab from '@/components/core/zk-tab'
 import ZkTable from '@/components/core/zk-table'
 import ZkText from '@/components/core/zk-text'
+import ZkTopNav from '@/components/core/zk-top-nav'
 import ZkVideo from '@/components/core/zk-video'
 import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
@@ -46,6 +47,7 @@ import ZkProductItem from '@/components/shop/zk-product-item'
 import XAgree from '@/elements/all/x-agree'
 import XCol from '@/elements/all/x-col'
 import XIcon from '@/elements/all/x-icon'
+import XImage from '@/elements/all/x-image'
 import XRow from '@/elements/all/x-row'
 import XBadge from '@/elements/h5min/x-badge'
 import XBox from '@/elements/h5min/x-box'
@@ -66,10 +68,12 @@ import XNavbar from '@/elements/min/x-navbar'
 import XPicker from '@/elements/min/x-picker'
 import XPreview from '@/elements/min/x-preview'
 import XProductClass from '@/elements/min/x-product-class'
-import XProductItem from '@/elements/min/x-product-item'
 import XSearchbar from '@/elements/min/x-searchbar'
 import XSwiper from '@/elements/min/x-swiper'
+import XTopNav from '@/elements/min/x-top-nav'
 import XFoot from '@/elements/mobile/x-foot'
+import XProductItem from '@/elements/mobile/x-product-item'
+import XTopNav from '@/elements/mobile/x-top-nav'
 import XVerifiyPhone from '@/elements/mobile/x-verifiy-phone'
 
 Vue.component('zk-address', ZkAddress)
@@ -101,6 +105,7 @@ Vue.component('zk-swiper', ZkSwiper)
 Vue.component('zk-tab', ZkTab)
 Vue.component('zk-table', ZkTable)
 Vue.component('zk-text', ZkText)
+Vue.component('zk-top-nav', ZkTopNav)
 Vue.component('zk-video', ZkVideo)
 Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
@@ -109,6 +114,7 @@ Vue.component('zk-product-item', ZkProductItem)
 Vue.component('x-agree', XAgree)
 Vue.component('x-col', XCol)
 Vue.component('x-icon', XIcon)
+Vue.component('x-image', XImage)
 Vue.component('x-row', XRow)
 Vue.component('x-badge', XBadge)
 Vue.component('x-box', XBox)
@@ -129,10 +135,12 @@ Vue.component('x-navbar', XNavbar)
 Vue.component('x-picker', XPicker)
 Vue.component('x-preview', XPreview)
 Vue.component('x-product-class', XProductClass)
-Vue.component('x-product-item', XProductItem)
 Vue.component('x-searchbar', XSearchbar)
 Vue.component('x-swiper', XSwiper)
+Vue.component('x-top-nav', XTopNav)
 Vue.component('x-foot', XFoot)
+Vue.component('x-product-item', XProductItem)
+Vue.component('x-top-nav', XTopNav)
 Vue.component('x-verifiy-phone', XVerifiyPhone)
 
 Vue.use(MpvueRouterPatch)

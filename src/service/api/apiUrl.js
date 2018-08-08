@@ -23,7 +23,8 @@ export const USERADDRESS_SETDEFAULT_POST = '/api/useraddress/setdefault' // 设�
 export const USERADDRESS_SINGLE_GET = '/api/useraddress/single' // id值为空获取默认地址 如果没有默认地址则返回值为空 id 值存在则获取与id相同的地址
 
 //  User相关的API接口
-export const USER_LOGIN_POST = '/api/user/login'
+export const USER_RECOMMEND_GET = '/api/user/recommend' // 推荐会员
+export const USER_LOGIN_POST = '/api/user/login' // 会员登录
 export const USER_LOGINBYOPENID_POST = '/api/user/loginbyopenid' // 使用openid 完成会员登录
 export const USER_GETREGFORM_GET = '/api/user/getregform' // 获取会员注册视图
 export const USER_REG_POST = '/api/user/reg' // 会员注册
@@ -31,12 +32,11 @@ export const USER_UPDATE_PUT = '/api/user/update' // 修改用户信息
 export const USER_CHANGEPASSWORD_PUT = '/api/user/changepassword' // 修改密码，密码传入明文
 export const USER_FINDPASSWORD_PUT = '/api/user/findpassword' // 找回密码，密码传入明文
 export const USER_VIEW_GET = '/api/user/view' // 获取推荐会员详情
+export const USER_PREVIEW_GET = '/api/user/preview' // 获取推荐会员详情
 export const USER_INFO_GET = '/api/user/info' // 会员详细信息、包括用户名、姓名、手机号地址等新
 export const USER_ADDACTION_POST = '/api/user/addaction' // 添加操作纪律，比如添加购物车 添加收藏夹等等
 export const USER_GETACTION_GET = '/api/user/getaction' // 获取操作记录 添加收藏夹等等
 export const USER_REMOVEACTION_DELETE = '/api/user/removeaction' // 移除操作记录 比如删除购物车等
-export const USER_RECOMMEND_GET = '/api/user/recommend' // 推荐会员
-export const USER_PREVIEW_GET = '/api/user/preview' // 获取推荐会员详情
 
 //  UserDetail相关的API接口
 export const USERDETAIL_QRCODE_GET = '/api/userdetail/qrcode' // 二维码
@@ -87,8 +87,8 @@ export const RECHARGE_GETRECHARGEVIEW_GET = '/api/recharge/getrechargeview' // �
 //  Transfer相关的API接口
 export const TRANSFER_GETTRANSFERCONFIS_GET = '/api/transfer/gettransferconfis'
 export const TRANSFER_ADD_POST = '/api/transfer/add'
-export const TRANSFER_GETREGFORM_GET = '/api/transfer/getregform' // 获取会员注册视图
-export const TRANSFER_GET_GET = '/api/transfer/get' // 获取会员注册视图
+export const TRANSFER_GETREGFORM_GET = '/api/transfer/getregform' // 获取转账视图
+export const TRANSFER_GET_GET = '/api/transfer/get' // 获取转账视图
 export const TRANSFER_GETLIST_GET = '/api/transfer/getlist' // 根据Url获取列表
 export const TRANSFER_UPDATE_GET = '/api/transfer/update' // 修改单条记录
 export const TRANSFER_DELETE_GET = '/api/transfer/delete' // 删除单条记录
@@ -240,16 +240,22 @@ export const WORKORDER_DELETE_GET = '/api/workorder/delete' // 删除单条记�
 
 //  Article相关的API接口
 export const ARTICLE_ARTICLEDETAIL_GET = '/api/article/articledetail' // 内容详情页面
+export const ARTICLE_USERNOTICELIST_GET = '/api/article/usernoticelist' // 公告
+export const ARTICLE_TOPLINELIST_GET = '/api/article/toplinelist' // 头条列表
+export const ARTICLE_ARTICLELIST_GET = '/api/article/articlelist' // 文章列表
+export const ARTICLE_HELPLIST_GET = '/api/article/helplist' // 客服列表
 export const ARTICLE_ABOUTDETAIL_GET = '/api/article/aboutdetail' // 帮助内容
 export const ARTICLE_GET_GET = '/api/article/get' // 根据Url获取单条记录
 export const ARTICLE_GETLIST_GET = '/api/article/getlist' // 根据Url获取列表
 export const ARTICLE_ADD_POST = '/api/article/add' // 增加单条记录
 export const ARTICLE_UPDATE_GET = '/api/article/update' // 修改单条记录
 export const ARTICLE_DELETE_GET = '/api/article/delete' // 删除单条记录
-export const ARTICLE_USERNOTICELIST_GET = '/api/article/usernoticelist' // 公告
-export const ARTICLE_TOPLINELIST_GET = '/api/article/toplinelist' // 头条列表
-export const ARTICLE_ARTICLELIST_GET = '/api/article/articlelist' // 文章列表
-export const ARTICLE_HELPLIST_GET = '/api/article/helplist' // 客服列表
+
+//  Diy相关的API接口
+export const DIY_SEARCHKEYWORD_GET = '/api/diy/searchkeyword' // 获取搜索关键字
+export const DIY_GETLINK_GET = '/api/diy/getlink' // 获取链接地址，比如轮播图，首页链接地址等
+export const DIY_GETLIST_GET = '/api/diy/getlist' // 获取ZKList数据，不需要会员登录
+export const DIY_GETLISTBYLOGIN_GET = '/api/diy/getlistbylogin' // 获取ZKList数据，需要会员登录
 
 //  User/Debt相关的API接口
 export const USER_DEBT_APPLY_POST = '/api/user/debt/apply' // 债事提交
@@ -271,9 +277,9 @@ export const USERSTOCK_UPDATE_GET = '/api/userstock/update' // 修改单条记�
 export const USERSTOCK_DELETE_GET = '/api/userstock/delete' // 删除单条记录
 
 //  User/Reward相关的API接口
+export const USER_REWARD_REWARDLIST_GET = '/api/user/reward/rewardlist' // 分润数据
 export const USER_REWARD_LIST_GET = '/api/user/reward/list' // 列出指定的参数
 export const USER_REWARD_SHOW_GET = '/api/user/reward/show' // 列出指定的参数
-export const USER_REWARD_REWARDLIST_GET = '/api/user/reward/rewardlist' // 分润数据
 export const USER_REWARD_GET_GET = '/api/user/reward/get' // 根据Url获取单条记录
 export const USER_REWARD_GETLIST_GET = '/api/user/reward/getlist' // 根据Url获取列表
 export const USER_REWARD_ADD_POST = '/api/user/reward/add' // 增加单条记录
@@ -339,20 +345,4 @@ export const ACTIVITY_GETLIST_GET = '/api/activity/getlist' // 根据Url获取�
 export const ACTIVITY_ADD_POST = '/api/activity/add' // 增加单条记录
 export const ACTIVITY_UPDATE_GET = '/api/activity/update' // 修改单条记录
 export const ACTIVITY_DELETE_GET = '/api/activity/delete' // 删除单条记录
-
-//  Reward相关的API接口
-export const REWARD_REWARDLIST_GET = '/api/reward/rewardlist' // 分润数据
-export const REWARD_LIST_GET = '/api/reward/list' // 列出指定的参数
-export const REWARD_SHOW_GET = '/api/reward/show' // 列出指定的参数
-export const REWARD_GET_GET = '/api/reward/get' // 根据Url获取单条记录
-export const REWARD_GETLIST_GET = '/api/reward/getlist' // 根据Url获取列表
-export const REWARD_ADD_POST = '/api/reward/add' // 增加单条记录
-export const REWARD_UPDATE_GET = '/api/reward/update' // 修改单条记录
-export const REWARD_DELETE_GET = '/api/reward/delete' // 删除单条记录
-
-//  Diy相关的API接口
-export const DIY_SEARCHKEYWORD_GET = '/api/diy/searchkeyword' // 获取搜索关键字
-export const DIY_GETLINK_GET = '/api/diy/getlink' // 获取链接地址，比如轮播图，首页链接地址等
-export const DIY_GETLIST_GET = '/api/diy/getlist' // 获取ZKList数据，不需要会员登录
-export const DIY_GETLISTBYLOGIN_GET = '/api/diy/getlistbylogin' // 获取ZKList数据，需要会员登录
 

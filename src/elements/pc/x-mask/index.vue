@@ -20,7 +20,7 @@
     },
     methods: {
       async init () {
-        if (this.elementData === undefined) {
+        if (this.elementData !== undefined) {
           this.viewModel = this.elementData
         }
       }

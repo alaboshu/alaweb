@@ -5,14 +5,14 @@
 </template>
 
 <script>
-  import { THEME_GETLINK_GET } from '@/service/api/apiUrl'
+  import { PRODUCT_LIST_GET } from '@/service/api/apiUrl'
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
     data () {
       return {
         viewModel: '', // 数据模型
-        styles: {}, // 可视化编辑样式
+        styles: {},
         asyncflag: false
       }
     },
@@ -21,11 +21,7 @@
     },
     methods: {
       async  init () {
-        const para = {
-          diyKey: 'grid_index'
-        }
-        this.viewModel = await this.$api.get(THEME_GETLINK_GET, para)
-        console.log('productItem', this.viewModel)
+        this.viewModel = await this.$api.get(PRODUCT_LIST_GET)
         this.asyncflag = true
       }
     }

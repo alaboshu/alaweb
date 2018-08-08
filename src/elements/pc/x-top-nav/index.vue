@@ -1,12 +1,12 @@
 <template>
-  <div class="min-x-product-item" element-path="min/x-product-item">
-    {{viewModel}}
+  <div class="pc-x-top-nav" element-path="pc/x-top-nav">
+  {{viewModel}}
   </div>
 </template>
 
 <script>
   export default {
-    name: 'x-cell',
+    name: 'x-top-nav',
     props: {
       elementData: {}
     },
@@ -20,7 +20,7 @@
     },
     methods: {
       async init () {
-        if (this.elementData === undefined) {
+        if (this.elementData !== undefined) {
           this.viewModel = this.elementData
         }
       }
@@ -28,9 +28,9 @@
   }
 </script>
 
-<style lang="less">
+<style scoped lang="less">
   @import '~_style/index.less';
-  .min-x-product-item {
-    font-size: @font-size-base;
+  .pc-x-top-nav {
+  	font-size: @font-size-base;
   }
 </style>

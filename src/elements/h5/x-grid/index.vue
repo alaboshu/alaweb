@@ -34,7 +34,7 @@
 </script>
 
 <style lang="less">
-  @import '~_style/index.less'; // 颜色、边框、大小请尽可能的使用变量
+  @import '~_style/index.less';
   .weui-grid {
     text-decoration: none;
     color: @brand;

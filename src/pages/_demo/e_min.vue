@@ -3,6 +3,7 @@
       <x-agree></x-agree>
       <x-col></x-col>
       <x-icon></x-icon>
+      <x-image></x-image>
       <x-row></x-row>
       <x-badge></x-badge>
       <x-box></x-box>
@@ -23,10 +24,12 @@
       <x-picker></x-picker>
       <x-preview></x-preview>
       <x-product-class></x-product-class>
-      <x-product-item></x-product-item>
       <x-searchbar></x-searchbar>
       <x-swiper></x-swiper>
+      <x-top-nav></x-top-nav>
       <x-foot></x-foot>
+      <x-product-item></x-product-item>
+      <x-top-nav></x-top-nav>
       <x-verifiy-phone></x-verifiy-phone>
 
   </div>

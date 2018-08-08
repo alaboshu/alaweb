@@ -1,6 +1,6 @@
 <template>
   <div class="h5-x-countdown" element-path="h5/x-countdown">
-  {{viewModel}}
+    {{viewModel}}
   </div>
 </template>
 
@@ -20,7 +20,7 @@
     },
     methods: {
       async init () {
-        if (this.elementData === undefined) {
+        if (this.elementData !== undefined) {
           this.viewModel = this.elementData
         }
       }

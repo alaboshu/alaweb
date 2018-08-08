@@ -1,12 +1,12 @@
 <template>
-  <div class="pc-x-image" element-path="pc/x-image">
-  {{viewModel}}
+  <div class="app-x-top-nav" element-path="app/x-top-nav">
+    {{viewModel}}
   </div>
 </template>
 
 <script>
   export default {
-    name: 'x-image',
+    name: 'x-top-nav',
     props: {
       elementData: {}
     },
@@ -20,7 +20,7 @@
     },
     methods: {
       async init () {
-        if (this.elementData === undefined) {
+        if (this.elementData !== undefined) {
           this.viewModel = this.elementData
         }
       }
@@ -28,9 +28,9 @@
   }
 </script>
 
-<style lang="less">
+<style scoped lang="less">
   @import '~_style/index.less';
-  .pc-x-image {
+  .app-x-top-nav {
   	font-size: @font-size-base;
   }
 </style>

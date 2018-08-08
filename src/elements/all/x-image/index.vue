@@ -1,12 +1,12 @@
 <template>
-  <div class="pc-p-top-nav" element-path="pc/p-top-nav">
-  {{viewModel}}
+  <div class="zk-image">
+    <a :href="viewModel.Url" :title="viewModel.Name"><img :src="viewModel.Image" :alt="viewModel.Name"></a>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'p-top-nav',
+    name: 'x-image',
     props: {
       elementData: {}
     },
@@ -16,21 +16,17 @@
       }
     },
     mounted () {
-      this.init()
+      this.viewModel = this.elementData
     },
     methods: {
-      async init () {
-        if (this.elementData === undefined) {
-          this.viewModel = this.elementData
-        }
-      }
     }
   }
 </script>
 
+
 <style lang="less">
   @import '~_style/index.less';
-  .pc-p-top-nav {
+  .zk-image {
   	font-size: @font-size-base;
   }
 </style>

@@ -41,6 +41,7 @@ import ZkSwiper from '@/components/core/zk-swiper'
 import ZkTab from '@/components/core/zk-tab'
 import ZkTable from '@/components/core/zk-table'
 import ZkText from '@/components/core/zk-text'
+import ZkTopNav from '@/components/core/zk-top-nav'
 import ZkVideo from '@/components/core/zk-video'
 import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
@@ -49,6 +50,7 @@ import ZkProductItem from '@/components/shop/zk-product-item'
 import XAgree from '@/elements/all/x-agree'
 import XCol from '@/elements/all/x-col'
 import XIcon from '@/elements/all/x-icon'
+import XImage from '@/elements/all/x-image'
 import XRow from '@/elements/all/x-row'
 import ETabSwiper from '@/elements/h5/e-tab-swiper'
 import XAddress from '@/elements/h5/x-address'
@@ -70,7 +72,6 @@ import XGroup from '@/elements/h5/x-group'
 import XGroupbuy from '@/elements/h5/x-groupbuy'
 import XHead from '@/elements/h5/x-head'
 import XHtml from '@/elements/h5/x-html'
-import XImage from '@/elements/h5/x-image'
 import XInput from '@/elements/h5/x-input'
 import XKeyword from '@/elements/h5/x-keyword'
 import XLabel from '@/elements/h5/x-label'
@@ -88,7 +89,6 @@ import XPicker from '@/elements/h5/x-picker'
 import XPopup from '@/elements/h5/x-popup'
 import XPreview from '@/elements/h5/x-preview'
 import XProductClass from '@/elements/h5/x-product-class'
-import XProductItem from '@/elements/h5/x-product-item'
 import XRadio from '@/elements/h5/x-radio'
 import XRater from '@/elements/h5/x-rater'
 import XResult from '@/elements/h5/x-result'
@@ -115,6 +115,8 @@ import XBox from '@/elements/h5min/x-box'
 import XColor from '@/elements/h5min/x-color'
 import XNodata from '@/elements/h5min/x-nodata'
 import XFoot from '@/elements/mobile/x-foot'
+import XProductItem from '@/elements/mobile/x-product-item'
+import XTopNav from '@/elements/mobile/x-top-nav'
 import XVerifiyPhone from '@/elements/mobile/x-verifiy-phone'
 
 Vue.component('zk-address', ZkAddress)
@@ -146,6 +148,7 @@ Vue.component('zk-swiper', ZkSwiper)
 Vue.component('zk-tab', ZkTab)
 Vue.component('zk-table', ZkTable)
 Vue.component('zk-text', ZkText)
+Vue.component('zk-top-nav', ZkTopNav)
 Vue.component('zk-video', ZkVideo)
 Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
@@ -154,6 +157,7 @@ Vue.component('zk-product-item', ZkProductItem)
 Vue.component('x-agree', XAgree)
 Vue.component('x-col', XCol)
 Vue.component('x-icon', XIcon)
+Vue.component('x-image', XImage)
 Vue.component('x-row', XRow)
 Vue.component('e-tab-swiper', ETabSwiper)
 Vue.component('x-address', XAddress)
@@ -175,7 +179,6 @@ Vue.component('x-group', XGroup)
 Vue.component('x-groupbuy', XGroupbuy)
 Vue.component('x-head', XHead)
 Vue.component('x-html', XHtml)
-Vue.component('x-image', XImage)
 Vue.component('x-input', XInput)
 Vue.component('x-keyword', XKeyword)
 Vue.component('x-label', XLabel)
@@ -193,7 +196,6 @@ Vue.component('x-picker', XPicker)
 Vue.component('x-popup', XPopup)
 Vue.component('x-preview', XPreview)
 Vue.component('x-product-class', XProductClass)
-Vue.component('x-product-item', XProductItem)
 Vue.component('x-radio', XRadio)
 Vue.component('x-rater', XRater)
 Vue.component('x-result', XResult)
@@ -220,6 +222,8 @@ Vue.component('x-box', XBox)
 Vue.component('x-color', XColor)
 Vue.component('x-nodata', XNodata)
 Vue.component('x-foot', XFoot)
+Vue.component('x-product-item', XProductItem)
+Vue.component('x-top-nav', XTopNav)
 Vue.component('x-verifiy-phone', XVerifiyPhone)
 
 
