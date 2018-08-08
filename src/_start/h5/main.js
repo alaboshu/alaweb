@@ -50,6 +50,7 @@ import ZkProductItem from '@/components/shop/zk-product-item'
 import XAgree from '@/elements/all/x-agree'
 import XCol from '@/elements/all/x-col'
 import XIcon from '@/elements/all/x-icon'
+import XImage from '@/elements/all/x-image'
 import XRow from '@/elements/all/x-row'
 import ETabSwiper from '@/elements/h5/e-tab-swiper'
 import XAddress from '@/elements/h5/x-address'
@@ -71,7 +72,6 @@ import XGroup from '@/elements/h5/x-group'
 import XGroupbuy from '@/elements/h5/x-groupbuy'
 import XHead from '@/elements/h5/x-head'
 import XHtml from '@/elements/h5/x-html'
-import XImage from '@/elements/h5/x-image'
 import XInput from '@/elements/h5/x-input'
 import XKeyword from '@/elements/h5/x-keyword'
 import XLabel from '@/elements/h5/x-label'
@@ -157,6 +157,7 @@ Vue.component('zk-product-item', ZkProductItem)
 Vue.component('x-agree', XAgree)
 Vue.component('x-col', XCol)
 Vue.component('x-icon', XIcon)
+Vue.component('x-image', XImage)
 Vue.component('x-row', XRow)
 Vue.component('e-tab-swiper', ETabSwiper)
 Vue.component('x-address', XAddress)
@@ -178,7 +179,6 @@ Vue.component('x-group', XGroup)
 Vue.component('x-groupbuy', XGroupbuy)
 Vue.component('x-head', XHead)
 Vue.component('x-html', XHtml)
-Vue.component('x-image', XImage)
 Vue.component('x-input', XInput)
 Vue.component('x-keyword', XKeyword)
 Vue.component('x-label', XLabel)

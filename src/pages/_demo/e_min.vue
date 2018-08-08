@@ -3,6 +3,7 @@
       <x-agree></x-agree>
       <x-col></x-col>
       <x-icon></x-icon>
+      <x-image></x-image>
       <x-row></x-row>
       <x-badge></x-badge>
       <x-box></x-box>

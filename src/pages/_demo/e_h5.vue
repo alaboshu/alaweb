@@ -3,6 +3,7 @@
       <x-agree></x-agree>
       <x-col></x-col>
       <x-icon></x-icon>
+      <x-image></x-image>
       <x-row></x-row>
       <e-tab-swiper></e-tab-swiper>
       <x-address></x-address>
@@ -24,7 +25,6 @@
       <x-groupbuy></x-groupbuy>
       <x-head></x-head>
       <x-html></x-html>
-      <x-image></x-image>
       <x-input></x-input>
       <x-keyword></x-keyword>
       <x-label></x-label>

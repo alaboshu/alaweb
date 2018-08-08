@@ -29,7 +29,6 @@
     },
     methods: {
       async  ApiGet () {
-        console.info('数据Id', this.dataId)
         this.viewModel = await this.$api.get(THEME_GETLINK_GET, 'dataId=' + this.dataId)
         this.asyncflag = true
       }
