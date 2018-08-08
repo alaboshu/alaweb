@@ -22,7 +22,6 @@
       <x-groupbuy></x-groupbuy>
       <x-head></x-head>
       <x-html></x-html>
-      <x-image></x-image>
       <x-keyword></x-keyword>
       <x-list></x-list>
       <x-marquee></x-marquee>
