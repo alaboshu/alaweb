@@ -43,9 +43,9 @@ const createLintingRule = () => ({
   }
 })
 
-const routes = getRoutes(resolve('./src'), process.env.MODE === 'pc' ? 'views/**/*.vue' : 'pages/**/*.vue')
-const routesStr = JSON.stringify(routes, null, '  ')
-fs.writeFileSync(resolve('./src/router/routes.js'), `/* eslint-disable */\nmodule.exports = ${routesStr.replace(/"component": "(.*)"/g, '"component": () => import("@/$1")')}`)
+// const routes = getRoutes(resolve('./src'), process.env.MODE === 'pc' ? 'views/**/*.vue' : 'pages/**/*.vue')
+// const routesStr = JSON.stringify(routes, null, '  ')
+// fs.writeFileSync(resolve('./src/router/routes.js'), `/* eslint-disable */\nmodule.exports = ${routesStr.replace(/"component": "(.*)"/g, '"component": () => import("@/$1")')}`)
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
