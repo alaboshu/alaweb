@@ -1,7 +1,7 @@
 <template>
   <div class="pages-user-login">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <zk-grid></zk-grid>
+    <zk-head backText="首页" :title="pageInfo.title"></zk-head>
+    <zk-auto-form :viewApi="viewApi" v-if="asyncFlag" :postApi="postApi"></zk-auto-form>
     <zk-foot></zk-foot>
   </div>
 </template>
@@ -10,11 +10,13 @@
   import { THEME_GETPAGE_GET } from '@/service/api/apiUrl'
   export default {
     config: {
-      'navigationBarTitleText': '会员登录'
+      'navigationBarTitleText': '会员登陆'
     },
     data () {
       return {
         pageInfo: '',
+        viewApi: 'Api/User/GetLoginForm',
+        postApi: 'Api/User/Login',
         asyncFlag: false
       }
     },
@@ -35,7 +37,7 @@
 
 <style scoped lang="less">
   .pages-user-login {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 

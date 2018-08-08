@@ -53,7 +53,6 @@ import XCol from '@/elements/all/x-col'
 import XIcon from '@/elements/all/x-icon'
 import XImage from '@/elements/all/x-image'
 import XRow from '@/elements/all/x-row'
-import XImage from '@/elements/app/x-image'
 import XTopNav from '@/elements/app/x-top-nav'
 import XFoot from '@/elements/mobile/x-foot'
 import XProductItem from '@/elements/mobile/x-product-item'
@@ -100,7 +99,6 @@ Vue.component('x-col', XCol)
 Vue.component('x-icon', XIcon)
 Vue.component('x-image', XImage)
 Vue.component('x-row', XRow)
-Vue.component('x-image', XImage)
 Vue.component('x-top-nav', XTopNav)
 Vue.component('x-foot', XFoot)
 Vue.component('x-product-item', XProductItem)

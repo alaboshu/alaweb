@@ -73,7 +73,6 @@ import XGrid from '@/elements/pc/x-grid'
 import XGroupbuy from '@/elements/pc/x-groupbuy'
 import XHead from '@/elements/pc/x-head'
 import XHtml from '@/elements/pc/x-html'
-import XImage from '@/elements/pc/x-image'
 import XKeyword from '@/elements/pc/x-keyword'
 import XList from '@/elements/pc/x-list'
 import XMarquee from '@/elements/pc/x-marquee'
@@ -154,7 +153,6 @@ Vue.component('x-grid', XGrid)
 Vue.component('x-groupbuy', XGroupbuy)
 Vue.component('x-head', XHead)
 Vue.component('x-html', XHtml)
-Vue.component('x-image', XImage)
 Vue.component('x-keyword', XKeyword)
 Vue.component('x-list', XList)
 Vue.component('x-marquee', XMarquee)

@@ -1,7 +1,7 @@
 <template>
   <div class="pages-user-identity-index">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <zk-grid></zk-grid>
+    <zk-head backText="首页" :title="pageInfo.title"></zk-head>
+    <zk-auto-form :viewApi="viewApi" :postApi="postApi"></zk-auto-form>
     <zk-foot></zk-foot>
   </div>
 </template>
@@ -15,6 +15,8 @@
     data () {
       return {
         pageInfo: '',
+        viewApi: 'Api/UserDetail/GetIdentityForm',
+        postApi: 'Api/UserDetail/Identity',
         asyncFlag: false
       }
     },
@@ -35,7 +37,7 @@
 
 <style scoped lang="less">
   .pages-user-identity-index {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 

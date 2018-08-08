@@ -1,17 +1,7 @@
 <template>
   <div class="pages-finance-transfer-add">
-    <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <x-group>
-      <x-cell title="转账类型" is-link @click.native="transferTypePickerShow = true" :value="transfer .name"></x-cell>
-      <!-- <x-picker :visible.sync="transferTypePickerShow" :columns="transferType" value-key="name" @confirm="confirmPerson" /> -->
-      <x-input label="对方用户" placeholder="请输入对方用户" required/>
-      <x-input label="转出金额" placeholder="请输入转出金额" type="number" required/>
-      <x-input label="转出支付密码" placeholder="请输入支付密码" type="password" required/>
-      <x-input label="备注" placeholder="请输入备注" required/>
-    </x-group>
-    <div class="transfer-add_btn">
-      <button class="" type="button">提交</button>
-    </div>
+    <zk-head backText="首页" :title="pageInfo.title"></zk-head>
+    <zk-auto-form :viewApi="viewApi" :postApi="postApi"></zk-auto-form>
     <zk-foot></zk-foot>
   </div>
 </template>
@@ -25,31 +15,9 @@
     data () {
       return {
         pageInfo: '',
-        asyncFlag: false,
-        transfer: [{ name: 'Apple', age: 1 }],
-        transferTypePickerShow: false,
-        transferType: [
-          {
-            values: [
-              {
-                name: 'Apple',
-                price: 1.3
-              },
-              {
-                name: 'Banana',
-                price: 2.0
-              },
-              {
-                name: 'Orange',
-                price: 10
-              },
-              {
-                name: 'Pear',
-                price: 0.5
-              }
-            ]
-          }
-        ]
+        viewApi: 'Api/transfer/GetRegForm',
+        postApi: 'Api/transfer/add',
+        asyncFlag: false
       }
     },
     mounted () {
@@ -62,10 +30,6 @@
         this.$loading = false
         this.asyncFlag = true
         // console.info('测试一页面', this.pageInfo)
-      },
-      confirmPerson (picker) {
-        this.transfer = picker.getValues()[0]
-        console.log('this.transfer ', this.transfer)
       }
     }
   }

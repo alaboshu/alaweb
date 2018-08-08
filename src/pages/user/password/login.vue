@@ -1,7 +1,7 @@
 <template>
   <div class="pages-user-password-login">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <zk-grid></zk-grid>
+    <zk-head backText="首页" :title="pageInfo.title"></zk-head>
+    <zk-auto-form :viewApi="viewApi" :postApi="postApi"></zk-auto-form>
     <zk-foot></zk-foot>
   </div>
 </template>
@@ -10,11 +10,13 @@
   import { THEME_GETPAGE_GET } from '@/service/api/apiUrl'
   export default {
     config: {
-      'navigationBarTitleText': '登录密码修改'
+      'navigationBarTitleText': '修改密码'
     },
     data () {
       return {
         pageInfo: '',
+        viewApi: 'Api/User/GetPasswordForm',
+        postApi: 'Api/User/ChangePassword',
         asyncFlag: false
       }
     },
@@ -35,7 +37,7 @@
 
 <style scoped lang="less">
   .pages-user-password-login {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="pages-support-add">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <zk-grid></zk-grid>
+    <zk-head backText="首页" :title="pageInfo.title"></zk-head>
+    <zk-auto-form :viewApi="viewApi" :postApi="postApi"></zk-auto-form>
     <zk-foot></zk-foot>
   </div>
 </template>
@@ -10,11 +10,13 @@
   import { THEME_GETPAGE_GET } from '@/service/api/apiUrl'
   export default {
     config: {
-      'navigationBarTitleText': '意见反馈'
+      'navigationBarTitleText': '会员登陆'
     },
     data () {
       return {
         pageInfo: '',
+        viewApi: 'Api/WorkOrder/GetSupportForm',
+        postApi: 'Api/UserAddress/add',
         asyncFlag: false
       }
     },
@@ -35,7 +37,7 @@
 
 <style scoped lang="less">
   .pages-support-add {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 

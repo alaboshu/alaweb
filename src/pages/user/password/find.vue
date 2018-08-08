@@ -1,7 +1,7 @@
 <template>
   <div class="pages-user-password-find">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
-    <zk-grid></zk-grid>
+    <zk-head backText="首页" :title="pageInfo.title"></zk-head>
+    <zk-auto-form :viewApi="viewApi" :postApi="postApi"></zk-auto-form>
     <zk-foot></zk-foot>
   </div>
 </template>
@@ -15,6 +15,8 @@
     data () {
       return {
         pageInfo: '',
+        viewApi: 'Api/User/GetFindPasswordForm',
+        postApi: 'Api/User/FindPassword',
         asyncFlag: false
       }
     },
@@ -35,7 +37,7 @@
 
 <style scoped lang="less">
   .pages-user-password-find {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 
