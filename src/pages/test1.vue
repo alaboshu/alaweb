@@ -1,7 +1,9 @@
 <template>
   <div class="pages--test1">
-    <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
+    <!-- <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head> -->
+    <zk-top-nav></zk-top-nav>
     <x-cell title="会员" value="dd" url="http://www.baidu.com"></x-cell>
+
     <zk-foot></zk-foot>
   </div>
 </template>
