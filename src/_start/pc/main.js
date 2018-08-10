@@ -67,7 +67,10 @@ import XButton from '@/elements/pc/x-button'
 import XBuyAddress from '@/elements/pc/x-buy-address'
 import XCard from '@/elements/pc/x-card'
 import XCell from '@/elements/pc/x-cell'
+import XCheckbox from '@/elements/pc/x-checkbox'
+import XCheckboxMultipl from '@/elements/pc/x-checkbox-multipl'
 import XCountdown from '@/elements/pc/x-countdown'
+import XDecimal from '@/elements/pc/x-decimal'
 import XDialog from '@/elements/pc/x-dialog'
 import XFoot from '@/elements/pc/x-foot'
 import XGrid from '@/elements/pc/x-grid'
@@ -88,12 +91,15 @@ import XPopup from '@/elements/pc/x-popup'
 import XPreview from '@/elements/pc/x-preview'
 import XProductClass from '@/elements/pc/x-product-class'
 import XProductItem from '@/elements/pc/x-product-item'
+import XRadio from '@/elements/pc/x-radio'
 import XResult from '@/elements/pc/x-result'
 import XSearch from '@/elements/pc/x-search'
 import XSwiper from '@/elements/pc/x-swiper'
+import XSwitch from '@/elements/pc/x-switch'
 import XTab from '@/elements/pc/x-tab'
 import XTable from '@/elements/pc/x-table'
 import XText from '@/elements/pc/x-text'
+import XTextarea from '@/elements/pc/x-textarea'
 import XTopNav from '@/elements/pc/x-top-nav'
 import XUpload from '@/elements/pc/x-upload'
 import XVideo from '@/elements/pc/x-video'
@@ -152,7 +158,10 @@ Vue.component('x-button', XButton)
 Vue.component('x-buy-address', XBuyAddress)
 Vue.component('x-card', XCard)
 Vue.component('x-cell', XCell)
+Vue.component('x-checkbox', XCheckbox)
+Vue.component('x-checkbox-multipl', XCheckboxMultipl)
 Vue.component('x-countdown', XCountdown)
+Vue.component('x-decimal', XDecimal)
 Vue.component('x-dialog', XDialog)
 Vue.component('x-foot', XFoot)
 Vue.component('x-grid', XGrid)
@@ -173,12 +182,15 @@ Vue.component('x-popup', XPopup)
 Vue.component('x-preview', XPreview)
 Vue.component('x-product-class', XProductClass)
 Vue.component('x-product-item', XProductItem)
+Vue.component('x-radio', XRadio)
 Vue.component('x-result', XResult)
 Vue.component('x-search', XSearch)
 Vue.component('x-swiper', XSwiper)
+Vue.component('x-switch', XSwitch)
 Vue.component('x-tab', XTab)
 Vue.component('x-table', XTable)
 Vue.component('x-text', XText)
+Vue.component('x-textarea', XTextarea)
 Vue.component('x-top-nav', XTopNav)
 Vue.component('x-upload', XUpload)
 Vue.component('x-video', XVideo)
