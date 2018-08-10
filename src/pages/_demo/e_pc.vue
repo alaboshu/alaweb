@@ -12,6 +12,7 @@
       <x-audio></x-audio>
       <x-auto-form></x-auto-form>
       <x-avatar></x-avatar>
+      <x-button></x-button>
       <x-buy-address></x-buy-address>
       <x-card></x-card>
       <x-cell></x-cell>
@@ -22,13 +23,16 @@
       <x-groupbuy></x-groupbuy>
       <x-head></x-head>
       <x-html></x-html>
+      <x-input></x-input>
       <x-keyword></x-keyword>
       <x-list></x-list>
       <x-marquee></x-marquee>
       <x-mask></x-mask>
       <x-nodata></x-nodata>
       <x-notice></x-notice>
+      <x-number></x-number>
       <x-pay></x-pay>
+      <x-picker></x-picker>
       <x-popup></x-popup>
       <x-preview></x-preview>
       <x-product-class></x-product-class>
@@ -40,6 +44,7 @@
       <x-table></x-table>
       <x-text></x-text>
       <x-top-nav></x-top-nav>
+      <x-upload></x-upload>
       <x-video></x-video>
 
   </div>

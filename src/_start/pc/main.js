@@ -63,6 +63,7 @@ import XAddress from '@/elements/pc/x-address'
 import XAudio from '@/elements/pc/x-audio'
 import XAutoForm from '@/elements/pc/x-auto-form'
 import XAvatar from '@/elements/pc/x-avatar'
+import XButton from '@/elements/pc/x-button'
 import XBuyAddress from '@/elements/pc/x-buy-address'
 import XCard from '@/elements/pc/x-card'
 import XCell from '@/elements/pc/x-cell'
@@ -73,13 +74,16 @@ import XGrid from '@/elements/pc/x-grid'
 import XGroupbuy from '@/elements/pc/x-groupbuy'
 import XHead from '@/elements/pc/x-head'
 import XHtml from '@/elements/pc/x-html'
+import XInput from '@/elements/pc/x-input'
 import XKeyword from '@/elements/pc/x-keyword'
 import XList from '@/elements/pc/x-list'
 import XMarquee from '@/elements/pc/x-marquee'
 import XMask from '@/elements/pc/x-mask'
 import XNodata from '@/elements/pc/x-nodata'
 import XNotice from '@/elements/pc/x-notice'
+import XNumber from '@/elements/pc/x-number'
 import XPay from '@/elements/pc/x-pay'
+import XPicker from '@/elements/pc/x-picker'
 import XPopup from '@/elements/pc/x-popup'
 import XPreview from '@/elements/pc/x-preview'
 import XProductClass from '@/elements/pc/x-product-class'
@@ -91,6 +95,7 @@ import XTab from '@/elements/pc/x-tab'
 import XTable from '@/elements/pc/x-table'
 import XText from '@/elements/pc/x-text'
 import XTopNav from '@/elements/pc/x-top-nav'
+import XUpload from '@/elements/pc/x-upload'
 import XVideo from '@/elements/pc/x-video'
 
 Vue.component('zk-address', ZkAddress)
@@ -143,6 +148,7 @@ Vue.component('x-address', XAddress)
 Vue.component('x-audio', XAudio)
 Vue.component('x-auto-form', XAutoForm)
 Vue.component('x-avatar', XAvatar)
+Vue.component('x-button', XButton)
 Vue.component('x-buy-address', XBuyAddress)
 Vue.component('x-card', XCard)
 Vue.component('x-cell', XCell)
@@ -153,13 +159,16 @@ Vue.component('x-grid', XGrid)
 Vue.component('x-groupbuy', XGroupbuy)
 Vue.component('x-head', XHead)
 Vue.component('x-html', XHtml)
+Vue.component('x-input', XInput)
 Vue.component('x-keyword', XKeyword)
 Vue.component('x-list', XList)
 Vue.component('x-marquee', XMarquee)
 Vue.component('x-mask', XMask)
 Vue.component('x-nodata', XNodata)
 Vue.component('x-notice', XNotice)
+Vue.component('x-number', XNumber)
 Vue.component('x-pay', XPay)
+Vue.component('x-picker', XPicker)
 Vue.component('x-popup', XPopup)
 Vue.component('x-preview', XPreview)
 Vue.component('x-product-class', XProductClass)
@@ -171,6 +180,7 @@ Vue.component('x-tab', XTab)
 Vue.component('x-table', XTable)
 Vue.component('x-text', XText)
 Vue.component('x-top-nav', XTopNav)
+Vue.component('x-upload', XUpload)
 Vue.component('x-video', XVideo)
 
 

@@ -1,0 +1,36 @@
+<template>
+  <div class="pc-x-button" element-path="pc/x-button">
+  {{viewModel}}
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'x-button',
+    props: {
+      elementData: {}
+    },
+    data () {
+      return {
+        viewModel: ''
+      }
+    },
+    mounted () {
+      this.init()
+    },
+    methods: {
+      async init () {
+        if (this.elementData !== undefined) {
+          this.viewModel = this.elementData
+        }
+      }
+    }
+  }
+</script>
+
+<style scoped lang="less">
+  @import '~_style/index.less';
+  .pc-x-button {
+  	font-size: @font-size-base;
+  }
+</style>
