@@ -18,7 +18,9 @@
       }
     },
     mounted () {
-      this.viewModel = this.elementData
+      if (this.elementData !== undefined) {
+        this.viewModel = this.elementData
+      }
     },
     methods: {
     }

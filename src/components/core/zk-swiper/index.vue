@@ -1,38 +1,35 @@
 <template>
-  <div class="zk-swiper" :style="styles">
-    <x-swiper :elementData="viewModel" v-if="asyncflag"></x-swiper>
+  <div class="zk-swiper" :style="styles" :component-path="diySetting.path" v-if="asyncflag" :data-id="dataId" :widget-id="diySetting.defaultWidtetId">
+    <x-swiper :elementData="viewModel"></x-swiper>
   </div>
 </template>
 
 <script>
-  import { THEME_GETVALUE_GET } from '@/service/api/apiUrl'
+  import { THEME_GETLINK_GET } from '@/service/api/apiUrl'
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
     data () {
       return {
-        viewModel: '', // 数据模型
-        styles: {}, 
-        indicatorDots: true,
-        autoplay: true,
-        interval: 5000,
-        duration: 900,
-        circular: true,
+        viewModel: '',
+        diySetting: editSetting.configs,
+        styles: {},
         asyncflag: false
       }
     },
-    props: ['dataId'],
+    props: {
+      dataId: {
+        type: String,
+        default: editSetting.configs.defaultDataId
+      }
+    },
     mounted () {
       this.ApiGet()
     },
     methods: {
       async  ApiGet () {
-        const para = {
-          dataId: this.dataId,
-          defaultId: '5b406cddfef00000a0000004'
-        }
-        this.viewModel = await this.$api.get(THEME_GETVALUE_GET, para)
-        console.info('组件数据swiper', this.viewModel)
+        this.viewModel = await this.$api.get(THEME_GETLINK_GET, 'dataId=' + this.dataId)
+        // console.info('组件数据swiper', this.viewModel)
         this.asyncflag = true
       }
     }

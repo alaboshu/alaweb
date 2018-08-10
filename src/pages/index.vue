@@ -20,7 +20,7 @@
         pageInfo: '',
         asyncFlag: false,
         style: '',
-        viewModel: '' // 数据模型
+        viewModel: ''
       }
     },
     mounted () {
@@ -29,6 +29,7 @@
     methods: {
       async init () {
         this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
+        console.info('页面信息', this.pageInfo)
         this.asyncFlag = true
       }
     }

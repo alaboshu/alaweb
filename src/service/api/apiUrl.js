@@ -21,6 +21,7 @@ export const USERADDRESS_DELETE_DELETE = '/api/useraddress/delete' // 删除用�
 export const USERADDRESS_UPDATE_PUT = '/api/useraddress/update' // 更新用户地址
 export const USERADDRESS_SETDEFAULT_POST = '/api/useraddress/setdefault' // 设置默认 地址
 export const USERADDRESS_SINGLE_GET = '/api/useraddress/single' // id值为空获取默认地址 如果没有默认地址则返回值为空 id 值存在则获取与id相同的地址
+export const USERADDRESS_GETADDADDRESSFORM_GET = '/api/useraddress/getaddaddressform' // 获取添加地址视图
 
 //  User相关的API接口
 export const USER_RECOMMEND_GET = '/api/user/recommend' // 推荐会员
@@ -37,12 +38,16 @@ export const USER_INFO_GET = '/api/user/info' // 会员详细信息、包括用�
 export const USER_ADDACTION_POST = '/api/user/addaction' // 添加操作纪律，比如添加购物车 添加收藏夹等等
 export const USER_GETACTION_GET = '/api/user/getaction' // 获取操作记录 添加收藏夹等等
 export const USER_REMOVEACTION_DELETE = '/api/user/removeaction' // 移除操作记录 比如删除购物车等
+export const USER_GETLOGINFORM_GET = '/api/user/getloginform' // 获取会员登陆视图
+export const USER_GETFINDPASSWORDFORM_GET = '/api/user/getfindpasswordform' // 获取会员找回密码视图
+export const USER_GETPASSWORDFORM_GET = '/api/user/getpasswordform' // 获取会员修改密码视图
 
 //  UserDetail相关的API接口
 export const USERDETAIL_QRCODE_GET = '/api/userdetail/qrcode' // 二维码
 export const USERDETAIL_TREE_GET = '/api/userdetail/tree' // 组织架构图函数
 export const USERDETAIL_IDENTITY_POST = '/api/userdetail/identity' // 实名认证
 export const USERDETAIL_GETIDENTITY_GET = '/api/userdetail/getidentity' // 获取实名认证信息 
+export const USERDETAIL_GETIDENTITYFORM_GET = '/api/userdetail/getidentityform' // 获取实名认证视图
 
 //  UserType相关的API接口
 export const USERTYPE_GETSINGLE_GET = '/api/usertype/getsingle' // 查询单个用户类型的详细信息，包括部门相信信息，员工详细信息等
@@ -106,6 +111,7 @@ export const WITHDRAW_GETUSERLIST_GET = '/api/withdraw/getuserlist' // 获取用
 export const WITHDRAW_DELETE_DELETE = '/api/withdraw/delete' // 删除用户提现
 export const WITHDRAW_GET_GET = '/api/withdraw/get' // 获取提现详情
 export const WITHDRAW_GETWITHDRAWVIEW_GET = '/api/withdraw/getwithdrawview' // 获取转账视图
+export const WITHDRAW_GETWITHDRAWFORM_GET = '/api/withdraw/getwithdrawform' // 获取转账视图
 
 //  Common相关的API接口
 export const COMMON_GETKEYVALUESBYENUM_GET = '/api/common/getkeyvaluesbyenum' // 根据枚举获取KeyValues
