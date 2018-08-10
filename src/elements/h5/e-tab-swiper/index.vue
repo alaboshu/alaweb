@@ -39,7 +39,7 @@
     name: 'e-tab-swiper',
     data () {
       return {
-        viewModel: '', // 数据模型
+        viewModel: '',
         styles: {}, 
         navbar_selected: '',
         selectId: ''

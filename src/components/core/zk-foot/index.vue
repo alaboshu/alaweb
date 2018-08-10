@@ -9,8 +9,8 @@
     name: editSetting.key,
     data () {
       return {
-        viewModel: '', // 数据模型
-        styles: {}, 
+        viewModel: '',
+        styles: {},
         asyncflag: false
       }
     },

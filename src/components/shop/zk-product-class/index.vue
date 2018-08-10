@@ -14,7 +14,7 @@
     props: ['widgetDataId'],
     data () {
       return {
-        viewModel: '', // 数据模型
+        viewModel: '',
         styles: {} 
       }
     },

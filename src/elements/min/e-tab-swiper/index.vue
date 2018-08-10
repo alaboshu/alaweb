@@ -64,7 +64,7 @@
         tabs: ['选项一', '选项二', '选项三'],
         activeIndex: 0,
         fontSize: 30,
-        viewModel: '', // 数据模型
+        viewModel: '',
         styles: {} 
       }
     },

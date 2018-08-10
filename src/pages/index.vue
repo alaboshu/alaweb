@@ -20,7 +20,7 @@
         pageInfo: '',
         asyncFlag: false,
         style: '',
-        viewModel: '' // 数据模型
+        viewModel: ''
       }
     },
     mounted () {
