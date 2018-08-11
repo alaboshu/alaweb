@@ -175,23 +175,22 @@ export const PAGEDATA_ADD_POST = '/api/pagedata/add' // 增加单条记录
 export const PAGEDATA_UPDATE_GET = '/api/pagedata/update' // 修改单条记录
 export const PAGEDATA_DELETE_GET = '/api/pagedata/delete' // 删除单条记录
 
+//  SitePage相关的API接口
+export const SITEPAGE_GETTHEMEPAGE_GET = '/api/sitepage/getthemepage' // 获取当前页面的配置信息
+export const SITEPAGE_GETTHEMEPAGELIST_GET = '/api/sitepage/getthemepagelist' // 获取当前终端的页面，构建左侧菜单
+export const SITEPAGE_SAVE_POST = '/api/sitepage/save' // Diy保存
+export const SITEPAGE_GET_GET = '/api/sitepage/get' // 根据Url获取单条记录
+export const SITEPAGE_GETLIST_GET = '/api/sitepage/getlist' // 根据Url获取列表
+export const SITEPAGE_ADD_POST = '/api/sitepage/add' // 增加单条记录
+export const SITEPAGE_UPDATE_GET = '/api/sitepage/update' // 修改单条记录
+export const SITEPAGE_DELETE_GET = '/api/sitepage/delete' // 删除单条记录
+
 //  SystemPage相关的API接口
 export const SYSTEMPAGE_GET_GET = '/api/systempage/get' // 根据Url获取单条记录
 export const SYSTEMPAGE_GETLIST_GET = '/api/systempage/getlist' // 根据Url获取列表
 export const SYSTEMPAGE_ADD_POST = '/api/systempage/add' // 增加单条记录
 export const SYSTEMPAGE_UPDATE_GET = '/api/systempage/update' // 修改单条记录
 export const SYSTEMPAGE_DELETE_GET = '/api/systempage/delete' // 删除单条记录
-
-//  ThemePage相关的API接口
-export const THEMEPAGE_GETTHEMEPAGE_GET = '/api/themepage/getthemepage' // 获取当前页面的配置信息
-export const THEMEPAGE_GETTHEMEPAGELIST_GET = '/api/themepage/getthemepagelist' // 获取当前终端的页面，构建左侧菜单
-export const THEMEPAGE_SAVE_POST = '/api/themepage/save' // Diy保存
-export const THEMEPAGE_GET_GET = '/api/themepage/get' // 根据Url获取单条记录
-export const THEMEPAGE_GETLIST_GET = '/api/themepage/getlist' // 根据Url获取列表
-export const THEMEPAGE_ADD_POST = '/api/themepage/add' // 增加单条记录
-export const THEMEPAGE_UPDATE_GET = '/api/themepage/update' // 修改单条记录
-export const THEMEPAGE_DELETE_GET = '/api/themepage/delete' // 删除单条记录
-export const THEMEPAGE_SAVEASYNC_POST = '/api/themepage/saveasync' // DIY页面保存
 
 //  Layout相关的API接口
 export const LAYOUT_GET_GET = '/api/layout/get' // 根据Url获取单条记录
@@ -327,6 +326,14 @@ export const THEME_GET_GET = '/api/theme/get' // 根据Url获取单条记录
 export const THEME_ADD_POST = '/api/theme/add' // 增加单条记录
 export const THEME_UPDATE_GET = '/api/theme/update' // 修改单条记录
 export const THEME_DELETE_GET = '/api/theme/delete' // 删除单条记录
+
+//  ThemePage相关的API接口
+export const THEMEPAGE_SAVEASYNC_POST = '/api/themepage/saveasync' // DIY页面保存
+export const THEMEPAGE_GET_GET = '/api/themepage/get' // 根据Url获取单条记录
+export const THEMEPAGE_GETLIST_GET = '/api/themepage/getlist' // 根据Url获取列表
+export const THEMEPAGE_ADD_POST = '/api/themepage/add' // 增加单条记录
+export const THEMEPAGE_UPDATE_GET = '/api/themepage/update' // 修改单条记录
+export const THEMEPAGE_DELETE_GET = '/api/themepage/delete' // 删除单条记录
 
 //  ThemePageWidget相关的API接口
 export const THEMEPAGEWIDGET_SAVEASYNC_POST = '/api/themepagewidget/saveasync' // 保存模块数据
