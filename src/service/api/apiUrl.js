@@ -15,19 +15,22 @@
 //  }
 
 //  UserAddress相关的API接口
+export const USERADDRESS_GETADDADDRESSFORM_GET = '/api/useraddress/getaddaddressform' // 获取添加地址视图
 export const USERADDRESS_ADD_POST = '/api/useraddress/add' // 添加商品到用户地址
 export const USERADDRESS_GET_GET = '/api/useraddress/get' // 获取用户地址数据
 export const USERADDRESS_DELETE_DELETE = '/api/useraddress/delete' // 删除用户地址
 export const USERADDRESS_UPDATE_PUT = '/api/useraddress/update' // 更新用户地址
 export const USERADDRESS_SETDEFAULT_POST = '/api/useraddress/setdefault' // 设置默认 地址
 export const USERADDRESS_SINGLE_GET = '/api/useraddress/single' // id值为空获取默认地址 如果没有默认地址则返回值为空 id 值存在则获取与id相同的地址
-export const USERADDRESS_GETADDADDRESSFORM_GET = '/api/useraddress/getaddaddressform' // 获取添加地址视图
 
 //  User相关的API接口
 export const USER_RECOMMEND_GET = '/api/user/recommend' // 推荐会员
 export const USER_LOGIN_POST = '/api/user/login' // 会员登录
 export const USER_LOGINBYOPENID_POST = '/api/user/loginbyopenid' // 使用openid 完成会员登录
 export const USER_GETREGFORM_GET = '/api/user/getregform' // 获取会员注册视图
+export const USER_GETLOGINFORM_GET = '/api/user/getloginform' // 获取会员登陆视图
+export const USER_GETFINDPASSWORDFORM_GET = '/api/user/getfindpasswordform' // 获取会员找回密码视图
+export const USER_GETPASSWORDFORM_GET = '/api/user/getpasswordform' // 获取会员修改密码视图
 export const USER_REG_POST = '/api/user/reg' // 会员注册
 export const USER_UPDATE_PUT = '/api/user/update' // 修改用户信息
 export const USER_CHANGEPASSWORD_PUT = '/api/user/changepassword' // 修改密码，密码传入明文
@@ -38,16 +41,13 @@ export const USER_INFO_GET = '/api/user/info' // 会员详细信息、包括用�
 export const USER_ADDACTION_POST = '/api/user/addaction' // 添加操作纪律，比如添加购物车 添加收藏夹等等
 export const USER_GETACTION_GET = '/api/user/getaction' // 获取操作记录 添加收藏夹等等
 export const USER_REMOVEACTION_DELETE = '/api/user/removeaction' // 移除操作记录 比如删除购物车等
-export const USER_GETLOGINFORM_GET = '/api/user/getloginform' // 获取会员登陆视图
-export const USER_GETFINDPASSWORDFORM_GET = '/api/user/getfindpasswordform' // 获取会员找回密码视图
-export const USER_GETPASSWORDFORM_GET = '/api/user/getpasswordform' // 获取会员修改密码视图
 
 //  UserDetail相关的API接口
 export const USERDETAIL_QRCODE_GET = '/api/userdetail/qrcode' // 二维码
 export const USERDETAIL_TREE_GET = '/api/userdetail/tree' // 组织架构图函数
+export const USERDETAIL_GETIDENTITYFORM_GET = '/api/userdetail/getidentityform' // 获取实名认证视图
 export const USERDETAIL_IDENTITY_POST = '/api/userdetail/identity' // 实名认证
 export const USERDETAIL_GETIDENTITY_GET = '/api/userdetail/getidentity' // 获取实名认证信息 
-export const USERDETAIL_GETIDENTITYFORM_GET = '/api/userdetail/getidentityform' // 获取实名认证视图
 
 //  UserType相关的API接口
 export const USERTYPE_GETSINGLE_GET = '/api/usertype/getsingle' // 查询单个用户类型的详细信息，包括部门相信信息，员工详细信息等
@@ -110,7 +110,6 @@ export const WITHDRAW_ADD_POST = '/api/withdraw/add' // 用户申请提现
 export const WITHDRAW_GETUSERLIST_GET = '/api/withdraw/getuserlist' // 获取用户所有提现数据
 export const WITHDRAW_DELETE_DELETE = '/api/withdraw/delete' // 删除用户提现
 export const WITHDRAW_GET_GET = '/api/withdraw/get' // 获取提现详情
-export const WITHDRAW_GETWITHDRAWVIEW_GET = '/api/withdraw/getwithdrawview' // 获取转账视图
 export const WITHDRAW_GETWITHDRAWFORM_GET = '/api/withdraw/getwithdrawform' // 获取转账视图
 
 //  Common相关的API接口
@@ -192,6 +191,7 @@ export const THEMEPAGE_GETLIST_GET = '/api/themepage/getlist' // 根据Url获取
 export const THEMEPAGE_ADD_POST = '/api/themepage/add' // 增加单条记录
 export const THEMEPAGE_UPDATE_GET = '/api/themepage/update' // 修改单条记录
 export const THEMEPAGE_DELETE_GET = '/api/themepage/delete' // 删除单条记录
+export const THEMEPAGE_SAVEASYNC_POST = '/api/themepage/saveasync' // DIY页面保存
 
 //  Layout相关的API接口
 export const LAYOUT_GET_GET = '/api/layout/get' // 根据Url获取单条记录
@@ -236,13 +236,18 @@ export const APIADDRESS_UPDATE_GET = '/api/apiaddress/update' // 修改单条记
 export const APIADDRESS_DELETE_GET = '/api/apiaddress/delete' // 删除单条记录
 
 //  WorkOrder相关的API接口
-export const WORKORDER_FEEDBACK_GET = '/api/workorder/feedback'
-export const WORKORDER_FEEDBACK_POST = '/api/workorder/feedback'
 export const WORKORDER_GET_GET = '/api/workorder/get' // 根据Url获取单条记录
 export const WORKORDER_GETLIST_GET = '/api/workorder/getlist' // 根据Url获取列表
 export const WORKORDER_ADD_POST = '/api/workorder/add' // 增加单条记录
 export const WORKORDER_UPDATE_GET = '/api/workorder/update' // 修改单条记录
 export const WORKORDER_DELETE_GET = '/api/workorder/delete' // 删除单条记录
+
+//  About相关的API接口
+export const ABOUT_GET_GET = '/api/about/get' // 根据Url获取单条记录
+export const ABOUT_GETLIST_GET = '/api/about/getlist' // 根据Url获取列表
+export const ABOUT_ADD_POST = '/api/about/add' // 增加单条记录
+export const ABOUT_UPDATE_GET = '/api/about/update' // 修改单条记录
+export const ABOUT_DELETE_GET = '/api/about/delete' // 删除单条记录
 
 //  Article相关的API接口
 export const ARTICLE_ARTICLEDETAIL_GET = '/api/article/articledetail' // 内容详情页面
@@ -256,6 +261,27 @@ export const ARTICLE_GETLIST_GET = '/api/article/getlist' // 根据Url获取列�
 export const ARTICLE_ADD_POST = '/api/article/add' // 增加单条记录
 export const ARTICLE_UPDATE_GET = '/api/article/update' // 修改单条记录
 export const ARTICLE_DELETE_GET = '/api/article/delete' // 删除单条记录
+
+//  Channel相关的API接口
+export const CHANNEL_GET_GET = '/api/channel/get' // 根据Url获取单条记录
+export const CHANNEL_GETLIST_GET = '/api/channel/getlist' // 根据Url获取列表
+export const CHANNEL_ADD_POST = '/api/channel/add' // 增加单条记录
+export const CHANNEL_UPDATE_GET = '/api/channel/update' // 修改单条记录
+export const CHANNEL_DELETE_GET = '/api/channel/delete' // 删除单条记录
+
+//  SinglePage相关的API接口
+export const SINGLEPAGE_GET_GET = '/api/singlepage/get' // 根据Url获取单条记录
+export const SINGLEPAGE_GETLIST_GET = '/api/singlepage/getlist' // 根据Url获取列表
+export const SINGLEPAGE_ADD_POST = '/api/singlepage/add' // 增加单条记录
+export const SINGLEPAGE_UPDATE_GET = '/api/singlepage/update' // 修改单条记录
+export const SINGLEPAGE_DELETE_GET = '/api/singlepage/delete' // 删除单条记录
+
+//  Special相关的API接口
+export const SPECIAL_GET_GET = '/api/special/get' // 根据Url获取单条记录
+export const SPECIAL_GETLIST_GET = '/api/special/getlist' // 根据Url获取列表
+export const SPECIAL_ADD_POST = '/api/special/add' // 增加单条记录
+export const SPECIAL_UPDATE_GET = '/api/special/update' // 修改单条记录
+export const SPECIAL_DELETE_GET = '/api/special/delete' // 删除单条记录
 
 //  Diy相关的API接口
 export const DIY_SEARCHKEYWORD_GET = '/api/diy/searchkeyword' // 获取搜索关键字
@@ -303,7 +329,7 @@ export const THEME_UPDATE_GET = '/api/theme/update' // 修改单条记录
 export const THEME_DELETE_GET = '/api/theme/delete' // 删除单条记录
 
 //  ThemePageWidget相关的API接口
-export const THEMEPAGEWIDGET_SAVEASYNC_POST = '/api/themepagewidget/saveasync' // 保存模块
+export const THEMEPAGEWIDGET_SAVEASYNC_POST = '/api/themepagewidget/saveasync' // 保存模块数据
 export const THEMEPAGEWIDGET_GET_GET = '/api/themepagewidget/get' // 根据Url获取单条记录
 export const THEMEPAGEWIDGET_GETLIST_GET = '/api/themepagewidget/getlist' // 根据Url获取列表
 export const THEMEPAGEWIDGET_ADD_POST = '/api/themepagewidget/add' // 增加单条记录

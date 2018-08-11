@@ -509,113 +509,113 @@ export default [{
         }
     },
     {
-        path: '/pages/article/about/index',
+        path: '/pages/articles/about/index',
         meta: {
             title: '关于我们'
         },
-        name: '_article_about_index',
+        name: '_articles_about_index',
         component: function (resolve) {
-            require(['@/pages/article/about/index'], resolve)
+            require(['@/pages/articles/about/index'], resolve)
         }
     },
     {
-        path: '/pages/article/about/show',
+        path: '/pages/articles/about/show',
         meta: {
             title: '关于我们详情页'
         },
-        name: '_article_about_show',
+        name: '_articles_about_show',
         component: function (resolve) {
-            require(['@/pages/article/about/show'], resolve)
+            require(['@/pages/articles/about/show'], resolve)
         }
     },
     {
-        path: '/pages/article/index',
+        path: '/pages/articles/index',
         meta: {
             title: '文章首页'
         },
-        name: '_article_index',
+        name: '_articles_index',
         component: function (resolve) {
-            require(['@/pages/article/index'], resolve)
+            require(['@/pages/articles/index'], resolve)
         }
     },
     {
-        path: '/pages/article/list',
+        path: '/pages/articles/list',
         meta: {
             title: '文章列表页'
         },
-        name: '_article_list',
+        name: '_articles_list',
         component: function (resolve) {
-            require(['@/pages/article/list'], resolve)
+            require(['@/pages/articles/list'], resolve)
         }
     },
     {
-        path: '/pages/article/show',
+        path: '/pages/articles/show',
         meta: {
             title: '文章详情页'
         },
-        name: '_article_show',
+        name: '_articles_show',
         component: function (resolve) {
-            require(['@/pages/article/show'], resolve)
+            require(['@/pages/articles/show'], resolve)
         }
     },
     {
-        path: '/pages/article/help/index',
+        path: '/pages/articles/help/index',
         meta: {
             title: '客户中心'
         },
-        name: '_article_help_index',
+        name: '_articles_help_index',
         component: function (resolve) {
-            require(['@/pages/article/help/index'], resolve)
+            require(['@/pages/articles/help/index'], resolve)
         }
     },
     {
-        path: '/pages/article/help/show',
+        path: '/pages/articles/help/show',
         meta: {
             title: '客服中心详情页'
         },
-        name: '_article_help_show',
+        name: '_articles_help_show',
         component: function (resolve) {
-            require(['@/pages/article/help/show'], resolve)
+            require(['@/pages/articles/help/show'], resolve)
         }
     },
     {
-        path: '/pages/article/topline/show',
+        path: '/pages/articles/topline/show',
         meta: {
             title: '头条详情'
         },
-        name: '_article_topline_show',
+        name: '_articles_topline_show',
         component: function (resolve) {
-            require(['@/pages/article/topline/show'], resolve)
+            require(['@/pages/articles/topline/show'], resolve)
         }
     },
     {
-        path: '/pages/article/topline/index',
+        path: '/pages/articles/topline/index',
         meta: {
             title: '头条'
         },
-        name: '_article_topline_index',
+        name: '_articles_topline_index',
         component: function (resolve) {
-            require(['@/pages/article/topline/index'], resolve)
+            require(['@/pages/articles/topline/index'], resolve)
         }
     },
     {
-        path: '/pages/article/notice/index',
+        path: '/pages/articles/notice/index',
         meta: {
             title: '会员通知'
         },
-        name: '_article_notice_index',
+        name: '_articles_notice_index',
         component: function (resolve) {
-            require(['@/pages/article/notice/index'], resolve)
+            require(['@/pages/articles/notice/index'], resolve)
         }
     },
     {
-        path: '/pages/article/notice/show',
+        path: '/pages/articles/notice/show',
         meta: {
             title: '会员通知详情'
         },
-        name: '_article_notice_show',
+        name: '_articles_notice_show',
         component: function (resolve) {
-            require(['@/pages/article/notice/show'], resolve)
+            require(['@/pages/articles/notice/show'], resolve)
         }
     },
     {
