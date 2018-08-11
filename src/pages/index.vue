@@ -1,6 +1,6 @@
 <template>
   <div>
-    <zk-top-nav></zk-top-nav>
+    <!-- <zk-top-nav></zk-top-nav> -->
     <zk-swiper></zk-swiper>
     <zk-grid></zk-grid>
     <zk-image></zk-image>
