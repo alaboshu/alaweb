@@ -1,5 +1,5 @@
 <template>
-  <div class="zk-swiper" :style="styles" :component-path="setting.path" v-if="asyncflag" :data-id="dataId" :widget-id="setting.defaultWidtetId">
+  <div class="zk-swiper" :style="styles" :component-path="diySetting.path" v-if="asyncflag" :data-id="dataId" :widget-id="diySetting.defaultWidtetId">
     <x-swiper :elementData="viewModel"></x-swiper>
   </div>
 </template>
@@ -12,15 +12,12 @@
     data () {
       return {
         viewModel: '',
+        diySetting: editSetting.configs,
         styles: {},
         asyncflag: false
       }
     },
     props: {
-      setting: {
-        type: Array,
-        default: editSetting.configs
-      },
       dataId: {
         type: String,
         default: editSetting.configs.defaultDataId
@@ -31,7 +28,6 @@
     },
     methods: {
       async  ApiGet () {
-        console.info('设置', this.setting)
         this.viewModel = await this.$api.get(THEME_GETLINK_GET, 'dataId=' + this.dataId)
         // console.info('组件数据swiper', this.viewModel)
         this.asyncflag = true
