@@ -1,5 +1,5 @@
 <template>
-  <div class="zk-image" :style="styles" component-path="core/zk-image" v-if="asyncflag" :data-id="dataId">
+  <div class="zk-image" :style="styles" component-path="core/zk-image" v-if="asyncflag" :data-id="dataId" widget-id="100000000000f00a00b00001">
     <x-image :elementData="viewModel" v-if="asyncflag"></x-image>
   </div>
 </template>
