@@ -1,5 +1,5 @@
 <template>
-  <div class="zk-swiper" :style="styles">
+  <div class="zk-swiper" :style="styles" :component-path="widgetModel.path" v-if="widgetModel" :data-id="widgetModel.dataId" :widget-id="widgetModel.widgetId">
     <x-swiper :elementData="widgetModel.value"></x-swiper>
   </div>
 </template>
@@ -15,10 +15,6 @@
       }
     },
     props: {
-      dataId: {
-        type: String,
-        default: editSetting.configs.defaultDataId
-      },
       widget: {}
     },
     mounted () {
@@ -31,25 +27,4 @@
     }
   }
 </script>
-
-<style  lang="less">
-  @import '~_style/index.less';
-  .zk-swiper {
-    font-size: @font-size-base;
-    .tips {
-      display: flex;
-      height: 100%;
-      color: white;
-      justify-content: center;
-      align-items: center;
-    }
-    .tipsImg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .slide-image {
-    width: 100%;
-  }
-</style>
 
