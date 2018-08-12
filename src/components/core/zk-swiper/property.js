@@ -3,8 +3,9 @@ export const editSetting = {
     'Name': 'zk-swiper',
     'path': 'core/zk-swiper',
     'componentId': '8b3f737bf347d40835778673',
-    'defaultWidtetId': '100000000000f00a00b00002',
-    'defaultDataId': '5b406cddfef00000a0000004',
+    'widgetId': '100000000000f00a00b00002',
+    'apiUrl': 'Api/Theme/GetLink',
+    'dataId': '5b406cddfef00000a0000004',
     'key': 'zk-swiper'
   },
   'Editors': [{

@@ -1,20 +1,17 @@
 <template>
-  <div class="zk-swiper" :style="styles" :component-path="diySetting.path" v-if="asyncflag" :data-id="dataId" :widget-id="diySetting.defaultWidtetId">
-    <x-swiper :elementData="viewModel"></x-swiper>
+  <div class="zk-swiper" :style="styles">
+    <x-swiper :elementData="widgetModel.value"></x-swiper>
   </div>
 </template>
 
 <script>
-  import { THEME_GETLINK_GET } from '@/service/api/apiUrl'
   import { editSetting } from './property'
   export default {
     name: editSetting.key,
     data () {
       return {
-        viewModel: '',
-        diySetting: editSetting.configs,
-        styles: {},
-        asyncflag: false
+        widgetModel: '',
+        styles: {}
       }
     },
     props: {
@@ -29,9 +26,7 @@
     },
     methods: {
       async  init () {
-        this.viewModel = await this.$api.get(THEME_GETLINK_GET, 'dataId=' + this.dataId)
-        console.info('组件数据swiper', this.widget)
-        this.asyncflag = true
+        this.widgetModel = await this.$themeApi.widgetInfo(this.widget, editSetting.configs)
       }
     }
   }
