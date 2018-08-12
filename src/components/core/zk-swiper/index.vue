@@ -1,7 +1,7 @@
 <template>
-  <div class="zk-swiper" :style="styles" :component-path="widgetModel.path" v-if="widgetModel" :data-id="widgetModel.dataId" :widget-id="widgetModel.widgetId">
+  <x-component class="zk-swiper" :widget="widgetModel" v-if="widgetModel">
     <x-swiper :elementData="widgetModel.value"></x-swiper>
-  </div>
+  </x-component>
 </template>
 
 <script>
@@ -10,8 +10,7 @@
     name: editSetting.key,
     data () {
       return {
-        widgetModel: '',
-        styles: {}
+        widgetModel: ''
       }
     },
     props: {

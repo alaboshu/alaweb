@@ -2,6 +2,7 @@
   <div class="pages--components">
       <x-agree></x-agree>
       <x-col></x-col>
+      <x-component></x-component>
       <x-icon></x-icon>
       <x-image></x-image>
       <x-row></x-row>
