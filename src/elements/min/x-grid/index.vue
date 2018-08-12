@@ -38,10 +38,10 @@
       }
     },
     mounted () {
-      this.ApiGet()
+      this.init()
     },
     methods: {
-      async  ApiGet () {
+      async  init () {
         var para = {
           diyKey: 'grid_index'
         }

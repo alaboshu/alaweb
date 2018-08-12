@@ -25,10 +25,10 @@
       widget: {}
     },
     mounted () {
-      this.ApiGet()
+      this.init()
     },
     methods: {
-      async  ApiGet () {
+      async  init () {
         this.viewModel = await this.$api.get(THEME_GETLINK_GET, 'dataId=' + this.dataId)
         console.info('组件数据swiper', this.widget)
         this.asyncflag = true
