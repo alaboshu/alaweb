@@ -27,7 +27,7 @@ export default {
   },
   async widgetInfo (widget, config) {
     // console.info('widget信息', widget)
-    console.info('配置数据', config)
+    // console.info('配置数据', config)
     var result = {
       path: config.Path,
       widgetId: config.WidgetId,
@@ -40,7 +40,7 @@ export default {
       result.dataId = widget.dataId
       result.value = widget.value
     }
-    console.info('widget_value', result.value)
+    // console.info('widget_value', result.value)
     if (result.value === null || result.value === undefined) {
       // 从数据库中获取数据
       var response = await api.get(result.apiUrl, 'dataId=' + result.dataId)
