@@ -11,18 +11,22 @@ export default {
       widgets: {},
       title: ''
     }
+    if (path === '/') {
+      path = '/pages/index'
+    }
     var response = await api.get(THEME_GETPAGE_GET, 'clientType=' + clientType + '&url=' + path)
-    console.info(path + '页信息', response)
+    // console.info(path + '页信息', response)
     if (response !== null) {
       result.title = response.title
-      if (response.layouts.lenth >= 1) {
+      if (response.layouts.length >= 1) {
         result.widgets = response.layouts[0].widgets
       }
     }
+    // console.info(path + '返回值', result)
     return result
   },
   async widgetInfo (widget, config) {
-    // console.info('模块信息', widget)
+    // console.info('widget信息', widget)
     // console.info('配置数据', config)
     var result = {
       path: config.path,
@@ -36,13 +40,14 @@ export default {
       result.dataId = widget.dataId
       result.value = widget.value
     }
+    console.info('widget_value', result.value)
     if (result.value === null || result.value === undefined) {
       // 从数据库中获取数据
       var response = await api.get(result.apiUrl, 'dataId=' + result.dataId)
       // console.info('请求数据', response)
       result.value = response
     }
-    console.info(result.path + '数据', result)
+    // console.info(result.path + '数据', result)
     return result
   }
 }

@@ -3,7 +3,8 @@
     <x-swipe class="demo-swipe" :height="height" :autoplay="4000">
       <x-swipe-item v-for="(item,index) in elementData" :key="index">
         <div class="tips">
-          <img :src="item.Image" alt="">
+          <a :href="item.url" :title="item.name"> <img :src="item.image" :alt="item.intro">
+          </a>
         </div>
       </x-swipe-item>
     </x-swipe>
