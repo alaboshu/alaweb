@@ -21,7 +21,8 @@
       dataId: {
         type: String,
         default: editSetting.configs.defaultDataId
-      }
+      },
+      widget: {}
     },
     mounted () {
       this.ApiGet()
@@ -29,7 +30,7 @@
     methods: {
       async  ApiGet () {
         this.viewModel = await this.$api.get(THEME_GETLINK_GET, 'dataId=' + this.dataId)
-        // console.info('组件数据swiper', this.viewModel)
+        console.info('组件数据swiper', this.widget)
         this.asyncflag = true
       }
     }
