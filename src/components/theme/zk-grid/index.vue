@@ -1,6 +1,6 @@
 <template>
-  <x-component class="zk-swiper" :widget="widgetModel" v-if="widgetModel">
-    <x-swiper :elementData="widgetModel.value"></x-swiper>
+  <x-component class="zk-grid" :widget="widgetModel" v-if="widgetModel">
+    <x-grid :elementData="widgetModel.value"></x-grid>
   </x-component>
 </template>
 
@@ -21,7 +21,7 @@
     },
     methods: {
       async  init () {
-        this.widgetModel = await this.$themeApi.widgetInfo(this.widget, editSetting.configs)
+        this.widgetModel = await this.$themeApi.widgetInfo(this.widget, editSetting.Config)
       }
     }
   }

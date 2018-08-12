@@ -10,7 +10,6 @@
       <zk-countdown></zk-countdown>
       <zk-dialog></zk-dialog>
       <zk-foot></zk-foot>
-      <zk-grid></zk-grid>
       <zk-head></zk-head>
       <zk-html></zk-html>
       <zk-image></zk-image>
@@ -25,7 +24,6 @@
       <zk-preview></zk-preview>
       <zk-result></zk-result>
       <zk-search></zk-search>
-      <zk-swiper></zk-swiper>
       <zk-tab></zk-tab>
       <zk-table></zk-table>
       <zk-text></zk-text>
@@ -37,6 +35,8 @@
       <zk-groupbuy></zk-groupbuy>
       <zk-product-class></zk-product-class>
       <zk-product-item></zk-product-item>
+      <zk-grid></zk-grid>
+      <zk-swiper></zk-swiper>
 
   </div>
 </template>

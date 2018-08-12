@@ -1,29 +1,14 @@
 export const editSetting = {
-  'Name': 'zk-nodata',
-  'Path': 'core/zk-nodata',
-  'Key': 'zk-nodata',
-  'Editors': [
-    {
-      'GroupName': '基本设置',
-      'Items': [
-        {
-          'Field': 'font_color',
-          'Name': '字体颜色',
-          'Type': 51,
-          'Value': '#000000',
-          'Data': null
-        }
-      ]
-    }
-  ],
-  'Events': [
-    {
-      'Type': 3,
-      'Name': '初始化'
-    }
-  ],
-  'Type': 0,
-  'EventName': null,
+  'Config': {
+    'Name': 'zk-nodata',
+    'Path': 'core/zk-nodata',
+    'Key': 'zk-nodata',
+    'WidgetId': '000000000000000000000000',
+    'DataId': '000000000000000000000000',
+    'ApiUrl': '000000000000000000000000'
+  },
+  'Editors': [],
+  'Events': [],
   'Id': '776be1e8903497035d234da0',
-  'CreateTime': '2018-07-17 19:12:14'
+  'CreateTime': '2018-08-13 07:57:52'
 }

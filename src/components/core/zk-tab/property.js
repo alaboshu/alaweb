@@ -1,29 +1,14 @@
 export const editSetting = {
-  'Name': 'zk-tab',
-  'Path': 'core/zk-tab',
-  'Key': 'zk-tab',
-  'Editors': [
-    {
-      'GroupName': '基本设置',
-      'Items': [
-        {
-          'Field': 'font_color',
-          'Name': '字体颜色',
-          'Type': 51,
-          'Value': '#000000',
-          'Data': null
-        }
-      ]
-    }
-  ],
-  'Events': [
-    {
-      'Type': 3,
-      'Name': '初始化'
-    }
-  ],
-  'Type': 0,
-  'EventName': null,
+  'Config': {
+    'Name': 'zk-tab',
+    'Path': 'core/zk-tab',
+    'Key': 'zk-tab',
+    'WidgetId': '000000000000000000000000',
+    'DataId': '000000000000000000000000',
+    'ApiUrl': '000000000000000000000000'
+  },
+  'Editors': [],
+  'Events': [],
   'Id': '6038fe200928d441b60394aa',
-  'CreateTime': '2018-07-17 19:12:14'
+  'CreateTime': '2018-08-13 07:57:52'
 }

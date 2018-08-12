@@ -27,12 +27,12 @@ export default {
   },
   async widgetInfo (widget, config) {
     // console.info('widget信息', widget)
-    // console.info('配置数据', config)
+    console.info('配置数据', config)
     var result = {
-      path: config.path,
-      widgetId: config.widgetId,
-      dataId: config.dataId,
-      apiUrl: config.apiUrl,
+      path: config.Path,
+      widgetId: config.WidgetId,
+      dataId: config.DataId,
+      apiUrl: config.ApiUrl,
       value: null
     }
     if (widget !== null && widget !== undefined) {
