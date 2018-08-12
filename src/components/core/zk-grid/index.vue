@@ -1,5 +1,5 @@
 <template>
-  <div class="zk-grid" :style="styles" component-path="core/zk-grid" v-if="asyncflag" :data-id="dataId" widget-id="100000000000f00a00b00001">
+  <div class="zk-grid" :style="styles" component-path="core/zk-grid" v-if="asyncflag" :data-id="dataId" widget-id="100000000000f00a00b00003">
     <x-grid :col="columnCount" :elementData="viewModel" v-if="asyncflag"></x-grid>
   </div>
 </template>

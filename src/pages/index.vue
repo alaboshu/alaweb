@@ -4,8 +4,8 @@
     <zk-swiper></zk-swiper>
     <zk-grid></zk-grid>
     <zk-image></zk-image>
-    <zk-product-item></zk-product-item>
-    <zk-foot></zk-foot>
+    <!-- <zk-product-item></zk-product-item>
+    <zk-foot></zk-foot> -->
   </div>
 </template>
 
