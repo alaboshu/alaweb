@@ -2,9 +2,9 @@
   <div class="weui-grids">
     <a :href="item.Url" class="weui-grid" v-for="(item,index) in viewModel" :key="index" :style="'width:'+100/col+'%'">
       <div class="weui-grid__icon">
-        <x-icon :src="item.Image"></x-icon>
+        <x-icon :src="item.image"></x-icon>
       </div>
-      <p class="weui-grid__label">{{item.Name}}</p>
+      <p class="weui-grid__label">{{item.name}}</p>
     </a>
   </div>
 </template>
@@ -27,6 +27,7 @@
     },
     mounted () {
       this.viewModel = this.elementData
+      // console.info('x-grid', this.viewModel)
     },
     methods: {
     }
