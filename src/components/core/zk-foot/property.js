@@ -6,7 +6,7 @@ export const editSetting = {
     'Key': 'zk-foot',
     'WidgetId': 'e000018c0000000b00000a53',
     'DataId': 'e000018c0000000b00000a53',
-    'ApiUrl': null
+    'ApiUrl': '/api/theme/getlink'
   },
   'Editors': [],
   'Events': []
