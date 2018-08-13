@@ -63,6 +63,7 @@ import XCell from '@/elements/min/x-cell'
 import XGrid from '@/elements/min/x-grid'
 import XGroupbuy from '@/elements/min/x-groupbuy'
 import XHead from '@/elements/min/x-head'
+import XImage from '@/elements/min/x-image'
 import XList from '@/elements/min/x-list'
 import XNavbar from '@/elements/min/x-navbar'
 import XPicker from '@/elements/min/x-picker'
@@ -130,6 +131,7 @@ Vue.component('x-cell', XCell)
 Vue.component('x-grid', XGrid)
 Vue.component('x-groupbuy', XGroupbuy)
 Vue.component('x-head', XHead)
+Vue.component('x-image', XImage)
 Vue.component('x-list', XList)
 Vue.component('x-navbar', XNavbar)
 Vue.component('x-picker', XPicker)

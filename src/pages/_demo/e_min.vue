@@ -19,6 +19,7 @@
       <x-grid></x-grid>
       <x-groupbuy></x-groupbuy>
       <x-head></x-head>
+      <x-image></x-image>
       <x-list></x-list>
       <x-navbar></x-navbar>
       <x-picker></x-picker>

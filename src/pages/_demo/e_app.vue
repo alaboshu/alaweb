@@ -6,6 +6,7 @@
       <x-icon></x-icon>
       <x-image></x-image>
       <x-row></x-row>
+      <x-image></x-image>
       <x-top-nav></x-top-nav>
       <x-foot></x-foot>
       <x-product-item></x-product-item>

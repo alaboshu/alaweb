@@ -4,8 +4,8 @@ export const editSetting = {
     'Name': 'zk-cell',
     'Path': 'core/zk-cell',
     'Key': 'zk-cell',
-    'WidgetId': '000000000000000000000000',
-    'DataId': '000000000000000000000000',
+    'WidgetId': 'e000095b0000000b00000e86',
+    'DataId': 'e000095b0000000b00000e86',
     'ApiUrl': null
   },
   'Editors': [],
