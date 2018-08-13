@@ -1,4 +1,5 @@
 export const editSetting = {
+  'Id': '3df6095dd7ad66942fba8ac2',
   'Config': {
     'Name': 'zk-groupbuy',
     'Path': 'shop/zk-groupbuy',
@@ -8,7 +9,5 @@ export const editSetting = {
     'ApiUrl': null
   },
   'Editors': [],
-  'Events': [],
-  'Id': '3df6095dd7ad66942fba8ac2',
-  'CreateTime': '2018-08-13 11:16:18'
+  'Events': []
 }

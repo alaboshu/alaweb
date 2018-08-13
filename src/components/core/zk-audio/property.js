@@ -1,4 +1,5 @@
 export const editSetting = {
+  'Id': '446f41690811be93b996fc58',
   'Config': {
     'Name': 'zk-audio',
     'Path': 'core/zk-audio',
@@ -8,7 +9,5 @@ export const editSetting = {
     'ApiUrl': null
   },
   'Editors': [],
-  'Events': [],
-  'Id': '446f41690811be93b996fc58',
-  'CreateTime': '2018-08-13 11:16:18'
+  'Events': []
 }

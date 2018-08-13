@@ -1,4 +1,5 @@
 export const editSetting = {
+  'Id': '2346e2b5dad489633e1cc1a8',
   'Config': {
     'Name': 'zk-grid',
     'Path': 'theme/zk-grid',
@@ -8,7 +9,5 @@ export const editSetting = {
     'ApiUrl': null
   },
   'Editors': [],
-  'Events': [],
-  'Id': '2346e2b5dad489633e1cc1a8',
-  'CreateTime': '2018-08-13 11:16:18'
+  'Events': []
 }

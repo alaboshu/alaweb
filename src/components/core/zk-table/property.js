@@ -1,4 +1,5 @@
 export const editSetting = {
+  'Id': 'bd4ca2ff0224d61161cc6f5a',
   'Config': {
     'Name': 'zk-table',
     'Path': 'core/zk-table',
@@ -8,7 +9,5 @@ export const editSetting = {
     'ApiUrl': null
   },
   'Editors': [],
-  'Events': [],
-  'Id': 'bd4ca2ff0224d61161cc6f5a',
-  'CreateTime': '2018-08-13 11:16:18'
+  'Events': []
 }

@@ -1,4 +1,5 @@
 export const editSetting = {
+  'Id': '776be1e8903497035d234da0',
   'Config': {
     'Name': 'zk-nodata',
     'Path': 'core/zk-nodata',
@@ -8,7 +9,5 @@ export const editSetting = {
     'ApiUrl': null
   },
   'Editors': [],
-  'Events': [],
-  'Id': '776be1e8903497035d234da0',
-  'CreateTime': '2018-08-13 11:16:18'
+  'Events': []
 }

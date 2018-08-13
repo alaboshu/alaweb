@@ -1,4 +1,5 @@
 export const editSetting = {
+  'Id': '62a9b72134ba95e61ab15ed8',
   'Config': {
     'Name': 'zk-backtop',
     'Path': 'pc/zk-backtop',
@@ -8,7 +9,5 @@ export const editSetting = {
     'ApiUrl': null
   },
   'Editors': [],
-  'Events': [],
-  'Id': '62a9b72134ba95e61ab15ed8',
-  'CreateTime': '2018-08-13 11:16:18'
+  'Events': []
 }

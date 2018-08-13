@@ -1,4 +1,5 @@
 export const editSetting = {
+  'Id': '46a6a8b7fd4a99315084cd9a',
   'Config': {
     'Name': 'zk-cell',
     'Path': 'core/zk-cell',
@@ -8,7 +9,5 @@ export const editSetting = {
     'ApiUrl': null
   },
   'Editors': [],
-  'Events': [],
-  'Id': '46a6a8b7fd4a99315084cd9a',
-  'CreateTime': '2018-08-13 11:16:18'
+  'Events': []
 }

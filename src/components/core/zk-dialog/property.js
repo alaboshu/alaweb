@@ -1,4 +1,5 @@
 export const editSetting = {
+  'Id': '8ca05f0a89c5c7f3ebd4eb4f',
   'Config': {
     'Name': 'zk-dialog',
     'Path': 'core/zk-dialog',
@@ -8,7 +9,5 @@ export const editSetting = {
     'ApiUrl': null
   },
   'Editors': [],
-  'Events': [],
-  'Id': '8ca05f0a89c5c7f3ebd4eb4f',
-  'CreateTime': '2018-08-13 11:16:18'
+  'Events': []
 }

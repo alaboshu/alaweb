@@ -1,4 +1,5 @@
 export const editSetting = {
+  'Id': '31a5b5c2414fa8df4a0afcf6',
   'Config': {
     'Name': 'zk-swiper',
     'Path': 'theme/zk-swiper',
@@ -8,7 +9,5 @@ export const editSetting = {
     'ApiUrl': null
   },
   'Editors': [],
-  'Events': [],
-  'Id': '31a5b5c2414fa8df4a0afcf6',
-  'CreateTime': '2018-08-13 11:16:18'
+  'Events': []
 }

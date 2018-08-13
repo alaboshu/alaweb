@@ -1,4 +1,5 @@
 export const editSetting = {
+  'Id': 'd07fc58742782fe6df01ded3',
   'Config': {
     'Name': 'zk-video',
     'Path': 'core/zk-video',
@@ -8,7 +9,5 @@ export const editSetting = {
     'ApiUrl': null
   },
   'Editors': [],
-  'Events': [],
-  'Id': 'd07fc58742782fe6df01ded3',
-  'CreateTime': '2018-08-13 11:16:18'
+  'Events': []
 }
