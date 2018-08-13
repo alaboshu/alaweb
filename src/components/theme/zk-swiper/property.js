@@ -4,8 +4,8 @@ export const editSetting = {
     'Name': 'zk-swiper',
     'Path': 'theme/zk-swiper',
     'Key': 'zk-swiper',
-    'WidgetId': '000000000000000000000000',
-    'DataId': '000000000000000000000000',
+    'WidgetId': 'e0000c280000000b00000dec',
+    'DataId': 'e0000c280000000b00000dec',
     'ApiUrl': null
   },
   'Editors': [],

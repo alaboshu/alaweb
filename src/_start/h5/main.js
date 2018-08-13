@@ -74,7 +74,6 @@ import XGroup from '@/elements/h5/x-group'
 import XGroupbuy from '@/elements/h5/x-groupbuy'
 import XHead from '@/elements/h5/x-head'
 import XHtml from '@/elements/h5/x-html'
-import XImage from '@/elements/h5/x-image'
 import XInput from '@/elements/h5/x-input'
 import XKeyword from '@/elements/h5/x-keyword'
 import XLabel from '@/elements/h5/x-label'
@@ -183,7 +182,6 @@ Vue.component('x-group', XGroup)
 Vue.component('x-groupbuy', XGroupbuy)
 Vue.component('x-head', XHead)
 Vue.component('x-html', XHtml)
-Vue.component('x-image', XImage)
 Vue.component('x-input', XInput)
 Vue.component('x-keyword', XKeyword)
 Vue.component('x-label', XLabel)
