@@ -6,7 +6,7 @@ import {
 } from '@/service/api'
 
 export default {
-  async pageInfo (clientType, path) {
+  async pageInfo(clientType, path) {
     var result = {
       widgets: {},
       title: ''
@@ -25,8 +25,7 @@ export default {
     // console.info(path + '返回值', result)
     return result
   },
-  async widgetInfo (widget, config) {
-    console.info('widget信息', widget)
+  async widgetInfo(widget, config) { 
     console.info('配置数据', config)
     var result = {
       path: config.Path,
