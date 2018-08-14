@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': '02d54f00e4f2a617140fccb9',
+  'Id': 'ccc0000002d000000000002d',
   'Config': {
     'Name': 'zk-help-row',
     'Path': 'pc/zk-help-row',

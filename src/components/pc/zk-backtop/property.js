@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': '62a9b72134ba95e61ab15ed8',
+  'Id': 'ccc0000062a000000000062a',
   'Config': {
     'Name': 'zk-backtop',
     'Path': 'pc/zk-backtop',

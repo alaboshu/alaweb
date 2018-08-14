@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': '23676d7cbe9538f468811a10',
+  'Id': 'ccc000002360000000000236',
   'Config': {
     'Name': 'zk-marquee',
     'Path': 'core/zk-marquee',

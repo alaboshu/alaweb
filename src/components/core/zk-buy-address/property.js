@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': 'b15fc03551bbda9673dbe03f',
+  'Id': 'ccc00000b150000000000b15',
   'Config': {
     'Name': 'zk-buy-address',
     'Path': 'core/zk-buy-address',

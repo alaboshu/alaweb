@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': 'f975b696d6d9a343ece80bc5',
+  'Id': 'ccc00000f970000000000f97',
   'Config': {
     'Name': 'zk-avatar',
     'Path': 'core/zk-avatar',

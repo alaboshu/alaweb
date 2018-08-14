@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': '8ca05f0a89c5c7f3ebd4eb4f',
+  'Id': 'ccc000008ca00000000008ca',
   'Config': {
     'Name': 'zk-dialog',
     'Path': 'core/zk-dialog',

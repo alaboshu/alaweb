@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': '4de6a7175d12599c850a7649',
+  'Id': 'ccc000004de00000000004de',
   'Config': {
     'Name': 'zk-countdown',
     'Path': 'core/zk-countdown',

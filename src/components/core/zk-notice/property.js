@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': '0bd072272fbf3509847ee1bc',
+  'Id': 'ccc000000bd00000000000bd',
   'Config': {
     'Name': 'zk-notice',
     'Path': 'core/zk-notice',

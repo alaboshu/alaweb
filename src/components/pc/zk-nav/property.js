@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': '8b80e518cd10e29e7e39a572',
+  'Id': 'ccc000008b800000000008b8',
   'Config': {
     'Name': 'zk-nav',
     'Path': 'pc/zk-nav',

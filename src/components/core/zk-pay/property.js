@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': '2181efffbb492d78bd0025ff',
+  'Id': 'ccc000002180000000000218',
   'Config': {
     'Name': 'zk-pay',
     'Path': 'core/zk-pay',

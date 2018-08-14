@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': 'bd4ca2ff0224d61161cc6f5a',
+  'Id': 'ccc00000bd40000000000bd4',
   'Config': {
     'Name': 'zk-table',
     'Path': 'core/zk-table',

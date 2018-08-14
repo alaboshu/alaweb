@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': '8ce5a99d248559f25f376e29',
+  'Id': 'ccc000008ce00000000008ce',
   'Config': {
     'Name': 'zk-product-class',
     'Path': 'shop/zk-product-class',

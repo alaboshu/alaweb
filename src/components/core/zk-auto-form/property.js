@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': 'ce7f2445c5e8ed74351be91b',
+  'Id': 'ccc00000ce70000000000ce7',
   'Config': {
     'Name': 'zk-auto-form',
     'Path': 'core/zk-auto-form',

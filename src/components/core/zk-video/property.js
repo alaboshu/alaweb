@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': 'd07fc58742782fe6df01ded3',
+  'Id': 'ccc00000d070000000000d07',
   'Config': {
     'Name': 'zk-video',
     'Path': 'core/zk-video',

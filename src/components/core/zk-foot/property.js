@@ -1,11 +1,11 @@
 export const editSetting = {
-  'Id': '784e77fb351f4da15dcb4802',
+  'Id': 'ccc000007840000000000784',
   'Config': {
     'Name': 'zk-foot',
     'Path': 'core/zk-foot',
     'Key': 'zk-foot',
     'WidgetId': 'e000018c0000000b00000a53',
-    'DataId': 'e000018c0000000b00000a53',
+    'DataId': 'd000018c0000000a00000a53',
     'ApiUrl': '/api/theme/getlink'
   },
   'Editors': [],

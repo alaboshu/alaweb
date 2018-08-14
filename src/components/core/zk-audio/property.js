@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': '446f41690811be93b996fc58',
+  'Id': 'ccc000004460000000000446',
   'Config': {
     'Name': 'zk-audio',
     'Path': 'core/zk-audio',

@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': '776be1e8903497035d234da0',
+  'Id': 'ccc000007760000000000776',
   'Config': {
     'Name': 'zk-nodata',
     'Path': 'core/zk-nodata',

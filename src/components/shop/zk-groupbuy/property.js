@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': '3df6095dd7ad66942fba8ac2',
+  'Id': 'ccc000003df00000000003df',
   'Config': {
     'Name': 'zk-groupbuy',
     'Path': 'shop/zk-groupbuy',

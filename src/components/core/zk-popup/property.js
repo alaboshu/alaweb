@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': 'a42bf9c3e83a0c607e193042',
+  'Id': 'ccc00000a420000000000a42',
   'Config': {
     'Name': 'zk-popup',
     'Path': 'core/zk-popup',

@@ -1,5 +1,5 @@
 export const editSetting = {
-  'Id': 'cea8ca4b38276391e9d7bdb5',
+  'Id': 'ccc00000cea0000000000cea',
   'Config': {
     'Name': 'zk-mask',
     'Path': 'core/zk-mask',

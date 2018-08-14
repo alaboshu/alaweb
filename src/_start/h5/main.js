@@ -117,6 +117,7 @@ import XBox from '@/elements/h5min/x-box'
 import XColor from '@/elements/h5min/x-color'
 import XNodata from '@/elements/h5min/x-nodata'
 import XFoot from '@/elements/mobile/x-foot'
+import XPage from '@/elements/mobile/x-page'
 import XProductItem from '@/elements/mobile/x-product-item'
 import XTopNav from '@/elements/mobile/x-top-nav'
 import XVerifiyPhone from '@/elements/mobile/x-verifiy-phone'
@@ -225,6 +226,7 @@ Vue.component('x-box', XBox)
 Vue.component('x-color', XColor)
 Vue.component('x-nodata', XNodata)
 Vue.component('x-foot', XFoot)
+Vue.component('x-page', XPage)
 Vue.component('x-product-item', XProductItem)
 Vue.component('x-top-nav', XTopNav)
 Vue.component('x-verifiy-phone', XVerifiyPhone)
