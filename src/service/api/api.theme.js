@@ -33,6 +33,7 @@ export default {
       widgetId: config.WidgetId,
       dataId: config.DataId,
       apiUrl: config.ApiUrl,
+      isGetFromService: true,
       value: null
     }
     if (widget !== null && widget !== undefined) {
@@ -43,7 +44,12 @@ export default {
     console.info('widget_value', result.value)
     if (result.value === null || result.value === undefined) {
       // 从数据库中获取数据
-      var response = await api.get(result.apiUrl, 'dataId=' + result.dataId)
+      var para = {
+        widgetId: result.widgetId,
+        dataId: result.dataId,
+        isGetFromService: result.isGetFromService
+      }
+      var response = await api.get(result.apiUrl, para)
       console.info('请求数据', response)
       result.value = response
     }
