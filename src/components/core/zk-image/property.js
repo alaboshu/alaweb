@@ -6,7 +6,7 @@ export const editSetting = {
     'Key': 'zk-image',
     'WidgetId': 'e0000a9d0000000b00000a10',
     'DataId': 'e0000a9d0000000b00000a10',
-    'ApiUrl': null
+    'ApiUrl': '/api/theme/getlink'
   },
   'Editors': [],
   'Events': []

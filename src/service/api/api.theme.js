@@ -15,7 +15,7 @@ export default {
       path = '/pages/index'
     }
     var response = await api.get(THEME_GETPAGE_GET, 'clientType=' + clientType + '&url=' + path)
-    // console.info(path + '页信息', response)
+    console.info(path + '页信息', response)
     if (response !== null) {
       result.title = response.title
       if (response.layouts.length >= 1) {
@@ -27,7 +27,7 @@ export default {
   },
   async widgetInfo (widget, config) {
     // console.info('widget信息', widget)
-    // console.info('配置数据', config)
+    console.info('配置数据', config)
     var result = {
       path: config.Path,
       widgetId: config.WidgetId,
@@ -40,11 +40,11 @@ export default {
       result.dataId = widget.dataId
       result.value = widget.value
     }
-    // console.info('widget_value', result.value)
+    console.info('widget_value', result.value)
     if (result.value === null || result.value === undefined) {
       // 从数据库中获取数据
       var response = await api.get(result.apiUrl, 'dataId=' + result.dataId)
-      // console.info('请求数据', response)
+      console.info('请求数据', response)
       result.value = response
     }
     // console.info(result.path + '数据', result)

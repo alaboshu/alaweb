@@ -6,7 +6,7 @@ export const editSetting = {
     'Key': 'zk-cell',
     'WidgetId': 'e000095b0000000b00000e86',
     'DataId': 'e000095b0000000b00000e86',
-    'ApiUrl': null
+    'ApiUrl': '/api/theme/getlink'
   },
   'Editors': [],
   'Events': []
