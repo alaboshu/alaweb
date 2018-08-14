@@ -19,7 +19,6 @@
       <x-grid></x-grid>
       <x-groupbuy></x-groupbuy>
       <x-head></x-head>
-      <x-image></x-image>
       <x-list></x-list>
       <x-navbar></x-navbar>
       <x-picker></x-picker>
@@ -27,7 +26,6 @@
       <x-product-class></x-product-class>
       <x-searchbar></x-searchbar>
       <x-swiper></x-swiper>
-      <x-top-nav></x-top-nav>
       <x-foot></x-foot>
       <x-product-item></x-product-item>
       <x-top-nav></x-top-nav>

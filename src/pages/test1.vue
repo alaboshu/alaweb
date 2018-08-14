@@ -1,10 +1,13 @@
 <template>
-  <div class="pages--test1">
-    <!-- <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head> -->
-    <zk-top-nav></zk-top-nav>
-    <x-cell title="会员" value="dd" url="http://www.baidu.com"></x-cell>
-
-    <zk-foot></zk-foot>
+  <div>
+    <div v-for="(widget,index) in pageInfo" :key="index">
+      <zk-head :widget="widget" v-if="widget.path==='theme/zk-head'"></zk-head>
+      <zk-swiper :widget="widget" v-if="widget.path==='theme/zk-swiper'"></zk-swiper>
+      <zk-grid :widget="widget" v-if="widget.path==='theme/zk-grid'"></zk-grid>
+      <zk-image :widget="widget" v-if="widget.path==='theme/zk-image'"></zk-image>
+      <zk-top-nav :widget="widget" v-if="widget.path==='theme/top-nav'"></zk-top-nav>
+      <zk-foot :widget="widget" v-if="widget.path==='theme/zk-foot'"></zk-foot>
+    </div>
   </div>
 </template>
 

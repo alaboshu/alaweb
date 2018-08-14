@@ -63,7 +63,6 @@ import XCell from '@/elements/min/x-cell'
 import XGrid from '@/elements/min/x-grid'
 import XGroupbuy from '@/elements/min/x-groupbuy'
 import XHead from '@/elements/min/x-head'
-import XImage from '@/elements/min/x-image'
 import XList from '@/elements/min/x-list'
 import XNavbar from '@/elements/min/x-navbar'
 import XPicker from '@/elements/min/x-picker'
@@ -71,7 +70,6 @@ import XPreview from '@/elements/min/x-preview'
 import XProductClass from '@/elements/min/x-product-class'
 import XSearchbar from '@/elements/min/x-searchbar'
 import XSwiper from '@/elements/min/x-swiper'
-import XTopNav from '@/elements/min/x-top-nav'
 import XFoot from '@/elements/mobile/x-foot'
 import XProductItem from '@/elements/mobile/x-product-item'
 import XTopNav from '@/elements/mobile/x-top-nav'
@@ -131,7 +129,6 @@ Vue.component('x-cell', XCell)
 Vue.component('x-grid', XGrid)
 Vue.component('x-groupbuy', XGroupbuy)
 Vue.component('x-head', XHead)
-Vue.component('x-image', XImage)
 Vue.component('x-list', XList)
 Vue.component('x-navbar', XNavbar)
 Vue.component('x-picker', XPicker)
@@ -139,7 +136,6 @@ Vue.component('x-preview', XPreview)
 Vue.component('x-product-class', XProductClass)
 Vue.component('x-searchbar', XSearchbar)
 Vue.component('x-swiper', XSwiper)
-Vue.component('x-top-nav', XTopNav)
 Vue.component('x-foot', XFoot)
 Vue.component('x-product-item', XProductItem)
 Vue.component('x-top-nav', XTopNav)
