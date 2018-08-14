@@ -1,5 +1,5 @@
 <template>
-  <x-component class="zk-swiper" :widget="widgetModel" v-if="widgetModel">
+  <x-component x-class="zk-swiper" :widget="widgetModel" v-if="widgetModel">
     <x-swiper :elementData="widgetModel.value"></x-swiper>
   </x-component>
 </template>

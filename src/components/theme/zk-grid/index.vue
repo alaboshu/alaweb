@@ -1,5 +1,5 @@
 <template>
-  <x-component class="zk-grid" :widget="widgetModel" v-if="widgetModel">
+  <x-component x-class="zk-grid" :widget="widgetModel" v-if="widgetModel">
     <x-grid :elementData="widgetModel.value" :col="col"></x-grid>
   </x-component>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div :style="styles" :component-path="widgetModel.path" :data-id="widgetModel.dataId" :widget-id="widgetModel.widgetId">
+  <div :style="styles" :class="xClass" :component-path="widgetModel.path" :data-id="widgetModel.dataId" :widget-id="widgetModel.widgetId">
     <slot></slot>
   </div>
 </template>
@@ -8,7 +8,8 @@
   export default {
     name: 'x-component',
     props: {
-      widget: {}
+      widget: {},
+      xClass: {}
     },
     data () {
       return {
