@@ -33,6 +33,7 @@ export default {
       widgetId: config.WidgetId,
       dataId: config.DataId,
       apiUrl: config.ApiUrl,
+      isGetFromService: true,
       value: null
     }
     if (widget !== null && widget !== undefined) {
@@ -40,6 +41,7 @@ export default {
       result.dataId = widget.dataId
       result.widgetId = widget.widgetId
       result.value = widget.value
+      result.isGetFromService = false
     }
     console.info('widget_value', result.value)
     if (result.value === null || result.value === undefined) {
@@ -47,7 +49,12 @@ export default {
       if (result.apiUrl === null) {
         console.error('模块的Property.js配置出错', result)
       } else {
-        var response = await api.get(result.apiUrl, 'dataId=' + result.dataId)
+        var para = {
+          dataId: result.dataId,
+          widgetId: result.widgetId,
+          isGetFromService: result.isGetFromService
+        }
+        var response = await api.get(result.apiUrl, para)
         console.info('请求数据', response)
         result.value = response
       }
