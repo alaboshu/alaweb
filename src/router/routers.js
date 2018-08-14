@@ -519,16 +519,6 @@ export default [{
     }
 },
 {
-    path: '/pages/articles/about/show',
-    meta: {
-        title: '关于我们详情页'
-  },
-    name: '_articles_about_show',
-    component: function (resolve) {
-        require(['@/pages/articles/about/show'], resolve)
-    }
-},
-{
     path: '/pages/articles/index',
     meta: {
         title: '文章首页'

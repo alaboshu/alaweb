@@ -86,6 +86,7 @@ import XMask from '@/elements/pc/x-mask'
 import XNodata from '@/elements/pc/x-nodata'
 import XNotice from '@/elements/pc/x-notice'
 import XNumber from '@/elements/pc/x-number'
+import XPage from '@/elements/pc/x-page'
 import XPay from '@/elements/pc/x-pay'
 import XPicker from '@/elements/pc/x-picker'
 import XPopup from '@/elements/pc/x-popup'
@@ -178,6 +179,7 @@ Vue.component('x-mask', XMask)
 Vue.component('x-nodata', XNodata)
 Vue.component('x-notice', XNotice)
 Vue.component('x-number', XNumber)
+Vue.component('x-page', XPage)
 Vue.component('x-pay', XPay)
 Vue.component('x-picker', XPicker)
 Vue.component('x-popup', XPopup)

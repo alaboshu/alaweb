@@ -1,5 +1,5 @@
 import {
-  THEME_GETPAGE_GET
+  THEME_GETPAGEINFO_GET
 } from '@/service/api/apiUrl'
 import {
   api
@@ -14,7 +14,7 @@ export default {
     if (path === '/') {
       path = '/pages/index'
     }
-    var response = await api.get(THEME_GETPAGE_GET, 'clientType=' + clientType + '&url=' + path)
+    var response = await api.get(THEME_GETPAGEINFO_GET, 'clientType=' + clientType + '&url=' + path)
     console.info(path + '页信息', response)
     if (response !== null) {
       result.title = response.title

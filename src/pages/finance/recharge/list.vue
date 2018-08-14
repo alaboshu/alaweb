@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import { THEME_GETPAGE_GET } from '@/service/api/apiUrl'
+  import { THEME_GETPAGEINFO_GET } from '@/service/api/apiUrl'
   export default {
     config: {
       'navigationBarTitleText': '充值记录'
@@ -27,7 +27,7 @@
         this.widget = {
           apiUrl: 'Api/Recharge/RechargeList'
         }
-        this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
+        this.pageInfo = await this.$api.get(THEME_GETPAGEINFO_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
         this.asyncFlag = true
       }
     }

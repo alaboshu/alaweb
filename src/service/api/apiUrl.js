@@ -14,16 +14,6 @@
 //    mobile: '13989646465'
 //  }
 
-//  Theme相关的API接口
-export const THEME_GETLINK_GET = '/api/theme/getlink' // 链接
-export const THEME_GETPAGE_GET = '/api/theme/getpage' // 获取页面配置
-export const THEME_GETVALUE_GET = '/api/theme/getvalue' // 链接
-export const THEME_GETLIST_GET = '/api/theme/getlist' // zk-list数据接口
-export const THEME_GET_GET = '/api/theme/get' // 根据Url获取单条记录
-export const THEME_ADD_POST = '/api/theme/add' // 增加单条记录
-export const THEME_UPDATE_GET = '/api/theme/update' // 修改单条记录
-export const THEME_DELETE_GET = '/api/theme/delete' // 删除单条记录
-
 //  UserAddress相关的API接口
 export const USERADDRESS_GETADDADDRESSFORM_GET = '/api/useraddress/getaddaddressform' // 获取添加地址视图
 export const USERADDRESS_ADD_POST = '/api/useraddress/add' // 添加商品到用户地址
@@ -68,7 +58,6 @@ export const USERTYPE_UPDATE_GET = '/api/usertype/update' // 修改单条记录
 export const USERTYPE_DELETE_GET = '/api/usertype/delete' // 删除单条记录
 
 //  ShareOrder相关的API接口
-export const SHAREORDER_GETSINGLE_GET = '/api/shareorder/getsingle' // 查询单个订单的详细信息，包括任务执行进度、状态等
 export const SHAREORDER_GETLIST_GET = '/api/shareorder/getlist' // 查询分润订单列表，根据条件查询分润订单列表
 export const SHAREORDER_GET_GET = '/api/shareorder/get' // 根据Url获取单条记录
 export const SHAREORDER_ADD_POST = '/api/shareorder/add' // 增加单条记录
@@ -125,7 +114,6 @@ export const WITHDRAW_GETWITHDRAWFORM_GET = '/api/withdraw/getwithdrawform' // �
 //  Common相关的API接口
 export const COMMON_GETKEYVALUESBYENUM_GET = '/api/common/getkeyvaluesbyenum' // 根据枚举获取KeyValues
 export const COMMON_SENDMOBILEVERIFIYCODE_POST = '/api/common/sendmobileverifiycode' // 发送手机验证码
-export const COMMON_UPLOAD_POST = '/api/common/upload' // 获取上传状态
 export const COMMON_GETAUTOCONFIG_GET = '/api/common/getautoconfig' // 获取参数格式
 export const COMMON_GETGET = '/api/common/getapi' // 获取所有的Api地址
 
@@ -159,7 +147,6 @@ export const WIDGETHISTORY_DELETE_GET = '/api/widgethistory/delete' // 删除单
 
 //  WidgetSystemData相关的API接口
 export const WIDGETSYSTEMDATA_GET_GET = '/api/widgetsystemdata/get' // 根据Url获取单条记录
-export const WIDGETSYSTEMDATA_GETLIST_GET = '/api/widgetsystemdata/getlist' // 根据Url获取列表
 export const WIDGETSYSTEMDATA_ADD_POST = '/api/widgetsystemdata/add' // 增加单条记录
 export const WIDGETSYSTEMDATA_UPDATE_GET = '/api/widgetsystemdata/update' // 修改单条记录
 export const WIDGETSYSTEMDATA_DELETE_GET = '/api/widgetsystemdata/delete' // 删除单条记录
@@ -224,14 +211,12 @@ export const ELEMENT_UPDATE_GET = '/api/element/update' // 修改单条记录
 export const ELEMENT_DELETE_GET = '/api/element/delete' // 删除单条记录
 
 //  Component相关的API接口
-export const COMPONENT_GET_GET = '/api/component/get' // 根据Url获取单条记录
 export const COMPONENT_GETLIST_GET = '/api/component/getlist' // 根据Url获取列表
 export const COMPONENT_ADD_POST = '/api/component/add' // 增加单条记录
 export const COMPONENT_UPDATE_GET = '/api/component/update' // 修改单条记录
 export const COMPONENT_DELETE_GET = '/api/component/delete' // 删除单条记录
 
 //  Border相关的API接口
-export const BORDER_GET_GET = '/api/border/get' // 根据Url获取单条记录
 export const BORDER_GETLIST_GET = '/api/border/getlist' // 根据Url获取列表
 export const BORDER_ADD_POST = '/api/border/add' // 增加单条记录
 export const BORDER_UPDATE_GET = '/api/border/update' // 修改单条记录
@@ -246,7 +231,6 @@ export const APIADDRESS_DELETE_GET = '/api/apiaddress/delete' // 删除单条记
 
 //  WorkOrder相关的API接口
 export const WORKORDER_GET_GET = '/api/workorder/get' // 根据Url获取单条记录
-export const WORKORDER_GETLIST_GET = '/api/workorder/getlist' // 根据Url获取列表
 export const WORKORDER_ADD_POST = '/api/workorder/add' // 增加单条记录
 export const WORKORDER_UPDATE_GET = '/api/workorder/update' // 修改单条记录
 export const WORKORDER_DELETE_GET = '/api/workorder/delete' // 删除单条记录
@@ -265,7 +249,6 @@ export const ARTICLE_TOPLINELIST_GET = '/api/article/toplinelist' // 头条列�
 export const ARTICLE_ARTICLELIST_GET = '/api/article/articlelist' // 文章列表
 export const ARTICLE_HELPLIST_GET = '/api/article/helplist' // 客服列表
 export const ARTICLE_ABOUTDETAIL_GET = '/api/article/aboutdetail' // 帮助内容
-export const ARTICLE_GET_GET = '/api/article/get' // 根据Url获取单条记录
 export const ARTICLE_GETLIST_GET = '/api/article/getlist' // 根据Url获取列表
 export const ARTICLE_ADD_POST = '/api/article/add' // 增加单条记录
 export const ARTICLE_UPDATE_GET = '/api/article/update' // 修改单条记录
@@ -298,6 +281,10 @@ export const DIY_GETLINK_GET = '/api/diy/getlink' // 获取链接地址，比如
 export const DIY_GETLIST_GET = '/api/diy/getlist' // 获取ZKList数据，不需要会员登录
 export const DIY_GETLISTBYLOGIN_GET = '/api/diy/getlistbylogin' // 获取ZKList数据，需要会员登录
 
+//  DataSyn相关的API接口
+export const DATASYN_MEMBERUPLOADS_POST = '/api/datasyn/memberuploads'
+export const DATASYN_ORDERUPLOADS_POST = '/api/datasyn/orderuploads'
+
 //  User/Debt相关的API接口
 export const USER_DEBT_APPLY_POST = '/api/user/debt/apply' // 债事提交
 export const USER_DEBT_DELETE_GET = '/api/user/debt/delete' // 债事删除
@@ -327,6 +314,16 @@ export const USER_REWARD_ADD_POST = '/api/user/reward/add' // 增加单条记录
 export const USER_REWARD_UPDATE_GET = '/api/user/reward/update' // 修改单条记录
 export const USER_REWARD_DELETE_GET = '/api/user/reward/delete' // 删除单条记录
 
+//  Theme相关的API接口
+export const THEME_GETPAGEINFO_GET = '/api/theme/getpageinfo' // 获取页面配置
+export const THEME_GETLINK_GET = '/api/theme/getlink' // 链接
+export const THEME_GETVALUE_GET = '/api/theme/getvalue' // 链接
+export const THEME_GETLIST_GET = '/api/theme/getlist' // zk-list数据接口
+export const THEME_GET_GET = '/api/theme/get' // 根据Url获取单条记录
+export const THEME_ADD_POST = '/api/theme/add' // 增加单条记录
+export const THEME_UPDATE_GET = '/api/theme/update' // 修改单条记录
+export const THEME_DELETE_GET = '/api/theme/delete' // 删除单条记录
+
 //  ThemePage相关的API接口
 export const THEMEPAGE_SAVEASYNC_POST = '/api/themepage/saveasync' // DIY页面保存
 export const THEMEPAGE_GET_GET = '/api/themepage/get' // 根据Url获取单条记录
@@ -347,13 +344,11 @@ export const THEMEPAGEWIDGET_DELETE_GET = '/api/themepagewidget/delete' // 删�
 export const PRODUCT_SHOW_GET = '/api/product/show' // 商品详情
 export const PRODUCT_LIST_GET = '/api/product/list' // 商品列表，对应zk-product-item
 export const PRODUCT_CLASS_GET = '/api/product/class' // 商品分类Api接口
-export const PRODUCT_FAVORITEPRODUCT_GET = '/api/product/favoriteproduct' // 我的分类收藏夹
 export const PRODUCT_FOOTPRINTPRODUCT_GET = '/api/product/footprintproduct' // 我的足迹
 export const PRODUCT_PRODUCTCARTPRODUCT_GET = '/api/product/productcartproduct' // 我的购物车
 export const PRODUCT_GET_GET = '/api/product/get' // 根据Url获取单条记录
 export const PRODUCT_GETLIST_GET = '/api/product/getlist' // 根据Url获取列表
 export const PRODUCT_ADD_POST = '/api/product/add' // 增加单条记录
-export const PRODUCT_UPDATE_GET = '/api/product/update' // 修改单条记录
 export const PRODUCT_DELETE_GET = '/api/product/delete' // 删除单条记录
 
 //  Cart相关的API接口

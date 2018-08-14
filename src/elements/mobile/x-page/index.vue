@@ -10,7 +10,7 @@
 
 <script>
   export default {
-    name: 'x-page',
+  name: 'x-page',
     props: {
       pageInfo: {}
     },

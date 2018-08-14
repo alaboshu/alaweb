@@ -186,7 +186,7 @@
   </div>
 </template>
 <script>
-  //  THEME_GETPAGE_GET
+  //  THEME_GETPAGEINFO_GET
   import { PRODUCT_CLASS_GET, PRODUCT_SHOW_GET, PRODUCT_LIST_GET, CART_ADDCART_POST } from '@/service/api/apiUrl'
   export default {
     data () {
@@ -214,7 +214,7 @@
       // },
       async init () {
         this.$loading = true
-        // this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
+        // this.pageInfo = await this.$api.get(THEME_GETPAGEINFO_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
         // console.log('pageInfo', this.pageInfo)
         var productClass = await this.$api.get(PRODUCT_CLASS_GET)
         this.productClass = productClass

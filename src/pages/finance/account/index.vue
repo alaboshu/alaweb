@@ -33,7 +33,7 @@
 </template>
 
 <script>
-  import { THEME_GETPAGE_GET, THEME_GETVALUE_GET } from '@/service/api/apiUrl'
+  import { THEME_GETPAGEINFO_GET, THEME_GETVALUE_GET } from '@/service/api/apiUrl'
   export default {
     config: {
       'navigationBarTitleText': '钱包'
@@ -51,7 +51,7 @@
     methods: {
       async init () {
         this.$loading = true
-        this.pageInfo = await this.$api.get(THEME_GETPAGE_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
+        this.pageInfo = await this.$api.get(THEME_GETPAGEINFO_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
         const para = {
           dataId: this.dataId,
           defaultId: '5b406cddfef00000a0000001'

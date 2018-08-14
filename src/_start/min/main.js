@@ -71,6 +71,7 @@ import XProductClass from '@/elements/min/x-product-class'
 import XSearchbar from '@/elements/min/x-searchbar'
 import XSwiper from '@/elements/min/x-swiper'
 import XFoot from '@/elements/mobile/x-foot'
+import XPage from '@/elements/mobile/x-page'
 import XProductItem from '@/elements/mobile/x-product-item'
 import XTopNav from '@/elements/mobile/x-top-nav'
 import XVerifiyPhone from '@/elements/mobile/x-verifiy-phone'
@@ -137,6 +138,7 @@ Vue.component('x-product-class', XProductClass)
 Vue.component('x-searchbar', XSearchbar)
 Vue.component('x-swiper', XSwiper)
 Vue.component('x-foot', XFoot)
+Vue.component('x-page', XPage)
 Vue.component('x-product-item', XProductItem)
 Vue.component('x-top-nav', XTopNav)
 Vue.component('x-verifiy-phone', XVerifiyPhone)
