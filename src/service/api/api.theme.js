@@ -15,7 +15,7 @@ export default {
       path = '/pages/index'
     }
     var response = await api.get(THEME_GETPAGEINFO_GET, 'clientType=' + clientType + '&url=' + path)
-    console.info(path + '页信息', response)
+    // console.info(path + '页信息', response)
     if (response !== null) {
       result.title = response.title
       if (response.layouts.length >= 1) {
@@ -31,6 +31,7 @@ export default {
       path: config.Path,
       widgetId: config.WidgetId,
       dataId: config.DataId,
+      defaultDataId: config.dataId,
       apiUrl: config.ApiUrl,
       isGetFromService: true,
       value: null

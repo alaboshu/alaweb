@@ -4,8 +4,8 @@ export const editSetting = {
     'Name': 'zk-image',
     'Path': 'core/zk-image',
     'Key': 'zk-image',
-    'WidgetId': 'e0000a9d0000000b00000a10',
-    'DataId': 'd0000a9d0000000a00000a10',
+    'WidgetId': 'e0000a9d0000000b00000883',
+    'DataId': 'd0000a9d0000000a00000883',
     'ApiUrl': '/api/theme/getlink'
   },
   'Editors': [],

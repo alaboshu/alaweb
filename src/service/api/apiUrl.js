@@ -57,6 +57,32 @@ export const USERTYPE_ADD_POST = '/api/usertype/add' // 增加单条记录
 export const USERTYPE_UPDATE_GET = '/api/usertype/update' // 修改单条记录
 export const USERTYPE_DELETE_GET = '/api/usertype/delete' // 删除单条记录
 
+//  Theme相关的API接口
+export const THEME_GETPAGEINFO_GET = '/api/theme/getpageinfo' // 获取页面配置
+export const THEME_GETLINK_GET = '/api/theme/getlink' // 链接
+export const THEME_GETVALUE_GET = '/api/theme/getvalue' // 链接
+export const THEME_GETLIST_GET = '/api/theme/getlist' // zk-list数据接口
+export const THEME_GET_GET = '/api/theme/get' // 根据Url获取单条记录
+export const THEME_ADD_POST = '/api/theme/add' // 增加单条记录
+export const THEME_UPDATE_GET = '/api/theme/update' // 修改单条记录
+export const THEME_DELETE_GET = '/api/theme/delete' // 删除单条记录
+
+//  ThemeData相关的API接口
+export const THEMEDATA_SAVEASYNC_POST = '/api/themedata/saveasync' // 保存模块数据
+export const THEMEDATA_GET_GET = '/api/themedata/get' // 根据Url获取单条记录
+export const THEMEDATA_GETLIST_GET = '/api/themedata/getlist' // 根据Url获取列表
+export const THEMEDATA_ADD_POST = '/api/themedata/add' // 增加单条记录
+export const THEMEDATA_UPDATE_GET = '/api/themedata/update' // 修改单条记录
+export const THEMEDATA_DELETE_GET = '/api/themedata/delete' // 删除单条记录
+
+//  ThemePage相关的API接口
+export const THEMEPAGE_SAVEASYNC_POST = '/api/themepage/saveasync' // DIY页面保存
+export const THEMEPAGE_GET_GET = '/api/themepage/get' // 根据Url获取单条记录
+export const THEMEPAGE_GETLIST_GET = '/api/themepage/getlist' // 根据Url获取列表
+export const THEMEPAGE_ADD_POST = '/api/themepage/add' // 增加单条记录
+export const THEMEPAGE_UPDATE_GET = '/api/themepage/update' // 修改单条记录
+export const THEMEPAGE_DELETE_GET = '/api/themepage/delete' // 删除单条记录
+
 //  ShareOrder相关的API接口
 export const SHAREORDER_GETLIST_GET = '/api/shareorder/getlist' // 查询分润订单列表，根据条件查询分润订单列表
 export const SHAREORDER_GET_GET = '/api/shareorder/get' // 根据Url获取单条记录
@@ -313,32 +339,6 @@ export const USER_REWARD_GETLIST_GET = '/api/user/reward/getlist' // 根据Url�
 export const USER_REWARD_ADD_POST = '/api/user/reward/add' // 增加单条记录
 export const USER_REWARD_UPDATE_GET = '/api/user/reward/update' // 修改单条记录
 export const USER_REWARD_DELETE_GET = '/api/user/reward/delete' // 删除单条记录
-
-//  Theme相关的API接口
-export const THEME_GETPAGEINFO_GET = '/api/theme/getpageinfo' // 获取页面配置
-export const THEME_GETLINK_GET = '/api/theme/getlink' // 链接
-export const THEME_GETVALUE_GET = '/api/theme/getvalue' // 链接
-export const THEME_GETLIST_GET = '/api/theme/getlist' // zk-list数据接口
-export const THEME_GET_GET = '/api/theme/get' // 根据Url获取单条记录
-export const THEME_ADD_POST = '/api/theme/add' // 增加单条记录
-export const THEME_UPDATE_GET = '/api/theme/update' // 修改单条记录
-export const THEME_DELETE_GET = '/api/theme/delete' // 删除单条记录
-
-//  ThemePage相关的API接口
-export const THEMEPAGE_SAVEASYNC_POST = '/api/themepage/saveasync' // DIY页面保存
-export const THEMEPAGE_GET_GET = '/api/themepage/get' // 根据Url获取单条记录
-export const THEMEPAGE_GETLIST_GET = '/api/themepage/getlist' // 根据Url获取列表
-export const THEMEPAGE_ADD_POST = '/api/themepage/add' // 增加单条记录
-export const THEMEPAGE_UPDATE_GET = '/api/themepage/update' // 修改单条记录
-export const THEMEPAGE_DELETE_GET = '/api/themepage/delete' // 删除单条记录
-
-//  ThemePageWidget相关的API接口
-export const THEMEPAGEWIDGET_SAVEASYNC_POST = '/api/themepagewidget/saveasync' // 保存模块数据
-export const THEMEPAGEWIDGET_GET_GET = '/api/themepagewidget/get' // 根据Url获取单条记录
-export const THEMEPAGEWIDGET_GETLIST_GET = '/api/themepagewidget/getlist' // 根据Url获取列表
-export const THEMEPAGEWIDGET_ADD_POST = '/api/themepagewidget/add' // 增加单条记录
-export const THEMEPAGEWIDGET_UPDATE_GET = '/api/themepagewidget/update' // 修改单条记录
-export const THEMEPAGEWIDGET_DELETE_GET = '/api/themepagewidget/delete' // 删除单条记录
 
 //  Product相关的API接口
 export const PRODUCT_SHOW_GET = '/api/product/show' // 商品详情
