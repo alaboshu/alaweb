@@ -4,9 +4,9 @@ export const editSetting = {
     'Name': 'zk-cell',
     'Path': 'core/zk-cell',
     'Key': 'zk-cell',
-    'WidgetId': 'e000095b0000000b0000047f',
-    'DataId': 'd000095b0000000a0000047f',
-    'ApiUrl': '/api/theme/getlink'
+    'WidgetId': '000000000000000000000000',
+    'DataId': '000000000000000000000000',
+    'ApiUrl': null
   },
   'Editors': [],
   'Events': []
