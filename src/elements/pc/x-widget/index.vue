@@ -35,6 +35,9 @@
 	    <zk-product-item :widget="widget" v-if="widget.componentPath === 'shop/zk-product-item'"></zk-product-item>
 	    <zk-grid :widget="widget" v-if="widget.componentPath === 'theme/zk-grid'"></zk-grid>
 	    <zk-swiper :widget="widget" v-if="widget.componentPath === 'theme/zk-swiper'"></zk-swiper>
+	    <zk-backtop :widget="widget" v-if="widget.componentPath === 'pc/zk-backtop'"></zk-backtop>
+	    <zk-help-row :widget="widget" v-if="widget.componentPath === 'pc/zk-help-row'"></zk-help-row>
+	    <zk-nav :widget="widget" v-if="widget.componentPath === 'pc/zk-nav'"></zk-nav>
 
     </div>
   </div>

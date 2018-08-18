@@ -105,6 +105,7 @@ import XTextarea from '@/elements/pc/x-textarea'
 import XTopNav from '@/elements/pc/x-top-nav'
 import XUpload from '@/elements/pc/x-upload'
 import XVideo from '@/elements/pc/x-video'
+import XWidget from '@/elements/pc/x-widget'
 
 Vue.component('zk-address', ZkAddress)
 Vue.component('zk-audio', ZkAudio)
@@ -198,6 +199,7 @@ Vue.component('x-textarea', XTextarea)
 Vue.component('x-top-nav', XTopNav)
 Vue.component('x-upload', XUpload)
 Vue.component('x-video', XVideo)
+Vue.component('x-widget', XWidget)
 
 
 Vue.use(global)
@@ -207,7 +209,6 @@ Vue.use(ElementUI)
 Vue.config.productionTip = false
 Vue.prototype.$client = 'PcWeb'
 Vue.prototype.$api = api
-Vue.prototype.$client = 'WapH5'
 Vue.prototype.$local = local
 Vue.prototype.$toast = local
 Vue.prototype.$loading = true

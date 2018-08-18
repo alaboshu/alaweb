@@ -54,6 +54,7 @@
       <x-top-nav></x-top-nav>
       <x-upload></x-upload>
       <x-video></x-video>
+      <x-widget></x-widget>
 
   </div>
 </template>
