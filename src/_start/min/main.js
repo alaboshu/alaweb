@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import MpvueRouterPatch from 'mpvue-router-patch'
-import global from '@/service/core/global' 
+import global from '@/service/core/global'
 import App from './App'
 import store from '@/store'
 import {
-  api,
-  apiUrl,
-  config
+  api
 } from '@/service/api'
+import themeApi from '@/service/api/api.theme'
+import local from '@/service/core/local'
 
 import ZkAddress from '@/components/core/zk-address'
 import ZkAudio from '@/components/core/zk-audio'
@@ -148,10 +148,11 @@ Vue.component('x-widget', XWidget)
 Vue.use(MpvueRouterPatch)
 Vue.use(global)
 Vue.config.productionTip = false
+Vue.prototype.$client = 'WapH5'
 App.store = store
 Vue.prototype.$api = api
-Vue.prototype.$apiUrl = apiUrl
-Vue.prototype.$url = config.url
+Vue.prototype.$themeApi = themeApi
+Vue.prototype.$local = local
 const app = new Vue(App)
 app.$mount()
 
@@ -167,4 +168,3 @@ export default {
     }
   }
 }
-

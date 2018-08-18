@@ -14,8 +14,9 @@ export default {
     if (path === '/') {
       path = '/pages/index'
     }
+    console.info(clientType, path)
     var response = await api.get(THEME_GETPAGEINFO_GET, 'clientType=' + clientType + '&url=' + path)
-    // console.info(path + '页信息', response)
+    console.info(path + '页信息', response)
     if (response !== null) {
       result.title = response.title
       if (response.layouts.length >= 1) {
