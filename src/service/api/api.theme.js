@@ -15,7 +15,7 @@ export default {
       path = '/pages/index'
     }
     var response = await api.get(THEME_GETPAGEINFO_GET, 'clientType=' + clientType + '&url=' + path)
-    // console.info(path + '页信息', response)
+    console.info(path + '页信息', response)
     if (response !== null) {
       result.title = response.title
       if (response.layouts.length >= 1) {
@@ -26,14 +26,13 @@ export default {
     return result
   },
   async widgetInfo (widget, config) {
-    console.info('配置数据', config)
+    // console.info('配置数据', config)
     var result = {
       path: config.Path,
       widgetId: config.WidgetId,
       dataId: config.DataId,
-      defaultDataId: config.dataId,
+      defaultDataId: config.DataId,
       apiUrl: config.ApiUrl,
-      isGetFromService: true,
       value: null
     }
     if (widget !== null && widget !== undefined) {
@@ -41,7 +40,6 @@ export default {
       result.dataId = widget.dataId
       result.widgetId = widget.widgetId
       result.value = widget.value
-      result.isGetFromService = false
     }
     console.info('widget_value', result.value)
     if (result.value === null || result.value === undefined) {
@@ -52,8 +50,9 @@ export default {
         var para = {
           dataId: result.dataId,
           widgetId: result.widgetId,
-          isGetFromService: result.isGetFromService
+          defaultDataId: result.defaultDataId
         }
+        console.info('参数', para)
         var response = await api.get(result.apiUrl, para)
         console.info('请求数据', response)
         result.value = response

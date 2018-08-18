@@ -61,22 +61,29 @@ export const USERTYPE_DELETE_GET = '/api/usertype/delete' // 删除单条记录
 export const THEME_GETPAGEINFO_GET = '/api/theme/getpageinfo' // 获取页面配置
 export const THEME_GETLINK_GET = '/api/theme/getlink' // 链接
 export const THEME_GETVALUE_GET = '/api/theme/getvalue' // 链接
-export const THEME_GETLIST_GET = '/api/theme/getlist' // zk-list数据接口
+export const THEME_GETWEBLIST_GET = '/api/theme/getweblist' // zk-list数据接口
 export const THEME_GET_GET = '/api/theme/get' // 根据Url获取单条记录
+export const THEME_GETLIST_GET = '/api/theme/getlist' // 根据Url获取列表
 export const THEME_ADD_POST = '/api/theme/add' // 增加单条记录
 export const THEME_UPDATE_GET = '/api/theme/update' // 修改单条记录
 export const THEME_DELETE_GET = '/api/theme/delete' // 删除单条记录
 
 //  ThemeData相关的API接口
-export const THEMEDATA_SAVEASYNC_POST = '/api/themedata/saveasync' // 保存模块数据
 export const THEMEDATA_GET_GET = '/api/themedata/get' // 根据Url获取单条记录
 export const THEMEDATA_GETLIST_GET = '/api/themedata/getlist' // 根据Url获取列表
 export const THEMEDATA_ADD_POST = '/api/themedata/add' // 增加单条记录
 export const THEMEDATA_UPDATE_GET = '/api/themedata/update' // 修改单条记录
 export const THEMEDATA_DELETE_GET = '/api/themedata/delete' // 删除单条记录
 
+//  ThemeOpen相关的API接口
+export const THEMEOPEN_SAVEWIDGETDATA_POST = '/api/themeopen/savewidgetdata' // 保存模块数据
+export const THEMEOPEN_SAVEPAGE_POST = '/api/themeopen/savepage' // DIY页面保存
+export const THEMEOPEN_GETLIST_GET = '/api/themeopen/getlist' // 根据Url获取列表
+export const THEMEOPEN_ADD_POST = '/api/themeopen/add' // 增加单条记录
+export const THEMEOPEN_UPDATE_GET = '/api/themeopen/update' // 修改单条记录
+export const THEMEOPEN_DELETE_GET = '/api/themeopen/delete' // 删除单条记录
+
 //  ThemePage相关的API接口
-export const THEMEPAGE_SAVEASYNC_POST = '/api/themepage/saveasync' // DIY页面保存
 export const THEMEPAGE_GET_GET = '/api/themepage/get' // 根据Url获取单条记录
 export const THEMEPAGE_GETLIST_GET = '/api/themepage/getlist' // 根据Url获取列表
 export const THEMEPAGE_ADD_POST = '/api/themepage/add' // 增加单条记录
@@ -306,10 +313,6 @@ export const DIY_SEARCHKEYWORD_GET = '/api/diy/searchkeyword' // 获取搜索关
 export const DIY_GETLINK_GET = '/api/diy/getlink' // 获取链接地址，比如轮播图，首页链接地址等
 export const DIY_GETLIST_GET = '/api/diy/getlist' // 获取ZKList数据，不需要会员登录
 export const DIY_GETLISTBYLOGIN_GET = '/api/diy/getlistbylogin' // 获取ZKList数据，需要会员登录
-
-//  DataSyn相关的API接口
-export const DATASYN_MEMBERUPLOADS_POST = '/api/datasyn/memberuploads'
-export const DATASYN_ORDERUPLOADS_POST = '/api/datasyn/orderuploads'
 
 //  User/Debt相关的API接口
 export const USER_DEBT_APPLY_POST = '/api/user/debt/apply' // 债事提交
