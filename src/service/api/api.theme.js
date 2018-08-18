@@ -8,18 +8,18 @@ import {
 export default {
   async pageInfo (clientType, path) {
     var result = {
-      widgets: {},
+      layouts: {},
       title: ''
     }
     if (path === '/') {
       path = '/pages/index'
     }
     var response = await api.get(THEME_GETPAGEINFO_GET, 'clientType=' + clientType + '&url=' + path)
-    console.info(path + '页信息', response)
+    // console.info(path + '页信息', response)
     if (response !== null) {
       result.title = response.title
       if (response.layouts.length >= 1) {
-        result.widgets = response.layouts[0].widgets
+        result.layouts = response.layouts
       }
     }
     // console.info(path + '返回值', result)

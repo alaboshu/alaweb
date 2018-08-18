@@ -1,16 +1,14 @@
 <template>
   <div v-if="viewModel">
-    <zk-swiper :widget="pageInfo.widgets[0]" v-if="pageInfo.path==='theme/zk-swiper'"></zk-swiper>
-    <zk-grid :widget="pageInfo.widgets[1]"></zk-grid>
-    <zk-image :widget="pageInfo.widgets[2]"></zk-image>
-    <!-- <zk-product-item></zk-product-item>
-    <zk-foot></zk-foot> -->
+    <div v-for="(layout,layoutIndex) in viewModel.layouts" :key="layoutIndex">
+      <x-widget :widgets="layout.widgets"></x-widget>
+    </div>
   </div>
 </template>
 
 <script>
   export default {
-  name: 'x-page',
+    name: 'x-page',
     props: {
       pageInfo: {}
     },
@@ -26,9 +24,9 @@
       async init () {
         if (this.pageInfo !== undefined) {
           this.viewModel = this.pageInfo
-          console.info('页面信息', this.viewModel)
+          console.info('x-pageInfo', this.pageInfo)
         } else {
-          console.info('pageInfo内容为空')
+          console.error('当前页面的PageInfo为空')
         }
       }
     }

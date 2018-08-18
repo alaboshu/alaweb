@@ -1,6 +1,9 @@
 <template>
-  <div class="pc-x-page" element-path="pc/x-page">
-  {{viewModel}}
+  <div v-if="this.viewModel">
+    <div v-for="(layout,layoutIndex) in pageInfo.layouts" :key="layoutIndex">
+      <zk-swiper :widget="pageInfo.widgets[0]"></zk-swiper>
+      <zk-grid :widget="pageInfo.widgets[1]"></zk-grid>
+    </div>
   </div>
 </template>
 
@@ -8,7 +11,7 @@
   export default {
     name: 'x-page',
     props: {
-      elementData: {}
+      pageInfo: {}
     },
     data () {
       return {
@@ -20,8 +23,11 @@
     },
     methods: {
       async init () {
-        if (this.elementData !== undefined) {
-          this.viewModel = this.elementData
+        if (this.pageInfo !== undefined) {
+          this.viewModel = this.pageInfo
+          console.info('x-pageInfo', this.viewModel)
+        } else {
+          console.error('当前页面的PageInfo为空')
         }
       }
     }
@@ -31,6 +37,6 @@
 <style scoped lang="less">
   @import '~_style/index.less';
   .pc-x-page {
-  	font-size: @font-size-base;
+    font-size: @font-size-base;
   }
 </style>

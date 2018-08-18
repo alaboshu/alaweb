@@ -31,6 +31,7 @@
       <x-product-item></x-product-item>
       <x-top-nav></x-top-nav>
       <x-verifiy-phone></x-verifiy-phone>
+      <x-widget></x-widget>
 
   </div>
 </template>

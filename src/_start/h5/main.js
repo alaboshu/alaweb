@@ -121,6 +121,7 @@ import XPage from '@/elements/mobile/x-page'
 import XProductItem from '@/elements/mobile/x-product-item'
 import XTopNav from '@/elements/mobile/x-top-nav'
 import XVerifiyPhone from '@/elements/mobile/x-verifiy-phone'
+import XWidget from '@/elements/mobile/x-widget'
 
 Vue.component('zk-address', ZkAddress)
 Vue.component('zk-audio', ZkAudio)
@@ -230,6 +231,7 @@ Vue.component('x-page', XPage)
 Vue.component('x-product-item', XProductItem)
 Vue.component('x-top-nav', XTopNav)
 Vue.component('x-verifiy-phone', XVerifiyPhone)
+Vue.component('x-widget', XWidget)
 
 
 Vue.use(global)

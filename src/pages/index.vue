@@ -1,8 +1,9 @@
 <template>
-  <div v-if="pageInfo">
+  <x-page :pageInfo="pageInfo" v-if="pageInfo"></x-page>
+  <!-- <div v-if="pageInfo">
     <zk-swiper :widget="pageInfo.widgets[0]"></zk-swiper>
     <zk-grid :widget="pageInfo.widgets[1]"></zk-grid>
-  </div>
+  </div> -->
 </template>
 
 <script>
