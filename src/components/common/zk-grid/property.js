@@ -1,9 +1,9 @@
 export const editSetting = {
-  'Id': 'ccc00000e8a0000000000e8a',
+  'Id': 'ccc000004120000000000412',
   'Config': {
-    'Name': 'zk-image',
-    'Path': 'core/zk-image',
-    'Key': 'zk-image',
+    'Name': 'zk-grid',
+    'Path': 'common/zk-grid',
+    'Key': 'zk-grid',
     'WidgetId': '000000000000000000000000',
     'DataId': '000000000000000000000000',
     'ApiUrl': null

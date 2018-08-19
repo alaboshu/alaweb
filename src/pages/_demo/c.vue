@@ -1,5 +1,8 @@
 <template>
   <div class="pages--components">
+      <zk-grid></zk-grid>
+      <zk-html></zk-html>
+      <zk-swiper></zk-swiper>
       <zk-address></zk-address>
       <zk-audio></zk-audio>
       <zk-auto-form></zk-auto-form>
@@ -11,7 +14,6 @@
       <zk-dialog></zk-dialog>
       <zk-foot></zk-foot>
       <zk-head></zk-head>
-      <zk-html></zk-html>
       <zk-image></zk-image>
       <zk-keyword></zk-keyword>
       <zk-list></zk-list>
@@ -35,8 +37,6 @@
       <zk-groupbuy></zk-groupbuy>
       <zk-product-class></zk-product-class>
       <zk-product-item></zk-product-item>
-      <zk-grid></zk-grid>
-      <zk-swiper></zk-swiper>
 
   </div>
 </template>

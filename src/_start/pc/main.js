@@ -13,6 +13,9 @@ import {
   api
 } from '@/service/api'
 
+import ZkGrid from '@/components/common/zk-grid'
+import ZkHtml from '@/components/common/zk-html'
+import ZkSwiper from '@/components/common/zk-swiper'
 import ZkAddress from '@/components/core/zk-address'
 import ZkAudio from '@/components/core/zk-audio'
 import ZkAutoForm from '@/components/core/zk-auto-form'
@@ -24,7 +27,6 @@ import ZkCountdown from '@/components/core/zk-countdown'
 import ZkDialog from '@/components/core/zk-dialog'
 import ZkFoot from '@/components/core/zk-foot'
 import ZkHead from '@/components/core/zk-head'
-import ZkHtml from '@/components/core/zk-html'
 import ZkImage from '@/components/core/zk-image'
 import ZkKeyword from '@/components/core/zk-keyword'
 import ZkList from '@/components/core/zk-list'
@@ -48,8 +50,6 @@ import ZkNav from '@/components/pc/zk-nav'
 import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
 import ZkProductItem from '@/components/shop/zk-product-item'
-import ZkGrid from '@/components/theme/zk-grid'
-import ZkSwiper from '@/components/theme/zk-swiper'
 
 import XAgree from '@/elements/all/x-agree'
 import XCol from '@/elements/all/x-col'
@@ -107,6 +107,9 @@ import XUpload from '@/elements/pc/x-upload'
 import XVideo from '@/elements/pc/x-video'
 import XWidget from '@/elements/pc/x-widget'
 
+Vue.component('zk-grid', ZkGrid)
+Vue.component('zk-html', ZkHtml)
+Vue.component('zk-swiper', ZkSwiper)
 Vue.component('zk-address', ZkAddress)
 Vue.component('zk-audio', ZkAudio)
 Vue.component('zk-auto-form', ZkAutoForm)
@@ -118,7 +121,6 @@ Vue.component('zk-countdown', ZkCountdown)
 Vue.component('zk-dialog', ZkDialog)
 Vue.component('zk-foot', ZkFoot)
 Vue.component('zk-head', ZkHead)
-Vue.component('zk-html', ZkHtml)
 Vue.component('zk-image', ZkImage)
 Vue.component('zk-keyword', ZkKeyword)
 Vue.component('zk-list', ZkList)
@@ -142,8 +144,6 @@ Vue.component('zk-nav', ZkNav)
 Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
 Vue.component('zk-product-item', ZkProductItem)
-Vue.component('zk-grid', ZkGrid)
-Vue.component('zk-swiper', ZkSwiper)
 
 Vue.component('x-agree', XAgree)
 Vue.component('x-col', XCol)

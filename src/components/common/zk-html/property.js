@@ -1,8 +1,8 @@
 export const editSetting = {
-  'Id': 'ccc00000b320000000000b32',
+  'Id': 'ccc00000daf0000000000daf',
   'Config': {
     'Name': 'zk-html',
-    'Path': 'core/zk-html',
+    'Path': 'common/zk-html',
     'Key': 'zk-html',
     'WidgetId': '000000000000000000000000',
     'DataId': '000000000000000000000000',

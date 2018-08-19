@@ -1,6 +1,6 @@
 <template>
-  <x-component x-class="zk-grid" :widget="widgetModel" v-if="widgetModel">
-    <x-grid :elementData="widgetModel.value" :col="col"></x-grid>
+  <x-component x-class="zk-html" :widget="widgetModel" v-if="widgetModel">
+    <x-html :elementData="widgetModel.value"></x-html>
   </x-component>
 </template>
 
@@ -14,10 +14,7 @@
       }
     },
     props: {
-      widget: {},
-      col: {
-        default: 4
-      }
+      widget: {}
     },
     mounted () {
       this.init()
