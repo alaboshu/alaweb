@@ -13,11 +13,8 @@ import {
   api
 } from '@/service/api'
 
-import ZkGrid from '@/components/common/zk-grid'
-import ZkHtml from '@/components/common/zk-html'
-import ZkSwiper from '@/components/common/zk-swiper'
+import ZkTopNav from '@/components/common/zk-top-nav'
 import ZkAddress from '@/components/core/zk-address'
-import ZkAudio from '@/components/core/zk-audio'
 import ZkAutoForm from '@/components/core/zk-auto-form'
 import ZkAvatar from '@/components/core/zk-avatar'
 import ZkBuyAddress from '@/components/core/zk-buy-address'
@@ -25,7 +22,6 @@ import ZkCard from '@/components/core/zk-card'
 import ZkCell from '@/components/core/zk-cell'
 import ZkCountdown from '@/components/core/zk-countdown'
 import ZkDialog from '@/components/core/zk-dialog'
-import ZkFoot from '@/components/core/zk-foot'
 import ZkHead from '@/components/core/zk-head'
 import ZkImage from '@/components/core/zk-image'
 import ZkKeyword from '@/components/core/zk-keyword'
@@ -38,18 +34,25 @@ import ZkPay from '@/components/core/zk-pay'
 import ZkPopup from '@/components/core/zk-popup'
 import ZkPreview from '@/components/core/zk-preview'
 import ZkResult from '@/components/core/zk-result'
-import ZkSearch from '@/components/core/zk-search'
 import ZkTab from '@/components/core/zk-tab'
 import ZkTable from '@/components/core/zk-table'
-import ZkText from '@/components/core/zk-text'
 import ZkTopNav from '@/components/core/zk-top-nav'
-import ZkVideo from '@/components/core/zk-video'
 import ZkBacktop from '@/components/pc/zk-backtop'
 import ZkHelpRow from '@/components/pc/zk-help-row'
 import ZkNav from '@/components/pc/zk-nav'
 import ZkGroupbuy from '@/components/shop/zk-groupbuy'
 import ZkProductClass from '@/components/shop/zk-product-class'
 import ZkProductItem from '@/components/shop/zk-product-item'
+import ZkAudio from '@/components/theme/zk-audio'
+import ZkFoot from '@/components/theme/zk-foot'
+import ZkGrid from '@/components/theme/zk-grid'
+import ZkHtml from '@/components/theme/zk-html'
+import ZkImage from '@/components/theme/zk-image'
+import ZkImageList from '@/components/theme/zk-image-list'
+import ZkSearch from '@/components/theme/zk-search'
+import ZkSwiper from '@/components/theme/zk-swiper'
+import ZkText from '@/components/theme/zk-text'
+import ZkVideo from '@/components/theme/zk-video'
 
 import XAgree from '@/elements/all/x-agree'
 import XCol from '@/elements/all/x-col'
@@ -78,6 +81,7 @@ import XGrid from '@/elements/pc/x-grid'
 import XGroupbuy from '@/elements/pc/x-groupbuy'
 import XHead from '@/elements/pc/x-head'
 import XHtml from '@/elements/pc/x-html'
+import XImageList from '@/elements/pc/x-image-list'
 import XInput from '@/elements/pc/x-input'
 import XKeyword from '@/elements/pc/x-keyword'
 import XList from '@/elements/pc/x-list'
@@ -107,11 +111,8 @@ import XUpload from '@/elements/pc/x-upload'
 import XVideo from '@/elements/pc/x-video'
 import XWidget from '@/elements/pc/x-widget'
 
-Vue.component('zk-grid', ZkGrid)
-Vue.component('zk-html', ZkHtml)
-Vue.component('zk-swiper', ZkSwiper)
+Vue.component('zk-top-nav', ZkTopNav)
 Vue.component('zk-address', ZkAddress)
-Vue.component('zk-audio', ZkAudio)
 Vue.component('zk-auto-form', ZkAutoForm)
 Vue.component('zk-avatar', ZkAvatar)
 Vue.component('zk-buy-address', ZkBuyAddress)
@@ -119,7 +120,6 @@ Vue.component('zk-card', ZkCard)
 Vue.component('zk-cell', ZkCell)
 Vue.component('zk-countdown', ZkCountdown)
 Vue.component('zk-dialog', ZkDialog)
-Vue.component('zk-foot', ZkFoot)
 Vue.component('zk-head', ZkHead)
 Vue.component('zk-image', ZkImage)
 Vue.component('zk-keyword', ZkKeyword)
@@ -132,18 +132,25 @@ Vue.component('zk-pay', ZkPay)
 Vue.component('zk-popup', ZkPopup)
 Vue.component('zk-preview', ZkPreview)
 Vue.component('zk-result', ZkResult)
-Vue.component('zk-search', ZkSearch)
 Vue.component('zk-tab', ZkTab)
 Vue.component('zk-table', ZkTable)
-Vue.component('zk-text', ZkText)
 Vue.component('zk-top-nav', ZkTopNav)
-Vue.component('zk-video', ZkVideo)
 Vue.component('zk-backtop', ZkBacktop)
 Vue.component('zk-help-row', ZkHelpRow)
 Vue.component('zk-nav', ZkNav)
 Vue.component('zk-groupbuy', ZkGroupbuy)
 Vue.component('zk-product-class', ZkProductClass)
 Vue.component('zk-product-item', ZkProductItem)
+Vue.component('zk-audio', ZkAudio)
+Vue.component('zk-foot', ZkFoot)
+Vue.component('zk-grid', ZkGrid)
+Vue.component('zk-html', ZkHtml)
+Vue.component('zk-image', ZkImage)
+Vue.component('zk-image-list', ZkImageList)
+Vue.component('zk-search', ZkSearch)
+Vue.component('zk-swiper', ZkSwiper)
+Vue.component('zk-text', ZkText)
+Vue.component('zk-video', ZkVideo)
 
 Vue.component('x-agree', XAgree)
 Vue.component('x-col', XCol)
@@ -172,6 +179,7 @@ Vue.component('x-grid', XGrid)
 Vue.component('x-groupbuy', XGroupbuy)
 Vue.component('x-head', XHead)
 Vue.component('x-html', XHtml)
+Vue.component('x-image-list', XImageList)
 Vue.component('x-input', XInput)
 Vue.component('x-keyword', XKeyword)
 Vue.component('x-list', XList)

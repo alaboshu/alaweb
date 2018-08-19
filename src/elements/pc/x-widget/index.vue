@@ -35,6 +35,19 @@
 	    <zk-groupbuy :widget="widget" v-if="widget.componentPath === 'shop/zk-groupbuy'"></zk-groupbuy>
 	    <zk-product-class :widget="widget" v-if="widget.componentPath === 'shop/zk-product-class'"></zk-product-class>
 	    <zk-product-item :widget="widget" v-if="widget.componentPath === 'shop/zk-product-item'"></zk-product-item>
+	    <zk-foot :widget="widget" v-if="widget.componentPath === 'common/zk-foot'"></zk-foot>
+	    <zk-search :widget="widget" v-if="widget.componentPath === 'common/zk-search'"></zk-search>
+	    <zk-audio :widget="widget" v-if="widget.componentPath === 'theme/zk-audio'"></zk-audio>
+	    <zk-html :widget="widget" v-if="widget.componentPath === 'theme/zk-html'"></zk-html>
+	    <zk-image :widget="widget" v-if="widget.componentPath === 'theme/zk-image'"></zk-image>
+	    <zk-image-list :widget="widget" v-if="widget.componentPath === 'theme/zk-image-list'"></zk-image-list>
+	    <zk-text :widget="widget" v-if="widget.componentPath === 'theme/zk-text'"></zk-text>
+	    <zk-video :widget="widget" v-if="widget.componentPath === 'theme/zk-video'"></zk-video>
+	    <zk-top-nav :widget="widget" v-if="widget.componentPath === 'common/zk-top-nav'"></zk-top-nav>
+	    <zk-foot :widget="widget" v-if="widget.componentPath === 'theme/zk-foot'"></zk-foot>
+	    <zk-grid :widget="widget" v-if="widget.componentPath === 'theme/zk-grid'"></zk-grid>
+	    <zk-search :widget="widget" v-if="widget.componentPath === 'theme/zk-search'"></zk-search>
+	    <zk-swiper :widget="widget" v-if="widget.componentPath === 'theme/zk-swiper'"></zk-swiper>
 	    <zk-backtop :widget="widget" v-if="widget.componentPath === 'pc/zk-backtop'"></zk-backtop>
 	    <zk-help-row :widget="widget" v-if="widget.componentPath === 'pc/zk-help-row'"></zk-help-row>
 	    <zk-nav :widget="widget" v-if="widget.componentPath === 'pc/zk-nav'"></zk-nav>
