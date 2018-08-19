@@ -10,7 +10,6 @@
       <zk-countdown></zk-countdown>
       <zk-dialog></zk-dialog>
       <zk-head></zk-head>
-      <zk-image></zk-image>
       <zk-keyword></zk-keyword>
       <zk-list></zk-list>
       <zk-marquee></zk-marquee>
@@ -23,7 +22,6 @@
       <zk-result></zk-result>
       <zk-tab></zk-tab>
       <zk-table></zk-table>
-      <zk-top-nav></zk-top-nav>
       <zk-backtop></zk-backtop>
       <zk-help-row></zk-help-row>
       <zk-nav></zk-nav>

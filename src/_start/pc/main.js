@@ -23,7 +23,6 @@ import ZkCell from '@/components/core/zk-cell'
 import ZkCountdown from '@/components/core/zk-countdown'
 import ZkDialog from '@/components/core/zk-dialog'
 import ZkHead from '@/components/core/zk-head'
-import ZkImage from '@/components/core/zk-image'
 import ZkKeyword from '@/components/core/zk-keyword'
 import ZkList from '@/components/core/zk-list'
 import ZkMarquee from '@/components/core/zk-marquee'
@@ -36,7 +35,6 @@ import ZkPreview from '@/components/core/zk-preview'
 import ZkResult from '@/components/core/zk-result'
 import ZkTab from '@/components/core/zk-tab'
 import ZkTable from '@/components/core/zk-table'
-import ZkTopNav from '@/components/core/zk-top-nav'
 import ZkBacktop from '@/components/pc/zk-backtop'
 import ZkHelpRow from '@/components/pc/zk-help-row'
 import ZkNav from '@/components/pc/zk-nav'
@@ -121,7 +119,6 @@ Vue.component('zk-cell', ZkCell)
 Vue.component('zk-countdown', ZkCountdown)
 Vue.component('zk-dialog', ZkDialog)
 Vue.component('zk-head', ZkHead)
-Vue.component('zk-image', ZkImage)
 Vue.component('zk-keyword', ZkKeyword)
 Vue.component('zk-list', ZkList)
 Vue.component('zk-marquee', ZkMarquee)
@@ -134,7 +131,6 @@ Vue.component('zk-preview', ZkPreview)
 Vue.component('zk-result', ZkResult)
 Vue.component('zk-tab', ZkTab)
 Vue.component('zk-table', ZkTable)
-Vue.component('zk-top-nav', ZkTopNav)
 Vue.component('zk-backtop', ZkBacktop)
 Vue.component('zk-help-row', ZkHelpRow)
 Vue.component('zk-nav', ZkNav)
