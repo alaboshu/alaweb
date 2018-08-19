@@ -6,7 +6,7 @@
   export default {
     data () {
       return {
-        pageInfo: ''
+        pageInfo: {}
       }
     },
     mounted () {
@@ -15,7 +15,7 @@
     methods: {
       async init () {
         this.pageInfo = await this.$themeApi.pageInfo(this.$client, this.$route.path)
-        // console.info('页面信息', this.pageInfo)
+        // console.info(this.$route.path, this.pageInfo)
       }
     }
   }
