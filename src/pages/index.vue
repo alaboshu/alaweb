@@ -1,9 +1,5 @@
 <template>
   <x-page :pageInfo="pageInfo" v-if="pageInfo"></x-page>
-  <!-- <div v-if="pageInfo">
-    <zk-swiper :widget="pageInfo.widgets[0]"></zk-swiper>
-    <zk-grid :widget="pageInfo.widgets[1]"></zk-grid>
-  </div> -->
 </template>
 
 <script>
@@ -19,11 +15,8 @@
     methods: {
       async init () {
         this.pageInfo = await this.$themeApi.pageInfo(this.$client, this.$route.path)
-        console.info('页面信息', this.pageInfo)
+        // console.info('页面信息', this.pageInfo)
       }
     }
   }
 </script>
-
-<style >
-</style>
