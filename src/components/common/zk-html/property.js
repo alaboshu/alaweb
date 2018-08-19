@@ -4,9 +4,9 @@ export const editSetting = {
     'Name': 'zk-html',
     'Path': 'common/zk-html',
     'Key': 'zk-html',
-    'WidgetId': '000000000000000000000000',
-    'DataId': '000000000000000000000000',
-    'ApiUrl': null
+    'WidgetId': 'e00002b70000000b0000002d',
+    'DataId': 'd00002b70000000a0000002d',
+    'ApiUrl': '/api/theme/getvalue'
   },
   'Editors': [],
   'Events': []

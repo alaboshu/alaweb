@@ -4,9 +4,9 @@ export const editSetting = {
     'Name': 'zk-grid',
     'Path': 'common/zk-grid',
     'Key': 'zk-grid',
-    'WidgetId': '000000000000000000000000',
-    'DataId': '000000000000000000000000',
-    'ApiUrl': null
+    'WidgetId': 'e0000e140000000b0000090e',
+    'DataId': 'd0000e140000000a0000090e',
+    'ApiUrl': '/api/theme/getlink'
   },
   'Editors': [],
   'Events': []

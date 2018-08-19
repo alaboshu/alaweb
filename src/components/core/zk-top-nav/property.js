@@ -4,9 +4,9 @@ export const editSetting = {
     'Name': 'zk-top-nav',
     'Path': 'core/zk-top-nav',
     'Key': 'zk-top-nav',
-    'WidgetId': '000000000000000000000000',
-    'DataId': '000000000000000000000000',
-    'ApiUrl': null
+    'WidgetId': 'e0000aac0000000b000008a6',
+    'DataId': 'd0000aac0000000a000008a6',
+    'ApiUrl': '/api/theme/getlink'
   },
   'Editors': [],
   'Events': []

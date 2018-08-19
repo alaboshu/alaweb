@@ -1,6 +1,9 @@
 <template>
   <div v-if="viewModel">
     <div v-for="(widget,index) in viewModel" :key="index">
+	    <zk-grid :widget="widget" v-if="widget.componentPath === 'common/zk-grid'"></zk-grid>
+	    <zk-html :widget="widget" v-if="widget.componentPath === 'common/zk-html'"></zk-html>
+	    <zk-swiper :widget="widget" v-if="widget.componentPath === 'common/zk-swiper'"></zk-swiper>
 	    <zk-address :widget="widget" v-if="widget.componentPath === 'core/zk-address'"></zk-address>
 	    <zk-audio :widget="widget" v-if="widget.componentPath === 'core/zk-audio'"></zk-audio>
 	    <zk-auto-form :widget="widget" v-if="widget.componentPath === 'core/zk-auto-form'"></zk-auto-form>
@@ -12,7 +15,6 @@
 	    <zk-dialog :widget="widget" v-if="widget.componentPath === 'core/zk-dialog'"></zk-dialog>
 	    <zk-foot :widget="widget" v-if="widget.componentPath === 'core/zk-foot'"></zk-foot>
 	    <zk-head :widget="widget" v-if="widget.componentPath === 'core/zk-head'"></zk-head>
-	    <zk-html :widget="widget" v-if="widget.componentPath === 'core/zk-html'"></zk-html>
 	    <zk-image :widget="widget" v-if="widget.componentPath === 'core/zk-image'"></zk-image>
 	    <zk-keyword :widget="widget" v-if="widget.componentPath === 'core/zk-keyword'"></zk-keyword>
 	    <zk-list :widget="widget" v-if="widget.componentPath === 'core/zk-list'"></zk-list>
@@ -33,8 +35,6 @@
 	    <zk-groupbuy :widget="widget" v-if="widget.componentPath === 'shop/zk-groupbuy'"></zk-groupbuy>
 	    <zk-product-class :widget="widget" v-if="widget.componentPath === 'shop/zk-product-class'"></zk-product-class>
 	    <zk-product-item :widget="widget" v-if="widget.componentPath === 'shop/zk-product-item'"></zk-product-item>
-	    <zk-grid :widget="widget" v-if="widget.componentPath === 'theme/zk-grid'"></zk-grid>
-	    <zk-swiper :widget="widget" v-if="widget.componentPath === 'theme/zk-swiper'"></zk-swiper>
 
     </div>
   </div>

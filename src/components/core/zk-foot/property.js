@@ -4,9 +4,9 @@ export const editSetting = {
     'Name': 'zk-foot',
     'Path': 'core/zk-foot',
     'Key': 'zk-foot',
-    'WidgetId': '000000000000000000000000',
-    'DataId': '000000000000000000000000',
-    'ApiUrl': null
+    'WidgetId': 'e000018c0000000b00000ede',
+    'DataId': 'd000018c0000000a00000ede',
+    'ApiUrl': '/api/theme/getlink'
   },
   'Editors': [],
   'Events': []
