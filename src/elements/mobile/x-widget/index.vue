@@ -48,6 +48,12 @@
 	    <zk-grid :widget="widget" v-if="widget.componentPath === 'theme/zk-grid'"></zk-grid>
 	    <zk-search :widget="widget" v-if="widget.componentPath === 'theme/zk-search'"></zk-search>
 	    <zk-swiper :widget="widget" v-if="widget.componentPath === 'theme/zk-swiper'"></zk-swiper>
+	    <zk-product-class :widget="widget" v-if="widget.componentPath === 'activity/zk-product-class'"></zk-product-class>
+	    <zk-logo :widget="widget" v-if="widget.componentPath === 'common/zk-logo'"></zk-logo>
+	    <zk-product-class :widget="widget" v-if="widget.componentPath === 'product/zk-product-class'"></zk-product-class>
+	    <zk-product-item :widget="widget" v-if="widget.componentPath === 'product/zk-product-item'"></zk-product-item>
+	    <zk-title :widget="widget" v-if="widget.componentPath === 'theme/zk-title'"></zk-title>
+	    <zk-groupbuy :widget="widget" v-if="widget.componentPath === 'activity/zk-groupbuy'"></zk-groupbuy>
 
     </div>
   </div>
