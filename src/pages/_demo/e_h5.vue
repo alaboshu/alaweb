@@ -32,6 +32,7 @@
       <x-label></x-label>
       <x-lightbox></x-lightbox>
       <x-list></x-list>
+      <x-logo></x-logo>
       <x-marquee></x-marquee>
       <x-mask></x-mask>
       <x-more></x-more>

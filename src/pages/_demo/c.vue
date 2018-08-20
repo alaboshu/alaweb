@@ -1,5 +1,7 @@
 <template>
   <div class="pages--components">
+      <zk-groupbuy></zk-groupbuy>
+      <zk-logo></zk-logo>
       <zk-top-nav></zk-top-nav>
       <zk-address></zk-address>
       <zk-auto-form></zk-auto-form>
@@ -25,7 +27,6 @@
       <zk-backtop></zk-backtop>
       <zk-help-row></zk-help-row>
       <zk-nav></zk-nav>
-      <zk-groupbuy></zk-groupbuy>
       <zk-product-class></zk-product-class>
       <zk-product-item></zk-product-item>
       <zk-audio></zk-audio>
@@ -37,6 +38,7 @@
       <zk-search></zk-search>
       <zk-swiper></zk-swiper>
       <zk-text></zk-text>
+      <zk-title></zk-title>
       <zk-video></zk-video>
 
   </div>

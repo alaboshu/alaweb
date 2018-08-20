@@ -67,6 +67,7 @@ export const THEME_GETLIST_GET = '/api/theme/getlist' // 根据Url获取列表
 export const THEME_ADD_POST = '/api/theme/add' // 增加单条记录
 export const THEME_UPDATE_GET = '/api/theme/update' // 修改单条记录
 export const THEME_DELETE_GET = '/api/theme/delete' // 删除单条记录
+export const THEME_GETSEARCHFORM_GET = '/api/theme/getsearchform' // 链接
 
 //  ThemeData相关的API接口
 export const THEMEDATA_GET_GET = '/api/themedata/get' // 根据Url获取单条记录
@@ -353,6 +354,8 @@ export const PRODUCT_GET_GET = '/api/product/get' // 根据Url获取单条记录
 export const PRODUCT_GETLIST_GET = '/api/product/getlist' // 根据Url获取列表
 export const PRODUCT_ADD_POST = '/api/product/add' // 增加单条记录
 export const PRODUCT_DELETE_GET = '/api/product/delete' // 删除单条记录
+export const PRODUCT_GETLISTITEM_GET = '/api/product/getlistitem' // 商品列表，对应zk-product-item
+export const PRODUCT_GETCLASS_GET = '/api/product/getclass' // 商品分类
 
 //  Cart相关的API接口
 export const CART_ADDCART_POST = '/api/cart/addcart' // 添加商品到购物车
@@ -375,6 +378,7 @@ export const GROUPBUY_PRODUCTRECORD_GET = '/api/groupbuy/productrecord' // 拼�
 export const GROUPBUY_LIST_GET = '/api/groupbuy/list' // 拼团记录列表
 export const GROUPBUY_PRODUCTS_GET = '/api/groupbuy/products' // 拼团商品列表
 export const GROUPBUY_ORDERGROUPUSER_GET = '/api/groupbuy/ordergroupuser' // 订单拼团用户，根据订单id获取订单拼团用户
+export const GROUPBUY_GETLISTITEM_GET = '/api/groupbuy/getlistitem' // 拼团商品列表，对应zk-groupbuy
 
 //  Activity相关的API接口
 export const ACTIVITY_GET_GET = '/api/activity/get' // 根据Url获取单条记录

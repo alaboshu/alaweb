@@ -31,6 +31,7 @@
       <x-input></x-input>
       <x-keyword></x-keyword>
       <x-list></x-list>
+      <x-logo></x-logo>
       <x-marquee></x-marquee>
       <x-mask></x-mask>
       <x-nodata></x-nodata>
@@ -52,6 +53,7 @@
       <x-table></x-table>
       <x-text></x-text>
       <x-textarea></x-textarea>
+      <x-title></x-title>
       <x-top-nav></x-top-nav>
       <x-upload></x-upload>
       <x-video></x-video>
