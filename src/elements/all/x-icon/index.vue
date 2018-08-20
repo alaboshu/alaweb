@@ -56,6 +56,9 @@
 
 <style lang="less">
   @import '~_style/index.less';
+  img {
+    vertical-align: baseline;
+  }
   .svg-icon {
     display: inline-block;
     fill: currentColor;

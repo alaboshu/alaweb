@@ -1,7 +1,10 @@
 <template>
   <div class="zk-image">
-    <a :href="viewModel.Url" :title="viewModel.Name">
+    <a :href="viewModel.Url" :title="viewModel.Name" :style="'width:'+width+';height:'+height" v-if="isArray">
       <img :src="viewModel.Image" :alt="viewModel.Name">
+    </a>
+    <a :href="url" :title="name" :style="'width:'+width+';height:'+height" v-if="!isArray">
+      <img :src="src" :alt="name">
     </a>
   </div>
 </template>
@@ -10,16 +13,31 @@
   export default {
     name: 'x-image',
     props: {
-      elementData: {}
+      elementData: {},
+      width: {
+        default: '100%'
+      },
+      height: {
+        default: '180px'
+      },
+      src: {},
+      url: {},
+      name: {
+        default: ''
+      }
     },
     data () {
       return {
-        viewModel: ''
+        viewModel: '',
+        isArray: true
       }
     },
     mounted () {
       if (this.elementData !== undefined) {
         this.viewModel = this.elementData
+        this.isArray = true
+      } else {
+        this.isArray = false
       }
     },
     methods: {
@@ -34,8 +52,6 @@
     font-size: @font-size-base;
     a {
       display: block;
-      width: 100%;
-      height: 180px;
       img {
         width: 100%;
         height: 100%;

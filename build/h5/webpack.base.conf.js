@@ -47,6 +47,7 @@ const createLintingRule = () => ({
 // const routesStr = JSON.stringify(routes, null, '  ')
 // fs.writeFileSync(resolve('./src/router/routes.js'), `/* eslint-disable */\nmodule.exports = ${routesStr.replace(/"component": "(.*)"/g, '"component": () => import("@/$1")')}`)
 
+console.info('打包配置', process.env.MODE)
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
