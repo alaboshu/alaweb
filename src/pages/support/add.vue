@@ -1,23 +1,21 @@
 <template>
-  <div class="pages-support-add">
-    <zk-head backText="首页" :title="pageInfo.title"></zk-head>
-    <zk-auto-form :viewApi="viewApi" :postApi="postApi"></zk-auto-form>
-    <zk-foot></zk-foot>
+  <div>
+    <x-page :pageInfo="pageInfo" v-if="pageInfo"></x-page>
+    <div v-if="pageInfo">
+      <zk-head backText="首页" :title="pageInfo.title"></zk-head>
+      <zk-auto-form :viewApi="viewApi" :postApi="postApi"></zk-auto-form>
+      <zk-foot></zk-foot>
+    </div>
   </div>
 </template>
 
 <script>
-  import { THEME_GETPAGEINFO_GET } from '@/service/api/apiUrl'
   export default {
-    config: {
-      'navigationBarTitleText': '会员登陆'
-    },
     data () {
       return {
         pageInfo: '',
         viewApi: 'Api/WorkOrder/GetSupportForm',
-        postApi: 'Api/UserAddress/add',
-        asyncFlag: false
+        postApi: 'Api/UserAddress/add'
       }
     },
     mounted () {
@@ -25,19 +23,9 @@
     },
     methods: {
       async init () {
-        this.$loading = true
-        this.pageInfo = await this.$api.get(THEME_GETPAGEINFO_GET, 'clientType=' + this.$client + '&url=' + this.$route.path)
-        this.$loading = false
-        this.asyncFlag = true
-        // console.info('测试一页面', this.pageInfo)
+        this.pageInfo = await this.$themeApi.pageInfo(this.$client, this.$route.path)
       }
     }
   }
 </script>
-
-<style scoped lang="less">
-  .pages-support-add {
-    width: 100%;
-  }
-</style>
 
