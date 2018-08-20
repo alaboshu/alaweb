@@ -5,6 +5,7 @@
       <x-component></x-component>
       <x-icon></x-icon>
       <x-image></x-image>
+      <x-logo></x-logo>
       <x-row></x-row>
       <x-badge></x-badge>
       <x-box></x-box>

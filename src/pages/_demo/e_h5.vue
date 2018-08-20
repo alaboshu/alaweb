@@ -5,6 +5,7 @@
       <x-component></x-component>
       <x-icon></x-icon>
       <x-image></x-image>
+      <x-logo></x-logo>
       <x-row></x-row>
       <e-tab-swiper></e-tab-swiper>
       <x-address></x-address>
@@ -32,7 +33,6 @@
       <x-label></x-label>
       <x-lightbox></x-lightbox>
       <x-list></x-list>
-      <x-logo></x-logo>
       <x-marquee></x-marquee>
       <x-mask></x-mask>
       <x-more></x-more>

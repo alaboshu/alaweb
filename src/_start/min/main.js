@@ -52,6 +52,7 @@ import XCol from '@/elements/all/x-col'
 import XComponent from '@/elements/all/x-component'
 import XIcon from '@/elements/all/x-icon'
 import XImage from '@/elements/all/x-image'
+import XLogo from '@/elements/all/x-logo'
 import XRow from '@/elements/all/x-row'
 import XBadge from '@/elements/h5min/x-badge'
 import XBox from '@/elements/h5min/x-box'
@@ -125,6 +126,7 @@ Vue.component('x-col', XCol)
 Vue.component('x-component', XComponent)
 Vue.component('x-icon', XIcon)
 Vue.component('x-image', XImage)
+Vue.component('x-logo', XLogo)
 Vue.component('x-row', XRow)
 Vue.component('x-badge', XBadge)
 Vue.component('x-box', XBox)

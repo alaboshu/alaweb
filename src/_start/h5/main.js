@@ -56,6 +56,7 @@ import XCol from '@/elements/all/x-col'
 import XComponent from '@/elements/all/x-component'
 import XIcon from '@/elements/all/x-icon'
 import XImage from '@/elements/all/x-image'
+import XLogo from '@/elements/all/x-logo'
 import XRow from '@/elements/all/x-row'
 import ETabSwiper from '@/elements/h5/e-tab-swiper'
 import XAddress from '@/elements/h5/x-address'
@@ -83,7 +84,6 @@ import XKeyword from '@/elements/h5/x-keyword'
 import XLabel from '@/elements/h5/x-label'
 import XLightbox from '@/elements/h5/x-lightbox'
 import XList from '@/elements/h5/x-list'
-import XLogo from '@/elements/h5/x-logo'
 import XMarquee from '@/elements/h5/x-marquee'
 import XMask from '@/elements/h5/x-mask'
 import XMore from '@/elements/h5/x-more'
@@ -171,6 +171,7 @@ Vue.component('x-col', XCol)
 Vue.component('x-component', XComponent)
 Vue.component('x-icon', XIcon)
 Vue.component('x-image', XImage)
+Vue.component('x-logo', XLogo)
 Vue.component('x-row', XRow)
 Vue.component('e-tab-swiper', ETabSwiper)
 Vue.component('x-address', XAddress)
@@ -198,7 +199,6 @@ Vue.component('x-keyword', XKeyword)
 Vue.component('x-label', XLabel)
 Vue.component('x-lightbox', XLightbox)
 Vue.component('x-list', XList)
-Vue.component('x-logo', XLogo)
 Vue.component('x-marquee', XMarquee)
 Vue.component('x-mask', XMask)
 Vue.component('x-more', XMore)
