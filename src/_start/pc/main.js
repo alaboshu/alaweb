@@ -7,8 +7,6 @@ import local from '@/service/core/local'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/service/core/rem'
-import 'vue2-toast/lib/toast.css'
-import Toast from 'vue2-toast'
 import {
   api
 } from '@/service/api'
@@ -215,7 +213,6 @@ Vue.component('x-widget', XWidget)
 
 
 Vue.use(global)
-Vue.use(Toast)
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false
