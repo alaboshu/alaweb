@@ -69,7 +69,6 @@ import XGroupbuy from '@/elements/min/x-groupbuy'
 import XHead from '@/elements/min/x-head'
 import XImageList from '@/elements/min/x-image-list'
 import XList from '@/elements/min/x-list'
-import XLogo from '@/elements/min/x-logo'
 import XNavbar from '@/elements/min/x-navbar'
 import XPicker from '@/elements/min/x-picker'
 import XPreview from '@/elements/min/x-preview'
@@ -143,7 +142,6 @@ Vue.component('x-groupbuy', XGroupbuy)
 Vue.component('x-head', XHead)
 Vue.component('x-image-list', XImageList)
 Vue.component('x-list', XList)
-Vue.component('x-logo', XLogo)
 Vue.component('x-navbar', XNavbar)
 Vue.component('x-picker', XPicker)
 Vue.component('x-preview', XPreview)

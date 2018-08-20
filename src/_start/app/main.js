@@ -59,7 +59,6 @@ import XImage from '@/elements/all/x-image'
 import XLogo from '@/elements/all/x-logo'
 import XRow from '@/elements/all/x-row'
 import XImageList from '@/elements/app/x-image-list'
-import XLogo from '@/elements/app/x-logo'
 import XFoot from '@/elements/mobile/x-foot'
 import XPage from '@/elements/mobile/x-page'
 import XProductItem from '@/elements/mobile/x-product-item'
@@ -113,7 +112,6 @@ Vue.component('x-image', XImage)
 Vue.component('x-logo', XLogo)
 Vue.component('x-row', XRow)
 Vue.component('x-image-list', XImageList)
-Vue.component('x-logo', XLogo)
 Vue.component('x-foot', XFoot)
 Vue.component('x-page', XPage)
 Vue.component('x-product-item', XProductItem)

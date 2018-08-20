@@ -22,7 +22,6 @@
       <x-head></x-head>
       <x-image-list></x-image-list>
       <x-list></x-list>
-      <x-logo></x-logo>
       <x-navbar></x-navbar>
       <x-picker></x-picker>
       <x-preview></x-preview>

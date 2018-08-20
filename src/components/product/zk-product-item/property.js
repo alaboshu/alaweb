@@ -4,9 +4,9 @@ export const editSetting = {
     'Name': 'zk-product-item',
     'Path': 'product/zk-product-item',
     'Key': 'zk-product-item',
-    'WidgetId': '000000000000000000000000',
-    'DataId': '000000000000000000000000',
-    'ApiUrl': null
+    'WidgetId': 'e000089f0000000b00000d9e',
+    'DataId': 'd000089f0000000a00000d9e',
+    'ApiUrl': '/api/product/getlistitem'
   },
   'Editors': [],
   'Events': []

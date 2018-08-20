@@ -8,7 +8,6 @@
       <x-logo></x-logo>
       <x-row></x-row>
       <x-image-list></x-image-list>
-      <x-logo></x-logo>
       <x-foot></x-foot>
       <x-page></x-page>
       <x-product-item></x-product-item>

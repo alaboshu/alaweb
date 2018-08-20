@@ -84,7 +84,6 @@ import XImageList from '@/elements/pc/x-image-list'
 import XInput from '@/elements/pc/x-input'
 import XKeyword from '@/elements/pc/x-keyword'
 import XList from '@/elements/pc/x-list'
-import XLogo from '@/elements/pc/x-logo'
 import XMarquee from '@/elements/pc/x-marquee'
 import XMask from '@/elements/pc/x-mask'
 import XNodata from '@/elements/pc/x-nodata'
@@ -185,7 +184,6 @@ Vue.component('x-image-list', XImageList)
 Vue.component('x-input', XInput)
 Vue.component('x-keyword', XKeyword)
 Vue.component('x-list', XList)
-Vue.component('x-logo', XLogo)
 Vue.component('x-marquee', XMarquee)
 Vue.component('x-mask', XMask)
 Vue.component('x-nodata', XNodata)

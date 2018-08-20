@@ -4,9 +4,9 @@ export const editSetting = {
     'Name': 'zk-groupbuy',
     'Path': 'activity/zk-groupbuy',
     'Key': 'zk-groupbuy',
-    'WidgetId': '000000000000000000000000',
-    'DataId': '000000000000000000000000',
-    'ApiUrl': null
+    'WidgetId': 'e00004400000000b00000387',
+    'DataId': 'd00004400000000a00000387',
+    'ApiUrl': '/api/groupbuy/getlistitem'
   },
   'Editors': [],
   'Events': []

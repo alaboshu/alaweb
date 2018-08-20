@@ -32,7 +32,6 @@
       <x-input></x-input>
       <x-keyword></x-keyword>
       <x-list></x-list>
-      <x-logo></x-logo>
       <x-marquee></x-marquee>
       <x-mask></x-mask>
       <x-nodata></x-nodata>
