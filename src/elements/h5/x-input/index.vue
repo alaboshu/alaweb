@@ -63,6 +63,9 @@
         currentValue: this.value
       }
     },
+    mounted () {
+      console.log('qwe', this.required, this.valid)
+    },
     methods: {
       handleInput (event) {
         // 当有最大长度属性时，限制过长的输入
