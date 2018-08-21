@@ -1,7 +1,8 @@
 <template>
   <div class="pages-user-index">
-    <zk-head backText="首页"  :title="pageInfo.title" v-if="asyncFlag"></zk-head>
+    <zk-head backText="首页" :title="pageInfo.title" v-if="asyncFlag"></zk-head>
     <zk-grid></zk-grid>
+    <x-cell title="退出登录" isLink @click="logOut()"></x-cell>
     <zk-foot></zk-foot>
   </div>
 </template>
@@ -28,6 +29,13 @@
         this.$loading = false
         this.asyncFlag = true
         // console.info('测试一页面', this.pageInfo)
+      },
+      logOut () {
+        this.$local.removeStore('user')
+        window.localStorage.removeItem('wechat_openId')
+        window.localStorage.setItem('wechat_autoLoginByOpenId', false) // 微信不根据openId自动登录
+        this.$toast.warn('退出登录成功')
+        this.$router.push('/')
       }
     }
   }
@@ -35,7 +43,7 @@
 
 <style scoped lang="less">
   .pages-user-index {
-  	width: 100%;
+    width: 100%;
   }
 </style>
 

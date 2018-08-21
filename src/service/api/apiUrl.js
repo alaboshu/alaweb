@@ -25,7 +25,7 @@ export const USERADDRESS_SINGLE_GET = '/api/useraddress/single' // id值为空�
 
 //  User相关的API接口
 export const USER_RECOMMEND_GET = '/api/user/recommend' // 推荐会员
-export const USER_LOGIN_POST = '/api/user/login' // 会员登录
+export const USER_LOGIN_POST = '/api/user/login' // 会员THEME_GETPAGEINFO_GET登录
 export const USER_LOGINBYOPENID_POST = '/api/user/loginbyopenid' // 使用openid 完成会员登录
 export const USER_GETREGFORM_GET = '/api/user/getregform' // 获取会员注册视图
 export const USER_GETLOGINFORM_GET = '/api/user/getloginform' // 获取会员登陆视图
@@ -47,7 +47,7 @@ export const USERDETAIL_QRCODE_GET = '/api/userdetail/qrcode' // 二维码
 export const USERDETAIL_TREE_GET = '/api/userdetail/tree' // 组织架构图函数
 export const USERDETAIL_GETIDENTITYFORM_GET = '/api/userdetail/getidentityform' // 获取实名认证视图
 export const USERDETAIL_IDENTITY_POST = '/api/userdetail/identity' // 实名认证
-export const USERDETAIL_GETIDENTITY_GET = '/api/userdetail/getidentity' // 获取实名认证信息 
+export const USERDETAIL_GETIDENTITY_GET = '/api/userdetail/getidentity' // 获取实名认证信息
 
 //  UserType相关的API接口
 export const USERTYPE_GETSINGLE_GET = '/api/usertype/getsingle' // 查询单个用户类型的详细信息，包括部门相信信息，员工详细信息等
@@ -134,7 +134,7 @@ export const TRANSFER_DELETE_GET = '/api/transfer/delete' // 删除单条记录
 //  User/account相关的API接口
 export const USER_ACCOUNT_ALLACCOUNTS_GET = '/api/user/account/allaccounts' // 所有S the accounts
 export const USER_ACCOUNT_BILL_GET = '/api/user/account/bill' // bill  the  soecified parameter
-export const USER_ACCOUNT_BILLVIEW_GET = '/api/user/account/billview' // bills the 视图 
+export const USER_ACCOUNT_BILLVIEW_GET = '/api/user/account/billview' // bills the 视图
 export const USER_ACCOUNT_TRANSFER_GET = '/api/user/account/transfer' // transfers the specified parameter
 
 //  WithDraw相关的API接口
