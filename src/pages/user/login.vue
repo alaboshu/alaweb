@@ -41,9 +41,11 @@
       },
       async login () {
         this.viewModel = await this.$api.post(USER_LOGIN_POST, this.user)
-        // this.$local.setStore('user', this.viewModel)
-        // this.$toast.succee('登录成功')
-        // this.$router.push('/pages/user/index')
+        if (this.viewModel !== undefined) {
+          this.$local.setStore('user', this.viewModel)
+          this.$toast.succee('登录成功')
+          this.$router.push('/pages/user/index')
+        }
       }
     }
   }
