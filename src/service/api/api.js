@@ -9,7 +9,7 @@ export default {
     if (response.status === 1) {
       return response.result
     } else {
-      Vue.prototype.$toast.succee(response.data.message)
+      Vue.prototype.$toast.warn(response.message)
     }
   },
   //  Post方法 :增
@@ -18,7 +18,7 @@ export default {
     if (response.status === 1) {
       return response.result
     } else {
-      //  Vue.prototype.$toast(response.data.message)
+      Vue.prototype.$toast.warn(response.message)
     }
   },
   //  Put方法：改
@@ -27,7 +27,7 @@ export default {
     if (response.status === 1) {
       return response
     } else {
-      Vue.prototype.$toast(response.data.message)
+      Vue.prototype.$toast.warn(response.message)
     }
   },
   //  delete方法：删
@@ -36,7 +36,7 @@ export default {
     if (response.status === 1) {
       return response
     } else {
-      Vue.prototype.$toast(response.data.message)
+      Vue.prototype.$toast.warn(response.message)
     }
   }
 }

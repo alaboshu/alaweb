@@ -256,7 +256,7 @@ Vue.prototype.$toast = toast
 // Vue.prototype.$message = local
 Vue.prototype.$loading = true
 Vue.prototype.$themeApi = themeApi
-Vue.prototype.$LoginUser = local.getStore('user')
+// Vue.prototype.$loginUser = local.getStore('user')
 
 /* eslint-disable no-new */
 new Vue({
