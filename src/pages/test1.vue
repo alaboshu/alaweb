@@ -1,5 +1,7 @@
 <template>
-  <zk-page :pageinfo="pageInfo"></zk-page>
+  <div>
+    <zk-keyword></zk-keyword>
+  </div>
 </template>
 
 <script>
@@ -14,7 +16,8 @@
     },
     methods: {
       async init () {
-        this.pageInfo = await this.$themeApi.pageInfo(this.$client, this.$route.path)
+        console.info('test1')
+        // this.pageInfo = await this.$themeApi.pageInfo(this.$client, this.$route.path)
       }
     }
   }

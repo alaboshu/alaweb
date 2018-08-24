@@ -1,6 +1,8 @@
 <template>
   <div class="h5-x-keyword" element-path="h5/x-keyword">
-  {{viewModel}}
+    <ul>
+      <li>关键爱</li>
+    </ul>
   </div>
 </template>
 
@@ -31,6 +33,6 @@
 <style lang="less">
   @import '~_style/index.less';
   .h5-x-keyword {
-  	font-size: @font-size-base;
+    font-size: @font-size-base;
   }
 </style>
