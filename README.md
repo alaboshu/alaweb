@@ -94,4 +94,4 @@ npm run pack:app
 
 * [F-loat](https://github.com/F-loat) mpvue-entry、 mpvue-wxParse 的作者，mpvue 的资深开拓者，资深前端架构师
 * [yangguangqishimi](https://github.com/yangguangqishimi) aros-cli 的作者，精通 weex 开发
-* 期待您的加入,交流 QQ 群：783374676
+* 期待您的加入,交流 QQ 群：215176974
