@@ -90,8 +90,5 @@ npm run pack:app
 
 一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari 等）
 
-## 特别感谢
 
-* [F-loat](https://github.com/F-loat) mpvue-entry、 mpvue-wxParse 的作者，mpvue 的资深开拓者，资深前端架构师
-* [yangguangqishimi](https://github.com/yangguangqishimi) aros-cli 的作者，精通 weex 开发
 * 期待您的加入,交流 QQ 群：215176974
