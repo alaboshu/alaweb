@@ -1,0 +1,57 @@
+.zk-icon-list-g {
+    $list: 8;
+    .zk-icon-list {
+        display: block;
+        clear: both;
+        position: relative;
+        @for $list from 0 to 8 {
+            .icon-list-#{$list} {
+                @if $list>5 {
+                    display: none;
+                }
+                @if $list==0 {
+                    width: 100%;
+                    height: 100px;
+                }
+                @if $list==1 {
+                    width: 30%;
+                    height: 200px;
+                    float: left;
+                }
+                @if $list>1 {
+                    width: 30.55%;
+                    height: 100px;
+                    float: right;
+                }
+                .image-#{$list} {
+                    @if $list==0 {
+                        height: 100px;
+                    }
+                    @if $list==1 {
+                        height: 200px;
+                    }
+                    @if $list>1 {
+                        width: 80%;
+                        height: 50px;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+                view {
+                    width: 100%;
+                    z-index: 2;
+                    @if $list==0 or $list==1 {
+                        display: none;
+                    }
+                    @if $list>1 {
+                        position: absolute;
+                        bottom: 0;
+                    }
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

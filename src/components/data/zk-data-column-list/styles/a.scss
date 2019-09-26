@@ -1,0 +1,59 @@
+.zk-data-column-list-a {
+    .zk-data-column-list {
+        font-family: "微软雅黑";
+        .container_box {
+            .list_title {
+                text-align: center;
+                font-weight: 600;
+                font-size: 13px;
+                margin-top: 20px;
+                .triangle {
+                    width: 0;
+                    height: 0;
+                    border-width: 0 7px 6px;
+                    border-style: solid;
+                    border-color: transparent transparent #000;
+                    display: inline-block;
+                    margin-top: -24px;
+                    margin-left: 5px;
+                }
+            }
+            .list_all {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            .bgImg {
+                width: 33px;
+                height: 33px;
+                margin: 0 auto;
+                .bgImg_box {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .list_item {
+                width: 50%;
+                margin-top: 20px;
+            }
+            .list_item_text {
+                width: 100%;
+                color: #000;
+                font-size: 13px;
+                text-align: center;
+                span {
+                    display: block;
+                    margin: 0 auto;
+                    text-align: center;
+                    color: #131313;
+                    font-size: 13px;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    overflow: hidden !important;
+                    text-overflow: ellipsis !important;
+                    white-space: normal !important;
+                    width: 145px;
+                }
+            }
+        }
+    }
+}

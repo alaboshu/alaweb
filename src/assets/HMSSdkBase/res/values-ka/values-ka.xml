@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort" priority="translator">"შეწყვეტა"</string>
+    <string name="hms_abort_message" priority="translator">"შევწყვიტოთ ჩამოტვირთვა?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s -ს არ შეუძლია Huawei მობილური სერვისების გამოყენება. გთხოვთ გაუშვით Phone Manager ან გადადით პარამეტრებში, ჩართეთ ყველა ნებართვა %2$s -სთვის (მათ შორის ავტო-გაშვება და მეორადი გაშვება), და ხელახლა სცადეთ."</string>
+    <string name="hms_cancel" priority="translator">"გაუქმება"</string>
+    <string name="hms_check_failure" priority="translator">"განახლებების შემოწმება ვერ მოხერხდა."</string>
+    <string name="hms_check_no_update" priority="translator">"თქვენ უკვე იყენებთ უახლეს ვერსიას."</string>
+    <string name="hms_checking" priority="translator">"განახლებების შემოწმება..."</string>
+    <string name="hms_confirm" priority="translator">"კარგი"</string>
+    <string name="hms_download_failure" priority="translator">"Huawei Mobile სერვისების პაკეტი ვერ ჩამოიტვირთა."</string>
+    <string name="hms_download_no_space" priority="translator">"საკმარისი თავისუფალი სივრცე არ არის. ჩამოტვირთვის დასრულება შეუძლებელია."</string>
+    <string name="hms_download_retry" priority="translator">"ვერ ჩამოიტვირთა. გსურთ, სცადოთ ხელახლა?"</string>
+    <string name="hms_downloading" priority="translator">"მიმდინარეობს Huawei Mobile სერვისების ჩამოტვირთვა | პროგრესი: %d%%"</string>
+    <string name="hms_downloading_loading" priority="LT">"ჩამოტვირთვა"</string>
+    <string name="hms_downloading_new" priority="LT">"მიმდინარეობს HMS-ის ჩამოტვირთვა"</string>
+    <string name="hms_gamebox_name" priority="LT">"HUAWEI GameCenter"</string>
+    <string name="hms_install" priority="translator">"დაინსტალირება"</string>
+    <string name="hms_install_message" priority="translator">"Huawei Mobile Services უნდა იყოს დაინსტალირებული ამ ფუნქციის გამოსაყენებლად. დაინსტალირდეს?"</string>
+    <string name="hms_retry" priority="translator">"გამეორება"</string>
+    <string name="hms_update" priority="translator">"განახლება"</string>
+    <string name="hms_update_message" priority="translator">"განაახლეთ Huawei Mobile სერვისების უახლესი ვერსიით, ამ ფუნქციის გამოსაყენებლად. გსურთ ახლავე განახლება?"</string>
+    <string name="hms_update_message_new" priority="LT">"ეს სერვისი მოითხოვს შემდეგი პროგრამის უახლეს ვერსიას:\n\n%1$s"</string>
+    <string name="hms_update_title" priority="translator">"Huawei Mobile სერვისები"</string>
+    <string name="upsdk_app_dl_installing" priority="LT">"AppGallery-ის ჩამოტვირთვა"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"დაინსტალირება"</string>
+    <string name="upsdk_app_size" priority="translator">"ზომა"</string>
+    <string name="upsdk_app_version" priority="translator">"ვერსია"</string>
+    <string name="upsdk_cancel" priority="translator">"გაუქმება"</string>
+    <string name="upsdk_checking_update_prompt" priority="translator">"ამოწმებს განახლებებს…"</string>
+    <string name="upsdk_choice_update" priority="LT">"განახლება ხელმისაწვდომია. გთხოვთ ჩამოტვირთოთ და დააინსტალიროთ უახლესი ვერსია."</string>
+    <string name="upsdk_connect_server_fail_prompt_toast" priority="translator">"სერვერთან დაკავშირება ვერ მოხერხდა. გთხოვთ სცადოთ ხელახლა მოგვიანებით."</string>
+    <string name="upsdk_detail" priority="translator">"დეტალები"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"ინფორმაციის მიღება შეუძლებელია. გთხოვთ ხელახლა  სცადოთ მოგვიანებით."</string>
+    <string name="upsdk_install" priority="LT">"დააინსტალირეთ AppGallery განახლებისთვის. დავაინსტალიროთ ახლა?"</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"ინტერნეტთან კავშირი არაა. შეამოწმეთ თქვენი ქსელის პარამეტრები."</string>
+    <string name="upsdk_ota_app_name" priority="LT">"აპი"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"მოგვიანებით"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"გამოსვლა"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"განახლება"</string>
+    <string name="upsdk_ota_title" priority="translator">"ახალი ვერსია"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s MB"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"გაუქმდეს ინსტალაცია?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"ინსტალაცია ვერ მოხერხდა."</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"დიახ"</string>
+    <string name="upsdk_update_check_no_new_version" priority="translator">"თქვენ უკვე იყენებთ უახლეს ვერსიას."</string>
+    <string name="upsdk_updating" priority="translator">"მიმდინარეობს განახლება"</string>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort" priority="translator">"Stopp"</string>
+    <string name="hms_abort_message" priority="translator">"Stoppe nedlastigen?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s kan ikke bruke Huawei mobiltjenester. Start Telefon Administrator eller gå til Innstillinger, aktiver alle tillatelser for %2$s (inkludert automatisk-start og sekundær-start), og prøv igjen."</string>
+    <string name="hms_cancel" priority="translator">"Avbryt"</string>
+    <string name="hms_check_failure" priority="translator">"Kunne ikke se etter oppdateringer."</string>
+    <string name="hms_check_no_update" priority="translator">"Du bruker allerede den nyeste versjonen."</string>
+    <string name="hms_checking" priority="translator">"Ser etter oppdateringer..."</string>
+    <string name="hms_confirm" priority="translator">"OK"</string>
+    <string name="hms_download_failure" priority="translator">"Kunne ikke laste ned Huawei Mobile Services-pakken."</string>
+    <string name="hms_download_no_space" priority="translator">"Ikke nok ledig plass. Nedlastingen kan ikke fullføres."</string>
+    <string name="hms_download_retry" priority="translator">"Nedlastingen mislyktes. Prøve på nytt?"</string>
+    <string name="hms_downloading" priority="translator">"Laster ned Huawei Mobile Services | fremdrift: %d%%"</string>
+    <string name="hms_downloading_loading" priority="LT">"Laster ned"</string>
+    <string name="hms_downloading_new" priority="LT">"Laster ned HMS"</string>
+    <string name="hms_gamebox_name" priority="LT">"HUAWEI GameCenter"</string>
+    <string name="hms_install" priority="translator">"Installer"</string>
+    <string name="hms_install_message" priority="translator">"Huawei-mobiltjenester må være installert for å bruke denne tjenesten. Vil du installere?"</string>
+    <string name="hms_retry" priority="translator">"Prøv igjen"</string>
+    <string name="hms_update" priority="translator">"Oppdater"</string>
+    <string name="hms_update_message" priority="translator">"Du må oppdatere til nyeste versjon av Huawei Mobile Services for å kunne bruke denne funksjonen. Oppdatere nå?"</string>
+    <string name="hms_update_message_new" priority="LT">"Denne tjenesten krever den nyeste versjonen av følgende apper:\n\n%1$s"</string>
+    <string name="hms_update_title" priority="translator">"Huawei Mobile Services"</string>
+    <string name="upsdk_app_dl_installing" priority="LT">"Laster ned AppGallery"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"Installer"</string>
+    <string name="upsdk_app_size" priority="translator">"Størrelse"</string>
+    <string name="upsdk_app_version" priority="translator">"Versjon"</string>
+    <string name="upsdk_cancel" priority="translator">"Avbryt"</string>
+    <string name="upsdk_checking_update_prompt" priority="translator">"Ser etter oppdateringer…"</string>
+    <string name="upsdk_choice_update" priority="LT">"Oppdatering tilgjengelig. Last ned og installer den nyeste versjonen."</string>
+    <string name="upsdk_connect_server_fail_prompt_toast" priority="translator">"Kan ikke koble til serveren. Prøv igjen senere."</string>
+    <string name="upsdk_detail" priority="translator">"Detaljer"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"Kunne ikke hente informasjon. Prøv igjen senere."</string>
+    <string name="upsdk_install" priority="LT">"Installer AppGallery for å oppdatere. Installere nå?"</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"Ingen Internett-forbindelse. Kontroller nettverksinnstillingene."</string>
+    <string name="upsdk_ota_app_name" priority="LT">"App"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"Senere"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"Avslutt"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"Oppdater"</string>
+    <string name="upsdk_ota_title" priority="translator">"Ny versjon"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s MB"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"Avbryt installasjonen?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"Installasjon mislyktes."</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"Ja"</string>
+    <string name="upsdk_update_check_no_new_version" priority="translator">"Du bruker allerede den nyeste versjonen."</string>
+    <string name="upsdk_updating" priority="translator">"Oppdaterer"</string>
+</resources>

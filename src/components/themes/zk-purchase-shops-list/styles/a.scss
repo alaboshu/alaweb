@@ -1,0 +1,90 @@
+.zk-purchase-shops-list-a {
+    .zk-purchase-shops-list {
+        font-family: "微软雅黑";
+        .container_box {
+            padding: 14px;
+            position: relative;
+            margin: 10px 10px;
+            box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+            .list_img {
+                width: 55%;
+                height: 110px;
+                margin: 15px auto;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .list_reduce_price {
+                color: #999;
+                text-decoration: line-through;
+                font-size: 13px;
+                line-height: 20px;
+            }
+            .list_bottom {
+                display: flex;
+                justify-content: space-between;
+                .test_price {
+                    color: #C91230;
+                    font-size: 12px;
+                    font-weight: 600;
+                    span {
+                        font-size: 15px;
+                    }
+                }
+            }
+            .sale_count {
+                font-size: 13px;
+                color: #999;
+            }
+            .count_tag {
+                width: 26px;
+                height: 38px;
+                line-height: 38px;
+                position: absolute;
+                top: 0;
+                text-align: center;
+                left: 13px;
+                color: #fff;
+                background: linear-gradient(to top right, #EE5D24, #F9B705);
+                box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+                .tragier_white {
+                    width: 0;
+                    border: 13px solid #fff;
+                    border-color: transparent;
+                    border-bottom-color: #fff;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+            .cut_down_time {
+                display: flex;
+                align-items: center;
+                margin: 5px 0px;
+                font-size: 12px;
+                position: absolute;
+                top: 4px;
+                right: 6px;
+                font-size: 14px;
+                span {
+                    margin-right: 5px;
+                    color: #ffffff;
+                }
+                span:nth-of-type(2n+1) {
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    text-align: center;
+                    line-height: 20px;
+                    background: #C70F2C;
+                    border-radius: 4px;
+                    font-size: 13px;
+                }
+                span:nth-of-type(2n) {
+                    color: #C70F2C;
+                    font-weight: 700
+                }
+            }
+        }
+    }
+}

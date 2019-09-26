@@ -1,0 +1,36 @@
+ .formData {
+    width: 96%;
+    margin: 0 auto;
+    li {
+      color: #8a8a8a;
+      min-height: 40px;
+      width: 100%;
+      display: flex;
+      margin: 20px 0;
+      span {
+        color: red;
+      }
+      .formData-text {
+        width: 100px;
+        height: 42px;
+        line-height: 42px;
+      }
+      .formData-input {
+        width: 100%;
+      }
+      .basic-radio {
+        width: 100%;
+        height: 20px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+      }
+      .formData-img {
+        width: 110px;
+        height: 110px;
+      }
+    }
+    .formData-list{
+      border-top: 1px solid #e5e5e5;
+    }
+  }

@@ -1,0 +1,57 @@
+@import "@/assets/style/theme.scss";
+@import "@/assets/style/base.scss";
+.zk-logistics-details {
+    width: 100vw;
+    .details-box {
+        width: 90%;
+        margin: 0 auto;
+        .box_title {
+            font-size: 12px;
+            padding: 8px 0px;
+            border-bottom: 1px solid $gl-border5;
+        }
+        .details-box_list {
+            display: -webkit-box;
+            align-items: center;
+            .conter-list {
+                margin: 0px 8px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                .conter-list_left,
+                .conter-list_right {
+                    width: 1px;
+                    height: 28px;
+                    background-color: $gl-border5;
+                }
+                .conter-list_coter {
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 100%;
+                    background-color: $gl-border5;
+                }
+            }
+            .text_right {
+                flex: 1;
+                .text_right-remark {
+                    line-height: 15px;
+                    color: $gl-text2;
+                }
+                .time-text {
+                    color: $gl-text6;
+                }
+            }
+        }
+        .list_left-one {
+            background-color: transparent !important;
+        }
+        .details-box_list:last-of-type {
+            .conter-list {
+                .list_left-two {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}

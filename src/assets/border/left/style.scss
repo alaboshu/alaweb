@@ -1,0 +1,38 @@
+.left-border {
+    .border-header {
+        display: flex;
+        padding: 0px 15px;
+        .border-header-title {
+            font-size: 36upx;
+            color: #202020;
+            font-family: 'PingFang SC';
+            font-weight: 700;
+            height: 17px;
+            line-height: 17px;
+            flex: 1;
+            border-left: 3px solid $gl-brand;
+            padding: 0px 8px;
+        }
+    }
+}
+
+@mixin widget_border($name, $color, $text-color) {
+    .left-border__#{$name} {
+        .border-header {
+            .border-header-title {
+                flex: 1;
+                border-left: 3px solid $color;
+            }
+        }
+    }
+}
+
+@each $name,
+$colors in $component-colors {
+    @include widget_border($name, map-get($colors, base), map-get($colors, font));
+}
+
+@each $name,
+$colors in $theme-colors {
+    @include widget_border($name, map-get($colors, base), map-get($colors, font));
+}

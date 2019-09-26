@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort" priority="translator">"Διακοπή"</string>
+    <string name="hms_abort_message" priority="translator">"Να διακοπεί η λήψη;"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"Το %1$s αδυνατεί να χρησιμοποιήσει τις Υπηρεσίες Huawei Mobile. Εκκινήστε τη Διαχείριση τηλεφώνου ή μεταβείτε στις Ρυθμίσεις, ενεργοποιήστε όλες τις άδειες για το %2$s (συμπεριλαμβανομένης της αυτόματης εκκίνησης και της δευτερεύουσας εκκίνησης) και προσπαθήστε ξανά."</string>
+    <string name="hms_cancel" priority="translator">"Ακύρωση"</string>
+    <string name="hms_check_failure" priority="translator">"Απέτυχε ο έλεγχος για ενημερώσεις."</string>
+    <string name="hms_check_no_update" priority="translator">"Χρησιμοποιείτε ήδη την τελευταία έκδοση."</string>
+    <string name="hms_checking" priority="translator">"Έλεγχος για ενημερώσεις…"</string>
+    <string name="hms_confirm" priority="translator">"OK"</string>
+    <string name="hms_download_failure" priority="translator">"Η λήψη του πακέτου Υπηρεσιών κινητής τηλεφωνίας Huawei απέτυχε."</string>
+    <string name="hms_download_no_space" priority="translator">"Δεν υπάρχει αρκετός ελεύθερος χώρος. Η λήψη δεν μπορεί να ολοκληρωθεί."</string>
+    <string name="hms_download_retry" priority="translator">"Η λήψη απέτυχε. Επανάληψη;"</string>
+    <string name="hms_downloading" priority="translator">"Λήψη των Υπηρεσιών κινητής τηλεφωνίας Huawei | πρόοδος: %d%%"</string>
+    <string name="hms_downloading_loading" priority="LT">"Λήψη σε εξέλιξη"</string>
+    <string name="hms_downloading_new" priority="LT">"Λήψη υπηρεσιών HMS"</string>
+    <string name="hms_gamebox_name" priority="LT">"HUAWEI GameCenter"</string>
+    <string name="hms_install" priority="translator">"Εγκατάσταση"</string>
+    <string name="hms_install_message" priority="translator">"Πρέπει να εγκατασταθεί το στοιχείο Υπηρεσίες Huawei Mobile για τη χρήση αυτής της λειτουργίας. Να γίνει εγκατάσταση;"</string>
+    <string name="hms_retry" priority="translator">"Επανάληψη"</string>
+    <string name="hms_update" priority="translator">"Ενημέρωση"</string>
+    <string name="hms_update_message" priority="translator">"Για να χρησιμοποιήσετε αυτή τη λειτουργία πρέπει να κάνετε ενημέρωση στην τελευταία έκδοση των Υπηρεσιών κινητής τηλεφωνίας Huawei. Ενημέρωση τώρα;"</string>
+    <string name="hms_update_message_new" priority="LT">"Αυτή η υπηρεσία απαιτεί την τελευταία έκδ. της εφαρμογής:\n\n%1$s"</string>
+    <string name="hms_update_title" priority="translator">"Υπηρεσίες κινητής τηλεφωνίας Huawei"</string>
+    <string name="upsdk_app_dl_installing" priority="LT">"Πραγματοποιείται λήψη της υπηρεσίας AppGallery."</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"Εγκατάσταση"</string>
+    <string name="upsdk_app_size" priority="translator">"Μέγεθος"</string>
+    <string name="upsdk_app_version" priority="translator">"Έκδοση"</string>
+    <string name="upsdk_cancel" priority="translator">"Άκυρο"</string>
+    <string name="upsdk_checking_update_prompt" priority="translator">"Έλεγχος για ενημερώσεις…"</string>
+    <string name="upsdk_choice_update" priority="LT">"Διαθέσιμη ενημέρωση. Πραγματοποιήστε λήψη και εγκατάσταση της τελευταίας έκδοσης."</string>
+    <string name="upsdk_connect_server_fail_prompt_toast" priority="translator">"Δεν είναι δυνατή η σύνδεση στον διακομιστή. Προσπαθήστε ξανά αργότερα."</string>
+    <string name="upsdk_detail" priority="translator">"Λεπτομέρειες"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"Δεν είναι δυνατή η ανάκτηση πληροφοριών. Προσπαθήστε ξανά αργότερα."</string>
+    <string name="upsdk_install" priority="LT">"Εγκαταστήστε την υπηρεσία AppGallery για ενημέρωση. Να γίνει εγκατάσταση τώρα;"</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"Δεν υπάρχει σύνδεση στο Ίντερνετ. Ελέγξτε τις ρυθμίσεις δικτύου σας."</string>
+    <string name="upsdk_ota_app_name" priority="LT">"Εφαρμογή"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"Αργότερα"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"Έξοδος"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"Ενημέρωση"</string>
+    <string name="upsdk_ota_title" priority="translator">"Νέα έκδοση"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s MB"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"Ακύρωση της εγκατάστασης;"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"Ανεπιτυχής εγκατάσταση."</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"Ναι"</string>
+    <string name="upsdk_update_check_no_new_version" priority="translator">"Χρησιμοποιείτε ήδη την τελευταία έκδοση."</string>
+    <string name="upsdk_updating" priority="translator">"Ενημέρωση"</string>
+</resources>

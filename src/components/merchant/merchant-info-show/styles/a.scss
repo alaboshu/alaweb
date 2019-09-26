@@ -1,0 +1,89 @@
+.merchant-info-show-a {
+    padding: 0;
+    .merchant-info-show {
+        .container_box {
+            position: relative;
+            .swiper {
+                position: relative;
+                height: 150px;
+            }
+            .swiper_img {
+                width: 100%;
+            }
+            .metchant_info {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                position: absolute;
+                top: 0;
+                padding: 10px;
+                overflow: hidden;
+                .search {
+                    background: #fff;
+                    width: 100%;
+                    height: 24px;
+                    line-height: 24px;
+                    border-radius: 10px;
+                    padding-left: 10px;
+                    opacity: .8;
+                    overflow: hidden;
+                    input {
+                        outline: none;
+                        border: none;
+                        width: 100%;
+                        height: 24px;
+                        line-height: 24px;
+                        color: #999;
+                    }
+                    .input-placeholder {
+                        font-size: 12px;
+                    }
+                }
+                .info_search_left {
+                    font-size: 20px;
+                    color: #fff;
+                    width: 10%;
+                    margin-top: -7px;
+                    cursor: pointer;
+                }
+                .info_search_right {
+                    width: 20%;
+                    font-size: 20px;
+                    color: #fff;
+                    display: flex;
+                    justify-content: space-around;
+                    cursor: pointer;
+                    .iconfont {
+                        width: 10%;
+                    }
+                }
+            }
+            .merchant_intro {
+                display: flex;
+                padding: 10px;
+                width: 78%;
+                float: right;
+                .text {
+                    margin-right: 10px;
+                    .intro_title {
+                        color: #000;
+                        font-size: 13px;
+                        font-weight: 600;
+                    }
+                    .intro_text {
+                        color: #888;
+                        font-size: 10px;
+                        margin-top: 5px;
+                        margin-right: 10px;
+                    }
+                }
+                .shop_logo {
+                    display: block;
+                    width: 85px;
+                    height: 55px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.zk-image-list-s {
+    padding: 0 5px;
+    .zk-image-list {
+        .image-list {
+            height: 120px;
+            width: 49%;
+            .image {
+                width: 99%;
+            }
+        }
+    }
+    .uni-video-control-button {
+        width: 10px !important;
+        height: 10px !important;
+        padding: 15.5px 12.5px 14.5px 12.5px !important;
+    }
+    .uni-video-current-time,
+    .uni-video-duration {
+        margin-bottom: 14.5px;
+        font-size: 10px !important;
+    }
+    .uni-video-inner {
+        width: 80% !important;
+        height: 80% !important;
+    }
+    .uni-video-danmu-button {
+        padding: 2px 0px !important;
+        font-size: 10px !important;
+        margin: 0 !important;
+    }
+    .uni-video-cover-play-button {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .uni-video-cover-duration {
+        font-size: 13px !important;
+    }
+    .uni-video-bar {
+        height: 25px !important;
+    }
+    .uni-video-cover {
+        background-color: rgba(1, 1, 1, .2) !important;
+    }
+}

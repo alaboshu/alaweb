@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort" priority="translator">"ఆపివేయి"</string>
+    <string name="hms_abort_message" priority="translator">"డౌన్‌లోడ్ చేయడాన్ని ఆపివేయాలా?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s Huawei Mobile Servicesను ఉపయోగించడం సాధ్యం కాదు. దయచేసి ఫోన్ నిర్వాహికిని లాంచ్ చేసి లేదా సెట్టింగ్‌లకు వెళ్లి, %2$s కోసం అన్ని అనుమతులను (స్వీయ లాంచ్ మరియు ద్వితీయ లాంచ్‌లతో సహా) ప్రారంభించి, మళ్లీ ప్రయత్నించండి."</string>
+    <string name="hms_cancel" priority="translator">"రద్దు చేయి"</string>
+    <string name="hms_check_failure" priority="translator">"అప్‌డేట్‌ల కోసం తనిఖీ చేయడం విఫలమైంది."</string>
+    <string name="hms_check_no_update" priority="translator">"మీరు ఇప్పటికే తాజా వెర్షన్‌ను ఉపయోగిస్తున్నారు."</string>
+    <string name="hms_checking" priority="translator">"అప్‌డేట్‌ల కోసం తనిఖీ చేస్తోంది..."</string>
+    <string name="hms_confirm" priority="translator">"సరే"</string>
+    <string name="hms_download_failure" priority="translator">"Huawei Mobile Services ప్యాకేజీని డౌన్‌లోడ్ చేయడం విఫలమైంది."</string>
+    <string name="hms_download_no_space" priority="translator">"తగినంత స్థలం లేదు. డౌన్‌లోడ్ చేయడం పూర్తి కాలేదు."</string>
+    <string name="hms_download_retry" priority="translator">"డౌన్‌లోడ్ చేయడం విఫలమైంది. మళ్లీ ప్రయత్నించాలా?"</string>
+    <string name="hms_downloading" priority="translator">"Huawei Mobile Servicesను డౌన్‌లోడ్ చేయడం\nప్రోగ్రెస్: %d%%"</string>
+    <string name="hms_downloading_loading" priority="LT">"డౌన్‌లోడ్ చేస్తోంది"</string>
+    <string name="hms_downloading_new" priority="translator">"HMSని డౌన్‌లోడ్ చేస్తోంది"</string>
+    <string name="hms_gamebox_name" priority="LT">"GameCenter"</string>
+    <string name="hms_install" priority="translator">"ఇన్‌స్టాల్ చేయి"</string>
+    <string name="hms_install_message" priority="translator">"ఈ ఫీచర్‌ని ఉపయోగించడానికి Huawei Mobile Servicesను తప్పక ఇన్‌స్టాల్ చేయాలి. ఇన్‌స్టాల్ చేయాలా?"</string>
+    <string name="hms_retry" priority="translator">"మళ్లీ ప్రయత్నించు"</string>
+    <string name="hms_update" priority="translator">"అప్‌డేట్ చేయండి"</string>
+    <string name="hms_update_message" priority="translator">"ఈ ఫీచర్‌ని ఉపయోగించడానికి Huawei Mobile Services తాజా వెర్షన్‌కి అప్‌డేట్ చేయండి. ఇప్పుడే అప్‌డేట్ చేయాలా?"</string>
+    <string name="hms_update_message_new" priority="translator">"ఈ సేవ కోసం కింది ఉన్న అప్లికేషన్ యొక్క తాజా వెర్షన్ అవసరం:\n\n%1$s"</string>
+    <string name="hms_update_title" priority="translator">"Huawei Mobile Services"</string>
+    <string name="upsdk_app_dl_installing" priority="translator">"AppGalleryని డౌన్‌లోడ్ చేస్తోంది"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"ఇన్‌స్టాల్ చేయి"</string>
+    <string name="upsdk_app_size" priority="translator">"పరిమాణం"</string>
+    <string name="upsdk_app_version" priority="translator">"వెర్షన్"</string>
+    <string name="upsdk_cancel" priority="translator">"రద్దు చేయి"</string>
+    <string name="upsdk_checking_update_prompt" priority="translator">"అప్‌డేట్‌ల కోసం తనిఖీ చేస్తోంది..."</string>
+    <string name="upsdk_choice_update" priority="translator">"అప్‌డేట్ అందుబాటులో ఉంది. దయచేసి తాజా వెర్షన్‌ను డౌన్‌లోడ్ చేసి, ఇన్‌స్టాల్ చేయండి."</string>
+    <string name="upsdk_connect_server_fail_prompt_toast" priority="translator">"సర్వర్‌కు కనెక్ట్ చేయడం సాధ్యం కాదు. దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి."</string>
+    <string name="upsdk_detail" priority="translator">"వివరాలు"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"సమాచారాన్ని తిరిగి పొందడం సాధ్యం కాలేదు. దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి."</string>
+    <string name="upsdk_install" priority="translator">"అప్‌డేట్ చేయడానికి AppGalleryని ఇన్‌స్టాల్ చేయండి. ఇప్పుడే ఇన్‌స్టాల్ చేయాలా?"</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"ఇంటర్నెట్ కనెక్షన్ లేదు. దయచేసి మీ నెట్‌వర్క్ సెట్టింగ్‌లను తనిఖీ చేయండి."</string>
+    <string name="upsdk_ota_app_name" priority="translator">"అప్లికేషన్"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"తర్వాత"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="translator">"నిష్క్రమించు"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"అప్‌డేట్"</string>
+    <string name="upsdk_ota_title" priority="translator">"కొత్త వెర్షన్"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s MB"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"ఇన్‌స్టాలేషన్‌ని రద్దు చేయాలా?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"ఇన్‌స్టాలేషన్ విఫలమైంది."</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"అవును"</string>
+    <string name="upsdk_update_check_no_new_version" priority="translator">"మీరు ఇప్పటికే తాజా వెర్షన్‌ను ఉపయోగిస్తున్నారు."</string>
+    <string name="upsdk_updating" priority="translator">"అప్‌డేట్ చేస్తోంది"</string>
+</resources>

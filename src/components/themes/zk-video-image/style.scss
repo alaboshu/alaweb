@@ -1,0 +1,39 @@
+.zk-video-image {
+    .video-box {
+        width: 100%;
+        height: 130px;
+        .video-box_source {
+            width: 100%;
+            height: 130px;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+    }
+    .image-box {
+        display: flex;
+        align-items: center;
+        margin-top: 3px;
+        .image-box_list {
+            width: 50%;
+            height: 75px;
+            margin-right: 3px;
+            .image-box_a {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                color: #606266;
+                .box_a-image {
+                    width: 100%;
+                    height: 100%;
+                }
+                .box_a-text {
+                    margin-top: -5px;
+                }
+            }
+        }
+        .image-box_list:last-of-type {
+            margin-right: 0px;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.none-border {
+    .border-header {
+        display: none;
+    }
+}
+
+@mixin widget_border($name, $color, $text-color) {
+    .floating-border__#{$name} {
+        .border-header {}
+    }
+}
+
+@each $name,
+$colors in $component-colors {
+    @include widget_border($name, map-get($colors, base), map-get($colors, font));
+}
+
+@each $name,
+$colors in $theme-colors {
+    @include widget_border($name, map-get($colors, base), map-get($colors, font));
+}

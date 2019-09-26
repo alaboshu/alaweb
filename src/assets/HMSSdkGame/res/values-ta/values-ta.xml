@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"ஆம்"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"பதிவிறக்குவதை நிறுத்தவா?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"மறைக்க, இங்கே இழுத்துவிடவும்"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"ரத்து"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"புதுப்பிப்புச் சரிபார்ப்புத் தோல்வி."</string>
+    <string name="c_buoycircle_checking" priority="translator">"புதுப்பிப்புகள் உள்ளதா என்று பார்க்கிறது…"</string>
+    <string name="c_buoycircle_confirm" priority="translator">"சரி"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery பதிவிறக்கப்படவில்லை."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"போதுமான அளவு காலி இடம் இல்லை. பதிவிறக்க இயலவில்லை."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"பதிவிறக்கம் தோல்வி. மீண்டும் முயலவா?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"பதிவிறக்குகிறது…"</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"ஃபோன் நிர்வாகி அல்லது அமைப்புகளில் HUAWEI AppGallery-க்கான இரண்டாம்நிலை துவக்கத்தைச் செயல்படுத்தவும்."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"ரத்து"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"மறை"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"பலூன்கள் மறைக்கப்பட்ட பிறகு, அவற்றை மீண்டும் பார்க்க செயலியை மீண்டும் தொடங்க வேண்டும்."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"பலூன்கள் மறைக்கப்பட்ட பிறகு, அவற்றை மீண்டும் பார்க்க உங்கள் சாதனத்தைப் ஃபிளிப் செய்யவும்."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"மீண்டும் நினைவூட்டாதே"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"பலூன்களை மறை"</string>
+    <string name="c_buoycircle_install" priority="translator">"நிறுவு"</string>
+    <string name="c_buoycircle_no" priority="translator">"இல்லை"</string>
+    <string name="c_buoycircle_retry" priority="translator">"மீண்டும் முயலவும்"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"இந்தச் சேவை பின்வரும் செயலியின் சமீபத்திய பதிப்புக்குத் தேவைப்படுகிறது:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"வணக்கம் %1$s"</string>
+</resources>

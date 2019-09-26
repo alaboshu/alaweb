@@ -1,0 +1,143 @@
+@import '@/assets/style/variable.scss';
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  box-sizing: border-box;
+  margin-left: 3px;
+
+  a {
+    text-decoration: none;
+    display: block;
+  }
+
+  li {
+    // padding-top: 10px;
+    position: relative;
+    font-size: 13px;
+    box-sizing: border-box;
+  }
+
+  .product-item-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .product-item-tag,
+  .product-item-sale {
+    position: absolute;
+    font-size: $gl-h7-size;
+    color: #fff;
+  }
+
+  .product-name {
+    color: $gl-text2;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  .product-name,
+  .produce-item-news {
+    // margin-left: 10px;
+  }
+
+  .product-item-sale,
+  .product-item-tag {
+    display: none;
+  }
+
+  .product-item-sale_mount {
+    display: none;
+  }
+
+  .instance_sale {
+    display: none;
+  }
+}
+
+.zk-product-item-a {
+  .zk-product-item {
+    ul {
+      margin-left: 0px;
+      padding: 5px 0px;
+
+      li {
+        display: inline-block;
+        width: 47%;
+        margin: 0px 0px 2% 2%;
+        box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+        padding-top: 0px;
+        overflow: hidden;
+      }
+
+      .product-item-content {
+        position: relative;
+        height: 60px;
+        width: 100%;
+        padding: 0px 8px;
+
+        .produce-item-news {
+          margin: 0px;
+          // position: absolute;
+          width: 90%;
+          bottom: 0;
+          left: 0px;
+        }
+      }
+
+      .product-item-price {
+        color: #c81432;
+        font-size: 24upx;
+
+        .item-price_span {
+          font-size: $gl-h7-size;
+        }
+      }
+
+      .product-item-market_price {
+        float: right;
+        margin-right: 10px;
+        color: $gl-text3;
+        font-size: $gl-h6-size;
+      }
+
+      .product-item-market_price {
+        display: none;
+      }
+
+      .product-name {
+        width: 100%;
+        font-size: 12px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        margin: 0px;
+        // line-height: 38px;
+        color: $gl-text2;
+      }
+
+      .product-item-box {
+        width: 100%;
+      }
+
+      .product-item-image {
+        width: 100%;
+        height: 100%;
+      }
+
+      .product-item-sale_mount {
+        display: block;
+        color: $gl-text3;
+        margin-right: 5px;
+        font-size: $gl-h6-size;
+        float: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort" priority="translator">"बंद करें"</string>
+    <string name="hms_abort_message" priority="translator">"डाउनलोड बंद करें?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"हुअवी मोबाइल सेवाओं का उपयोग करने के लिए %1$s अक्षम है। कृपया फोन प्रबंधक को लांच करें या सेटिंग्स पर जाएं, %2$s के लिए सभी अनुमतियों को सक्षम करें (स्वतः-लांच तथा सहायक लांच सहित), और फिर कोशिश करें।"</string>
+    <string name="hms_cancel" priority="translator">"रद्द करें"</string>
+    <string name="hms_check_failure" priority="translator">"अद्यतन की जाँच करने में विफल रहा।"</string>
+    <string name="hms_check_no_update" priority="translator">"आप पहले से ही नवीनतम संस्करण का उपयोग कर रहे हैं।"</string>
+    <string name="hms_checking" priority="translator">"अद्यतन की जाँच कर रहा है…"</string>
+    <string name="hms_confirm" priority="translator">"ठीक"</string>
+    <string name="hms_download_failure" priority="translator">"हुअवी मोबाइल सेवाएँ पैकेज डाउनलोड करने में विफल रहा।"</string>
+    <string name="hms_download_no_space" priority="translator">"रिक्त स्थान पर्याप्त नहीं है। डाउनलोड पूर्ण नहीं किया जा सकता।"</string>
+    <string name="hms_download_retry" priority="translator">"डाउनलोड विफल रहा। पुन: प्रयास करें?"</string>
+    <string name="hms_downloading" priority="translator">"हुअवी मोबाइल सेवाएँ डाउनलोड की जा रही हैं | प्रगति: %d%%"</string>
+    <string name="hms_downloading_loading" priority="LT">"डाउनलोड हो रहा है"</string>
+    <string name="hms_downloading_new" priority="LT">"HMS डाउनलोड कर रहा है"</string>
+    <string name="hms_gamebox_name" priority="LT">"HUAWEI GameCenter"</string>
+    <string name="hms_install" priority="translator">"स्थापित करें"</string>
+    <string name="hms_install_message" priority="translator">"इस सुविधा का उपयोग करने के लिए हुअवी मोबाइल सेवाएँ स्थापित होनी चाहिए। स्थापित करें?"</string>
+    <string name="hms_retry" priority="translator">"पुनः प्रयास करें"</string>
+    <string name="hms_update" priority="translator">"अद्यतन करें"</string>
+    <string name="hms_update_message" priority="translator">"इस सुविधा का उपयोग करने के लिए हुअवी मोबाइल सेवाओं के नवीनतम संस्करण पर अद्यतन करें। अभी अद्यतन करें?"</string>
+    <string name="hms_update_message_new" priority="LT">"इस सेवा को निम्नलिखित ऐप के नवीनतम संस्करण की आवश्यकता है:\n\n%1$s"</string>
+    <string name="hms_update_title" priority="translator">"हुअवी मोबाइल सेवाएँ"</string>
+    <string name="upsdk_app_dl_installing" priority="LT">"AppGallery डाउनलोड कर रहा है"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"स्थापित करें"</string>
+    <string name="upsdk_app_size" priority="translator">"आकार"</string>
+    <string name="upsdk_app_version" priority="translator">"संस्करण"</string>
+    <string name="upsdk_cancel" priority="translator">"रद्द करें"</string>
+    <string name="upsdk_checking_update_prompt" priority="translator">"अद्यतन की जाँच कर रहा है…"</string>
+    <string name="upsdk_choice_update" priority="LT">"अद्यतन उपलब्ध है। कृपया नवीनतम संस्करण डाउनलोड करके स्थापित करें।"</string>
+    <string name="upsdk_connect_server_fail_prompt_toast" priority="translator">"सर्वर से कनेक्ट करने में असमर्थ। कृपया बाद में पुनः प्रयास करें।"</string>
+    <string name="upsdk_detail" priority="translator">"विवरण"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"जानकारी पुनः प्राप्त करने में असमर्थ। कृपया बाद में पुनः प्रयास करें।"</string>
+    <string name="upsdk_install" priority="LT">"अद्यतन करने के लिए AppGallery स्थापित करें। अभी स्थापित करें?"</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"कोई इंटरनेट कनेक्शन नहीं है। कृपया अपनी नेटवर्क सेटिंग्स जाँचें।"</string>
+    <string name="upsdk_ota_app_name" priority="LT">"ऐप"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"बाद में"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"बाहर निकलें"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"अद्यतन करें"</string>
+    <string name="upsdk_ota_title" priority="translator">"नया संस्करण"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s MB"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"स्थापना रद्द करें?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"स्थापना विफल रही।"</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"हाँ"</string>
+    <string name="upsdk_update_check_no_new_version" priority="translator">"आप पहले से ही नवीनतम संस्करण का उपयोग कर रहे हैं।"</string>
+    <string name="upsdk_updating" priority="translator">"अद्यतन कर रहा है"</string>
+</resources>

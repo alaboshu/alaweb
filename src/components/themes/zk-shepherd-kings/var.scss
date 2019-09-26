@@ -1,0 +1,61 @@
+.zk-shepherd-kings {
+  width: 100vw;
+
+  .shepherd-kings_one {
+    width: 100%;
+
+    .one-image {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .shepherd-kings_two {
+    width: 100%;
+    position: relative;
+    height: 300upx;
+    background: url(https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-07-19/5d318f42f1d2ca1de8a50ea9.png) no-repeat center;
+    background-position: center center;
+    background-size: 100% 100%;
+
+    .two-image {
+      width: 100%;
+      display: block;
+    }
+
+    .kings-video {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .kings_video_item {
+        width: 330upx;
+        height: 160upx;
+        margin-right: 10upx;
+        margin-top: 10upx;
+        position: relative;
+
+      }
+
+      .kings_video-box {
+        width: 330upx;
+        height: 240upx;
+        border-radius: 20upx;
+
+      }
+    }
+  }
+
+  .shepherd-kings_ul {
+    width: 100%;
+
+    .shepherd-kings_li {
+      width: 100%;
+
+      .kings_li-image {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}

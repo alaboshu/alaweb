@@ -1,0 +1,296 @@
+@import '@/assets/style/variable.scss';
+
+.zkAutoFormText {
+  color: #f6fcfb;
+  font-size: 12px;
+  text-align: center;
+  background: #45ccb1;
+  border-radius: 8px;
+  padding: 4px;
+  margin: 5px;
+}
+
+.zkAutoFormText2 {
+  margin: 10px;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #575962;
+  background: #f7f8fa;
+}
+
+.zkAutoFormUl {
+  padding: 10px;
+
+  .zkAutoFormList {
+    color: #9699a2;
+    font-size: 12px;
+  }
+}
+
+.floating-border {
+  .border-body {
+    padding: 0;
+  }
+}
+
+.box-top {
+  max-height: 50px;
+  line-height: 50px;
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #e95a40;
+  position: relative;
+}
+
+.box-top::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleY(0.3);
+  background: #e5e5e5;
+}
+
+.box {
+  padding: 5px 10px;
+  font-size: 14px !important;
+  position: relative;
+
+  .verification-box {
+    .text {
+      border-radius: 5px;
+    }
+  }
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 97%;
+  height: 1px;
+  transform: scaleY(0.3);
+  background: #e5e5e5;
+}
+
+.zk-auto-form {
+  .box:last-child:after {
+    width: 100%;
+  }
+
+  .btn-box {
+    padding: 15px;
+
+    .uni-button {
+      -webkit-appearance: none
+    }
+
+    .btn-sumbit {
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background: $gl-brand;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+
+    .conter_list {
+      height: 45px;
+      line-height: 45px;
+      font-size: 18px;
+      color: $gl-brand;
+      background-color: #dddddd;
+    }
+
+    .buttombac {
+      background-color: #dddddd;
+      color: $gl-light;
+    }
+  }
+
+  .reg-protocol {
+    padding: 10px 15px;
+    font-size: 12px;
+
+    // display: flex;
+    // align-items: center;
+    .help-back {
+      color: grey;
+      font-size: 12px;
+
+      span {
+        color: #000;
+        margin: 0 5px;
+      }
+    }
+
+    uni-checkbox-group {
+      display: flex;
+    }
+
+    p {
+      color: #666
+    }
+
+    .agreement {
+      color: $gl-brand;
+    }
+  }
+
+  .pushButton {
+    width: 25px;
+    height: 25px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+  }
+
+  .form-login {
+    width: 100vw;
+    height: 28vh;
+    position: relative;
+
+    .form-login_box {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .form-login_img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.box-bottom {
+  float: right;
+  margin-right: 15px;
+  font-size: 13px;
+  color: #666;
+  display: flex;
+
+  p {
+    margin: 0 5px;
+  }
+}
+
+.group-title {
+  font-size: 14px;
+  color: #606266;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 10px;
+  border-bottom: 0.5px solid #e5e5e5;
+}
+
+.authorization-popup {
+  background: #fff;
+  width: 70%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  padding: 15px;
+
+  .authorization-title {
+    font-size: $gl-h5-size;
+  }
+
+  .authorization-content {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #909399;
+    text-align: center;
+
+    .uni-input {
+      text-align: left;
+    }
+
+    .phone_box {
+      height: 35px;
+      display: flex;
+      align-items: center;
+
+      .label {
+        width: 80px;
+        padding-right: 5px;
+        font-size: 12px;
+      }
+
+      .text {
+        flex: 1;
+        text-align: left;
+      }
+    }
+  }
+
+  .authorization-warn {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    justify-content: space-around;
+  }
+
+  .authorization-btn {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .btn-caneel {
+      text-align: center;
+      width: 80px;
+      height: 30px;
+      line-height: 30px;
+      color: #909399;
+      background: none;
+    }
+
+    .btn-login {
+      width: 80px;
+      height: 30px;
+      line-height: 30px;
+      margin-left: 15px;
+      background: none;
+      color: #62b900;
+    }
+  }
+}
+
+.verification-box {
+  display: flex;
+  align-items: center;
+
+  .label {
+    width: 80px;
+    padding-right: 5px;
+    font-size: 12px;
+  }
+
+  .phone_text {
+    height: 100%;
+    display: flex;
+    height: 35px;
+    line-height: 35px;
+    justify-content: center;
+    background: $gl-brand;
+    color: #fff;
+    border-radius: 3 px;
+    font-size: 12px;
+    padding: 0px 8px;
+  }
+}

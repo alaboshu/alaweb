@@ -1,0 +1,16 @@
+.zk-image-list-d {
+    padding-left: 3px;
+    padding-right: 5px;
+    margin-bottom: 18px;
+    margin-top: -14px;
+    $list: 7;
+    .zk-image-list {
+        // @for $list from 0 to 6 {
+        //     .image-list-#{$list} {
+        //         width: 32.5%;
+        //         height: 100px;
+        //         margin-top: 5px;
+        //     }
+        // }
+    }
+}

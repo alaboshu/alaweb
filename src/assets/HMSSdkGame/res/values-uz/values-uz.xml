@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"HA"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"Yuklab olishni bekor qilasizmi?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"Berkitish uchun bu yerga torting"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"BEKOR QILISH"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"Yangilanish borligi tekshirilmadi."</string>
+    <string name="c_buoycircle_checking" priority="translator">"Yangilanish borligi tekshirilmoqda…"</string>
+    <string name="c_buoycircle_confirm" priority="translator">"OK"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery yuklab olinmadi."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"Xotirada joy yetarli emas. Yuklab olinmadi."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"Yuklab olinmadi. Qayta urinasizmi?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"Yuklab olinmoqda…"</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"Telefon menejeri yoki Sozlamalarda HUAWEI AppGallery aktivatsiyasini yoqing."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"BEKOR QILISH"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"BERKITISH"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"Pufakchalar berkitilganidan keyin ularni yana qayta chiqarish uchun ilovani qayta ishga tushiring."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"Pufakchalar berkitilganidan keyin ularni yana qayta chiqarish uchun qurilmangizni buring."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"Boshqa eslatilmasin"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"Pufakchalarni berkitish"</string>
+    <string name="c_buoycircle_install" priority="translator">"O‘RNATISH"</string>
+    <string name="c_buoycircle_no" priority="translator">"YO‘Q"</string>
+    <string name="c_buoycircle_retry" priority="translator">"QAYTA URINISH"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"Bu xizmat quyidagi ilovaning eng oxirgi versiyasini yuklab olishni talab qiladi:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"Xush kelibsiz, %1$s"</string>
+</resources>

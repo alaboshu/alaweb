@@ -1,0 +1,32 @@
+.zk-beauty-grid {
+    .zk-beauty-grid-container {
+        height: 100%;
+        background: #fff;
+        .zk-beauty-grid-list {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-items: center;
+            padding-bottom: 8px;
+        }
+        .beauty-grid-list-item {
+            width: 33%;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 8px;
+            .list-item_Img {
+                height: 89upx;
+                img {
+                    width: 89upx;
+                    height: 89upx;
+                }
+            }
+            .list-item_Name {
+                font-size: 26upx;
+                color: #202020;
+                font-family: "PingFang SC";
+            }
+        }
+    }
+}

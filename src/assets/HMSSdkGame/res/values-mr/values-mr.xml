@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"होय"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"डाउनलोड करणे थांबवायचे?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"लपवण्यासाठी येथे ओढा"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"रद्द करा"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"अद्ययावत तपास अयशस्‍वी झाला."</string>
+    <string name="c_buoycircle_checking" priority="translator">"अद्ययावतांसाठी तपासत आहे…"</string>
+    <string name="c_buoycircle_confirm" priority="translator">"ठीक आहे"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery डाउनलोड होऊ शकले नाही."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"पुरेशी मोकळी जागा नाही. डाउनलोड करण्‍यात अक्षम."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"डाउनलोड अयशस्वी झाले. पुन्हा प्रयत्न करायचा?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"डाउनलोड करत आहे…"</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"फोन व्‍यवस्‍थापक किंवा सेटिंग्‍जमध्‍ये HUAWEI AppGallery साठी दुय्यम लॉन्‍च सक्षम करा."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"रद्द करा"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"लपवा"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"फुगे लपवल्यानंतर, त्यांना पुन्हा दाखवण्यासाठी आपल्याला अ‍ॅप पुन्हा लॉंच करण्याची आवश्यकता असेल."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"फुगे लपवल्‍यानंतर, त्‍यांना पुन्‍हा दर्शविण्‍यासाठी आपले उपकरण फ्लिप करा."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"मला पुन्हा आठवण करू नका"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"फुगे लपवा"</string>
+    <string name="c_buoycircle_install" priority="translator">"स्थापित करा"</string>
+    <string name="c_buoycircle_no" priority="translator">"नाही"</string>
+    <string name="c_buoycircle_retry" priority="translator">"पुन्हा प्रयत्न करा"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"या सेवेला खालील अ‍ॅपच्या नवीनतम आवृत्तीची आवश्यकता आहे:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"%1$s चे स्वागत आहे"</string>
+</resources>

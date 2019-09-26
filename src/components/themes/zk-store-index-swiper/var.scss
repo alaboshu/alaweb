@@ -1,0 +1,112 @@
+.zk-store-index-swiper {
+  .zk-school-swipers {
+    .zk-school_swiper_container {
+      position: relative;
+      height: 560upx;
+      background: #ffffff;
+
+      .school_swiper_header_all {
+        height: 350upx;
+        background: #fff;
+      }
+
+      .school_swiper_header {
+        width: 100%;
+        background: url(https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-07-15/5d2c1cabf338e5279869bd32.png) no-repeat;
+        background-position: center center;
+        height: 350upx;
+        background-size: 100% 100%;
+      }
+
+      .school_swiper_header {
+        .header_input {
+          background: #fff;
+        }
+
+        .new-index-search-box {
+          display: flex;
+          padding: 30upx 30upx 10upx 30upx;
+        }
+      }
+
+      .shop-list_content {
+        flex-wrap: wrap;
+        width: 92%;
+        position: absolute;
+        top: 208upx;
+        left: 50%;
+        margin-left: -45.8%;
+        border-radius: 20upx;
+        overflow: hidden;
+
+        uni-swiper-item {
+          width: 100% !important;
+          padding-top: 0px !important;
+        }
+
+        .list_content-swiper {
+          position: relative;
+        }
+
+        .bgImg {
+          .bgImg-images {
+            width: 100%;
+            height: 350upx !important;
+            display: block;
+          }
+
+          .list_content-text {
+            height: 44px;
+            background: #ffffff;
+          }
+        }
+
+        .bgImgText {
+          font-size: 29upx;
+          color: #202020;
+          font-family: "PingFang SC";
+          margin-left: 20upx;
+          font-weight: bold;
+        }
+
+        .bgImgTextTag {
+          color: #666;
+          font-size: 22upx;
+          margin-left: 20upx;
+        }
+
+        uni-swiper {
+          width: 100%;
+          // height: 317upx !important;
+          border-radius: 20upx;
+        }
+
+        .uni-swiper .uni-swiper-dot {
+          width: 6px;
+          height: 6px;
+        }
+
+        .ImgActive {
+          // height: 317upx !important;
+          transition: 0.2s all;
+          opacity: 1;
+
+          .images_avtice {
+            width: 100%;
+            height: 317upx;
+            display: block;
+          }
+
+          .text_active {
+            height: 50px;
+            background: #ffffff;
+          }
+        }
+
+        .dispalyImg {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

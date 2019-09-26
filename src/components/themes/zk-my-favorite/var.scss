@@ -1,0 +1,119 @@
+@import "@/assets/style/theme.scss";
+@import "@/assets/style/base.scss";
+.zk-my-favorite {
+    .favorite_list {
+        width: 100%;
+        overflow-y: auto;
+        background: $gl-border5;
+        .collect-box {
+            background: #ffffff;
+            width: 92%;
+            border-radius: 6px;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            ul {
+                padding: 20px 5px;
+                li {
+                    display: flex;
+                    border-bottom: 1px solid $gl-border5;
+                    width: 100%;
+                    padding: 15px 0px;
+                    .collect-box_left {
+                        padding: 5px;
+                        .collect-box_left-img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .collect-box_right {
+                        flex: 1;
+                        padding: 0px 0px 0px 20px;
+                        display: flex;
+                        flex-direction: column;
+                        .right_p1 {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            font-size: 13px;
+                            color: $gl-text7;
+                            font-weight: 500;
+                            font-family: '黑体';
+                            line-height: 16px;
+                        }
+                        .right_p2 {
+                            font-size: 10px;
+                            color: $gl-text6;
+                            margin-top: 5px;
+                            flex: 1;
+                        }
+                        .discount-price {
+                            display: flex;
+                            align-items: flex-end;
+                            margin-top: 30px;
+                            .discount-price_left {
+                                flex: 1;
+                                font-size: 10px;
+                                color: $gl-text6;
+                                line-height: 15px;
+                                .price_left-p1 {
+                                    font-size: 10px;
+                                    color: $gl-text6;
+                                    text-decoration: line-through;
+                                    line-height: 8px;
+                                }
+                                .price_left-p2 {
+                                    font-size: 12px;
+                                    color: $gl-themeColor;
+                                    font-weight: 600;
+                                    span {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                            .discount-price_right {
+                                padding-top: 10px;
+                                .discount_datele {
+                                    display: inline-block;
+                                    color: #ffffff;
+                                    background: $gl-themeColor;
+                                    font-size: 12px;
+                                    border-radius: 3px;
+                                    padding: 2px 8px;
+                                }
+                            }
+                        }
+                    }
+                    &:last-of-type {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+        .ck_img {
+            position: relative;
+            background-color: $gl-light;
+            .order-nodata {
+                position: absolute;
+                top: 42%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                p {
+                    color: #ddd;
+                    font-size: 16px;
+                }
+                .cirlce_nodata {
+                    height: 70px;
+                    line-height: 70px;
+                    i {
+                        font-size: 70px;
+                        color: #ddd;
+                    }
+                }
+            }
+        }
+    }
+}

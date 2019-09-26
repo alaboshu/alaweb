@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"ТАК"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"Спыніць спампоўку?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"Перацягніце сюды, каб схаваць"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"АДМЯНІЦЬ"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"Праверка абнаўлення не выканана."</string>
+    <string name="c_buoycircle_checking" priority="translator">"Праверка абнаўленняў…"</string>
+    <string name="c_buoycircle_confirm" priority="translator">"ОК"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"Немагчыма спампаваць HUAWEI AppGallery."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"Недастаткова свабоднага месца. Немагчыма спампаваць."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"Спампоўка не выканана. Паўтарыць спробу?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"Спампоўка…"</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"Уключыце функцыю другаснага запуску для HUAWEI AppGallery праз Дыспетчар або ў Наладах."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"АДМЯНІЦЬ"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"СХАВАЦЬ"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"Калі шары будуць схаваны, перазапусціце праграму, каб яны з\’явіліся зноў."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"Калі шары будуць схаваны, перавярніце прыладу, каб яны з\’явіліся зноў."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"Больш не напамінаць"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"Схаваць шары"</string>
+    <string name="c_buoycircle_install" priority="translator">"УСТАНАВІЦЬ"</string>
+    <string name="c_buoycircle_no" priority="translator">"НЕ"</string>
+    <string name="c_buoycircle_retry" priority="translator">"ПАЎТАРЫЦЬ СПРОБУ"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"Гэтаму сэрвісу патрэбна апошняя версія наступнай праграмы:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"Вітаем, %1$s"</string>
+</resources>

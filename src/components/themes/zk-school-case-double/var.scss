@@ -1,0 +1,79 @@
+.zk-school-case-double {
+  .school_case_double_container {
+    background: #fff;
+    padding: 22upx 30upx;
+    margin-bottom: 20upx;
+    box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+
+    .case_card_top {
+      display: flex;
+      align-items: center;
+
+      span {
+        display: block;
+        font-size: 30upx;
+        color: #202020;
+        font-family: "PingFang SC";
+        font-weight: bold;
+        margin-left: 20upx;
+      }
+
+      .imgBox {
+        width: 50upx;
+        height: 50upx;
+        border-radius: 50%;
+      }
+
+      img {
+        width: 50upx;
+        height: 50upx;
+        border-radius: 50%;
+      }
+    }
+
+    .case_card_img {
+      display: flex;
+      margin-top: 20upx;
+      justify-content: space-between;
+      width: 100%;
+
+      .case_card_img_item {
+        width: 340upx;
+        height: 183upx;
+
+
+
+        img {
+          width: 100%;
+          height: 183upx;
+          border-radius: 10upx;
+        }
+      }
+
+    }
+
+    .case_card_text {
+      margin-top: 18upx;
+
+      .case_card_text_title {
+        font-size: 30upx;
+        color: #202020;
+        font-weight: bold;
+        font-family: "PingFang SC";
+      }
+
+      .case_card_text_info {
+        font-size: 24upx;
+        color: #666;
+        font-family: "PingFang SC";
+        text-overflow: -o-ellipsis-lastline;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+}

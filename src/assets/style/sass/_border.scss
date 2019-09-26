@@ -1,0 +1,46 @@
+@mixin borderRadius($width) {
+  -webkit-border-radius: $width;
+  -moz-border-radius: $width;
+  border-radius: $width;
+}
+
+@mixin border($width:1, $color: #000) {
+  border: $width+px solid $color;
+}
+
+@mixin borderLeft($width:1, $color: #000) {
+  border-left: $width+px solid $color;
+}
+
+@mixin borderRight($width:1, $color: #000) {
+  border-right: $width+px solid $color;
+}
+
+@mixin borderTop($width:1, $color: #000) {
+  border-top: $width+px solid $color;
+}
+
+@mixin borderBottom($width:1, $color: #000) {
+  border-bottom: $width+px solid $color;
+}
+
+
+.border-0 {
+  border: 0 !important;
+}
+
+.border-top-0 {
+  border-top: 0 !important;
+}
+
+.border-right-0 {
+  border-right: 0 !important;
+}
+
+.border-bottom-0 {
+  border-bottom: 0 !important;
+}
+
+.border-left-0 {
+  border-left: 0 !important;
+}

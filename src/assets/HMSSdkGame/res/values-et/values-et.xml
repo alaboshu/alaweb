@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"JAH"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"Peatada allalaadimine?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"Peitmiseks lohistage siia"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"TÜHISTA"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"Värskenduse kontrollimine nurjus."</string>
+    <string name="c_buoycircle_checking" priority="translator">"Värskenduste otsimine ..."</string>
+    <string name="c_buoycircle_confirm" priority="translator">"OK"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGalleryt ei saanud alla laadida."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"Pole piisavalt vaba ruumi. Ei saa alla laadida."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"Allalaadimine nurjus. Proovida uuesti?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"Allalaadimine …"</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"Luba HUAWEI AppGallery teine käivitamine Telefonihalduris või Sätetes."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"TÜHISTA"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"PEIDA"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"Kui õhupallid on peidetud, tuleb teil nende kuvamiseks rakendus uuesti käivitada."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"Kui õhupallid on peidetud, pöörake oma seadet, et neid uuesti kuvada."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"Ära enam meelde tuleta"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"Peida õhupallid"</string>
+    <string name="c_buoycircle_install" priority="translator">"INSTALLI"</string>
+    <string name="c_buoycircle_no" priority="translator">"EI"</string>
+    <string name="c_buoycircle_retry" priority="translator">"PROOVI UUESTI"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"See teenus nõuab rakenduse \n\n%1$s viimast versiooni"</string>
+    <string name="hms_game_login_notice" priority="LT">"Tere tulemast! %1$s"</string>
+</resources>

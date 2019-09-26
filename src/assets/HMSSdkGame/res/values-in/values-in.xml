@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"YA"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"Berhenti unduh?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"Seret ke sini untuk menyembunyikan"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"BATAL"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"Pemeriksaan pembaruan gagal."</string>
+    <string name="c_buoycircle_checking" priority="translator">"Memeriksa pembaruan..."</string>
+    <string name="c_buoycircle_confirm" priority="translator">"OK"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery tidak dapat diunduh."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"Ruang kosong tidak cukup. Tidak bisa mengunduh."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"Pengunduhan gagal. Coba lagi?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"Mengunduh..."</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"Aktifkan Peluncuran sekunder untuk HUAWEI AppGallery di Pengelola Ponsel atau Pengaturan."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"BATAL"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"SEMBUNYIKAN"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"Setelah balon disembunyikan, Anda perlu meluncurkan ulang aplikasi untuk menampilkannya lagi."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"Setelah balon disembunyikan, balik perangkat Anda untuk menampilkannya lagi."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"Jangan ingatkan saya lagi"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"Sembunyikan balon"</string>
+    <string name="c_buoycircle_install" priority="translator">"PASANG"</string>
+    <string name="c_buoycircle_no" priority="translator">"TIDAK"</string>
+    <string name="c_buoycircle_retry" priority="translator">"COBA LAGI"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"Layanan ini perlu versi terbaru aplikasi berikut:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"Selamat datang, %1$s"</string>
+</resources>

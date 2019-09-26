@@ -1,0 +1,55 @@
+@import '@/assets/style/variable.scss';
+
+.zk-grid-a {
+  .zk-grid {
+    border: none !important;
+  }
+
+  .zk-grid_bottom {
+    width: 100%;
+    height: 10px;
+    background-color: #F0F0F0;
+  }
+
+  .weui-grid_div {
+    width: 100%;
+    overflow: hidden;
+    border-top: 1px solid $gl-border2;
+    padding: 15px 0;
+  }
+
+  .weui-grid_a {
+    float: left;
+    border-right: 1px solid $gl-border2;
+    border-bottom: 1px solid $gl-border2;
+    text-align: center;
+    box-sizing: border-box;
+    color: $gl-light;
+    padding: 8px 0px;
+  }
+
+  .weui-grid_a:nth-child(4n) {
+    border-right: none;
+  }
+
+  .weui-grid__icon {
+    width: auto;
+    height: auto;
+  }
+
+  .weui-grid__label {
+    font-size: 13px;
+    margin-top: 10px;
+    color: #666;
+    font-family: '微软雅黑'
+  }
+
+  .weui-grid__labelTop {
+    margin-top: -3px;
+    margin-top: 5rpx;
+  }
+
+  .weui-grid__label {
+    margin: 2px 0;
+  }
+}

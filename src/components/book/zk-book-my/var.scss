@@ -1,0 +1,132 @@
+.zk-book-my {
+  .book_container_all {
+    font-family: '微软雅黑';
+
+    .book_top_all {
+      background: #F0F0F0;
+      padding: 0 10px;
+    }
+
+    .book_top {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+
+      .book_name {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+
+    .book_bottom {
+      display: flex;
+      margin-top: 10px;
+      padding: 20px 0;
+
+      .book_bottom_left {
+        width: 20%;
+
+        img {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 100%;
+        }
+      }
+
+      .book_bottom_right {
+        font-size: 14px;
+
+        .user_name {
+          font-size: 13px;
+          font-weight: 600;
+        }
+
+        .user_acount {
+          width: 45%;
+          line-height: 20px;
+          text-align: center;
+          background: #131313;
+          color: #fff;
+          border-radius: 10px;
+          font-size: 12px;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .book_list_content {
+      background: #fff;
+
+      .book_content {
+        margin: 10px;
+
+        .book_content_item {
+          display: flex;
+          padding: 20px 0px;
+          border-bottom: 1px solid #e5e5e5;
+          margin: 5px 10px;
+
+          .content_item_left {
+            width: 28%;
+            height: 6.5rem;
+            background: #F0F0F0;
+            padding: 10px;
+
+            img {
+              width: 100%;
+              height: 5rem;
+            }
+          }
+
+          .content_item_right {
+            width: 64%;
+            margin-left: 15px;
+
+            .book_name {
+              font-family: '苹方黑体';
+              font-size: 14px;
+              font-weight: 600;
+              margin-bottom: 8px;
+            }
+
+            .book_detail,
+            .book_link {
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              word-break: break-all;
+              font-size: 13px;
+              color: #959393;
+              font-family: '苹方黑体';
+            }
+
+            .copy_links {
+              display: flex;
+              justify-content: flex-end;
+
+
+
+              span {
+                display: block;
+                text-align: center;
+                line-height: 20px;
+                border-radius: 20px;
+                border: 1px solid #A97C3B;
+                font-size: 13px;
+                font-family: '苹方黑体';
+                padding: 0 10px;
+              }
+            }
+
+            .active_copy_links {
+              background: #A97C3B;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

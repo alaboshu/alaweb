@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"DA"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"Зауставити преузимање?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI АппГаллерy"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"Превуци овде за сакривање"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"ОТКАЖИ"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"Тражење ажурирања није успело."</string>
+    <string name="c_buoycircle_checking" priority="translator">"Тражење ажурирања…"</string>
+    <string name="c_buoycircle_confirm" priority="translator">"У реду"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"Преузимање апликације HUAWEI АппГаллерy није било могуће."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"Нема довољно слободног простора. Преузимање није могуће."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"Преузимање није успело. Покушати поново?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"Преузимање…"</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"Омогућите функцију Секундарно покретање за апликацију HUAWEI АппГаллерy у опцијама Менаџер телефона или Подешавања."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"ОТКАЖИ"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"SAKRIJ"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"Након што балони буду сакривени, мораћете поново да покренете апликацију да бисте их поново приказали."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"Након што балони буду сакривени, окрените уређај да бисте их поново приказали."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"Не подсећај ме поново"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"Сакриј балоне"</string>
+    <string name="c_buoycircle_install" priority="translator">"INSTALIRAJ"</string>
+    <string name="c_buoycircle_no" priority="translator">"NE"</string>
+    <string name="c_buoycircle_retry" priority="translator">"ПОКУШАЈ PONOVO"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"Ова услуга захтева најновију верзију следеће апликацијe:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="translator">"Добро дошли %1$s"</string>
+</resources>

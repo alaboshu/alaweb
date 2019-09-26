@@ -1,0 +1,58 @@
+
+  .zk-info-nav {
+    .zk-all{
+      background: #007aff;
+      text-align: center;
+      overflow: hidden;
+    }
+    .totday_get{
+      color: #ffffff;
+      text-align: center;
+      font-size: 18px;
+      opacity: .4;
+      margin: 20px;
+    }
+    .count{
+      font-size: 52px;
+      color: #ffffff;
+      margin-top: -20px;
+    }
+    .zk-nav-foot{
+      padding: 22px 10px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        border-top: 1px solid #bcc1ce;
+      img{
+        width: 30px;
+        height: 30px;
+        margin: 0 10px;
+      }
+      p{
+        padding: 0 10px;
+        display: flex;
+        span{
+            font-size: 18px;
+            color: #fff;
+            display: block;
+        }
+      }
+    }
+    .mode_mount{
+       .text{
+        color: #ffffff;
+        font-size: 18px;
+        opacity: .7;
+      }
+      .total_mount{
+        margin: 0 10px;
+        font-weight: bold;
+        color: #fff;
+        opacity: 1;
+        font-size: 25px;
+      }
+    }
+    .zk-nav-foot p:first-child{
+      border-right: 1px solid #ccc;
+    }
+  }

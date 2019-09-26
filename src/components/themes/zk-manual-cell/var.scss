@@ -1,0 +1,30 @@
+@import "@/assets/style/variable.scss";
+.zk-manual-cell {
+    .mobile_user {
+        padding-left: 15px;
+        border-top: 1px solid $gl-border4;
+        border-bottom: 1px solid $gl-border4;
+        .user-view_a {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px 10px 0px;
+            border-bottom: 1px solid $gl-border4;
+            .user_conter {
+                flex: 1;
+                .weui_margin {
+                    margin: 0px;
+                    font-size: 12px;
+                    color: $gl-black;
+                }
+            }
+            .zk-right {
+                font-size: 12px;
+                color: #c8c8cd;
+                margin-left: 3px;
+            }
+        }
+        .user-view_a:last-of-type {
+            border-bottom: none;
+        }
+    }
+}

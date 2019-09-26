@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"ใช่"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"หยุดการดาวน์โหลดหรือไม่"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"ลากที่นี่เพื่อซ่อน"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"ยกเลิก"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"การตรวจสอบการอัปเดตล้มเหลว"</string>
+    <string name="c_buoycircle_checking" priority="translator">"กำลังตรวจสอบการอัปเดต…"</string>
+    <string name="c_buoycircle_confirm" priority="translator">"ตกลง"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery ไม่สามารถดาวน์โหลดได้"</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"พื้นที่ว่างไม่เพียงพอ ไม่สามารถดาวน์โหลดได้"</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"การดาวน์โหลดล้มเหลว ลองอีกครั้งหรือไม่"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"กำลังดาวน์โหลด…"</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"เปิดใช้งานการเปิดใช้งานสำรอง HUAWEI AppGallery ในตัวจัดการโทรศัพท์หรือการตั้งค่า"</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"ยกเลิก"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"ซ่อน"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"หลังจากซ่อนบอลลูนแล้ว คุณจะต้องเปิดแอปอีกครั้งเพื่อแสดงอีกครั้ง"</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"หลังจากที่บอลลูนถูกซ่อนไว้ ให้พลิกอุปกรณ์เพื่อแสดงอีกครั้ง"</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"โปรดอย่าเตือนอีก"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"ซ่อนบอลลูน"</string>
+    <string name="c_buoycircle_install" priority="translator">"ติดตั้ง"</string>
+    <string name="c_buoycircle_no" priority="translator">"ไม่"</string>
+    <string name="c_buoycircle_retry" priority="translator">"ลองอีกครั้ง"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"บริการนี้ต้องใช้แอปพลิเคชันต่อไปนี้เวอร์ชันล่าสุด:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"ยินดีต้อนรับ %1$s"</string>
+</resources>

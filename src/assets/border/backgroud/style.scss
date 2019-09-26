@@ -1,0 +1,40 @@
+.background-border {
+    padding-bottom: 15px;
+    .border-header {
+        display: flex;
+        align-items: center;
+        padding: 0px 15px;
+        .border-header-title {
+            flex: 1;
+            color: $gl-text1;
+        }
+        .border-header-icon {
+            display: none;
+        }
+        .border-header-desc {
+            display: none;
+        }
+    }
+    .border-body {
+        background: #ffffff;
+    }
+}
+
+@mixin widget_border($name, $color, $text-color) {
+    .background-border__#{$name} {
+        background: $color !important;
+        .border-header-title {
+            color: $text-color !important;
+        }
+    }
+}
+
+@each $name,
+$colors in $component-colors {
+    @include widget_border($name, map-get($colors, base), map-get($colors, font));
+}
+
+@each $name,
+$colors in $theme-colors {
+    @include widget_border($name, map-get($colors, base), map-get($colors, font));
+}

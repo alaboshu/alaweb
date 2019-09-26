@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"ДА"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"Спиране на изтеглянето?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"Изтеглете тук, за да се скрие"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"ОТКАЗ"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"Проверката за актуализации е неуспешна."</string>
+    <string name="c_buoycircle_checking" priority="translator">"Проверка за актуализации...."</string>
+    <string name="c_buoycircle_confirm" priority="translator">"OK"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery не може да се изтегли."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"Недостатъчно свободно място. Не може да се изтегли."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"Неуспешно изтегляне. Опитайте отново?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"Изтегляне..."</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"Активирайте вторично стартиране на HUAWEI AppGallery в мениджъра на телефона или настройки."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"ОТКАЗ"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"СКРИВАМ"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"След скриване на балоните ще трябва да рестартирате приложението, за да може да се покажат отново."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"След скриване на балоните, завъртете устройството, за да се покажат отново."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"Не напомняй повече"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"Скриване на балони"</string>
+    <string name="c_buoycircle_install" priority="translator">"ИНСТАЛИРАНЕ"</string>
+    <string name="c_buoycircle_no" priority="translator">"НЕ"</string>
+    <string name="c_buoycircle_retry" priority="translator">"ОПИТВАМ ОТНОВО"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"Тази услуга изисква най-новата версия на следното приложение:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"Добре дошли %1$s"</string>
+</resources>

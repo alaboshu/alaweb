@@ -1,0 +1,43 @@
+.zk-single-grid {
+  // background: #f2f2f2;
+
+  .single-grid-container {
+    // margin-top: 8px;
+    padding: 20upx;
+
+    .inde-grid-box {
+      margin: 0 auto 0 auto;
+      background: #fff;
+      border-radius: 16upx;
+      display: flex;
+      flex-wrap: wrap;
+
+      .grid-item {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 8px 0;
+
+        .grid_img {
+          width: 100upx;
+          height: 100upx;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .grid_info {
+          margin-top: 10upx;
+          text-align: center;
+          font-size: 26upx;
+          color: #000;
+          font-family: "PIngFang SC";
+        }
+      }
+    }
+  }
+}

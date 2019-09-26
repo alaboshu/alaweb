@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"TAIP"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"Ar stabdyti atsisiuntimą?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"„HUAWEI AppGallery“"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"Nuvilkite čia, kad paslėptumėte"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"ATŠAUKTI"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"Naujinių paieškos triktis."</string>
+    <string name="c_buoycircle_checking" priority="translator">"Ieškoma naujinių..."</string>
+    <string name="c_buoycircle_confirm" priority="translator">"Gerai"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"Nepavyko atsisiųsti „HUAWEI AppGallery“."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"Nepakanka laisvos vietos. Atsisiųsti negalima."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"Nepavyko atsisiųsti. Ar bandyti vėl?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"Atsisiunčiama…"</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"Telefono tvarkytuvėje arba Nuostatose įjunkite „HUAWEI AppGallery“ antrinio paleidimo funkciją."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"ATŠAUKTI"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"SLĖPTI"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"Paslėpę balionus, turėsite paleisti programėlę iš naujo, kad juos vėl parodytumėte."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"Paslėpę balionus, apverskite savo įrenginį, kad juos vėl parodytumėte."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"Daugiau nebepriminti"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"Slėpti balionus"</string>
+    <string name="c_buoycircle_install" priority="translator">"DIEGTI"</string>
+    <string name="c_buoycircle_no" priority="translator">"NE"</string>
+    <string name="c_buoycircle_retry" priority="translator">"BANDYTI VĖL"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"Šiai paslaugai reikalinga naujausia tokios programėlės versija:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"Sveiki! Čia %1$s"</string>
+</resources>

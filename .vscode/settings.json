@@ -1,0 +1,55 @@
+{
+  "editor.tabSize": 2,
+  "prettier.semi": false,
+  "explorer.confirmDelete": false,
+  "git.autofetch": true,
+  "explorer.confirmDragAndDrop": false,
+  "window.zoomLevel": 0,
+  "editor.detectIndentation": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 3000,
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "eslint.run": "onSave",
+  "vetur.format.styleInitialIndent": true,
+  "vetur.format.scriptInitialIndent": true,
+  "editor.wordWrapColumn": 800,
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "auto"
+    },
+    "prettyhtml": {
+      "printWidth": 120,
+      "singleQuote": false,
+      "wrapAttributes": false,
+      "sortAttributes": false
+    }
+  },
+  "html.format.wrapAttributes": "auto",
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+  "[markdown]": {
+    "editor.wordWrap": "off",
+    "editor.quickSuggestions": false
+  },
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "typescript.format.insertSpaceAfterConstructor": true,
+  "javascript.format.insertSpaceAfterConstructor": true
+}

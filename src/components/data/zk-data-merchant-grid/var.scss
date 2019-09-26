@@ -1,0 +1,32 @@
+@import "@/assets/style/theme.scss";
+@import "@/assets/style/base.scss";
+.zk-data-merchant-grid {
+    .merchant-grid_box {
+        padding: 10px;
+        background-color: $gl-light;
+        border-radius: 4px;
+        .merchant-list-head {
+            font-size: 14px;
+            font-weight: 600;
+            color: $gl-text1;
+        }
+        .grid_conter {
+            .grid_conter-a {
+                display: inline-block;
+                text-align: center;
+                text-decoration: none;
+                padding: 12px 0px;
+                .grid_conter-number {
+                    font-size: 15px;
+                    color: $gl-text7;
+                    font-weight: 500;
+                }
+                .grid_conter-title {
+                    font-size: 13px;
+                    color: $gl-text7;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

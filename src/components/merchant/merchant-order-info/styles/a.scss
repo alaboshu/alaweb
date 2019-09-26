@@ -1,0 +1,214 @@
+.merchant-order-info-a {
+    .merchant-order-info {
+        margin: 10px;
+        font-family: '微软雅黑';
+        .order_container {
+            .commit_btn {
+                width: 100%;
+                text-align: center;
+            }
+            .allMoney_count {
+                color: #666;
+                text-align: right;
+                font-size: 13px;
+                span:nth-of-type(2) {
+                    font-size: 20px;
+                    color: #c81432;
+                    font-weight: 600;
+                    padding: 5px 0;
+                }
+            }
+            .order_type {
+                display: flex;
+                height: 44px;
+                box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+                border-radius: 5px;
+                background: #faf2dd;
+                span {
+                    width: 50%;
+                    height: 44px;
+                    line-height: 44px;
+                    text-align: center;
+                    display: block;
+                    color: #666;
+                    font-size: 13px;
+                }
+            }
+            .shop_post_head {
+                box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+                padding: 10px 10px;
+                border-radius: 4px;
+                .type_shop_post {
+                    margin-top: 10px;
+                    .post_address {
+                        color: #000;
+                    }
+                    .address_type {
+                        display: inline-block;
+                        width: 40px;
+                        color: #80a4da;
+                        background: #e2ecfe;
+                        text-align: center;
+                        line-height: 18px;
+                        border-radius: 3px;
+                    }
+                    span:nth-of-type(2) {
+                        font-size: 15px;
+                        margin-left: 5px;
+                    }
+                }
+                .user_news {
+                    font-size: 13px;
+                    color: #666;
+                    border-bottom: 1px solid #e5e5e5;
+                    padding-bottom: 18px;
+                }
+                .post_time {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 10px;
+                    span {
+                        display: block;
+                    }
+                    span:nth-of-type(2) {
+                        color: #80a4da;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .shop_post_content {
+                margin-top: 5px;
+                padding: 10px 10px;
+                box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+                border-bottom: 1px solid #e5e5e5;
+                padding-bottom: 20px;
+                .content_title {
+                    color: #666;
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #e5e5e5;
+                    padding-bottom: 14px;
+                    font-size: 14px;
+                    span:nth-of-type(2) {
+                        display: block;
+                        width: 50px;
+                        height: 18px;
+                        border: 1px solid #666;
+                        line-height: 18px;
+                        text-align: center;
+                        font-size: 11px;
+                        border-radius: 3px;
+                        margin-top: 5px;
+                    }
+                }
+                .content_list {
+                    display: flex;
+                    margin-top: 20px;
+                    .list_img {
+                        img {
+                            width: 75px;
+                            height: 65px;
+                            margin-right: 10px;
+                            border-radius: 3px;
+                        }
+                    }
+                    .list_text {
+                        .list_text_name {
+                            font-size: 14px;
+                            color: #000;
+                            display: flex;
+                            justify-content: space-between;
+                            span {
+                                display: block;
+                            }
+                            span:nth-of-type(1) {
+                                display: block;
+                                width: 75%;
+                                margin-right: 100px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                font-size: 14px;
+                            }
+                            span:nth-of-type(2) {
+                                display: block;
+                                font-size: 12px;
+                                color: #666;
+                            }
+                        }
+                        .count {
+                            line-height: 22px;
+                            color: #666;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .box_paid {
+                    border-top: 1px solid #e5e5e5;
+                    padding-top: 15px;
+                    margin-top: 15px;
+                    margin-bottom: 22px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: space-between;
+                    span {
+                        display: block;
+                    }
+                }
+                .post_paid {
+                    display: flex;
+                    justify-content: space-between;
+                    span {
+                        display: block;
+                    }
+                    height: 30px;
+                }
+            }
+            .shops_warning {
+                height: 44px;
+                width: 110%;
+                background: #fef8e8;
+                color: #ffba2a;
+                line-height: 44px;
+                margin-left: -10px;
+                padding-left: 20px;
+            }
+            .order_bottom {
+                height: 44px;
+                line-height: 44px;
+                width: 100%;
+                margin-left: -10px;
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                .order_bottom_left {
+                    display: flex;
+                    line-height: 44px;
+                    width: 70%;
+                    background: #333333;
+                    color: #fff;
+                    padding: 0 15px;
+                    justify-content: space-between;
+                    span {
+                        display: block;
+                        line-height: 44px;
+                    }
+                    .totalAmount {
+                        font-size: 13px;
+                    }
+                }
+                .order_bottom_right {
+                    width: 30%;
+                    background: #ffd161;
+                    line-height: 44px;
+                    text-align: center;
+                }
+            }
+        }
+        .current {
+            background: #fff;
+            color: #000 !important;
+            font-size: 14px !important;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"ĀE"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"Whakamutua te tikiake?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"Tō ki konei hei huna"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"WHAKAKORE"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"I rahua te tirotiro whakahōu."</string>
+    <string name="c_buoycircle_checking" priority="translator">"Tiro whakahou ana..."</string>
+    <string name="c_buoycircle_confirm" priority="translator">"ĀE"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"Kāore i taea te HUAWEI AppGallery te tikiake."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"He iti rawa te mokowā waea. Tē taea tikiake."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"I rahua te tikiake. Ngana anō?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"Tikiake ana..."</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"Whakahohe Whakarewa Tuarua mō HUAWEI AppGallery i Pūwhakahaere Waea, Ngā tautuhinga."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"WHAKAKORE"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"HUNA"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"I muri i te hunatanga o ngā poihau, me whakarewa anō e koe te taupānga hei whakaatu anō."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"I muri i te hunatanga o ngā poihau, huria tō pūrere hei whakaatu anō."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"Kaua e whakamahara mai anō"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"Huna poihau"</string>
+    <string name="c_buoycircle_install" priority="translator">"TĀUTA"</string>
+    <string name="c_buoycircle_no" priority="translator">"KĀO"</string>
+    <string name="c_buoycircle_retry" priority="translator">"NGANA ANŌ"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"Me whai tēnei ratonga i te putanga hōu rawa o te taupānga e whai ake:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"Nau mai %1$s"</string>
+</resources>

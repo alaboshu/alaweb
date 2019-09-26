@@ -1,0 +1,180 @@
+ .zk-help {
+   font-size: $gl-size-base;
+
+   .zk-help-return {
+     position: absolute;
+     top: 13px;
+     left: 20px;
+     display: flex;
+     text-align: center;
+
+     .title {
+       margin-left: 108px;
+       font-size: 18px;
+       color: #ffffff;
+       font-weight: normal;
+     }
+   }
+
+   .zk-help-tel {
+     width: 100px;
+     height: 30px;
+     border: 1px solid #ffffff;
+     border-radius: 10px;
+     margin-left: 100px;
+     position: absolute;
+     top: 122px;
+     left: 38px;
+     text-align: center;
+     line-height: 30px;
+     font-size: 17px;
+     color: #ffffff;
+   }
+
+   .zk-help-head {
+     display: flex;
+   }
+
+   .zk-help_top {
+     width: 100%;
+     height: 200px;
+     background-size: 100% 200px;
+     overflow: hidden;
+
+     h1 {
+       text-align: center;
+       font-weight: 500;
+       margin-top: 45px;
+       font-size: 15px;
+       color: #fff;
+     }
+
+     .person_service {
+       height: 23px;
+       font-size: 12px;
+       font-family: PingFang-SC-Medium;
+       font-weight: 500;
+       color: rgba(255, 255, 255, 1);
+       text-align: center;
+       margin-top: 20px;
+     }
+
+     .zk-help_qq {
+       width: 110px;
+       height: 33px;
+       border: 1px solid rgba(255, 255, 255, 1);
+       border-radius: 6px;
+       color: #fff;
+       text-align: center;
+       line-height: 33px;
+       margin: 24px auto;
+       font-size: 16px;
+     }
+   }
+
+   .zk-help-div {
+     width: 750px;
+     height: 13px;
+     background: rgba(243, 243, 243, 1);
+   }
+
+   .zk-help-list-head {
+     width: 100px;
+     height: 11.5px;
+     font-size: 12px;
+     font-family: PingFang-SC-Medium;
+     font-weight: normal;
+     color: rgba(102, 102, 102, 1);
+     text-align: center;
+     margin: 0 auto;
+     margin-top: 20px;
+     background: #ffffff;
+     z-index: 10;
+   }
+
+   .zk-help-line {
+     width: 750px;
+     height: 1px;
+     background: rgba(243, 243, 243, 1);
+     margin-top: -3px;
+   }
+
+   .zk-help-question {
+     width: 100%;
+     display: flex;
+     justify-content: space-around;
+
+     div {
+       font-size: 12px;
+       font-family: PingFang-SC-Medium;
+       font-weight: 500;
+       color: rgba(77, 77, 77, 1);
+       width: 25%;
+       text-align: center;
+       margin-top: 35px;
+       margin-bottom: 30px;
+
+       img {
+         width: 24px;
+         height: 24px;
+       }
+
+       p {
+         margin-top: 10px;
+       }
+     }
+   }
+
+   .zk-help-lists {
+     font-size: 24px;
+     font-family: PingFang-SC-Medium;
+     font-weight: 500;
+     color: rgba(102, 102, 102, 1);
+
+     ul {
+       box-sizing: border-box;
+     }
+   }
+
+   .zk-help-lists ul li {
+     width: 100%;
+     height: 32.5px;
+     line-height: 32.5px;
+     padding: 0 10px;
+     border-bottom: 1px solid rgba(240, 240, 240, 1);
+   }
+
+   .weui-grid_a {
+     float: left;
+     border-right: 1px solid $gl-border2;
+     border-bottom: 1px solid $gl-border2;
+     text-align: center;
+     box-sizing: border-box;
+     color: $gl-light;
+     padding: 8px 0px;
+   }
+
+   .weui-grid__icon {
+     width: auto;
+     height: auto;
+   }
+
+   .uni-card {
+     box-shadow: none;
+     font-size: 12px;
+     border: none;
+   }
+
+   .uni-list-cell-navigate {
+     font-size: 13px;
+   }
+
+   .uni-navigate-right:after {
+     float: right;
+     margin-left: 20px;
+   }
+
+   .uni-list-cell-navigate {
+     position: static !important;
+   }
+ }

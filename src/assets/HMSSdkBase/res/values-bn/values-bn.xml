@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort" priority="translator">"থামুন"</string>
+    <string name="hms_abort_message" priority="translator">"ডাউনলোড থামাবেন?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s Huawei মোবাইল পরিষেবা ব্যবহার করতে অক্ষম। অনুগ্রহপূর্বক ফোন পরিচালক লঞ্চ করুন বা সেটিংসে যান, %2$s এর জন্য সকল অনুমতি সক্ষম করুন (স্বতঃলঞ্চ এবং সেকেন্ডারি লঞ্চসহ) এবং আবার চেষ্টা করুন।"</string>
+    <string name="hms_cancel" priority="translator">"বাতিল করুন"</string>
+    <string name="hms_check_failure" priority="translator">"আপডেট আছে কিনা পরীক্ষা করা গেল না।"</string>
+    <string name="hms_check_no_update" priority="translator">"আপনি ইতিমধ্যেই সাম্প্রতিক সংস্করণটি ব্যবহার করছেন।"</string>
+    <string name="hms_checking" priority="translator">"আপডেট আছে কিনা দেখা হচ্ছে..."</string>
+    <string name="hms_confirm" priority="translator">"ঠিক আছে"</string>
+    <string name="hms_download_failure" priority="translator">"Huawei মোবাইল পরিষেবা প্যাকেজ ডাউনলোড করা গেল না।"</string>
+    <string name="hms_download_no_space" priority="translator">"পর্যাপ্ত মুক্ত স্থান নেই। ডাউনলোড শেষ করতে পারা যাবে না।"</string>
+    <string name="hms_download_retry" priority="translator">"ডাউনলোড করা গেল না। আবার চেষ্টা করবেন?"</string>
+    <string name="hms_downloading" priority="translator">"Huawei মোবাইল পরিষেবা ডাউনলোড হচ্ছে | প্রগতি: %d%%"</string>
+    <string name="hms_downloading_loading" priority="LT">"ডাউনলোড হচ্ছে"</string>
+    <string name="hms_downloading_new" priority="LT">"HMS ডাউনলোড হচ্ছে"</string>
+    <string name="hms_gamebox_name" priority="LT">"HUAWEI GameCenter"</string>
+    <string name="hms_install" priority="translator">"ইন্সটল করুন"</string>
+    <string name="hms_install_message" priority="translator">"এই বৈশিষ্ট্য ব্যবহার করতে, Huawei মোবাইল পরিষেবা অবশ্যই ইন্সটল করতে হবে। ইন্সটল করবেন?"</string>
+    <string name="hms_retry" priority="translator">"পুনরায় চেষ্টা করুন"</string>
+    <string name="hms_update" priority="translator">"আপডেট করুন"</string>
+    <string name="hms_update_message" priority="translator">"এই বৈশিষ্ট্যটি ব্যবহার করতে, Huawei মোবাইল পরিষেবার সাম্প্রতিক সংস্করণে আপডেট করুন। এখন আপডেট করবেন?"</string>
+    <string name="hms_update_message_new" priority="LT">"এই পরিষেবার নিম্নে উল্লিখিত অ্যাপের সর্বশেষ সংস্করণ প্রয়োজন:\n\n%1$s"</string>
+    <string name="hms_update_title" priority="translator">"Huawei মোবাইল পরিষেবা"</string>
+    <string name="upsdk_app_dl_installing" priority="LT">"AppGallery ডাউনলোড হচ্ছে"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"ইনস্টল করুন"</string>
+    <string name="upsdk_app_size" priority="translator">"আকার"</string>
+    <string name="upsdk_app_version" priority="translator">"সংস্করণ"</string>
+    <string name="upsdk_cancel" priority="translator">"বাতিল করুন"</string>
+    <string name="upsdk_checking_update_prompt" priority="translator">"আপডেট আছে কিনা দেখা হচ্ছে…"</string>
+    <string name="upsdk_choice_update" priority="LT">"আপডেট উপলভ্য। অনুগ্রহ করে সাম্প্রতিকতম সংস্করণটি ডাউনলোড ও ইনস্টল করুন।"</string>
+    <string name="upsdk_connect_server_fail_prompt_toast" priority="translator">"সার্ভারে সংযোগ করতে অক্ষম। অনুগ্রহ করে আবার চেষ্টা করুন।"</string>
+    <string name="upsdk_detail" priority="translator">"বিস্তারিত"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"তথ্য পুনরুদ্ধার করতে অক্ষম। অনুগ্রহ করে আবার চেষ্টা করুন।"</string>
+    <string name="upsdk_install" priority="LT">"আপডেট করতে AppGallery ইনস্টল করুন। এখন ইনস্টল করবেন?"</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"কোনো ইন্টারনেট সংযোগ নেই। অনুগ্রহ করে আপনার নেটওয়ার্ক সেটিংস পরীক্ষা করুন।"</string>
+    <string name="upsdk_ota_app_name" priority="LT">"অ্যাপ"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"পরে"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"প্রস্থান করুন"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"আপডেট করুন"</string>
+    <string name="upsdk_ota_title" priority="translator">"নতুন সংস্করণ"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s MB"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"ইনস্টলেশন বাতিল করবেন?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"ইনস্টলেশন ব্যর্থ হয়েছে।"</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"হ্যাঁ"</string>
+    <string name="upsdk_update_check_no_new_version" priority="translator">"আপনি ইতোমধ্যে সাম্প্রতিক সংস্করণটি ব্যবহার করছেন।"</string>
+    <string name="upsdk_updating" priority="translator">"আপডেট হচ্ছে"</string>
+</resources>

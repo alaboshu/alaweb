@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort" priority="translator">"Gelditu"</string>
+    <string name="hms_abort_message" priority="translator">"Deskarga gelditu?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s gailuak ezin izan ditu erabili Huawei-ren Zerbitzu mugikorrak. Abiarazi Telefono-kudeatzailea edo joan ezarpenetara, gaitu %2$s gailuen baimen guztiak (abiarazte automatikoa eta bigarren mailako abiaraztea barne) eta saiatu berriro."</string>
+    <string name="hms_cancel" priority="translator">"Utzi"</string>
+    <string name="hms_check_failure" priority="translator">"Ezin izan da begiratu eguneratzerik baden."</string>
+    <string name="hms_check_no_update" priority="translator">"Dagoeneko bertsio berriena erabiltzen ari zara."</string>
+    <string name="hms_checking" priority="translator">"Eguneratzerik baden begiratzen…"</string>
+    <string name="hms_confirm" priority="translator">"Ados"</string>
+    <string name="hms_download_failure" priority="translator">"Ezin izan da deskargatu Huawei-ren Zerbitzu mugikorrak paketea."</string>
+    <string name="hms_download_no_space" priority="translator">"Ez dago nahikoa toki. Ezin da deskarga amaitu."</string>
+    <string name="hms_download_retry" priority="translator">"Ezin izan da deskargatu. Berriro saiatu?"</string>
+    <string name="hms_downloading" priority="translator">"Huawei-ren Zerbitzu mugikorrak deskargatzen | progresioa: %% %d"</string>
+    <string name="hms_downloading_loading" priority="LT">"Deskargatzen"</string>
+    <string name="hms_downloading_new" priority="LT">"HMS deskargatzen"</string>
+    <string name="hms_gamebox_name" priority="LT">"HUAWEI GameCenter"</string>
+    <string name="hms_install" priority="translator">"Instalatu"</string>
+    <string name="hms_install_message" priority="translator">"Eginbidea erabiltzeko, Huawei-ren Zerbitzu mugikorrek instalatuta egon behar dute. Instalatu?"</string>
+    <string name="hms_retry" priority="translator">"Saiatu berriro"</string>
+    <string name="hms_update" priority="translator">"Eguneratu"</string>
+    <string name="hms_update_message" priority="translator">"Eginbidea erabiltzeko, eguneratu Huawei-ren Zerbitzu mugikorrak paketearen azken bertsiora. Orain eguneratu?"</string>
+    <string name="hms_update_message_new" priority="LT">"Zerbitzu honek aplikazio honen azken bertsioa behar du:\n\n%1$s"</string>
+    <string name="hms_update_title" priority="translator">"Huawei-ren Zerbitzu mugikorrak"</string>
+    <string name="upsdk_app_dl_installing" priority="LT">"AppGallery deskargatzen"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"Instalatu"</string>
+    <string name="upsdk_app_size" priority="translator">"Tamaina"</string>
+    <string name="upsdk_app_version" priority="translator">"Bertsioa"</string>
+    <string name="upsdk_cancel" priority="translator">"Utzi"</string>
+    <string name="upsdk_checking_update_prompt" priority="translator">"Eguneratzerik baden begiratzen..."</string>
+    <string name="upsdk_choice_update" priority="LT">"Eguneratzea erabilgarri. Deskargatu eta instalatu azken bertsioa."</string>
+    <string name="upsdk_connect_server_fail_prompt_toast" priority="translator">"Ezin da zerbitzarira konektatu. Saiatu berriro geroago."</string>
+    <string name="upsdk_detail" priority="translator">"Xehetasunak"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"Ezin izan da berreskuratu informaziorik. Saiatu berriro geroago."</string>
+    <string name="upsdk_install" priority="LT">"Instalatu AppGallery eguneratzeko. Orain instalatu?"</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"Ez dago Interneteko konexiorik. Egiaztatu sarearen ezarpenak."</string>
+    <string name="upsdk_ota_app_name" priority="LT">"Aplikazioa"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"Geroago"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"Irten"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"Eguneratu"</string>
+    <string name="upsdk_ota_title" priority="translator">"Bertsio berria"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s MB"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"Instalazioa bertan behera utzi?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"Ezin izan da instalatu."</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"Bai"</string>
+    <string name="upsdk_update_check_no_new_version" priority="translator">"Dagoeneko bertsio berriena erabiltzen ari zara."</string>
+    <string name="upsdk_updating" priority="translator">"Eguneratzen"</string>
+</resources>

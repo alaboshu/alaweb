@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"ಹೌದು"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"ಡೌನ್‌ಲೋಡ್ ಮಾಡುವುದನ್ನು ನಿಲ್ಲಿಸುವುದೇ?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"ಮರೆಮಾಡಲು ಇಲ್ಲಿ ಎಳೆಯಿರಿ"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"ರದ್ದುಗೊಳಿಸಿ"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"ನವೀಕರಣ ಪರೀಕ್ಷೆ ವಿಫಲಗೊಂಡಿದೆ."</string>
+    <string name="c_buoycircle_checking" priority="translator">"ನವೀಕರಣಗಳಿಗೆ ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ…"</string>
+    <string name="c_buoycircle_confirm" priority="translator">"ಸರಿ"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery ಅನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತಿಲ್ಲ."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"ಸಾಕಷ್ಟು ಖಾಲಿ ಜಾಗವಿಲ್ಲ. ಡೌನ್‌ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತಿಲ್ಲ."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"ಡೌನ್‌ಲೋಡ್‌ ವಿಫಲವಾಗಿದೆ. ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸುವುದೇ?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"ಫೋನ್ ಮ್ಯಾನೇಜರ್ ಅಥವಾ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ HUAWEI AppGallery ಗಾಗಿ ಎರಡನೇ ಬಾರಿಯ ಪ್ರಾರಂಭವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"ರದ್ದುಗೊಳಿಸಿ"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"ಮರೆಮಾಡಿ"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"ಬಲೂನ್‌ಗಳು ಮರೆಮಾಡಿದ ನಂತರ, ಅವುಗಳನ್ನು ಮತ್ತೊಮ್ಮೆ ತೋರಿಸಲು ನೀವು ಆ್ಯಪ್ ಮರುಪ್ರಾರಂಭಿಸಬೇಕಾಗಿದೆ."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"ಬಲೂನ್‌ಗಳನ್ನು ಮರೆಮಾಡಿದ ನಂತರ, ಅವುಗಳನ್ನು ಮತ್ತೊಮ್ಮೆ ತೋರಿಸಲು ನಿಮ್ಮ ಸಾಧನವನ್ನು ಫ್ಲಿಪ್ ಮಾಡಿ."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"ಮತ್ತೊಮ್ಮೆ ನೆನಪಿಸಬೇಡ"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"ಬಲೂನ್‌ಗಳನ್ನು ಮರೆಮಾಡಿ"</string>
+    <string name="c_buoycircle_install" priority="translator">"ಸ್ಥಾಪಿಸು"</string>
+    <string name="c_buoycircle_no" priority="translator">"ಇಲ್ಲ"</string>
+    <string name="c_buoycircle_retry" priority="translator">"ಮರುಪ್ರಯತ್ನಿಸು"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"ಈ ಸೇವೆಗೆ ಮುಂದಿನ ಆ್ಯಪ್‌ನ ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಯ ಅಗತ್ಯವಿದೆ:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"ಸುಸ್ವಾಗತ %1$s"</string>
+</resources>

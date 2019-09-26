@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort" priority="translator">"إيقاف"</string>
+    <string name="hms_abort_message" priority="translator">"هل تريد إيقاف التنزيل؟"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"\"%1$s\" غير قادر على استخدام خدمات هواوي للجوال. يُرجى تشغيل مدير الهاتف أو الذهاب إلى الإعدادات، وتمكين جميع أذونات %2$s (بما في ذلك التشغيل التلقائي، والتشغيل الثانوي)، وإعادة المحاولة."</string>
+    <string name="hms_cancel" priority="translator">"إلغاء"</string>
+    <string name="hms_check_failure" priority="translator">"تعذر التحقق من وجود تحديثات."</string>
+    <string name="hms_check_no_update" priority="translator">"أنت الآن تستخدم أحدث إصدار بالفعل."</string>
+    <string name="hms_checking" priority="translator">"جارِ التحقق من وجود تحديثات..."</string>
+    <string name="hms_confirm" priority="translator">"حسنًا"</string>
+    <string name="hms_download_failure" priority="translator">"تعذر تنزيل حزمة خدمات هواوي للجوال."</string>
+    <string name="hms_download_no_space" priority="translator">"لا يمكن استكمال التنزيل لعدم وجود مساحة تخزينية كافية."</string>
+    <string name="hms_download_retry" priority="translator">"تعذر التنزيل. هل تريد المحاولة مجددًا؟"</string>
+    <string name="hms_downloading" priority="translator">"جاري تنزيل خدمات هواوي للجوال | مستوى التقدم: %d%%"</string>
+    <string name="hms_downloading_loading" priority="LT">"قيد التنزيل..."</string>
+    <string name="hms_downloading_new" priority="LT">"جاري تنزيل خدمات هواوي للجوال"</string>
+    <string name="hms_gamebox_name" priority="LT">"مركز الألعاب"</string>
+    <string name="hms_install" priority="translator">"تثبيت"</string>
+    <string name="hms_install_message" priority="translator">"يجب تثبيت خدمات هواوي للجوال لاستخدام هذه الخاصية. هل تريد تثبيتها؟"</string>
+    <string name="hms_retry" priority="translator">"إعادة المحاولة"</string>
+    <string name="hms_update" priority="translator">"تحديث"</string>
+    <string name="hms_update_message" priority="translator">"قم بتحديث خدمات هواوي للجوال إلى أحدث إصدار متوفر لكي تتمكن من استخدام هذه الخاصية. هل تريد التحديث الآن؟"</string>
+    <string name="hms_update_message_new" priority="LT">"هذه الخدمة تحتاج إلى وجود أحدث إصدار للتطبيق التالي:\n\n%1$s"</string>
+    <string name="hms_update_title" priority="translator">"خدمات هواوي للجوال"</string>
+    <string name="upsdk_app_dl_installing" priority="translator">"جاري تنزيل متجر التطبيقات"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"تثبيت"</string>
+    <string name="upsdk_app_size" priority="translator">"الحجم:"</string>
+    <string name="upsdk_app_version" priority="translator">"الإصدار:"</string>
+    <string name="upsdk_cancel" priority="translator">"إلغاء"</string>
+    <string name="upsdk_checking_update_prompt" priority="translator">"جارِ التحقق من وجود تحديثات..."</string>
+    <string name="upsdk_choice_update" priority="LT">"هناك تحديث متوفر، يُرجى تنزيل وتثبيت أحدث إصدار."</string>
+    <string name="upsdk_connect_server_fail_prompt_toast" priority="translator">"غير قادر على الاتصال بالخادم، يُرجى إعادة المحاولة لاحقًا"</string>
+    <string name="upsdk_detail" priority="translator">"التفاصيل"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"غير قادر على الحصول على المعلومات، يُرجى إعادة المحاولة لاحقًا"</string>
+    <string name="upsdk_install" priority="LT">"يُرجى تثبيت متجر التطبيقات لتتمكن من تحديثه، هل تريد تثبيته الآن؟"</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"لا يوجد اتصال إنترنت لديك، يُرجى التحقق من إعدادات الشبكة"</string>
+    <string name="upsdk_ota_app_name" priority="LT">"اسم التطبيق:"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"لاحقًا"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"خروج"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"تحديث"</string>
+    <string name="upsdk_ota_title" priority="translator">"إصدار جديد"</string>
+    <string name="upsdk_storage_utils" priority="translator">"%1$s م.ب"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"هل تريد إلغاء التثبيت؟"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"تعذر التثبيت"</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"نعم"</string>
+    <string name="upsdk_update_check_no_new_version" priority="LT">"أنت الآن تستخدم أحدث إصدار بالفعل"</string>
+    <string name="upsdk_updating" priority="translator">"جارِ التحديث"</string>
+</resources>

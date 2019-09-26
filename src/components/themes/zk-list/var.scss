@@ -1,0 +1,116 @@
+@import "@/assets/style/variable.scss";
+
+.navActive {
+  color: $gl-themeColor;
+}
+
+.h5-x-list {
+  background-color: $gl-light;
+  overflow: auto;
+
+  .global-box {
+    overflow: auto;
+  }
+
+  .zk-list-content {
+    overflow-y: auto;
+  }
+
+  .loading-box {
+    height: 2.8rem;
+    width: 100%;
+    background: #fff;
+    line-height: 2.8rem;
+    color: #ddd;
+    text-align: center;
+  }
+}
+
+.loading-text {
+  font-size: 28upx;
+  color: #777777;
+}
+
+.global {
+  padding-left: 15px;
+}
+
+.mobile-x-list {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px 12px 0px;
+  border-bottom: 1px solid $gl-light-grey;
+}
+
+.xlist_box1 {
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+}
+
+.box1_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.x-list_box2 {
+  flex: 1;
+  min-width: 0;
+  margin-left: 10px;
+}
+
+.conters {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.conters_botoom {
+  color: $gl-text3;
+  font-size: 13px;
+}
+
+.widthtext {
+  display: flex;
+}
+
+.linhegt {
+  line-height: 23px;
+}
+
+.youce {
+  width: 110px;
+  font-size: 16px;
+  font-weight: bold;
+  color: $gl-brand;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fontsize {
+  width: 100%;
+  font-size: 17px;
+  color: $gl-black;
+}
+
+.temporarily_box {
+  position: relative;
+  width: 100vw;
+  height: 700px;
+  background-color: $gl-light;
+}
+
+.temporarily {
+  width: 100%;
+}
+
+.temporarily_img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}

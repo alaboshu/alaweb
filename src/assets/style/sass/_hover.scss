@@ -1,0 +1,14 @@
+@mixin hover($find: 1, $time:1s) {
+  &:hover {
+    transform: scale($find);
+    transition: $time;
+  }
+}
+
+@mixin hoverOp($find: 1, $time:1s) {
+  &:hover {
+    transform: scale($find);
+    transition: $time;
+    opacity: 0.8;
+  }
+}

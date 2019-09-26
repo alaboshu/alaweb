@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort" priority="translator">"Остановить"</string>
+    <string name="hms_abort_message" priority="translator">"Остановить загрузку?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s не может использовать Мобильные службы Huawei. Перейдите в Диспетчер телефона или Настройки, предоставьте все права для %2$s (включая автозапуск и косвенный запуск) и повторите попытку."</string>
+    <string name="hms_cancel" priority="translator">"Отмена"</string>
+    <string name="hms_check_failure" priority="translator">"Сбой проверки обновлений."</string>
+    <string name="hms_check_no_update" priority="translator">"Вы используете последнюю версию."</string>
+    <string name="hms_checking" priority="translator">"Проверка обновлений..."</string>
+    <string name="hms_confirm" priority="translator">"OK"</string>
+    <string name="hms_download_failure" priority="translator">"Сбой загрузки пакета мобильных служб Huawei."</string>
+    <string name="hms_download_no_space" priority="translator">"Недостаточно памяти. Невозможно завершить загрузку."</string>
+    <string name="hms_download_retry" priority="translator">"Сбой загрузки. Повторить попытку?"</string>
+    <string name="hms_downloading" priority="translator">"Загрузка мобильных служб Huawei | выполнено: %d%%"</string>
+    <string name="hms_downloading_loading" priority="LT">"Загрузка"</string>
+    <string name="hms_downloading_new" priority="LT">"Загрузка HMS"</string>
+    <string name="hms_gamebox_name" priority="LT">"HUAWEI GameCenter"</string>
+    <string name="hms_install" priority="translator">"Установить"</string>
+    <string name="hms_install_message" priority="translator">"Для использования этой функции необходимо установить мобильные службы Huawei. Установить?"</string>
+    <string name="hms_retry" priority="translator">"Повтор"</string>
+    <string name="hms_update" priority="translator">"Обновить"</string>
+    <string name="hms_update_message" priority="translator">"Чтобы использовать эту функцию, необходимо обновить мобильные службы Huawei до последней версии. Обновить?"</string>
+    <string name="hms_update_message_new" priority="LT">"Для работы этой службы требуется последняя версия приложения:\n\n%1$s"</string>
+    <string name="hms_update_title" priority="translator">"Мобильные службы Huawei"</string>
+    <string name="upsdk_app_dl_installing" priority="LT">"Загрузка AppGallery"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"Установить"</string>
+    <string name="upsdk_app_size" priority="translator">"Размер"</string>
+    <string name="upsdk_app_version" priority="translator">"Версия"</string>
+    <string name="upsdk_cancel" priority="translator">"Отмена"</string>
+    <string name="upsdk_checking_update_prompt" priority="translator">"Проверка обновлений…"</string>
+    <string name="upsdk_choice_update" priority="LT">"Доступно обновление. Загрузите и установите его."</string>
+    <string name="upsdk_connect_server_fail_prompt_toast" priority="translator">"Сбой подключения к серверу. Повторите попытку позднее."</string>
+    <string name="upsdk_detail" priority="translator">"Сведения"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"Сбой получения данных. Повторите попытку позднее."</string>
+    <string name="upsdk_install" priority="LT">"Для обновления установите AppGallery. Установить?"</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"Нет интернет-соединения. Проверьте настройки сети."</string>
+    <string name="upsdk_ota_app_name" priority="LT">"Приложение"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"Позже"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"Выйти"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"Обновить"</string>
+    <string name="upsdk_ota_title" priority="translator">"Новая версия"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s МБ"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"Отменить установку?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"Сбой установки."</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"Да"</string>
+    <string name="upsdk_update_check_no_new_version" priority="translator">"Это последняя версия."</string>
+    <string name="upsdk_updating" priority="translator">"Обновление"</string>
+</resources>

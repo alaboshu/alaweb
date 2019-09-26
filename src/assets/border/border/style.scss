@@ -1,0 +1,23 @@
+$width: 50;
+
+@for $width from 1 to 11 {
+  .block_borderWidth__#{$width} {
+    border-width: $width + px;
+  }
+}
+
+@for $width from 1 to 51 {
+  .block_rounded__#{$width} {
+    border-radius: $width + px;
+  }
+}
+
+@for $width from 1 to 21 {
+  .block_frameSpacing__#{$width} {
+    padding: $width +px;
+  }
+
+  .block_borderShadow__#{$width} {
+    box-shadow: $width+px $width+px $width+px $width+px red;
+  }
+}

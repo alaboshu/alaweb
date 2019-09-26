@@ -1,0 +1,16 @@
+.zk-image-list-o {
+    $list: 7;
+    .zk-image-list {
+        @for $list from 0 to 7 {
+            .image-list-#{$list} {
+                height: 100px;
+                @if $list==0 {
+                    width: 100%;
+                }
+                @if $list !=0 {
+                    width: 33%;
+                }
+            }
+        }
+    }
+}

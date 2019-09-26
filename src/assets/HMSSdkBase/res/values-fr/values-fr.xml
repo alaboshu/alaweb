@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort" priority="translator">"Arrêter"</string>
+    <string name="hms_abort_message" priority="translator">"Arrêter le téléchargement ?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s ne peut pas utiliser Huawei Mobile Services. Veuillez accorder à %2$s les autorisations nécessaires (dont le lancement automatique et le lancement secondaire) depuis Gestionnaire téléphone ou les Paramètres."</string>
+    <string name="hms_cancel" priority="translator">"Annuler"</string>
+    <string name="hms_check_failure" priority="translator">"La recherche de mises à jour a échoué."</string>
+    <string name="hms_check_no_update" priority="translator">"Vous utilisez déjà la dernière version."</string>
+    <string name="hms_checking" priority="translator">"Recherche de mises à jour en cours."</string>
+    <string name="hms_confirm" priority="translator">"OK"</string>
+    <string name="hms_download_failure" priority="translator">"Le téléchargement du package Huawei Mobile Services a échoué."</string>
+    <string name="hms_download_no_space" priority="translator">"Espace de stockage insuffisant. Le téléchargement ne peut être fait."</string>
+    <string name="hms_download_retry" priority="translator">"Le téléchargement a échoué. Réessayer ?"</string>
+    <string name="hms_downloading" priority="translator">"Téléchargement de Huawei Mobile Services en cours | terminé : %d %%"</string>
+    <string name="hms_downloading_loading" priority="LT">"Téléchargement en cours"</string>
+    <string name="hms_downloading_new" priority="LT">"Téléchargement de HMS en cours"</string>
+    <string name="hms_gamebox_name" priority="LT">"HUAWEI GameCenter"</string>
+    <string name="hms_install" priority="translator">"Installer"</string>
+    <string name="hms_install_message" priority="translator">"L\'utilisation de cette fonction nécessite que Huawei Mobile Services soit installée. L\'installer ?"</string>
+    <string name="hms_retry" priority="translator">"Réessayer"</string>
+    <string name="hms_update" priority="translator">"Mettre à jour"</string>
+    <string name="hms_update_message" priority="translator">"L\'utilisation de cette fonction nécessite que Huawei Mobile Services soit mis à jour vers sa dernière version. Mettre à jour maintenant ?"</string>
+    <string name="hms_update_message_new" priority="LT">"Ce service nécessite la dernière version de l\'application suivante :\n\n%1$s"</string>
+    <string name="hms_update_title" priority="translator">"Huawei Mobile Services"</string>
+    <string name="upsdk_app_dl_installing" priority="LT">"Téléchargement d\'AppGallery en cours."</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"Installer"</string>
+    <string name="upsdk_app_size" priority="LT">"Taille :"</string>
+    <string name="upsdk_app_version" priority="LT">"Version :"</string>
+    <string name="upsdk_cancel" priority="translator">"Annuler"</string>
+    <string name="upsdk_checking_update_prompt" priority="translator">"Recherche de mises à jour en cours."</string>
+    <string name="upsdk_choice_update" priority="LT">"Mise à jour disponible. Mettre à jour ?"</string>
+    <string name="upsdk_connect_server_fail_prompt_toast" priority="translator">"La connexion au serveur ne peut pas être établie. Veuillez réessayer ultérieurement."</string>
+    <string name="upsdk_detail" priority="LT">"Détails :"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"Les informations ne peuvent pas être récupérées. Veuillez réessayer ultérieurement."</string>
+    <string name="upsdk_install" priority="LT">"Installer AppGallery pour mettre à jour ?"</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"Aucune connexion Internet. Veuillez vérifier les paramètres réseau."</string>
+    <string name="upsdk_ota_app_name" priority="LT">"Application :"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"Ultérieurement"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"Quitter"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"Mettre à jour"</string>
+    <string name="upsdk_ota_title" priority="translator">"Nouvelle version"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s Mo"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"L\'installation va être annulée. Confirmer ?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"L\'installation a échoué."</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"Confirmer"</string>
+    <string name="upsdk_update_check_no_new_version" priority="translator">"Vous utilisez déjà la dernière version."</string>
+    <string name="upsdk_updating" priority="translator">"Mise à jour en cours"</string>
+</resources>

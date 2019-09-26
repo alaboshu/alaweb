@@ -1,0 +1,70 @@
+.zk-class-list-a {
+    .zk-class-list {
+        .container_box {
+            padding: 10px;
+            box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+            margin: 10px;
+            border-radius: 3px;
+            .class_video {
+                margin-top: -15px;
+                .class_video_title {
+                    padding-top: 15px !important;
+                    padding-left: 8px !important;
+                    margin-bottom: -13px;
+                    color: #666;
+                    font-size: 13px;
+                }
+                .image-list {
+                    border-radius: 5px;
+                    height: 238px;
+                }
+                .head-title,
+                .head-right {
+                    display: none;
+                }
+                .zk-image-list .image {
+                    border-radius: 5px;
+                    height: 150px;
+                }
+                .zk-image-list-t {
+                    padding: 0;
+                }
+                .image-list {
+                    height: 150px;
+                }
+            }
+            .class_content {
+                .class_news {
+                    display: flex;
+                    justify-content: space-between
+                }
+                .class_title {
+                    color: #000;
+                    line-height: 30px;
+                    margin-top: 5px;
+                    font-size: 14px;
+                    margin-left: 5px;
+                }
+                .class_data {
+                    margin-left: 5px;
+                    span {
+                        display: block;
+                        font-size: 11px;
+                        color: #666;
+                    }
+                }
+                .click_btn {
+                    background: #C70F2C;
+                    color: #fff;
+                    width: 80px;
+                    height: 24px;
+                    text-align: center;
+                    line-height: 24px;
+                    border-radius: 20px;
+                    margin-top: 11px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

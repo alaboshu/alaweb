@@ -1,0 +1,396 @@
+.diy-wrap {
+  min-height: 200vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.diy-widget-wrap {
+  position: relative;
+}
+
+.diy-widget-wrap .checked {
+  outline: 1px solid #ffcc66;
+  background: #ffcc66;
+}
+
+.diy-widget-wrap:hover .diy-dottedbox {
+  display: block;
+}
+
+.diy-widget-wrap:hover .diy-widget-actions {
+  display: block;
+}
+
+.diy-widget-small {
+  line-height: 32px;
+  background: #666;
+  color: #fff;
+  text-align: center;
+}
+
+.diy-masker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(117, 177, 255, 0.3);
+}
+
+.diy-dottedbox {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1.5px dashed red;
+}
+
+.diy-widget-actions {
+  display: none;
+  background: #666;
+  line-height: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.diy-widget-actions-span {
+  display: inline-block;
+  font-size: 10px;
+  color: #fff;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+.diy-new-block {
+  text-align: center;
+  line-height: 20px;
+  height: 20px;
+  color: #9d9d9d;
+  font-size: 10px;
+  padding: 0px;
+  margin: 2px;
+  background: #ffe57f;
+  border-radius: 4px;
+}
+
+.diy-widget-wrap {
+  min-height: 20px;
+}
+
+.tabs_swiper {
+  min-height: 350px;
+}
+
+.tabs_swiper {
+  .tabs_swiper-item {
+    position: relative;
+
+    //  .tab_swiper-masker {
+    //    position: absolute;
+    //    top: 0;
+    //    left: 0;
+    //    right: 0;
+    //    bottom: 0;
+    //    background-color: rgba(117, 177, 255, 0.3);
+    //  }
+  }
+
+  .layout {
+
+
+    .tabs_swiper-item:hover .tabs_swiper-dottedbox {
+      display: block;
+    }
+
+    .tabs_swiper-item:hover .tabs_swiper-box {
+      display: block;
+    }
+
+    .tabs_swiper-dottedbox {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 1.5px dashed red;
+    }
+
+    .tabs_swiper-box {
+      display: none;
+      background: #666;
+      line-height: 16px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+
+      .tabs_swiper-box-span {
+        display: inline-block;
+        font-size: 10px;
+        color: #fff;
+        padding: 2px 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* #ifdef MP-ALIPAY */
+.swiper-tab-list {
+  display: inline-block;
+}
+
+/* #endif */
+.layout-box {
+  position: relative;
+
+  .layout-dottedbox {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1.5px dashed pink;
+  }
+
+  .tab-box-bottom+.layou-widget-actions {
+    display: none;
+    background: #666;
+    line-height: 16px;
+    position: absolute;
+    bottom: 35px;
+    right: 0;
+    z-index: 1;
+  }
+
+  .tab-box-top+.layou-widget-actions {
+    display: none;
+    background: #666;
+    line-height: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    ;
+  }
+
+  .tab-box-left+.layou-widget-actions {
+    display: none;
+    background: #666;
+    line-height: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    ;
+  }
+
+  .tab-box-right+.layou-widget-actions {
+    display: none;
+    background: #666;
+    line-height: 16px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    ;
+  }
+
+  .layou-widget-actions {
+    display: none;
+    //  background: #666;
+    //  line-height: 16px;
+    //  position: absolute;
+    //  top: 0;
+    //  right: 0;
+    //  z-index: 1;
+
+    .layou-widget-actions-span {
+      display: inline-block;
+      font-size: 10px;
+      color: #fff;
+      padding: 2px 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+.layout-box:hover {
+  .layout-dottedbox {
+    display: block
+  }
+
+  .layou-widget-actions {
+    display: block
+  }
+}
+
+.tab-box-top {
+  width: 100%;
+
+  .swiper-tab {
+    height: 50px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    .active {
+      color: pink;
+      border-bottom: 1px solid pink;
+    }
+
+    .swiper-tab_item {
+      display: inline-block;
+      width: 25%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.tab-box-bottom {
+  width: 100%;
+  position: relative;
+  padding-bottom: 50px;
+
+  .swiper-tab {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    .active {
+      color: pink;
+      border-bottom: 1px solid pink;
+    }
+
+    .swiper-tab_item {
+      display: inline-block;
+      width: 25%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.tab-box-left {
+  display: flex;
+
+  .tab-box-content {
+    flex: 1;
+  }
+
+  .swiper-tab {
+    width: 110px;
+
+    .active {
+      color: pink;
+      border-bottom: 1px solid pink;
+    }
+
+    .swiper-tab_item {
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.tab-box-right {
+  display: flex;
+  flex-direction: row-reverse;
+
+  .tab-box-content {
+    flex: 1;
+  }
+
+  .swiper-tab {
+    width: 110px;
+
+    .active {
+      color: pink;
+      border-bottom: 1px solid pink;
+    }
+
+    .swiper-tab_item {
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.widgets-box {
+  position: relative;
+
+  .widgets-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(117, 177, 255, 0.3);
+    z-index: 30
+  }
+
+  .widgets-show-mask {
+    display: block;
+  }
+}
+
+.diy-widget-wrap_tabbar:hover {
+
+  .diy-dottedbox,
+  .diy-widget-actions {
+    display: block;
+  }
+}
+
+.diy-widget-wrap_tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+
+  .diy-dottedbox {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1.5px dashed red;
+    z-index: 999
+  }
+
+  .diy-widget-actions {
+    display: none;
+    background: #666;
+    line-height: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    z-index: 999
+  }
+}

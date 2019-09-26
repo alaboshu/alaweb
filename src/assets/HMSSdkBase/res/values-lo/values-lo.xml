@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort" priority="translator">"ຢຸດ"</string>
+    <string name="hms_abort_message" priority="translator">"ຢຸດ​ການດາວ​ໂຫຼດ​ບໍ?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s ບໍ່​ສາ​ມາດ​ໃຊ້​ບໍ​ລິ​ການ​ມື​ຖື Huawei ໄດ້. ກະ​ລຸ​ນາ​ເປີດ​ນຳ​ໃຊ້​ຕົວ​ຈັດ​ການ​ໂທ​ລະ​ສັບ ຫຼື ໄປ​ທີ່​ການ​ຕັ້ງ​ຄ່າ, ເປີດ​ໃຊ້​ງານ​ການ​ອະ​ນຸ​ຍາດ​ທັງ​ໝົດ​ສຳ​ລັບ %2$s (ລວມ​ທັງ​ການ​ເປີດ​ນຳ​ໃຊ້​ອັດ​ຕະ​ໂນ​ມັດ ແລະ ການ​ເປີດ​ນຳ​ໃຊ້​ສຳ​ຮອງ), ແລະ ລອງ​ໃໝ່​ອີກ."</string>
+    <string name="hms_cancel" priority="translator">"ຍົກ​ເລີກ​"</string>
+    <string name="hms_check_failure" priority="translator">"ຊອກ​ຫາ​ການ​ອັບ​ເດດ​ບໍ່​ສຳ​ເລັດ."</string>
+    <string name="hms_check_no_update" priority="translator">"ທ່ານ​ກຳ​ລັງ​ໃຊ້​ເວີ​ຊັນ​ຫຼ້າ​ສຸດ​ຢູ່​ແລ້ວ."</string>
+    <string name="hms_checking" priority="translator">"ກຳ​ລັງ​ກວດ​ຫາ​ການ​ອັບ​ເດດ..."</string>
+    <string name="hms_confirm" priority="translator">"ຕົກ​ລົງ"</string>
+    <string name="hms_download_failure" priority="translator">"ດາວ​ໂຫຼດ​ແພັກ​ເກດ​ການ​ບໍ​ລິ​ການ Huawei Mobile ບໍ່​ສຳ​ເລັດ."</string>
+    <string name="hms_download_no_space" priority="translator">"ບໍ່​ມີ​ພື້ນ​ທີ່​ຫວ່າງພຽງ​ພໍ. ບໍ່​ສາ​ມາດ​ດາວ​ໂຫຼດ​ສຳ​ເລັດ​ໄດ້."</string>
+    <string name="hms_download_retry" priority="translator">"ດາວ​ໂຫຼດ​ບໍ່​ສຳ​ເລັດ. ລອງໃໝ່ອີກບໍ?"</string>
+    <string name="hms_downloading" priority="translator">"ກຳ​ລັງ​ດາວ​ໂຫຼດການ​ບໍ​ລິ​ການ Huawei Mobile | ຄື​ບ​ໜ້າ: %d%%"</string>
+    <string name="hms_downloading_loading" priority="LT">"​ກຳລັງ​ດາວ​ໂຫຼດ"</string>
+    <string name="hms_downloading_new" priority="LT">"ກຳ​ລັງດາວໂຫຼດ HMS"</string>
+    <string name="hms_gamebox_name" priority="translator">"HUAWEI GameCenter"</string>
+    <string name="hms_install" priority="translator">"​ຕິດ​ຕັ້ງ"</string>
+    <string name="hms_install_message" priority="translator">"ຈະ​ຕ້ອງ​ຕິດ​ຕັ້ງ​ການ​ບໍ​ລິ​ການ Huawei Mobile ເພື່ອ​ໃຊ້​ຟີ​ເຈີ​ນີ້. ​ຕິດ​ຕັ້ງບໍ?"</string>
+    <string name="hms_retry" priority="translator">"ລອງໃໝ່ອີກ"</string>
+    <string name="hms_update" priority="translator">"ອັບເດດ"</string>
+    <string name="hms_update_message" priority="translator">"ອັບ​ເດດ​ເປັນການ​ບໍ​ລິ​ການ Huawei Mobile ​ເວີ​ຊັນ​ຫຼ້າ​ສຸດ ເພື່ອ​ໃຊ້​ຟີ​ເຈີ​ນີ້. ອັບ​ເດດ​ດຽວ​ນີ້​ບໍ?"</string>
+    <string name="hms_update_message_new" priority="LT">"ການບໍລິການນີ້ຕ້ອງການລຸ້ນຫຼ້າສຸດຂອງແອັບຕໍ່ໄປນີ້:\n\n\%1$s"</string>
+    <string name="hms_update_title" priority="translator">"ການ​ບໍ​ລິ​ການ Huawei Mobile"</string>
+    <string name="upsdk_app_dl_installing" priority="LT">"ກຳ​ລັງດາວ​ໂຫຼດ AppGallery"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"​ຕິດ​ຕັ້ງ"</string>
+    <string name="upsdk_app_size" priority="translator">"ຂະໜາດ"</string>
+    <string name="upsdk_app_version" priority="translator">"​ເວີ​ຊັນ"</string>
+    <string name="upsdk_cancel" priority="translator">"​ຍົກ​ເລີກ"</string>
+    <string name="upsdk_checking_update_prompt" priority="translator">"ກຳ​ລັງ​ກວດ​ຫາ​ການ​ອັບ​ເດດ..."</string>
+    <string name="upsdk_choice_update" priority="LT">"ມີການອັບເດດຢູ່. ກະ​ລຸ​ນາ​ດາວ​ໂຫຼດ ແລະ ຕິດ​ຕັ້ງ​ເວີ​ຊັນ​ຫຼ້າ​ສຸດ."</string>
+    <string name="upsdk_connect_server_fail_prompt_toast" priority="translator">"ບໍ່ສາມາດເຊື່ອມຕໍ່ກັບເຊີບ​ເວີໄດ້. ກະລຸນາລອງໃໝ່ອີກພາຍຫຼັງ."</string>
+    <string name="upsdk_detail" priority="translator">"ລາຍລະອຽດ"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"ບໍ່ສາມາດດຶງຂໍ້ມູນໄດ້. ກະລຸນາລອງໃໝ່ອີກພາຍຫຼັງ."</string>
+    <string name="upsdk_install" priority="LT">"ຕິດ​ຕັ້ງ AppGallery ເພື່​​ອ​ອັບ​ເດດ. ຕິດ​ຕັ້ງ​ດຽວ​ນີ້ບໍ?"</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"ບໍ່​ມີ​ການ​ເຊື່ອມ​ຕໍ່​ອິນ​ເຕີ​ເນັດ. ກະ​ລຸ​ນາ​ກວດ​ເບິ່ງ​ການຕັ້ງ​ຄ່າ​ເຄືອ​ຂ່າຍຂອງ​ທ່ານ."</string>
+    <string name="upsdk_ota_app_name" priority="LT">"ແອັບ"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"ພາຍຫຼັງ"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"ອອກ"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"ອັບເດດ"</string>
+    <string name="upsdk_ota_title" priority="translator">"ເວີ​ຊັນ​ໃໝ່"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s MB"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"ຍົກ​ເລີກ​ການ​ຕິດ​ຕັ້ງ​ບໍ?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"ການຕິດຕັ້ງຫຼົ້ມ​ເຫຼວ."</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"​ແມ່ນແລ້ວ"</string>
+    <string name="upsdk_update_check_no_new_version" priority="translator">"ທ່ານ​ກຳ​ລັງ​ໃຊ້​ເວີ​ຊັນ​ຫຼ້າ​ສຸດ​ຢູ່​ແລ້ວ."</string>
+    <string name="upsdk_updating" priority="translator">"ກຳລັງອັບເດດ"</string>
+</resources>

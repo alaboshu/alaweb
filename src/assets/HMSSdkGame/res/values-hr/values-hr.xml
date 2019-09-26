@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"DA"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"Prekinuti preuzimanje?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"Povucite ovdje za skrivanje"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"ODUSTANI"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"Provjera nije uspjela."</string>
+    <string name="c_buoycircle_checking" priority="translator">"U tijeku je provjera ažuriranja…"</string>
+    <string name="c_buoycircle_confirm" priority="translator">"U REDU"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery nije se mogla preuzeti."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"Nema dovoljno slobodnog prostora. Preuzimanje nije moguće."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"Preuzimanje nije uspjelo. Pokušati ponovno?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"Preuzimanje..."</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"Omogućite sekundarno pokretanje za HUAWEI AppGallery u upravitelju telefona ili postavkama."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"ODUSTANI"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"SAKRIJ"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"Kada sakrijete balone, morat ćete ponovno pokrenuti aplikaciju kako biste ih ponovno prikazali."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"Kada sakrijete balone, prevrnite svoj uređaj kako biste ih ponovno prikazali."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"Ne podsjećaj me više"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"Sakrij balone"</string>
+    <string name="c_buoycircle_install" priority="translator">"INSTALIRAJ"</string>
+    <string name="c_buoycircle_no" priority="translator">"NE"</string>
+    <string name="c_buoycircle_retry" priority="translator">"POKUŠAJ PONOVNO"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"Za ovu je uslugu neophodna najnovija verzija sljedeće aplikacije:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"Dobro došli %1$s"</string>
+</resources>

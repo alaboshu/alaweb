@@ -1,0 +1,22 @@
+ .title {
+     padding: 10upx 25upx;
+ }
+ 
+ .x-input {
+     .uni-form-item {
+         align-items: center;
+         font-size: 13px;
+         padding: 0px;
+         .uni-input {
+             flex: 1;
+         }
+         .x-input_label {
+             width: 80px;
+             padding-right: 5px;
+         }
+     }
+ }
+ 
+ .input-placeholder {
+     font-size: 13px;
+ }

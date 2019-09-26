@@ -1,0 +1,54 @@
+.DS_Store
+node_modules/
+unpackage/
+dist/
+native/android/app/src/main/assets/apps/
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Editor directories and files
+.project
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# Lock files
+yarn.lock
+package-lock.json
+
+# Gradle directory
+.gradle/
+.idea/
+build/
+
+# files for the dex VM
+*.dex
+
+#built application files
+*.apk
+*.ap_
+
+# Java class files
+*.class
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+.idea/workspace.xml
+.idea/libraries
+.idea/gradle.xml
+.idea/misc.xml
+*.iml
+src/service/config.js
+
+/src/service/config.js

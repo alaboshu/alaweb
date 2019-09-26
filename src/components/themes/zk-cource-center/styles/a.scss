@@ -1,0 +1,60 @@
+.zk-cource-center-a {
+    .zk-cource-center {
+        font-family: "微软雅黑";
+        .container_box {
+            padding: 10px;
+            .all_cource {
+                color: #6c6b6b;
+                font-weight: 600;
+                font-size: 15px;
+            }
+            .cource_type {
+                display: flex;
+                justify-content: space-around;
+                span {
+                    display: block;
+                    color: #999;
+                    font-size: 13px;
+                    margin: 15px 0;
+                }
+                .current {
+                    border-bottom: 1px solid #e5e5e5;
+                }
+            }
+            .cource_content {
+                position: relative;
+                height: 115px;
+                color: #fff;
+                margin-top: 10px;
+                img {
+                    width: 100%;
+                    height: 115px;
+                }
+                .texts {
+                    color: #fff;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 115px;
+                    background: rgba(0, 0, 0, 0.4);
+                    span {
+                        display: block;
+                        opacity: .8;
+                        padding-left: 10px;
+                    }
+                    span:nth-of-type(1) {
+                        font-size: 15px;
+                        margin-top: 10px;
+                    }
+                    span:nth-of-type(2) {
+                        font-size: 12px;
+                    }
+                    span:nth-of-type(3) {
+                        margin-top: 25px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

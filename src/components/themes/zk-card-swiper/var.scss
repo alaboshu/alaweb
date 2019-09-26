@@ -1,0 +1,191 @@
+.zk-card-swiper {
+  .zk-card_swiper_container {
+    padding: 12upx 30upx;
+    box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+    margin-top: 20upx;
+    padding-bottom: 18upx;
+
+    .zk-card-swiper_head {
+      font-size: 32upx;
+      font-weight: bold;
+      color: #202020;
+      padding-left: 12upx;
+    }
+
+    .shop-list_content {
+      margin-top: 10upx;
+      flex-wrap: wrap;
+      width: 100%;
+      padding-bottom: 12upx;
+
+      .swiper_top {
+        padding: 0 24upx;
+        display: flex;
+        position: relative;
+        padding-bottom: 0;
+        margin-top: 22upx;
+
+        .swiper_top_L {
+          display: flex;
+
+          .swiper_top_L_text {
+            margin-left: 20upx;
+
+            span {
+              &:nth-of-type(1) {
+                font-size: 28upx;
+                color: #202020;
+                font-family: "PingFang SC";
+              }
+
+              &:nth-of-type(2) {
+                font-size: 22upx;
+                color: #9EA3B8;
+              }
+            }
+          }
+
+          span {
+            display: block;
+          }
+
+          .avtor {
+            width: 90upx;
+            height: 90upx;
+            border-radius: 50%;
+          }
+        }
+
+        .swiper_top_R {
+          background: linear-gradient(#ff4848, #ff7b64);
+          color: #fff;
+          font-size: 12px;
+          height: 21px;
+          line-height: 20px;
+          font-family: "PingFang SC";
+          border-radius: 21px;
+          padding: 1px 10px;
+          width: 108upx;
+          font-weight: bold;
+          position: absolute;
+          bottom: 40upx;
+          right: 20upx;
+          text-align: center;
+        }
+      }
+
+      .swiper_bottom {
+        padding: 22upx 28upx;
+        display: flex;
+
+        .swiper_bottom_Img {
+
+          display: flex;
+
+          .bottom_case {
+            width: 250upx;
+            margin-left: 20upx;
+            font-size: 24upx;
+            color: #666;
+            text-overflow: -o-ellipsis-lastline;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            line-clamp: 4;
+            -webkit-box-orient: vertical;
+          }
+
+          img {
+            width: 271upx;
+            height: 160upx;
+            border-radius: 6upx;
+          }
+
+          &:nth-of-type(2) {
+            margin-left: 20upx;
+          }
+        }
+      }
+
+      uni-swiper-item {
+        width: 98% !important;
+        padding-top: 0px !important;
+      }
+
+      .list_content-swiper {
+        position: relative;
+
+      }
+
+      .bgImg {
+        width: 95% !important;
+        height: 300upx !important;
+        border-radius: 20upx;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        overflow: hidden;
+        background: #fff;
+        // padding: 20upx 0;
+        border: 1px solid #e5e5e5;
+
+        .bgImg-images {
+          width: 100%;
+          height: 283upx;
+          display: block;
+        }
+
+        .list_content-text {
+          height: 44px;
+          background: #ffffff;
+        }
+      }
+
+      .bgImgText {
+        font-size: 29upx;
+        color: #202020;
+        font-family: "PingFang SC";
+        margin-left: 20upx;
+        font-weight: bold;
+      }
+
+      .bgImgTextTag {
+        color: #666;
+        font-size: 22upx;
+        margin-left: 20upx;
+      }
+
+      uni-swiper {
+        width: 100%;
+        height: 330upx !important;
+        border-radius: 20upx;
+      }
+
+      .uni-swiper .uni-swiper-dot {
+        width: 6px;
+        height: 6px;
+      }
+
+      .ImgActive {
+        overflow: hidden;
+        height: 326upx !important;
+        transition: 0.2s all;
+        opacity: 1;
+        box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+        border: 1px solid #e5e5e5;
+
+        .images_avtice {
+          width: 100%;
+          height: 326upx;
+          display: block;
+        }
+
+        .text_active {
+          height: 50px;
+          background: #ffffff;
+        }
+      }
+    }
+  }
+}

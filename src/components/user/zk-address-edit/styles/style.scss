@@ -1,0 +1,235 @@
+@import "@/assets/style/variable.scss";
+@import "@/assets/style/theme.scss";
+
+.zk-address-edit {
+  font-size: $gl-size-base;
+
+  .iconfont {
+    position: static;
+  }
+
+  .item {
+    padding: 5px 10px;
+    font-size: 14px !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 45px;
+
+    position: relative;
+  }
+
+  .item::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 97%;
+    height: 1px;
+    -webkit-transform: scaleY(0.3);
+    -ms-transform: scaleY(0.3);
+    transform: scaleY(0.3);
+    background: #e5e5e5;
+  }
+
+  .label {
+    width: 80px;
+    padding-right: 5px;
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .address-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .content-switch {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .switch-box {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+
+    .switch-box_poist {
+      border: 1px solid #dfdfdf;
+      border-radius: 30px;
+      width: 48px;
+      height: 25px;
+      position: relative;
+
+      .switch_circle {
+        width: 23px;
+        height: 23px;
+        border-radius: 100%;
+        border: 1px solid #dfdfdf;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      }
+    }
+
+    .check_poist {
+      background-color: $gl-info;
+
+      .switch_circle {
+        left: 22px;
+        background-color: $gl-light;
+      }
+    }
+  }
+}
+
+.mobei_conter {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  height: 55px;
+}
+
+.topmar {
+  margin-top: 15px;
+}
+
+.icontsty {
+  font-size: 22px;
+  color: $gl-text3;
+}
+
+.phopes {
+  font-size: 12px;
+  flex: 1;
+
+  uni-view {
+    font-size: 13px;
+  }
+}
+
+.text_1 {
+  padding-right: 10px;
+  width: 70px;
+  font-size: 12px;
+  text-align: right;
+}
+
+.text_2 {
+  flex: 1;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $gl-border1;
+  height: 40px;
+}
+
+.reg_view {
+  margin-top: 15px;
+}
+
+.reg_view:nth-child(1) {
+  margin-top: 0px;
+}
+
+.yanzhm {
+  flex: 1;
+}
+
+.reg_ju {
+  // margin-top: 30px;
+}
+
+.verification_code {
+  box-shadow: 0px 1px 15px $gl-border1;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.yaosi {
+  font-size: 26px;
+  padding-left: 15px;
+  color: $gl-text3;
+}
+
+.reg_buttom {
+  font-size: 15px;
+  color: $gl-light;
+  background-color: $gl-brand;
+  width: 95px;
+  height: 46px;
+  text-align: center;
+  line-height: 46px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.botactiv:active {
+  opacity: 0.7;
+}
+
+.address-edit_btn {
+  padding: 10px 20px;
+  margin-top: 30px;
+}
+
+.edit_btn {
+  height: 45px;
+  line-height: 45px;
+  font-size: 18px;
+  color: $gl-light;
+  text-align: center;
+  background-color: $gl-themeColor;
+}
+
+.buttombac {
+  background-color: $gl-brand;
+}
+
+.checkgr {
+  margin-top: 5px;
+}
+
+.lables {
+  color: $gl-text2;
+}
+
+.fuwu_xiy {
+  color: $gl-brand;
+  margin-left: -10px;
+}
+
+.vertop {
+  vertical-align: -2px;
+}
+
+.hui {
+  background-color: $gl-border1;
+}
+
+.placeholder_area {
+  color: grey;
+}
+
+.address-edit_area {
+  flex: 1;
+  font-size: 13px;
+}
+
+.edit_switch {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.city-picker-cell {
+  font-size: 12px;
+  margin-top: 20px;
+}

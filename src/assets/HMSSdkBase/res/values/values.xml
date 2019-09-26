@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="emui_color_gray_1">#F2F2F2</color>
+    <color name="emui_color_gray_10">#191919</color>
+    <color name="emui_color_gray_7">#808080</color>
+    <color name="upsdk_blue_text_007dff">#007dff</color>
+    <color name="upsdk_category_button_select_pressed">#0076f2</color>
+    <color name="upsdk_white">#FFFFFFFF</color>
+    <dimen name="emui_master_body_2">13sp</dimen>
+    <dimen name="emui_master_subtitle">15sp</dimen>
+    <dimen name="margin_l">16dp</dimen>
+    <dimen name="margin_m">8dp</dimen>
+    <dimen name="margin_xs">2dp</dimen>
+    <string name="hms_abort" priority="translator">Stop</string>
+    <string name="hms_abort_message" priority="translator">Stop downloading?</string>
+    <string name="hms_bindfaildlg_message" priority="LT">%1$s is unable to use Huawei Mobile Services. Please launch Phone Manager or go to Settings, enable all permissions for %2$s (including auto-launch and secondary launch), and try again.</string>
+    <string name="hms_bindfaildlg_title">@string/hms_update_title</string>
+    <string name="hms_cancel" priority="translator">Cancel</string>
+    <string name="hms_check_failure" priority="translator">Failed to check for updates.</string>
+    <string name="hms_check_no_update" priority="translator">You are already using the latest version.</string>
+    <string name="hms_checking" priority="translator">Checking for updates…</string>
+    <string name="hms_confirm" priority="translator">OK</string>
+    <string name="hms_download_failure" priority="translator">Failed to download Huawei Mobile Services package.</string>
+    <string name="hms_download_no_space" priority="translator">Not enough free space. Download cannot be completed.</string>
+    <string name="hms_download_retry" priority="translator">Download failed. Try again?</string>
+    <string name="hms_downloading" priority="translator">Downloading Huawei Mobile Services\nprogress: %d%%</string>
+    <string name="hms_downloading_loading" priority="LT">Downloading</string>
+    <string name="hms_downloading_new" priority="LT">Downloading HMS</string>
+    <string name="hms_gamebox_name" priority="LT">HUAWEI GameCenter</string>
+    <string name="hms_install" priority="translator">Install</string>
+    <string name="hms_install_message" priority="translator">Huawei Mobile Services must be installed to use this feature. Install?</string>
+    <string name="hms_retry" priority="translator">Retry</string>
+    <string name="hms_update" priority="translator">Update</string>
+    <string name="hms_update_message" priority="translator">Update to the latest version of Huawei Mobile Services to use this feature. Update now?</string>
+    <string name="hms_update_message_new" priority="LT">This service requires the latest version of the following app:\n\n%1$s</string>
+    <string name="hms_update_title" priority="translator">Huawei Mobile Services</string>
+    <string name="upsdk_app_dl_installing" priority="LT">Downloading AppGallery</string>
+    <string name="upsdk_app_download_info_new" priority="LT">Install</string>
+    <string name="upsdk_app_size" priority="LT">Size</string>
+    <string name="upsdk_app_version" priority="LT">Version</string>
+    <string name="upsdk_cancel" priority="LT">Cancel</string>
+    <string name="upsdk_checking_update_prompt" priority="LT">Checking for updates…</string>
+    <string name="upsdk_choice_update" priority="LT">Update available. Please download and install the latest version.</string>
+    <string name="upsdk_connect_server_fail_prompt_toast" priority="translator">Unable to connect to server. Please try again later.</string>
+    <string name="upsdk_detail" priority="LT">Details</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">Unable to retrieve information. Please try again later.</string>
+    <string name="upsdk_install" priority="LT">Install AppGallery to update. Install now?</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">No Internet connection. Please check your network settings.</string>
+    <string name="upsdk_ota_app_name" priority="LT">App</string>
+    <string name="upsdk_ota_cancel" priority="LT">Later</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">Exit</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="LT">Update</string>
+    <string name="upsdk_ota_title" priority="LT">New version</string>
+    <string name="upsdk_storage_utils" priority="LT">%1$s MB</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">Cancel the installation?</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">Installation failed.</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">Yes</string>
+    <string name="upsdk_update_check_no_new_version" priority="LT">You are already using the latest version.</string>
+    <string name="upsdk_updating" priority="LT">Updating</string>
+    <style name="upsdkDlDialog" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>

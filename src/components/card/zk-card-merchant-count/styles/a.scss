@@ -1,0 +1,24 @@
+.zk-card-merchant-count-a {
+    .zk-card-merchant-count {
+        .container_box {
+            display: flex;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+            justify-content: space-between;
+            .list_item {
+                span {
+                    display: block;
+                }
+                span:nth-of-type(1) {
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+                span:nth-of-type(2) {
+                    font-size: 13px;
+                    color: #999;
+                }
+            }
+        }
+    }
+}

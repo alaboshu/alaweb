@@ -1,0 +1,105 @@
+.zk-img-swiper-a {
+  padding: 0;
+
+  .zk-img-swiper {
+    .container_box {
+      position: relative;
+
+      .burst_title {
+        position: absolute;
+        width: 60%;
+        top: 1px;
+        left: 50%;
+        margin-left: -30%;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        font-style: italic;
+        letter-spacing: 3px;
+        opacity: .8;
+      }
+
+      .swiper {
+        position: relative;
+        height: 150px;
+      }
+
+      .swiper_img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .metchant_info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        padding: 0 10px;
+        overflow: hidden;
+        background: rgba(0, 0, 0, .1);
+
+        .info_search_left {
+          font-size: 20px;
+          color: #fff;
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          // background: rgba(0, 0, 0, .5);
+          margin-top: 4px;
+          cursor: pointer;
+
+          .zk-arrows-left_black {
+            display: block;
+            margin-left: 7px;
+            margin-top: -1px;
+          }
+
+        }
+
+        .info_search_right {
+          width: 20%;
+          font-size: 20px;
+          color: #fff;
+          display: flex;
+          justify-content: space-around;
+          cursor: pointer;
+
+          .iconfont {
+            width: 10%;
+          }
+        }
+      }
+
+      .merchant_intro {
+        display: flex;
+        padding: 10px;
+
+        .text {
+          margin-right: 10px;
+
+          .intro_title {
+            color: #000;
+            font-size: 13px;
+            font-weight: 600;
+          }
+
+          .intro_text {
+            color: #888;
+            font-size: 10px;
+            margin-top: 5px;
+            margin-right: 10px;
+          }
+        }
+
+        .shop_logo {
+          display: block;
+          width: 85px;
+          height: 55px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

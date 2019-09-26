@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"അതെ"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"ഡൗൺലോഡ് നിർത്തണോ?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"മറയ്ക്കാൻ ഇവിടെ ഡ്രാഗ് ചെയ്യുക"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"റദ്ദാക്കുക"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"അപ്‌ഡേറ്റ് പരിശോധന പരാജയപ്പെട്ടു."</string>
+    <string name="c_buoycircle_checking" priority="translator">"അപ്‌ഡേറ്റുകൾക്കായി പരിശോധിക്കുന്നു…"</string>
+    <string name="c_buoycircle_confirm" priority="translator">"ശരി"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery ഡൗൺലോഡ് ചെയ്യാൻ കഴിയില്ല."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"പര്യാപ്‌തമായത്ര സ്വതന്ത്രമായ സ്ഥലം ലഭ്യമല്ല. ഡൗൺലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"ഡൗൺലോഡ് പരാജയപ്പെട്ടു. വീണ്ടും ശ്രമിക്കണോ?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"ഡൗൺലോഡ് ചെയ്യുന്നു…"</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"ഫോൺ മാനേജറിലോ ക്രമീകരണത്തിലോ HUAWEI AppGallery-യ്ക്കുള്ള സെക്കൻഡറി ലോഞ്ച് പ്രവർത്തനസജ്ജമാക്കുക."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"റദ്ദാക്കുക"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"മറയ്ക്കുക"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"ബലൂണുകൾ മറച്ച ശേഷം, അവ വീണ്ടും കാണിക്കുന്നതിന് നിങ്ങൾ ആപ്പ് വീണ്ടും ലോഞ്ച് ചെയ്യേണ്ടതുണ്ട്."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"ബലൂണുകൾ മറച്ച ശേഷം, അവ വീണ്ടും കാണിക്കുന്നതിന് നിങ്ങളുടെ ഫോൺ ഫ്ലിപ്പ് ചെയ്യുക."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"എന്നെ വീണ്ടും ഓർമ്മിപ്പിക്കരുത്"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"ബലൂണുകൾ മറയ്ക്കുക"</string>
+    <string name="c_buoycircle_install" priority="translator">"ഇൻസ്റ്റാൾ ചെയ്യുക"</string>
+    <string name="c_buoycircle_no" priority="translator">"അല്ല"</string>
+    <string name="c_buoycircle_retry" priority="translator">"വീണ്ടും ശ്രമിക്കുക"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"ഈ സേവനത്തിന് ചുവടെ പറയുന്ന ആപ്പിന്റെ ഏറ്റവും പുതിയ പതിപ്പ് ആവശ്യമാണ്:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"സ്വാഗതം %1$s"</string>
+</resources>

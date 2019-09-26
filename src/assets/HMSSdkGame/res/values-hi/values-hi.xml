@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"हाँ"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"डाउनलोड बंद करें?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"छिपाने के लिए यहाँ खींचें"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"रद्द करें"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"अद्यतन जाँच विफल रही।"</string>
+    <string name="c_buoycircle_checking" priority="translator">"अद्यतन की जाँच कर रहा है..."</string>
+    <string name="c_buoycircle_confirm" priority="translator">"ठीक"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery को डाउनलोड नहीं किया जा सका।"</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"रिक्त स्थान पर्याप्त नहीं है। डाउनलोड करने में असमर्थ।"</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"डाउनलोड विफल रहा। पुनः प्रयास करें?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"डाउनलोड हो रहा है..."</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"फ़ोन प्रबंधक या सेटिंग्स में HUAWEI AppGallery के लिए द्वितीयक लॉन्च सक्षम करें।"</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"रद्द करें"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"छिपाएँ"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"गुब्बारों को छिपाए जाने के बाद, उन्हें फिर से दिखाने के लिए आपको ऐप को पुनः लॉन्च करने की आवश्यकता होगी।"</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"गुब्बारों को छिपाए जाने के बाद, उन्हें फिर से दिखाने के लिए अपनी डिवाइस को फ़्लिप करें।"</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"मुझें पुनः अनुस्मारक न दें"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"गुब्बारे छिपाएँ"</string>
+    <string name="c_buoycircle_install" priority="translator">"स्थापित करें"</string>
+    <string name="c_buoycircle_no" priority="translator">"नहीं"</string>
+    <string name="c_buoycircle_retry" priority="translator">"पुनः प्रयास करें"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"इस सेवा को निम्नलिखित ऐप के नवीनतम संस्करण की आवश्यकता है:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"%1$s में आपका स्वागत है"</string>
+</resources>

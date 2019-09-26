@@ -1,0 +1,123 @@
+.zk-product-user {
+  height: 360upx;
+  position: relative;
+  background: #c70f2c;
+
+  .product-user_top {
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    line-height: 46px;
+
+    .user_top-left {
+      flex: 1;
+
+      .left-icon {
+        display: inline-block;
+      }
+    }
+  }
+
+  .user-active {
+    padding: 22px 15px 0px 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .user-active_portrait {
+      width: 100upx;
+      height: 100upx;
+      border-radius: 100upx;
+      border: 1px solid #f0f0f0;
+      overflow: hidden;
+
+      .portrait-image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .user-active_text {
+      margin-left: 22upx;
+
+      .user-active_username {
+        font-size: 30upx;
+        color: #ffffff;
+        font-family: 'PingFang SC';
+        font-weight: 600;
+        line-height: 48upx;
+      }
+
+      .user-active_merchant {
+        font-size: 34upx;
+        color: #ffffff;
+        font-family: 'PingFang SC';
+        font-weight: 700;
+        line-height: 50upx;
+      }
+    }
+
+    .user-active-seting {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+
+      .user-seting {
+        padding: 0 5px;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .user-ul {
+    margin-top: 20upx;
+    display: flex;
+    align-items: center;
+
+    .user-li {
+      flex: 1;
+      text-align: center;
+
+      p {
+        font-family: 'PingFang SC';
+        color: #ffffff;
+      }
+
+      .p1 {
+        font-weight: 500;
+      }
+
+      .p2 {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .user-dimensional-code {
+    width: 85vw;
+    height: 100upx;
+    position: absolute;
+    bottom: -20upx;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .dimensional-code_image {
+      width: 100%;
+      height: 100%;
+    }
+
+    .dimensional-code_text {
+      position: absolute;
+      top: 0;
+      color: #ffffff;
+      z-index: 999;
+      font-size: 14px;
+      font-weight: 700;
+      transform: translate(10%, 50%)
+    }
+  }
+}

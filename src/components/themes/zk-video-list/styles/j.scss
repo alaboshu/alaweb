@@ -1,0 +1,17 @@
+.zk-image-list-j {
+    $list: 4;
+    .zk-image-list {
+        justify-content: space-between;
+        @for $list from 0 to 4 {
+            .image-list-#{$list} {
+                height: 100px;
+                @if $list==0 {
+                    width: 100%;
+                }
+                @if $list>0 {
+                    width: 33.3%;
+                }
+            }
+        }
+    }
+}

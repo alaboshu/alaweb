@@ -1,0 +1,168 @@
+.zk-school-class-train {
+  .school_class_train {
+    .school_timeline_container {
+
+      background: #fff;
+      margin-top: 20upx;
+      padding: 12upx 30upx;
+      position: relative;
+      box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+      padding-bottom: 18upx;
+
+      .endStart {
+        color: #fff;
+        background: #9EA3B8;
+      }
+
+      .video_list_head {
+        display: flex;
+        width: 98%;
+        margin: 0 auto;
+        align-items: center;
+
+        img {
+          width: 40upx;
+          height: 40upx;
+          margin-right: 15upx;
+        }
+
+        span {
+          display: block;
+
+          &:nth-of-type(1) {
+            font-size: 36upx;
+            color: #202020;
+            font-weight: bold;
+            font-family: "PingFang SC";
+          }
+
+          &:nth-of-type(2) {
+            font-size: 22upx;
+            color: #9EA3B8;
+            font-family: "PingFang SC";
+            text-decoration: underline;
+            display: flex;
+          }
+        }
+      }
+
+      .school_timeline_item {
+        display: flex;
+        margin-top: 12upx;
+        margin-bottom: 25upx;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 25upx;
+      }
+
+      .school_timeline_left {
+        width: 272upx;
+        height: 178upx;
+
+        img {
+          width: 100%;
+          height: 178upx;
+          border-radius: 10upx;
+        }
+      }
+
+      .school_timeline_right {
+        margin-left: 30upx;
+        width: 364upx;
+        position: relative;
+
+        .school_timeline_right_name {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 30upx;
+          color: #202020;
+          font-family: "PingFang SC";
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        .school_timeline_right_address {
+          font-size: 24upx;
+          color: #9EA3B8;
+        }
+
+        .school_timeline_right_news {
+          font-size: 22upx;
+          color: #9EA3B8;
+        }
+
+        .school_timeline_right_btn {
+          display: flex;
+          position: absolute;
+          bottom: 10upx;
+          justify-content: space-between;
+          width: 100%;
+
+          span {
+            display: block;
+
+            &:nth-of-type(1) {
+              font-size: 22upx;
+              color: #202020;
+            }
+
+            &:nth-of-type(2) {
+              color: #fff;
+              font-size: 24upx;
+              height: 42upx;
+              line-height: 38upx;
+              font-family: "PingFang SC";
+              border-radius: 42upx;
+              padding: 2upx 20upx;
+              background: #999;
+              border: 1px solid #e5e5e5;
+            }
+          }
+        }
+      }
+
+      .school_timeline_box {
+        position: absolute;
+        left: 34upx;
+        top: 124upx;
+
+        .timeline_item {
+          span {
+            display: block;
+            background: linear-gradient(#ff4848, #ff7b64);
+
+            &:nth-of-type(1) {
+              width: 20upx;
+              height: 20upx;
+              border-radius: 10px;
+            }
+          }
+
+          .timeline_line {
+            width: 2px;
+            background: #E0e0e0;
+            height: 174upx;
+            margin: 20upx 1px;
+          }
+
+          &:nth-of-type(1) {
+            span {
+              &:nth-of-type(1) {
+                width: 5px;
+                height: 5px;
+                border-radius: 5px;
+              }
+            }
+          }
+
+          &:last-child {
+            .timeline_line {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

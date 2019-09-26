@@ -1,0 +1,44 @@
+.single-border {
+  border-radius: 4px;
+  border: 1px solid $gl-brand;
+
+  .border-header {
+    .border-header-icon {
+      display: none;
+    }
+
+    .border-header-title {
+      color: $gl-text1;
+    }
+
+    .border-header-desc {
+      display: none;
+    }
+  }
+
+  .border-body {
+    padding: 0px 10px;
+  }
+}
+
+@mixin widget_border($name, $color, $text-color) {
+  .single-border__#{$name} {
+    border: 1px solid $color;
+
+    .border-header {
+      .border-header-title {
+        color: $text-color;
+      }
+    }
+  }
+}
+
+@each $name,
+$colors in $component-colors {
+  @include widget_border($name, map-get($colors, base), map-get($colors, font));
+}
+
+@each $name,
+$colors in $theme-colors {
+  @include widget_border($name, map-get($colors, base), map-get($colors, font));
+}

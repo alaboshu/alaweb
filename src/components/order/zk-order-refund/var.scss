@@ -1,0 +1,83 @@
+.zk-order-refund {
+
+  .text {
+    width: 60px;
+    height: 30px;
+    font-size: 13px;
+    line-height: 30px;
+    text-align: left;
+    color: #666;
+  }
+
+
+  .order-refund {
+    display: flex;
+    min-height: 30px;
+    padding: 10px 10px;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+
+    &.mr-t {
+      justify-content: space-between;
+    }
+
+    .input-width {
+      width: 80%;
+    }
+
+    .input {
+      height: 30px;
+      border-radius: 3px;
+
+    }
+
+    .bottom-text {
+      color: #666;
+      font-size: 12px;
+    }
+
+    .text-width {
+      width: 79%;
+      height: 100px;
+      border: 1px solid #e5e5e5;
+      border-radius: 3px;
+
+      .textarea {
+        height: 100%;
+      }
+    }
+
+    &.upload {
+      display: block;
+    }
+  }
+
+  .order-foot {
+    background: #fff;
+    padding: 10px 0;
+  }
+
+  .order-button {
+    width: 90%;
+    height: 30px;
+    line-height: 30px;
+    background: #C81432;
+    border-radius: 3px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+  }
+
+  .picker-slect {
+    display: flex;
+    color: #666;
+    border-radius: 3px;
+    padding-left: 5px;
+
+    .picker-text {
+      height: 30px;
+      line-height: 30px;
+      font-size: 13px;
+    }
+  }
+}

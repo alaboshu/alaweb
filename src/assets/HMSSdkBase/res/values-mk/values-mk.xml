@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort" priority="translator">"Прекини"</string>
+    <string name="hms_abort_message" priority="translator">"Да се прекине преземањето?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s не може да ги користи Huawei Mobile Services. Активирајте го Управителот на телефонот или одете до Нагодување, овозможете ги сите дозволи за %2$s (вклучувајќи и автоматско активирање и секундарно активирање) и обидете се повторно."</string>
+    <string name="hms_cancel" priority="translator">"Откажи"</string>
+    <string name="hms_check_failure" priority="translator">"Проверката за ажурирања не е успешна."</string>
+    <string name="hms_check_no_update" priority="translator">"Веќе ја користите најновата верзија."</string>
+    <string name="hms_checking" priority="translator">"Се проверуваат ажурирања..."</string>
+    <string name="hms_confirm" priority="translator">"ОК"</string>
+    <string name="hms_download_failure" priority="translator">"Неуспешно преземање на пакетот со мобилните услуги на Huawei."</string>
+    <string name="hms_download_no_space" priority="translator">"Нема доволно слободен простор. Преземањето не може да се заврши."</string>
+    <string name="hms_download_retry" priority="translator">"Преземањето не е успешно. Ќе се обидете повторно?"</string>
+    <string name="hms_downloading" priority="translator">"Се преземаат мобилните услуги на Huawei | напредок: %d%%"</string>
+    <string name="hms_downloading_loading" priority="LT">"Се презема"</string>
+    <string name="hms_downloading_new" priority="LT">"Се презема HMS"</string>
+    <string name="hms_gamebox_name" priority="LT">"HUAWEI GameCenter"</string>
+    <string name="hms_install" priority="translator">"Инсталирај"</string>
+    <string name="hms_install_message" priority="translator">"Мора да се инсталирани мобилни услуги на Huawei за да се користи оваа функција. Ќе ги инсталирате?"</string>
+    <string name="hms_retry" priority="translator">"Обиди се"</string>
+    <string name="hms_update" priority="translator">"Ажурирај"</string>
+    <string name="hms_update_message" priority="translator">"Ажурирајте на најновата верзија на мобилните услуги на Huawei за да ја користите оваа функција. Да се ажурира сега?"</string>
+    <string name="hms_update_message_new" priority="LT">"За оваа услуга потребна е најновата верзија од следнава апликација:\n\n%1$s"</string>
+    <string name="hms_update_title" priority="translator">"Мобилни услуги на Huawei"</string>
+    <string name="upsdk_app_dl_installing" priority="LT">"Се презема AppGallery"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"Инсталирај"</string>
+    <string name="upsdk_app_size" priority="translator">"Големина"</string>
+    <string name="upsdk_app_version" priority="translator">"Верзија"</string>
+    <string name="upsdk_cancel" priority="translator">"Откажи"</string>
+    <string name="upsdk_checking_update_prompt" priority="translator">"Се проверува за ажурирања…"</string>
+    <string name="upsdk_choice_update" priority="LT">"Достапно е ажурирање. Преземете ја и инсталирајте ја најновата верзија."</string>
+    <string name="upsdk_connect_server_fail_prompt_toast" priority="translator">"Не може да се поврзе со серверот. Обидете се повторно подоцна."</string>
+    <string name="upsdk_detail" priority="translator">"Детали"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"Информациите не можат да се вчитаат. Обидете се повторно подоцна."</string>
+    <string name="upsdk_install" priority="LT">"Инсталирајте ја AppGallery за да ажурирате. Да се инсталира сега?"</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"Нема поврзување на интернет. Проверете ги поставките за мрежата."</string>
+    <string name="upsdk_ota_app_name" priority="LT">"Апликација"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"Подоцна"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"Излези"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"Ажурирај"</string>
+    <string name="upsdk_ota_title" priority="translator">"Нова верзија"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s MB"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"Да се откаже инсталацијата?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"Инсталирањето не успеа."</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"Да"</string>
+    <string name="upsdk_update_check_no_new_version" priority="translator">"Веќе ја користите најновата верзија."</string>
+    <string name="upsdk_updating" priority="translator">"Се ажурира"</string>
+</resources>

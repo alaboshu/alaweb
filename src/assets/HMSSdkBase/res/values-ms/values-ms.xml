@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort" priority="translator">"Hentikan"</string>
+    <string name="hms_abort_message" priority="translator">"Hentikan muat turun?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s tidak dapat menggunakan Khidmat Mudah Alih Huawei. Sila lancarkan Pengurus Telefon atau pergi ke Tetapan, dayakan semua kebenaran untuk %2$s (termasuk auto-lancar dan pelancaran sekunder), dan cuba lagi."</string>
+    <string name="hms_cancel" priority="translator">"Batalkan"</string>
+    <string name="hms_check_failure" priority="translator">"Gagal menyemak kemas kini."</string>
+    <string name="hms_check_no_update" priority="translator">"Anda sedang menggunakan versi terkini."</string>
+    <string name="hms_checking" priority="translator">"Menyemak kemas kini..."</string>
+    <string name="hms_confirm" priority="translator">"OK"</string>
+    <string name="hms_download_failure" priority="translator">"Gagal memuat turun pakej Perkhidmatan Mudah Alih Huawei."</string>
+    <string name="hms_download_no_space" priority="translator">"Tiada ruang kosong yang cukup. Muat turun tidak dapat diselesaikan."</string>
+    <string name="hms_download_retry" priority="translator">"Muat turun gagal. Cuba lagi?"</string>
+    <string name="hms_downloading" priority="translator">"Memuat turun Perkhidmatan Mudah Alih Huawei | perkembangan: %d%%"</string>
+    <string name="hms_downloading_loading" priority="LT">"Memuat turun"</string>
+    <string name="hms_downloading_new" priority="LT">"Memuat turun HMS"</string>
+    <string name="hms_gamebox_name" priority="LT">"HUAWEI GameCenter"</string>
+    <string name="hms_install" priority="translator">"Pasang"</string>
+    <string name="hms_install_message" priority="translator">"Perkhidmatan Mudah Alih Huawei mesti dipasang untuk menggunakan fungsi ini. Pasang?"</string>
+    <string name="hms_retry" priority="translator">"Cuba lagi"</string>
+    <string name="hms_update" priority="translator">"Kemas kini"</string>
+    <string name="hms_update_message" priority="translator">"Kemas kini kepada versi terkini Perkhidmatan Mudah Alih Huawei untuk menggunakan fungsi ini. Kemas kini sekarang?"</string>
+    <string name="hms_update_message_new" priority="LT">"Perkhidmatan ini memerlukan versi terkini apl yang berikut:\n\n%1$s"</string>
+    <string name="hms_update_title" priority="translator">"Perkhidmatan Mudah Alih Huawei"</string>
+    <string name="upsdk_app_dl_installing" priority="LT">"Memuat turun AppGallery"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"Pasang"</string>
+    <string name="upsdk_app_size" priority="translator">"Saiz"</string>
+    <string name="upsdk_app_version" priority="translator">"Versi"</string>
+    <string name="upsdk_cancel" priority="translator">"Batalkan"</string>
+    <string name="upsdk_checking_update_prompt" priority="translator">"Menyemak kemas kini..."</string>
+    <string name="upsdk_choice_update" priority="LT">"Kemas kini tersedia. Sila muat turun dan pasang versi terkini."</string>
+    <string name="upsdk_connect_server_fail_prompt_toast" priority="translator">"Tidak dapat bersambung ke pelayan. Sila cuba sebentar lagi."</string>
+    <string name="upsdk_detail" priority="translator">"Butiran"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"Tidak dapat mendapatkan balik maklumat. Sila cuba sebentar lagi."</string>
+    <string name="upsdk_install" priority="LT">"Pasang AppGallery untuk mengemas kini. Pasang sekarang?"</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"Tiada sambungan Internet. Sila semak tetapan rangkaian anda."</string>
+    <string name="upsdk_ota_app_name" priority="LT">"Apl"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"Kemudian"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"Keluar"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"Kemas kini"</string>
+    <string name="upsdk_ota_title" priority="translator">"Versi baru"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s MB"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"Batalkan pemasangan?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"Pemasangan gagal."</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"Ya"</string>
+    <string name="upsdk_update_check_no_new_version" priority="translator">"Anda sedang menggunakan versi terkini."</string>
+    <string name="upsdk_updating" priority="translator">"Mengemas kini"</string>
+</resources>

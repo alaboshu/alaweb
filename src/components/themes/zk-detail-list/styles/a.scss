@@ -1,0 +1,50 @@
+
+  .zk-detail-list {
+    .banner {
+		height: 360upx;
+		overflow: hidden;
+		position: relative;
+		background-color: #ccc;
+	}
+
+	.banner-img {
+		width: 100%;
+	}
+
+	.banner-title {
+		max-height: 84upx;
+		overflow: hidden;
+		position: absolute;
+		left: 30upx;
+		bottom: 30upx;
+		width: 90%;
+		font-size: 32upx;
+		font-weight: 400;
+		line-height: 42upx;
+		color: white;
+		z-index: 11;
+	}
+
+	.uni-media-list-logo {
+		width: 180upx;
+		height: 140upx;
+	}
+
+	.uni-media-list-body {
+		height: auto;
+		justify-content: space-around;
+	}
+
+	.uni-media-list-text-top {
+		height: 74upx;
+		font-size: 28upx;
+		overflow: hidden;
+	}
+
+	.uni-media-list-text-bottom {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+  }
+

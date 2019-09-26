@@ -1,0 +1,82 @@
+@import "@/assets/style/theme.scss";
+@import "@/assets/style/base.scss";
+.zk-data-merchant-list {
+    background: #f0f0f0;
+    width: 100%;
+    padding: 10px 0px 0px 0px;
+    .merchant-list-box {
+        padding: 10px;
+        background-color: $gl-light;
+        border-radius: 4px;
+        .merchant-list-head {
+            font-size: 14px;
+            font-weight: 600;
+            color: $gl-text1;
+        }
+        .time-quantum {
+            width: 100%;
+            text-align: right;
+            font-size: 11px;
+            color: $gl-text6;
+        }
+        .merchant-li-list {
+            text-align: center;
+            padding: 0px 15px;
+        }
+        .merchant-listbox {
+            .merchant-img_box {
+                text-align: center;
+                .merchant-img {
+                    width: 22px;
+                    height: 26px;
+                }
+            }
+            .merchant-title {
+                font-size: 13px;
+                color: $gl-text7;
+                font-weight: 500;
+                line-height: 18px;
+            }
+        }
+        .merchant-ul {
+            width: 100%;
+            .merchant-li {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px solid $gl-border5;
+                padding: 10px 0px;
+                &:last-of-type {
+                    border-bottom: none;
+                }
+            }
+        }
+        .merchant-list_right {
+            display: flex;
+            align-items: center;
+            .right-box {
+                padding: 0px 15px;
+                .right-box_number {
+                    font-size: 14px;
+                    color: $gl-text7;
+                    text-align: center;
+                }
+                .strikethrough {
+                    text-decoration: line-through;
+                }
+                .right-box_intro {
+                    font-size: 12px;
+                    color: $gl-text6;
+                    text-align: center;
+                }
+            }
+            .merchant-decollator {
+                height: 25px;
+                width: 1px;
+                background-color: $gl-text6;
+                opacity: 0.4;
+            }
+        }
+    }
+}

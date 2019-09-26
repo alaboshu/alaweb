@@ -1,0 +1,103 @@
+@import "@/assets/style/theme.scss";
+@import "@/assets/style/base.scss";
+.zk-registration-success {
+    .function-page {
+        width: 100vw;
+        background-color: #ffffff;
+        .function-page_top {
+            width: 100vw;
+            height: 25vh;
+            position: relative;
+            .page-icon {
+                text-align: center;
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                .page-icon_box {
+                    width: 60px;
+                    height: 60px;
+                    .page-image_box {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .conter_text {
+            width: 90%;
+            margin: 0 auto;
+            p {
+                text-align: center;
+            }
+            .p1 {
+                font-weight: 400;
+                font-size: 20px;
+            }
+            .p2 {
+                font-size: 14px;
+                color: #808080;
+            }
+        }
+    }
+    .registration_teable {
+        padding: 0px 10px;
+        margin-top: 30px;
+        .teable-box {
+            border: 1px solid $gl-border5;
+            border-right: none;
+        }
+        .registration_teable-head {
+            display: flex;
+            align-items: center;
+            // border-bottom: 1px solid $gl-border5;
+            .head-list {
+                padding: 8px 0px;
+                font-size: 13px;
+                font-family: 'Microsoft YaHei';
+                font-weight: 500;
+                border-right: 1px solid $gl-border5;
+            }
+        }
+        .registration_teable-conter {
+            display: flex;
+            align-items: center;
+            border-top: 1px solid $gl-border5;
+            .conter-list {
+                padding: 5px 0px;
+                font-size: 12px;
+                font-family: 'Microsoft YaHei';
+                font-weight: 500;
+                color: $gl-text6;
+                border-right: 1px solid $gl-border5;
+            }
+        }
+        .serial-number {
+            width: 40px;
+            text-align: center;
+        }
+        .serial-name {
+            width: 100px;
+            text-align: center;
+        }
+        .serial-moblie {
+            flex: 1;
+            text-align: center;
+        }
+    }
+    .page-buttom {
+        margin-top: 30px;
+        .page-but {
+            width: 90%;
+            padding: 6px;
+            font-size: 18px;
+            text-align: center;
+            margin: 0 auto;
+            color: #ffffff;
+            background: #09bb07;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+    }
+}

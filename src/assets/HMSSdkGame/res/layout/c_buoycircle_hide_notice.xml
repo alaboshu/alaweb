@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/game_id_buoy_hide_notice_view">
+    <LinearLayout
+        android:id="@+id/top_notice_bg"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/c_buoycircle_hide_float_top"
+        android:orientation="horizontal">
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/game_id_buoy_hide_notice_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/c_buoycircle_hide_float_eye_off_gray"/>
+
+            <TextView
+                android:id="@+id/top_notice_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:textSize="13sp"
+                android:textColor="#ffffff"
+                android:text="@string/c_buoycircle_auto_hide_notice"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

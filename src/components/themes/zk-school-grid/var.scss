@@ -1,0 +1,43 @@
+.zk-school-grid {
+  .school_grid_container {
+    box-shadow: 0px 15px 15px -4px rgba(69, 65, 78, 0.1);
+
+    .daily-use-container {
+      display: flex;
+      background: #fff;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20upx;
+      flex-wrap: wrap;
+      padding-top: 20upx;
+
+      .daily-use_item {
+        text-align: center;
+        width: 25%;
+        // margin-top: 14upx;
+
+        img {
+          width: 83upx;
+          height: 83upx;
+        }
+
+        .use_item_name {
+          font-size: 29upx;
+          color: #202020;
+          font-family: 'PingFang SC';
+        }
+      }
+    }
+
+    .school_banner_img {
+      padding: 20upx 30upx;
+      background: #fff;
+
+      img {
+        width: 100%;
+        height: 240upx;
+        border-radius: 20upx;
+      }
+    }
+  }
+}

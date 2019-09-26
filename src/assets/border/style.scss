@@ -1,0 +1,33 @@
+.widget_border {
+    padding: 0;
+    width: 100%;
+    flex-direction: column;
+    .border-header {
+        height: 32px;
+        line-height: 32px;
+        vertical-align: middle;
+        text-align: left;
+        flex-wrap: nowrap;
+        display: flex;
+        align-items: center;
+        padding: 0px 10px;
+        .border-header-icon {
+            vertical-align: middle;
+            padding: 0 5px 0 0px;
+            color: $gl-sizeColor;
+        }
+        .border-header-title {
+            font-size: $gl-size-sm;
+            letter-spacing: 2px;
+            color: $gl-text0;
+            margin-right: 5px;
+        }
+        .border-header-desc {
+            font-size: $gl-h7-size;
+            color: $gl-text5;
+        }
+        .border-header-tools {
+            font-size: $gl-h7-size;
+        }
+    }
+}

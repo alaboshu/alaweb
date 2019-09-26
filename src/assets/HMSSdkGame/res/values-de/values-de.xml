@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"JA"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"Herunterladen stoppen?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"Zum Ausblenden hierhin ziehen"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"ABBRECHEN"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"Suchen nach Aktualisierungen fehlgeschlagen."</string>
+    <string name="c_buoycircle_checking" priority="translator">"Nach Aktualisierungen suchen ..."</string>
+    <string name="c_buoycircle_confirm" priority="translator">"OK"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery konnte nicht heruntergeladen werden."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"Nicht genügend Speicherplatz, Herunterladen nicht möglich."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"Herunterladen fehlgeschlagen. Erneut versuchen?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"Herunterladen ..."</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"Sekundären Start für HUAWEI AppGallery in Telefonmanager oder Einstellungen aktivieren"</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"ABBRECHEN"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"AUSBLENDEN"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"Nachdem Ballons ausgeblendet wurden, müssen Sie die App neu starten, um sie wieder anzuzeigen."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"Nachdem Ballons ausgeblendet wurden, drehen Sie Ihr Gerät um, um sie wieder anzuzeigen."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"Nicht erneut erinnern"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"Ballons ausblenden"</string>
+    <string name="c_buoycircle_install" priority="translator">"INSTALLIEREN"</string>
+    <string name="c_buoycircle_no" priority="translator">"NEIN"</string>
+    <string name="c_buoycircle_retry" priority="translator">"WIEDERHOLEN"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"Dieser Service benötigt die neuste Version der folgenden App:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"Willkommen %1$s"</string>
+</resources>

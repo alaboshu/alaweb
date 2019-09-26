@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"SIM"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"Parar o download?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"Arraste aqui para ocultar"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"CANCELAR"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"Falha ao verificar a atualização."</string>
+    <string name="c_buoycircle_checking" priority="translator">"Procurando atualizações..."</string>
+    <string name="c_buoycircle_confirm" priority="translator">"OK"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"Não foi possível baixar o HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"Sem espaço livre suficiente. Não é possível baixar."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"Falha no download. Tentar novamente?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"Baixando..."</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"Ative a Inicialização secundária para o HUAWEI AppGallery no Gerenciamento do telefone ou em Configurações."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"CANCELAR"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"OCULTAR"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"Depois que os balões forem ocultados, você precisará reiniciar o aplicativo para mostrá-los novamente."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"Depois que os balões forem ocultados, vire o dispositivo para mostrá-los novamente."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"Não lembrar novamente"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"Ocultar balões"</string>
+    <string name="c_buoycircle_install" priority="translator">"INSTALAR"</string>
+    <string name="c_buoycircle_no" priority="translator">"NÃO"</string>
+    <string name="c_buoycircle_retry" priority="translator">"TENTAR NOVAMENTE"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"Este serviço requer a última versão do seguinte aplicativo:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"Bem-vindo(a), %1$s"</string>
+</resources>

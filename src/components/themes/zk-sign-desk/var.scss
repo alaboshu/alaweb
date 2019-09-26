@@ -1,0 +1,104 @@
+@import "@/assets/style/theme.scss";
+@import "@/assets/style/base.scss";
+.zk-sign-desk {
+    background-color: $gl-light;
+    height: 100vh;
+    .sign-desk_head {
+        width: 100vw;
+        height: 40vh;
+        .sign-desk_img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .sign-desk_conter {
+        width: 80%;
+        margin: 50px auto;
+        .sign-desk_box {
+            margin-top: 15px;
+            background-color: $gl-border7;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding: 10px 12px;
+            .sign-desk_lable {
+                width: 50px;
+                font-size: 12px;
+            }
+            .sign-desk_text {
+                flex: 1;
+                .desk_text-input {
+                    width: 100%;
+                }
+            }
+        }
+        .resume-load {
+            border-top: 1px solid $gl-border6;
+            margin-top: 3px;
+            color: $gl-text9;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: '新宋体';
+            text-align: center;
+            line-height: 55px;
+        }
+    }
+    .sign-immediately {
+        width: 100%;
+        height: 65px;
+        .sign-immediately_img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .desk-text_foot {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        .text_foot-span {
+            color: $gl-text9;
+        }
+    }
+    .sign-successfully {
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.2);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 999;
+        .sign-box {
+            background-color: $gl-light;
+            border-radius: 5px;
+            width: 75%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            .sign-top_list {
+                margin-top: 15px;
+                text-align: center;
+                .sign-top_img {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            .sign-top_text {
+                text-align: center;
+                font-size: 12px;
+                margin: 8px 0px;
+                color: $gl-text2;
+                padding: 0px 10px;
+            }
+            .got-roger {
+                text-align: center;
+                font-size: 13px;
+                color: $gl-text9;
+                padding: 6px 0px;
+                border-top: 1px solid $gl-border5;
+                font-weight: 600;
+            }
+        }
+    }
+}

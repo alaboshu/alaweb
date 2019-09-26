@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort" priority="translator">"Endheg"</string>
+    <string name="hms_abort_message" priority="translator">"Endheg undhuhan?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s ora bisa nggunakake Layanan Seluler Huawei. Luncurake Atur Telpon utawa bukak Setelan kanggo ngaktifake kabeh izin kanggo %2$s (kalebu luncur otomatis lan luncur sekunder), banjur coba maneh."</string>
+    <string name="hms_cancel" priority="translator">"Wurung"</string>
+    <string name="hms_check_failure" priority="translator">"Gagal mriksa panganyaran."</string>
+    <string name="hms_check_no_update" priority="translator">"Wis nggunakake versi paling anyar."</string>
+    <string name="hms_checking" priority="translator">"Mriksa panganyaran..."</string>
+    <string name="hms_confirm" priority="translator">"OK"</string>
+    <string name="hms_download_failure" priority="translator">"Gagal ngundhuh paket Layanan Seluler Huawei."</string>
+    <string name="hms_download_no_space" priority="translator">"Spasi bebas ora cukup. Undhuhan ora bisa rampung."</string>
+    <string name="hms_download_retry" priority="translator">"Undhuh gagal. Coba maneh?"</string>
+    <string name="hms_downloading" priority="translator">"Ngundhuh Layanan Seluler Huawei | progres: %d%%"</string>
+    <string name="hms_downloading_loading" priority="LT">"Ngundhuh"</string>
+    <string name="hms_downloading_new" priority="LT">"Ngundhuh HMS"</string>
+    <string name="hms_gamebox_name" priority="LT">"HUAWEI GameCenter"</string>
+    <string name="hms_install" priority="translator">"Instal"</string>
+    <string name="hms_install_message" priority="translator">"Layanan Seluler Huawei kudu diinstal nggo nggunakake fitur iki. Instal?"</string>
+    <string name="hms_retry" priority="translator">"Coba maneh"</string>
+    <string name="hms_update" priority="translator">"Anyarake"</string>
+    <string name="hms_update_message" priority="translator">"Anyarake dadi Layanan Seluler Huawei versi paling anyar kanggo nggunakake fitur iki. Anyarake saiki?"</string>
+    <string name="hms_update_message_new" priority="LT">"Layanan iki mbutuhake versi paling anyar apl ing ngisor iki.\n\n%1$s"</string>
+    <string name="hms_update_title" priority="translator">"Layanan Seluler Huawei"</string>
+    <string name="upsdk_app_dl_installing" priority="LT">"Ngundhuh AppGallery"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"Instal"</string>
+    <string name="upsdk_app_size" priority="translator">"Ukrn"</string>
+    <string name="upsdk_app_version" priority="translator">"Vers"</string>
+    <string name="upsdk_cancel" priority="translator">"Wurung"</string>
+    <string name="upsdk_checking_update_prompt" priority="translator">"Mriksa panganyaran..."</string>
+    <string name="upsdk_choice_update" priority="LT">"Panganyaran sumadhiya. Undhuh &amp; instal versi anyar."</string>
+    <string name="upsdk_connect_server_fail_prompt_toast" priority="translator">"Ora bisa nyambung menyang server. Coba maneh mengko."</string>
+    <string name="upsdk_detail" priority="translator">"Rincian"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"Ora bisa njupuk maneh info. Coba maneh mengko."</string>
+    <string name="upsdk_install" priority="LT">"Instal AppGallery kanggo nganyarake. Instal saiki?"</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"Raana samb internet. Priksa setelan jaringan."</string>
+    <string name="upsdk_ota_app_name" priority="LT">"Apl"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"Mengko"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"Metu"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"Anyarake"</string>
+    <string name="upsdk_ota_title" priority="translator">"Versi anyar"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s MB"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"Wurung inst?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"Instalasi gagal."</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"Ya"</string>
+    <string name="upsdk_update_check_no_new_version" priority="translator">"Wis nggunakake versi paling anyar."</string>
+    <string name="upsdk_updating" priority="translator">"Nganyarke"</string>
+</resources>

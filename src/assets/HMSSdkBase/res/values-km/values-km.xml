@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_abort" priority="translator">"បញ្ឈប់"</string>
+    <string name="hms_abort_message" priority="translator">"បញ្ឈប់ការទាញយក?"</string>
+    <string name="hms_bindfaildlg_message" priority="translator">"%1$s មិនអាច​ប្រើ​សេវាកម្ម​ទូរស័ព្ទចល័ត Huawei Mobile បានទេ។ សូម​បើក​កម្មវិធី Phone Manager ឬទៅកាន់​ការកំណត់ និង​បើក​ការអនុញ្ញាតិ​ទាំងអស់​សម្រាប់ %2$s (រួម​ទាំង​ការបើក​កម្មវិធីស្វ័យ​ប្រវត្តិ និង​ការបើក​កម្មវិធីបន្ទាប់បន្សំ) រួចព្យាយាមម្ដងទៀត។"</string>
+    <string name="hms_cancel" priority="translator">"បោះបង់"</string>
+    <string name="hms_check_failure" priority="translator">"បានបរាជ័យពិនិត្យមើលក្នុងការធ្វើបច្ចុប្បន្នភាព។"</string>
+    <string name="hms_check_no_update" priority="translator">"អ្នកកំពុងប្រើកំណែចុងក្រោយបង្អស់រួចហើយ។"</string>
+    <string name="hms_checking" priority="translator">"កំពុងពិនិត្យមើលក្នុងការធ្វើបច្ចុប្បន្នភាព…"</string>
+    <string name="hms_confirm" priority="translator">"យល់ព្រម"</string>
+    <string name="hms_download_failure" priority="translator">"បានបរាជ័យទាញយកកញ្ចប់សេវាទូរស័ព្ទចល័ត Huawei។"</string>
+    <string name="hms_download_no_space" priority="translator">"មិនមានលំហទំនេរគ្រប់គ្រាន់។ មិនអាចបញ្ចប់ការទាញយក។"</string>
+    <string name="hms_download_retry" priority="translator">"បានបរាជ័យទាញយក។ ព្យាយាមម្តងទៀត?"</string>
+    <string name="hms_downloading" priority="translator">"កំពុងទាញយកសេវាទូរស័ព្ទចល័ត Huawei | កំពុងដំណើរការ៖ %d%%"</string>
+    <string name="hms_downloading_loading" priority="LT">"កំពុងទាញយក"</string>
+    <string name="hms_downloading_new" priority="LT">"កំពុងទាញយក HMS"</string>
+    <string name="hms_gamebox_name" priority="LT">"HUAWEI GameCenter"</string>
+    <string name="hms_install" priority="translator">"ដំឡើង"</string>
+    <string name="hms_install_message" priority="translator">"ត្រូវដំឡើងសេវាកម្មទូរស័ព្ទចល័ត Huawei ដើម្បីប្រើលក្ខណៈពិសេសនេះ។ ដំឡើងឬ?"</string>
+    <string name="hms_retry" priority="translator">"ព្យាយាមម្តងទៀត"</string>
+    <string name="hms_update" priority="translator">"ធ្វើបច្ចុប្បន្នភាព"</string>
+    <string name="hms_update_message" priority="translator">"ធ្វើបច្ចុប្បន្នភាពទៅកំណែចុងក្រោយបង្អស់របស់សេវាទូរស័ព្ទចល័ត Huawei ដើម្បីប្រើលក្ខណៈពិសេសនេះ។ ធ្វើបច្ចុប្បន្នភាពឥឡូវនេះ?"</string>
+    <string name="hms_update_message_new" priority="LT">"សេវាកម្ម​នេះ​ទាមទារ​កំណែ​ចុងក្រោយ​បំផុត​នៃ​កម្មវិធី​ដូចខាង​ក្រោម៖\n\n%1$s"</string>
+    <string name="hms_update_title" priority="translator">"សេវាទូរស័ព្ទចល័ត Huawei"</string>
+    <string name="upsdk_app_dl_installing" priority="LT">"ការទាញយក AppGallery"</string>
+    <string name="upsdk_app_download_info_new" priority="translator">"ដំឡើង"</string>
+    <string name="upsdk_app_size" priority="translator">"ទំហំ"</string>
+    <string name="upsdk_app_version" priority="translator">"កំណែ"</string>
+    <string name="upsdk_cancel" priority="translator">"លុបចេញ"</string>
+    <string name="upsdk_checking_update_prompt" priority="translator">"កំពុងពិនិត្យរកមើល​ការអាប់ដេត…"</string>
+    <string name="upsdk_choice_update" priority="LT">"ការអាប់ដេតអាចរកបាន។ សូមទាញយក ហើយដំឡើងកំណែចុងក្រោយបង្អស់។"</string>
+    <string name="upsdk_connect_server_fail_prompt_toast" priority="translator">"មិនអាចភ្ជាប់ទៅកាន់ម៉ាស៊ីនមេបាន។ សូមព្យាយាមម្ដងទៀតនៅពេលក្រោយ។"</string>
+    <string name="upsdk_detail" priority="translator">"ព័ត៌មានលំអិត"</string>
+    <string name="upsdk_getting_message_fail_prompt_toast" priority="translator">"មិនអាចទៅយកព័ត៌មានបាន។ សូមព្យាយាមម្ដងទៀតនៅពេលក្រោយ។"</string>
+    <string name="upsdk_install" priority="LT">"ដំឡើង AppGallery ដើម្បីអាប់ដេត។ ដំឡើងឥឡូវនេះ?"</string>
+    <string name="upsdk_no_available_network_prompt_toast" priority="translator">"មិន​មាន​ការភ្ជាប់អ៊ីនធើណេត។ សូមពិនិត្យមើលការកំណត់បណ្តាញរបស់អ្នក។"</string>
+    <string name="upsdk_ota_app_name" priority="LT">"កម្មវិធី"</string>
+    <string name="upsdk_ota_cancel" priority="translator">"ពេលក្រោយ"</string>
+    <string name="upsdk_ota_force_cancel_new" priority="LT">"ចាកចេញ"</string>
+    <string name="upsdk_ota_notify_updatebtn" priority="translator">"អាប់ដេត"</string>
+    <string name="upsdk_ota_title" priority="translator">"កំណែថ្មី"</string>
+    <string name="upsdk_storage_utils" priority="LT">"%1$s MB"</string>
+    <string name="upsdk_third_app_dl_cancel_download_prompt_ex" priority="translator">"លុបចេញការដំឡើងឬ?"</string>
+    <string name="upsdk_third_app_dl_install_failed" priority="translator">"ការដំឡើងបានបរាជ័យ។"</string>
+    <string name="upsdk_third_app_dl_sure_cancel_download" priority="translator">"បាទ/ចាស"</string>
+    <string name="upsdk_update_check_no_new_version" priority="translator">"អ្នកកំពុងប្រើកំណែចុងក្រោយបង្អស់រួចហើយ។"</string>
+    <string name="upsdk_updating" priority="translator">"កំពុងអាប់ដេត"</string>
+</resources>

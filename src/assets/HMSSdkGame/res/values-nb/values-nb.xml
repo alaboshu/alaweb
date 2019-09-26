@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"JA"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"Stanse nedlasting?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"Dra hit for å skjule"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"AVBRYT"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"Oppdateringskontroll mislyktes."</string>
+    <string name="c_buoycircle_checking" priority="translator">"Ser etter oppdateringer ..."</string>
+    <string name="c_buoycircle_confirm" priority="translator">"OK"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery kan ikke lastes ned."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"Ikke nok ledig plass. Kan ikke laste ned."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"Nedlasting mislyktes. Prøv igjen?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"Laster ned ..."</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"Aktivere sekundær oppstart for HUAWEI AppGallery i Telefon-behandling eller Innstillinger."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"AVBRYT"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"SKJUL"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"Etter ballonger har blitt skjult må du åpne appen på ny for å vise dem igjen."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"Etter ballonger har blitt skjult kan du snu enheten din for å se dem igjen."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"Ikke minn meg på dette igjen"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"Skjul ballonger"</string>
+    <string name="c_buoycircle_install" priority="translator">"INSTALLER"</string>
+    <string name="c_buoycircle_no" priority="translator">"NEI"</string>
+    <string name="c_buoycircle_retry" priority="translator">"PRØV IGJEN"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"Denne tjenesten krever den seneste versjonen av følgende app:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"Velkommen %1$s"</string>
+</resources>

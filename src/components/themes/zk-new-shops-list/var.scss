@@ -1,0 +1,71 @@
+.zk-new-shops-list {
+  .shops_list {
+    margin: 10px;
+    padding: 10px;
+
+    .list_item {
+      display: flex;
+      border-bottom: 1px solid #F6F6F6;
+      padding: 15px 0;
+
+      .list_left {
+        width: 40%;
+        margin-right: 10px;
+
+        img {
+          width: 100%;
+          height: 5.7rem;
+        }
+      }
+
+      .list_right {
+        width: 60%;
+
+        .list_right_name {
+          font-size: 14px;
+          color: #090909;
+          font-weight: 500;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+
+        .list_right_count {
+          color: #BBBBBB;
+          font-size: 13px;
+        }
+
+        .list_right_price {
+          color: #BBBBBB;
+          text-decoration: line-through;
+          font-size: 13px;
+          margin-top: 10px;
+        }
+
+        .list_right_disprice {
+          display: flex;
+          color: #c81432;
+          justify-content: space-between;
+
+          .disprice {
+            font-weight: 600;
+            font-size: 14px;
+
+            span:nth-of-type(2) {
+              font-size: 18px;
+              margin-left: 5px;
+            }
+          }
+        }
+
+        .icon_cart {
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

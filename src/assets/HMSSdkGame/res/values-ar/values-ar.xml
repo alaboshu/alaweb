@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"نعم"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"هل تريد إيقاف التنزيل؟"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"متجر التطبيقات"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"اسحب البالونات للإخفاء"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"إلغاء"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"تعذر التحقق من وجود تحديث."</string>
+    <string name="c_buoycircle_checking" priority="translator">"جارِ التحقق من وجود تحديثات..."</string>
+    <string name="c_buoycircle_confirm" priority="translator">"حسنًا"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"تعذر تنزيل متجر التطبيقات الخاص بهواوي."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"تعذر التنزيل لعدم وجود مساحة تخزين كافية"</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"تعذر التنزيل. هل تريد إعادة المحاولة؟"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"جارِ التنزيل..."</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"يُرجى تمكين التشغيل الثانوي لمتجر تطبيقات هواوي من مدير الهاتف أو الإعدادات"</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"إلغاء"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"إخفاء"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"عقب إخفاء البالونات، سيتوجب عليك إعادة تشغيل التطبيق لتتمكن من رؤيتها مُجددًا."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"عقب إخفاء البالونات، اقلب جهازك لإظهارها مُجددًا."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"عدم التذكير مرةً أخرى"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"إخفاء البالونات"</string>
+    <string name="c_buoycircle_install" priority="translator">"تثبيت"</string>
+    <string name="c_buoycircle_no" priority="translator">"لا"</string>
+    <string name="c_buoycircle_retry" priority="translator">"إعادة المحاولة"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"هذه الخدمة تحتاج إلى وجود أحدث إصدار للتطبيق التالي:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="translator">"مرحبًا \"%1$s\""</string>
+</resources>

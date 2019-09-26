@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"လုပ်မည်"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"ဒေါင်းလုဒ်လုပ်ဆောင်မှုအား ရပ်တန့်မည်လား။"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"ဝှက်ရန် ဤနေရာသို့ ဆွဲပါ"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"မလုပ်ပါ"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"အပ်ဒိတ် စစ်ဆေးမှု မအောင်မြင်ခဲ့ပါ။"</string>
+    <string name="c_buoycircle_checking" priority="translator">"အပ်ဒိတ်အတွက် စစ်ဆေးနေဆဲ..."</string>
+    <string name="c_buoycircle_confirm" priority="translator">"အိုကေ"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery အား ဒေါင်းလုဒ်လုပ်၍ မရနိုင်ပါ။"</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"သိုလှောင်မှု နေရာလွတ် မလုံလောက်ပါ။ ဒေါင်းလုဒ်လုပ်၍ မရနိုင်ပါ။"</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"ဒေါင်းလုဒ်ဆွဲခြင်း မအောင်မြင်ခဲ့ပါ။ ထပ်မံ ကြိုးစားမည်လား။"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"ဒေါင်းလုဒ်လုပ်နေဆဲ..."</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"ဖုန်းမန်နေဂျာ သို့မဟုတ် ဆက်တင်တွင် HUAWEI AppGallery အတွက် ဆင့်ပွားဖွင့်မှုအား ဖွင့်ပေးပါ။"</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"မလုပ်ပါ"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"ဝှက်မည်"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"ပူဖောင်းလေးများအား ဝှက်ထားပြီးနောက် ၎င်းတို့အား ထပ်ပြရန် အက်ပ်အား ပြန်ဖွင့်ပေးရန် လိုအပ်ပါလိမ့်မည်။"</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"ပူဖောင်းလေးများအား ဝှက်ထားပြီးနောက် ၎င်းတို့အား ထပ်ပြရန် သင့်စက်အား လှန်လိုက်ပါ။"</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"နောက်ထပ် သတိမပေးပါနှင့်"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"ပူဖောင်းလေးများအား ဝှက်ရန်"</string>
+    <string name="c_buoycircle_install" priority="translator">"ထည့်သွင်းမည်"</string>
+    <string name="c_buoycircle_no" priority="translator">"မလုပ်ပါ"</string>
+    <string name="c_buoycircle_retry" priority="translator">"ပြန်ကြိုးစားမည်"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"ဤဝန်ဆောင်မှုသည် ဖော်ပြပါ အက်ပ်၏ နောက်ဆုံး ဗားရှင်းကို လိုအပ်ပါသည် - \n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"Welcome %1$s"</string>
+</resources>

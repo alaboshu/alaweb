@@ -1,0 +1,460 @@
+ .zk-about {
+   font-size: $gl-size-base;
+
+   img {
+     width: 100%;
+   }
+
+   // background: #3333;
+   .text {
+     margin-top: 6px;
+     font-size: 13px;
+   }
+ }
+
+ .all {
+   background: #131313;
+ }
+
+ // .nav-bar-title {
+ //   display: none;
+ // }
+ .redColor {
+   color: #dd2828;
+ }
+
+ .red {
+   color: #dd2828;
+ }
+
+ .circle {
+   width: 5px;
+   height: 5px;
+   background: #dd2828;
+   border-radius: 50%;
+ }
+
+ .zk-about-head {
+   display: flex;
+   width: 100%;
+   height: 47px;
+   line-height: 47px;
+   background: #131313;
+   position: fixed;
+   color: #ffffff;
+   padding: 0 10px;
+   top: 0;
+   z-index: 10000;
+   align-items: center;
+
+   p {
+     width: 100%;
+     text-align: center;
+     margin-left: 138px;
+     font-size: 18px;
+     position: absolute;
+     line-height: 47px;
+     left: 50%;
+     margin-left: -50%;
+   }
+ }
+
+ .zk-head-banner {
+   width: 100%;
+   height: 183px;
+   background: url(https://s-open.qiniuniu99.com//wwwroot/Uploads/CMS/2019/06/5d0254177d430d0ffc88e589.png) no-repeat center;
+   background-size: 70% 125px;
+
+   img {
+     width: 100%;
+     height: 262.5px;
+     margin-top: -13px;
+   }
+ }
+
+ .zk-about-nav {
+   width: 320px;
+   height: 32px;
+   margin: 0 auto;
+   background: #3f3f3f;
+   color: #ffffff;
+   display: flex;
+   justify-content: space-around;
+   text-align: center;
+   line-height: 32px;
+   font-size: 14px;
+   border-radius: 15px;
+   margin-top: -8px;
+
+   a {
+     color: #dddddd;
+   }
+
+   div {
+     width: 25%;
+   }
+
+   div:first-child {
+     background: #dd2828;
+     border-radius: 15px;
+   }
+ }
+
+ .zk-about-contText {
+   width: 660upx;
+   margin: 0 auto;
+   background: #3f3f3f;
+   border-radius: 10px;
+   margin-top: 20px;
+   color: #dddddd;
+   font-size: 9px;
+   padding: 10px;
+   text-indent: 18px;
+   padding-bottom: 20px;
+   padding-top: 20px;
+ }
+
+ .zk-about-navText:hover {
+   background: #dd2828;
+   border-radius: 15px;
+ }
+
+
+
+ .line {
+   width: 285px;
+   height: 1px;
+   background: #4e4e4d;
+   margin: 0 auto;
+   margin-top: 20px;
+   opacity: 0.5;
+ }
+
+ .zk-about-develop {
+   position: relative;
+   width: 330px;
+   height: 556px;
+   margin: 0 auto;
+   margin-top: 20px;
+   color: #666666;
+   //  text-align: center;
+   // background: url('../../../static/img/zk-about/zk-about/developmentBg.png')
+   // no-repeat center;
+   background-size: 100% 600px;
+   z-index: 100;
+   overflow: hidden;
+
+   img {
+     width: 330px;
+     height: 500px;
+   }
+ }
+
+ .zk-about-deTop {
+   margin-top: 10px;
+   text-align: center;
+ }
+
+ .develop-stratage {
+   color: #dddddd;
+   font-size: 17px;
+   text-align: center;
+ }
+
+ .develop-english {
+   color: #dddddd;
+   font-size: 10px;
+   text-align: center;
+ }
+
+ .developfirst {
+   margin-top: 30px;
+
+   h3 {
+     display: flex;
+     height: 20px;
+     line-height: 20px;
+     margin-left: 30px;
+
+     img {
+       height: 20px;
+       width: 24px;
+       margin-right: 16px;
+     }
+
+     p {
+       color: #dddddd;
+       height: 20px;
+       line-height: 23px;
+     }
+   }
+
+   ul {
+     margin-left: 54px;
+     font-size: 13px;
+     margin-top: 15px;
+
+     li {
+       height: 20px;
+       line-height: 20px;
+       position: relative;
+       font-size: 10px;
+       color: #dddddd;
+     }
+
+     span {
+       position: absolute;
+       top: 8px;
+       left: -12px;
+     }
+   }
+ }
+
+ .zk-about-joinOur {
+   width: 660upx;
+   height: 354px;
+   margin: 0 auto;
+   background: #3f3f3f;
+   margin-top: 20px;
+   overflow: hidden;
+   border-radius: 10px;
+
+   img {
+     width: 580upx;
+     height: 340upx;
+     margin-top: 20px;
+     margin-left: 16px;
+   }
+
+   .CoreText {
+     font-size: 13px;
+     color: #dddddd;
+     margin-left: 18px;
+     margin-top: 15px;
+     text-indent: 20px;
+     margin-right: 15px;
+     height: 20px;
+     line-height: 20px;
+   }
+
+   .Core {
+     font-size: 16px;
+     //  margin-top: 20px;
+   }
+ }
+
+ .zk-about-link {
+   width: 660upx;
+   //  height: 580px;
+   margin: 0 auto;
+   background: #3f3f3f;
+   margin-top: 20px;
+   overflow: hidden;
+   border-radius: 10px;
+   padding: 16px;
+   color: #dddddd;
+   padding-bottom: 28px;
+
+   p {
+     height: 26px;
+     line-height: 43px;
+     position: relative;
+
+     img {
+       width: 16px;
+       height: 18px;
+       margin-right: 10px;
+       position: absolute;
+       top: 12px;
+     }
+
+     span {
+       font-size: 12px;
+       margin-left: 24px;
+     }
+   }
+ }
+
+ .zk-about-map {
+   margin-top: 30px;
+ }
+
+ .zk-about-developRoute {
+   width: 660upx;
+   height: 862upx;
+   //  background: #dddddd;
+   margin: 0 auto;
+   position: relative;
+   margin-top: 20px;
+   overflow: hidden;
+   border-radius: 10px;
+   padding: 16px;
+   color: #dddddd;
+
+   .shuLine {
+     width: 1px;
+     height: 400px;
+     background: #dddddd;
+   }
+
+   .zk-month {
+     top: 11px;
+   }
+
+   .zk-text,
+   .zk-tweleve,
+   .zk-january,
+   .zk-seventhing,
+   .zk-septemper,
+   .zk-septemperFirm,
+   .zk-septemperFirmSystem,
+   .zk-septemperFirmQiNiuNiu {
+     color: #ffffff;
+     height: 30px;
+     width: 600upx;
+     // background: url('../../../static/img/zk-about/zk-about/small.png') no-repeat
+     //   center;
+     // background-size: 300px 30px;
+     position: absolute;
+     display: flex;
+     line-height: 30px;
+     justify-content: space-between;
+     padding: 0 13px;
+     border-radius: 10px;
+     left: 38px;
+     font-size: 22upx;
+   }
+
+   .zk-septemperFirmQiNiuNiu {
+     top: 398px;
+   }
+
+   .zk-septemperFirmSystem {
+     top: 345px;
+   }
+
+   .zk-septemperFirm {
+     top: 292px;
+   }
+
+   .zk-septemper {
+     top: 239px;
+   }
+
+   .zk-text {
+     width: 600upx;
+     top: 12px;
+     left: 38px;
+
+     .content {
+       line-height: 30px;
+       font-size: 13px !important;
+     }
+   }
+ }
+
+ .zk-month-eighting {
+   top: 73px;
+ }
+
+ .zk-tweleve {
+   top: 73px;
+   left: 38px;
+ }
+
+ .circleMonth,
+ .circleMonth-two,
+ .circleMonth-three,
+ .circleMonth-four {
+   width: 10px;
+   height: 10px;
+   background: #dd2828;
+   border-radius: 50%;
+   position: absolute;
+   left: 11px;
+ }
+
+ .circleMonth-four {
+   top: 409px;
+ }
+
+ .circleMonth-three {
+   top: 356px;
+ }
+
+ .circleMonth {
+   top: 140px;
+ }
+
+ .circleMonth-two {
+   top: 250px;
+ }
+
+ .zk-january {
+   top: 130px;
+   left: 38px;
+ }
+
+ .zk-month-seventhing,
+ .zk-month-eighting,
+ .zk-month,
+ .zk-month-sixthing {
+   width: 30px;
+   height: 30px;
+   background: #dd2828;
+   border-radius: 50%;
+   position: absolute;
+   left: 3px;
+   line-height: 30px;
+   text-align: center;
+ }
+
+ .zk-month-seventhing {
+   top: 187px;
+ }
+
+ .zk-seventhing {
+   top: 185px;
+ }
+
+ .zk-month-sixthing {
+   top: 292px;
+ }
+
+ .zk-about-code {
+   margin-top: 26px;
+
+   img {
+     width: 100px;
+     height: 100px;
+     margin-left: 97px;
+   }
+
+   .codeText {
+     font-size: 12px;
+     text-align: center;
+     color: #ffffff;
+     margin-top: -10px;
+   }
+ }
+
+ .weui-grid__icon {
+   .x-icon {
+     img {
+       width: 40px;
+       height: 40px;
+     }
+   }
+ }
+
+ .content {
+   font-size: 13px;
+ }
+
+ .developfirst ul li {
+   font-size: 12px;
+ }
+
+ .font-size {
+   font-size: 13px;
+ }

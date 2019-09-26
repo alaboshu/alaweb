@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"ඔව්"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"බාගැනීම නවතන්නද?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"සැඟවීමට මෙතැනට අදින්න"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"අවලංගු කරන්න"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"යාවත් කිරීම් පරීක්ෂාව අසමත් විය."</string>
+    <string name="c_buoycircle_checking" priority="translator">"යාවත්කාලීන සඳහා පරීක්ෂා කරමින්..."</string>
+    <string name="c_buoycircle_confirm" priority="translator">"හරි"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery බාගැනීමට නොහැකි විය."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"ප්‍රමාණවත් ගබඩා ඉඩ නැත. බාගැනීමට නොහැකිය."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"බාගැනීම අසමත් විය. නැවත උත්සාහ කරන්නද?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"බාගනිමින් ඇත…"</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"දුරකථන කළමනාකරු හෝ සැකසුම් තුළ HUAWEI AppGallery සඳහා ද්විතිය දියත් කිරීම සක්‍රිය කරන්න කරන්න."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"අවලංගු කරන්න"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"සඟවන්න"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"බැලූන සැඟවුණු පසු, ඒවා නැවත පෙන්වීමට ඔබට යෙදුම නැවත දියත් කිරීමට සිදු වෙනු ඇත."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"බැලූන සැඟවුණු පසුව, ඒවා නැවත පෙන්වීමට ඔබගේ උපාංගය ෆ්ලිප් කරන්න."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"නැවත සිහිපත් නොකරන්න"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"බැලූන සඟවන්න"</string>
+    <string name="c_buoycircle_install" priority="translator">"ස්ථාපනය කරන්න"</string>
+    <string name="c_buoycircle_no" priority="translator">"නැත"</string>
+    <string name="c_buoycircle_retry" priority="translator">"යළි උත්සාහ කරන්න"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"මෙම සේවාව හට පහත යෙදුමේ නවතම අනුවාදය අවශ්‍ය කෙරේ:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"%1$s වෙත සාදරයෙන් පිළිගනිමු"</string>
+</resources>

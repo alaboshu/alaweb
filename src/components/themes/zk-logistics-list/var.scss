@@ -1,0 +1,19 @@
+@import '@/assets/style/variable.scss';
+.zk-logistics-list {
+    width: 100vw;
+    ul {
+        width: 100%;
+        li {
+            width: 100%;
+            border-bottom: 1px solid $gl-border5;
+            padding: 8px 15px;
+            p {
+                line-height: 18px;
+                font-size: 12px;
+                span {
+                    color: $gl-text6;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+.zk-card {
+  .list {
+    position: relative;
+    margin: 10px 0;
+    // height: 130px;
+    height: 18vh;
+    padding: 10px;
+    background: #5123DB;
+    border-radius: 5px;
+    display: flex;
+    box-sizing: border-box;
+
+    .list_cont {
+      color: #fff;
+
+      .zk-card-buttom {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 15vw;
+        margin-top: 9.5vh;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .button {
+    position: absolute;
+    color: #fff;
+    top: 20px;
+    right: 40px;
+    padding: 0 8px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+
+  }
+}
+
+
+.zk-card {
+  font-size: $gl-size-base;
+
+  padding: 10px 10px;
+  padding-top: 0;
+
+  .iconfont {
+    position: static;
+  }
+
+  .zk-card-item {
+    width: 100%;
+    box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    padding-bottom: 30px;
+    border-radius: 4px;
+    position: relative;
+  }
+
+  .zk-card-user-news {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .car-name,
+  .car-address,
+  .car-number {
+    color: $gl-text2;
+  }
+
+  .car-btn {
+    outline: none;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #e4393c;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    width: 96%;
+    left: 50%;
+    margin-left: -48%;
+  }
+
+  .user-name,
+  .zk-card-user-news {
+    border-bottom: 1px solid #f7f7f7;
+    padding: 6px 0;
+  }
+
+  .car-address {
+    line-height: 30px;
+    margin-top: 5px;
+  }
+
+  .car-bottom {
+    display: flex;
+    position: absolute;
+    right: 20px;
+
+    span {
+      font-size: 13px;
+      color: $gl-text2;
+      margin-right: 5px;
+    }
+  }
+
+  .temporarily_box {
+    position: relative;
+    width: 100vw;
+    background-color: $gl-light;
+  }
+
+  .temporarily {
+    width: 100%;
+  }
+
+  .temporarily_img {
+    width: 100%;
+  }
+}

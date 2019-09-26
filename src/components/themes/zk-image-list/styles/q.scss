@@ -1,0 +1,26 @@
+.zk-image-list-q {
+    $list: 5;
+    .zk-image-list {
+        display: block;
+        clear: both;
+        @for $list from 0 to 5 {
+            .image-list-#{$list} {
+                @if $list==0 {
+                    width: 50%;
+                    height: 200px;
+                    float: left;
+                }
+                @if $list==1 {
+                    width: 50%;
+                    height: 100px;
+                    float: right;
+                }
+                @if $list==2 or $list==3 {
+                    width: 25%;
+                    height: 100px;
+                    float: right;
+                }
+            }
+        }
+    }
+}

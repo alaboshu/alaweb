@@ -1,0 +1,28 @@
+.zk-icon-list-k {
+    @import '../var.scss';
+    $list: 8;
+    .zk-icon-list {
+        @for $list from 0 to 8 {
+            .icon-list-#{$list} {
+                height: $list-height;
+                @if $list>=6 {
+                    display: none;
+                }
+                @if $list<2 {
+                    width: 50%;
+                    view {
+                        p {
+                            text-align: center;
+                        }
+                    }
+                }
+                @if $list>=2 and $list<6 {
+                    width: 25%;
+                }
+                .image-#{$list} {
+                    height: 70px;
+                }
+            }
+        }
+    }
+}

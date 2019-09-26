@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"JA"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"Stoppa nedladdning?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"Dra här för att dölja"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"AVBRYT"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"Uppdateringskontrollen misslyckades."</string>
+    <string name="c_buoycircle_checking" priority="translator">"Söker efter uppdateringar…"</string>
+    <string name="c_buoycircle_confirm" priority="translator">"OK"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery kunde inte laddas ned."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"Inte tillräckligt med ledigt utrymme. Kan inte ladda ned."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"Nedladdning misslyckades. Försöka igen?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"Nedladdning..."</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"Aktivera andra start av HUAWEI AppGallery i telefonhanteraren eller inställningar."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"AVBRYT"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"DÖLJ"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"Efter att ballongerna dolts behöver du starta om appen för att visa dem igen."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"Efter att ballongerna dolts, flippa enheten för att visa dem igen."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"Påminn mig inte igen"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"Dölj ballonger"</string>
+    <string name="c_buoycircle_install" priority="translator">"INSTALLERA"</string>
+    <string name="c_buoycircle_no" priority="translator">"NEJ"</string>
+    <string name="c_buoycircle_retry" priority="translator">"FÖRSÖK IGEN"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"Denna tjänst kräver den senaste versionen av följande app:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"Välkommen %1$s"</string>
+</resources>

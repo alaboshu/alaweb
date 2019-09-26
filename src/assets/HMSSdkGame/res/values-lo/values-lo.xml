@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"ແມ່ນແລ້ວ"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"ຢຸດດາວໂຫຼດບໍ?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"ລາກທີ່​ນີ້​ເພື່ອເຊື່ອງ"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"​ຍົກ​ເລີກ"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"ການກວດ​ການ​ອັບ​ເດດຫຼົ້ມ​ເຫຼວ."</string>
+    <string name="c_buoycircle_checking" priority="translator">"ກຳ​ລັງ​ກວດ​ຫາ​ການ​ອັບ​ເດດ..."</string>
+    <string name="c_buoycircle_confirm" priority="translator">"ຕົກ​ລົງ"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery ແມ່ນ​ບໍ່​ສາ​ມາດ​ດາວ​ໂຫຼດ​ໄດ້."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"ບໍ່​ມີ​ພື້ນ​ທີ່​ຫວ່າງພຽງ​ພໍ. ບໍ່​ສາ​ມາດ​ດາວ​ໂຫຼດ​ໄດ້."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"ການ​ດາວ​ໂຫຼດຫຼົ້ມ​ເຫຼວ. ລອງໃໝ່ອີກບໍ?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"ກໍາລັງດາວໂຫຼດ..."</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"ເປີດ​ໃຊ້​ງານ​ການ​ເປີດ​ໃຊ້​ສຳ​ຮອງ​ສຳ​ລັບ HUAWEI AppGallery ຢູ່​ໃນ​ຕົວ​ຈັດ​ການ​ໂທ​ລະ​ສັບ ຫຼື ການ​ຕັ້ງ​ຄ່າ."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"​ຍົກ​ເລີກ"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"ເຊື່ອງ"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"ຫຼັງ​ຈາກ​ເຊື່ອມ​ປູມ​ເປົ້າ​ແລ້ວ, ທ່ານ​ຈະ​ຕ້ອງ​ໄດ້​ເປີດ​ໃຊ້​ແອັບ​ຄືນ​ອີກ ເພື່ອ​ສະ​ແດງ​ພວກ​ມັນ​ອີກ."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"ຫຼັງ​ຈາກ​ເຊື່ອມ​ປູມ​ເປົ້າ​ແລ້ວ, ພິກ​ອຸ​ປະ​ກອນ​ຂອງ​ທ່ານ ເພື່ອ​ສະ​ແດງ​ພວກ​ມັນ​ອີກ."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"ຢ່າ​ເຕືອນ​ຂ້ອຍ​ອີກ"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"ເຊື່ອງ​ປູມ​ເປົ້າ"</string>
+    <string name="c_buoycircle_install" priority="translator">"​ຕິດ​ຕັ້ງ"</string>
+    <string name="c_buoycircle_no" priority="translator">"ບໍ່ແມ່ນ"</string>
+    <string name="c_buoycircle_retry" priority="translator">"ລອງ​ໃໝ່"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"ການ​ບໍ​ລິ​ການ​ນີ້​ຕ້ອງການແອັບ​ຕໍ່​ໄປ​ນີ້​ເວີ​ຊັນ​ຫຼ້າ​ສຸດຄື:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"ຍິນ​ດີ​ຕ້ອນ​ຮັບ %1$s"</string>
+</resources>

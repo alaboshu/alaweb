@@ -1,0 +1,41 @@
+.zk-icon-list-f {
+    @import '../var.scss';
+    $list: 8;
+    .zk-icon-list {
+        @for $list from 0 to 8 {
+            .icon-list-#{$list} {
+                @if $list>3 {
+                    display: none;
+                }
+                @if $list==0 {
+                    width: 100%;
+                    height: 80px;
+                }
+                @if $list !=0 {
+                    position: relative;
+                    width: 33%;
+                    height: $list-height;
+                }
+                .image-#{$list} {
+                    @if $list==0 {
+                        height: 80px;
+                    }
+                    @if $list !=0 {
+                        height: 60px;
+                    }
+                }
+                view {
+                    width: 100%;
+                    position: absolute;
+                    bottom: 10px;
+                    p {
+                        text-align: center;
+                        @if $list==0 {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.zk-image-list-p {
+    $list: 3;
+    .zk-image-list {
+        @for $list from 0 to 3 {
+            .image-list-#{$list} {
+                @if $list==0 {
+                    float: left;
+                    width: 40%;
+                    height: 200px;
+                }
+                @if $list !=0 {
+                    float: right;
+                    width: 60%;
+                    height: 100px;
+                }
+                @if $list==2 {
+                    position: absolute;
+                    right: 0;
+                    top: 100px;
+                }
+            }
+        }
+    }
+}

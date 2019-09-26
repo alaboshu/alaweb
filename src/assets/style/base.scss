@@ -1,0 +1,29 @@
+$gl-rem: 1rem / 12;
+
+
+$gl-size-base: 14px;
+$gl-size-lg: ($gl-size-base * 1.25);
+$gl-size-sm: ($gl-size-base * 0.875);
+
+$gl-h1-size: $gl-size-base * 2.5;
+$gl-h2-size: $gl-size-base * 2;
+$gl-h3-size: $gl-size-base * 1.75;
+$gl-h4-size: $gl-size-base * 1.25;
+$gl-h5-size: $gl-size-base * 1;
+$gl-h6-size: $gl-size-base * 0.875;
+$gl-h7-size: $gl-size-base * 0.750;
+
+$gl-h1-weight: bold;
+$gl-h2-weight: 700;
+$gl-h3-weight: 500;
+$gl-h4-weight: 300;
+$gl-h5-weight: normal;
+
+
+$gl-light-grey: #f2f2f2;
+$gl-red: red;
+$gl-light-info: #f3f8fe;
+$gl-green: #1aad19;
+$gl-orange: #f74c31;
+$gl-dark-green: #2aad5c;
+$gl-black: black;

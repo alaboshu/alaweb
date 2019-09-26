@@ -1,0 +1,20 @@
+ .zk-grid-swiper {
+   .swiper-box {
+     height: 11rem;
+   }
+
+   .uni-grid-9 {
+     background: #ffffff;
+     border-top: none;
+
+     .uni-swiper_list {
+       box-sizing: border-box;
+       text-align: center;
+       padding: 5px 0px;
+
+       .uni-grid-9-text {
+         font-size: 12px;
+       }
+     }
+   }
+ }

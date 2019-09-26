@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort">[CS_451992]_YES</string>
+    <string name="c_buoycircle_abort_message">[CS_451995]_Stop download?</string>
+    <string name="c_buoycircle_appmarket_name">[CS_451997]_HUAWEI AppGallery</string>
+    <string name="c_buoycircle_auto_hide_notice">[CS_451987]_Drag here to hide</string>
+    <string name="c_buoycircle_cancel">[CS_451991]_CANCEL</string>
+    <string name="c_buoycircle_check_failure">[CS_451999]_Update check failed.</string>
+    <string name="c_buoycircle_checking">[CS_452008]_Checking for updates…</string>
+    <string name="c_buoycircle_confirm">[CS_451990]_OK</string>
+    <string name="c_buoycircle_download_failure">[CS_452007]_HUAWEI AppGallery could not be downloaded.</string>
+    <string name="c_buoycircle_download_no_space">[CS_452003]_Not enough free space. Unable to download.</string>
+    <string name="c_buoycircle_download_retry">[CS_451993]_Download failed. Try again?</string>
+    <string name="c_buoycircle_downloading_loading">[CS_452000]_Downloading…</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast">[CS_451994]_Enable Secondary launch for HUAWEI AppGallery in Phone Manager or Settings.</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel">[CS_451988]_CANCEL</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm">[CS_451989]_HIDE</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor">[CS_452006]_After balloons are hidden, you will need to relaunch the app to show them again.</string>
+    <string name="c_buoycircle_hide_guide_content_sensor">[CS_452005]_After balloons are hidden, flip your device to show them again.</string>
+    <string name="c_buoycircle_hide_guide_noremind">[CS_452001]_Don\'t remind me again</string>
+    <string name="c_buoycircle_hide_guide_title">[CS_452004]_Hide balloons</string>
+    <string name="c_buoycircle_install">[CS_451998]_INSTALL</string>
+    <string name="c_buoycircle_no">[CS_452009]_NO</string>
+    <string name="c_buoycircle_retry">[CS_451996]_RETRY</string>
+    <string name="c_buoycircle_update_message_new">[CS_452002]_This service requires the latest version of the following app:\n\n%1$s</string>
+    <string name="hms_game_login_notice">[CS_367612]_Welcome %1$s</string>
+</resources>

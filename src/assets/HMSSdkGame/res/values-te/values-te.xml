@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"అవును"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"డౌన్‌లోడ్ ఆపివేయాలా?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"దాచడానికి ఇక్కడికి లాగండి"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"రద్దు చేయి"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"అప్‌డేట్ తనిఖీ విఫలమైంది."</string>
+    <string name="c_buoycircle_checking" priority="translator">"అప్‌డేట్‌ల కోసం శోధిస్తోంది…"</string>
+    <string name="c_buoycircle_confirm" priority="translator">"సరే"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"HUAWEI AppGallery డౌన్‌లోడ్ చేయడం సాధ్యం కాదు."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"తగినంత ఖాళీ లేదు. డౌన్‌లోడ్ చేయడం సాధ్యం కాదు."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"డౌన్‌లోడ్ విఫలమైంది. మళ్లీ ప్రయత్నించాలా?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"డౌన్‌లోడ్ అవుతోంది..."</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"ఫోన్ మేనేజర్ లేదా సెట్టింగ్‌ల్లో HUAWEI AppGallery కోసం ప్రత్యామ్నాయ లాంచ్‌ను ప్రారంభించండి."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"రద్దు చేయి"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"దాచు"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"బెలూన్‌లను దాచిన తర్వాత, మీరు వాటిని మళ్లీ చూపడానికి అప్లికేషన్‌ను మళ్లీ ప్రారంభించాలి."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"బెలూన్‌లను దాచిన తర్వాత, వాటిని చూపడానికి మీ పరికరాన్ని తిప్పండి."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"నాకు మళ్లీ రిమైండ్ చేయవద్దు"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"బెలూన్‌లను దాచు"</string>
+    <string name="c_buoycircle_install" priority="translator">"ఇన్‌స్టాల్ చేయి"</string>
+    <string name="c_buoycircle_no" priority="translator">"కాదు"</string>
+    <string name="c_buoycircle_retry" priority="translator">"మళ్లీ ప్రయత్నించు"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"ఈ సర్వీస్‌కు కింది అప్లికేషన్ యొక్క తాజా వెర్షన్ అవసరం:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"స్వాగతం %1$s"</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="c_buoycircle_abort" priority="translator">"OO"</string>
+    <string name="c_buoycircle_abort_message" priority="translator">"Ihinto ang pag-download?"</string>
+    <string name="c_buoycircle_appmarket_name" priority="translator">"HUAWEI AppGallery"</string>
+    <string name="c_buoycircle_auto_hide_notice" priority="translator">"I-drag dito para itago"</string>
+    <string name="c_buoycircle_cancel" priority="translator">"KANSELAHIN"</string>
+    <string name="c_buoycircle_check_failure" priority="translator">"Hindi natingnan kung may mga update."</string>
+    <string name="c_buoycircle_checking" priority="translator">"Tinitingnan kung may mga update…"</string>
+    <string name="c_buoycircle_confirm" priority="translator">"OK"</string>
+    <string name="c_buoycircle_download_failure" priority="translator">"Hindi mai-download ang HUAWEI AppGallery."</string>
+    <string name="c_buoycircle_download_no_space" priority="translator">"Hindi sapat ang bakanteng espasyo. Hindi ma-download."</string>
+    <string name="c_buoycircle_download_retry" priority="translator">"Hindi nai-download. Subukang muli?"</string>
+    <string name="c_buoycircle_downloading_loading" priority="translator">"Dina-download..."</string>
+    <string name="c_buoycircle_floatwindow_click_fail_toast" priority="translator">"I-enable ang Pangalawang paglunsad para sa HUAWEI AppGallery sa Phone Manager o sa Mga Setting."</string>
+    <string name="c_buoycircle_hide_guide_btn_cancel" priority="translator">"KANSELAHIN"</string>
+    <string name="c_buoycircle_hide_guide_btn_confirm" priority="translator">"ITAGO"</string>
+    <string name="c_buoycircle_hide_guide_content_nosensor" priority="translator">"Pagkatapos maitago ang mga lobo, kakailanganin mong muling ilunsad ang app para ipakitang muli ang mga ito."</string>
+    <string name="c_buoycircle_hide_guide_content_sensor" priority="translator">"Pagkatapos maitago ang mga lobo, baligtarin ang iyong device para ipakitang muli ang mga ito."</string>
+    <string name="c_buoycircle_hide_guide_noremind" priority="translator">"Huwag nang ipaalalang muli"</string>
+    <string name="c_buoycircle_hide_guide_title" priority="translator">"Itago ang mga lobo"</string>
+    <string name="c_buoycircle_install" priority="translator">"I-INSTALL"</string>
+    <string name="c_buoycircle_no" priority="translator">"HINDI"</string>
+    <string name="c_buoycircle_retry" priority="translator">"SUBUKANG MULI"</string>
+    <string name="c_buoycircle_update_message_new" priority="translator">"Kailangan ng serbisyong ito ang pinakabagong bersyon ng mga sumusunod na app:\n\n%1$s"</string>
+    <string name="hms_game_login_notice" priority="LT">"Welcome %1$s"</string>
+</resources>

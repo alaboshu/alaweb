@@ -1,0 +1,31 @@
+
+  .zk-popup-banner {
+     .uni-mask {
+        background: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+    .uni-banner {
+        width: 70%;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        background: #FFF;
+        border-radius: 10upx;
+        z-index: 99;
+        transform: translate(-50%, -50%);
+    }
+    button{
+      height: 40px;
+      line-height:40px;
+      text-align: center;
+      color: #fff;
+      background-color: #007aff;
+      font-size: 16px;
+
+  }
+}
