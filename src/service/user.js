@@ -187,16 +187,6 @@ export default {
     }
     return loginUser.id
   },
-  // 租户标识
-  tenantSign (isTenant) {
-    if (isTenant || isTenant === 'true') {
-      var user = this.loginUser()
-      if (user.tenant !== null) {
-        return user.tenant.sign
-      }
-    }
-    return null
-  },
   // 用户名
   userName () {
     if (this.loginUser() === null) {
@@ -206,7 +196,6 @@ export default {
   },
   // 当前登录用户
   loginUser (isTenant) {
-    // var user = api.vuexLocalGet(this.userKey())
     var user
     if (isTenant === true) {
       if (!api.isEmpty(api.vuexGet('loginUserTenant'))) {
@@ -219,10 +208,6 @@ export default {
         return api.vuexGet('loginUser')
       } else {
         user = api.localGet(this.userKey())
-        // console.log('loginUser.user-old', user)
-        // console.log('loginUser.user_token-old', api.localGet('user_token'))
-        // console.log('```````````1', JSON.parse(crypto.decrypt(crypto.utf8(crypto.base64(user)), api.localGet('user_token'))))
-        // console.log('```````````222', JSON.parse(crypto.decrypt(user, api.localGet('user_token'))))
         if (!api.isEmpty(user)) {
           var loginUser = JSON.parse(
             crypto.decrypt(user, api.localGet('user_token'))
@@ -247,22 +232,6 @@ export default {
       return null
     }
     return user
-    // --------------------------------------------
-    // if (!api.isEmpty(api.vuexGet('loginUser'))) {
-    //   user = api.vuexGet('loginUser')
-    // } else {
-    //   if (!api.isEmpty(api.localGet(this.userKey()))) {
-    //     // 对加密数据进行base64处理,
-    //     // 将数据先base64还原，再转为utf8数据,再解密数据
-    //     user = JSON.parse(
-    //       crypto.decrypt(
-    //         crypto.utf8(crypto.base64(api.localGet(this.userKey()))),
-    //         api.localGet('user_token')
-    //       )
-    //     )
-    //   }
-    // }
-    // return user
   },
   // 将用户信息写入缓存
   setUser (user, isTenant) {
@@ -288,9 +257,7 @@ export default {
       api.vuexSet('loginUser', user)
     }
     var userText = crypto.encrypt(JSON.stringify(user), userToken)
-    // api.vuexSet(this.userKey(), userText)
     uni.setStorageSync(this.userKey(isTenant), userText)
-    // api.localSet(this.userKey(isTenant), userText)
   },
   userKey (isTenant) {
     return crypto.userKey(isTenant)
@@ -298,7 +265,6 @@ export default {
   // 跳转到登录页面
   toLogin () {
     api.toastWarn('请先登录')
-    // api.localSet('browse_historys', window.location.href)
     api.to('/pages/index?path=user_login')
   },
   loginTo () {
@@ -307,38 +273,22 @@ export default {
     if (this.isLogin()) {
       api.toastWarn('已成功登录')
       // 跳转到上一级页面
-      var isWeChat = api.client() === 'WeChatLite'
       if (getCurrentPages().length === 1) {
         // 如果直接进入登录页面，跳转到会员中心
         api.to(userIndex, isApp)
       } else {
-        if (isWeChat) {
-          // 小程序环境下，返回上一页
-          api.back()
-        } else {
-          if (api.localGet('success_reg_ jump_to_user_center')) {
-            // 上一页面是注册，则跳转到会员中心
-            api.localRemove('success_reg_ jump_to_user_center')
-            api.to(userIndex, isApp)
-          } else {
-            api.back()
-          }
-        }
+        api.back()
       }
     }
   },
   // 检查是否需要登录，如果需要登录则跳转到登录页面，登录成功以后，返回到上一级页面
   checkLogin (option) {
     if (!this.isLogin()) {
-      // api.localSet('browse_historys', base.fullPath())
-      // var forcedLogin = false
       var usercode = option.usercode
       if (!api.isEmpty(usercode)) {
         // url 包含推荐码时跳转
         api.to('/pages/index?path=user_reg')
       }
-      // api.to('/pages/index?path=user_login')
-      // api.to('/pages/index?path=user_login')
       uni.showModal({
         title: '未登录',
         content: '请先登录',
@@ -354,14 +304,6 @@ export default {
           }
         }
       })
-      // uni.showModal({
-      //   title: '未登录',
-      //   content: '您未登录，需要登录后才能继续',
-      //   showCancel: false,
-      //   complete: res => {
-
-      //   }
-      // })
     }
   },
   // 微信公众号登录

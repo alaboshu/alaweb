@@ -72,13 +72,6 @@ export default {
   },
   getRequest(apiUrl, data, notTenant) {
     const request = new Fly()
-    // var tenantToken = null
-    // if (user.isLogin() === true) {
-    //   tenantToken = user.tenantSign(isTenant)
-    //   if (tenant !== undefined) {
-    //     tenantToken = tenant
-    //   }
-    // }
     var tenant = base.tenant()
     var userId = user.id()
     if (notTenant !== undefined) {

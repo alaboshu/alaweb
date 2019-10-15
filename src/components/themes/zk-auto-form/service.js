@@ -78,7 +78,6 @@ export default {
   async save (jsThis) {
     console.log('jsThis.formModel', jsThis.formModel)
     var apiUrl = '/api/auto/save'
-
     if (jsThis.type === null) {
       apiUrl = jsThis.widget.apiUrl
     }
