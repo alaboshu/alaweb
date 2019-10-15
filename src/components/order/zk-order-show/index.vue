@@ -166,7 +166,6 @@
     },
     methods: {
       async  init () {
-
         let parameter = {
           id: this.widget.route.id,
           loginUserId: this.$user.id()
