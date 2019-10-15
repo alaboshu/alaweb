@@ -1,7 +1,5 @@
 import api from '@/service/api'
 import help from '@/service/core/helper'
-import config from '@/service/config'
-import crypto from '@/utils/crypto'
 export default {
   // 判断是生成环境还是开发环境
   isBuild () {
@@ -17,47 +15,6 @@ export default {
     } else {
       return false
     }
-  },
-  // 当前租户
-  tenant () {
-    if (!api.isEmpty(api.localGet('tenant_sign'))) {
-      return JSON.parse(
-        crypto.decrypt(crypto.utf8(crypto.base64(api.localGet('tenant_sign'))))
-      )
-    } else {
-      return null
-    }
-  },
-  // 判断缓存是否有租户信息
-  isHaveTenant (tenant) {
-    if (tenant) {
-      if (api.localGet('tenant_sign')) {
-        if (
-          crypto.encrypt(JSON.stringify(tenant)) !== api.localGet('tenant_sign')
-        ) {
-          api.localSet('tenant_sign', crypto.encrypt(JSON.stringify(tenant)))
-        }
-      } else {
-        api.localSet('tenant_sign', crypto.encrypt(JSON.stringify(tenant)))
-      }
-    }
-  },
-  // 是否启用租户模式
-  isTenant () {
-    return config.isTenant
-  },
-  // 是否为管理员后台租户信息，处理s2b2c模式的时候需要用到
-  isAdminTenant (widget) {
-    var isTenant = false
-    if (
-      widget &&
-      widget.route &&
-      widget.route.path &&
-      widget.route.path.indexOf('admin') !== -1
-    ) {
-      isTenant = true
-    }
-    return isTenant
   },
   diy (widget) {
     if (this.isDiy() && !help.isEmpty(widget)) {

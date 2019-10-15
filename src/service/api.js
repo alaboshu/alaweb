@@ -26,15 +26,25 @@ const wushare = uni.requireNativePlugin('WUApp-Share')
 // 方法名格式：文件名+方法名
 
 export default {
+  // 当前租户
+  tenant () {
+    if (config.isTenant === true) {
+      var tenant = this.vuexLocalGet('tenant')
+      return tenant
+    } else {
+      return ''
+    }
+  },
+  // 是否为租户模式
+  isTenant () {
+    return config.isTenant
+  },
   // 添加日志
   async log () {
     var para = {
       message: JSON.stringify(arguments)
     }
     await this.httpPost('/api/logs/add', para)
-  },
-  info (message, info) {
-    if (process.env.NODE_ENV === 'development') {}
   },
   // config信息
   config () {
@@ -50,7 +60,7 @@ export default {
   },
   /** http请求  ***************************************************************************** */
   // http请求,api接口get方法
-  async httpGet (apiUrl, data) { 
+  async httpGet (apiUrl, data) {
     return http.get(apiUrl, data)
   },
   //   http请求,Post方法 :增
@@ -126,7 +136,9 @@ export default {
       title: '提示',
       content: message,
       success: function (res) {
-        if (res.confirm) {} else if (res.cancel) {}
+        if (res.confirm) {
+        } else if (res.cancel) {
+        }
       }
     })
   },
@@ -136,12 +148,15 @@ export default {
       shareApp.appShare(title, url, desc, imageUrl)
     } else if (this.client() === 'AppPlus' && this.payType() === 3) {
       // #ifdef APP-PLUS
-      wushare.iosShare({
+      wushare.iosShare(
+        {
           text: title,
           url: url
         },
         result => {
-          if (result.completed) {} else {}
+          if (result.completed) {
+          } else {
+          }
         }
       )
       // #endif
@@ -313,8 +328,11 @@ export default {
             })
           } else {
             if (
-              getCurrentPages()[getCurrentPages().length - 1].option.path === 'user_login') {
-              var backUrl = this.localGet('browse_historys')[this.localGet('browse_historys').length - 1]
+              getCurrentPages()[getCurrentPages().length - 1].option.path ===
+              'user_login'
+            ) {
+              var historys = this.localGet('browse_historys')
+              var backUrl = historys[historys.length - 1]
               uni.reLaunch({
                 url: backUrl
               })
@@ -337,7 +355,7 @@ export default {
     var version
     var _this = this
     if (this.client() === 'AppPlus' && this.payType() === 4) {
-      plus.runtime.getProperty(plus.runtime.appid, async function (wgtinfo) {
+      plus.runtime.getProperty(plus.runtime.appid, async function(wgtinfo) {
         version = wgtinfo.version
 
         let par = {
@@ -350,11 +368,12 @@ export default {
             uni.showModal({
               title: '发现新版本',
               content: response.result.note,
-              success: function (res) {
+              success: function(res) {
                 if (res.confirm) {
                   // var url = encodeURI(response.result.url)
                   // plus.runtime.openURL(url, function (res) {})
-                } else if (res.cancel) {}
+                } else if (res.cancel) {
+                }
               }
             })
           }

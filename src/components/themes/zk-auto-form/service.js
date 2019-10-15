@@ -59,7 +59,10 @@ export default {
     if (isApiUrl) {
       var id = jsThis.widget.route.id
       if (id !== undefined) {
-        response = await jsThis.$api.httpGet(jsThis.widget.apiUrl + '&id=' + id, para)
+        response = await jsThis.$api.httpGet(
+          jsThis.widget.apiUrl + '&id=' + id,
+          para
+        )
       } else {
         response = await jsThis.$api.httpGet(jsThis.widget.apiUrl, para)
       }
@@ -108,7 +111,8 @@ export default {
       if (!jsThis.$api.isEmpty(jsThis.widget.route.id)) {
         jsThis.formModel.id = jsThis.widget.route.id
       }
-      if (jsThis.type === null) {}
+      if (jsThis.type === null) {
+      }
       var para = {
         ...jsThis.formModel
         // type: jsThis.type
@@ -121,7 +125,10 @@ export default {
         }
         if (jsThis.$user.isLogin()) {
           var isTenant = false
-          if (jsThis.$base.isAdminTenant(jsThis.widget) && jsThis.$base.isAdminTenant(jsThis.widget) !== -1) {
+          if (
+            jsThis.$base.isAdminTenant(jsThis.widget) &&
+            jsThis.$base.isAdminTenant(jsThis.widget) !== -1
+          ) {
             isTenant = true
           }
           para = {
@@ -131,7 +138,6 @@ export default {
           }
         }
       }
-      console.log('apiUrl', apiUrl)
       var response = await jsThis.$api.httpPost(apiUrl, para)
       if (response === undefined || response.status !== 1) {
         jsThis.$api.toastWarn(response.message)

@@ -74,37 +74,16 @@ export default {
     const request = new Fly()
     var tenant = base.tenant()
     var userId = user.id()
-    if (notTenant !== undefined) {
-      // autoOrder 判断是否租户
-      tenant = ''
-    }
-    if (data !== undefined) {
-      // autoForm,zkList 判断是否租户
-      if (data.isTenant !== undefined) {
-        if (data.isTenant) {
-          if (!api.config().isCustomerShop) {
-            tenant = user.loginUser().tenant.sign
-          }
-          userId = user.id(data.isTenant)
-        }
-      }
-    }
+
     request.interceptors.request.use((config, promise) => {
       config.headers['zk-token'] = token.getToken(apiUrl)
       config.headers['zk-user-id'] = userId
       config.headers['zk-user-token'] = token.getUserToken(apiUrl)
-      config.headers['zk-tenant'] = tenant
+      config.headers['zk-tenant'] = api.tenant()
       config.headers['zk-timestamp'] = token.timestamp()
       return config
     })
     request.config.baseURL = globalConfig.apiBaseUrl
-    // request.config.baseURL = config.app().url
-    if (data !== undefined) {
-      if (data.isTenant) {
-        // console.info('租户模式，请求地址', user.serviceUrl(), tenant)
-        request.config.baseURL = user.serviceUrl()
-      }
-    }
     if (base.isDiy()) {
       var clientHost = api.vuexGet('diyClientHost')
       if (clientHost !== undefined) {
