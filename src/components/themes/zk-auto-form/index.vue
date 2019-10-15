@@ -115,10 +115,6 @@
         })
       },
       async init () {
-  
-        if (this.widget.apiUrl.indexOf('/api/user/findpassword') !== -1) {
-          this.$api.localSet('success_reg_ jump_to_user_center', true)
-        }
         service.init(this)
         this.showAutoForm = true
       },

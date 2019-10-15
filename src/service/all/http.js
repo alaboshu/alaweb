@@ -4,7 +4,6 @@ import token from '@/service/all/token'
 import h5Fly from 'flyio'
 import Fly from 'flyio/dist/npm/wx'
 import api from '@/service/api'
-import store from '@/service/store'
 import base from '@/service/base'
 import user from '@/service/user'
 import globalConfig from '@/service/config'
@@ -12,49 +11,24 @@ import globalConfig from '@/service/config'
 export default {
   //  Get方法：查
   async get(apiUrl, data) {
-    // if (data.loginUserId !== undefined) {
-    //   if (data.loginUserId === 0) {
-    //     data.loginUserId = -1
-    //   }
-    // }
-    // const timer = api.loadingOpen(350)
-    uni.showLoading({
-      title: '加载中..'
-    })
+    const timer = api.loadingOpen(350)
     const response = await this.getRequest(apiUrl, data).get(apiUrl, data)
-    // api.loadingClose(timer)
-    uni.hideLoading()
-    return this.responseStatus(response, apiUrl)
+    api.loadingClose(timer)
+    return response
   },
   //  Post方法 :增
   async post(apiUrl, data) {
-    var response = await this.getRequest(apiUrl, data).post(
-      apiUrl,
-      data
-    )
-    return this.responseStatus(response, apiUrl)
+    var response = await this.getRequest(apiUrl, data).post(apiUrl, data)
+    return response
   },
   //  Put方法：改
   async put(apiUrl, data) {
     var response = await this.getRequest(apiUrl).put(apiUrl, data)
-    return this.responseStatus(response, apiUrl)
+    return response
   },
   //  delete方法：删
   async delete(apiUrl, data) {
-    var response = await this.getRequest(apiUrl).delete(apiUrl, data)
-    return this.responseStatus(response)
-  },
-  // 请求状态判断
-  responseStatus(response, url) {
-    if (response === undefined) {
-      if (!base.isBuild()) {
-        api.toastWarn('获取失败')
-      }
-    } else {
-      if (response.status !== 1) {
-        // api.toastWarn(response.message)
-      }
-    }
+    var response = await this.getRequest(apiUrl).delete(api, data)
     return response
   },
   getClientRequest() {
@@ -96,10 +70,11 @@ export default {
       },
       (err, promise) => {
         if (err) {
-          // api.toastWarn(err.message)
+          if (!base.isBuild()) {
+            console.error(`网络请求错误:${apiUrl},`, err.response)
+          }
         }
-        var result = promise.resolve()
-        return result
+        return promise.resolve(err.response.data)
       }
     )
     return request

@@ -230,13 +230,7 @@ export default {
   // 页面跳转
   // // 页面跳转
   to (url, isApp) {
-    if (url === '/pages/default') {
-      uni.reLaunch({
-        url: url
-      })
-      return
-    }
-    if (url === '/pages/tabbar/user_school') {
+    if (url === '/pages/default' || url.includes('pages/tabbar')) {
       uni.reLaunch({
         url: url
       })

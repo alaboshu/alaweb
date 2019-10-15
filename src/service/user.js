@@ -92,9 +92,9 @@ export default {
     var response = await api.httpPost('/Api/Member/Reg', model)
     if (response.status === 1) {
       api.toastSuccess('注册成功')
+      this.setUser(response.result)
       uni.hideLoading()
-      api.localSet('success_reg_ jump_to_user_center', true) // 注册跳转标识
-      this.login(model)
+      api.to('/pages/tabbar/user_index')
     } else {
       api.toastWarn(response.message)
     }
