@@ -1,102 +1,107 @@
-## install dependencies
+## 阿拉博数-企业全渠道数据中台
 
+阿拉博数是一款针对企业的数据中台管理系统，可采用云端部SAAS模式和私有化方式部署，拥有大型云服务集群，可轻松应对大流量、高并发的复杂数字化云计算场景，多平台人、财、物数字化统一管理，帮助企业轻松实现数字化转型。
+
+##  开源、免费
+- 后台应用程序 https://github.com/zhongku/alabo
+- 移动端：多网合一前端 https://github.com/zhongku/alaweb
+- PC管理后台与PC前端 https://github.com/alaboshu/alapc
+
+## 一套 Vue 代码， 支持 H5、小程序、安卓 App、苹果 App
+
+![图片](https://raw.githubusercontent.com/zhongku/alaweb/weex-branch/src/assets/img/github/banner.png)
+
+> （High quality Weex、MpVue）
+
+## 后台 DIY 系统，所见即所得、最大程度的复用代码
+
+![图片](https://github.com/zhongku/alaweb/blob/weex-branch/src/assets/img/github/diy.jpg)
+
+
+## 想解决的痛点
+
+* 维护一套代码，同时维护 H5、小程序、安卓 App、苹果 App 减少代码负债
+* 用 vue.js 开发，支持多个终端
+* 通过可视化编辑，让客户个性化 DIY 各个终端
+* 开发同一份代码，可以在不同的端上分别执行，避免了多端的重复研发成本
+* 使用同一种开发体验，包括语法设计和工程链路等,减低人员培训成本
+* 同一套组件：设计基于小程序、 iOS、Android、H5、PC，有一定的通用性和普遍性
+
+## Build Setup
+
+```bash
+# install dependencies
 npm install
-yarn install
-npm install -g yarn
 
-## 发布流程
 
-5ug publish all
-5ug init
+# build mini program
+npm run dev:min
+
+# build H5 pages
+npm run dev
+
+# build for production with minification for mini program
+npm run build:min
+
+# build for production with minification for H5 pages
 npm run build
 
-### 开发强调非常非常重要
+# build for production and view the bundle analyzer report
+npm run build --report
 
-- x-icon 用法:优先级 icon,name,src
-- 多余的 console.info()删掉
+# eslint 检查
+npm run lint
 
-## 运行
+# eslint 自动修复
+npm run fix
 
-- 运行 h5：npm run dev
-- 运行小程序: npm run dev:mp
+# build app pages, run debug service
+npm run dev:app
 
-## 安卓离线构建
+# 打包app js包到android和ios工程
+npm run pack:app
+```
 
-- 使用 HBuilderX 构建离线资源
-- 复制 src/unpackage/resources/**UNI**FED8DFC 到 native/android/app/src/main/assets/apps/ 下
-- 使用 Android Studio 打包安装文件
+## 特性
 
-## 开发注意点
+* 支持移动端 H5 `Vue.js` 构建移动端应用
+* 支持微信小程序:,使用 `mpvue` 复用代码构建小程序应用
+* 支持 PC 系统，使用饿了么框架
+* 支持安卓 App,使用 weex 打包
+* 支持苹果 App,使用 weex 打包
+* 支持移微信公众号，在后端配置即可
+* 约定大于配置：尽可能的让业务实现代码最小化
+* 引用不强依赖：彻底的组件化开发能力,尽可能的复用代码
+* 系统构建流程：（Api 接口+组件）--->模块（Widget)-->页面-->流程
+* 优雅的 Api 接口，包括时间戳、域名、Key、秘钥等多种方式组合加密，更安全
+* 自动 Api 接口，Api 接口与 ZKCloud(asp.net core 开发)，自动同步，提高标准，压缩打包体积
+* 自动生成 app.json 无需写代码
+* 自动路由，新增页面路由无需代码
+* 自动表单：通过 json 数据自动构建表单
+* 自动表格：通过 json 数据自动构建表格
+* 自动详情页：通过 json 数据，自动构建详情页
+* 服务器 SSR 渲染页面，减少海量的视图工作量，压缩打包体积，动态渲染页面
+* 通过视图页面，比如说一个界面 index.html?page=product/show/1,不同的 page 代表不同的页面
+* 远程可视化编辑，后台修改后，无需重新发布或上架
 
-- 分析 html 结构，减少 html 嵌套
-- 在组件中尽量的少定义变量，特别时 data，能少一个是一个
-- 变量名不能使用拼音，使用英文，更不能缩写
-- 不能使用本地图片，所有的图片配合可视化编辑来处理，使用远程图片,否则小程序 100%体积超过
-- 所有的 data 数据，模拟数据第一选择使用 diy 构建自动表单，第二选择使用 data.json 数据
-- 不能使用 window.location 进行跳转，而是使用 this.\$api.to()
-- 不能用中文，用 id，等特殊字符来做判断
-- 精通 uti-app 的配置、组件、接口、规范等https://uniapp.dcloud.io/component/README
-- 不能在页面上做过多的开发
-- css 背景，尽可能的不用图片，使用样式来处理
-- 页面结构有服务端 DIY 平台定义，有组件组成
-- 组件 components（所有平台共用、接口、数据格式统一）
-- 元件 elements (各平台独立写)
-- 精通https://github.com/dcloudio/hello-uniapp 所有的目录结构
-- 精通文章：https://ask.dcloud.net.cn/article/35232
-- 优先调试小程序
-- div 使用 view
+## 组件(components)
 
-## 以达优的组件
+* 轮播(zk-swiper),已支持小程序、h5
+* 图标导航(zk-grid),已支持小程序、h5
+* 轮播(zk-swiper),已支持小程序、h5
 
-- 图标（x-icon) ,支持小程序、H5。可加载图片、svg 图标、远程图片以及远程图标
+## 元件(elements)
 
-## 5ug-cli 命令使用
+* 图标（x-icon) ,支持小程序、H5。可加载图片、svg 图标、远程图片以及远程图标
+* 图标导航(zk-grid),已支持小程序、h5
+* x-verifiy-phone
 
-- 全局安装 npm install 5ug-cli -g
+一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari 等）
 
-### 登录：5ug login
 
--输入用户名，密码，选择项目
+* 期待您的加入,交流 QQ 群：215176974
 
-### 创建组件：5ug create <name>
 
--例如： 5ug create test/zk-test 创建组件 其中 test/zk-test 为组件路径和格式
-
-### 发布组件：5ug publish <name>
-
-- 功能：1.发布源文件 2.发布风格 3.版本统计
-- 例如：5ug publish test/zk-test 创建组件 其中 test/zk-test 为组件路径和格式
-
-### 发布所有组件：5ug publish all
-
-### 构建 main.js 5ug main
-
-- 遍历当前项目中 src/components src/elements src/admins 三个目录，自动生成 main.js
-- 只支持二级目录，不支持一级目录和三级目录
-
-## 创建模块流程
-
-### 第一步 创建组件：5ug create <name>
-
-- 本地生成模板文件，包括 vue,js,scss 等文件
-- 5ug publish all 发布所有组件
-
-### 第二步 发布组件：5ug publish <name>
-
-- 在服务器中创建组件，包括风格、样式、版本等
-
-### 第三步 同步表单
-
-- 在/operation/init 点击数据处理
-
-### 第四步 模块添加
-
-- 在/widget/edit 添加模块
-
-### 第五步 编辑表单
-
-- 使用正确的数据格式
-
-### 第六步 前端调试
-
-- 发布最新的数据格式
+## 后台部分预览图
+![图片](https://coding-net-production-file-ci.codehub.cn/19cff000-ea28-11e9-a571-e756f4542f5b.png?sign=PN2zxwimhqkQk4sfRqaYK254BsZhPTEyNTcyNDI1OTkmaz1BS0lEYXk4M2xGbWFTNlk0TFRkek1WTzFTZFpPeUpTTk9ZcHImZT0xNTcwNzk1Mzk5JnQ9MTU3MDU3OTM5OSZyPTE5ODE3NDk0JmY9LzE5Y2ZmMDAwLWVhMjgtMTFlOS1hNTcxLWU3NTZmNDU0MmY1Yi5wbmcmYj1jb2RpbmctbmV0LXByb2R1Y3Rpb24tZmlsZQ==)
+![图片](https://coding-net-production-file-ci.codehub.cn/01ba78a0-ea28-11e9-a571-e756f4542f5b.png?sign=SmeJzEZrtSt4lPDN+4TAKPdyu9lhPTEyNTcyNDI1OTkmaz1BS0lEYXk4M2xGbWFTNlk0TFRkek1WTzFTZFpPeUpTTk9ZcHImZT0xNTcwNzk1MzYwJnQ9MTU3MDU3OTM2MCZyPTczNTM0MjgyJmY9LzAxYmE3OGEwLWVhMjgtMTFlOS1hNTcxLWU3NTZmNDU0MmY1Yi5wbmcmYj1jb2RpbmctbmV0LXByb2R1Y3Rpb24tZmlsZQ==)
