@@ -123,7 +123,6 @@
         click_flag: true,
         index: 0,
         drawCount: '',
-        tenant: '',
         awardId: '',
         awardCount: '',
         getAwardCount: '',
@@ -170,9 +169,6 @@
           this.Status = res.status
           this.$api.toastWarn(res.result.item1.errorMessages[0])
           this.ThisStatus = res.result.item1.errorMessages[0]
-        }
-        if (this.$api.localGet('tenant_sign') !== undefined) {
-          this.tenant = this.$api.localGet('tenant_sign')
         }
       },
       init_prize_list (list) { },

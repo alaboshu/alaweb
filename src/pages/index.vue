@@ -13,11 +13,6 @@
       }
     },
     onLoad (option) {
-      if (this.option.tenant) {
-        this.$store.state.tenant = this.option.tenant
-        this.$api.vuexSet('tenant', this.option.tenant)
-      }
-
       if (option.path !== undefined) {
         this.option = option
       } else {

@@ -23,20 +23,6 @@
     },
     onLoad (option) {
       this.option = option
-      if (this.option.tenant) {
-        if (this.$base.tenant() !== null) {
-          if (this.$base.tenant() !== this.option.tenant) {
-            this.$api.localRemove(this.$user.userKey())
-            this.$api.localRemove(this.$user.userKey(true))
-            this.$api.localRemove('user_info')
-            this.$api.localRemove('user_token')
-            this.$api.localRemove('tenant_sign')
-            this.$base.isHaveTenant(this.option.tenant)
-          }
-        } else {
-          this.$base.isHaveTenant(this.option.tenant)
-        }
-      }
       if (this.$api.client() === 'AppPlus' && this.$api.localGet('isFirstEntry') === undefined) {
         this.$api.localSet('isFirstEntry', true)
         this.showBootUp = true

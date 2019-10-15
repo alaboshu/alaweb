@@ -60,9 +60,6 @@ export default {
       api.localSet('user_info', userInfo)
       if (response.result !== undefined) {
         this.setUser(response.result)
-        // if (this.isTenant() === true) {
-        //   await this.tenantLoginUser(model.username)
-        // }
         api.toastSuccess('登录成功')
         api.localRemove('notLogin')
         // window.location.href = '/pages/index'
@@ -77,20 +74,6 @@ export default {
       api.toastWarn(response.message)
     }
     api.localRemove('wechat_logincount')
-  },
-  async tenantLoginUser (tenant) {
-    var para = {
-      tenant: tenant,
-      isTenant: true
-    }
-    // 租户登录，通过
-    var response = await api.httpGet('Api/Tenant/login', para)
-    if (response.status !== 1) {
-      api.toastWarn('租户登录失败')
-      return
-    }
-    api.vuexSet('loginUserTenant', response.result)
-    this.setUser(response.result, true)
   },
   // 注册
   async reg (model) {
@@ -152,24 +135,6 @@ export default {
       }
     })
   },
-  isTenant () {
-    var user = this.loginUser()
-    if (user.tenant) {
-      if (!api.isEmpty(user.tenant.name)) {
-        return true
-      }
-    }
-    return false
-  },
-  // 服务器Url
-  serviceUrl (isTenant) {
-    var user = this.loginUser()
-    if (user.tenant !== null) {
-      return user.tenant.serviceUrl
-    } else {
-      return null
-    }
-  },
   // 是否登录
   isLogin () {
     var user = this.loginUser()
@@ -180,8 +145,8 @@ export default {
     }
   },
   // 用户Id
-  id (isTenant) {
-    var loginUser = this.loginUser(isTenant)
+  id () {
+    var loginUser = this.loginUser()
     if (loginUser === undefined || loginUser === null) {
       return 0
     }
@@ -195,27 +160,18 @@ export default {
     return this.loginUser().userName
   },
   // 当前登录用户
-  loginUser (isTenant) {
-    var user
-    if (isTenant === true) {
-      if (!api.isEmpty(api.vuexGet('loginUserTenant'))) {
-        return api.vuexGet('loginUserTenant')
-      } else {
-        user = api.localGet(this.userKey(isTenant))
-      }
+  loginUser () {
+    if (!api.isEmpty(api.vuexGet('loginUser'))) {
+      return api.vuexGet('loginUser')
     } else {
-      if (!api.isEmpty(api.vuexGet('loginUser'))) {
-        return api.vuexGet('loginUser')
+      var user = api.localGet(this.userKey())
+      if (!api.isEmpty(user)) {
+        var loginUser = JSON.parse(
+          crypto.decrypt(user, api.localGet('user_token'))
+        )
+        api.vuexSet('loginUser', loginUser)
       } else {
-        user = api.localGet(this.userKey())
-        if (!api.isEmpty(user)) {
-          var loginUser = JSON.parse(
-            crypto.decrypt(user, api.localGet('user_token'))
-          )
-          api.vuexSet('loginUser', loginUser)
-        } else {
-          return
-        }
+        return
       }
     }
     if (!api.isEmpty(user)) {
@@ -234,7 +190,7 @@ export default {
     return user
   },
   // 将用户信息写入缓存
-  setUser (user, isTenant) {
+  setUser (user) {
     if (api.isEmpty(user)) {
       api.toastWarn('用户登录失败')
       return null
@@ -248,19 +204,15 @@ export default {
       return null
     }
     var userToken
-    if (isTenant === true) {
-      userToken = api.localGet('user_token')
-    } else {
-      userToken = user.token
-      // api.localSet('user_token', user.token)
-      uni.setStorageSync('user_token', user.token)
-      api.vuexSet('loginUser', user)
-    }
+    userToken = user.token
+    // api.localSet('user_token', user.token)
+    uni.setStorageSync('user_token', user.token)
+    api.vuexSet('loginUser', user)
     var userText = crypto.encrypt(JSON.stringify(user), userToken)
-    uni.setStorageSync(this.userKey(isTenant), userText)
+    uni.setStorageSync(this.userKey(), userText)
   },
-  userKey (isTenant) {
-    return crypto.userKey(isTenant)
+  userKey () {
+    return crypto.userKey()
   },
   // 跳转到登录页面
   toLogin () {

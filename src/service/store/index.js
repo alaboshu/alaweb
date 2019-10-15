@@ -7,7 +7,6 @@ const store = new Vuex.Store({
   state: {
     hasLogin: false,
     user: '',
-    tenant: null,
     phoneVerification: null,
     showPrice: false,
     getSystemInfoSync: null,

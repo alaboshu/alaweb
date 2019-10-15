@@ -89,11 +89,7 @@
     created () {
     },
     mounted () {
-      if (!this.$user.isTenant() && this.widget.route.path.indexOf('admin') !== -1) {
-        this.showMsg = true
-      } else {
-        this.init()
-      }
+      this.init()
     },
     methods: {
       async  init () {

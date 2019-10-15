@@ -58,14 +58,12 @@
     },
     methods: {
       async  init () {
-        // this.widgetModel = await this.$api.themeWidget(this.widget)
-        // this.viewModel = this.widgetModel.value.result
         var para = {
           userId: this.$user.id()
         }
         var response = await this.$crud.widget(this, 'MemberWidget', para)
         this.viewModel = response
-        var widgetModel = await this.$api.httpGet('Api/Account/DetailEdit', { id: this.$user.id() }, this.$user.isTenant())
+        var widgetModel = await this.$api.httpGet('Api/Account/DetailEdit', { id: this.$user.id() })
         this.widgetModel = widgetModel.result
         this.async = true
       },

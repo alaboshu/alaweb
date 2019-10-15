@@ -108,17 +108,7 @@
       }
     },
     mounted () {
-      // console.log('this.$user.loginUser()', this.$user.loginUser())
-      // console.log('this.$user.isTenant()', this.$user.isTenant())
-      if (!this.$user.isLogin()) {
-        this.init()
-      } else {
-        if (!this.$user.isTenant() && this.widget.route.path.indexOf('admin') !== -1) {
-          this.showMsg = true
-        } else {
-          this.init()
-        }
-      }
+      this.init()
     },
     methods: {
       agreement () {

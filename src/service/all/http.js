@@ -72,9 +72,7 @@ export default {
   },
   getRequest(apiUrl, data, notTenant) {
     const request = new Fly()
-    var tenant = base.tenant()
     var userId = user.id()
-
     request.interceptors.request.use((config, promise) => {
       config.headers['zk-token'] = token.getToken(apiUrl)
       config.headers['zk-user-id'] = userId

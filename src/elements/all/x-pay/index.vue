@@ -166,7 +166,6 @@
         }
       },
       async init () {
-        // console.log('this.$api.config()', this.$api.config(), this.$api.localGet('buyProductInfo')[0].ProductId, this.$base.tenant())
         this.$api.localRemove('wechat_logincount')
         var loginUser = this.$user.loginUser()
         this.userName = loginUser.userName
