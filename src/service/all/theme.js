@@ -1,6 +1,4 @@
-import {
-  THEME_GETPAGEINFO_GET
-} from '@/service/all/apiUrl'
+import { THEME_GETPAGEINFO_GET } from '@/service/all/apiUrl'
 import globalConfig from '@/service/config'
 import http from '@/service/all/http'
 import api from '@/service/api'
@@ -8,9 +6,6 @@ import base from '@/service/base'
 import pagesInfo from '@/build.json'
 // import data from '@/data'
 import user from '../user'
-const {
-  themeId
-} = globalConfig
 export default {
   async page (option) {
     var path = base.path(option)
@@ -129,11 +124,6 @@ export default {
         if (widget.value.stock !== undefined) {
           para.stock = widget.value.stock
         }
-        // if (globalConfig.themeId === '5d26e11a064c25053c9b3def') {
-        //   para.priceStyleId = 'e0000000-1478-49bd-bfc7-e73a5d699013'
-        // } else if (globalConfig.themeId === '5cff06f8d077582dd0006c67') {
-        //   para.priceStyleId = 'e0000000-1478-49bd-bfc7-e73a5d699000'
-        // }
       }
     }
     // widget.value 不为空时，发起请求
@@ -143,7 +133,8 @@ export default {
     }
     if (parameter.value === null || parameter.value === undefined) {
       // 从数据库中获取数据
-      if (parameter.apiUrl === null) {} else {
+      if (parameter.apiUrl === null) {
+      } else {
         parameter = await this.getWidgetValueByApiUrl(parameter, para)
       }
     }
@@ -229,7 +220,6 @@ export default {
     }
     var para = {
       clientType: 'WapH5',
-      themeId: themeId,
       path: path
     }
     if (findPageInfo === null) {
@@ -246,10 +236,8 @@ export default {
     }
     var para = {
       clientType: 'WapH5',
-      themeId: themeId,
       path: '/index'
     }
-    api.vuexSet('themeId', themeId)
     var allPageCacheKey = 'allPageInfo_' + globalConfig.version
     var allPageInfo = api.localGet(allPageCacheKey)
     var isRequest = true // 是否重新请求

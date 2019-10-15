@@ -180,7 +180,6 @@ export default {
       }
     }
     if (jsThis.widget && jsThis.widget.apiUrl.indexOf('/user/login') !== -1) {
-      jsThis.$api.localSet('notLogin', true)
       jsThis.loginPage = true
       // if (!jsThis.$api.isEmpty(await jsThis.$api.localGet('user_info'))) {
       //   var userInfo = JSON.parse(

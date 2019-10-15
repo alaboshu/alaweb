@@ -61,7 +61,6 @@ export default {
       if (response.result !== undefined) {
         this.setUser(response.result)
         api.toastSuccess('登录成功')
-        api.localRemove('notLogin')
         // window.location.href = '/pages/index'
         // this.$store.dispatch('UserLogin', loginUser.result)
         var openId = response.result.openId
