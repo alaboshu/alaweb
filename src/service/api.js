@@ -64,8 +64,8 @@ export default {
     return http.get(apiUrl, data)
   },
   //   http请求,Post方法 :增
-  async httpPost (apiUrl, data, notTenant) {
-    return http.post(apiUrl, data, notTenant)
+  async httpPost (apiUrl, data) {
+    return http.post(apiUrl, data)
   },
   //   http请求,Put方法：改
   async httpPut (apiUrl, data) {

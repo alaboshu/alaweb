@@ -27,8 +27,8 @@ export default {
     return this.responseStatus(response, apiUrl)
   },
   //  Post方法 :增
-  async post(apiUrl, data, notTenant) {
-    var response = await this.getRequest(apiUrl, data, notTenant).post(
+  async post(apiUrl, data) {
+    var response = await this.getRequest(apiUrl, data).post(
       apiUrl,
       data
     )
@@ -70,7 +70,7 @@ export default {
       return request
     }
   },
-  getRequest(apiUrl, data, notTenant) {
+  getRequest(apiUrl) {
     const request = new Fly()
     var userId = user.id()
     request.interceptors.request.use((config, promise) => {

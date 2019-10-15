@@ -79,12 +79,10 @@
         formModel: {},
         loginPage: false,
         returnButtom: false,
-        isTenant: false,
         showMsg: false,
         operationTips: false,
         check: true,
         disboll: false
-
       }
     },
     onLoad (option) {
@@ -117,9 +115,7 @@
         })
       },
       async init () {
-        if (this.widget.route.path.indexOf('admin') !== -1) {
-          this.isTenant = true
-        }
+  
         if (this.widget.apiUrl.indexOf('/api/user/findpassword') !== -1) {
           this.$api.localSet('success_reg_ jump_to_user_center', true)
         }

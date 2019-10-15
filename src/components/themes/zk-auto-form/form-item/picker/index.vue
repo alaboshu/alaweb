@@ -36,9 +36,7 @@
         //   loginUserId: this.$user.loginUser().id
         // }
         let par = {}
-        if (this.widget.route.path.indexOf('admin') !== -1) {
-          par.isTenant = true
-        }
+ 
         var response = await this.$api.httpGet(this.list.dataSource, par)
         // var response = await this.$api.httpGet('Api/Type/GetKeyValue?type=BankType')
         if (response.status === 1) {

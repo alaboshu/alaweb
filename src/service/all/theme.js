@@ -82,16 +82,6 @@ export default {
       // ...widget.value,
       ...appendPara
     }
-    var isTenant = false
-
-    if (widget.route !== undefined) {
-      if (widget.route.path !== undefined) {
-        if (widget.route.path.indexOf('admin') !== -1) {
-          isTenant = true
-          para.isTenant = isTenant
-        }
-      }
-    }
     if (widget !== null || widget !== '') {
       if (widget.value !== null && widget.value !== undefined) {
         if (widget.value.classIds !== undefined) {

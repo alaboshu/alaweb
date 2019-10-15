@@ -26,7 +26,7 @@ export default {
 
   },
   // 本地用户缓存信息key,反正被他人负责恶意修改，每个用户不一样
-  userKey (isTenant) {
+  userKey () {
     var token = api.localGet('user_token')
     if (api.isEmpty(token)) {
       return null
@@ -34,9 +34,6 @@ export default {
     var tokenKey = token + token.substring(3, 10) + projectId.substring(1, 4)
     var userKey = CryptoJS.MD5(tokenKey)
     userKey = 'user_' + userKey.toString().substring(4, 24)
-    if (isTenant === true) {
-      userKey = 'tenant__' + userKey
-    }
     return userKey
   },
   getKey (aceKey) {

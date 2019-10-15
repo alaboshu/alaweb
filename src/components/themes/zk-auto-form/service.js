@@ -53,9 +53,7 @@ export default {
   async getFromByType (jsThis, isApiUrl) {
     var response
     var para = {}
-    if (jsThis.widget.route.path.indexOf('admin') !== -1) {
-      para.isTenant = true
-    }
+
     if (isApiUrl) {
       var id = jsThis.widget.route.id
       if (id !== undefined) {
@@ -124,17 +122,9 @@ export default {
           model: JSON.stringify(jsThis.formModel)
         }
         if (jsThis.$user.isLogin()) {
-          var isTenant = false
-          if (
-            jsThis.$base.isAdminTenant(jsThis.widget) &&
-            jsThis.$base.isAdminTenant(jsThis.widget) !== -1
-          ) {
-            isTenant = true
-          }
           para = {
             ...para,
-            isTenant: isTenant,
-            userId: jsThis.$user.loginUser(isTenant).id
+            userId: jsThis.$user.id()
           }
         }
       }

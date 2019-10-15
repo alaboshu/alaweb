@@ -13,15 +13,11 @@ export default {
     }
   },
   // 从widget中获取数据
-  async widget (intance, type, object, isTenant) {
+  async widget (intance, type, object) {
     var para = {
       type: type,
       json: JSON.stringify(object)
     }
-    // if (isTenant === true) {
-    //   para.isTenant = true
-    // }
-
     var response = await api.httpGet('/Api/Widget/Get', para)
     if (response.status !== 1) {
       intance.$api.toastWarn(response.message)
