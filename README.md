@@ -6,7 +6,8 @@
 - 后台应用程序 https://github.com/zhongku/alabo
 - 移动端：多网合一前端 https://github.com/zhongku/alaweb
 - PC管理后台与PC前端 https://github.com/alaboshu/alapc
-
+## 联系方式
+ - QQ群：215176974
 ## 一套 Vue 代码， 支持 H5、小程序、安卓 App、苹果 App
 
 ![图片](https://raw.githubusercontent.com/zhongku/alaweb/weex-branch/src/assets/img/github/banner.png)
@@ -98,10 +99,8 @@ npm run pack:app
 
 一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari 等）
 
-
-* 期待您的加入,交流 QQ 群：215176974
-
-
 ## 后台部分预览图
 ![图片](https://coding-net-production-file-ci.codehub.cn/19cff000-ea28-11e9-a571-e756f4542f5b.png?sign=PN2zxwimhqkQk4sfRqaYK254BsZhPTEyNTcyNDI1OTkmaz1BS0lEYXk4M2xGbWFTNlk0TFRkek1WTzFTZFpPeUpTTk9ZcHImZT0xNTcwNzk1Mzk5JnQ9MTU3MDU3OTM5OSZyPTE5ODE3NDk0JmY9LzE5Y2ZmMDAwLWVhMjgtMTFlOS1hNTcxLWU3NTZmNDU0MmY1Yi5wbmcmYj1jb2RpbmctbmV0LXByb2R1Y3Rpb24tZmlsZQ==)
 ![图片](https://coding-net-production-file-ci.codehub.cn/01ba78a0-ea28-11e9-a571-e756f4542f5b.png?sign=SmeJzEZrtSt4lPDN+4TAKPdyu9lhPTEyNTcyNDI1OTkmaz1BS0lEYXk4M2xGbWFTNlk0TFRkek1WTzFTZFpPeUpTTk9ZcHImZT0xNTcwNzk1MzYwJnQ9MTU3MDU3OTM2MCZyPTczNTM0MjgyJmY9LzAxYmE3OGEwLWVhMjgtMTFlOS1hNTcxLWU3NTZmNDU0MmY1Yi5wbmcmYj1jb2RpbmctbmV0LXByb2R1Y3Rpb24tZmlsZQ==)
+
+* 期待您的加入,交流 QQ 群：215176974
