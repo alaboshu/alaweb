@@ -32,11 +32,7 @@
     <view>
       <view class="address-btn_foot"></view>
       <view class="address-btn_boxs">
-        <!-- b端显示添加地址 -->
-        <view class="address-btn" @click="addAddress()" v-if="$api.config().isCustomerShop">
-          添加地址
-        </view>
-        <view class="address-btn" @click="addAddress()" v-else-if="addressList.length === 0">
+        <view class="address-btn" @click="addAddress()">
           添加地址
         </view>
       </view>

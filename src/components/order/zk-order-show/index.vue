@@ -152,7 +152,6 @@
         paymentCode: '',
         gradeName: null,
         discounts: 0,
-        isCustomerShop: '',
         tenementFool: true,
         showMember: true,
         FCTitle: '',
@@ -167,7 +166,6 @@
     },
     methods: {
       async  init () {
-        this.isCustomerShop = apiBaseUrl.isCustomerShop
 
         let parameter = {
           id: this.widget.route.id,
@@ -221,9 +219,7 @@
         this.async = true
         for (var i = 0; i < this.viewModel.methods.length; i++) {
           if (this.viewModel.methods[i].type === 'Refund') {
-            if (this.isCustomerShop) {
-              this.tenementFool = false
-            }
+  
           }
         }
         if (apiBaseUrl.themeId === '5d26e11a064c25053c9b3def') {

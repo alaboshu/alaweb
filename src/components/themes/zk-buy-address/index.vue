@@ -40,9 +40,9 @@
 
 <script>
   import { USERADDRESS_GET_GET, USERADDRESS_QUERYBYID_GET, USERADDRESS_DELETE_GET } from '@/service/all/apiUrl'
- 
+
   export default {
-    
+
     data () {
       return {
         widgetModel: '',
@@ -80,9 +80,6 @@
             this.addressList[i].initial = iniTial[0]
           }
           this.async = true
-        }
-        if (this.$api.config().isCustomerShop) {
-          this.showDetail = true
         }
       },
       async deleteAddress (id) {

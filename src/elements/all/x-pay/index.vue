@@ -247,17 +247,6 @@
                   }
                 })
               } else {
-                if (this.$api.config().isCustomerShop) {
-                  let par = {
-                    ProductId: this.$api.localGet('buyProductInfo')[0].ProductId,
-                    Count: this.buyCount,
-                    UserName: this.$base.tenant(),
-                    OrderId: this.orderIds[0],
-                    AddressInfo: this.$api.localGet('default_address')
-                  }
-                  await this.$api.httpPost('/Api/OrderSync/AutoOrder', par, '')
-                  this.$api.to(response.result.url)
-                }
                 var that = this
                 uni.showModal({
                   title: '支付成功',

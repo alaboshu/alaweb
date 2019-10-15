@@ -12,12 +12,8 @@ const projectId = 'C94E355F-79DC-44E8-8EF1-CBF886129EDA' // 私钥ID
 // const projectId = 'be1395a6-3419-9844-ab71-45db4519b75a'
 const privateKey = 'zhonghuarenmingonghegouchenglile' // 私钥
 
-// 租户订单, true就自动下单到主库
-// 会员b端时,设置为true，否则为false
-const isCustomerShop = false
 
 module.exports = {
-  isCustomerShop,
   apiBaseUrl,
   themeId,
   projectId,

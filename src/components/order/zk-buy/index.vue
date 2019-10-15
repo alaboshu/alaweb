@@ -509,10 +509,6 @@
           var response = await this.$api.httpPost(ORDER_BUY_POST, buyInput)
           if (response.status === 1) {
             uni.hideLoading()
-            if (this.$api.config().isCustomerShop) {
-              this.$refs.show_pay.$emit('autoOrder', this.viewModel.storeItems[0].productSkuItems[0].buyCount)
-            }
-
             this.$refs.show_pay.$emit('payMethod', response.result.payId, response.result.payAmount, response.result.orderIds) // 唤起支付窗口
             this.radioChanges = false
           } else {

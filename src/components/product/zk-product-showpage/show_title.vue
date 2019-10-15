@@ -87,7 +87,7 @@
           </div>
         </div>
       </div>
-      <div class="i_other" v-if="!$api.config().isCustomerShop">
+      <div class="i_other" >
         <div class="i_other-repertory">库存{{productView.stock}}件</div>
         <div class="i_other-sold">已售{{productView.soldCount}}件</div>
       </div>
