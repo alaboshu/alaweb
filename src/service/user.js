@@ -11,10 +11,6 @@
 
 import api from '@/service/api'
 import helper from '@/service/core/helper'
-import {
-  USER_LOGIN_POST,
-  USER_REG_POST
-} from '@/service/all/apiUrl'
 import crypto from '@/utils/crypto'
 // import base from './base'
 
@@ -53,7 +49,7 @@ export default {
     if (api.localGet('wechat_openId') !== undefined) {
       model.openId = api.localGet('wechat_openId')
     }
-    var response = await api.httpPost(USER_LOGIN_POST, model)
+    var response = await api.httpPost('Api/Member/Login', model)
     if (response.status === 1) {
       var userInfo = crypto.encrypt(
         JSON.stringify({
@@ -110,13 +106,12 @@ export default {
     uni.showLoading({
       title: '加载中..'
     })
-    var response = await api.httpPost(USER_REG_POST, model)
+    var response = await api.httpPost('/Api/Member/Reg', model)
     if (response.status === 1) {
       api.toastSuccess('注册成功')
       uni.hideLoading()
-      // this.login(model)
-      api.localSet('notComeBack', true)
-      api.to('/pages/index?path=user_login')
+      api.localSet('success_reg_ jump_to_user_center', true) // 注册跳转标识
+      this.login(model)
     } else {
       api.toastWarn(response.message)
     }
@@ -230,10 +225,7 @@ export default {
         // console.log('```````````222', JSON.parse(crypto.decrypt(user, api.localGet('user_token'))))
         if (!api.isEmpty(user)) {
           var loginUser = JSON.parse(
-            crypto.decrypt(
-              user,
-              api.localGet('user_token')
-            )
+            crypto.decrypt(user, api.localGet('user_token'))
           )
           api.vuexSet('loginUser', loginUser)
         } else {
@@ -324,9 +316,9 @@ export default {
           // 小程序环境下，返回上一页
           api.back()
         } else {
-          if (api.localGet('notComeBack')) {
+          if (api.localGet('success_reg_ jump_to_user_center')) {
             // 上一页面是注册，则跳转到会员中心
-            api.localRemove('notComeBack')
+            api.localRemove('success_reg_ jump_to_user_center')
             api.to(userIndex, isApp)
           } else {
             api.back()
