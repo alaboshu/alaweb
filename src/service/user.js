@@ -216,7 +216,7 @@ export default {
   // 跳转到登录页面
   toLogin () {
     api.toastWarn('请先登录')
-    api.to('/pages/index?path=user_login')
+    api.to('/pages/user/login')
   },
   loginTo () {
     var userIndex = '/pages/tabbar/user_index'
@@ -246,7 +246,7 @@ export default {
         success: function (res) {
           if (res.confirm) {
             uni.navigateTo({
-              url: '/pages/index?path=user_login'
+              url: '/pages/user/login'
             })
           } else if (res.cancel) {
             uni.reLaunch({

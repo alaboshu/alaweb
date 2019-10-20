@@ -152,7 +152,7 @@ export default {
           setTimeout(() => {
             if (response.status === 1) {
               uni.redirectTo({
-                url: '/pages/index?path=user_login'
+                url: '/pages/user/login'
               })
             }
           }, 1000)

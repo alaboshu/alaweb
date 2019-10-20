@@ -80,7 +80,7 @@
             success: function (res) {
               if (res.confirm) {
                 uni.navigateTo({
-                  url: '/pages/index?path=user_login'
+                  url: '/pages/user/login'
                 })
               } else if (res.cancel) {
                 uni.reLaunch({

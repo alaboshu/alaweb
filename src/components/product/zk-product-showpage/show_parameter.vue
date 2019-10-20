@@ -296,7 +296,7 @@
               confirmText: '确定',
               success: function (res) {
                 if (res.confirm) {
-                  that.$api.to('/pages/index?path=user_login')
+                  that.$api.to('/pages/user/login')
                 }
               }
             })
@@ -308,7 +308,7 @@
               confirmText: '确定',
               success: function (res) {
                 if (res.confirm) {
-                  that.$api.to('/pages/index?path=user_login')
+                  that.$api.to('/pages/user/login')
                 }
               }
             })
@@ -344,7 +344,7 @@
             // var page = getCurrentPages()
             // var href = '/' + page[0].route + '?id=' + page[0].options.id
             // this.$api.localSet('previous_page_before_login', href)
-            that.$api.to('/pages/index?path=user_login')
+            that.$api.to('/pages/user/login')
           } else {
             // this.$api.localSet('previous_page_before_login', window.location.href)
             uni.showModal({
@@ -354,7 +354,7 @@
               confirmText: '确定',
               success: function (res) {
                 if (res.confirm) {
-                  that.$api.to('/pages/index?path=user_login')
+                  that.$api.to('/pages/user/login')
                 }
               }
             })

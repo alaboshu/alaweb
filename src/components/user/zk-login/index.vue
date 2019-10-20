@@ -33,7 +33,6 @@
       </view>
     </view>
     <view class="btn-row">
-      <!-- <button type="primary" class="primary" @click="bindLogin">登录</button> -->
       <div class="btn-row-login" @click="bindLogin">
         登录
       </div>

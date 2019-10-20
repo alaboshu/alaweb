@@ -120,7 +120,7 @@
       async _switchTab (item, index) {
         this.$api.localSet('preUrl', item.url.value)
         if (await this.$user.isLogin() === false && item.url.value !== '/') {
-          this.$api.to('/pages/index?path=user_login')
+          this.$api.to('/pages/user/login')
         } else {
           this.$refs.xIcon.forEach((icon) => {
             icon.iconColor = '#999'
