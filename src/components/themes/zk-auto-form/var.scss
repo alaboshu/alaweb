@@ -87,7 +87,7 @@
     padding: 15px;
 
     .uni-button {
-      -webkit-appearance: none
+      -webkit-appearance: none;
     }
 
     .btn-sumbit {
@@ -135,7 +135,7 @@
     }
 
     p {
-      color: #666
+      color: #666;
     }
 
     .agreement {
@@ -150,26 +150,6 @@
     top: 10px;
     left: 10px;
     z-index: 999;
-  }
-
-  .form-login {
-    width: 100vw;
-    height: 28vh;
-    position: relative;
-
-    .form-login_box {
-      width: 80px;
-      height: 80px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-      .form-login_img {
-        width: 100%;
-        height: 100%;
-      }
-    }
   }
 }
 

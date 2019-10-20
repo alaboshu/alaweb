@@ -25,9 +25,15 @@
       }
     },
     {
-      "path": "pages/home/reg",
+      "path": "pages/user/reg",
       "style": {
         "navigationBarTitleText": "注册会员"
+      }
+    },
+    {
+      "path": "pages/user/login",
+      "style": {
+        "navigationBarTitleText": "注册登录"
       }
     },
     {

@@ -1,6 +1,5 @@
 import convert from './convert.js'
-// import crypto from '@/utils/crypto'
-// 重要重要非常非常重要提示，次页面不要通过URl来做判断，想清楚再写，再多弄几个表单，没有办法维护
+// 重要重要非常非常重要提示，次页面不要通过URl来做判断
 export default {
   async init (jsThis) {
     var option
@@ -14,7 +13,6 @@ export default {
       jsThis.type = jsThis.widget.key
       jsThis.widget.apiUrl = ''
       var config = await this.getFromByType(jsThis)
-      console.info('获取到的数据', config)
       jsThis.config = await convert.toConfig(config, jsThis.widget)
     } else {
       var type = jsThis.$crud.getType(option)
@@ -60,7 +58,6 @@ export default {
     }
     this.beforeInitForm(jsThis)
     console.log('  jsThis.formModel', jsThis.formModel)
-    console.log('  jsThis.config', jsThis.config)
   },
   // 根据type来获取表单信息，成功和失败状态会不一样
   async getFromByType (jsThis, isApiUrl) {
@@ -88,17 +85,13 @@ export default {
       jsThis.$api.toastWarn(response.message)
     }
   },
-  // 重要重要非常非常重要提示，次页面不要通过URl来做判断，想清楚再写，再多弄几个表单，没有办法维护
+  // 重要重要非常非常重要提示，
   async save (jsThis) {
     console.log('jsThis.formModel', jsThis.formModel)
     var apiUrl = '/api/auto/save'
     if (jsThis.type === null) {
       apiUrl = jsThis.widget.apiUrl
     }
-    // if (jsThis.$api.isEmpty(apiUrl)) {
-    //   jsThis.$api.toastWarn('保存接口为空')
-    // }
-    // apiUrl = apiUrl.toLowerCase()
     // 登录单独处理
     if (apiUrl.indexOf('/user/login') !== -1) {
       await jsThis.$user.login(jsThis.formModel)
