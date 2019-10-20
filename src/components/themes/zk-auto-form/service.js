@@ -16,7 +16,7 @@ export default {
       console.info('获取到的数据', config)
       jsThis.config = await convert.toConfig(config, jsThis.widget)
     } else {
-      type = jsThis.$crud.getType(option)
+      var type = jsThis.$crud.getType(option)
       if (type !== null) {
         jsThis.apiUrl = jsThis.widget.apiUrl
         jsThis.type = type
