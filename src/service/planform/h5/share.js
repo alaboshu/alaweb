@@ -11,7 +11,7 @@ export default {
       if (window.location.href.indexOf('/articles/topline/show') !== -1) {
         title = document.title
       }
-      title = '企牛牛'
+      title = '阿拉博数'
       var para = {
         url: url,
         title: title,
@@ -41,7 +41,7 @@ export default {
 
         wx.ready(function () {
           wx.updateAppMessageShareData({ // 好友
-            title: '企牛牛', // 分享标题
+            title: '阿拉博数', // 分享标题
             desc: description, // 分享描述
             link: window.location.href.split('#')[0], // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
             imgUrl: imageUrl, // 分享图标
@@ -50,7 +50,7 @@ export default {
             }
           })
           wx.updateTimelineShareData({ // 朋友圈
-            title: '企牛牛' + description, // 分享标题
+            title: '阿拉博数' + description, // 分享标题
             desc: description, // 分享描述
             link: window.location.href.split('#')[0], // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
             imgUrl: imageUrl, // 分享图标
@@ -59,7 +59,7 @@ export default {
             }
           })
           // wx.onMenuShareTimeline({ // 朋友圈
-          //   title: '企牛牛' + description, // 分享标题
+          //   title: '阿拉博数' + description, // 分享标题
           //   desc: description, // 分享描述
           //   link: window.location.href.split('#')[0], // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
           //   imgUrl: imageUrl, // 分享图标
@@ -69,7 +69,7 @@ export default {
           //   }
           // })
           // wx.onMenuShareAppMessage({ // 好友
-          //   title: '企牛牛', // 分享标题
+          //   title: '阿拉博数', // 分享标题
           //   desc: description, // 分享描述
           //   link: window.location.href.split('#')[0], // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
           //   imgUrl: imageUrl, // 分享图标

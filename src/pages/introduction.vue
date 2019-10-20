@@ -37,7 +37,7 @@
     },
     mounted () {
       if (this.$api.client() === 'WapH5' || this.$api.client() === 'WeChat') {
-        this.$api.share('企牛牛-高丽红参秋冬进补美食', 'https://s-open.qiniuniu99.com/wwwroot/Uploads/Core/2019/05/5cdea75089bdb517785b6ffb.png', '高丽红参秋冬进补美食')
+        this.$api.share('阿拉博数-高丽红参秋冬进补美食', 'https://s-open.qiniuniu99.com/wwwroot/Uploads/Core/2019/05/5cdea75089bdb517785b6ffb.png', '高丽红参秋冬进补美食')
       }
 
       this.init()

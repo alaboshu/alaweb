@@ -3,7 +3,7 @@
     <view class="about-us_head">
       <img class="us_head-img" src="https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-20/5c924388397d411c8c07de3e.png" />
       <div class="us_head-title">
-        企牛牛
+        阿拉博数
       </div>
       <div class="us_head-version">
         <span>Version</span> <span>{{version}}</span>
@@ -21,7 +21,7 @@
     </view>
     <view class="about-us_foot">
       <p>Copyright&copy;2018-2019</p>
-      <p>企牛牛qiniuniu99.com版权所有</p>
+      <p>阿拉博数qiniuniu99.com版权所有</p>
     </view>
   </view>
 </template>

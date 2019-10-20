@@ -11,7 +11,7 @@
         <view class="cource_content" v-for="item in  list" :key="item">
           <img src="http://img4.imgtn.bdimg.com/it/u=2984185296,2196422696&fm=26&gp=0.jpg">
           <view class="texts">
-            <span>5分钟分析企牛牛爆点</span>
+            <span>5分钟分析阿拉博数爆点</span>
             <span>34956439794人参加</span>
             <span>课程分类</span>
           </view>

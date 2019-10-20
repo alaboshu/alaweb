@@ -89,7 +89,7 @@
         </div>
         <div class="user-view_a" @click="$api.to('/pages/index?path=about_us_index')">
           <view class="user_conter">
-            <p class="weui_margin">关于企牛牛</p>
+            <p class="weui_margin">关于阿拉博数</p>
           </view>
           <view>
             <i class="zk-right icon iconfont"></i>

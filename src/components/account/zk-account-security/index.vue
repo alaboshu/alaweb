@@ -30,7 +30,7 @@
           </li>
         </ul>
       </view>
-      <view class="account-foot">企牛牛和您一起同进</view>
+      <view class="account-foot">阿拉博数和您一起同进</view>
     </view>
   </view>
 </template>

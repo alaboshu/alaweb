@@ -1987,7 +1987,7 @@
      }
    }, {
      "isLayoutPage": false,
-     "name": "企牛牛登录",
+     "name": "阿拉博数登录",
      "url": "/user/qiniuniu",
      "path": "/user/qiniuniu",
      "layouts": [],
@@ -2006,7 +2006,7 @@
      }
    }, {
      "isLayoutPage": false,
-     "name": "企牛牛登录",
+     "name": "阿拉博数登录",
      "url": "/user/qiniuniu/login",
      "path": "/user/qiniuniu/login",
      "layouts": [],
@@ -7326,7 +7326,7 @@
        "dataId": "5d43d6c143a2c710d49e3bb6",
        "componentPath": "/themes/zk-school-video-list",
        "apiUrl": "Api/Theme/GetValue",
-       "value": "{\"links\":[{\"name\":\"5月9日刘剑董事长走进中亚主题演讲\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0509%E5%88%98%E5%89%91%E8%91%A3%E4%BA%8B%E9%95%BF%E8%B5%B0%E8%BF%9B%E4%B8%AD%E4%BA%9A%E4%B8%BB%E9%A2%98%E6%BC%94%E8%AE%B2_1.mp4\",\"id\":\"jx9tdh52kxveuq8og9\"},{\"name\":\"5月9日黄圣淘总裁城市运营中心推广方案介绍\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0509%E9%BB%84%E5%9C%A3%E6%B7%98%E5%9F%8E%E5%B8%82%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%E6%8E%A8%E5%B9%BF%E6%96%B9%E6%A1%88%E4%BB%8B%E7%BB%8D_1.mp4\",\"id\":\"jx9tdqim10aybpqt2o\"},{\"name\":\"6月12日何光永董事演讲\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0612%E4%BD%95%E5%85%89%E6%B0%B8%E8%91%A3%E4%BA%8B%E6%BC%94%E8%AE%B2_1.mp4\",\"id\":\"jx9te0omgl9l4qy5\",\"show\":false},{\"name\":\"6月12日徐三笑院长企牛牛平台介绍\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0612%E5%BE%90%E4%B8%89%E7%AC%91%E9%99%A2%E9%95%BF%E6%BC%94%E8%AE%B2_2.mp4\",\"id\":\"jx9te7umcpuafngcr\",\"show\":false}],\"name\":\"schoollinks\"}",
+       "value": "{\"links\":[{\"name\":\"5月9日刘剑董事长走进中亚主题演讲\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0509%E5%88%98%E5%89%91%E8%91%A3%E4%BA%8B%E9%95%BF%E8%B5%B0%E8%BF%9B%E4%B8%AD%E4%BA%9A%E4%B8%BB%E9%A2%98%E6%BC%94%E8%AE%B2_1.mp4\",\"id\":\"jx9tdh52kxveuq8og9\"},{\"name\":\"5月9日黄圣淘总裁城市运营中心推广方案介绍\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0509%E9%BB%84%E5%9C%A3%E6%B7%98%E5%9F%8E%E5%B8%82%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%E6%8E%A8%E5%B9%BF%E6%96%B9%E6%A1%88%E4%BB%8B%E7%BB%8D_1.mp4\",\"id\":\"jx9tdqim10aybpqt2o\"},{\"name\":\"6月12日何光永董事演讲\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0612%E4%BD%95%E5%85%89%E6%B0%B8%E8%91%A3%E4%BA%8B%E6%BC%94%E8%AE%B2_1.mp4\",\"id\":\"jx9te0omgl9l4qy5\",\"show\":false},{\"name\":\"6月12日徐三笑院长阿拉博数平台介绍\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0612%E5%BE%90%E4%B8%89%E7%AC%91%E9%99%A2%E9%95%BF%E6%BC%94%E8%AE%B2_2.mp4\",\"id\":\"jx9te7umcpuafngcr\",\"show\":false}],\"name\":\"schoollinks\"}",
        "layout": null,
        "title": "zk-school-video-list",
        "style": {
@@ -7405,7 +7405,7 @@
        "dataId": "5d43d6c143a2c710d49e3bb2",
        "componentPath": "/themes/zk-school-class-video",
        "apiUrl": "Api/Theme/GetValue",
-       "value": "{\"links\":[{\"name\":\"5月9日刘剑董事长走进中亚主题演讲\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0509%E5%88%98%E5%89%91%E8%91%A3%E4%BA%8B%E9%95%BF%E8%B5%B0%E8%BF%9B%E4%B8%AD%E4%BA%9A%E4%B8%BB%E9%A2%98%E6%BC%94%E8%AE%B2_1.mp4\",\"id\":\"jxb8cy5vjts8uzhgft\"},{\"name\":\" 5月9日黄圣淘总裁城市运营中心推广方案介绍\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0509%E9%BB%84%E5%9C%A3%E6%B7%98%E5%9F%8E%E5%B8%82%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%E6%8E%A8%E5%B9%BF%E6%96%B9%E6%A1%88%E4%BB%8B%E7%BB%8D_1.mp4\",\"id\":\"jxb8dbjuakaykgcmsg\"},{\"name\":\"6月12日何光永董事演讲\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0612%E4%BD%95%E5%85%89%E6%B0%B8%E8%91%A3%E4%BA%8B%E6%BC%94%E8%AE%B2_1.mp4\",\"id\":\"jxb8dpyi5i8ffo2m4h\"},{\"name\":\"6月12日徐三笑院长企牛牛平台介绍\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0612%E5%BE%90%E4%B8%89%E7%AC%91%E9%99%A2%E9%95%BF%E6%BC%94%E8%AE%B2_2.mp4\",\"id\":\"jxb8e31e6xevu0xy6\"}],\"tagName\":\"schoollinks\"}",
+       "value": "{\"links\":[{\"name\":\"5月9日刘剑董事长走进中亚主题演讲\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0509%E5%88%98%E5%89%91%E8%91%A3%E4%BA%8B%E9%95%BF%E8%B5%B0%E8%BF%9B%E4%B8%AD%E4%BA%9A%E4%B8%BB%E9%A2%98%E6%BC%94%E8%AE%B2_1.mp4\",\"id\":\"jxb8cy5vjts8uzhgft\"},{\"name\":\" 5月9日黄圣淘总裁城市运营中心推广方案介绍\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0509%E9%BB%84%E5%9C%A3%E6%B7%98%E5%9F%8E%E5%B8%82%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%E6%8E%A8%E5%B9%BF%E6%96%B9%E6%A1%88%E4%BB%8B%E7%BB%8D_1.mp4\",\"id\":\"jxb8dbjuakaykgcmsg\"},{\"name\":\"6月12日何光永董事演讲\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0612%E4%BD%95%E5%85%89%E6%B0%B8%E8%91%A3%E4%BA%8B%E6%BC%94%E8%AE%B2_1.mp4\",\"id\":\"jxb8dpyi5i8ffo2m4h\"},{\"name\":\"6月12日徐三笑院长阿拉博数平台介绍\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0612%E5%BE%90%E4%B8%89%E7%AC%91%E9%99%A2%E9%95%BF%E6%BC%94%E8%AE%B2_2.mp4\",\"id\":\"jxb8e31e6xevu0xy6\"}],\"tagName\":\"schoollinks\"}",
        "layout": null,
        "title": "zk-school-class-video",
        "style": null
@@ -7443,7 +7443,7 @@
      }
    }, {
      "isLayoutPage": false,
-     "name": "关于企牛牛",
+     "name": "关于阿拉博数",
      "url": "/about/us/index",
      "path": "/about/us/index",
      "layouts": [],
@@ -7456,7 +7456,7 @@
        "dataId": "5d43d6c143a2c710d49e3baf",
        "componentPath": "/themes/zk-about-us",
        "apiUrl": "Api/Theme/GetValue",
-       "value": "{\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-27/5d146afc36898020982a015b.png\",\"name\":\"企牛牛\",\"names\":\"企牛牛电子商务科技股份有限公司\"}",
+       "value": "{\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-27/5d146afc36898020982a015b.png\",\"name\":\"阿拉博数\",\"names\":\"阿拉博数电子商务科技股份有限公司\"}",
        "layout": null,
        "title": "关于",
        "style": null
@@ -7932,7 +7932,7 @@
        "null": [],
        "backGround": "#FFFFFF"
      },
-     "name": "企牛牛8月2号上线版本",
+     "name": "阿拉博数8月2号上线版本",
      "menu": null,
      "type": 1
    }

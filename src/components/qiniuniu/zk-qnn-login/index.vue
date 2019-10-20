@@ -2,7 +2,7 @@
   <view class="zk-qnn-login">
     <view class="qnn-login_head">
       <view class="qnn-login-image">
-        <image class="login_phon" src="https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-20/5c924388397d411c8c07de3e.png" alt="企牛牛" />
+        <image class="login_phon" src="https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-20/5c924388397d411c8c07de3e.png" alt="阿拉博数" />
       </view>
     </view>
     <view class="qnn-login_text">

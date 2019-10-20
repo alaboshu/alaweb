@@ -2,7 +2,7 @@
   "pages": [{
       "path": "pages/default",
       "style": {
-        "navigationBarTitleText": "企牛牛",
+        "navigationBarTitleText": "阿拉博数",
         "enablePullDownRefresh": false,
         "app-plus": {
           "titleNView": false
@@ -141,7 +141,7 @@
     // #ifndef MP-WEIXIN || APP-PLUS
     "navigationBarTextStyle": "black",
     // #endif
-    "navigationBarTitleText": "企牛牛",
+    "navigationBarTitleText": "阿拉博数",
     "navigationBarBackgroundColor": "#c81432",
     "backgroundColor": "#F8F8F8"
   },
