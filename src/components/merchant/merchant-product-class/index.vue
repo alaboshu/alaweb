@@ -321,7 +321,7 @@
       },
       async showCartList () {
         var para = {
-          loginUserId: this.$user.id(),
+          userId: this.$user.id(),
           merchantStoreId: this.merchantStoreId
         }
         var res = await this.$api.httpGet(`/Api/MerchantCart/GetCart`, para)

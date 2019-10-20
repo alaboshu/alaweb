@@ -76,7 +76,7 @@
         var merchantStoreId = this.$user.loginUser().merchantStoreId
         this.merchantStoreId = merchantStoreId
         var para = {
-          loginUserId: this.$user.id(),
+          userId: this.$user.id(),
           merchantStoreId: this.merchantStoreId
         }
         var MerRes = await this.$api.httpGet('/Api/MerchantProduct/GetMerchantProducts', para)

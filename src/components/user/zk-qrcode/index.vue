@@ -33,7 +33,7 @@
           this.statusBarHeight = this.$api.getSystemInfoSync().statusBarHeight + 15
         }
         var para = {
-          loginUserId: this.$user.loginUser().id
+          userId: this.$user.loginUser().id
         }
         var reposen = await this.$api.httpGet('/api/userdetail/qrcode', para)
         // this.widgetModel = await this.$api.themeWidget(this.widget)

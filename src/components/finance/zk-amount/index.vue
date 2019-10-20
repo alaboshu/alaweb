@@ -48,7 +48,7 @@
         var para = {
           dataId: this.widget.dataId,
           widgetId: this.widget.widgetId,
-          loginUserId: this.$user.id()
+          userId: this.$user.id()
         }
         var ponsen = await this.$api.httpGet('/api/user/account/allaccounts', para)
         this.viewModel = ponsen.result

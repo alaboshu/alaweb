@@ -71,7 +71,7 @@
       async  init (type) {
         this.widgetModel = await this.$api.themeWidget(this.widget)
         let parameter = {
-          LoginUserId: this.$user.loginUser().id
+          userId: this.$user.loginUser().id
         }
         // var sing = await this.$api.httpGet(USERADDRESS_SINGLE_GET , parameter)
         var response = await this.$api.httpGet(USERADDRESS_GET_GET, parameter)
@@ -112,7 +112,7 @@
       },
       async deleteAddress (id) {
         let parameter = {
-          loginUserId: this.$user.loginUser().id,
+          userId: this.$user.loginUser().id,
           id: id
         }
         var deleteMsg = await this.$api.httpDelete('/api/useraddress/delete', parameter)

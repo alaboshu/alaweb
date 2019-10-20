@@ -130,7 +130,7 @@
           }
           if (this.$user.loginUser() !== null) {
             let listParament = {
-              LoginUserId: this.$user.loginUser().id,
+              userId: this.$user.loginUser().id,
               EntityId: this.viewModel.id,
               Type: 1
             }

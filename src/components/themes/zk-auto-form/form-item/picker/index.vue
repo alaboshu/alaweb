@@ -33,7 +33,7 @@
     methods: {
       async init () {
         // var para = {
-        //   loginUserId: this.$user.loginUser().id
+        //   userId: this.$user.loginUser().id
         // }
         let par = {}
  

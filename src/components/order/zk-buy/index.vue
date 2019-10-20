@@ -284,7 +284,7 @@
           this.isFromOrder = buyProductInfo.isFromOrder
         }
         var buyInfoInput = {
-          loginUserId: this.$user.loginUser().id,
+          userId: this.$user.loginUser().id,
           productJson: JSON.stringify(buyProductInfo)
         }
         var initResponse = await this.$api.httpPost(ORDER_BUYINFO_POST, buyInfoInput)
@@ -354,7 +354,7 @@
         var _this = this
         if (await this.$api.localGet('default_address') === undefined) {
           let parameter = {
-            LoginUserId: this.$user.loginUser().id
+            userId: this.$user.loginUser().id
           }
           var Single = await this.$api.httpGet('/Api/UserAddress/Single', parameter)
           if (Single.status === 1) {
@@ -397,7 +397,7 @@
         }
         var priceInput = {
           sign: this.viewModel.sign, // 传递签名
-          loginUserId: this.$user.loginUser().id, // 用户Id
+          userId: this.$user.loginUser().id, // 用户Id
           addressId: this.addressId,
           reduceMoneysJson: JSON.stringify(this.reduceMoneysItem),
           storeExpressJson: JSON.stringify(storeDelivery),

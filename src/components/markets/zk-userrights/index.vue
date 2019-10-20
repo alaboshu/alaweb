@@ -136,7 +136,7 @@
         if (this.$user.isLogin()) {
           this.uniHeight = this.$api.getSystemInfoSync().windowHeight - 50
           var para = {
-            loginUserId: this.$user.loginUser().id
+            userId: this.$user.loginUser().id
           }
           var message = await this.$api.httpGet('/api/userrights/getview', para)
           this.widgetModel = message.result

@@ -29,7 +29,7 @@
       async init () {
         var _this = this
         setTimeout(async () => {
-          let par = { productId: this.productView.id, LoginUserId: this.$user.id() }
+          let par = { productId: this.productView.id, userId: this.$user.id() }
           if (this.widget.value !== null && this.widget.value.priceStyleId !== undefined) {
             par.priceStyleId = this.widget.value.priceStyleId
           }

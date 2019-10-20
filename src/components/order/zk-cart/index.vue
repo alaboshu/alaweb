@@ -142,7 +142,7 @@
                 productId: product.productId,
                 storeId: store.storeId,
                 count: product.buyCount,
-                loginUserId: vueThis.$user.loginUser().id
+                userId: vueThis.$user.loginUser().id
               }
               var deleteCart = await vueThis.$api.httpGet(CART_REMOVECART_GET, paramenter)
               if (deleteCart.status === 1) {
@@ -244,7 +244,7 @@
                 Count: info.buyCount,
                 ProductId: info.productId,
                 storeId: this.widgetModel.storeItems[productRadioIndex].storeId,
-                LoginUserId: this.$user.loginUser().id
+                userId: this.$user.loginUser().id
               }
               buyProductInfo.push(productinfo)
             }

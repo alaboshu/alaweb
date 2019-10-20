@@ -65,7 +65,7 @@
           grade3: '',
           grade4: '',
           grade5: '',
-          loginUserId: null
+          userId: null
         },
         async: false,
         invisibleBool: false
@@ -86,7 +86,7 @@
           grade3: '',
           grade4: '',
           grade5: '',
-          loginUserId: this.$user.loginUser().id
+          userId: this.$user.loginUser().id
         }
         this.loginUserId = this.$user.loginUser().id
       },

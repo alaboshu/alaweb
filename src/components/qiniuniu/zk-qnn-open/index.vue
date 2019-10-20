@@ -125,7 +125,7 @@
           this.openHeight = this.$api.getSystemInfoSync().windowHeight - 45
           var para = {
             gradeId: this.widget.route.gradeId,
-            loginUserId: this.$user.loginUser().id
+            userId: this.$user.loginUser().id
           }
           var respon = await this.$api.httpGet('/Api/UserRights/OpenPage', para)
           this.widgetModel = respon.result
@@ -135,7 +135,7 @@
         }
         let parament = {
           // id: this.$user.loginUser().gradeId,
-          LoginUserId: this.$user.loginUser().id
+          userId: this.$user.loginUser().id
         }
         var singleAddress = await this.$api.httpGet(USERADDRESS_SINGLE_GET, parament)
         if (singleAddress.status === 1) {

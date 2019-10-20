@@ -79,7 +79,7 @@
         } else {
           let par = {
             ...this.form,
-            LoginUserId: this.$user.id()
+            userId: this.$user.id()
           }
           var response = await this.$api.httpPost('Api/Recharge/AddOnline', par)
           if (response.status === 1) {
@@ -89,7 +89,7 @@
               browserType: 'recharge', // this.$api.payType(), // this.ClientType // 在gloal中获取支付方式列表
               amount: this.form.Amount,
               payId: this.payId,
-              LoginUserId: this.$user.id()
+              userId: this.$user.id()
             }
             var response = await this.$api.httpGet(PAY_GETLIST_GET, paras) // 获取支付方式列表
             if (response.status === 1) {
@@ -110,7 +110,7 @@
           payId: this.payId,
           openId: this.$api.localGet('wechat_openId'),
           clientType: this.$api.client(),
-          loginUserId: this.$user.id()
+          userId: this.$user.id()
         }
         var response = await this.$api.httpPost(PAY_PAY_POST, paras)
         if (this.selectPayType === 7) {

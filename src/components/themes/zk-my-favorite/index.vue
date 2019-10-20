@@ -74,7 +74,7 @@
         }
         this.favoriteWidth = infoWidth * (1 / 3)
         var para = {
-          loginUserId: this.$user.loginUser().id
+          userId: this.$user.loginUser().id
         }
         var respone = await this.$api.httpGet('Api/Favorite/List', para)
         if (respone.status !== 1) {
@@ -88,7 +88,7 @@
       },
       async getDatele (dateValue) {
         var para = {
-          loginUserId: this.$user.loginUser().id,
+          userId: this.$user.loginUser().id,
           entityId: dateValue.entityId,
           product: 1
         }

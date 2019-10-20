@@ -282,7 +282,7 @@
             productId: this.productView.id,
             storeId: this.productView.storeId,
             count: this.buyCount,
-            loginUserId: this.$user.loginUser().id
+            userId: this.$user.loginUser().id
           }
           var message = await this.$api.httpPost('CART_ADDCART_POST', params)
           if (message.status === 1) {
@@ -328,7 +328,7 @@
             storeId: this.productView.storeId,
             // activityRecordId: this.activitySelectId, // 活动id，参与拼团时用到
             // isGroupBuy: isGroupBuy, // 是否为拼团
-            LoginUserId: this.$user.loginUser().id
+            userId: this.$user.loginUser().id
           }]
           this.$api.localSet('buyProductInfo', buyProductInfo)
           this.$api.to('/pages/index?path=order_buy')

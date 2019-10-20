@@ -40,7 +40,7 @@
       async bindLogin () {
         var para = {
           description: this.description,
-          loginUserId: this.$user.loginUser().id
+          userId: this.$user.loginUser().id
         }
         var res = await this.$api.httpPost('/api/workorder/add', para)
         if (res.status !== 1) {

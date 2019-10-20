@@ -24,13 +24,9 @@
 </template>
 
 <script>
-
   import './var.scss'
   import './styles'
-
-
   export default {
-
     data () {
       return {
         async: false,

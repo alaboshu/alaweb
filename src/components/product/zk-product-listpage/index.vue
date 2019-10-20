@@ -50,7 +50,7 @@
           uniSwiperTabHiehgt: 46
         },
         listPar: {
-          loginUserId: '',
+          userId: '',
           SortOrder: '', // 商品排序方式
           Keyword: '', // 搜索关键字
           MinPrice: '', // 最低价格

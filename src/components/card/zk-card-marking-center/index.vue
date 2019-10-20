@@ -78,7 +78,7 @@
       async init () {
         this.userModel = this.$user.loginUser()
         var para = {
-          loginUserId: this.$user.loginUser().id
+          userId: this.$user.loginUser().id
         }
         var response = await this.$crud.widget(this, 'BusinessCenterWidget', para)
         this.viewModel = response

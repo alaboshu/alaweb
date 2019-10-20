@@ -107,7 +107,7 @@
         }
         let parament = {
           id: this.pagesId,
-          LoginUserId: this.$user.loginUser().id
+          userId: this.$user.loginUser().id
         }
         var singleAddress = await this.$api.httpGet(USERADDRESS_SINGLE_GET, parament)
 

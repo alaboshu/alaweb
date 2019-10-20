@@ -93,7 +93,7 @@
         scrollViewHeight: 0,
         orderStatus: 0,
         parmenter: {
-          loginUserId: this.$user.id(),
+          userId: this.$user.id(),
           OrderStatus: 0,
           PageIndex: 1
         },
@@ -190,7 +190,7 @@
       //  支付订单
       async buy (id) {
         var para = {
-          loginUserId: this.$user.loginUser().id,
+          userId: this.$user.loginUser().id,
           id: id
         }
         var buyInputResponse = await this.$api.httpGet(ORDER_PAY_GET, para)
@@ -215,7 +215,7 @@
       },
       async getUrl (id, tIndex, sIndex) {
         let parmenter = {
-          loginUserId: this.$user.id(),
+          userId: this.$user.id(),
           id: id
         }
         var deleteResponse = await this.$api.httpGet(ORDER_CANCEL_GET, parmenter)
@@ -243,7 +243,7 @@
       },
       isShow (item, id) {
         let buyProductInfo = [{
-          LoginUserId: this.$user.id(),
+          userId: this.$user.id(),
           ProductSkuId: item[0].productSkuId,
           Count: item[0].buyCount,
           ProductId: item[0].productId,

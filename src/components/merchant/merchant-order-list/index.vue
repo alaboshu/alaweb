@@ -185,7 +185,7 @@
       },
       async getUrl (id, tIndex, sIndex) {
         let parmenter = {
-          loginUserId: this.$user.id(),
+          userId: this.$user.id(),
           id: id
         }
         var deleteResponse = await this.$api.httpGet(ORDER_CANCEL_GET, parmenter)
@@ -210,7 +210,7 @@
       },
       async isShow (item, id) {
         let buyProductInfo = [{
-          LoginUserId: this.$user.id(),
+          userId: this.$user.id(),
           ProductSkuId: item[0].productSkuId,
           Count: item[0].buyCount,
           ProductId: item[0].productId,

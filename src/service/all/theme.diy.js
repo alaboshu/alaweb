@@ -58,7 +58,7 @@ export default {
           widgetId: result.widgetId,
           defaultDataId: result.defaultDataId,
           // 以下为额外参数
-          loginUserId: loginUserId,
+          userId: loginUserId,
           userId: loginUserId,
           ...appendPara // 附加参数
         }

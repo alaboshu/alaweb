@@ -90,7 +90,7 @@
         }
         if (this.$user.loginUser() !== null) {
           let par = {
-            LoginUserId: this.$user.loginUser().id
+            userId: this.$user.loginUser().id
           }
           var list = await this.$api.httpGet('Api/Favorite/List', par)
           for (var i = 0; i < list.result.length; i++) {
@@ -105,7 +105,7 @@
         if (this.$user.isLogin()) {
           if (this.iconActive === false) {
             let parament = {
-              LoginUserId: this.$user.loginUser().id,
+              userId: this.$user.loginUser().id,
               EntityId: this.viewModel.id,
               Type: 1
             }
@@ -118,7 +118,7 @@
             }
           } else {
             let parament = {
-              LoginUserId: this.$user.loginUser().id,
+              userId: this.$user.loginUser().id,
               EntityId: this.viewModel.id,
               Type: 1
             }

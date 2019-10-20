@@ -174,7 +174,7 @@
           // browserType: 4,
           amount: this.amount,
           payId: this.payId,
-          LoginUserId: this.$user.id()
+          userId: this.$user.id()
         }
         var response = await this.$api.httpGet(PAY_GETLIST_GET, paras) // 获取支付方式列表
         if (response.status === 1) {
@@ -205,7 +205,7 @@
           redirectUrl: this.redirectUrl,
           openId: this.$api.localGet('wechat_openId'),
           clientType: this.$api.client(),
-          loginUserId: this.$user.id()
+          userId: this.$user.id()
 
         }
         this.disBtn = false
@@ -310,7 +310,7 @@
           this.showPayPassword = false
           let parament = {
             payPassWord: String(parseInt(this.password.join(' ').replace(/\s/g, ''))),
-            loginUserId: this.$user.id()
+            userId: this.$user.id()
           }
           var message = await this.$api.httpPost('Api/User/ConfirmPayPassword', parament)
           uni.showLoading({

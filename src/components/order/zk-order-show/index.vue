@@ -168,7 +168,7 @@
       async  init () {
         let parameter = {
           id: this.widget.route.id,
-          loginUserId: this.$user.id()
+          userId: this.$user.id()
         }
         var orderShowResponse = await this.$api.httpGet('/Api/Order/GetOrder', parameter)
 
@@ -254,14 +254,14 @@
       async buy () {
         var para = {
           id: this.viewModel.id,
-          loginUserId: this.$user.id()
+          userId: this.$user.id()
         }
         var buyInputResponse = await this.$api.httpGet(ORDER_PAY_GET, para)
         this.$refs.show_pay.$emit('payMethod', buyInputResponse.result.payId, buyInputResponse.result.payAmount, buyInputResponse.result.orderIds) // 唤起支付窗口
       },
       async getCancel (api) {
         var para = {
-          loginUserId: this.$user.loginUser().id,
+          userId: this.$user.loginUser().id,
           id: this.viewModel.id
         }
         var repones = await this.$api.httpGet(api, para)
@@ -295,7 +295,7 @@
       },
       async layerAffirm () {
         var para = {
-          loginUserId: this.$user.loginUser().id,
+          userId: this.$user.loginUser().id,
           entityId: this.viewModel.id,
           payPassword: this.paymentCode
         }
