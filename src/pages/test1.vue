@@ -1,31 +1,5 @@
 <template>
-  <div class="introduction_img-box">
-    <img src="../static/img/Introduction/Introduction_1.jpg" alt="">
-    <img src="../static/img/Introduction/Introduction_2.jpg" alt="">
-    <img src="../static/img/Introduction/Introduction_3.jpg" alt="">
-    <img src="../static/img/Introduction/Introduction_4.jpg" alt="">
-    <img src="../static/img/Introduction/Introduction_5.jpg" alt="">
-    <img src="../static/img/Introduction/Introduction_6.jpg" alt="">
-    <img src="../static/img/Introduction/Introduction_7.jpg" alt="">
-    <img src="../static/img/Introduction/Introduction_8.jpg" alt="">
-    <div class="introduction_bottom">
-      <div class="introduction-icon" @click="goDefault">
-        <i class="icon iconfont icon-zk-home"></i>
-        <p>首页</p>
-      </div>
-      <div class="introduction-info">
-        <div>
-          <i class="icon iconfont icon-zk-dianhua"></i>
-          400-680-9088
-        </div>
-        <div>客服</div>
-      </div>
-      <div class="introduction-buy" @click="goUrl">
-        立即购买
-      </div>
-    </div>
-    <div class="introduction_bottom-placeholder"></div>
-  </div>
+  <zk-product-item></zk-product-item>
 </template>
 <script>
   export default {

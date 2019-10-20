@@ -195,7 +195,7 @@
         "selectedIconPath": "static/img/class-a.png"
       },
       {
-        "pagePath": "pages/tabbar/user_school",
+        "pagePath": "pages/tabbar/user_recommend",
         "text": "文交所",
         "iconPath": "static/img/school.png",
         "selectedIconPath": "static/img/school-a.png"
