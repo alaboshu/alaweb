@@ -12,6 +12,7 @@ export default {
     if (jsThis.widget && jsThis.widget.key) {
       // 通过手动传进来
       jsThis.type = jsThis.widget.key
+      jsThis.widget.apiUrl = ''
       var config = await this.getFromByType(jsThis)
       console.info('获取到的数据', config)
       jsThis.config = await convert.toConfig(config, jsThis.widget)
