@@ -32,7 +32,7 @@
           </checkbox-group>
           <div class="help-back">
             如没有推荐人，请联系客服
-            <span @click="makePhoneCall()"> 400-680-9088 </span>为您分配。
+            <span @click="makePhoneCall()"> 400-680-9080</span>为您分配。
           </div>
         </div>
         <view class="btn-box">
@@ -147,7 +147,7 @@
       },
       makePhoneCall () {
         uni.makePhoneCall({
-          phoneNumber: '400-680-9088'
+          phoneNumber: '400-680-9008'
         })
       },
       changeValue () {

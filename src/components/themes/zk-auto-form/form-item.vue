@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="box" v-if="list.type==='input'">
+    <div class="box" v-if="list.type==='textbox'">
       <x-input v-model="formItemModel" :label="list.name" :placeholder="list.helpblock" :disabled="list.options.disabled" :clearable="true"></x-input>
     </div>
     <div class="box" v-if="list.type==='json'">

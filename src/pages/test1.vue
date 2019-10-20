@@ -1,5 +1,5 @@
 <template>
-  <zk-product-item></zk-product-item>
+  <div>adsfasdfsdf</div>
 </template>
 <script>
   export default {

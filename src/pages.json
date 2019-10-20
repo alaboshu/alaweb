@@ -17,18 +17,17 @@
         "enablePullDownRefresh": false
       }
     },
-    // {
-    //   "path": "pages/auto",
-    //   "style": {
-    //     "onReachBottomDistance": 20,
-    //     "enablePullDownRefresh": true
-    //   }
-    // },
     {
       "path": "pages/introduction",
       "style": {
         "onReachBottomDistance": 20,
         "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/home/reg",
+      "style": {
+        "navigationBarTitleText": "注册会员"
       }
     },
     {

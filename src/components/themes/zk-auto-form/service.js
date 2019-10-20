@@ -9,22 +9,34 @@ export default {
     } else {
       option = jsThis.widget.route
     }
-    var type = jsThis.$crud.getType(option)
-    if (type !== null) {
-      jsThis.apiUrl = jsThis.widget.apiUrl
-      jsThis.type = type
+    if (jsThis.widget && jsThis.widget.key) {
+      // 通过手动传进来
+      jsThis.type = jsThis.widget.key
       var config = await this.getFromByType(jsThis)
-      jsThis.config = await convert.toConfig(config, jsThis.widget)
-    } else if (jsThis.widget.apiUrl.indexOf('Type') !== -1) {
-      jsThis.type = jsThis.widget.apiUrl.substring(
-        jsThis.widget.apiUrl.indexOf('Type') + 5
-      )
-      var config = await this.getFromByType(jsThis, true)
+      console.info('获取到的数据', config)
       jsThis.config = await convert.toConfig(config, jsThis.widget)
     } else {
-      // 通过diy获取自动表单信息，表单信息直接从diy系统中返回
-      jsThis.config = jsThis.widget.value
+      type = jsThis.$crud.getType(option)
+      if (type !== null) {
+        jsThis.apiUrl = jsThis.widget.apiUrl
+        jsThis.type = type
+        var config = await this.getFromByType(jsThis)
+        jsThis.config = await convert.toConfig(config, jsThis.widget)
+      } else if (
+        jsThis.widget.apiUrl &&
+        jsThis.widget.apiUrl.indexOf('Type') !== -1
+      ) {
+        jsThis.type = jsThis.widget.apiUrl.substring(
+          jsThis.widget.apiUrl.indexOf('Type') + 5
+        )
+        var config = await this.getFromByType(jsThis, true)
+        jsThis.config = await convert.toConfig(config, jsThis.widget)
+      } else {
+        // 通过diy获取自动表单信息，表单信息直接从diy系统中返回
+        jsThis.config = jsThis.widget.value
+      }
     }
+
     if (jsThis.config === undefined || jsThis.config === null) {
       jsThis.$api.toastWarn('表单配置不存在')
     }
@@ -53,7 +65,6 @@ export default {
   async getFromByType (jsThis, isApiUrl) {
     var response
     var para = {}
-
     if (isApiUrl) {
       var id = jsThis.widget.route.id
       if (id !== undefined) {
@@ -66,6 +77,7 @@ export default {
       }
     } else {
       para.type = jsThis.type
+      console.info('配置信息', para.type)
       response = await jsThis.$api.httpGet('/Api/Auto/Form', para)
     }
     if (response.status === 1) {
