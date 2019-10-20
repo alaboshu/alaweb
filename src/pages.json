@@ -1,5 +1,6 @@
 {
-  "pages": [{
+  "pages": [
+    {
       "path": "pages/default",
       "style": {
         "navigationBarTitleText": "阿拉博数",
@@ -147,7 +148,8 @@
   },
   "condition": {
     "current": 0,
-    "list": [{
+    "list": [
+      {
         "name": "首页",
         "path": "pages/default"
       },
@@ -179,7 +181,8 @@
     "selectedColor": " #ff8329",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/default",
         "text": "首页",
         "iconPath": "static/img/index.png",
@@ -193,75 +196,22 @@
       },
       {
         "pagePath": "pages/tabbar/user_school",
-        "text": "商学院",
+        "text": "文交所",
         "iconPath": "static/img/school.png",
         "selectedIconPath": "static/img/school-a.png"
       },
-      // {
-      //   "pagePath": "pages/tabbar/press",
-      //   "text": "头条",
-      //   "iconPath": "static/img/news.png",
-      //   "selectedIconPath": "static/img/news-a.png"
-      // },
       {
-        "pagePath": "pages/tabbar/user_recommend",
-        "text": "推荐",
-        "iconPath": "static/img/recommend.png",
-        "selectedIconPath": "static/img/recommend-a.png"
+        "pagePath": "pages/tabbar/press",
+        "text": "头条",
+        "iconPath": "static/img/news.png",
+        "selectedIconPath": "static/img/news-a.png"
       },
-
-      // {
-      //   "pagePath": "pages/customTabbar/stored_value_edit",
-      //   "text": "储值",
-      //   "iconPath": "static/img/recommend.png",
-      //   "selectedIconPath": "static/img/recommend-a.png"
-      // },
-      // {
-      //   "pagePath": "pages/customTabbar/free_convertibility_index",
-      //   "text": "免费商城",
-      //   "iconPath": "static/img/class.png",
-      //   "selectedIconPath": "static/img/class-a.png"
-      // // },
-      // {
-      //   "pagePath": "pages/customTabbar/merchant_shop_index",
-      //   "text": "本店出品",
-      //   "iconPath": "static/img/recommend.png",
-      //   "selectedIconPath": "static/img/recommend-a.png"
-      // },
-      // {
-      //   "pagePath": "pages/customTabbar/fracture_mall_index",
-      //   "text": "积分商城",
-      //   "iconPath": "static/img/class.png",
-      //   "selectedIconPath": "static/img/class-a.png"
-      // },
       {
         "pagePath": "pages/tabbar/user_index",
         "text": "我的",
         "iconPath": "static/img/user.png",
         "selectedIconPath": "static/img/user-a.png"
       }
-      /* {
-        "pagePath": "pages/default",
-        "text": "首页",
-        "iconPath": "static/img/F_home-a.png",
-        "selectedIconPath": "static/img/F_home.png"
-      }, {
-        "pagePath": "pages/tabbar/product_class",
-        "text": "分类",
-        "iconPath": "static/img/F_shop-a.png",
-        "selectedIconPath": "static/img/F_shop.png"
-      }, {
-        "pagePath": "pages/tabbar/order_cart",
-        "text": "购物车",
-        "iconPath": "static/img/F_cart-a.png",
-        "selectedIconPath": "static/img/F_cart.png"
-      },
-      {
-        "pagePath": "pages/tabbar/user_index",
-        "text": "我的",
-        "iconPath": "static/img/F_My-a.png",
-        "selectedIconPath": "static/img/F_My.png"
-      } */
     ]
   }
 }

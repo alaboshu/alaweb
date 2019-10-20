@@ -32,7 +32,6 @@
         if (this.widgetModel.height > 0) {
           this.height = this.widgetModel.height
         }
-        console.info('this.hei', this.height)
         this.asyns = true
       },
       goLinks (url) {

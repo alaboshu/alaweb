@@ -41,7 +41,7 @@
         <p class="p2" v-else>0</p>
       </view>
       <view class="user-li" @click="$api.to('/pages/index?path=user_rec_index')">
-        <p class="p1">商家数量</p>
+        <p class="p1">会员数量</p>
         <p class="p2" v-if="viewModel.fansCount">{{viewModel.fansCount}}</p>
         <p class="p2" v-else>0</p>
       </view>

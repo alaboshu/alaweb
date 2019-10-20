@@ -1,15 +1,6 @@
 <template>
   <view class="zk-index-new-top">
     <view class="body-bg">
-      <!-- <div class="index-advertising-box">
-        <view class="advertising-img" @click="$api.to('/pages/index?path=mall_explosive')">
-          <img src="https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-05/5cf76f6731109e232cc9d167.gif" alt="">
-        </view>
-        <view class="advertising-placeholder"></view>
-        <view class="advertising-img" @click="$api.to('/pages/index?path=mall_new_brand')">
-          <img src="https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-05/5cf76f9631109e232cc9d1b2.gif" alt="">
-        </view>
-      </div> -->
       <div class="inde-grid_text">
         <view class="inde-grid-box">
           <view class="grid-item" v-for="(item,index) in dataList" :key="index" @click="goLinks(item.url.value)">
@@ -19,9 +10,6 @@
             <p class="grid_info">{{item.name}}</p>
           </view>
         </view>
-      </div>
-      <div class="index-banner">
-        <img src="https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-05/5cf76fcd31109e232cc9d290.gif" alt="">
       </div>
     </view>
   </view>

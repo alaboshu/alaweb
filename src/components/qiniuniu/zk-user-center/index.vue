@@ -39,7 +39,7 @@
             <span v-else> 0</span>
           </view>
           <view class="user_content_item" v-if="isNotIosApp">
-            <span>商家数量</span>
+            <span>会员数量</span>
             <span v-if="viewModel.fansCount">{{viewModel.fansCount}}</span>
             <span v-else> 0</span>
           </view>
