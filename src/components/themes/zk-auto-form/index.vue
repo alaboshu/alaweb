@@ -1,7 +1,7 @@
 <template>
   <view v-if="async" class="zk-auto-form">
-    <view class="alert-text" v-if="autoForm.autoForm.alertText">{{autoForm.autoForm.alertText}}</view>
-    <div class="box-top" v-if="autoForm.autoForm.title">{{autoForm.autoForm.title}}</div>
+    <view class="alert-text" v-if="autoForm.tooltip.alertText">{{autoForm.tooltip.alertText}}</view>
+    <div class="box-top" v-if="autoForm.tooltip.title">{{autoForm.tooltip.title}}</div>
     <div v-for="(list,index) in autoForm.list" :key="index">
       <form-item v-model="formModel[list.model]" :list="list" :model="list.model" :config="config" :formModel="formModel" :widget="widget" @inputModel="inputModel"></form-item>
       <div v-if="list.type==='tab'">
@@ -14,15 +14,15 @@
       </div>
     </div>
     <view class="btn-box">
-      <view class="btn-sumbit " type="primary" @click="sumbit">{{autoForm.autoForm.bottonText}}</view>
+      <view class="btn-sumbit " type="primary" @click="sumbit">{{autoForm.tooltip.bottonText}}</view>
     </view>
-    <view v-if="autoForm.autoForm.buttomHelpText !== null && autoForm.autoForm.buttomHelpText !== undefined">
+    <view v-if="autoForm.tooltip.buttomHelpText !== null && autoForm.tooltip.buttomHelpText !== undefined">
       <ul class="buttom-text">
-        <li v-for="(item, index) in autoForm.autoForm.buttomHelpText" :key="index"> {{index+1}}、{{item}}</li>
+        <li v-for="(item, index) in autoForm.tooltip.buttomHelpText" :key="index"> {{index+1}}、{{item}}</li>
       </ul>
     </view>
-    <view v-if="autoForm.autoForm.links">
-      <view v-for="(item, index) in autoForm.autoForm.links" :key="index" class="box-bottom" @click="toLink(item)">
+    <view v-if="autoForm.tooltip.links">
+      <view v-for="(item, index) in autoForm.tooltip.links" :key="index" class="box-bottom" @click="toLink(item)">
         <p>{{item.name}}</p>
       </view>
     </view>
