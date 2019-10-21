@@ -135,9 +135,11 @@ export default {
         }
       }
       var response = await jsThis.$api.httpPost(apiUrl, para)
+
       if (response === undefined || response.status !== 1) {
         jsThis.$api.toastWarn(response.message)
       } else {
+        console.info('服务器表单信息', response.result)
         if (apiUrl.indexOf('/api/user/changepassword') !== -1) {
           if (response.status !== 1) return
           setTimeout(() => {
@@ -203,7 +205,5 @@ export default {
       }
     }
     jsThis.async = true
-  },
-  // 保存后操作
-  async afterSave () {}
+  }
 }

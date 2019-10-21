@@ -92,6 +92,7 @@ export default {
         autoFormConfig.list.push(objectItem)
       })
     }
+    console.info('表单信息', autoFormConfig)
     return autoFormConfig
   },
   // 获取图标

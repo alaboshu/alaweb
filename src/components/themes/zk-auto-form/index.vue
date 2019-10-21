@@ -2,8 +2,7 @@
   <view>
     <view v-if="async" class="zk-auto-form">
       <div v-if="showAutoForm">
-        <!-- <view class="zkAutoFormText" v-if="config.config.alertText">{{config.config.alertText}}</view> -->
-        <view class="zkAutoFormText2" v-if="config.config.alertText">{{config.config.alertText}}</view>
+        <view class="alert-text" v-if="config.config.alertText">{{config.config.alertText}}</view>
         <view class="pushButton" v-if="returnButtom" @click="onBack">
           <x-icon name="zk-arrows-left_black" size="16" :color="'#999999'"></x-icon>
         </view>
@@ -90,20 +89,6 @@
     },
     computed: {
 
-    },
-    created () {
-      if (this.$user.isLogin() && this.widget && this.widget.apiUrl) {
-        if (this.widget.apiUrl.indexOf('/user/login') !== -1) {
-          uni.reLaunch({
-            url: '/pages/tabbar/user_index'
-          })
-        }
-        if (this.widget.apiUrl.indexOf('/user/reg') !== -1) {
-          uni.reLaunch({
-            url: '/pages/tabbar/user_index'
-          })
-        }
-      }
     },
     mounted () {
       this.init()
