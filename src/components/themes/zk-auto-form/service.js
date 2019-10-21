@@ -3,6 +3,25 @@ import api from '@/service/api'
 import crud from '@/service/crud'
 // 所有的表单数据只从api/auto/form中获取，api/auto/save保存,统一
 export default {
+  async getForm (type, widget, route) {
+    var para = {}
+    if (type) {
+      para.type = type
+    } else if (route) {
+      para.type = crud.getType(route)
+    }
+    if (!type) {
+      api.toastWarn('表单type不存在,请传入')
+    }
+    var response = await api.httpGet('/Api/Auto/Form', para)
+    if (response.status === 1) {
+      console.info('服务器表单信息', response.result)
+      return response.result
+    } else {
+      api.toastWarn(response.message)
+    }
+  },
+
   async init (jsThis) {
     var option
     if (api.client() === 'WapH5' || api.client() === 'WeChat') {

@@ -44,7 +44,7 @@
     data () {
       return {
         async: false,
-        autoForm: '',
+        autoForm: null,
         formModel: {}
       }
     },
@@ -53,7 +53,11 @@
     },
     methods: {
       async init () {
-        service.init(this)
+        this.autoForm = await service.getForm(this.type, this.widget, this.$route)
+        if (this.autoForm) {
+          this.async = true
+        }
+        //  service.init(this)
       },
       inputModel (val) {
         this.formModel[val.model] = val.val

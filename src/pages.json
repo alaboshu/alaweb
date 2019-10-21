@@ -25,12 +25,6 @@
       }
     },
     {
-      "path": "pages/home/add",
-      "style": {
-        "navigationBarTitleText": "注册会员"
-      }
-    },
-    {
       "path": "pages/user/reg",
       "style": {
         "navigationBarTitleText": "会员注册"

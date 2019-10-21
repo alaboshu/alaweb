@@ -1,6 +1,5 @@
 import api from '@/service/api'
 import help from '@/service/core/helper'
-import Vue from 'vue'
 export default {
   // 判断是生成环境还是开发环境
   isBuild () {
