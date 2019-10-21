@@ -48,12 +48,6 @@
         formModel: {}
       }
     },
-    onLoad (option) {
-      this.option = option
-    },
-    computed: {
-
-    },
     mounted () {
       this.init()
     },

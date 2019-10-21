@@ -1,5 +1,4 @@
 import api from '@/service/api'
-import base from '@/service/base'
 
 export default {
   // 根据Url中的参数Id，获取视图
@@ -70,8 +69,7 @@ export default {
     return result
   },
   // 根据路由获取类型
-  getType () {
-    var route = base.router()
+  getType (route) {
     if (route.query !== undefined && route.query.Type !== undefined) {
       return route.query.Type
     }

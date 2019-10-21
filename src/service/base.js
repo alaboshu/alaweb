@@ -2,19 +2,6 @@ import api from '@/service/api'
 import help from '@/service/core/helper'
 import Vue from 'vue'
 export default {
-  // 在系统启动时提前加载默认启动数据
-  // 包括枚举、地址等数据
-  // 当前访问的路由信息
-  router () {
-    var option = Vue.prototype.$route
-    // if (api.client() === 'WapH5' || api.client() === 'WeChat') {
-    //   option = Vue.prototype.$route
-    // }
-    return option
-  },
-  route () {
-    this.route()
-  },
   // 判断是生成环境还是开发环境
   isBuild () {
     if (process.env.NODE_ENV === 'development') {

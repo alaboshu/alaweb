@@ -54,9 +54,7 @@
       }
     },
     props: {
-      option: {
-
-      }
+      option: {}
     },
     onShow () {
     },
