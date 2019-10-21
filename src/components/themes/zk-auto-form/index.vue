@@ -2,9 +2,8 @@
   <view v-if="async" class="zk-auto-form">
     <view class="alert-text" v-if="autoForm.tooltip.alertText">{{autoForm.tooltip.alertText}}</view>
     <div class="box-top" v-if="autoForm.tooltip.title">{{autoForm.tooltip.title}}</div>
-    <div v-for="(list,index) in autoForm.groups" :key="index">
-      <form-item v-model="formModel[list.model]" :list="list" :model="list.model" :formModel="formModel" :widget="widget" @inputModel="inputModel"></form-item>
-      <div v-if="list.type==='tab'">
+    <div v-for="(column,index) in autoForm.columns" :key="index">
+      <div v-if="column.type==='tab'">
         <div v-for="(tabItem,tabItemIndex) in list.columns" :key="tabItemIndex">
           <div class="group-title">{{tabItem.name}}</div>
           <div class="box" v-for="(tabList,tabListIndex) in tabItem.list" :key="tabListIndex">
@@ -12,6 +11,7 @@
           </div>
         </div>
       </div>
+      <form-item v-else v-model="formModel[column.model]" :list="column" :model="column.model" :formModel="formModel" :widget="widget" @inputModel="inputModel"></form-item>
     </div>
     <view class="btn-box">
       <view class="btn-sumbit " type="primary" @click="sumbit">{{autoForm.tooltip.bottonText}}</view>

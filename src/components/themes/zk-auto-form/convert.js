@@ -1,23 +1,18 @@
 export default {
   // 将服务器数据格式转换成zk-auto-form所需要的格式
-  async toConfig (serviceConfig) {
-    var config
-    if (serviceConfig && serviceConfig.groups.length > 1) {
-      config = this.toTabConfig(serviceConfig)
+  async toConfig (config) {
+    if (!config.tooltip) {
+      config.tooltip = {}
+    }
+    if (config && config.groups.length > 1) {
+      config = this.toTabConfig(config)
     } else {
-      config = this.toNoTabConfig(serviceConfig)
+      config = this.toNoTabConfig(config)
     }
     return config
   },
   async toTabConfig (serviceConfig) {
     var formConfig = {}
-    formConfig.config = {
-      name: serviceConfig.name,
-      title: serviceConfig.title,
-      bottonText: serviceConfig.bottonText,
-      apiUrl: serviceConfig.service.postApi,
-      successReturn: serviceConfig.service.successReturn
-    }
     formConfig.list = []
     var tab = {
       type: 'tab',
@@ -56,43 +51,10 @@ export default {
     return formConfig
   },
   async toNoTabConfig (serviceConfig) {
-    var autoFormConfig = {}
     if (serviceConfig) {
-      autoFormConfig.config = {
-        bottonText: serviceConfig.bottonText,
-        name: serviceConfig.name,
-        title: serviceConfig.title,
-        alertText: serviceConfig.alertText,
-        buttomHelpText: serviceConfig.buttomHelpText
-      }
-      autoFormConfig.list = []
-      serviceConfig.groups[0].items.forEach((item, itemIndex) => {
-        var objectItem = {
-          type: item.type,
-          name: item.name,
-          dataSource: item.dataSource,
-          model: item.field,
-          helpBlock: item.helpBlock,
-          rules: item.rules,
-          icon: item.icon,
-          value: item.value,
-          jsonItems: item.jsonItems,
-          options: {
-            placeholder: item.placeHolder,
-            sortOrder: item.sortOrder,
-            editShow: item.editShow,
-            listShow: item.listShow,
-            required: item.required,
-            validType: item.validType,
-            width: item.width,
-            maxlength: item.maxlength,
-            minLength: item.minLength
-          }
-        }
-        autoFormConfig.list.push(objectItem)
-      })
+      serviceConfig.columns = serviceConfig.groups[0].items
     }
-    console.info('表单信息', autoFormConfig)
-    return autoFormConfig
+    console.info('处理后的表单信息', serviceConfig)
+    return serviceConfig
   }
 }
