@@ -22,7 +22,6 @@ export default {
     }
     var response = await api.httpGet('/Api/Auto/Form', para)
     if (response.status === 1) {
-      console.info('服务器表单信息', response.result)
       var config = response.result
       var result = convert.toConfig(config)
       return result
@@ -30,7 +29,20 @@ export default {
       api.toastWarn(response.message)
     }
   },
-
+  // 视图数据赋值
+  getModel (autoFormConfig) {
+    var formModel = {}
+    if (autoFormConfig && autoFormConfig.groups) {
+      autoFormConfig.groups.forEach(group => {
+        group.items.forEach(element => {
+          if (!api.isEmpty(element.value)) {
+            formModel[element.field] = element.value
+          }
+        })
+      })
+    }
+    return formModel
+  },
   async init (jsThis) {
     if (jsThis.autoForm.list) {
       jsThis.autoForm.list.forEach(element => {
@@ -160,41 +172,5 @@ export default {
         // }, 1000)
       }
     }
-  },
-  // 表单渲染前操作
-  async beforeInitForm (jsThis) {
-    if (
-      jsThis.$user.isLogin() &&
-      jsThis.widget &&
-      jsThis.widget.apiUrl.indexOf('/user/login') !== -1
-    ) {
-      uni.reLaunch({
-        url: '/pages/tabbar/user_index'
-      })
-      jsThis.async = false
-    }
-    if (jsThis.widget && jsThis.widget.apiUrl.indexOf('/user/reg') !== -1) {
-      if (!api.isEmpty(jsThis.widget.route.usercode)) {
-        jsThis.formModel.code = jsThis.widget.route.usercode
-      }
-    }
-    if (jsThis.widget && jsThis.widget.apiUrl.indexOf('/user/login') !== -1) {
-      jsThis.loginPage = true
-      // if (!api.isEmpty(await api.localGet('user_info'))) {
-      //   var userInfo = JSON.parse(
-      //     crypto.decrypt(
-      //       crypto.utf8(crypto.base64(await api.localGet('user_info')))
-      //     )
-      //   )
-      //   jsThis.formModel.username = userInfo.userName
-      //   jsThis.formModel.password = userInfo.password
-      // }
-    }
-    if (api.client() === 'WapH5' || api.client() === 'WeChat') {
-      if (jsThis.widget && jsThis.widget.apiUrl.indexOf('/user/login') !== -1) {
-        jsThis.returnButtom = true
-      }
-    }
-    jsThis.async = true
   }
 }
