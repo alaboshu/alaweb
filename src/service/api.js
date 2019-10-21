@@ -322,8 +322,10 @@ export default {
             })
           } else {
             if (
+              getCurrentPages()[getCurrentPages().length - 1] &&
+              getCurrentPages()[getCurrentPages().length - 1].option &&
               getCurrentPages()[getCurrentPages().length - 1].option.path ===
-              'user_login'
+                'user_login'
             ) {
               var historys = this.localGet('browse_historys')
               var backUrl = historys[historys.length - 1]
