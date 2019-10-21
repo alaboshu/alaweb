@@ -1,5 +1,5 @@
 import convert from './convert.js'
-import api from '@/service/prototypes/api'
+import api from '@/service/api'
 // 重要重要非常非常重要提示，次页面不要通过URl来做判断
 export default {
   async init (jsThis) {
