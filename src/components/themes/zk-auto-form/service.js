@@ -24,8 +24,11 @@ export default {
     if (response.status === 1) {
       console.info('服务器表单信息', response.result)
       var config = response.result
-      var result = convert.toConfig(config)
-      return result
+      // var result = convert.toConfig(config)
+      if (!config.tooltip) {
+        config.tooltip = {}
+      }
+      return config
     } else {
       api.toastWarn(response.message)
     }

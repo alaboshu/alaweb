@@ -94,16 +94,5 @@ export default {
     }
     console.info('表单信息', autoFormConfig)
     return autoFormConfig
-  },
-  // 获取图标
-  geIcon () {
-    var iconList = [
-      'flaticon-puzzle',
-      'flaticon-menu-button',
-      'flaticon-interface-2',
-      'flaticon-layers',
-      'flaticon-apps'
-    ]
-    return iconList
   }
 }

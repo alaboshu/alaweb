@@ -2,8 +2,8 @@
   <view v-if="async" class="zk-auto-form">
     <view class="alert-text" v-if="autoForm.tooltip.alertText">{{autoForm.tooltip.alertText}}</view>
     <div class="box-top" v-if="autoForm.tooltip.title">{{autoForm.tooltip.title}}</div>
-    <div v-for="(list,index) in autoForm.list" :key="index">
-      <form-item v-model="formModel[list.model]" :list="list" :model="list.model" :config="config" :formModel="formModel" :widget="widget" @inputModel="inputModel"></form-item>
+    <div v-for="(list,index) in autoForm.groups" :key="index">
+      <form-item v-model="formModel[list.model]" :list="list" :model="list.model" :formModel="formModel" :widget="widget" @inputModel="inputModel"></form-item>
       <div v-if="list.type==='tab'">
         <div v-for="(tabItem,tabItemIndex) in list.columns" :key="tabItemIndex">
           <div class="group-title">{{tabItem.name}}</div>
@@ -22,7 +22,7 @@
       </ul>
     </view>
     <view v-if="autoForm.tooltip.links">
-      <view v-for="(item, index) in autoForm.tooltip.links" :key="index" class="box-bottom" @click="toLink(item)">
+      <view v-for="(item, index) in autoForm.tooltip.viewLinks" :key="index" class="box-bottom" @click="toLink(item)">
         <p>{{item.name}}</p>
       </view>
     </view>

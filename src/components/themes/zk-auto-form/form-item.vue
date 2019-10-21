@@ -31,7 +31,7 @@
       <form-picker v-model="formItemModel" ref="mpvuePicker" :list="list" :widget="widget"></form-picker>
     </div>
     <div class="box" v-if="list.type==='verification'">
-      <verification ref="verification" v-model="formItemModel" :formModel="formModel" :config="config" :widget="widget"></verification>
+      <verification ref="verification" v-model="formItemModel" :formModel="formModel" :widget="widget"></verification>
     </div>
     <div class="box" v-if="list.type==='textarea'">
       <view class="uni-textarea">
@@ -57,7 +57,6 @@
     },
     props: {
       list: {},
-      config: {},
       formModel: {},
       widget: {},
       value: {},
