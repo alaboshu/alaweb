@@ -57,7 +57,7 @@
         if (this.autoForm) {
           this.async = true
         }
-        //  service.init(this)
+        console.info('表单结构', this.autoForm)
       },
       inputModel (val) {
         this.formModel[val.model] = val.val

@@ -13,50 +13,25 @@ export default {
     if (!type) {
       api.toastWarn('表单type不存在,请传入')
     }
+    var id = route.id
+    if (id) {
+      para = {
+        ...para,
+        id: id
+      }
+    }
     var response = await api.httpGet('/Api/Auto/Form', para)
     if (response.status === 1) {
       console.info('服务器表单信息', response.result)
-      return response.result
+      var config = response.result
+      var result = convert.toConfig(config)
+      return result
     } else {
       api.toastWarn(response.message)
     }
   },
 
   async init (jsThis) {
-    var option
-    if (api.client() === 'WapH5' || api.client() === 'WeChat') {
-      option = jsThis.$route
-    } else {
-      option = jsThis.widget.route
-    }
-    if (jsThis.widget && jsThis.widget.key) {
-      // 通过手动传进来
-      jsThis.type = jsThis.widget.key
-      jsThis.widget.apiUrl = ''
-      var config = await this.getFromByType(jsThis)
-      jsThis.autoForm = await convert.toConfig(config, jsThis.widget)
-    } else {
-      var type = crud.getType(option)
-      if (type !== null) {
-        jsThis.apiUrl = jsThis.widget.apiUrl
-        jsThis.type = type
-        var config = await this.getFromByType(jsThis)
-        jsThis.autoForm = await convert.toConfig(config, jsThis.widget)
-      } else if (
-        jsThis.widget.apiUrl &&
-        jsThis.widget.apiUrl.indexOf('Type') !== -1
-      ) {
-        jsThis.type = jsThis.widget.apiUrl.substring(
-          jsThis.widget.apiUrl.indexOf('Type') + 5
-        )
-        var config = await this.getFromByType(jsThis, true)
-        jsThis.autoForm = await convert.toConfig(config, jsThis.widget)
-      }
-    }
-
-    if (jsThis.autoForm === undefined || jsThis.autoForm === null) {
-      api.toastWarn('表单配置不存在')
-    }
     if (jsThis.autoForm.list) {
       jsThis.autoForm.list.forEach(element => {
         if (element.type === 'tab') {
