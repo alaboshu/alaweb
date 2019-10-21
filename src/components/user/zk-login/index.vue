@@ -71,6 +71,13 @@
     props: {
       widget: {}
     },
+    created () {
+      if (this.$user.isLogin()) {
+        uni.reLaunch({
+          url: '/pages/tabbar/user_index'
+        })
+      }
+    },
     mounted () {
       this.init()
     },

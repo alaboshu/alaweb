@@ -63,9 +63,15 @@
 
 <script>
   import { USER_REG_POST } from '@/service/all/apiUrl'
- 
+
   export default {
-    
+    created () {
+      if (this.$user.isLogin()) {
+        uni.reLaunch({
+          url: '/pages/tabbar/user_index'
+        })
+      }
+    },
     data () {
       return {
         widgetModel: '',
@@ -91,7 +97,7 @@
     },
     methods: {
       async  init () {
-                  this.widgetModel = await this.$api.themeWidget(this.widget)
+        this.widgetModel = await this.$api.themeWidget(this.widget)
       },
       changePassword: function () {
         this.showPassword = !this.showPassword

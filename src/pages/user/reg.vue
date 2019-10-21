@@ -1,5 +1,5 @@
 <template>
-  <div>注册页面</div>
+  <zk-reg></zk-reg>
 </template>
 <script>
   export default {
