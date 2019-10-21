@@ -1,6 +1,7 @@
 import convert from './convert.js'
 import api from '@/service/api'
-// 重要重要非常非常重要提示，次页面不要通过URl来做判断
+import crud from '@/service/crud'
+// 所有的表单数据只从api/auto/form中获取，api/auto/save保存,统一
 export default {
   async init (jsThis) {
     var option
@@ -14,14 +15,14 @@ export default {
       jsThis.type = jsThis.widget.key
       jsThis.widget.apiUrl = ''
       var config = await this.getFromByType(jsThis)
-      jsThis.config = await convert.toConfig(config, jsThis.widget)
+      jsThis.autoForm = await convert.toConfig(config, jsThis.widget)
     } else {
-      var type = jsThis.$crud.getType(option)
+      var type = crud.getType(option)
       if (type !== null) {
         jsThis.apiUrl = jsThis.widget.apiUrl
         jsThis.type = type
         var config = await this.getFromByType(jsThis)
-        jsThis.config = await convert.toConfig(config, jsThis.widget)
+        jsThis.autoForm = await convert.toConfig(config, jsThis.widget)
       } else if (
         jsThis.widget.apiUrl &&
         jsThis.widget.apiUrl.indexOf('Type') !== -1
@@ -30,18 +31,15 @@ export default {
           jsThis.widget.apiUrl.indexOf('Type') + 5
         )
         var config = await this.getFromByType(jsThis, true)
-        jsThis.config = await convert.toConfig(config, jsThis.widget)
-      } else {
-        // 通过diy获取自动表单信息，表单信息直接从diy系统中返回
-        jsThis.config = jsThis.widget.value
+        jsThis.autoForm = await convert.toConfig(config, jsThis.widget)
       }
     }
 
-    if (jsThis.config === undefined || jsThis.config === null) {
+    if (jsThis.autoForm === undefined || jsThis.autoForm === null) {
       api.toastWarn('表单配置不存在')
     }
-    if (jsThis.config.list) {
-      jsThis.config.list.forEach(element => {
+    if (jsThis.autoForm.list) {
+      jsThis.autoForm.list.forEach(element => {
         if (element.type === 'tab') {
           element.columns.forEach(columns => {
             columns.list.forEach(list => {

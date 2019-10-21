@@ -1,8 +1,8 @@
 <template>
   <view v-if="async" class="zk-auto-form">
-    <view class="alert-text" v-if="config.config.alertText">{{config.config.alertText}}</view>
-    <div class="box-top" v-if="config.config.title">{{config.config.title}}</div>
-    <div v-for="(list,index) in config.list" :key="index">
+    <view class="alert-text" v-if="autoForm.autoForm.alertText">{{autoForm.autoForm.alertText}}</view>
+    <div class="box-top" v-if="autoForm.autoForm.title">{{autoForm.autoForm.title}}</div>
+    <div v-for="(list,index) in autoForm.list" :key="index">
       <form-item v-model="formModel[list.model]" :list="list" :model="list.model" :config="config" :formModel="formModel" :widget="widget" @inputModel="inputModel"></form-item>
       <div v-if="list.type==='tab'">
         <div v-for="(tabItem,tabItemIndex) in list.columns" :key="tabItemIndex">
@@ -14,15 +14,15 @@
       </div>
     </div>
     <view class="btn-box">
-      <view class="btn-sumbit " type="primary" @click="sumbit">{{config.config.bottonText}}</view>
+      <view class="btn-sumbit " type="primary" @click="sumbit">{{autoForm.autoForm.bottonText}}</view>
     </view>
-    <view v-if="config.config.buttomHelpText !== null && config.config.buttomHelpText !== undefined">
+    <view v-if="autoForm.autoForm.buttomHelpText !== null && autoForm.autoForm.buttomHelpText !== undefined">
       <ul class="buttom-text">
-        <li v-for="(item, index) in config.config.buttomHelpText" :key="index"> {{index+1}}、{{item}}</li>
+        <li v-for="(item, index) in autoForm.autoForm.buttomHelpText" :key="index"> {{index+1}}、{{item}}</li>
       </ul>
     </view>
-    <view v-if="config.config.links">
-      <view v-for="(item, index) in config.config.links" :key="index" class="box-bottom" @click="toLink(item)">
+    <view v-if="autoForm.autoForm.links">
+      <view v-for="(item, index) in autoForm.autoForm.links" :key="index" class="box-bottom" @click="toLink(item)">
         <p>{{item.name}}</p>
       </view>
     </view>
@@ -38,15 +38,13 @@
     },
     props: {
       widget: {
-      }
+      },
+      type: {} // 如果type不为空的时候，表单从服务器上动态获取
     },
     data () {
       return {
         async: false,
-        config: '',
-        apiUrl: null,
-        type: null, // 如果type不为空的时候，表单从服务器上动态获取
-        key: null, // 服务器表单key
+        autoForm: '',
         formModel: {}
       }
     },

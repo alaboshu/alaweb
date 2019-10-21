@@ -1,4 +1,5 @@
 import api from '@/service/api'
+import base from '@/service/base'
 
 export default {
   // 根据Url中的参数Id，获取视图
@@ -69,17 +70,22 @@ export default {
     return result
   },
   // 根据路由获取类型
-  getType (route) {
-    if (api.client() === 'WapH5' || api.client() === 'WeChat') {
-      if (route.query !== undefined && route.query.type !== undefined) {
-        return route.query.type
-      }
-      return null
-    } else {
-      if (route.type !== undefined) {
-        return route.type
-      }
-      return null
+  getType () {
+    var route = base.router()
+    if (route.query !== undefined && route.query.Type !== undefined) {
+      return route.query.Type
+    }
+    if (route.query !== undefined && route.query.type !== undefined) {
+      return route.query.type
+    }
+    if (route.query !== undefined && route.query.key !== undefined) {
+      return route.query.key
+    }
+    if (route.query !== undefined && route.query.Key !== undefined) {
+      return route.query.Key
+    }
+    if (route.meta !== undefined && route.meta.type !== undefined) {
+      return route.meta.type
     }
   },
   // 获取URL中的ID
