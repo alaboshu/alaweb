@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="box" v-if="list.type==='textbox'">
-      <x-input v-model="formItemModel" :label="list.name" :placeholder="list.helpblock" :disabled="list.options.disabled" :clearable="true"></x-input>
+      <x-input v-model="formItemModel" :label="list.name" :placeholder="list.helpblock" :clearable="true"></x-input>
     </div>
     <div class="box" v-if="list.type==='json'">
       <x-city-picker v-model="formItemModel" ref="cityPicker" title="cityPicker"></x-city-picker>
@@ -16,16 +16,16 @@
       <check v-model="formItemModel" :list="list"></check>
     </div>
     <div class="box" v-if="list.type==='password'">
-      <x-input v-model="formItemModel" :label="list.name" :password="true" :placeHolder="list.helpblock" :disabled="list.options.disabled"></x-input>
+      <x-input v-model="formItemModel" :label="list.name" :password="true" :placeHolder="list.helpblock"></x-input>
     </div>
     <div class="box" v-if="list.type==='passwordInput'">
-      <x-input v-model="formItemModel" :label="list.name" :password="true" :placeHolder="list.helpblock" :disabled="list.options.disabled"></x-input>
+      <x-input v-model="formItemModel" :label="list.name" :password="true" :placeHolder="list.helpblock"></x-input>
     </div>
     <div class="box" v-if="list.type==='select'">
       <form-picker v-model="formItemModel" ref="mpvuePicker" :list="list" :widget="widget"></form-picker>
     </div>
     <div class="box" v-if="list.type==='phoneInput'">
-      <x-input v-model="formItemModel" :label="list.name" type="number" :placeHolder="list.options.placeholder" :disabled="list.options.disabled" :readonly="list.options.readonly"></x-input>
+      <x-input v-model="formItemModel" :label="list.name" type="number" :placeHolder="list.options.placeholder"></x-input>
     </div>
     <div class="box" v-if="list.type==='radioButton'">
       <form-picker v-model="formItemModel" ref="mpvuePicker" :list="list" :widget="widget"></form-picker>
@@ -35,11 +35,11 @@
     </div>
     <div class="box" v-if="list.type==='textarea'">
       <view class="uni-textarea">
-        <textarea v-model="formItemModel" auto-height :disabled="list.options.disabled" class="textarea" :placeholder="list.options.placeholder" />
+        <textarea v-model="formItemModel" auto-height class="textarea" :placeholder="list.options.placeholder" />
         </view>
       </div>
       <div class="box" v-if="list.type==='number'">
-      <x-input v-model="formItemModel" :label="list.name"  type="number" :placeholder="list.helpblock" :disabled="list.options.disabled" :clearable="true"></x-input>
+      <x-input v-model="formItemModel" :label="list.name"  type="number" :placeholder="list.helpblock"  :clearable="true"></x-input>
     </div>
   </div>
 </template>

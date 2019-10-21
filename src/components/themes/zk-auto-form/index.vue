@@ -7,7 +7,7 @@
         <div v-for="(tabItem,tabItemIndex) in list.columns" :key="tabItemIndex">
           <div class="group-title">{{tabItem.name}}</div>
           <div class="box" v-for="(tabList,tabListIndex) in tabItem.list" :key="tabListIndex">
-            <x-input v-model="formModel[tabList.model]" :label="tabList.name" :placeholder="tabList.helpblock" :disabled="tabList.options.disabled" :clearable="true"></x-input>
+            <form-item v-model="formModel[column.model]" :list="column" :model="column.model" :formModel="formModel" :widget="widget" @inputModel="inputModel"></form-item>
           </div>
         </div>
       </div>
