@@ -1,9 +1,10 @@
 import convert from './convert.js'
+import api from '@/service/prototypes/api'
 // 重要重要非常非常重要提示，次页面不要通过URl来做判断
 export default {
   async init (jsThis) {
     var option
-    if (jsThis.$api.client() === 'WapH5' || jsThis.$api.client() === 'WeChat') {
+    if (api.client() === 'WapH5' || api.client() === 'WeChat') {
       option = jsThis.$route
     } else {
       option = jsThis.widget.route
@@ -37,7 +38,7 @@ export default {
     }
 
     if (jsThis.config === undefined || jsThis.config === null) {
-      jsThis.$api.toastWarn('表单配置不存在')
+      api.toastWarn('表单配置不存在')
     }
     if (jsThis.config.list) {
       jsThis.config.list.forEach(element => {
@@ -48,7 +49,7 @@ export default {
             })
           })
         } else {
-          if (jsThis.$api.isEmpty(element.value)) {
+          if (api.isEmpty(element.value)) {
             jsThis.formModel[element.model] = ''
           } else {
             jsThis.formModel[element.model] = element.value
@@ -66,23 +67,22 @@ export default {
     if (isApiUrl) {
       var id = jsThis.widget.route.id
       if (id !== undefined) {
-        response = await jsThis.$api.httpGet(
-          jsThis.widget.apiUrl + '&id=' + id,
-          para
-        )
+        response = await api.httpGet(jsThis.widget.apiUrl + '&id=' + id, para)
       } else {
-        response = await jsThis.$api.httpGet(jsThis.widget.apiUrl, para)
+        response = await api.httpGet(jsThis.widget.apiUrl, para)
+        console.info('服务器表单信息', response.result)
       }
     } else {
       para.type = jsThis.type
       console.info('配置信息', para.type)
-      response = await jsThis.$api.httpGet('/Api/Auto/Form', para)
+      response = await api.httpGet('/Api/Auto/Form', para)
+      console.info('服务器表单信息', response.result)
     }
     if (response.status === 1) {
       jsThis.key = response.result.key
       return response.result
     } else {
-      jsThis.$api.toastWarn(response.message)
+      api.toastWarn(response.message)
     }
   },
   // 重要重要非常非常重要提示，
@@ -109,10 +109,10 @@ export default {
           jsThis.formModel.type = 2
         }
       }
-      if (!jsThis.$api.isEmpty(jsThis.$user.loginUser())) {
+      if (!api.isEmpty(jsThis.$user.loginUser())) {
         jsThis.formModel.userId = jsThis.$user.loginUser().id
       }
-      if (!jsThis.$api.isEmpty(jsThis.widget.route.id)) {
+      if (!api.isEmpty(jsThis.widget.route.id)) {
         jsThis.formModel.id = jsThis.widget.route.id
       }
       if (jsThis.type === null) {
@@ -134,12 +134,11 @@ export default {
           }
         }
       }
-      var response = await jsThis.$api.httpPost(apiUrl, para)
-
+      var response = await api.httpPost(apiUrl, para)
+      console.info('服务器表单信息', response.result)
       if (response === undefined || response.status !== 1) {
-        jsThis.$api.toastWarn(response.message)
+        api.toastWarn(response.message)
       } else {
-        console.info('服务器表单信息', response.result)
         if (apiUrl.indexOf('/api/user/changepassword') !== -1) {
           if (response.status !== 1) return
           setTimeout(() => {
@@ -150,7 +149,7 @@ export default {
         }
         // 忘记密码处理
         if (apiUrl.indexOf('/api/user/findpassword') !== -1) {
-          jsThis.$api.toastSuccess(response.message)
+          api.toastSuccess(response.message)
           setTimeout(() => {
             if (response.status === 1) {
               uni.redirectTo({
@@ -160,12 +159,12 @@ export default {
           }, 1000)
           return null
         }
-        jsThis.$api.toastSuccess(response.message)
+        api.toastSuccess(response.message)
         jsThis.operationTips = true
         // jsThis.$bus.$emit('strikeView')
         // var time = setTimeout(() => {
         //   clearTimeout(time)
-        //   jsThis.$api.back()
+        //   api.back()
         // }, 1000)
       }
     }
@@ -183,23 +182,23 @@ export default {
       jsThis.async = false
     }
     if (jsThis.widget && jsThis.widget.apiUrl.indexOf('/user/reg') !== -1) {
-      if (!jsThis.$api.isEmpty(jsThis.widget.route.usercode)) {
+      if (!api.isEmpty(jsThis.widget.route.usercode)) {
         jsThis.formModel.code = jsThis.widget.route.usercode
       }
     }
     if (jsThis.widget && jsThis.widget.apiUrl.indexOf('/user/login') !== -1) {
       jsThis.loginPage = true
-      // if (!jsThis.$api.isEmpty(await jsThis.$api.localGet('user_info'))) {
+      // if (!api.isEmpty(await api.localGet('user_info'))) {
       //   var userInfo = JSON.parse(
       //     crypto.decrypt(
-      //       crypto.utf8(crypto.base64(await jsThis.$api.localGet('user_info')))
+      //       crypto.utf8(crypto.base64(await api.localGet('user_info')))
       //     )
       //   )
       //   jsThis.formModel.username = userInfo.userName
       //   jsThis.formModel.password = userInfo.password
       // }
     }
-    if (jsThis.$api.client() === 'WapH5' || jsThis.$api.client() === 'WeChat') {
+    if (api.client() === 'WapH5' || api.client() === 'WeChat') {
       if (jsThis.widget && jsThis.widget.apiUrl.indexOf('/user/login') !== -1) {
         jsThis.returnButtom = true
       }

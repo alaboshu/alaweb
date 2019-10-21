@@ -26,46 +26,6 @@
         </view>
       </view>
     </view>
-    <view class="x-msg " :style="'width:'+boxWidth+'px;height:'+boxHeight+'px;'" v-if="isAdminMsg">
-      <view class="admin-msg">
-        <!-- <view class="msg-icon">
-          <i class="icon iconfont " :class="theme.icon" :style="'color:'+theme.color"></i>
-        </view> -->
-        <view class="msg-text-area">
-          <view class="area-title">
-            {{theme.title}}
-          </view>
-          <view class="area-desc" v-if="caption">
-            {{caption}}
-          </view>
-        </view>
-        <view class="msg-customer">
-          <view class="customer-title">
-            商家自定义商城系统
-          </view>
-          <img src="../../../static/img/customerWechat.jpg" alt="">
-          <view @click="codes()" v-if="$api.client()==='AppPlus'">点击保存二维码</view>
-          <view class="customer-msg">
-            请微信扫描二维码联系客服为您开通<br />
-            或<br />
-            点击联系客服
-          </view>
-        </view>
-        <view class="msg-opr-area">
-          <view class="btn-area">
-            <view class="msg-btn customer-btn" @click="customer()">
-              联系客服
-            </view>
-            <view class="msg-btn" :style="'background:'+theme.color" @click="goReturn()">
-              返回上一页
-            </view>
-            <view class="msg-btn btn_default" @click="goDefault()">
-              返回首页
-            </view>
-          </view>
-        </view>
-      </view>
-    </view>
   </view>
 </template>
 <script>

@@ -1,5 +1,8 @@
 <template>
   <view class="zk-login">
+    <view class="pushButton" v-if="returnButtom" @click="onBack">
+      <x-icon name="zk-arrows-left_black" size="16" :color="'#999999'"></x-icon>
+    </view>
     <view class="form-login">
       <view class="form-login_box">
         <image class="form-login_img" src="https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-20/5c924388397d411c8c07de3e.png" alt="" />
@@ -58,6 +61,7 @@
         showPassword: true,
         widgetModel: {},
         viewModel: {},
+        returnButtom: true,
         user: {
           username: '',
           password: ''
@@ -84,6 +88,9 @@
     methods: {
       async  init () {
         this.widgetModel = await this.$api.themeWidget(this.widget)
+      },
+      onBack () {
+        this.$api.back('login')
       },
       initPosition () {
         /**
