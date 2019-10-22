@@ -1,8 +1,8 @@
 <template>
   <view class="x-select">
-    <view class="list-cell-left-A">当前选择</view>
+    <view class="list-cell-left-A">{{label}}</view>
     <view class="list-cell-right">
-      <picker :value="index" :range="keyValues" range-key="name" @change="changeValue">
+      <picker :value="index" :range="keyValues" range-key="value" @change="changeValue">
         <view class="uni-input">{{viewText}}</view>
       </picker>
     </view>
@@ -19,7 +19,8 @@
     props: {
       type: {},
       apiUrl: {}, // Api网址，优先从Api中获取数据
-      dataModel: {}
+      dataModel: {},
+      label: {}
     },
     data () {
       return {
@@ -56,7 +57,7 @@
       fromName () {
         for (let i in this.keyValues) {
           if (this.keyValues[i].key === this.viewModel) {
-            this.viewText = this.keyValues[i].name
+            this.viewText = this.keyValues[i].value
           }
         }
       }

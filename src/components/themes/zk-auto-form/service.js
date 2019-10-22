@@ -32,6 +32,7 @@ export default {
   // 视图数据赋值
   getModel (autoFormConfig) {
     var formModel = {}
+    console.info('应该就是你来', autoFormConfig)
     if (autoFormConfig && autoFormConfig.groups) {
       autoFormConfig.groups.forEach(group => {
         group.items.forEach(element => {

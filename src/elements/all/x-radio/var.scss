@@ -1,0 +1,17 @@
+.x-radio {
+  display: flex;
+  align-items: center;
+
+  .x-raio-left {
+    width: 80px;
+    padding-right: 5px;
+  }
+
+  .x-radio-right {
+    display: flex;
+
+    .uni-list-cell {
+      width: 100px;
+    }
+  }
+}
