@@ -90,18 +90,6 @@
         //   this.option.path = '/index'
         // }
         this.windowHieght = uni.getSystemInfoSync().windowHeigh
-        // if (this.option.path === undefined) {
-        //   var pages = pagesInfo.pageList
-        //   for (var i = 0; i < pagesInfo.pageList.length; i++) {
-        //     if (pages[i].path === '/index') {
-        //       pages[i].widgets = theme.filterWidgets(pages[i].widgets)
-        //       this.viewModel = pages[i]
-        //       break
-        //     }
-        //   }
-        // } else {
-        //   this.viewModel = await this.$api.themePage(this.option)
-        // }
         this.viewModel = await this.$api.themePage(this.option)
         this.$api.vuexSet('viewModelItem', this.viewModel)
         if (this.viewModel.name !== '首页') {
