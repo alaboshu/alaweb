@@ -57,7 +57,6 @@
           this.$set(this.viewModel, 'name', this.viewModel.name)
           this.async = true
         }
-        console.info('这就是爱', this.viewModel)
         this.$api.info('渲染后的表单结构', this.autoForm, this.viewModel)
       },
       async sumbit () {
