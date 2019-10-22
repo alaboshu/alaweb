@@ -1,9 +1,19 @@
 <template>
-  <el-select filterable :multiple="multiple" v-model="viewModel" class="x-select" placeholder="请选择" v-if="keyValues">
-    <el-option v-for="item in keyValues" :key="item.key" :value="item.key" :label="item.value"></el-option>
-  </el-select>
+  <view class="x-select">
+    <view class="uni-list">
+      <view class="uni-list-cell">
+        <view class="uni-list-cell-left">
+          当前选择
+        </view>
+        <view class="uni-list-cell-db">
+          <picker :value="index" range-key="name" :mode="isMode?'multiSelector':'selector'" @columnchange="eventHandle" :range="viewModel">
+            <view class="uni-input">{{array[index].name}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+  </view>
 </template>
-
 <script>
   import type from '@/service/api/type.api.js'
   export default {
@@ -13,16 +23,18 @@
     },
     props: {
       type: {},
-      multiple: {
-        default: false
-      },
       apiUrl: {}, // Api网址，优先从Api中获取数据
-      dataModel: {}
+      dataModel: {},
+      // 是否启动多级联动， 默认为不启动
+      isMode: {
+        default: false
+      }
     },
     data () {
       return {
+        index: 1,
         keyValues: null,
-        viewModel: 0
+        viewModel: []
       }
     },
     mounted () {
@@ -33,26 +45,25 @@
         if (this.keyValues === null) {
           this.keyValues = await type.getKeyValues(this.type, this.apiUrl)
         }
-        if (this.dataModel === '00000000-0000-0000-0000-000000000000' || this.dataModel === '000000000000000000000000') {
-          if (this.viewModel.length > 0) {
-            this.viewModel = this.viewModel[0].key
-          }
-        } else {
+        console.info('this.keyValues', this.keyValues)
+        if (this.dataModel) {
           this.viewModel = this.dataModel
         }
-      }
-    },
-    watch: {
-      viewModel: {
-        deep: true,
-        handler (val) {
-          this.$emit('change', this.viewModel)
+      },
+      eventHandle (ev) {
+        for (let i in this.array[ev.detail.column]) {
+          if (Number(i) === Number(ev.detail.value)) {
+            if (this.array.length > ev.detail.column) {
+              if (this.array[ev.detail.column][i].array) {
+                this.array.splice(ev.detail.column + 1, 1, this.array[ev.detail.column][i].array)
+              } else {
+                this.array.splice(ev.detail.column + 1, 1, '')
+              }
+            }
+          }
         }
+        // console.info('会不会触发啊', ev.detail.value, ev.detail)
       }
     }
   }
 </script>
-
-
-
-

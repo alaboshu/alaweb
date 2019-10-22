@@ -1,13 +1,14 @@
 <template>
   <div>
-    <x-password v-model="viewModel"></x-password>
+    <x-select v-model="viewModel" type="status"></x-select>
   </div>
 </template>
 <script>
   export default {
     data () {
       return {
-        viewModel: null
+        viewModel: null,
+        array: ['中国', '美国']
       }
     },
     mounted () {

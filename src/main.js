@@ -271,6 +271,7 @@ import xMsg from '@/elements/all/x-msg/index.vue'
 import xNumber from '@/elements/all/x-number/index.vue'
 import xPassword from '@/elements/all/x-password/index.vue'
 import xPay from '@/elements/all/x-pay/index.vue'
+import xPhoneVerifiy from '@/elements/all/x-phone-verifiy/index.vue'
 import xPicker from '@/elements/all/x-picker/index.vue'
 import xPopup from '@/elements/all/x-popup/index.vue'
 import xRadio from '@/elements/all/x-radio/index.vue'
@@ -534,6 +535,7 @@ Vue.component('x-msg', xMsg)
 Vue.component('x-number', xNumber)
 Vue.component('x-password', xPassword)
 Vue.component('x-pay', xPay)
+Vue.component('x-phone-verifiy', xPhoneVerifiy)
 Vue.component('x-picker', xPicker)
 Vue.component('x-popup', xPopup)
 Vue.component('x-radio', xRadio)
