@@ -1,45 +1,49 @@
 <template>
   <div>
-    <div class="box" v-if="list.type==='textbox'">
-      <x-input v-model="formItemModel" :label="list.name" :placeholder="list.helpblock" :clearable="true"></x-input>
+    <div class="box" v-if="column.type==='textbox'" x-verify="已验证">
+      <x-input v-model="viewModel" :label="column.name" :value="viewModel" :placeholder="column.placeHolder" :clearable="true"></x-input>
     </div>
-    <div class="box" v-if="list.type==='json'">
-      <x-city-picker v-model="formItemModel" ref="cityPicker" title="cityPicker"></x-city-picker>
+    <div class="box" v-if="column.type==='password'">
+      <x-input v-model="viewModel" :label="column.name" :password="true" :placeHolder="column.placeHolder"></x-input>
     </div>
-    <div class="box" v-if="list.type==='region'">
-      <x-city-picker v-model="formItemModel" ref="cityPicker" title="cityPicker"></x-city-picker>
+    <div class="box" v-if="column.type==='passwordnumber'">
+      <x-input v-model="viewModel" :label="column.name" :password="true" :placeHolder="column.placeHolder"></x-input>
     </div>
-    <div class="box" v-if="list.type==='imgupload'">
-      <upload v-model="formItemModel" :defaultValue="list.value" :size="list.options.size" :imgLength="list.options.length" :list="list"></upload>
+    <div class="box" v-if="column.type==='json'">
+      <x-city-picker v-model="viewModel" ref="cityPicker" title="cityPicker"></x-city-picker>
     </div>
-    <div class="box" v-if="list.type==='checkbox'">
-      <check v-model="formItemModel" :list="list"></check>
+    <div class="box" v-if="column.type==='region'">
+      <x-city-picker v-model="viewModel" ref="cityPicker" title="cityPicker"></x-city-picker>
     </div>
-    <div class="box" v-if="list.type==='password'">
-      <x-input v-model="formItemModel" :label="list.name" :password="true" :placeHolder="list.helpblock"></x-input>
+    <div class="box" v-if="column.type==='imgupload'">
+      <upload v-model="viewModel" :defaultValue="column.value" :size="column.options.size" :imgLength="column.options.length" :column="column"></upload>
     </div>
-    <div class="box" v-if="list.type==='passwordInput'">
-      <x-input v-model="formItemModel" :label="list.name" :password="true" :placeHolder="list.helpblock"></x-input>
+    <div class="box" v-if="column.type==='checkbox'">
+      <check v-model="viewModel" :column="column"></check>
     </div>
-    <div class="box" v-if="list.type==='select'">
-      <form-picker v-model="formItemModel" ref="mpvuePicker" :list="list" :widget="widget"></form-picker>
+
+    <div class="box" v-if="column.type==='passwordInput'">
+      <x-input v-model="viewModel" :label="column.name" :password="true" :placeHolder="column.placeHolder"></x-input>
     </div>
-    <div class="box" v-if="list.type==='phoneInput'">
-      <x-input v-model="formItemModel" :label="list.name" type="number" :placeHolder="list.options.placeholder"></x-input>
+    <div class="box" v-if="column.type==='select'">
+      <form-picker v-model="viewModel" ref="mpvuePicker" :column="column" :widget="widget"></form-picker>
     </div>
-    <div class="box" v-if="list.type==='radioButton'">
-      <form-picker v-model="formItemModel" ref="mpvuePicker" :list="list" :widget="widget"></form-picker>
+    <div class="box" v-if="column.type==='phoneInput'">
+      <x-input v-model="viewModel" :label="column.name" type="number" :placeHolder="column.options.placeholder"></x-input>
     </div>
-    <div class="box" v-if="list.type==='verification'">
-      <verification ref="verification" v-model="formItemModel" :formModel="formModel" :widget="widget"></verification>
+    <div class="box" v-if="column.type==='radioButton'">
+      <form-picker v-model="viewModel" ref="mpvuePicker" :column="column" :widget="widget"></form-picker>
     </div>
-    <div class="box" v-if="list.type==='textarea'">
+    <div class="box" v-if="column.type==='verification'">
+      <verification ref="verification" v-model="viewModel" :widget="widget"></verification>
+    </div>
+    <div class="box" v-if="column.type==='textarea'">
       <view class="uni-textarea">
-        <textarea v-model="formItemModel" auto-height class="textarea" :placeholder="list.options.placeholder" />
+        <textarea v-model="viewModel" auto-height class="textarea" :placeholder="column.options.placeholder" />
         </view>
       </div>
-      <div class="box" v-if="list.type==='number'">
-      <x-input v-model="formItemModel" :label="list.name"  type="number" :placeholder="list.helpblock"  :clearable="true"></x-input>
+      <div class="box" v-if="column.type==='number'">
+      <x-input v-model="viewModel" :label="column.name"  type="number" :placeholder="column.placeHolder"  :clearable="true"></x-input>
     </div>
   </div>
 </template>
@@ -55,34 +59,37 @@
       check,
       formPicker
     },
+    model: {
+      prop: 'dataModel',
+      event: 'change'
+    },
     props: {
-      list: {},
-      formModel: {},
+      column: {},
       widget: {},
       value: {},
-      model: {}
+      dataModel: {}
     },
     data () {
       return {
-        formItemModel: this.value
+        viewModel: this.value
       }
     },
     mounted () {
+      this.init()
+    },
+    methods: {
+      async init () {
+        console.info('column', this.column.name, this.dataModel)
+        if (this.dataModel) {
+          this.viewModel = this.dataModel
+        }
+      }
     },
     watch: {
-      formItemModel (val) {
-        if (this.$api.client() === 'AppPlus') {
-          var model = {
-            val: val,
-            model: this.model
-          }
-          this.$emit('inputModel', model)
-          if (this.list.type === 'phoneInput') {
-            this.$api.vuexSet('phoneVerification', val)
-            // this.$store.state.phoneVerification = val
-          }
-        } else {
-          this.$emit('input', val)
+      viewModel: {
+        deep: true,
+        handler (val) {
+          this.$emit('change', this.viewModel)
         }
       }
     }

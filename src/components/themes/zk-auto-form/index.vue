@@ -3,18 +3,16 @@
     <view class="alert-text" v-if="autoForm.tooltip.alertText">{{autoForm.tooltip.alertText}}</view>
     <div class="box-top" v-if="autoForm.tooltip.title">{{autoForm.tooltip.title}}</div>
     <div v-for="(column,index) in autoForm.columns" :key="index">
-
       {{ formModel[column.field] }}
       <div v-if="column.type==='tab'">
         <div v-for="(tabItem,tabItemIndex) in list.columns" :key="tabItemIndex">
           <div class="group-title">{{tabItem.name}}</div>
           <div class="box" v-for="(tabList,tabListIndex) in tabItem.list" :key="tabListIndex">
-            <form-item v-model="formModel[column.model]" :list="column" :model="column.model" :formModel="formModel" :widget="widget" @inputModel="inputModel"></form-item>
+            <form-item v-model="formModel[column.field]" :column="column" :widget="widget"></form-item>
           </div>
         </div>
       </div>
-
-      <form-item v-else v-model="formModel[column.field]" :list="column" :model="column.field" :formModel="formModel" :widget="widget" @inputModel="inputModel"></form-item>
+      <form-item v-else v-model="formModel[column.field]" :column="column" :widget="widget"></form-item>
     </div>
     <view class="btn-box">
       <view class="btn-sumbit " type="primary" @click="sumbit">{{autoForm.tooltip.bottonText}}</view>
