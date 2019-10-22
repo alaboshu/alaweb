@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="async">
     <div class="boxItem" v-if="column.type==='textbox'" x-verify="已验证">
       <x-input v-model="viewModel" :label="column.name" :value="viewModel" :placeholder="column.placeHolder" :clearable="true"></x-input>
     </div>
@@ -82,11 +82,14 @@
     },
     data () {
       return {
-        viewModel: this.value
+        viewModel: this.value,
+        async: false
       }
     },
     mounted () {
-      this.init()
+      this.init().then(() => {
+        this.async = true
+      })
     },
     methods: {
       async init () {
