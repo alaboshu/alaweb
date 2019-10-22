@@ -24,6 +24,7 @@
         <p>{{item.name}}</p>
       </view>
     </view>
+    <view>{{viewModel}}</view>
   </view>
 </template>
 
