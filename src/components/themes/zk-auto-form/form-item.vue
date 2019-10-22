@@ -1,51 +1,51 @@
 <template>
   <div>
-    <div class="box" v-if="column.type==='textbox'" x-verify="已验证">
+    <div class="boxItem" v-if="column.type==='textbox'" x-verify="已验证">
       <x-input v-model="viewModel" :label="column.name" :value="viewModel" :placeholder="column.placeHolder" :clearable="true"></x-input>
     </div>
-    <div class="box" v-if="column.type==='password'">
+    <div class="boxItem" v-if="column.type==='password'">
       <x-input v-model="viewModel" :label="column.name" :password="true" :placeHolder="column.placeHolder"></x-input>
     </div>
-    <div class="box" v-if="column.type==='phone'">
+    <div class="boxItem" v-if="column.type==='phone'">
       <x-input v-model="viewModel" :label="column.name" :value="viewModel" :placeholder="column.placeHolder" :clearable="true"></x-input>
     </div>
-    <div class="box" v-if="column.type==='passwordnumber'">
+    <div class="boxItem" v-if="column.type==='passwordnumber'">
       <x-input v-model="viewModel" :label="column.name" :password="true" :placeHolder="column.placeHolder"></x-input>
     </div>
-    <div class="box" v-if="column.type==='json'">
+    <div class="boxItem" v-if="column.type==='json'">
       <x-city-picker v-model="viewModel" ref="cityPicker" title="cityPicker"></x-city-picker>
     </div>
-    <div class="box" v-if="column.type==='region'">
+    <div class="boxItem" v-if="column.type==='region'">
       <x-city-picker v-model="viewModel" ref="cityPicker" title="cityPicker"></x-city-picker>
     </div>
-    <div class="box" v-if="column.type==='imgupload'">
+    <div class="boxItem" v-if="column.type==='imgupload'">
       <upload v-model="viewModel" :defaultValue="column.value" :size="column.options.size" :imgLength="column.options.length" :column="column"></upload>
     </div>
-    <div class="box" v-if="column.type==='checkbox'">
+    <div class="boxItem" v-if="column.type==='checkbox'">
       <check v-model="viewModel" :column="column"></check>
     </div>
 
-    <div class="box" v-if="column.type==='passwordInput'">
+    <div class="boxItem" v-if="column.type==='passwordInput'">
       <x-input v-model="viewModel" :label="column.name" :password="true" :placeHolder="column.placeHolder"></x-input>
     </div>
-    <div class="box" v-if="column.type==='select'">
+    <div class="boxItem" v-if="column.type==='select'">
       <form-picker v-model="viewModel" ref="mpvuePicker" :column="column"></form-picker>
     </div>
-    <div class="box" v-if="column.type==='phoneInput'">
+    <div class="boxItem" v-if="column.type==='phoneInput'">
       <x-input v-model="viewModel" :label="column.name" type="number" :placeHolder="column.options.placeholder"></x-input>
     </div>
-    <div class="box" v-if="column.type==='radioButton'">
+    <div class="boxItem" v-if="column.type==='radioButton'">
       <form-picker v-model="viewModel" ref="mpvuePicker" :column="column"></form-picker>
     </div>
-    <div class="box" v-if="column.type==='verification'">
+    <div class="boxItem" v-if="column.type==='verification'">
       <verification ref="verification" v-model="viewModel"></verification>
     </div>
-    <div class="box" v-if="column.type==='textarea'">
+    <div class="boxItem" v-if="column.type==='textarea'">
       <view class="uni-textarea">
         <textarea v-model="viewModel" auto-height class="textarea" :placeholder="column.options.placeholder" />
         </view>
       </div>
-      <div class="box" v-if="column.type==='number'">
+      <div class="boxItem" v-if="column.type==='number'">
       <x-input v-model="viewModel" :label="column.name"  type="number" :placeholder="column.placeHolder"  :clearable="true"></x-input>
     </div>
   </div>
