@@ -274,6 +274,7 @@ import xPicker from '@/elements/all/x-picker/index.vue'
 import xPopup from '@/elements/all/x-popup/index.vue'
 import xRadio from '@/elements/all/x-radio/index.vue'
 import xScroll from '@/elements/all/x-scroll/index.vue'
+import xSelect from '@/elements/all/x-select/index.vue'
 import xTimePicker from '@/elements/all/x-time-picker/index.vue'
 import xWidget from '@/elements/all/x-widget/index.vue'
 import auto from '@/elements/auto/index.vue'
@@ -535,6 +536,7 @@ Vue.component('x-picker', xPicker)
 Vue.component('x-popup', xPopup)
 Vue.component('x-radio', xRadio)
 Vue.component('x-scroll', xScroll)
+Vue.component('x-select', xSelect)
 Vue.component('x-time-picker', xTimePicker)
 Vue.component('x-widget', xWidget)
 Vue.component('auto', auto)

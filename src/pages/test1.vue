@@ -1,10 +1,13 @@
 <template>
-  <div>adsfasdfsdf</div>
+  <div>
+    <x-select v-model="viewModel" type="status"></x-select>
+  </div>
 </template>
 <script>
   export default {
     data () {
       return {
+        viewModel: null
       }
     },
     mounted () {
