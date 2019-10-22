@@ -6,14 +6,14 @@
     <div class="boxItem" v-if="column.type==='dropdownlist'" x-verify="已验证">
       <x-select v-model="viewModel" :label="column.name" :placeholder="column.placeHolder" :apiUrl="column.dataSource"></x-select>
     </div>
-    <div class="boxItem" v-if="column.type==='radiobutton'" x-verify="已验证">
+    <!-- <div class="boxItem" v-if="column.type==='radiobutton'" x-verify="已验证">
       <x-radio v-model="viewModel" :label="column.name" :placeholder="column.placeHolder" :apiUrl="column.dataSource"></x-radio>
-    </div>
+    </div> -->
     <div class="boxItem" v-if="column.type==='password'" x-verify="已验证">
       <x-password v-model="viewModel" :label="column.name" :placeHolder="column.placeHolder"></x-password>
     </div>
     <div class="boxItem" v-if="column.type==='passwordnumber'" x-verify="已验证">
-      <x-password v-model="viewModel" :label="column.name" :isnum="true" :placeHolder="column.placeHolder"></x-password>
+      <x-password v-model="viewModel" :label="column.name" :isNum="true" :placeHolder="column.placeHolder"></x-password>
     </div>
 
     <div class="boxItem" v-if="column.type==='json'">

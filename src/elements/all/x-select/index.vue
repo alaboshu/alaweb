@@ -1,13 +1,25 @@
 <template>
-  <view class="x-select">
-    <view class="uni-list">
+  <!-- <view class="x-select" v-if="viewModel"> -->
+  <!-- <view class="uni-list">
       <view class="uni-list-cell">
         <view class="uni-list-cell-left">
           当前选择
         </view>
         <view class="uni-list-cell-db">
-          <picker :value="index" range-key="name" :mode="isMode?'multiSelector':'selector'" @columnchange="eventHandle" :range="viewModel">
-            <view class="uni-input">{{array[index].name}}</view>
+          <picker :value="index" range-key="name" mode="selector" :range="viewModel">
+            <view class="uni-input">{{viewModel[index].name}}</view>
+          </picker>
+        </view>
+      </view>
+    </view> -->
+  <!-- </view> -->
+  <view class="x-select">
+    <view class="uni-list">
+      <view class="uni-list-cell">
+        <view class="uni-list-cell-left">当前选择</view>
+        <view class="uni-list-cell-db">
+          <picker :value="index" :range="keyValues" range-key="name" @change="changeValue">
+            <view class="uni-input">{{viewModel}}</view>
           </picker>
         </view>
       </view>
@@ -34,7 +46,7 @@
       return {
         index: 1,
         keyValues: null,
-        viewModel: []
+        viewModel: null
       }
     },
     mounted () {
@@ -45,24 +57,22 @@
         if (this.keyValues === null) {
           this.keyValues = await type.getKeyValues(this.type, this.apiUrl)
         }
-        console.info('this.keyValues', this.keyValues)
-        if (this.dataModel) {
-          this.viewModel = this.dataModel
-        }
+        if (this.dataModel) this.viewModel = this.dataModel
       },
-      eventHandle (ev) {
-        for (let i in this.array[ev.detail.column]) {
+      changeValue (ev) {
+        for (let i in this.keyValues) {
           if (Number(i) === Number(ev.detail.value)) {
-            if (this.array.length > ev.detail.column) {
-              if (this.array[ev.detail.column][i].array) {
-                this.array.splice(ev.detail.column + 1, 1, this.array[ev.detail.column][i].array)
-              } else {
-                this.array.splice(ev.detail.column + 1, 1, '')
-              }
-            }
+
           }
         }
-        // console.info('会不会触发啊', ev.detail.value, ev.detail)
+      }
+    },
+    watch: {
+      viewText: {
+        deep: true,
+        handler (val) {
+          console.info('出不处罚')
+        }
       }
     }
   }

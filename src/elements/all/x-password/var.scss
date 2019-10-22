@@ -1,10 +1,13 @@
 .x-password {
+  display: flex;
   align-items: center;
   font-size: 13px;
   padding: 0px;
+
   .uni-input {
     flex: 1;
   }
+
   .x-input_label {
     width: 80px;
     padding-right: 5px;

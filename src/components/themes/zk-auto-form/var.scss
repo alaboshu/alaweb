@@ -55,7 +55,8 @@
   background: #e5e5e5;
 }
 
-.box, .boxItem {
+.box,
+.boxItem {
   padding: 5px 10px;
   font-size: 14px !important;
   position: relative;
@@ -65,6 +66,10 @@
       border-radius: 5px;
     }
   }
+}
+
+.boxItem {
+  padding: 0 10px;
 }
 
 .box::after {
@@ -167,7 +172,8 @@
 
 .group-title {
   font-size: 14px;
-  color: #606266;
+  color: #999999;
+  background-color: #FBF9FE;
   height: 50px;
   line-height: 50px;
   padding-left: 10px;

@@ -24,7 +24,8 @@
     data () {
       return {
         viewModel: null,
-        showPassword: true
+        showPassword: true,
+        colorIndex: ''
       }
     },
     mounted () {
