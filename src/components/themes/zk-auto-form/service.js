@@ -32,6 +32,7 @@ export default {
   // 视图数据赋值
   getModel (autoFormConfig) {
     var formModel = {}
+    console.info('应该就是你来', autoFormConfig)
     if (autoFormConfig && autoFormConfig.groups) {
       autoFormConfig.groups.forEach(group => {
         group.items.forEach(element => {
@@ -73,8 +74,7 @@ export default {
       if (!api.isEmpty(jsThis.widget.route.id)) {
         jsThis.formModel.id = jsThis.widget.route.id
       }
-      if (jsThis.type === null) {
-      }
+      if (jsThis.type === null) {}
       var para = {
         ...jsThis.formModel
         // type: jsThis.type
