@@ -22,9 +22,8 @@ export default {
     }
     var response = await api.httpGet('/Api/Auto/Form', para)
     if (response.status === 1) {
-      var config = response.result
       api.info('服务器返回信息', response.result)
-      var result = convert.toConfig(config)
+      var result = convert.toConfig(response.result)
       return result
     } else {
       api.toastWarn(response.message)

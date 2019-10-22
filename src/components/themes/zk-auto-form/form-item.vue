@@ -26,16 +26,16 @@
       <x-input v-model="viewModel" :label="column.name" :password="true" :placeHolder="column.placeHolder"></x-input>
     </div>
     <div class="box" v-if="column.type==='select'">
-      <form-picker v-model="viewModel" ref="mpvuePicker" :column="column" ></form-picker>
+      <form-picker v-model="viewModel" ref="mpvuePicker" :column="column"></form-picker>
     </div>
     <div class="box" v-if="column.type==='phoneInput'">
       <x-input v-model="viewModel" :label="column.name" type="number" :placeHolder="column.options.placeholder"></x-input>
     </div>
     <div class="box" v-if="column.type==='radioButton'">
-      <form-picker v-model="viewModel" ref="mpvuePicker" :column="column" ></form-picker>
+      <form-picker v-model="viewModel" ref="mpvuePicker" :column="column"></form-picker>
     </div>
     <div class="box" v-if="column.type==='verification'">
-      <verification ref="verification" v-model="viewModel" ></verification>
+      <verification ref="verification" v-model="viewModel"></verification>
     </div>
     <div class="box" v-if="column.type==='textarea'">
       <view class="uni-textarea">
