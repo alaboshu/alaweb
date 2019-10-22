@@ -12,7 +12,8 @@
       <form-item v-else v-model="viewModel[column.field]" :column="column"></form-item>
     </div>
     <view class="btn-box">
-      <view class="btn-sumbit " type="primary" @click="sumbit">{{autoForm.tooltip.bottonText}}</view>
+      <view class="btn-sumbit" type="primary" loading="true" @click="sumbit">{{autoForm.tooltip.bottonText}}</view>
+      <!-- <button loading="true" class="btn-sumbit" type="primary">{{autoForm.tooltip.bottonText}}</button> -->
     </view>
     <view v-if="autoForm.tooltip.buttomHelpText !== null && autoForm.tooltip.buttomHelpText !== undefined">
       <ul class="buttom-text">
