@@ -36,11 +36,7 @@
     props: {
       type: {},
       apiUrl: {}, // Api网址，优先从Api中获取数据
-      dataModel: {},
-      // 是否启动多级联动， 默认为不启动
-      isMode: {
-        default: false
-      }
+      dataModel: {}
     },
     data () {
       return {
@@ -57,12 +53,17 @@
         if (this.keyValues === null) {
           this.keyValues = await type.getKeyValues(this.type, this.apiUrl)
         }
-        if (this.dataModel) this.viewModel = this.dataModel
+        if (this.dataModel && this.dataModel !== '00000000-0000-0000-0000-000000000000' && this.dataModel !== '000000000000000000000000') {
+          if (this.viewModel.length > 0) {
+            this.viewModel = this.viewModel[0].key
+          }
+        } else {
+          this.viewModel = this.dataModel
+        }
       },
       changeValue (ev) {
         for (let i in this.keyValues) {
           if (Number(i) === Number(ev.detail.value)) {
-
           }
         }
       }
@@ -71,7 +72,7 @@
       viewText: {
         deep: true,
         handler (val) {
-          console.info('出不处罚')
+          this.$emit('change', this.viewModel)
         }
       }
     }
