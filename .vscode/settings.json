@@ -4,7 +4,7 @@
   "explorer.confirmDelete": false,
   "git.autofetch": true,
   "explorer.confirmDragAndDrop": false,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "editor.detectIndentation": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,

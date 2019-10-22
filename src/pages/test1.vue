@@ -1,6 +1,6 @@
 <template>
   <div>
-    <x-select v-model="viewModel" type="status"></x-select>
+    <x-password v-model="viewModel"></x-password>
   </div>
 </template>
 <script>
