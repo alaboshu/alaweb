@@ -54,9 +54,9 @@
         this.autoForm = await service.getForm(this.type, this.widget, this.$route)
         if (this.autoForm) {
           this.viewModel = service.getModel(this.autoForm)
-          this.async = true
         }
         this.$api.info('渲染后的表单结构', this.autoForm, this.viewModel)
+        this.async = true
       },
       async sumbit () {
         this.$api.info('表单视图', this.viewModel)
