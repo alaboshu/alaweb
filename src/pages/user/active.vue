@@ -1,7 +1,7 @@
 <template>
   <div>
-    <zk-head title="会员注册"></zk-head>
-    <zk-auto-form type="UserLevelRegForm"></zk-auto-form>
+    <zk-head title="会员激活"></zk-head>
+    <zk-auto-form type="UserLevelActiveForm"></zk-auto-form>
   </div>
 </template>
 <script>

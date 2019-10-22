@@ -1,6 +1,6 @@
 <template>
   <view v-if="async">
-    <!-- <zk-head :showHead="true" :color="theme.color"></zk-head> -->
+    <!-- <zk-head  :color="theme.color"></zk-head> -->
     <view class="x-msg " :style="'width:'+boxWidth+'px;height:'+boxHeight+'px;'" v-if="isDefaultMsg">
       <view class="default-msg">
         <view class="msg-icon">
