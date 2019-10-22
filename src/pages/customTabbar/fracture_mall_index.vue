@@ -49,7 +49,7 @@
           path: 'fracture_mall_index'
         }
         this.viewModel = await this.$api.themePage(option)
-        this.$api.vuexSet('viewModelItem', this.viewModel)
+
         this.async = true
         if (this.$api.client() === 'AppPlus') {
           this.statusBarHeight = this.$api.getSystemInfoSync().statusBarHeight

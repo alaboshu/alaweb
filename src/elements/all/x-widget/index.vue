@@ -91,7 +91,7 @@
         // }
         this.windowHieght = uni.getSystemInfoSync().windowHeigh
         this.viewModel = await this.$api.themePage(this.option)
-        this.$api.vuexSet('viewModelItem', this.viewModel)
+
         if (this.viewModel.name !== '首页') {
           uni.setNavigationBarTitle({
             title: this.viewModel.name
