@@ -1,6 +1,6 @@
 <template>
   <div>
-    <x-password v-model="viewModel"></x-password>
+    <x-password v-model="viewModel" :isNum="true"></x-password>
   </div>
 </template>
 <script>
