@@ -38,13 +38,13 @@
         theme: {
           icon: 'icon-zk-testsu',
           title: '操作成功',
-          color: '#09bb07'
+          color: '#34bfa3'
         },
         msg: {
           success: {
             icon: 'icon-zk-testsu',
             title: '操作成功',
-            color: '#09bb07'
+            color: '#34bfa3'
           },
           fail: {
             icon: 'icon-zk-close',
@@ -198,7 +198,7 @@
     .msg-icon {
       i {
         font-size: 93px;
-        color: #09bb07;
+        color: #34bfa3;
       }
     }
     .msg-text-area {

@@ -37,6 +37,24 @@
       }
     },
     {
+      "path": "pages/active/list",
+      "style": {
+        "navigationBarTitleText": "激活会员列表"
+      }
+    },
+    {
+      "path": "pages/active/edit",
+      "style": {
+        "navigationBarTitleText": "会员激活"
+      }
+    },
+    {
+      "path": "pages/message",
+      "style": {
+        "navigationBarTitleText": "消息提示"
+      }
+    },
+    {
       "path": "pages/vicePage/customerService",
       "style": {
         "navigationBarTitleText": "客服"
@@ -117,12 +135,6 @@
         "navigationBarTitleText": "测试三"
       }
     },
-    // {
-    //   "path": "pages/auto",
-    //   "style": {
-    //     "navigationBarTitleText": "auto"
-    //   }
-    // },
     {
       "path": "pages/auto/table",
       "style": {
@@ -138,15 +150,6 @@
     }
   ],
   "globalStyle": {
-    // #ifndef MP-WEIXIN || APP-PLUS
-    "navigationStyle": "custom",
-    // #endif
-    // #ifdef  MP-WEIXIN || APP-PLUS
-    "navigationBarTextStyle": "white",
-    // #endif
-    // #ifndef MP-WEIXIN || APP-PLUS
-    "navigationBarTextStyle": "black",
-    // #endif
     "navigationBarTitleText": "阿拉博数",
     "navigationBarBackgroundColor": "#c81432",
     "backgroundColor": "#F8F8F8"
