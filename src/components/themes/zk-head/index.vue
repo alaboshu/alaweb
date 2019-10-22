@@ -38,7 +38,7 @@
       widget: {},
       title: {},
       showHead: {
-        default: true
+        default: false
       },
       color: {
       }
