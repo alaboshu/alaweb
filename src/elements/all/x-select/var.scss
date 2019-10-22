@@ -1,0 +1,16 @@
+.x-select {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .list-cell-left-A {
+    width: 80px;
+    padding-right: 5px;
+  }
+
+  .uni-input {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

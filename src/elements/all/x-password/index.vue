@@ -56,6 +56,8 @@
           var rep = /^[0-9]*$/
           if (rep.test(this.viewModel) !== true) {
             this.viewModel = ''
+            // this.viewModel = this.viewModel.splice(this.length - 1, 1)
+            // console.info('4444444444444444', this.viewModel)
           }
         }
       }
