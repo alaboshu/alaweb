@@ -39,6 +39,10 @@ export default {
   isTenant () {
     return config.isTenant
   },
+  // 输出信息,发布环境不输出
+  info () {
+    console.info(arguments)
+  },
   // 添加日志
   async log () {
     var para = {

@@ -11,50 +11,27 @@ export default {
     }
     return config
   },
-  async toTabConfig (serviceConfig) {
-    var formConfig = {}
-    formConfig.list = []
-    var tab = {
-      type: 'tab',
-      name: '标签',
-      columns: [],
-      icon: '',
-      options: {},
-      key: 590,
-      model: 'tab_599',
-      rules: ''
-    }
-    serviceConfig.groups.forEach(colunms => {
-      var colunmsList = {
-        name: colunms.groupName,
-        list: []
-      }
-      colunms.items.forEach(items => {
-        var item = {}
-        item.dataSource = items.dataSource
-        item.value = items.value
-        item.type = items.type
-        item.name = items.name
-        item.icon = items.icon
-        item.helpBlock = items.helpBlock
-        item.model = items.field
-        item.options = {
-          placeholder: items.placeHolder
+  async toTabConfig (autoFormConfig) {
+    var formConfig = autoFormConfig
+    formConfig.columns = []
+    if (autoFormConfig && autoFormConfig.groups) {
+      autoFormConfig.groups.forEach(group => {
+        var tab = {
+          type: 'tab',
+          name: group.groupName,
+          columns: group.items
         }
-        item.rules = items.rules
-        colunmsList.list.push(item)
+        formConfig.columns.push(tab)
       })
-      tab.columns.push(colunmsList)
-    })
-    //   formConfig.config.name’
-    formConfig.list.push(tab)
+    }
+    formConfig.groups = null
     return formConfig
   },
-  async toNoTabConfig (serviceConfig) {
-    if (serviceConfig) {
-      serviceConfig.columns = serviceConfig.groups[0].items
+  async toNoTabConfig (autoFormConfig) {
+    if (autoFormConfig) {
+      autoFormConfig.columns = autoFormConfig.groups[0].items
     }
-    console.info('处理后的表单信息', serviceConfig)
-    return serviceConfig
+    autoFormConfig.groups = null
+    return autoFormConfig
   }
 }

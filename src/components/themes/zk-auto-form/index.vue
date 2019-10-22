@@ -4,11 +4,9 @@
     <div class="box-top" v-if="autoForm.tooltip.title">{{autoForm.tooltip.title}}</div>
     <div v-for="(column,index) in autoForm.columns" :key="index">
       <div v-if="column.type==='tab'">
-        <div v-for="(tabItem,tabItemIndex) in list.columns" :key="tabItemIndex">
-          <div class="group-title">{{tabItem.name}}</div>
-          <div class="box" v-for="(tabList,tabListIndex) in tabItem.list" :key="tabListIndex">
-            <form-item v-model="formModel[column.field]" :column="column"></form-item>
-          </div>
+        <div class="group-title">{{column.name}}</div>
+        <div class="box" v-for="(tabColumn,tabColumnIndex) in column.columns" :key="tabColumnIndex">
+          <form-item v-model="formModel[tabColumn.field]" :column="tabColumn"></form-item>
         </div>
       </div>
       <form-item v-else v-model="formModel[column.field]" :column="column"></form-item>
