@@ -150,7 +150,6 @@ import zkIndexDayUpdate from '@/components/themes/zk-index-day-update/index.vue'
 import zkIndexHotShop from '@/components/themes/zk-index-hot-shop/index.vue'
 import zkIndexNewTop from '@/components/themes/zk-index-new-top/index.vue'
 import zkIndexSwiper from '@/components/themes/zk-index-swiper/index.vue'
-import zkIndexTypeList from '@/components/themes/zk-index-type-list/index.vue'
 import zkInfoNav from '@/components/themes/zk-info-nav/index.vue'
 import zkKeyword from '@/components/themes/zk-keyword/index.vue'
 import zkLimitedTimeBuy from '@/components/themes/zk-limited-time-buy/index.vue'
@@ -414,7 +413,6 @@ Vue.component('zk-index-day-update', zkIndexDayUpdate)
 Vue.component('zk-index-hot-shop', zkIndexHotShop)
 Vue.component('zk-index-new-top', zkIndexNewTop)
 Vue.component('zk-index-swiper', zkIndexSwiper)
-Vue.component('zk-index-type-list', zkIndexTypeList)
 Vue.component('zk-info-nav', zkInfoNav)
 Vue.component('zk-keyword', zkKeyword)
 Vue.component('zk-limited-time-buy', zkLimitedTimeBuy)

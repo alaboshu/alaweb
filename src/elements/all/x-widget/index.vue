@@ -101,7 +101,6 @@
         this.async = true
       },
       async scrolltolower () {
-        this.$bus.$emit('zkIndexTypeList')
         this.$bus.$emit('onBottomBurst', true)
         this.$bus.$emit('onBottom', true)
       }

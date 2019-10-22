@@ -138,7 +138,6 @@
     <zk-index-hot-shop :widget="widget" v-if="widget.componentPath === '/themes/zk-index-hot-shop'"></zk-index-hot-shop>
     <zk-index-new-top :widget="widget" v-if="widget.componentPath === '/themes/zk-index-new-top'"></zk-index-new-top>
     <zk-index-swiper :widget="widget" v-if="widget.componentPath === '/themes/zk-index-swiper'"></zk-index-swiper>
-    <zk-index-type-list :widget="widget" v-if="widget.componentPath === '/themes/zk-index-type-list'"></zk-index-type-list>
     <zk-info-nav :widget="widget" v-if="widget.componentPath === '/themes/zk-info-nav'"></zk-info-nav>
     <zk-keyword :widget="widget" v-if="widget.componentPath === '/themes/zk-keyword'"></zk-keyword>
     <zk-limited-time-buy :widget="widget" v-if="widget.componentPath === '/themes/zk-limited-time-buy'"></zk-limited-time-buy>
