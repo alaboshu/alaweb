@@ -40,7 +40,6 @@
         <img class="temporarily_img" src="http://ui.5ug.com/static/demo/imageList/02.png">
       </view>
     </view>
-    <x-msg caption="您尚未开通自定义商城，请联系客服开通相关权限" v-if="showMsg" type="warn" :defaultMsgss="false" :adminMsg="true"></x-msg>
   </view>
 </template>
 
@@ -68,17 +67,11 @@
         loadingShow: false,
         appendPara: {
           pageIndex: 1
-        },
-        showMsg: false
+        }
       }
     },
     props: {
-      widget: {},
-      onRefresh: {
-        type: Function,
-        required: false
-      }
-
+      widget: {}
     },
     components: {
       listSearch
@@ -95,9 +88,9 @@
       async  init () {
         this.$bus.$emit('stopPullDownRefresh')
         this.widget.isApiRequest = true
-        this.appendPara.loginUserId = this.$user.loginUser().id
+        this.appendPara.userId = this.$user.loginUser().id
         if (this.widget.route.path.indexOf('admin') !== -1) {
-          this.appendPara.loginUserId = this.$user.loginUser(true).id
+          this.appendPara.userId = this.$user.loginUser(true).id
         }
         this.widgetModel = await this.$api.themeWidget(this.widget, this.appendPara)
         if (this.viewModel.length === 0) {

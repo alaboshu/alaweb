@@ -126,7 +126,7 @@
           this.fixed.searchBoxHeight = 0
           this.fixed.uniSwiperTabHiehgt = 46
         }
-        this.listPar.loginUserId = this.$user.loginUser().id
+        this.listPar.userId = this.$user.loginUser().id
         this.widgetModel = await this.$api.themeWidget(this.widget)
 
         if (!this.$api.isEmpty(this.widget.route.ClassIds)) {

@@ -48,13 +48,13 @@
 </template>
 
 <script>
- 
+
   import './var.scss'
   import './styles'
 
 
   export default {
-    
+
     data () {
       return {
         widgetModel: {},
@@ -88,7 +88,7 @@
           grade5: '',
           userId: this.$user.loginUser().id
         }
-        this.loginUserId = this.$user.loginUser().id
+        this.userId = this.$user.loginUser().id
       },
       async freePort () {
         this.invisibleBool = true

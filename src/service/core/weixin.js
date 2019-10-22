@@ -56,7 +56,8 @@ export default {
     let data = JSON.parse(response.message)
     // eslint-disable-next-line
     WeixinJSBridge.invoke(
-      'getBrandWCPayRequest', {
+      'getBrandWCPayRequest',
+      {
         appId: data.appId, // 公众号名称，由商户传入
         timeStamp: data.timeStamp, // 时间戳，自1970年以来的秒数
         nonceStr: data.nonceStr, // 随机串
@@ -73,7 +74,7 @@ export default {
           var parapay = {
             payId: paras.payId,
             clientType: paras.clientType,
-            userId: paras.loginUserId,
+            userId: paras.userId,
             openId: paras.openId
           }
           await api.httpPost('Pay/PublicPayAsyncByPayId', parapay)

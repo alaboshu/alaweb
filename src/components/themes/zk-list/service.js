@@ -10,7 +10,7 @@ export default {
     jsThis.para = {
       ...jsThis.para
     }
-    jsThis.para.loginUserId = jsThis.$user.id()
+    jsThis.para.userId = jsThis.$user.id()
     // var response = await jsThis.$api.httpGet('/Api/Auto/List', jsThis.para)
     var response = await jsThis.$api.httpGet(widget.apiUrl, jsThis.para)
     if (response.status === 1) {

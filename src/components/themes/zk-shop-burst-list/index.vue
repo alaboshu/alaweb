@@ -96,7 +96,7 @@
             }
           }
         }
-        this.listPar.loginUserId = this.$user.id()
+        this.listPar.userId = this.$user.id()
         this.widgetModel = await this.$api.isApiReqGet(this.widget)
         console.info('this.widget', this.widgetModel.productItems)
         // this.widgetModel = await this.$api.httpGet('/Api/product/list', this.listPar)
