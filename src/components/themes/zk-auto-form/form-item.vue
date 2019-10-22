@@ -6,6 +6,9 @@
     <div class="box" v-if="column.type==='password'">
       <x-input v-model="viewModel" :label="column.name" :password="true" :placeHolder="column.placeHolder"></x-input>
     </div>
+    <div class="box" v-if="column.type==='phone'">
+      <x-input v-model="viewModel" :label="column.name" :value="viewModel" :placeholder="column.placeHolder" :clearable="true"></x-input>
+    </div>
     <div class="box" v-if="column.type==='passwordnumber'">
       <x-input v-model="viewModel" :label="column.name" :password="true" :placeHolder="column.placeHolder"></x-input>
     </div>
