@@ -1,9 +1,9 @@
 <template>
-  <view class="x-select">
+  <view class="x-select" id="x-select">
     <view class="list-cell-left-A">{{label}}</view>
     <view class="list-cell-right">
       <picker :value="index" :range="keyValues" range-key="value" @change="changeValue">
-        <view class="uni-input" :style="'width:'+ (windowData.windowWidth-150) +'px'">{{viewText}}</view>
+        <view class="uni-input" :style="'width:'+ (windowData.windowWidth-150) +'px; height: 35'+'px'">{{viewText}}</view>
       </picker>
     </view>
   </view>
@@ -29,13 +29,22 @@
         viewModel: null,
         viewText: '',
         windowData: null
+
       }
     },
     mounted () {
-      this.init()
-      // 获取屏幕宽度
-      this.windowData = uni.getSystemInfoSync()
-      console.info('res', this.windowData)
+      this.init().then(() => {
+        // 获取屏幕宽度
+        // this.windowData = uni.getSystemInfoSync()
+        // console.info('res', this.windowData)
+        // var query = uni.createSelectorQuery()
+        // query.select('#x-select').boundingClientRect().exec(res => {
+        //   if (res[0]) {
+        //     console.info('能不能执行', res[0].height)
+        //     this.viewHeight = res[0].height
+        //   }
+        // })
+      })
     },
     methods: {
       async init () {
