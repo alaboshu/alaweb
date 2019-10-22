@@ -3,7 +3,7 @@
     <view class="list-cell-left-A">{{label}}</view>
     <view class="list-cell-right">
       <picker :value="index" :range="keyValues" range-key="value" @change="changeValue">
-        <view class="uni-input">{{viewText}}</view>
+        <view class="uni-input" :style="'width:'+ (windowData.windowWidth-150) +'px'">{{viewText}}</view>
       </picker>
     </view>
   </view>
@@ -27,11 +27,15 @@
         index: 1,
         keyValues: null,
         viewModel: null,
-        viewText: ''
+        viewText: '',
+        windowData: null
       }
     },
     mounted () {
       this.init()
+      // 获取屏幕宽度
+      this.windowData = uni.getSystemInfoSync()
+      console.info('res', this.windowData)
     },
     methods: {
       async init () {
