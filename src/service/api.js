@@ -41,7 +41,9 @@ export default {
   },
   // 输出信息,发布环境不输出
   info () {
-    console.info(arguments)
+    if (process.env.NODE_ENV === 'development') {
+      console.info(arguments)
+    }
   },
   // 添加日志
   async log () {

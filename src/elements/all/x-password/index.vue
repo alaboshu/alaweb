@@ -16,16 +16,15 @@
     props: {
       dataModel: {},
       label: {},
-      // 默认为false ，为true时只能输入数字密码
       isNum: {
         default: false
-      },
+      }, // 默认为false ，为true时只能输入数字密码
       placeHolder: {}
     },
     data () {
       return {
         viewModel: null,
-        showPassword: true,
+        showPassword: true, // 是否显示密码，点击后显示密码
         colorIndex: ''
       }
     },
