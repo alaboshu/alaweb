@@ -44,17 +44,6 @@
     },
     mounted () {
       this.init()
-      // var _this = this
-      // this.$nextTick(() => {
-      //    this.$bus.$off().$on('onBottomBurst', (type) => {
-      //     _this.showLoading = true
-      //     if (_this.newContentList.length >= 10) {
-      //       _this.moreItem = true
-      //       _this.listPar.pageIndex += 1
-      //       _this.init()
-      //     }
-      //   })
-      // })
     },
     methods: {
       async init () {

@@ -117,7 +117,6 @@
     <zk-egg-machine :widget="widget" v-if="widget.componentPath === '/themes/zk-egg-machine'"></zk-egg-machine>
     <zk-eject :widget="widget" v-if="widget.componentPath === '/themes/zk-eject'"></zk-eject>
     <zk-enlarge-swiper :widget="widget" v-if="widget.componentPath === '/themes/zk-enlarge-swiper'"></zk-enlarge-swiper>
-    <zk-exchange :widget="widget" v-if="widget.componentPath === '/themes/zk-exchange'"></zk-exchange>
     <zk-float-swiper :widget="widget" v-if="widget.componentPath === '/themes/zk-float-swiper'"></zk-float-swiper>
     <zk-foot :widget="widget" v-if="widget.componentPath === '/themes/zk-foot'"></zk-foot>
     <zk-grid-list :widget="widget" v-if="widget.componentPath === '/themes/zk-grid-list'"></zk-grid-list>

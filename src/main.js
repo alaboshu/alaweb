@@ -129,7 +129,6 @@ import zkDiscountShopList from '@/components/themes/zk-discount-shop-list/index.
 import zkEggMachine from '@/components/themes/zk-egg-machine/index.vue'
 import zkEject from '@/components/themes/zk-eject/index.vue'
 import zkEnlargeSwiper from '@/components/themes/zk-enlarge-swiper/index.vue'
-import zkExchange from '@/components/themes/zk-exchange/index.vue'
 import zkFloatSwiper from '@/components/themes/zk-float-swiper/index.vue'
 import zkFoot from '@/components/themes/zk-foot/index.vue'
 import zkGridList from '@/components/themes/zk-grid-list/index.vue'
@@ -392,7 +391,6 @@ Vue.component('zk-discount-shop-list', zkDiscountShopList)
 Vue.component('zk-egg-machine', zkEggMachine)
 Vue.component('zk-eject', zkEject)
 Vue.component('zk-enlarge-swiper', zkEnlargeSwiper)
-Vue.component('zk-exchange', zkExchange)
 Vue.component('zk-float-swiper', zkFloatSwiper)
 Vue.component('zk-foot', zkFoot)
 Vue.component('zk-grid-list', zkGridList)
