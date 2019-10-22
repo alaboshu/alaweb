@@ -54,8 +54,10 @@
         this.autoForm = await service.getForm(this.type, this.widget, this.$route)
         if (this.autoForm) {
           this.viewModel = service.getModel(this.autoForm)
+          this.$set(this.viewModel, 'name', this.viewModel.name)
           this.async = true
         }
+        console.info('这就是爱', this.viewModel)
         this.$api.info('渲染后的表单结构', this.autoForm, this.viewModel)
       },
       async sumbit () {

@@ -91,6 +91,7 @@
     methods: {
       async init () {
         if (this.dataModel) {
+          console.info('就是你了', this.dataModel)
           this.viewModel = this.dataModel
         }
       }
