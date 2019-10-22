@@ -49,6 +49,12 @@
       }
     },
     {
+      "path": "pages/message",
+      "style": {
+        "navigationBarTitleText": "消息提示"
+      }
+    },
+    {
       "path": "pages/vicePage/customerService",
       "style": {
         "navigationBarTitleText": "客服"
