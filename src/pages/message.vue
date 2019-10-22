@@ -1,6 +1,6 @@
 <template>
   <div>
-    <zk-head title="消息提示"></zk-head>
+    <zk-head title="消息提示" :showHead="true"></zk-head>
     <x-msg></x-msg>
   </div>
 

@@ -13,7 +13,7 @@
           </view>
         </view>
       </view>
-      <view class="zk-head_top"></view>
+      <view class="zk-head_top" v-if="fasle"></view>
     </view>
   </view>
 </template>
@@ -74,18 +74,12 @@
         if (this.showHead !== true) {
           this.statusBarBackGround = '#ffffff'
         }
-        //   this.widgetModel = await this.$api.themeWidget(this.widget)
         if (this.$api.client() === 'AppPlus') {
           this.statusBarHeight = this.$api.getSystemInfoSync().statusBarHeight
         }
         this.async = true
       },
       onClickLeft () {
-        // if (this.$api.isEmpty(this.widget)) {
-        //   this.$api.back()
-        // } else {
-        //   this.$api.back(this.widget.url)
-        // }
         if (this.widget && this.widget.url !== undefined) {
           this.$api.back(this.widget.url)
         } else {
@@ -100,10 +94,6 @@
 <style scoped lang="scss">
   @import "@/assets/style/variable.scss";
   .zk-head-statusbar {
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // z-index: 9999;
     width: 100%;
     background: $gl-themeColor;
   }
