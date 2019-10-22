@@ -18,9 +18,9 @@
   </view>
 </template>
 <script>
- 
+
   export default {
-    
+
     data () {
       return {
         widgetModel: '',
@@ -38,7 +38,7 @@
       widget: {},
       title: {},
       showHead: {
-        default: false
+        default: true
       },
       color: {
       }
