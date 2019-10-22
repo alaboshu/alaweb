@@ -1,8 +1,8 @@
 <template>
   <view class="x-password">
     <div class="x-input_label" v-if="label" :style="{color:colorIndex?'red':''}">{{label}}</div>
-    <input class="uni-input" v-model="viewModel" type="text" @input="inputChange" :maxlength="isNumber()" />
-    <!-- <view class="uni-icon uni-icon-eye" :class="[!showPassword ? 'uni-active' : '']" @click="changePassword"></view> -->
+    <input class="uni-input" v-model="viewModel" :type="showPassword?'password':'test'" :maxlength="isNumber()" @input="changeInput" />
+    <view class="uni-icon uni-icon-eye" :class="[!showPassword ? 'uni-active' : '']" @click="showPassword = !showPassword"></view>
   </view>
 </template>
 
@@ -16,14 +16,15 @@
     props: {
       dataModel: {},
       label: {},
-      // 判断是否只使用数字密码，默认为false
+      // 默认为false ，为true时只能输入数字密码
       isNum: {
         default: false
       }
     },
     data () {
       return {
-        viewModel: null
+        viewModel: null,
+        showPassword: true
       }
     },
     mounted () {
@@ -43,28 +44,61 @@
             return 6
           }
         }
-        return 100
+      },
+      isNumber (type = false) {
+        if (this.isNum) {
+          var rep = /^[0-9]*$/
+          if (rep.test(this.viewModel) === true) {
+            if (type) {
+              if (this.viewModel.length >= 6) {
+                this.viewModel = this.viewModel.substr(0, 6)
+              }
+            } else {
+              return 6
+            }
+          }
+        }
+      },
+      changeInput (ev) {
+        if (this.isNum) {
+          var rep = /^[0-9]*$/
+          if (rep.test(this.viewModel) !== true) {
+            this.viewModel = ''
+          }
+        }
       }
     },
     watch: {
       viewModel: {
         deep: true,
         handler (val) {
-          if (this.isNum === true) {
-            var rep = /^[0-9]*$/
-            if (rep.test(val) === true) {
-              if (this.viewModel.length >= 6) {
-                this.viewModel = this.viewModel.substring(0, 6)
-              }
-            } else {
-              console.info('只能输入数字')
-              this.viewModel = ''
-              return
-            }
-          }
+          this.isNumber(true)
           this.$emit('change', this.viewModel)
         }
       }
     }
   }
 </script>
+
+
+
+
+
+
+
+<style rel="stylesheet/scss" lang="scss">
+  @import "@/assets/style/variable.scss";
+  .x-password {
+    .uni-icon {
+      color: $gl-text3;
+      font-size: 20px;
+    }
+    .uni-active {
+      color: $gl-themeColor;
+    }
+    .uni-input {
+      border: none;
+      outline: none;
+    }
+  }
+</style>

@@ -43,52 +43,6 @@ export default {
     }
     return formModel
   },
-  async init (jsThis) {
-    if (jsThis.autoForm.list) {
-      jsThis.autoForm.list.forEach(element => {
-        if (element.type === 'tab') {
-          element.columns.forEach(columns => {
-            columns.list.forEach(list => {
-              jsThis.formModel[list.model] = list.value
-            })
-          })
-        } else {
-          if (api.isEmpty(element.value)) {
-            jsThis.formModel[element.model] = ''
-          } else {
-            jsThis.formModel[element.model] = element.value
-          }
-        }
-      })
-    }
-    this.beforeInitForm(jsThis)
-    console.log('  jsThis.formModel', jsThis.formModel)
-  },
-  // 根据type来获取表单信息，成功和失败状态会不一样
-  async getFromByType (jsThis, isApiUrl) {
-    var response
-    var para = {}
-    if (isApiUrl) {
-      var id = jsThis.widget.route.id
-      if (id !== undefined) {
-        response = await api.httpGet(jsThis.widget.apiUrl + '&id=' + id, para)
-      } else {
-        response = await api.httpGet(jsThis.widget.apiUrl, para)
-        console.info('服务器表单信息', response.result)
-      }
-    } else {
-      para.type = jsThis.type
-      console.info('配置信息', para.type)
-      response = await api.httpGet('/Api/Auto/Form', para)
-      console.info('服务器表单信息', response.result)
-    }
-    if (response.status === 1) {
-      jsThis.key = response.result.key
-      return response.result
-    } else {
-      api.toastWarn(response.message)
-    }
-  },
   // 重要重要非常非常重要提示，
   async save (jsThis) {
     console.log('jsThis.formModel', jsThis.formModel)
