@@ -31,7 +31,9 @@
     {
       "path": "pages/user/login",
       "style": {
-        "navigationBarTitleText": "登录注册"
+        "navigationBarTitleText": "登录注册",
+        "navigationStyle": "custom"
+        // "navigationBarBackgroundColor": "#fff",
       }
     },
     {
@@ -66,6 +68,12 @@
     },
     {
       "path": "pages/tabbar/product_class",
+      "style": {
+        "navigationBarTitleText": "商城"
+      }
+    },
+    {
+      "path": "pages/tabbar/product_class-1",
       "style": {
         "navigationBarTitleText": "商城"
       }
@@ -201,6 +209,12 @@
       },
       {
         "pagePath": "pages/tabbar/product_class",
+        "text": "商城",
+        "iconPath": "static/img/class.png",
+        "selectedIconPath": "static/img/class-a.png"
+      },
+      {
+        "pagePath": "pages/tabbar/product_class-1",
         "text": "商城",
         "iconPath": "static/img/class.png",
         "selectedIconPath": "static/img/class-a.png"
