@@ -63,7 +63,7 @@
         data: '',
         loading: {
           text: '暂无更多数据...',
-          show: true
+          show: false
         }, // 加载数据
         queryPara: {
           pageIndex: 1,
@@ -105,11 +105,7 @@
       },
       scrolltolower () {
         if (!this.loading.show) {
-          if (this.queryPara.pageIndex === undefined) {
-            this.queryPara.pageIndex = 2
-          } else {
-            this.queryPara.pageIndex += 1
-          }
+          this.queryPara.pageIndex += 1
           if (this.viewModel.length >= this.data.result.recordCount) {
             this.loading.show = true
           } else {
