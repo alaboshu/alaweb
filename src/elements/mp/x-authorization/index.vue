@@ -56,7 +56,6 @@
 </template>
 
 <script>
-  // import weixin from '@/service/core/weixin.js'
   export default {
     data () {
       return {

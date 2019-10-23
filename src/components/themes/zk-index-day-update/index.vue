@@ -12,16 +12,12 @@
             <span v-if="$api.showPrice()||isPrice()">￥{{item.price.toFixed(2)}}</span>
             <span v-if="$api.showPrice()||isPrice()">立即抢购</span>
             <span v-else>￥{{item.marketPrice}}</span>
-
-            <!-- <span>￥{{item.price.toFixed(2)}}</span> -->
-            <span>立即抢购</span>
           </div>
           <div class="updata-container-box-price" v-else>
             <span v-if="$api.showPrice()||isPrice()">￥{{item.displayPrice}}</span>
             <span v-if="$api.showPrice()||isPrice()">立即抢购</span>
             <span v-else>￥{{item.marketPrice}}</span>
 
-            <span>立即抢购</span>
           </div>
         </div>
       </div>
