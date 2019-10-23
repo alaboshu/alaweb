@@ -87,12 +87,9 @@ export default {
     }
   },
   // 获取URL中的ID
-  queryId (jsthis) {
-    if (
-      jsthis.$route.query !== undefined &&
-      jsthis.$route.query.id !== undefined
-    ) {
-      return jsthis.$route.query.id
+  id (route) {
+    if (route.query !== undefined && route.query.id !== undefined) {
+      return route.query.id
     } else {
       return 0
     }

@@ -29,6 +29,7 @@
 </template>
 
 <script>
+  import convert from './convert.js'
   import formItem from './form-item.vue'
   import service from './service.js'
   export default {
@@ -51,11 +52,31 @@
     },
     methods: {
       async init () {
-        this.autoForm = await service.getForm(this.type, this.widget, this.$route)
+        var type = this.type
+        if (!type) {
+          type = this.$crud.getType(this.$route)
+        }
+        if (!type) {
+          this.$api.confirm('表单type不存在,请传入')
+          this.$api.back()
+        }
+        var para = {
+          type: type,
+          id: this.$crud.id(this.$route)
+        }
+        var response = await this.$api.httpGet('/Api/Auto/Form', para)
+        if (response.status === 1) {
+          var result = convert.toConfig(response.result)
+          return result
+        } else {
+          this.$api.confirm(response.message)
+          this.$api.back()
+        }
+        this.autoForm = await this.getForm(this.type, this.widget, this.$route)
         if (this.autoForm) {
           this.viewModel = service.getModel(this.autoForm)
         }
-        this.$api.info('渲染后的表单结构', this.autoForm, this.viewModel)
+        this.$api.info('auto-from表单结构', this.autoForm, this.viewModel)
         this.async = true
       },
       async sumbit () {
