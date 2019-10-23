@@ -84,11 +84,10 @@
     },
     methods: {
       async  init () {
-        this.$bus.$emit('stopPullDownRefresh')
-
         if (this.type) {
-          this.apiUrl = '/Api/Auto/List?type' + this.type // 通过type来设置Url
+          this.apiUrl = '/Api/Auto/List?type=' + this.type // 通过type来设置Url
         }
+        console.info('apiUrl', this.apiUrl)
         if (!this.type && this.widget.apiUrl) {
           this.apiUrl = this.widget.apiUrl
         }
@@ -96,13 +95,11 @@
         if (response.status === 1) {
           this.viewModel = [...this.viewModel, ...response.result.result.result]
           this.data = response.result
+        } else {
+          this.$api.toastWarn('数据获取失败')
         }
         console.info('获取数据', response)
-
-
-
         this.height()
-        console.info('this.viewModel zk-list', this.viewModel)
         this.async = true
       },
       scrolltolower () {
