@@ -2,7 +2,7 @@
   <view class="zk-school-headlines">
     <view class="school-headlines_container">
       <view class="video_list_head">
-        <span>牛牛头条</span>
+        <span>新闻头条</span>
         <!-- <span>查看更多
           <x-icon name="icon-zk-jiantou" size="11"></x-icon>
         </span> -->
@@ -23,13 +23,13 @@
 </template>
 
 <script>
- 
+
   import './var.scss'
   import './styles'
 
 
   export default {
-    
+
     data () {
       return {
         widgetModel: {}
@@ -56,6 +56,7 @@
           }
         }
         this.widgetModel = arr
+        this.widgetModel = this.widget
       },
       goDetail (id) {
         this.$api.to('/pages/index?path=articles_topline_show&id=' + id)

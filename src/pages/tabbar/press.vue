@@ -1,3 +1,17 @@
 <template>
-  <view>新闻页面</view>
+  <view>
+    <zk-school-headlines :widget="pressData"></zk-school-headlines>
+  </view>
 </template>
+
+
+<script>
+  import pressJson from './json/press.json'
+  export default {
+    data () {
+      return {
+        pressData: pressJson.apiDataList
+      }
+    }
+  }
+</script>
