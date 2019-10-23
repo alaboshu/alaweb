@@ -84,7 +84,7 @@
         searchModel: '',
         liksT: [
           {
-            name: '牧人王'
+            name: '文房四宝'
           },
           {
             name: '茅台'
