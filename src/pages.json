@@ -1,6 +1,5 @@
 {
-  "pages": [
-    {
+  "pages": [{
       "path": "pages/default",
       "style": {
         "navigationBarTitleText": "阿拉博数",
@@ -40,6 +39,12 @@
       "path": "pages/user/login",
       "style": {
         "navigationBarTitleText": "登录注册"
+      }
+    },
+    {
+      "path": "pages/user/index",
+      "style": {
+        "navigationBarTitleText": "我的中心"
       }
     },
     {
@@ -163,8 +168,7 @@
   },
   "condition": {
     "current": 0,
-    "list": [
-      {
+    "list": [{
         "name": "首页",
         "path": "pages/default"
       },
@@ -196,8 +200,7 @@
     "selectedColor": " #ff8329",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/default",
         "text": "首页",
         "iconPath": "static/img/index.png",
@@ -222,7 +225,7 @@
         "selectedIconPath": "static/img/news-a.png"
       },
       {
-        "pagePath": "pages/tabbar/user_index",
+        "pagePath": "pages/user/index",
         "text": "我的",
         "iconPath": "static/img/user.png",
         "selectedIconPath": "static/img/user-a.png"

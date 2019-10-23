@@ -43,13 +43,6 @@
     onShow () {
       this.isLogin()
     },
-    onReady () {
-      // this.init()
-    },
-    onLoad (option) {
-
-    },
-
     onPageScroll (e) {
       if (this.isNotIosApp === true) {
         if (e.scrollTop === 0) {
@@ -74,6 +67,7 @@
     },
     methods: {
       async   init () {
+        console.info('就是这里了')
         if (this.$user.isLogin() === true) {
           this.$api.historys('/pages/tabbar/user_index')
           var option = {
