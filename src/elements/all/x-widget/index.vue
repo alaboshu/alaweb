@@ -1,5 +1,5 @@
 <template>
-  <view v-if="async" style="width:100%;overflow: hidden">
+  <view v-if="async && viewModel" style="width:100%;overflow: hidden">
     <zk-head :title="viewModel.name" :widget="viewModel" :showHead="viewModel.setting.showHead" ref="zkHead" v-if="isNotIosApp"></zk-head>
     <div v-if="modelAsync">
       <view v-for="(widget, index) in viewModel.widgets" :key="index" :id="widget.widgetTheme" :style="widget.style && widget.style.css" :class="widget.borderClass">
