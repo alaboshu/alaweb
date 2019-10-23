@@ -132,7 +132,8 @@
     {
       "path": "pages/test2",
       "style": {
-        "navigationBarTitleText": "测试二"
+        "navigationBarTitleText": "测试二",
+        "enablePullDownRefresh": true
       }
     },
     {

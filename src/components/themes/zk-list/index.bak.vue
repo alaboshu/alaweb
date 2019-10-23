@@ -2,7 +2,7 @@
   <view>
     <view class="h5-x-list" v-if="async">
       <view>
-        <list-search :widget="data" @search="search" v-if="data.searchOptions.advancedForms!==null&&data.searchOptions.advancedForms.length!==0 && false"></list-search>
+        <list-search :widget="data" @searchPar="searchPar" v-if="data.searchOptions.advancedForms!==null&&data.searchOptions.advancedForms.length!==0 && false"></list-search>
         <scroll-view id="tab-bar" class="uni-swiper-tab" scroll-x :scroll-left="scrollLeft" style="height:45px" v-if="data.tabs!==null&&data.tabs.length!==0">
           <view v-for="(tab,index) in data.tabs" :key="index" :class="['swiper-tab-list',tabIndex==index ? 'navActive' : '']" :id="index" :data-current="index" @tap="tapTab(tab,index)">{{tab.value}}</view>
         </scroll-view>
@@ -43,7 +43,6 @@
 <script>
 
   import listSearch from './search'
-  import props from './props'
   export default {
 
     data () {
@@ -68,7 +67,9 @@
         }
       }
     },
-    props,
+    props: {
+      widget: {}
+    },
     components: {
       listSearch
     },
@@ -84,14 +85,28 @@
       async  init () {
         this.$bus.$emit('stopPullDownRefresh')
         this.widget.isApiRequest = true
+        this.appendPara.userId = this.$user.loginUser().id
+        if (this.widget.route.path.indexOf('admin') !== -1) {
+          this.appendPara.userId = this.$user.loginUser(true).id
+        }
         this.widgetModel = await this.$api.themeWidget(this.widget, this.appendPara)
         if (this.viewModel.length === 0) {
+          this.viewModel = this.widgetModel.value.result.result.result
+        } else if (this.widget.route.path === 'admin_user_list') {
           this.viewModel = this.widgetModel.value.result.result.result
         } else {
           this.viewModel = [...this.viewModel, ...this.widgetModel.value.result.result.result]
         }
         this.data = this.widgetModel.value.result
-        this.height()
+        this.windowHeight = this.$api.screenHeight() - 46
+        if (this.data.searchOptions.advancedForms !== null && this.data.searchOptions.advancedForms.length !== 0) {
+          this.windowHeight = this.$api.screenHeight() - 46
+        } else {
+          this.windowHeight = this.$api.screenHeight() - 46
+        }
+        if (this.data.tabs !== null && this.data.tabs.length !== 0) {
+          this.windowHeight = this.$api.screenHeight() - 46 - 44
+        }
         console.info('this.viewModel zk-list', this.viewModel)
         this.async = true
       },
@@ -109,19 +124,6 @@
           }
         }
       },
-      // 内容宽度
-      height () {
-        this.windowHeight = this.$api.screenHeight() - 46
-        if (this.data.searchOptions.advancedForms !== null && this.data.searchOptions.advancedForms.length !== 0) {
-          this.windowHeight = this.$api.screenHeight() - 46
-        } else {
-          this.windowHeight = this.$api.screenHeight() - 46
-        }
-        if (this.data.tabs !== null && this.data.tabs.length !== 0) {
-          this.windowHeight = this.$api.screenHeight() - 46 - 44
-        }
-      },
-      // 标签切换
       async tapTab (tab, index) {
         if (this.tabIndex === index) {
           return false
@@ -138,8 +140,7 @@
           this.init()
         }
       },
-      // 搜索
-      async   search (par) {
+      async   searchPar (par) {
         this.appendPara.pageIndex = 1
         this.appendPara = {
           ...this.appendPara,

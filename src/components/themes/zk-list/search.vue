@@ -19,24 +19,24 @@
                 <view class="list_content">
                   <view class="content_b">
                     <div v-if="opt.type==='TextBox'" class="input_t">
-                      <input type="text" :placeholder="'请输入'+opt.label" v-model="searchPar[opt.prop]" />
+                      <input type="text" :placeholder="'请输入'+opt.label" v-model="search[opt.prop]" />
                     </div>
                     <div v-if="opt.type==='NumberRang'" class="input_t">
                       <div class="t-input">
-                        <input class="uni-input" type="number" :placeholder="'请输入'+opt.label" v-model="searchPar[opt.prop+'_Start']" />
+                        <input class="uni-input" type="number" :placeholder="'请输入'+opt.label" v-model="search[opt.prop+'_Start']" />
                       </div>
                       <div class="t-icon">
                         <x-icon name=" icon-zk-minus" size="18"></x-icon>
                       </div>
                       <div class="t-input">
-                        <input class="uni-input" type="number" :placeholder="'请输入'+opt.label" v-model="searchPar[opt.prop+'_End']" />
+                        <input class="uni-input" type="number" :placeholder="'请输入'+opt.label" v-model="search[opt.prop+'_End']" />
                       </div>
                     </div>
                     <div v-if="opt.type==='DropdownList'" style="width:100%;">
-                      <x-radio v-model="searchPar[opt.prop]" :modelValue="opt.modelValue"></x-radio>
+                      <x-radio v-model="search[opt.prop]" :modelValue="opt.modelValue"></x-radio>
                     </div>
                     <div v-if="opt.type==='DateTimeRang'" style="width:100%;">
-                      <x-tiem-picker v-model="searchPar[opt.prop]"></x-tiem-picker>
+                      <x-tiem-picker v-model="search[opt.prop]"></x-tiem-picker>
                     </div>
                   </view>
                 </view>
@@ -60,13 +60,13 @@
   import uniIcon from '../../order/zk-order-rate/stars/uni-icon.vue'
   export default {
     data () {
-      // let searchPar = {}
+      // let search = {}
       return {
         async: false,
         viewModel: {},
         windowHeight: 0,
         showRigth: false,
-        searchPar: {},
+        search: {},
         catchtouchmove: false,
         scrollTop: 0,
         txt: 'aaaaaaaa',
@@ -102,7 +102,7 @@
       },
       sumbit () {
         // this.showRigth = false
-        // this.$emit('searchPar', this.searchPar)
+        // this.$emit('search', this.search)
       },
       show (e) {
         if (e === 'left') {
