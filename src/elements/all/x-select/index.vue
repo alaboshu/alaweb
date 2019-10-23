@@ -1,5 +1,5 @@
 <template>
-  <view class="x-select" id="x-select">
+  <view v-if="async" class="x-select" id="x-select">
     <view class="list-cell-left-A">{{label}}</view>
     <view class="list-cell-right">
       <picker :value="index" :range="keyValues" range-key="value" @change="changeValue">
@@ -28,14 +28,16 @@
         keyValues: null,
         viewModel: null,
         viewText: '',
-        windowData: null
+        windowData: null,
+        async: false
 
       }
     },
     mounted () {
       this.init().then(() => {
         // 获取屏幕宽度
-        // this.windowData = uni.getSystemInfoSync()
+        this.windowData = uni.getSystemInfoSync()
+        this.async = true
         // console.info('res', this.windowData)
         // var query = uni.createSelectorQuery()
         // query.select('#x-select').boundingClientRect().exec(res => {
