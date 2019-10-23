@@ -78,8 +78,6 @@
     onLoad (option) {
       this.option = option
     },
-    created () {
-    },
     mounted () {
       this.init()
     },
