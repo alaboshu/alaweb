@@ -3,7 +3,7 @@
     <view class="zk-head-logo-placeholder"></view>
     <view class="zk-head-logo" :style="'top:'+headLogoHeight+'px;width:'+headLogoWidth+'px'">
       <view class="head_logo">
-        <img :src="widget.value.image" alt="阿拉博数">
+        <img :src="widget.value.image" alt="文房四宝">
       </view>
       <view class="head_search" @click="showTag()">
         <i class="icon iconfont icon-zk-search"></i>
@@ -86,7 +86,7 @@
         }
       },
       shareClick () {
-        this.$api.share('阿拉博数', 'http://s-open.qiniuniu99.com/wwwroot/uploads/image/20190524/logo.jpg', '实体商家业绩倍增服务平台', 'http://m.qiniuniu99.com/')
+        this.$api.share('文房四宝', 'http://s-open.qiniuniu99.com/wwwroot/uploads/image/20190524/logo.jpg', '实体商家业绩倍增服务平台', 'http://m.qiniuniu99.com/')
       },
       showTag () {
         this.boxshow = !this.boxshow

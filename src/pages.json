@@ -3,7 +3,7 @@
     {
       "path": "pages/default",
       "style": {
-        "navigationBarTitleText": "阿拉博数",
+        "navigationBarTitleText": "文房四宝",
         "enablePullDownRefresh": false,
         "app-plus": {
           "titleNView": false
@@ -165,7 +165,7 @@
     }
   ],
   "globalStyle": {
-    "navigationBarTitleText": "阿拉博数",
+    "navigationBarTitleText": "文房四宝",
     "navigationBarBackgroundColor": "#c81432",
     "backgroundColor": "#F8F8F8"
   },
@@ -226,8 +226,8 @@
       {
         "pagePath": "pages/tabbar/press",
         "text": "头条",
-        "iconPath": "static/img/news.png",
-        "selectedIconPath": "static/img/news-a.png"
+        "iconPath": "static/img/recommend.png",
+        "selectedIconPath": "static/img/recommend-a.png"
       },
       {
         "pagePath": "pages/user/index",

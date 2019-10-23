@@ -2,7 +2,7 @@
   <view class="zk-qnn-login">
     <view class="qnn-login_head">
       <view class="qnn-login-image">
-        <image class="login_phon" src="http://www.szwft.me/img/logo.jpg" alt="阿拉博数" />
+        <image class="login_phon" src="http://www.szwft.me/img/logo.jpg" alt="文房四宝" />
       </view>
     </view>
     <view class="qnn-login_text">

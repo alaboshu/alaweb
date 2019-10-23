@@ -238,7 +238,7 @@ export default {
       var usercode = option.usercode
       if (!api.isEmpty(usercode)) {
         // url 包含推荐码时跳转
-        api.to('/pages/index?path=user_reg')
+        api.to('/pages/user/reg')
       }
       uni.showModal({
         title: '未登录',
