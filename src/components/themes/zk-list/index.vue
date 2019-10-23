@@ -2,13 +2,13 @@
   <view>
     <view class="h5-x-list" v-if="async">
       <view>
-        <list-search :widget="data" @search="search" v-if="data.searchOptions.advancedForms!==null&&data.searchOptions.advancedForms.length!==0 && false"></list-search>
-        <scroll-view id="tab-bar" class="uni-swiper-tab" scroll-x :scroll-left="screen.left" style="height:45px" v-if="data.tabs!==null&&data.tabs.length!==0">
-          <view v-for="(tab,index) in data.tabs" :key="index" :class="['swiper-tab-list',serachOption.tabIndex==index ? 'navActive' : '']" :id="index" :data-current="index" @tap="tapTab(tab,index)">{{tab.value}}</view>
+        <list-search :widget="data" @search="search" v-if="viewModel.searchOptions.advancedForms!==null&&viewModel.searchOptions.advancedForms.length!==0 && false"></list-search>
+        <scroll-view id="tab-bar" class="uni-swiper-tab" scroll-x :scroll-left="screen.left" style="height:45px" v-if="viewModel.tabs!==null&&viewModel.tabs.length!==0">
+          <view v-for="(tab,index) in viewModel.tabs" :key="index" :class="['swiper-tab-list',serachOption.tabIndex==index ? 'navActive' : '']" :id="index" :data-current="index" @tap="tapTab(tab,index)">{{tab.value}}</view>
         </scroll-view>
       </view>
-      <scroll-view scroll-y="true" :style="'height:'+screen.height+'px;overflow-y: auto;'" @scrolltolower="scrolltolower" v-if="viewModel.length!==0">
-        <view class="global" v-for="(item,index) in viewModel" :key="index">
+      <scroll-view scroll-y="true" :style="'height:'+screen.height+'px;overflow-y: auto;'" @scrolltolower="scrolltolower" v-if="allDataList.length!==0">
+        <view class="global" v-for="(item,index) in allDataList" :key="index">
           <view @click="$api.to(item.url)">
             <view class="mobile-x-list">
               <view class="box">
@@ -32,7 +32,7 @@
         </div>
       </scroll-view>
     </view>
-    <view class="temporarily_box" v-if="!viewModel || viewModel.length===0" :style="'height:'+screen.height+'px;'">
+    <view class="temporarily_box" v-if=" allDataList.length===0" :style="'height:'+screen.height+'px;'">
       <view class="temporarily">
         <img class="temporarily_img" src="http://ui.5ug.com/static/demo/imageList/02.png">
       </view>
@@ -59,8 +59,8 @@
           tabIndex: 0,
           form: {}
         }, // 搜索相关选项
-        viewModel: [],
-        data: '',
+        allDataList: [], // 所有数据,每次刷新以后获取的数据叠加
+        viewModel: {}, // 视图模型
         loading: {
           text: '暂无更多数据...',
           show: false
@@ -92,8 +92,8 @@
         }
         var response = await this.$api.httpGet(this.apiUrl, this.queryPara)
         if (response.status === 1) {
-          this.viewModel = [...this.viewModel, ...response.result.result.result]
-          this.data = response.result
+          this.allDataList = [...this.allDataList, ...response.result.result.result]
+          this.viewModel = response.result
         } else {
           this.$api.toastWarn('数据获取失败')
         }
@@ -104,7 +104,7 @@
       scrolltolower () {
         if (!this.loading.show) {
           this.queryPara.pageIndex += 1
-          if (this.viewModel.length >= this.data.result.recordCount) {
+          if (this.allDataList.length >= this.viewModel.result.recordCount) {
             this.loading.show = true
           } else {
             this.init()
@@ -114,12 +114,12 @@
       // 内容宽度
       height () {
         this.screen.height = this.$api.screenHeight() - 46
-        if (this.data.searchOptions.advancedForms !== null && this.data.searchOptions.advancedForms.length !== 0) {
+        if (this.viewModel.searchOptions.advancedForms !== null && this.viewModel.searchOptions.advancedForms.length !== 0) {
           this.screen.height = this.$api.screenHeight() - 46
         } else {
           this.screen.height = this.$api.screenHeight() - 46
         }
-        if (this.data.tabs !== null && this.data.tabs.length !== 0) {
+        if (this.viewModel.tabs !== null && this.viewModel.tabs.length !== 0) {
           this.screen.height = this.$api.screenHeight() - 46 - 44
         }
       },
@@ -136,7 +136,7 @@
             ...this.queryPara,
             ...tabPara
           }
-          this.viewModel = []
+          this.allDataList = []
           this.init()
         }
       },
