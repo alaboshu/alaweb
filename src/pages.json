@@ -1,5 +1,6 @@
 {
-  "pages": [{
+  "pages": [
+    {
       "path": "pages/default",
       "style": {
         "navigationBarTitleText": "阿拉博数",
@@ -169,7 +170,8 @@
   },
   "condition": {
     "current": 0,
-    "list": [{
+    "list": [
+      {
         "name": "首页",
         "path": "pages/default"
       },
@@ -201,7 +203,8 @@
     "selectedColor": " #ff8329",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/default",
         "text": "首页",
         "iconPath": "static/img/index.png",
@@ -209,12 +212,6 @@
       },
       {
         "pagePath": "pages/tabbar/product_class",
-        "text": "商城",
-        "iconPath": "static/img/class.png",
-        "selectedIconPath": "static/img/class-a.png"
-      },
-      {
-        "pagePath": "pages/tabbar/product_class-1",
         "text": "商城",
         "iconPath": "static/img/class.png",
         "selectedIconPath": "static/img/class-a.png"
