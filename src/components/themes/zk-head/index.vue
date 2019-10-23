@@ -13,7 +13,7 @@
           </view>
         </view>
       </view>
-      <view class="zk-head_top" v-if="fasle"></view>
+      <view class="zk-head_top" v-if="false"></view>
     </view>
   </view>
 </template>

@@ -94,7 +94,6 @@
             } else {
               this.listPar.pageIndex += 1
               this.init().then(() => {
-                // this.$bus.$off('onBottom')
               })
             }
           }

@@ -138,7 +138,7 @@
       },
       init () {
         this.boxWidth = uni.getSystemInfoSync().screenWidth
-        this.boxHeight = uni.getSystemInfoSync().screenHeight
+        this.boxHeight = this.$api.screenHeight()
         if (this.type === 'success') {
           this.theme = this.msg.success
         } else if (this.type === 'fail') {

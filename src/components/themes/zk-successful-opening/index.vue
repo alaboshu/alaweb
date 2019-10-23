@@ -54,13 +54,13 @@
 </template>
 
 <script>
- 
+
   import './var.scss'
   import './styles'
 
 
   export default {
-    
+
     data () {
       return {
         widgetModel: {},
@@ -80,7 +80,7 @@
         this.viewModel = this.$user.loginUser()
         this.sucssModel = await this.$api.localGet('openSuccss')
         this.widgetModel = await this.$api.themeWidget(this.widget)
-        this.uHeight = uni.getSystemInfoSync().screenHeight
+        this.uHeight = this.$api.screenHeight()
       },
       goReturn () {
         this.$api.back()

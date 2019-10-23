@@ -117,7 +117,6 @@
     <zk-egg-machine :widget="widget" v-if="widget.componentPath === '/themes/zk-egg-machine'"></zk-egg-machine>
     <zk-eject :widget="widget" v-if="widget.componentPath === '/themes/zk-eject'"></zk-eject>
     <zk-enlarge-swiper :widget="widget" v-if="widget.componentPath === '/themes/zk-enlarge-swiper'"></zk-enlarge-swiper>
-    <zk-exchange :widget="widget" v-if="widget.componentPath === '/themes/zk-exchange'"></zk-exchange>
     <zk-float-swiper :widget="widget" v-if="widget.componentPath === '/themes/zk-float-swiper'"></zk-float-swiper>
     <zk-foot :widget="widget" v-if="widget.componentPath === '/themes/zk-foot'"></zk-foot>
     <zk-grid-list :widget="widget" v-if="widget.componentPath === '/themes/zk-grid-list'"></zk-grid-list>
@@ -138,7 +137,6 @@
     <zk-index-hot-shop :widget="widget" v-if="widget.componentPath === '/themes/zk-index-hot-shop'"></zk-index-hot-shop>
     <zk-index-new-top :widget="widget" v-if="widget.componentPath === '/themes/zk-index-new-top'"></zk-index-new-top>
     <zk-index-swiper :widget="widget" v-if="widget.componentPath === '/themes/zk-index-swiper'"></zk-index-swiper>
-    <zk-index-type-list :widget="widget" v-if="widget.componentPath === '/themes/zk-index-type-list'"></zk-index-type-list>
     <zk-info-nav :widget="widget" v-if="widget.componentPath === '/themes/zk-info-nav'"></zk-info-nav>
     <zk-keyword :widget="widget" v-if="widget.componentPath === '/themes/zk-keyword'"></zk-keyword>
     <zk-limited-time-buy :widget="widget" v-if="widget.componentPath === '/themes/zk-limited-time-buy'"></zk-limited-time-buy>

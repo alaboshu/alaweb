@@ -1,5 +1,5 @@
 <template>
-  <view v-if="async" style="width:100%;overflow: hidden">
+  <view v-if="async && viewModel" style="width:100%;overflow: hidden">
     <zk-head :title="viewModel.name" :widget="viewModel" :showHead="viewModel.setting.showHead" ref="zkHead" v-if="isNotIosApp"></zk-head>
     <div v-if="modelAsync">
       <view v-for="(widget, index) in viewModel.widgets" :key="index" :id="widget.widgetTheme" :style="widget.style && widget.style.css" :class="widget.borderClass">
@@ -90,20 +90,7 @@
         //   this.option.path = '/index'
         // }
         this.windowHieght = uni.getSystemInfoSync().windowHeigh
-        // if (this.option.path === undefined) {
-        //   var pages = pagesInfo.pageList
-        //   for (var i = 0; i < pagesInfo.pageList.length; i++) {
-        //     if (pages[i].path === '/index') {
-        //       pages[i].widgets = theme.filterWidgets(pages[i].widgets)
-        //       this.viewModel = pages[i]
-        //       break
-        //     }
-        //   }
-        // } else {
-        //   this.viewModel = await this.$api.themePage(this.option)
-        // }
         this.viewModel = await this.$api.themePage(this.option)
-        this.$api.vuexSet('viewModelItem', this.viewModel)
         if (this.viewModel.name !== '首页') {
           uni.setNavigationBarTitle({
             title: this.viewModel.name
@@ -113,7 +100,6 @@
         this.async = true
       },
       async scrolltolower () {
-        this.$bus.$emit('zkIndexTypeList')
         this.$bus.$emit('onBottomBurst', true)
         this.$bus.$emit('onBottom', true)
       }

@@ -31,6 +31,12 @@
       }
     },
     {
+      "path": "pages/user/rec",
+      "style": {
+        "navigationBarTitleText": "我的会员"
+      }
+    },
+    {
       "path": "pages/user/login",
       "style": {
         "navigationBarTitleText": "登录注册"
@@ -126,7 +132,8 @@
     {
       "path": "pages/test2",
       "style": {
-        "navigationBarTitleText": "测试二"
+        "navigationBarTitleText": "测试二",
+        "enablePullDownRefresh": true
       }
     },
     {
