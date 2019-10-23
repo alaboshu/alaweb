@@ -134,7 +134,14 @@ export default {
     uni.showModal({
       title: '提示',
       content: message,
-      showCancel: false
+      showCancel: false,
+      success: function (res) {
+        if (res.confirm) {
+          this.back()
+        } else if (res.cancel) {
+          this.back()
+        }
+      }
     })
   },
   // 上拉加载

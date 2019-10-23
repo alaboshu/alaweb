@@ -1,6 +1,6 @@
 export default {
   // 将服务器数据格式转换成zk-auto-form所需要的格式
-  async toConfig (config) {
+  toConfig (config) {
     if (!config.tooltip) {
       config.tooltip = {}
     }
@@ -11,7 +11,7 @@ export default {
     }
     return config
   },
-  async toTabConfig (autoFormConfig) {
+  toTabConfig (autoFormConfig) {
     var formConfig = autoFormConfig
     formConfig.columns = []
     if (autoFormConfig && autoFormConfig.groups) {
@@ -27,7 +27,7 @@ export default {
     formConfig.groups = null
     return formConfig
   },
-  async toNoTabConfig (autoFormConfig) {
+  toNoTabConfig (autoFormConfig) {
     if (autoFormConfig) {
       autoFormConfig.columns = autoFormConfig.groups[0].items
     }

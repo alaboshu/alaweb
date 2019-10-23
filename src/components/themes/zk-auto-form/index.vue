@@ -67,17 +67,14 @@
         var response = await this.$api.httpGet('/Api/Auto/Form', para)
         if (response.status === 1) {
           var result = convert.toConfig(response.result)
-          return result
+          console.info('result', result)
+          this.autoForm = result
+          this.viewModel = service.getModel(this.autoForm)
+          this.async = true
         } else {
           this.$api.confirm(response.message)
-          this.$api.back()
-        }
-        this.autoForm = await this.getForm(this.type, this.widget, this.$route)
-        if (this.autoForm) {
-          this.viewModel = service.getModel(this.autoForm)
         }
         this.$api.info('auto-from表单结构', this.autoForm, this.viewModel)
-        this.async = true
       },
       async sumbit () {
         this.$api.info('表单视图', this.viewModel)
