@@ -31,9 +31,10 @@
     {
       "path": "pages/user/login",
       "style": {
-        "navigationBarTitleText": "登录注册",
-        "navigationStyle": "custom"
-        // "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "black",
+        // "navigationStyle": "custom"
+        "navigationBarBackgroundColor": "#fff"
       }
     },
     {

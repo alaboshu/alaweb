@@ -1,7 +1,7 @@
 <template>
   <view class="zk-login">
     <view class="pushButton" v-if="returnButtom" @click="onBack">
-      <x-icon name="zk-arrows-left_black" size="16" :color="'#999999'"></x-icon>
+      <!-- <x-icon name="zk-arrows-left_black" size="16" :color="'#999999'"></x-icon> -->
     </view>
     <view class="form-login">
       <view class="form-login_box">
