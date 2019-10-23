@@ -1,0 +1,19 @@
+{
+  "apiUrl": "Api/Product/List",
+  "masterPageIndex": 0,
+  "name": "zk-index-day-update",
+  "isApiRequest": true,
+  "value": {
+    "classIds": "",
+    "count": "",
+    "isPrice": false,
+    "keyword": "",
+    "loading": false,
+    "name": "",
+    "priceRang": [10000, 0],
+    "priceStyleId": "e0000000-1478-49bd-bfc7-e73a5d699000",
+    "sortOrder": 0,
+    "stock": 1,
+    "tagIds": "12053"
+  }
+}
