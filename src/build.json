@@ -4148,7 +4148,7 @@
           "dataId": "5d43d6c143a2c710d49e3c97",
           "componentPath": "/themes/zk-search",
           "apiUrl": "Api/Theme/GetValue",
-          "value": "{\"name\":\"\",\"input_650\":\"阿斯蒂芬\",\"switch_602\":true,\"number\":10,\"switch\":true,\"links\":[{\"name\":\"牧人王\",\"id\":\"jspym19yqf91qhw83\",\"show\":true},{\"name\":\"冰箱\",\"id\":\"jspymfy56dnepxqdn\",\"show\":false},{\"name\":\"电视机\",\"id\":\"jspymmnqelg94s5j0m\",\"show\":true},{\"name\":\"消毒机\",\"id\":\"jspyn7dp9pdfuz92bt\",\"show\":false}],\"null\":[],\"nema\":\"joiojij\",\"height\":8,\"priceStyleId\":\"e0000000-1478-49bd-bfc7-e73a5d699000\"}",
+          "value": "{\"name\":\"\",\"input_650\":\"阿斯蒂芬\",\"switch_602\":true,\"number\":10,\"switch\":true,\"links\":[{\"name\":\"文房四宝\",\"id\":\"jspym19yqf91qhw83\",\"show\":true},{\"name\":\"冰箱\",\"id\":\"jspymfy56dnepxqdn\",\"show\":false},{\"name\":\"电视机\",\"id\":\"jspymmnqelg94s5j0m\",\"show\":true},{\"name\":\"消毒机\",\"id\":\"jspyn7dp9pdfuz92bt\",\"show\":false}],\"null\":[],\"nema\":\"joiojij\",\"height\":8,\"priceStyleId\":\"e0000000-1478-49bd-bfc7-e73a5d699000\"}",
           "layout": null,
           "title": "搜索款",
           "style": null
@@ -6343,7 +6343,7 @@
           "dataId": "5d49227d5815e31940a19ff7",
           "componentPath": "/themes/zk-image",
           "apiUrl": "Api/Theme/GetValue",
-          "value": "{\"name\":\"牧人王\",\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-08-06/5d49230da5817923e86f17ef.jpg\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=shepherd_kings\"},\"link\":{\"$ref\":\"#/url\"},\"height\":160}",
+          "value": "{\"name\":\"文房四宝\",\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-08-06/5d49230da5817923e86f17ef.jpg\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=shepherd_kings\"},\"link\":{\"$ref\":\"#/url\"},\"height\":160}",
           "layout": null,
           "title": "广告图列表",
           "style": null
@@ -8180,7 +8180,7 @@
     },
     {
       "isLayoutPage": false,
-      "name": "牧人王",
+      "name": "文房四宝",
       "url": "/shepherd/kings",
       "path": "/shepherd/kings",
       "layouts": [],
