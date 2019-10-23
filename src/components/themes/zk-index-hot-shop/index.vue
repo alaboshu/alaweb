@@ -10,18 +10,6 @@
             <img :src="item.img" alt="">
           </div>
         </div>
-<<<<<<< HEAD
-
-=======
-        <!-- <div class="hot-shop-content-S">
-          <div class="hot-shop-content-S-item" v-for="(item,index) in imgList" :key="index" @click="go(item.id)" v-show="index<3">
-            <img :src="item.thumbnailUrl" alt="">
-            <span>{{item.name}}</span>
-            <span v-if="$api.showPrice()">￥{{item.price}}</span>
-            <span v-else>升级后显示价格</span>
-          </div>
-        </div> -->
->>>>>>> 992d533cc039afca915fab2030528e5d78f999e7
       </div>
     </div>
   </div>
