@@ -20,23 +20,6 @@
           "value": "/pages/user/reg"
         }
       },
-      {
-        "icon": {
-          "iconSecondColor": "",
-          "name": "",
-          "path": "",
-          "size": ""
-        },
-        "id": 1,
-        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a3.png",
-        "intro": "",
-        "name": "激活客户",
-        "show": true,
-        "url": {
-          "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
-        }
-      },
 
       {
         "icon": {
@@ -52,7 +35,24 @@
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/user/rec"
+        }
+      },
+      {
+        "icon": {
+          "iconSecondColor": "",
+          "name": "",
+          "path": "",
+          "size": ""
+        },
+        "id": 1,
+        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a3.png",
+        "intro": "",
+        "name": "激活客户",
+        "show": true,
+        "url": {
+          "type": "url",
+          "value": "/pages/active/list"
         }
       },
       {
