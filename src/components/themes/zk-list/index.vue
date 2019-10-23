@@ -7,8 +7,8 @@
           <view v-for="(tab,index) in data.tabs" :key="index" :class="['swiper-tab-list',serachOption.tabIndex==index ? 'navActive' : '']" :id="index" :data-current="index" @tap="tapTab(tab,index)">{{tab.value}}</view>
         </scroll-view>
       </view>
-      <scroll-view scroll-y="true" :style="'height:'+screen.height+'px;overflow-y: auto;'" @scrolltolower="scrolltolower" v-if="viewModel.length!==0">
-        <view class="global" v-for="(item,index) in viewModel" :key="index">
+      <scroll-view scroll-y="true" :style="'height:'+screen.height+'px;overflow-y: auto;'" @scrolltolower="scrolltolower" v-if="allDataList.length!==0">
+        <view class="global" v-for="(item,index) in allDataList" :key="index">
           <view @click="$api.to(item.url)">
             <view class="mobile-x-list">
               <view class="box">
@@ -32,7 +32,7 @@
         </div>
       </scroll-view>
     </view>
-    <view class="temporarily_box" v-if="!viewModel || viewModel.length===0" :style="'height:'+screen.height+'px;'">
+    <view class="temporarily_box" v-if="!allDataList || allDataList.length===0" :style="'height:'+screen.height+'px;'">
       <view class="temporarily">
         <img class="temporarily_img" src="http://ui.5ug.com/static/demo/imageList/02.png">
       </view>
@@ -59,7 +59,7 @@
           tabIndex: 0,
           form: {}
         }, // 搜索相关选项
-        viewModel: [],
+        allDataList: [],
         data: '',
         loading: {
           text: '暂无更多数据...',
@@ -92,7 +92,7 @@
         }
         var response = await this.$api.httpGet(this.apiUrl, this.queryPara)
         if (response.status === 1) {
-          this.viewModel = [...this.viewModel, ...response.result.result.result]
+          this.allDataList = [...this.allDataList, ...response.result.result.result]
           this.data = response.result
         } else {
           this.$api.toastWarn('数据获取失败')
@@ -104,7 +104,7 @@
       scrolltolower () {
         if (!this.loading.show) {
           this.queryPara.pageIndex += 1
-          if (this.viewModel.length >= this.data.result.recordCount) {
+          if (this.allDataList.length >= this.data.result.recordCount) {
             this.loading.show = true
           } else {
             this.init()
@@ -136,7 +136,7 @@
             ...this.queryPara,
             ...tabPara
           }
-          this.viewModel = []
+          this.allDataList = []
           this.init()
         }
       },
