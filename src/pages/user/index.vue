@@ -1,6 +1,5 @@
 <template>
   <view>
-    <!--<zk-head title="我的中心"></zk-head>-->
     <zk-product-user :widget="widget"></zk-product-user>
     <zk-parting-line style="background: #F0F0F0;"></zk-parting-line>
     <zk-border-header :widget="viewModel"></zk-border-header>

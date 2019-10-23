@@ -5,23 +5,6 @@
     <view class="new-index-index-box">
       <view class="new-index-head-top-bg" :style="'background:'+colorList.headBg">
       </view>
-      <!-- <view class="new-index-head-placeholder"></view> -->
-      <!-- <scroll-view id="tab-bar" class="new-index-head-box" :style="'height:50px;top:'+appTopHeight.headItem+'px;background:'+colorList.headBg" scroll-x="true" scroll-left="0" scrollIndicator="none" v-if="async">
-        <view class="new-index-head">
-          <view class="head-item " :style="'color:'+colorList.headItemColor+';width:46px'" :class="{'head-item-active':active===-1}" @click="heaItemClick(-1,'/')">
-            <view class="head-item-txt indexText">
-              首页
-            </view>
-            <view class="head-item-border" :style="'background:'+colorList.headItemBorderColor"> </view>
-          </view>
-          <view class="head-item" :style="'color:'+colorList.headItemColor+';width:'+(14*item.name.length+20)+'px'" :class="{'head-item-active':active===index}" v-for="(item,index) in RClass" :key="index" @click="heaItemClick(index,'/class',item.id)">
-            <view class="head-item-txt">
-              {{item.name}}
-            </view>
-            <view class="head-item-border" :style="'background:'+colorList.headItemBorderColor"> </view>
-          </view>
-        </view>
-      </scroll-view> -->
       <view class="new-index-search-placeholder"></view>
       <view class="new-index-search-box" :style="'background:'+colorList.headBg+';top:'+appTopHeight.search+'px;'">
         <view class="index-search" :style="'background:'+colorList.headSearchBgColor" @click="showTag()">
@@ -352,7 +335,7 @@
   }
   .new-index-index-box {
     position: relative;
-    margin-bottom: 10upx;
+    // margin-bottom: 10upx;
     width: 100;
     .new-index-head-top-bg {
       position: absolute;
