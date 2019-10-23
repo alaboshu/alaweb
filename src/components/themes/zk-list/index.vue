@@ -4,10 +4,10 @@
       <view>
         <list-search :widget="data" @search="search" v-if="data.searchOptions.advancedForms!==null&&data.searchOptions.advancedForms.length!==0 && false"></list-search>
         <scroll-view id="tab-bar" class="uni-swiper-tab" scroll-x :scroll-left="scrollLeft" style="height:45px" v-if="data.tabs!==null&&data.tabs.length!==0">
-          <view v-for="(tab,index) in data.tabs" :key="index" :class="['swiper-tab-list',tabIndex==index ? 'navActive' : '']" :id="index" :data-current="index" @tap="tapTab(tab,index)">{{tab.value}}</view>
+          <view v-for="(tab,index) in data.tabs" :key="index" :class="['swiper-tab-list',serachOption.tabIndex==index ? 'navActive' : '']" :id="index" :data-current="index" @tap="tapTab(tab,index)">{{tab.value}}</view>
         </scroll-view>
       </view>
-      <scroll-view scroll-y="true" :style="'height:'+windowHeight+'px;overflow-y: auto;'" @scrolltolower="scrolltolower" v-if="viewModel.length!==0">
+      <scroll-view scroll-y="true" :style="'height:'+screen.height+'px;overflow-y: auto;'" @scrolltolower="scrolltolower" v-if="viewModel.length!==0">
         <view class="global" v-for="(item,index) in viewModel" :key="index">
           <view @click="$api.to(item.url)">
             <view class="mobile-x-list">
@@ -32,7 +32,7 @@
         </div>
       </scroll-view>
     </view>
-    <view class="temporarily_box" v-if="!viewModel || viewModel.length===0" :style="'height:'+windowHeight+'px;'">
+    <view class="temporarily_box" v-if="!viewModel || viewModel.length===0" :style="'height:'+screen.height+'px;'">
       <view class="temporarily">
         <img class="temporarily_img" src="http://ui.5ug.com/static/demo/imageList/02.png">
       </view>
@@ -49,23 +49,25 @@
     data () {
       return {
         async: false,
-        tabIndex: 0,
-        windowHeight: 0,
+        screen: {
+          height: 0
+        }, // 屏幕相关信息
         serachOption: {
           tab: {},
+          tabIndex: 0,
           form: {}
-        },
+        }, // 搜索相关选项
         scrollLeft: 0,
         para: {},
         widgetModel: '',
         viewModel: [],
-        newViewModel: [],
         data: '',
         loadingTxt: '暂无更多数据...',
         loadingShow: false,
-        appendPara: {
-          pageIndex: 1
-        }
+        queryPara: {
+          pageIndex: 1,
+          pageSize: this.pageSize
+        }// 查询参数
       }
     },
     props,
@@ -83,8 +85,9 @@
     methods: {
       async  init () {
         this.$bus.$emit('stopPullDownRefresh')
+        console.info('this.wi')
         this.widget.isApiRequest = true
-        this.widgetModel = await this.$api.themeWidget(this.widget, this.appendPara)
+        this.widgetModel = await this.$api.themeWidget(this.widget, this.queryPara)
         if (this.viewModel.length === 0) {
           this.viewModel = this.widgetModel.value.result.result.result
         } else {
@@ -97,10 +100,10 @@
       },
       scrolltolower () {
         if (!this.loadingShow) {
-          if (this.appendPara.pageIndex === undefined) {
-            this.appendPara.pageIndex = 2
+          if (this.queryPara.pageIndex === undefined) {
+            this.queryPara.pageIndex = 2
           } else {
-            this.appendPara.pageIndex += 1
+            this.queryPara.pageIndex += 1
           }
           if (this.viewModel.length >= this.data.result.recordCount) {
             this.loadingShow = true
@@ -111,27 +114,27 @@
       },
       // 内容宽度
       height () {
-        this.windowHeight = this.$api.screenHeight() - 46
+        this.screen.height = this.$api.screenHeight() - 46
         if (this.data.searchOptions.advancedForms !== null && this.data.searchOptions.advancedForms.length !== 0) {
-          this.windowHeight = this.$api.screenHeight() - 46
+          this.screen.height = this.$api.screenHeight() - 46
         } else {
-          this.windowHeight = this.$api.screenHeight() - 46
+          this.screen.height = this.$api.screenHeight() - 46
         }
         if (this.data.tabs !== null && this.data.tabs.length !== 0) {
-          this.windowHeight = this.$api.screenHeight() - 46 - 44
+          this.screen.height = this.$api.screenHeight() - 46 - 44
         }
       },
       // 标签切换
       async tapTab (tab, index) {
-        if (this.tabIndex === index) {
+        if (this.serachOption.tabIndex === index) {
           return false
         } else {
-          this.appendPara.pageIndex = 1
-          this.tabIndex = index
+          this.queryPara.pageIndex = 1
+          this.serachOption.tabIndex = index
           let tabPara = {}
           tabPara[tab.name] = tab.key
-          this.appendPara = {
-            ...this.appendPara,
+          this.queryPara = {
+            ...this.queryPara,
             ...tabPara
           }
           this.viewModel = []
@@ -140,9 +143,9 @@
       },
       // 搜索
       async   search (par) {
-        this.appendPara.pageIndex = 1
-        this.appendPara = {
-          ...this.appendPara,
+        this.queryPara.pageIndex = 1
+        this.queryPara = {
+          ...this.queryPara,
           ...par
         }
         this.init()

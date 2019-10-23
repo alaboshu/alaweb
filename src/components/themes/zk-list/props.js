@@ -10,14 +10,14 @@ let props = {
     type: String,
     default: 'Api/Auto/List'
   }, // 类型必须填写，通过Type和后台Api/Auto/List来获取数据
-  columns: {
-    type: Array,
-    default: null
-  }, // 自定义列，可以通过diy体系来控制
+  pageSize: {
+    type: Number,
+    default: 10
+  },
   isTemplate: {
     type: Boolean,
     default: false
-  }, // 是否模板显示,
+  }, // 是否模板显示,原则上zk-list可以显示任何样式的内容包括
   isShowPage: {
     type: Boolean,
     default: true
