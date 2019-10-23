@@ -32,7 +32,7 @@
         </div>
       </scroll-view>
     </view>
-    <view class="temporarily_box" v-if=" allDataList.length===0" :style="'height:'+screen.height+'px;'">
+    <view class="temporarily_box" v-if="allDataList.length===0" :style="'height:'+screen.height+'px;'">
       <view class="temporarily">
         <!-- <img class="temporarily_img" src="../../static/img/nodata.png">  -->
       </view>
@@ -91,9 +91,10 @@
           this.apiUrl = this.widget.apiUrl
         }
         var response = await this.$api.httpGet(this.apiUrl, this.queryPara)
+
         if (response.status === 1) {
-          this.allDataList = [...this.allDataList, ...response.result.data.result]
           this.viewModel = response.result
+          this.allDataList = [...this.allDataList, ...this.viewModel.data.result]
         } else {
           this.$api.toastWarn('数据获取失败')
         }
