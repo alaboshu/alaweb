@@ -41,7 +41,7 @@
       </div>
     </view>
     <view class="action-row">
-      <navigator class="navigator" url="/pages/index?path=user_reg">注册账号</navigator>
+      <navigator class="navigator" url="/pages/user/reg">注册账号</navigator>
       <navigator class="navigator" url="/pages/index?path=user_password_find">忘记密码</navigator>
     </view>
     <view class="oauth-row" v-if="hasProvider" v-bind:style="{top: positionTop + 'px'}">
