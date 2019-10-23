@@ -104,7 +104,6 @@
           if (this.$api.client() === 'AppPlus' && this.$api.payType() === 3) {
             this.isNotIosApp = false
           }
-          console.info('444444444444', this.widget)
         }
         let parament = {
           id: this.pagesId,

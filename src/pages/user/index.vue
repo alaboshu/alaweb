@@ -32,12 +32,6 @@
         platData: platform,
         imageData: imageJson
       }
-    },
-    mounted () {
-
-    },
-    methods: {
-
     }
   }
 </script>
