@@ -93,7 +93,7 @@ export default {
       api.toastSuccess('注册成功')
       this.setUser(response.result)
       uni.hideLoading()
-      api.to('/pages/tabbar/user_index')
+      api.to('/pages/user/index')
     } else {
       api.toastWarn(response.message)
     }
@@ -219,7 +219,7 @@ export default {
     api.to('/pages/user/login')
   },
   loginTo () {
-    var userIndex = '/pages/tabbar/user_index'
+    var userIndex = '/pages/user/index'
     var isApp = true
     if (this.isLogin()) {
       api.toastWarn('已成功登录')

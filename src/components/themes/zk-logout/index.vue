@@ -37,7 +37,7 @@
             }
             if (val.cancel) {
               uni.reLaunch({
-                url: '/pages/tabbar/user_index'
+                url: '/pages/user/index'
               })
             }
           }
