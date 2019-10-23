@@ -1,11 +1,12 @@
 <template>
   <view>
-    <zk-index-swiper :widget="indexSwiperData"></zk-index-swiper>
-    <zk-index-new-top :widget="indexNewData"></zk-index-new-top>
-    <zk-image :widget="imageData"></zk-image>
-    <zk-border-header :widget="indexNewData" type="2"></zk-border-header>
+    <zk-index-swiper :widget="indexSwiperData" style="background: #F0F0F0;"></zk-index-swiper>
+    <zk-parting-line style="background: #F0F0F0;"></zk-parting-line>
+    <zk-index-new-top :widget="indexNewData" style="background: #f0f0f0;"></zk-index-new-top>
+    <zk-image :widget="imageData" style="background: #f0f0f0;"></zk-image>
+    <zk-border-header :widget="indexNewData" type="2" style="background: #f0f0f0;"></zk-border-header>
+    <zk-index-hot-shop :widget="hotShopData" style="background: #f0f0f0;"></zk-index-hot-shop>
     <zk-index-day-update :widget="dayUpdateData"></zk-index-day-update>
-    <zk-index-hot-shop :widget="hotShopData"></zk-index-hot-shop>
     <!-- <zk-index-type-list :widget="typeListData"></zk-index-type-list> -->
   </view>
 </template>
