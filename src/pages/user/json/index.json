@@ -2,8 +2,7 @@
   "value": {
     "count": 5,
     "iconSize": 32,
-    "links": [
-      {
+    "links": [{
         "icon": {
           "iconSecondColor": "",
           "name": "",
@@ -94,7 +93,7 @@
     "icon": {
       "color": ""
     },
-    "title": "我的订单",
+    "title": "新品推荐",
     "intro": ""
   }
 }

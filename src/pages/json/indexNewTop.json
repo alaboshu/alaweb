@@ -123,10 +123,12 @@
     }]
   },
   "border": {
-    "icon": {
-      "color": ""
-    },
-    "title": "我的订单",
-    "intro": ""
+    "icon": "icon-zk-find",
+    "title": "新品推荐",
+    "intro": "",
+    "path": "https://diyservice.5ug.com//wwwroot/uploads/icon/zk/5c8e04713789d91024d28296find.svg",
+    "name": "center-border",
+    "iconSecondColor": "#e7505a",
+    "borderClass": "widget_border center-border "
   }
 }

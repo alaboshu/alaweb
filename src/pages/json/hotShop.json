@@ -1,0 +1,19 @@
+{
+  "apiUrl": "Api/Product/List",
+  "masterPageIndex": 0,
+  "name": "zk-index-hot-shop",
+  "isApiRequest": true,
+  "value": {
+    "classIds": "",
+    "count": 50,
+    "isPrice": false,
+    "keyword": "",
+    "loading": true,
+    "name": "",
+    "priceRang": [10000, 0],
+    "priceStyleId": "e0000000-1478-49bd-bfc7-e73a5d699000",
+    "sortOrder": 1,
+    "stock": 1,
+    "tagIds": "12052"
+  }
+}
