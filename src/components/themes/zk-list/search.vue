@@ -1,9 +1,6 @@
 <template>
   <div class="list-search" v-if="async">
     <view class="header">
-      <!-- <view>
-        <x-icon name="zk-return" size="20" color="#666"></x-icon>
-      </view> -->
       <view class="input-view" style="margin:0 5px">
         <view><input confirm-type="search" @confirm="confirm" type="text" placeholder="输入搜索关键词" /></view>
       </view>
@@ -44,42 +41,10 @@
                   </view>
                 </view>
               </div>
-
             </scroll-view>
-            <!-- <view class="all_b" style="overflow:auto;" :style="'height:'+windowHeight+'px'">
-              <div v-for="(opt,optIndex) in widget.searchOptions.advancedForms" :key="optIndex" class="search-item">
-                <h2>{{opt.label}}</h2>
-                <view class="list_content">
-                  <view class="content_b">
-                    <div v-if="opt.type==='TextBox'" class="input_t">
-                      <input type="text" :placeholder="'请输入'+opt.label" v-model="searchPar[opt.prop]" />
-                    </div>
-                    <div v-if="opt.type==='NumberRang'" class="input_t">
-                      <div class="t-input">
-                        <input class="uni-input" type="number" :placeholder="'请输入'+opt.label" v-model="searchPar[opt.prop+'_Start']" />
-                      </div>
-                      <div class="t-icon">
-                        <x-icon name=" icon-zk-minus" size="18"></x-icon>
-                      </div>
-                      <div class="t-input">
-                        <input class="uni-input" type="number" :placeholder="'请输入'+opt.label" v-model="searchPar[opt.prop+'_End']" />
-                      </div>
-                    </div>
-                    <div v-if="opt.type==='DropdownList'" style="width:100%;">
-                      <x-radio v-model="searchPar[opt.prop]" :modelValue="opt.modelValue"></x-radio>
-                    </div>
-                    <div v-if="opt.type==='DateTimeRang'" style="width:100%;">
-                      <x-tiem-picker v-model="searchPar[opt.prop]"></x-tiem-picker>
-                    </div>
-                  </view>
-                </view>
-              </div>
-
-            </view> -->
           </view>
           <div class="content_bottom-pla"></div>
           <view class="content_bottom">
-            <!-- <span>重置</span> -->
             <span @click="sumbit">确定</span>
           </view>
         </view>

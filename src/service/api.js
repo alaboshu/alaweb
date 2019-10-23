@@ -421,5 +421,13 @@ export default {
     } else {
       return store.state.getSystemInfoSync
     }
+  },
+  // 屏幕高度
+  screenHeight() {
+    return this.getSystemInfoSync().screenHeight
+  },
+  // 屏幕宽度
+  screenWidth() {
+    return this.getSystemInfoSync().windowWidth
   }
 }

@@ -12,9 +12,6 @@
           <view @click="$api.to(item.url)">
             <view class="mobile-x-list">
               <view class="box">
-                <!-- <navigator class="xlist_box1">
-                <img :src="item.image" alt class="box1_img">
-              </navigator> -->
                 <div class="xlist_box1">
                   <img :src="item.image" alt class="box1_img">
                 </div>
@@ -101,15 +98,16 @@
           this.viewModel = [...this.viewModel, ...this.widgetModel.value.result.result.result]
         }
         this.data = this.widgetModel.value.result
-        this.windowHeight = uni.getSystemInfoSync().screenHeight - 46
+        this.windowHeight = this.$api.screenHeight() - 46
         if (this.data.searchOptions.advancedForms !== null && this.data.searchOptions.advancedForms.length !== 0) {
-          this.windowHeight = uni.getSystemInfoSync().screenHeight - 46
+          this.windowHeight = this.$api.screenHeight() - 46
         } else {
-          this.windowHeight = uni.getSystemInfoSync().screenHeight - 46
+          this.windowHeight = this.$api.screenHeight() - 46
         }
         if (this.data.tabs !== null && this.data.tabs.length !== 0) {
-          this.windowHeight = uni.getSystemInfoSync().screenHeight - 46 - 44
+          this.windowHeight = this.$api.screenHeight() - 46 - 44
         }
+        console.info('this.viewModel zk-list', this.viewModel)
         this.async = true
       },
       scrolltolower () {
