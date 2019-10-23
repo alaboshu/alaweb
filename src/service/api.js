@@ -142,9 +142,7 @@ export default {
       title: '提示',
       content: message,
       success: function (res) {
-        if (res.confirm) {
-        } else if (res.cancel) {
-        }
+        if (res.confirm) {} else if (res.cancel) {}
       }
     })
   },
@@ -154,15 +152,12 @@ export default {
       shareApp.appShare(title, url, desc, imageUrl)
     } else if (this.client() === 'AppPlus' && this.payType() === 3) {
       // #ifdef APP-PLUS
-      wushare.iosShare(
-        {
+      wushare.iosShare({
           text: title,
           url: url
         },
         result => {
-          if (result.completed) {
-          } else {
-          }
+          if (result.completed) {} else {}
         }
       )
       // #endif
@@ -307,7 +302,7 @@ export default {
       })
       return false
     }
-    if (historys.length > 1) {
+    if (historys && historys.length > 1) {
       if (url === '/pages/user?path=order_show') {
         this.to('/pages/index?path=order_index')
       } else if (url === '/pages/user?path=order_index') {
@@ -331,7 +326,7 @@ export default {
               getCurrentPages()[getCurrentPages().length - 1] &&
               getCurrentPages()[getCurrentPages().length - 1].option &&
               getCurrentPages()[getCurrentPages().length - 1].option.path ===
-                'user_login'
+              'user_login'
             ) {
               var historys = this.localGet('browse_historys')
               var backUrl = historys[historys.length - 1]
@@ -357,7 +352,7 @@ export default {
     var version
     var _this = this
     if (this.client() === 'AppPlus' && this.payType() === 4) {
-      plus.runtime.getProperty(plus.runtime.appid, async function(wgtinfo) {
+      plus.runtime.getProperty(plus.runtime.appid, async function (wgtinfo) {
         version = wgtinfo.version
 
         let par = {
@@ -370,12 +365,11 @@ export default {
             uni.showModal({
               title: '发现新版本',
               content: response.result.note,
-              success: function(res) {
+              success: function (res) {
                 if (res.confirm) {
                   // var url = encodeURI(response.result.url)
                   // plus.runtime.openURL(url, function (res) {})
-                } else if (res.cancel) {
-                }
+                } else if (res.cancel) {}
               }
             })
           }
