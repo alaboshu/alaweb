@@ -3,7 +3,7 @@
     <view class="h5-x-list" v-if="async">
       <view>
         <list-search :widget="data" @search="search" v-if="data.searchOptions.advancedForms!==null&&data.searchOptions.advancedForms.length!==0 && false"></list-search>
-        <scroll-view id="tab-bar" class="uni-swiper-tab" scroll-x :scroll-left="scrollLeft" style="height:45px" v-if="data.tabs!==null&&data.tabs.length!==0">
+        <scroll-view id="tab-bar" class="uni-swiper-tab" scroll-x :scroll-left="screen.left" style="height:45px" v-if="data.tabs!==null&&data.tabs.length!==0">
           <view v-for="(tab,index) in data.tabs" :key="index" :class="['swiper-tab-list',serachOption.tabIndex==index ? 'navActive' : '']" :id="index" :data-current="index" @tap="tapTab(tab,index)">{{tab.value}}</view>
         </scroll-view>
       </view>
@@ -49,16 +49,16 @@
     data () {
       return {
         async: false,
+        apiUrl: null, // api网址信息,通过type和widget属性来设置，type的优先级高于widget
         screen: {
-          height: 0
+          height: 0,
+          left: 0
         }, // 屏幕相关信息
         serachOption: {
           tab: {},
           tabIndex: 0,
           form: {}
         }, // 搜索相关选项
-        scrollLeft: 0,
-        para: {},
         widgetModel: '',
         viewModel: [],
         data: '',
@@ -85,15 +85,22 @@
     methods: {
       async  init () {
         this.$bus.$emit('stopPullDownRefresh')
-        console.info('this.wi')
-        this.widget.isApiRequest = true
-        this.widgetModel = await this.$api.themeWidget(this.widget, this.queryPara)
-        if (this.viewModel.length === 0) {
-          this.viewModel = this.widgetModel.value.result.result.result
-        } else {
-          this.viewModel = [...this.viewModel, ...this.widgetModel.value.result.result.result]
+
+        if (this.type) {
+          this.apiUrl = '/Api/Auto/List?type' + this.type // 通过type来设置Url
         }
-        this.data = this.widgetModel.value.result
+        if (!this.type && this.widget.apiUrl) {
+          this.apiUrl = this.widget.apiUrl
+        }
+        var response = await this.$api.httpGet(this.apiUrl, this.queryPara)
+        if (response.status === 1) {
+          this.viewModel = [...this.viewModel, ...response.result.result.result]
+          this.data = response.result
+        }
+        console.info('获取数据', response)
+
+
+
         this.height()
         console.info('this.viewModel zk-list', this.viewModel)
         this.async = true
