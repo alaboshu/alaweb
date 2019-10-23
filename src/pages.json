@@ -1,5 +1,6 @@
 {
-  "pages": [{
+  "pages": [
+    {
       "path": "pages/default",
       "style": {
         "navigationBarTitleText": "阿拉博数",
@@ -11,13 +12,6 @@
     },
     {
       "path": "pages/index",
-      "style": {
-        "onReachBottomDistance": 20,
-        "enablePullDownRefresh": false
-      }
-    },
-    {
-      "path": "pages/introduction",
       "style": {
         "onReachBottomDistance": 20,
         "enablePullDownRefresh": false
@@ -175,7 +169,8 @@
   },
   "condition": {
     "current": 0,
-    "list": [{
+    "list": [
+      {
         "name": "首页",
         "path": "pages/default"
       },
@@ -207,7 +202,8 @@
     "selectedColor": " #ff8329",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/default",
         "text": "首页",
         "iconPath": "static/img/index.png",
