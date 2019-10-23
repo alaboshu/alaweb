@@ -135,6 +135,13 @@
       }
     },
     {
+      "path": "pages/homePage",
+      "style": {
+        "navigationBarTitleText": "测试一",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
       "path": "pages/test2",
       "style": {
         "navigationBarTitleText": "测试二",
@@ -207,17 +214,23 @@
         "selectedIconPath": "static/img/index-a.png"
       },
       {
+        "pagePath": "pages/homePage",
+        "text": "首页",
+        "iconPath": "static/img/index.png",
+        "selectedIconPath": "static/img/index-a.png"
+      },
+      {
         "pagePath": "pages/tabbar/product_class",
         "text": "商城",
         "iconPath": "static/img/class.png",
         "selectedIconPath": "static/img/class-a.png"
       },
-      {
-        "pagePath": "pages/tabbar/user_recommend",
-        "text": "文交所",
-        "iconPath": "static/img/school.png",
-        "selectedIconPath": "static/img/school-a.png"
-      },
+      // {
+      //   "pagePath": "pages/tabbar/user_recommend",
+      //   "text": "文交所",
+      //   "iconPath": "static/img/school.png",
+      //   "selectedIconPath": "static/img/school-a.png"
+      // },
       {
         "pagePath": "pages/tabbar/press",
         "text": "头条",
