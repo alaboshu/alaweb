@@ -311,7 +311,7 @@ export default {
       if (url === '/pages/user?path=order_show') {
         this.to('/pages/index?path=order_index')
       } else if (url === '/pages/user?path=order_index') {
-        this.to('/pages/tabbar/user_index', true)
+        this.to('/pages/user/index', true)
       } else if (url === 'login' && user.isLogin() === false) {
         uni.navigateBack({
           delta: 1

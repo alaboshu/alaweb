@@ -10,12 +10,15 @@
     <zk-grid :widget="platData"></zk-grid>
     <zk-parting-line style="background: #F0F0F0;"></zk-parting-line>
     <zk-image :widget="imageData" style="background: #F0F0F0;"></zk-image>
+    <zk-border-header :widget="privilegeData"></zk-border-header>
+    <zk-grid :widget="privilegeData"></zk-grid>
   </view>
 </template>
 
 <script>
   import indexJson from './json/index.json'
   import platform from './json/platform.json'
+  import privilegeJson from './json/privilege.json'
   import imageJson from './json/imageList.json'
   import minx from './mix/index.js'
   export default {
@@ -30,7 +33,8 @@
         },
         viewModel: indexJson,
         platData: platform,
-        imageData: imageJson
+        imageData: imageJson,
+        privilegeData: privilegeJson
       }
     }
   }

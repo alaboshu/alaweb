@@ -86,7 +86,7 @@
       }
     },
     {
-      "path": "pages/tabbar/user_index",
+      "path": "pages/user/index",
       "style": {
         "navigationBarTitleText": "我的中心",
         "enablePullDownRefresh": true

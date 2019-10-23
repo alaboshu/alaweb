@@ -78,7 +78,7 @@
     created () {
       if (this.$user.isLogin()) {
         uni.reLaunch({
-          url: '/pages/tabbar/user_index'
+          url: '/pages/user/index'
         })
       }
     },

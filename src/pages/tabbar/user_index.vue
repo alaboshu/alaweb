@@ -69,7 +69,7 @@
       async   init () {
         console.info('就是这里了')
         if (this.$user.isLogin() === true) {
-          this.$api.historys('/pages/tabbar/user_index')
+          this.$api.historys('/pages/user/index')
           var option = {
             path: 'user_index'
           }
