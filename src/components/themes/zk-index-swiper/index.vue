@@ -322,7 +322,8 @@
         })
         this.viewModel = await this.$api.themePage({ path: '/' })
         this.widgetIndex = this.viewModel
-        this.viewItem = this.viewModel.widgets[0]
+        // this.viewItem = this.viewModel.widgets[0]
+        this.viewItem = this.widget
         if (this.viewItem.value.links[0].colors === '#FFFFFF') {
           this.colorList = this.whiteColor
         } else {

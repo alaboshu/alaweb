@@ -1,0 +1,84 @@
+{
+  "title": "zk-index-swiper",
+  "value": {
+    "links": [{
+      "color": "#120C3C",
+      "colors": "#1C1281",
+      "enable": true,
+      "id": 1,
+      "image": "http://www.szwft.me/img/b1.jpg",
+      "intro": "",
+      "name": 7,
+      "show": true,
+      "url": {
+        "type": "url",
+        "value": "/pages/index?path=user_bookingsignup_show&id=5d37fae223563c12a82dc3d4"
+      }
+    }, {
+      "color": "#FF505F",
+      "colors": "#FF826E",
+      "enable": true,
+      "id": 1,
+      "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-07-20/5d32c6966814501d3c7cc5b1.jpg",
+      "intro": "",
+      "name": 1,
+      "show": true,
+      "url": {
+        "type": "url",
+        "value": "/pages/index?path=user_bookingsignup_show&id=5d37fae223563c12a82dc3d4"
+      }
+    }, {
+      "color": "#F45353",
+      "colors": "#CD1414",
+      "enable": true,
+      "id": 1,
+      "image": "https: //s-open.qiniuniu99.com/wwwroot/uploads/api/2019-07-20/5d32d4da6814501d3c7cecc1.jpg",
+      "intro": "",
+      "name": 2,
+      "show": true,
+      "url": {
+        "type": "url",
+        "value": "/pages/index?path=user_bookingsignup_show&id=5d37fae223563c12a82dc3d4"
+      }
+    }, {
+      "color": "#44EA83",
+      "colors": "#A7F2BF",
+      "enable": true,
+      "id": 3,
+      "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-07-25/5d3919a93a1202105432243b.jpg",
+      "intro": "",
+      "name": 7,
+      "show": true,
+      "url": {
+        "type": "url",
+        "value": "/pages/index?path=user_bookingsignup_show&id=5d37fae223563c12a82dc3d4"
+      }
+    }, {
+      "color": "#D1AA68",
+      "colors": "#D1AA68",
+      "enable": true,
+      "id": 4,
+      "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-27/5d142d244fedd406cc3d063a.jpg",
+      "intro": "",
+      "name": 7,
+      "show": true,
+      "url": {
+        "type": "url",
+        "value": "/pages/index?path=user_bookingsignup_show&id=5d37fae223563c12a82dc3d4"
+      }
+    }, {
+      "color": "#FF990A",
+      "colors": "#FFC546",
+      "enable": true,
+      "id": 5,
+      "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-08-01/5d4256796a923f14a06ecdf2.jpg",
+      "intro": "",
+      "name": 7,
+      "show": true,
+      "url": {
+        "type": "url",
+        "value": "/pages/index?path=user_bookingsignup_show&id=5d37fae223563c12a82dc3d4"
+      }
+    }]
+  }
+}

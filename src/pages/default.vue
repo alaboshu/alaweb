@@ -1,80 +1,35 @@
 <template>
   <view>
-    <zk-boot-up v-if="showBootUp" @showDefault="showDefault"></zk-boot-up>
-    <view style=" background: #f2f2f2;width:100%;overflow: hidden" v-if="!showBootUp">
-      <zk-index-swiper ref="zkIndexSwiper" v-if="showIndexSwiper===false" @newPath="newPath"></zk-index-swiper>
-      <x-widget :option="option" ref="xWidget"></x-widget>
-    </view>
+    <zk-index-swiper :widget="indexSwiperData"></zk-index-swiper>
+    <zk-index-new-top :widget="indexNewData"></zk-index-new-top>
+    <zk-image :widget="imageData"></zk-image>
+    <zk-border-header :widget="indexNewData" type="2"></zk-border-header>
+    <zk-index-day-update :widget="dayUpdateData"></zk-index-day-update>
+    <zk-index-hot-shop :widget="hotShopData"></zk-index-hot-shop>
+    <!-- <zk-index-type-list :widget="typeListData"></zk-index-type-list> -->
   </view>
-
 </template>
 
 <script>
-  import config from '@/service/config.js'
+  import indexSwiperJson from './json/indexSwiper.json'
+  import indexNewJson from './json/indexNewTop.json'
+  import imageJson from './json/imageList.json'
+  import dayUpdateJson from './json/dayUpdate.json'
+  import hotShopJson from './json/hotShop.json'
+  import typeListJson from './json/typeList.json'
   export default {
     data () {
       return {
-        async: false,
-        option: {},
-        viewModel: '',
-        showIndexSwiper: false,
-        showBootUp: false
-      }
-    },
-    onLoad (option) {
-      this.option = option
-      if (this.$api.client() === 'AppPlus' && this.$api.localGet('isFirstEntry') === undefined) {
-        this.$api.localSet('isFirstEntry', true)
-        this.showBootUp = true
-        uni.hideTabBar()
-      }
-    },
-    onShow () {
-      if (this.$user.loginUser() === null) {
-        this.$store.state.showPrice = false
-      } else {
-        if (this.$user.loginUser().gradeName !== '免费会员') {
-          this.$store.state.showPrice = true
-        } else {
-          this.$store.state.showPrice = false
-        }
+        indexSwiperData: indexSwiperJson,
+        indexNewData: indexNewJson,
+        imageData: imageJson,
+        dayUpdateData: dayUpdateJson,
+        hotShopData: hotShopJson,
+        typeListData: typeListJson
       }
     },
     mounted () {
-      this.$api.historys('/')
-      if (config.themeId === '5cc1bfbe23eb301328298b41' || config.themeId === '5d26e11a064c25053c9b3def') {
-        this.showIndexSwiper = true
-      }
-      // this.async = true
-    },
-    methods: {
-      newPath (viewModel) {
-        this.$refs.xWidget.$emit('newPath', viewModel)
-      },
-      showDefault () {
-        this.showBootUp = false
-      }
-    },
-    onPullDownRefresh () {
-      uni.stopPullDownRefresh()
-    },
-    async onReachBottom () {
-      this.$bus.$emit('zkIndexTypeLists')
-      this.$bus.$emit('zkIndexTypeList')
-      this.$bus.$emit('onBottomBurst', true)
-      this.$bus.$emit('onBottom', true)
+      // cosnole.info('这是为什么啊', dayUpdateJson)
     }
   }
 </script>
-<style lang="scss" scoped>
-  @import "@/assets/style/variable.scss";
-  .zk-head-statusbar-deafult {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    width: 100%;
-    background: #dcd3cf;
-  }
-</style>
-

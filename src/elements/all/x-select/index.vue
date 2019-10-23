@@ -38,14 +38,6 @@
         // 获取屏幕宽度
         this.windowData = uni.getSystemInfoSync()
         this.async = true
-        // console.info('res', this.windowData)
-        // var query = uni.createSelectorQuery()
-        // query.select('#x-select').boundingClientRect().exec(res => {
-        //   if (res[0]) {
-        //     console.info('能不能执行', res[0].height)
-        //     this.viewHeight = res[0].height
-        //   }
-        // })
       })
     },
     methods: {
@@ -59,6 +51,12 @@
           }
         } else {
           this.viewModel = this.dataModel
+        }
+        for (let i in this.keyValues) {
+          if (this.keyValues[i].key !== this.viewModel) {
+            this.viewText = this.keyValues[0].value
+            this.viewModel = this.keyValues[0].key
+          }
         }
       },
       changeValue (ev) {

@@ -1,6 +1,5 @@
 {
-  "pages": [
-    {
+  "pages": [{
       "path": "pages/default",
       "style": {
         "navigationBarTitleText": "阿拉博数",
@@ -129,13 +128,6 @@
       }
     },
     {
-      "path": "pages/homePage",
-      "style": {
-        "navigationBarTitleText": "测试一",
-        "enablePullDownRefresh": true
-      }
-    },
-    {
       "path": "pages/test2",
       "style": {
         "navigationBarTitleText": "测试二",
@@ -169,8 +161,7 @@
   },
   "condition": {
     "current": 0,
-    "list": [
-      {
+    "list": [{
         "name": "首页",
         "path": "pages/default"
       },
@@ -202,15 +193,8 @@
     "selectedColor": " #ff8329",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/default",
-        "text": "首页",
-        "iconPath": "static/img/index.png",
-        "selectedIconPath": "static/img/index-a.png"
-      },
-      {
-        "pagePath": "pages/homePage",
         "text": "首页",
         "iconPath": "static/img/index.png",
         "selectedIconPath": "static/img/index-a.png"
