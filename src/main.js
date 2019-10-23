@@ -26,6 +26,7 @@ import zkHelp from '@/components/articles/zk-help/index.vue'
 import zkMarquee from '@/components/articles/zk-marquee/index.vue'
 import zkBookIndex from '@/components/book/zk-book-index/index.vue'
 import zkBookMy from '@/components/book/zk-book-my/index.vue'
+import zkBorderHeader from '@/components/book/zk-border-header/index.vue'
 import zkCardBank from '@/components/card/zk-card-bank/index.vue'
 import zkCardCenterList from '@/components/card/zk-card-center-list/index.vue'
 import zkCardEarnings from '@/components/card/zk-card-earnings/index.vue'
@@ -288,6 +289,7 @@ Vue.component('zk-help', zkHelp)
 Vue.component('zk-marquee', zkMarquee)
 Vue.component('zk-book-index', zkBookIndex)
 Vue.component('zk-book-my', zkBookMy)
+Vue.component('zk-border-header', zkBorderHeader)
 Vue.component('zk-card-bank', zkCardBank)
 Vue.component('zk-card-center-list', zkCardCenterList)
 Vue.component('zk-card-earnings', zkCardEarnings)

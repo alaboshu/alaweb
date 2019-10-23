@@ -9,6 +9,7 @@
     <zk-marquee :widget="widget" v-if="widget.componentPath === '/articles/zk-marquee'"></zk-marquee>
     <zk-book-index :widget="widget" v-if="widget.componentPath === '/book/zk-book-index'"></zk-book-index>
     <zk-book-my :widget="widget" v-if="widget.componentPath === '/book/zk-book-my'"></zk-book-my>
+    <zk-border-header :widget="widget" v-if="widget.componentPath === '/book/zk-border-header'"></zk-border-header>
     <zk-card-bank :widget="widget" v-if="widget.componentPath === '/card/zk-card-bank'"></zk-card-bank>
     <zk-card-center-list :widget="widget" v-if="widget.componentPath === '/card/zk-card-center-list'"></zk-card-center-list>
     <zk-card-earnings :widget="widget" v-if="widget.componentPath === '/card/zk-card-earnings'"></zk-card-earnings>
