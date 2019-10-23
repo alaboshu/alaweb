@@ -10,7 +10,7 @@
       </view>
       <!-- <view class="merchant_intro">
         <span>企业名片</span>
-        <span>2019年1月11日，“阿拉博数平台全球品牌战略发布会”在东莞厚街喜来登酒店隆重举行。
+        <span>2019年1月11日，“文房四宝平台全球品牌战略发布会”在东莞厚街喜来登酒店隆重举行。
           本次活动由中亚联投集团、深圳企品汇电子商务科技股份有限公司主办；中国发展研究院、
           中国管理科学研究院、延川梁家河村青山商贸有限公司等单位共同协办。
         </span>
@@ -18,7 +18,7 @@
       <view class="merchant_content">
         <img src="https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-05-21/5ce3a8df17a7b50da0c51b1e.jpg" alt="" class="banner_img">
         <view class="content_text">在此次发布会上，深圳市双创服务协会、中国管理科学研究院深圳分院、
-          亚太财税集团等成为该平台的战略伙伴单位，阿拉博数平台以整合五大合伙人为运营模式，共同实现增值和共赢。</view>
+          亚太财税集团等成为该平台的战略伙伴单位，文房四宝平台以整合五大合伙人为运营模式，共同实现增值和共赢。</view>
       </view> -->
       <view v-html="widgetModel" class="intro_content"></view>
     </view>
