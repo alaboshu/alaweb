@@ -27,8 +27,8 @@
             </view>
           </view>
         </view>
-        <div class="loading-box" v-if="loadingShow">
-          {{loadingTxt}}
+        <div class="loading-box" v-if="loading.show">
+          {{loading.text}}
         </div>
       </scroll-view>
     </view>
@@ -59,11 +59,12 @@
           tabIndex: 0,
           form: {}
         }, // 搜索相关选项
-        widgetModel: '',
         viewModel: [],
         data: '',
-        loadingTxt: '暂无更多数据...',
-        loadingShow: false,
+        loading: {
+          text: '暂无更多数据...',
+          show: true
+        }, // 加载数据
         queryPara: {
           pageIndex: 1,
           pageSize: this.pageSize
@@ -103,14 +104,14 @@
         this.async = true
       },
       scrolltolower () {
-        if (!this.loadingShow) {
+        if (!this.loading.show) {
           if (this.queryPara.pageIndex === undefined) {
             this.queryPara.pageIndex = 2
           } else {
             this.queryPara.pageIndex += 1
           }
           if (this.viewModel.length >= this.data.result.recordCount) {
-            this.loadingShow = true
+            this.loading.show = true
           } else {
             this.init()
           }
