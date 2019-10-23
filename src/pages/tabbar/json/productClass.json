@@ -1,0 +1,10 @@
+{
+  "apiUrl": "Api/Product/Class",
+  "isApiRequest": true,
+  "masterPageIndex": 0,
+  "title": "商品分类",
+  "value": {
+    "input_48": "gfdxsgfdg",
+    "textarea_202": "gfdsg"
+  }
+}

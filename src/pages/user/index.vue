@@ -20,7 +20,7 @@
   import platform from './json/platform.json'
   import privilegeJson from './json/privilege.json'
   import imageJson from './json/imageList.json'
-  import minx from './mix/index.js'
+  import minx from '../mix/index.js'
   export default {
     mixins: [minx],
     data () {

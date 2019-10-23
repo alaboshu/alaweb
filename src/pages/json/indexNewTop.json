@@ -129,6 +129,8 @@
     "path": "https://diyservice.5ug.com//wwwroot/uploads/icon/zk/5c8e04713789d91024d28296find.svg",
     "name": "center-border",
     "iconSecondColor": "#e7505a",
-    "borderClass": "widget_border center-border "
+    "borderClass": "widget_border center-border ",
+    "fontSize": 20,
+    "bulder": 700
   }
 }
