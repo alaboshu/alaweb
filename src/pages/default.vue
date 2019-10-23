@@ -28,9 +28,6 @@
         hotShopData: hotShopJson,
         typeListData: typeListJson
       }
-    },
-    mounted () {
-      // cosnole.info('这是为什么啊', dayUpdateJson)
     }
   }
 </script>

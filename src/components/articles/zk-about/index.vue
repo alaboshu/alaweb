@@ -178,7 +178,7 @@
         </p>
         <view class="line"></view>
         <p class="font-size">
-          <span>网&nbsp;&nbsp;&nbsp;&nbsp;址 ：http://qiniuniu99.com/</span>
+          <span>网&nbsp;&nbsp;&nbsp;&nbsp;址 ：http://www.szwft.me/</span>
         </p>
         <view class="zk-about-map">
           <view class="page-body">
