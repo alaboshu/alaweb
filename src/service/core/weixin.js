@@ -5,7 +5,7 @@ import theme from '@/service/all/theme'
 export default {
   // 微信登录,微信授权必须要发布到服务器上才可以测试
   async login () {
-    if (api.client() === 'WeChat') {
+    if (api.client() === 'WeChat-test') {
       var openId = api.localGet('wechat_openId') // 用户已登录则openid在缓存中，请查看user.js中的login，和reg方法
       if (openId === undefined) {
         // 防止微信重复刷新
