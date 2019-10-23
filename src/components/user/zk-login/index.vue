@@ -5,7 +5,7 @@
     </view>
     <view class="form-login">
       <view class="form-login_box">
-        <image class="form-login_img" src="https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-20/5c924388397d411c8c07de3e.png" alt="" />
+        <image class="form-login_img" src="http://www.szwft.me/img/logo.jpg" alt="" />
       </view>
     </view>
     <view class="head_yh">

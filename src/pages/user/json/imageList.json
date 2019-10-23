@@ -1,14 +1,14 @@
 {
   "value": {
     "height": 163.8,
-    "image": "http://localhost:1800/wwwroot/uploads/api/375-431-798/2019-10-20/5dabd6bc8a70a61ecc03476d.jpg",
+    "image": "http://www.szwft.me/img/b1.jpg",
     "link": {
       "type": "url",
-      "value": "/pages/index?path=product_show&id=8894",
-      "name": "百款手机促销",
+      "value": "/pages/index",
+      "name": "百款促销",
       "url": {
         "type": "url",
-        "value": "/pages/index?path=product_show&id=8894"
+        "value": "/pages/index"
       }
     }
   }

@@ -1,7 +1,7 @@
 <template>
   <view class="zk-about-us" :style="'height:'+aboutHeight+'px;'" v-if="async">
     <view class="about-us_head">
-      <img class="us_head-img" src="https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-20/5c924388397d411c8c07de3e.png" />
+      <img class="us_head-img" src="http://www.szwft.me/img/logo.jpg" />
       <div class="us_head-title">
         阿拉博数
       </div>
