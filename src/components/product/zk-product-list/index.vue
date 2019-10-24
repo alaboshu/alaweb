@@ -61,9 +61,11 @@
         var widgetPara = this.widget
         this.queryPara = {
           ...this.queryPara,
-          widgetPara
+          ...widgetPara
         }
+        console.info('商品参数', this.widgetPara)
         var response = await this.$api.httpGet('/Api/Product/List', this.queryPara)
+        console.info('商品列表', this.queryPara, response.result)
         if (response.status === 1) {
           this.viewModel = response.result
           this.allDataList = [...this.allDataList, ...this.viewModel.data.result]

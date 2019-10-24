@@ -20,7 +20,7 @@
 
       init () {
         this.viewModel = {
-          classIds: [1, 3]
+          classIds: [10321, 3]
         }
       }
     }
