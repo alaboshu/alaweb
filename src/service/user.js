@@ -125,9 +125,9 @@ export default {
             uni.hideLoading()
             clearTimeout(itemOut)
             if (api.client() === 'WapH5') {
-              location.href = '/pages/default'
+              location.href = '/'
             } else {
-              api.to('/pages/default', true)
+              api.to('/', true)
             }
           }, 1500)
         }

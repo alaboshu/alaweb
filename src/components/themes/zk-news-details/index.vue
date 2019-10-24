@@ -14,13 +14,13 @@
 </template>
 
 <script>
- 
+
   import './var.scss'
   import './styles'
 
 
   export default {
-    
+
     data () {
       return {
         widgetModel: {},
@@ -36,11 +36,13 @@
     },
     methods: {
       async init () {
-        this.widgetModel = await this.$api.themeWidget(this.widget)
-        var response = await this.$api.httpGet('/api/article/ArticleDetail', { id: this.widget.route.id })
-        if (response.status === 1) {
-          this.viewModel = response.result
-        }
+        // this.widgetModel = await this.$api.themeWidget(this.widget)
+        // var response = await this.$api.httpGet('/api/article/ArticleDetail', { id: this.widget.route.id })
+        // if (response.status === 1) {
+        //   this.viewModel = response.result
+        // }
+        this.viewModel = this.widget
+        console.info('这是什么啊', this.widget)
         this.showHtml = this.viewModel.content
         // eslint-disable-next-line
         this.showHtml = this.showHtml.replace(/\<img/gi, '<img style="width:100%;height:auto;"')
