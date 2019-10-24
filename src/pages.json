@@ -65,6 +65,12 @@
       }
     },
     {
+      "path": "pages/asset/transferadd",
+      "style": {
+        "navigationBarTitleText": "转账"
+      }
+    },
+    {
       "path": "pages/asset/transfer",
       "style": {
         "navigationBarTitleText": "转账明细"
