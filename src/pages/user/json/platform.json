@@ -120,7 +120,7 @@
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/asset/transferadd"
         }
       },
       {
