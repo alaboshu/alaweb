@@ -205,6 +205,12 @@
         "navigationBarTitleText": "商学院",
         "enablePullDownRefresh": true
       }
+    },
+    {
+      "path": "pages/news/detail",
+      "style": {
+        "navigationBarTitleText": "详情"
+      }
     }
   ],
   "globalStyle": {

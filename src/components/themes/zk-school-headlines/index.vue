@@ -61,7 +61,7 @@
         this.widgetModel = this.widget
       },
       goDetail (id) {
-        this.$api.to('/pages/index?path=articles_topline_show&id=' + id)
+        this.$api.to('/pages/news/detail?id=' + id)
       },
       scrolltolower () {
 
