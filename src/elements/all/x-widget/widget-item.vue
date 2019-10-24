@@ -62,6 +62,7 @@
     <zk-product-data :widget="widget" v-if="widget.componentPath === '/product/zk-product-data'"></zk-product-data>
     <zk-product-favorite :widget="widget" v-if="widget.componentPath === '/product/zk-product-favorite'"></zk-product-favorite>
     <zk-product-item :widget="widget" v-if="widget.componentPath === '/product/zk-product-item'"></zk-product-item>
+    <zk-product-list :widget="widget" v-if="widget.componentPath === '/product/zk-product-list'"></zk-product-list>
     <zk-product-listpage :widget="widget" v-if="widget.componentPath === '/product/zk-product-listpage'"></zk-product-listpage>
     <zk-product-second-buy :widget="widget" v-if="widget.componentPath === '/product/zk-product-second-buy'"></zk-product-second-buy>
     <zk-product-showpage :widget="widget" v-if="widget.componentPath === '/product/zk-product-showpage'"></zk-product-showpage>
