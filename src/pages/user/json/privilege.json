@@ -102,7 +102,7 @@
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/reward/list"
         }
       },
       {

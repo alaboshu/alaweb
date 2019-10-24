@@ -1,0 +1,83 @@
+{
+  "value": {
+    "count": 4,
+    "iconSize": 32,
+    "links": [
+      {
+        "icon": {
+          "iconSecondColor": "",
+          "name": "",
+          "path": "",
+          "size": ""
+        },
+        "id": 1,
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b3518cd6cb1510b5d7b6.png",
+        "intro": "",
+        "name": "财务明细",
+        "show": true,
+        "url": {
+          "type": "url",
+          "value": "/pages/user/reg"
+        }
+      },
+      {
+        "icon": {
+          "iconSecondColor": "",
+          "name": "",
+          "path": "",
+          "size": ""
+        },
+        "id": 1,
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b3c68cd6cb1510b634fb.png",
+        "intro": "",
+        "name": "我的银行卡",
+        "show": true,
+        "url": {
+          "type": "url",
+          "value": "/pages/user/rec"
+        }
+      },
+      {
+        "icon": {
+          "iconSecondColor": "",
+          "name": "",
+          "path": "",
+          "size": ""
+        },
+        "id": 1,
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b44b8cd6cb1510b6b173.png",
+        "intro": "",
+        "name": "提现",
+        "show": true,
+        "url": {
+          "type": "url",
+          "value": "/pages/active/list"
+        }
+      },
+      {
+        "icon": {
+          "iconSecondColor": "",
+          "name": "",
+          "path": "",
+          "size": ""
+        },
+        "id": 1,
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b4668cd6cb1510b6d096.png",
+        "intro": "",
+        "name": "提现记录",
+        "show": true,
+        "url": {
+          "type": "url",
+          "value": "/pages/index?path=order_index&orderStatus=1"
+        }
+      }
+    ]
+  },
+  "border": {
+    "icon": {
+      "color": ""
+    },
+    "title": "钱包服务",
+    "intro": ""
+  }
+}
