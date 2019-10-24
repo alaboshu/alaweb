@@ -103,11 +103,10 @@
       },
       async bindLogin () {
         this.loading = true
-        this.$user.login(this.user).then(() => {
-          setTimeout(() => {
-            this.loading = false
-          }, 300)
-        })
+        this.$user.login(this.user)
+        setTimeout(() => {
+          this.loading = false
+        }, 300)
       },
       onFocus (e) {
         if (e.detail.value === '') {
