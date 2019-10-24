@@ -38,7 +38,7 @@
         "id": "jwt0bllu1h62dmqi1",
         "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c536b9570878c709b8.png",
         "intro": 0,
-        "name": "分润中心",
+        "name": "通宝算力",
         "show": true,
         "link": {
           "type": "url",
@@ -70,7 +70,7 @@
         "id": "jwt0bllu1h62dmqi1",
         "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c436b9570878c709b2.png",
         "intro": 0,
-        "name": "套餐商城",
+        "name": "文房商城",
         "show": true,
         "link": {
           "type": "url",
@@ -86,7 +86,7 @@
         "id": "jwt0bllu1h62dmqi1",
         "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c436b9570878c709b6.png",
         "intro": 0,
-        "name": "消费商城",
+        "name": "名品商城",
         "show": true,
         "link": {
           "type": "url",
@@ -102,7 +102,7 @@
         "id": "jwt0bllu1h62dmqi1",
         "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c436b9570878c709b5.png",
         "intro": 0,
-        "name": "版通商城",
+        "name": "待确定",
         "show": true,
         "link": {
           "type": "url",

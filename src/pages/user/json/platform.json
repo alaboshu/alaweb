@@ -11,6 +11,23 @@
           "size": ""
         },
         "id": 1,
+        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d79e.png",
+        "intro": "",
+        "name": "推广二维码",
+        "show": true,
+        "url": {
+          "type": "url",
+          "value": "/pages/index?path=order_index&orderStatus=1"
+        }
+      },
+      {
+        "icon": {
+          "iconSecondColor": "",
+          "name": "",
+          "path": "",
+          "size": ""
+        },
+        "id": 1,
         "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a1.png",
         "intro": "",
         "name": "交换通宝",
@@ -31,7 +48,7 @@
         "id": 1,
         "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a1.png",
         "intro": "",
-        "name": "我的客户",
+        "name": "注册客户",
         "show": true,
         "url": {
           "type": "url",
@@ -55,23 +72,7 @@
           "value": "/pages/active/list"
         }
       },
-      {
-        "icon": {
-          "iconSecondColor": "",
-          "name": "",
-          "path": "",
-          "size": ""
-        },
-        "id": 1,
-        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d79e.png",
-        "intro": "",
-        "name": "推广二维码",
-        "show": true,
-        "url": {
-          "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
-        }
-      },
+
       {
         "icon": {
           "iconSecondColor": "",
