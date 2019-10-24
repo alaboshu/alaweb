@@ -6,11 +6,13 @@ export default {
     var formModel = {}
     if (autoFormConfig && autoFormConfig.columns) {
       autoFormConfig.columns.forEach(group => {
-        group.columns.forEach(element => {
-          if (!api.isEmpty(element.value)) {
-            formModel[element.field] = element.value
-          }
-        })
+        if (group.columns) {
+          group.columns.forEach(element => {
+            if (!api.isEmpty(element.value)) {
+              formModel[element.field] = element.value
+            }
+          })
+        }
       })
     }
     return formModel
