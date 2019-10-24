@@ -9,6 +9,9 @@
     <div class="boxItem" v-if="column.type==='dropdownlist'" x-verify="已验证">
       <x-select v-model="viewModel" :label="column.name" :placeholder="column.placeHolder" :apiUrl="column.dataSource"></x-select>
     </div>
+    <div class="boxItem" v-if="column.type==='decimal'" x-verify="已验证">
+      <x-input v-model="viewModel" :label="column.name" :value="viewModel" :placeholder="column.placeHolder" :clearable="true"></x-input>
+    </div>
     <!-- <div class="boxItem" v-if="column.type==='radiobutton'" x-verify="已验证">
       <x-radio v-model="viewModel" :label="column.name" :placeholder="column.placeHolder" :apiUrl="column.dataSource"></x-radio>
     </div> -->
@@ -50,14 +53,11 @@
     <div class="boxItem" v-if="column.type==='phone'">
       <x-input v-model="viewModel" :label="column.name" :value="viewModel" :placeholder="column.placeHolder" :clearable="true"></x-input>
     </div>
-
     <div class="boxItem" v-if="column.type==='textarea'">
       <view class="uni-textarea">
-        <textarea v-model="viewModel" auto-height class="textarea" :placeholder="column.options.placeholder" />
+        <textarea v-model="viewModel" auto-height class="textarea" :placeholder="column.placeHolder" />
         </view>
       </div>
-      <div class="boxItem" v-if="column.type==='number'">
-      <x-input v-model="viewModel" :label="column.name"  type="number" :placeholder="column.placeHolder"  :clearable="true"></x-input>
     </div>
   </div>
 </template>
