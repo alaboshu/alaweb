@@ -12,8 +12,8 @@
       <form-item v-else v-model="viewModel[column.field]" :column="column"></form-item>
     </div>
     <view class="btn-box">
-      <view class="btn-sumbit" type="primary" loading="true" @click="sumbit">{{autoForm.tooltip.bottonText}}</view>
-      <!-- <button loading="true" class="btn-sumbit" type="primary">{{autoForm.tooltip.bottonText}}</button> -->
+      <!-- <view class="btn-sumbit" type="primary" loading="true" @click="sumbit">{{autoForm.tooltip.bottonText}}</view> -->
+      <x-button :loading="loading" :btnText="autoForm.tooltip.bottonText" @change="sumbit"></x-button>
     </view>
     <view v-if="autoForm.tooltip.buttomHelpText !== null && autoForm.tooltip.buttomHelpText !== undefined">
       <ul class="buttom-text">
@@ -44,7 +44,8 @@
       return {
         async: false,
         autoForm: null,
-        viewModel: {}
+        viewModel: {},
+        loading: false
       }
     },
     mounted () {
@@ -77,17 +78,22 @@
         this.$api.info('auto-from表单结构', this.autoForm, this.viewModel)
       },
       async sumbit () {
+        this.loading = true
         this.$api.info('表单视图', this.viewModel)
         var para = {
           type: this.autoForm.key,
           model: JSON.stringify(this.viewModel)
         }
+
         var response = await this.$api.httpPost('/Api/Auto/Save', para)
         if (response.status === 1) {
           this.$api.toastSuccess('操作成功')
         } else {
           this.$api.toastWarn(response.message)
         }
+        setTimeout(() => {
+          this.loading = false
+        }, 300)
       },
       toLink (conter) {
         uni.navigateTo({

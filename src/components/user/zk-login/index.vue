@@ -36,10 +36,10 @@
       </view>
     </view>
     <view class="btn-row">
-      <div class="btn-row-login" @click="bindLogin">
+      <!-- <div class="btn-row-login" @click="bindLogin">
         登录
-      </div>
-      <!-- <button loading="true" class="btn-row-login" type="primary">登录</button> -->
+      </div> -->
+      <x-button :loading="loading" btnText="登录" @change="bindLogin"></x-button>
     </view>
     <view class="action-row">
       <navigator class="navigator" url="/pages/user/reg">注册账号</navigator>
@@ -70,7 +70,8 @@
         positionTop: 0,
         vaild: false,
         vaild2: false,
-        hasProvider: ''
+        hasProvider: '',
+        loading: false
       }
     },
     props: {
@@ -101,7 +102,11 @@
         this.positionTop = this.$api.getSystemInfoSync().windowHeight - 100
       },
       async bindLogin () {
+        this.loading = true
         this.$user.login(this.user)
+        setTimeout(() => {
+          this.loading = false
+        }, 300)
       },
       onFocus (e) {
         if (e.detail.value === '') {
