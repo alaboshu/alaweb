@@ -94,6 +94,18 @@
       }
     },
     {
+      "path": "pages/user/add",
+      "style": {
+        "navigationBarTitleText": "注册客户"
+      }
+    },
+    {
+      "path": "pages/user/data",
+      "style": {
+        "navigationBarTitleText": "完善资料"
+      }
+    },
+    {
       "path": "pages/active/list",
       "style": {
         "navigationBarTitleText": "激活会员列表"
