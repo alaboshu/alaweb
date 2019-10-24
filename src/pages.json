@@ -119,7 +119,8 @@
     {
       "path": "pages/tabbar/product_class",
       "style": {
-        "navigationBarTitleText": "商城"
+        "navigationBarTitleText": "商城",
+        "navigationStyle": "custom"
       }
     },
     {
