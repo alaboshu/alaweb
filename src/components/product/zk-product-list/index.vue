@@ -32,8 +32,8 @@
 
 <script>
   import props from './props'
-  import commonItem from './common.vue'
-  import pageItem from './paging.vue'
+  import commonItem from './styles/common.vue'
+  import pageItem from './styles/paging.vue'
   export default {
     components: {
       commonItem,

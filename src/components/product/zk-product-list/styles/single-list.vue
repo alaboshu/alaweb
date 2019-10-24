@@ -32,5 +32,5 @@
 </script>
 
 <style lang="scss">
-  @import "./styles/single-list.scss";
+  @import "./single-list.scss";
 </style>
