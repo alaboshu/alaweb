@@ -12,12 +12,11 @@
       <form-item v-else v-model="viewModel[column.field]" :column="column"></form-item>
     </div>
     <view class="btn-box">
-      <!-- <view class="btn-sumbit" type="primary" loading="true" @click="sumbit">{{autoForm.tooltip.bottonText}}</view> -->
       <x-button :loading="loading" :btnText="autoForm.tooltip.bottonText" @change="sumbit"></x-button>
     </view>
     <view v-if="autoForm.tooltip.buttomHelpText !== null && autoForm.tooltip.buttomHelpText !== undefined">
       <ul class="buttom-text">
-        <li v-for="(item, index) in autoForm.tooltip.buttomHelpText" :key="index"> {{index+1}}、{{item}}</li>
+        <li v-for="(item, index) in autoForm.tooltip.buttomHelpText" :key="index" v-html="index+1+'、'+item"></li>
       </ul>
     </view>
     <view v-if="autoForm.tooltip.links">

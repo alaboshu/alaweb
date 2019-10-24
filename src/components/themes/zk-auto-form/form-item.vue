@@ -21,6 +21,9 @@
     <div class="boxItem" v-if="column.type==='passwordnumber'" x-verify="已验证">
       <x-password v-model="viewModel" :label="column.name" :isNum="true" :placeHolder="column.placeHolder"></x-password>
     </div>
+    <div class="boxItem" v-if="column.type==='phoneverifiy'" x-verify="已验证">
+      <x-phone-verifiy ref="verification" v-model="viewModel"></x-phone-verifiy>
+    </div>
 
     <div class="boxItem" v-if="column.type==='json'">
       <x-city-picker v-model="viewModel" ref="cityPicker" title="cityPicker"></x-city-picker>
@@ -47,9 +50,7 @@
     <div class="boxItem" v-if="column.type==='radioButton'">
       <form-picker v-model="viewModel" ref="mpvuePicker" :column="column"></form-picker>
     </div>
-    <div class="boxItem" v-if="column.type==='verification'">
-      <verification ref="verification" v-model="viewModel"></verification>
-    </div>
+
     <div class="boxItem" v-if="column.type==='phone'">
       <x-input v-model="viewModel" :label="column.name" :value="viewModel" :placeholder="column.placeHolder" :clearable="true"></x-input>
     </div>
@@ -64,11 +65,9 @@
   import upload from './form-item/upload'
   import check from './form-item/check'
   import formPicker from './form-item/picker'
-  import verification from './form-item/verification'
   export default {
     components: {
       upload,
-      verification,
       check,
       formPicker
     },
