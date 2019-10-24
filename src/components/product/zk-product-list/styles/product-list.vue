@@ -27,8 +27,6 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 10px;
-    // column-count: 2;
-    // column-gap: 10px;
     .product-list-cont {
       width: 47%;
       box-sizing: border-box;
