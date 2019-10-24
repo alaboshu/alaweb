@@ -1,5 +1,6 @@
 <template>
-  <scroll-view scroll-y="true" :style="'height:'+screen.height+'px;overflow-y: auto;'" @scrolltolower="scrolltolower" v-if="async &&allDataList.length!==0">
+  <!-- <scroll-view scroll-y="true" :style="'height: 500'+'px;overflow-y: auto;'" @scrolltolower="scrolltolower" v-if="async &&allDataList.length!==0">
+    <view>为什么不显示出来</view>
     <view class="global" v-for="(item,index) in allDataList" :key="index">
       <view @click="$api.to(item.url)">
         <view class="mobile-x-list">
@@ -22,14 +23,22 @@
     <div class="loading-box" v-if="loading.show">
       {{loading.text}}
     </div>
-  </scroll-view>
+  </scroll-view> -->
+  <view v-if="async">
+    <page-item v-if="widget.isPage"></page-item>
+    <common-item :viewModel="viewModel.productItems" :widget="widget" v-else></common-item>
+  </view>
 </template>
 
 <script>
-
-
   import props from './props'
+  import commonItem from './styles/common.vue'
+  import pageItem from './styles/paging.vue'
   export default {
+    components: {
+      commonItem,
+      pageItem
+    },
     data () {
       return {
         async: false,
@@ -63,16 +72,13 @@
           ...this.queryPara,
           ...widgetPara
         }
-        console.info('商品参数', this.widgetPara)
         var response = await this.$api.httpGet('/Api/Product/List', this.queryPara)
-        console.info('商品列表', this.queryPara, response.result)
         if (response.status === 1) {
           this.viewModel = response.result
-          this.allDataList = [...this.allDataList, ...this.viewModel.data.result]
+          this.allDataList = [...this.allDataList, ...this.viewModel.productItems]
         } else {
           this.$api.toastWarn('数据获取失败')
         }
-        console.info('获取数据', response)
         this.height()
         this.async = true
       },
@@ -89,14 +95,15 @@
       // 内容宽度
       height () {
         this.screen.height = this.$api.screenHeight() - 46
-        if (this.viewModel.searchOptions.advancedForms !== null && this.viewModel.searchOptions.advancedForms.length !== 0) {
+        console.info('内容宽度？', this.viewModel)
+        if (this.viewModel.searchOptions && this.viewModel.searchOptions.advancedForms !== null && this.viewModel.searchOptions.advancedForms.length !== 0) {
           this.screen.height = this.$api.screenHeight() - 46
         } else {
           this.screen.height = this.$api.screenHeight() - 46
         }
-        if (this.viewModel.tabs !== null && this.viewModel.tabs.length !== 0) {
-          this.screen.height = this.$api.screenHeight() - 46 - 44
-        }
+        // if (this.viewModel.tabs !== null && this.viewModel.tabs.length !== 0) {
+        //   this.screen.height = this.$api.screenHeight() - 46 - 44
+        // }
       },
       // 标签切换
       async tapTab (tab, index) {
