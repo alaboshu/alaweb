@@ -68,7 +68,8 @@
         console.info('商品列表', this.queryPara, response.result)
         if (response.status === 1) {
           this.viewModel = response.result
-          this.allDataList = [...this.allDataList, ...this.viewModel.data.result]
+          console.info('进来这里不', this.viewModel.productItems)
+          this.allDataList = [...this.allDataList, ...this.viewModel.productItems]
         } else {
           this.$api.toastWarn('数据获取失败')
         }
