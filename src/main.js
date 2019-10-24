@@ -79,6 +79,7 @@ import zkProductClass from '@/components/product/zk-product-class/index.vue'
 import zkProductData from '@/components/product/zk-product-data/index.vue'
 import zkProductFavorite from '@/components/product/zk-product-favorite/index.vue'
 import zkProductItem from '@/components/product/zk-product-item/index.vue'
+import zkProductList from '@/components/product/zk-product-list/index.vue'
 import zkProductListpage from '@/components/product/zk-product-listpage/index.vue'
 import zkProductSecondBuy from '@/components/product/zk-product-second-buy/index.vue'
 import zkProductShowpage from '@/components/product/zk-product-showpage/index.vue'
@@ -343,6 +344,7 @@ Vue.component('zk-product-class', zkProductClass)
 Vue.component('zk-product-data', zkProductData)
 Vue.component('zk-product-favorite', zkProductFavorite)
 Vue.component('zk-product-item', zkProductItem)
+Vue.component('zk-product-list', zkProductList)
 Vue.component('zk-product-listpage', zkProductListpage)
 Vue.component('zk-product-second-buy', zkProductSecondBuy)
 Vue.component('zk-product-showpage', zkProductShowpage)

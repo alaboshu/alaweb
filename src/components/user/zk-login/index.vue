@@ -40,7 +40,6 @@
         登录
       </div> -->
       <x-button :loading="loading" btnText="登录" @change="bindLogin"></x-button>
-      <!-- <button loading="true" class="btn-row-login" type="primary">登录</button> -->
     </view>
     <view class="action-row">
       <navigator class="navigator" url="/pages/user/reg">注册账号</navigator>

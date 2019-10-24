@@ -57,7 +57,6 @@
       <view class="uni-textarea">
         <textarea v-model="viewModel" auto-height class="textarea" :placeholder="column.placeHolder" />
         </view>
-      </div>
     </div>
   </div>
 </template>

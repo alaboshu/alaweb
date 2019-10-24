@@ -42,7 +42,6 @@
 
   import './var.scss'
   import apiBaseUrl from '@/service/config.js'
-  import editSetting from './property.json'
   export default {
     data () {
       return {
@@ -129,14 +128,6 @@
               }
             }
           }
-        }
-        if (this.isWidgetTagIds === false) {
-          editSetting.type = 'api'
-          if (this.isNot) {
-            //   this.widgetModel = await this.$api.themeWidget(this.widget)
-            // this.productItem = this.widgetModel.value.result
-          }
-          this.apiUrl = apiBaseUrl.apiBaseUrl
         }
         if (apiBaseUrl.themeId === '5d26e11a064c25053c9b3def') {
           this.showF2Cprice = true
