@@ -20,12 +20,12 @@
       return {
         dayUpdateData: dayUpdateJson,
         viewModel: {
-          classIds: [10321, 3],
+          classIds: [],
           isPage: false,
           styleStype: 'single'
         },
         productList: {
-          classIds: [10321, 3],
+          classIds: [],
           isPage: false,
           styleStype: 'product'
         }
