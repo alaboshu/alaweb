@@ -1,5 +1,7 @@
 <template>
-  <zk-product-list :widget="viewModel"></zk-product-list>
+  <view style="background: #f0f0f0">
+    <zk-product-list :widget="viewModel"></zk-product-list>
+  </view>
 </template>
 <script>
   export default {

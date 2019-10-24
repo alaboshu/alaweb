@@ -1,40 +1,18 @@
 <template>
   <view>
-    <view class="common" v-for="(item,index) in viewModel" :key="index">
-      <view class="common-image">
-        <img :src="'http://api.szwft.me/'+ item.thumbnailUrl" alt="">
-      </view>
-      <view class="common-right">
-        <view class="common-title">{{item.name}}</view>
-        <view class="common-intro "></view>
-        <view class="common-price"></view>
-      </view>
-    </view>
+    <single-item :viewModel="viewModel"></single-item>
   </view>
 </template>
 
 
 <script>
+  import singleItem from './single-list'
   export default {
+    components: {
+      singleItem
+    },
     props: {
       viewModel: {}
-    },
-    data () {
-      return {
-
-      }
-    },
-    mounted () {
-      this.init()
-    },
-    methods: {
-      init () {
-        console.info('所以说先景来这里啊样式风格使用什么来进行区分', this.viewModel)
-      }
     }
   }
 </script>
-
-<style lang="scss">
-  @import "./styles/common.scss";
-</style>
