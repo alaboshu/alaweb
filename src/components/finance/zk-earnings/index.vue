@@ -4,7 +4,7 @@
       <x-icon src="zk-return" color="#ffffff"></x-icon>
     </view>
     <view class="zk-earns-top">
-      <h2>我的钱包</h2>
+      <h2>我的资产</h2>
       <p class="zk-earns-amount">{{this.statistic.balance}}</p>
       <view class="zk-earns-topB">
         <view class="zk-earns-topL">
@@ -24,9 +24,9 @@
 </template>
 
 <script>
- 
+
   export default {
-    
+
     data () {
       return {
         statistic: {},
@@ -57,7 +57,5 @@
 
 <style lang="scss">
   @import "@/assets/style/variable.scss";
-  @import './style.scss';
-
-
+  @import "./style.scss";
 </style>

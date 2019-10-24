@@ -1,9 +1,7 @@
 <template>
   <view class="x-form-label" id="x-form-label">
     <view class="list-cell-left-A">{{label}}</view>
-    <view class="list-cell-right">
-      {{viewModel}}
-    </view>
+    <view class="list-cell-right" v-html="viewModel"></view>
   </view>
 </template>
 <script>

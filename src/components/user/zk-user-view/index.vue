@@ -97,7 +97,7 @@
         </div>
         <!-- <div class="user-view_a" @click="$api.to('/pages/index?path=finance_account_index')">
           <view class="user_conter">
-            <p class="weui_margin">我的钱包</p>
+            <p class="weui_margin">我的资产</p>
           </view>
           <view>
             <i class="zk-right icon iconfont"></i>

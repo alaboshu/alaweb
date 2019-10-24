@@ -1,126 +1,135 @@
 {
   "value": {
-    "links": [{
-      "icon": 0,
-      "id": "jwt0bllu1h62dmqi1",
-      "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c536b9570878c709b7.png",
-      "intro": 0,
-      "name": "会员注册",
-      "show": true,
-      "link": {
-        "type": "url",
-        "value": "/pages/user/reg"
+    "links": [
+      {
+        "icon": 0,
+        "id": "jwt0bllu1h62dmqi1",
+        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c536b9570878c709b7.png",
+        "intro": 0,
+        "name": "交换通宝",
+        "show": true,
+        "link": {
+          "type": "url",
+          "value": "/pages/user/reg"
+        },
+        "url": {
+          "type": "url",
+          "value": "/pages/user/reg"
+        }
       },
-      "url": {
-        "type": "url",
-        "value": "/pages/user/reg"
-      }
-    }, {
-      "icon": 0,
-      "id": "jwt0bllu1h62dmqi1",
-      "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c536b9570878c709b9.png",
-      "intro": 0,
-      "name": "我的钱包",
-      "show": true,
-      "link": {
-        "type": "url",
-        "value": "/pages/asset/accout"
+      {
+        "icon": 0,
+        "id": "jwt0bllu1h62dmqi1",
+        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c536b9570878c709b9.png",
+        "intro": 0,
+        "name": "我的资产",
+        "show": true,
+        "link": {
+          "type": "url",
+          "value": "/pages/asset/accout"
+        },
+        "url": {
+          "type": "url",
+          "value": "/pages/asset/accout"
+        }
       },
-      "url": {
-        "type": "url",
-        "value": "/pages/asset/accout"
-      }
-    }, {
-      "icon": 0,
-      "id": "jwt0bllu1h62dmqi1",
-      "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c536b9570878c709b8.png",
-      "intro": 0,
-      "name": "分润中心",
-      "show": true,
-      "link": {
-        "type": "url",
-        "value": "/pages/reward/list"
+      {
+        "icon": 0,
+        "id": "jwt0bllu1h62dmqi1",
+        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c536b9570878c709b8.png",
+        "intro": 0,
+        "name": "分润中心",
+        "show": true,
+        "link": {
+          "type": "url",
+          "value": "/pages/reward/list"
+        },
+        "url": {
+          "type": "url",
+          "value": "/pages/reward/list"
+        }
       },
-      "url": {
-        "type": "url",
-        "value": "/pages/reward/list"
-      }
-    }, {
-      "icon": 0,
-      "id": "jwt0bllu1h62dmqi1",
-      "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c436b9570878c709b3.png",
-      "intro": 0,
-      "name": "新闻中心",
-      "show": true,
-      "link": {
-        "type": "url",
-        "value": "/pages/tabbar/press"
+      {
+        "icon": 0,
+        "id": "jwt0bllu1h62dmqi1",
+        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c436b9570878c709b3.png",
+        "intro": 0,
+        "name": "新闻中心",
+        "show": true,
+        "link": {
+          "type": "url",
+          "value": "/pages/tabbar/press"
+        },
+        "url": {
+          "type": "url",
+          "value": "/pages/tabbar/press"
+        }
       },
-      "url": {
-        "type": "url",
-        "value": "/pages/tabbar/press"
-      }
-    }, {
-      "icon": 0,
-      "id": "jwt0bllu1h62dmqi1",
-      "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c436b9570878c709b2.png",
-      "intro": 0,
-      "name": "套餐商城",
-      "show": true,
-      "link": {
-        "type": "url",
-        "value": "/pages/mall/meal"
+      {
+        "icon": 0,
+        "id": "jwt0bllu1h62dmqi1",
+        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c436b9570878c709b2.png",
+        "intro": 0,
+        "name": "套餐商城",
+        "show": true,
+        "link": {
+          "type": "url",
+          "value": "/pages/mall/meal"
+        },
+        "url": {
+          "type": "url",
+          "value": "/pages/mall/meal"
+        }
       },
-      "url": {
-        "type": "url",
-        "value": "/pages/mall/meal"
-      }
-    }, {
-      "icon": 0,
-      "id": "jwt0bllu1h62dmqi1",
-      "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c436b9570878c709b6.png",
-      "intro": 0,
-      "name": "消费商城",
-      "show": true,
-      "link": {
-        "type": "url",
-        "value": "/pages/mall/consume"
+      {
+        "icon": 0,
+        "id": "jwt0bllu1h62dmqi1",
+        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c436b9570878c709b6.png",
+        "intro": 0,
+        "name": "消费商城",
+        "show": true,
+        "link": {
+          "type": "url",
+          "value": "/pages/mall/consume"
+        },
+        "url": {
+          "type": "url",
+          "value": "/pages/mall/consume"
+        }
       },
-      "url": {
-        "type": "url",
-        "value": "/pages/mall/consume"
-      }
-    }, {
-      "icon": 0,
-      "id": "jwt0bllu1h62dmqi1",
-      "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c436b9570878c709b5.png",
-      "intro": 0,
-      "name": "版通商城",
-      "show": true,
-      "link": {
-        "type": "url",
-        "value": "/pages/mall/edition"
+      {
+        "icon": 0,
+        "id": "jwt0bllu1h62dmqi1",
+        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c436b9570878c709b5.png",
+        "intro": 0,
+        "name": "版通商城",
+        "show": true,
+        "link": {
+          "type": "url",
+          "value": "/pages/mall/edition"
+        },
+        "url": {
+          "type": "url",
+          "value": "/pages/mall/edition"
+        }
       },
-      "url": {
-        "type": "url",
-        "value": "/pages/mall/edition"
+      {
+        "icon": 0,
+        "id": "jwt0bllu1h62dmqi1",
+        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c436b9570878c709b4.png",
+        "intro": 0,
+        "name": "所有商品",
+        "show": true,
+        "link": {
+          "type": "url",
+          "value": "/pages/mall/product_list"
+        },
+        "url": {
+          "type": "url",
+          "value": "/pages/mall/product_list"
+        }
       }
-    }, {
-      "icon": 0,
-      "id": "jwt0bllu1h62dmqi1",
-      "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-06/5cf8d8c436b9570878c709b4.png",
-      "intro": 0,
-      "name": "所有商品",
-      "show": true,
-      "link": {
-        "type": "url",
-        "value": "/pages/mall/product_list"
-      },
-      "url": {
-        "type": "url",
-        "value": "/pages/mall/product_list"
-      }
-    }]
+    ]
   },
   "border": {
     "icon": "icon-zk-find",
