@@ -20,7 +20,7 @@
     {
       "path": "pages/user/reg",
       "style": {
-        "navigationBarTitleText": "会员注册"
+        "navigationBarTitleText": "注册客户"
       }
     },
     {

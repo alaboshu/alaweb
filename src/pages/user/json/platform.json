@@ -30,11 +30,11 @@
         "id": 1,
         "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a1.png",
         "intro": "",
-        "name": "交换通宝",
+        "name": "注册客户",
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/user/reg"
+          "value": "/pages/user/add"
         }
       },
 
@@ -48,7 +48,7 @@
         "id": 1,
         "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a1.png",
         "intro": "",
-        "name": "注册客户",
+        "name": "我的客户",
         "show": true,
         "url": {
           "type": "url",
@@ -65,11 +65,11 @@
         "id": 1,
         "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a3.png",
         "intro": "",
-        "name": "激活客户",
+        "name": "完善资料",
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/active/list"
+          "value": "/pages/user/data"
         }
       },
 
