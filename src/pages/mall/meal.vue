@@ -1,11 +1,11 @@
 <template>
   <view class="meal">
-    <image src="https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-08-27/5d651e35d9eb362b7cfd8949.jpg" class="iamge"></image>
+    <image src="https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-08-27/5d651e35d9eb362b7cfd8949.jpg" class="iamge" />
     <view class="rob-tit">
       <view class="big-tit">今日必抢</view>
     </view>
     <zk-product-list :widget="viewModel"></zk-product-list>
-    <image src="https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-08-27/5d651e35d9eb362b7cfd8948.jpg" class="image-img"></image>
+    <image src="https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-08-27/5d651e35d9eb362b7cfd8948.jpg" class="image-img" />
     <view class="rob-tit">
       <view class="big-tit">好货一折起</view>
     </view>

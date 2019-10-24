@@ -9,7 +9,7 @@
         <view class="uni-list-cell" hover-class="uni-list-cell-hover" v-for="(value,key) in list" :key="key">
           <view class="uni-media-list" @click="selectCource">
             <view class="uni-media-list-logo">
-              <!-- <image v-if="showImg" :src="value.img" class="zk-book-img"></image>  -->
+              <!-- <image v-if="showImg" :src="value.img" class="zk-book-img"/>  -->
               <img :src="value.img" alt class="zk-book-img">
             </view>
             <view class="uni-media-list-body">
@@ -26,9 +26,9 @@
 </template>
 
 <script>
- 
+
   export default {
-    
+
     data () {
       return {
         widgetModel: '',
@@ -86,7 +86,7 @@
     },
     methods: {
       async  init () {
-                  this.widgetModel = await this.$api.themeWidget(this.widget)
+        this.widgetModel = await this.$api.themeWidget(this.widget)
       }
     }
   }
