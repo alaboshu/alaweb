@@ -1,6 +1,5 @@
 <template>
   <view v-if="async">
-    <!-- <zk-head  :color="theme.color"></zk-head> -->
     <view class="x-msg " :style="'width:'+boxWidth+'px;height:'+boxHeight+'px;'" v-if="isDefaultMsg">
       <view class="default-msg">
         <view class="msg-icon">
@@ -129,12 +128,6 @@
             })
           }
         })
-        // uni.saveImageToPhotosAlbum({
-        //   filePath: '../../../static/img/customerWechat.jpg',
-        //   success: function () {
-        //     console.log('save success')
-        //   }
-        // })
       },
       init () {
         this.boxWidth = uni.getSystemInfoSync().screenWidth
@@ -148,11 +141,6 @@
         }
         this.isDefaultMsg = this.defaultMsgss
         this.isAdminMsg = this.adminMsg
-        // if (this.defaultMsg === true) {
-        //   this.isDefaultMsg = true
-        // } else {
-        //   this.isDefaultMsg = false
-        // }
         this.async = true
       }
     }
@@ -265,7 +253,8 @@
     }
     .default-msg {
       .msg-icon {
-        margin-bottom: 30px;
+        margin-bottom: 1px;
+        margin-top: 5px;
       }
     }
   }

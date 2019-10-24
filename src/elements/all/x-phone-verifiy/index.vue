@@ -47,7 +47,7 @@
           let parament = {
             mobile: String(this.phone)
           }
-          var response = await this.$api.httpGet('Api/Common/SendMobileVerifiyCode', parament)
+          var response = await this.$api.httpGet('Api/Sms/SendVerifiyCode', parament)
           if (response.status === 1) {
             this.sendAuthCode = false
             this.countdownTime = 60

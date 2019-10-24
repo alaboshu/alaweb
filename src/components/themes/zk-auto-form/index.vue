@@ -67,7 +67,6 @@
         var response = await this.$api.httpGet('/Api/Auto/Form', para)
         if (response.status === 1) {
           var result = convert.toConfig(response.result)
-
           this.autoForm = result
           this.viewModel = service.getModel(this.autoForm)
           this.async = true
@@ -88,7 +87,7 @@
         if (response.status === 1) {
           this.$api.toastSuccess('操作成功')
         } else {
-          this.$api.toastWarn(response.message)
+          this.$crud.message(response.message)
         }
         setTimeout(() => {
           this.loading = false

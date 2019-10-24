@@ -95,11 +95,11 @@ export default {
     }
   },
   // 提示，成功提示正确信息，获取显示错误信息
-  message (jsthis, response) {
+  message (response) {
     if (response.status === 1) {
-      jsthis.$api.toastSuccess('操作成功')
+      api.to('/pages/message')
     } else {
-      jsthis.$api.toastWarn('操作失败')
+      api.to('/pages/message')
     }
   }
 }
