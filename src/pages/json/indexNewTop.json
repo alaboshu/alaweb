@@ -114,11 +114,11 @@
       "show": true,
       "link": {
         "type": "url",
-        "value": "/pages/index?path=mall_explosive"
+        "value": "/pages/mall/product_list"
       },
       "url": {
         "type": "url",
-        "value": "/pages/index?path=mall_explosive"
+        "value": "/pages/mall/product_list"
       }
     }]
   },

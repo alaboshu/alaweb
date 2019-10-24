@@ -9,18 +9,20 @@
     <view class="rob-tit">
       <view class="big-tit">好货一折起</view>
     </view>
-    <!-- <zk-index-type-list :widget="typeListData"></zk-index-type-list> -->
+    <view>为什么不显示啊</view>
+    <zk-product-item :widget="typeListData" :type="type" :isNot="false" :showPrice="true"></zk-product-item>
   </view>
 </template>
 <script>
   // import dayUpdateJson from '../json/'
   import dayUpdateJson from '../json/dayUpdate.json'
-  // import typeListJson from '../json/typeList.json'
+  import typeListJson from '../json/typeList.json'
   export default {
     data () {
       return {
-        dayUpdateData: dayUpdateJson
-        // typeListData: typeListJson
+        dayUpdateData: dayUpdateJson,
+        typeListData: typeListJson,
+        type: ''
       }
     },
     mounted () {
