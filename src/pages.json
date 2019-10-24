@@ -1,6 +1,5 @@
 {
-  "pages": [
-    {
+  "pages": [{
       "path": "pages/default",
       "style": {
         "navigationBarTitleText": "文房四宝",
@@ -89,7 +88,8 @@
     {
       "path": "pages/user/index",
       "style": {
-        "navigationBarTitleText": "我的中心"
+        "navigationBarTitleText": "我的中心",
+        "navigationStyle": "custom"
       }
     },
     {
@@ -215,7 +215,7 @@
     {
       "path": "pages/news/detail",
       "style": {
-        "navigationBarTitleText": "详情"
+        "navigationBarTitleText": "头条详情"
       }
     }
   ],
@@ -226,8 +226,7 @@
   },
   "condition": {
     "current": 0,
-    "list": [
-      {
+    "list": [{
         "name": "首页",
         "path": "pages/default"
       },
@@ -259,8 +258,7 @@
     "selectedColor": " #ff8329",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/default",
         "text": "首页",
         "iconPath": "static/img/index.png",
