@@ -17,7 +17,7 @@
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/user/reg"
+          "value": "/pages/asset/bill"
         }
       },
       {

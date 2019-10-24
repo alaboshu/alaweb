@@ -42,6 +42,12 @@
       }
     },
     {
+      "path": "pages/asset/bill",
+      "style": {
+        "navigationBarTitleText": "财务明细"
+      }
+    },
+    {
       "path": "pages/user/login",
       "style": {
         "navigationBarTitleText": "",
