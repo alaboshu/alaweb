@@ -107,14 +107,13 @@
           "value": "/pages/asset/bankcard"
         }
       }
- 
     ]
   },
   "border": {
     "icon": {
       "color": ""
     },
-    "title": "钱包服务",
+    "title": "资产服务",
     "intro": ""
   }
 }

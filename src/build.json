@@ -4253,7 +4253,7 @@
     },
     {
       "isLayoutPage": false,
-      "name": "钱包",
+      "name": "资产",
       "url": "/pages/user?path=finance_account_index",
       "path": "/finance/account/index",
       "layouts": [],
@@ -4269,7 +4269,7 @@
           "apiUrl": "/api/user/account/allaccounts",
           "value": null,
           "layout": null,
-          "title": "钱包余额",
+          "title": "资产余额",
           "style": null
         },
         {
@@ -4295,9 +4295,9 @@
         "tabBarSetting": null,
         "isLogin": true,
         "isRead": false,
-        "title": "钱包",
-        "keywords": "钱包",
-        "description": "钱包",
+        "title": "资产",
+        "keywords": "资产",
+        "description": "资产",
         "showHead": true,
         "showFoot": true,
         "background": null,
