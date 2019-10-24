@@ -41,7 +41,6 @@
 <script>
 
   import './var.scss'
-  import props from './props'
   import apiBaseUrl from '@/service/config.js'
   export default {
     data () {
@@ -63,7 +62,15 @@
         showF2Cprice: false
       }
     },
-    props,
+    props: {
+      widget: {},
+      isNot: {
+        default: true
+      },
+      showPrice: {
+        default: true
+      }
+    },
     mounted () {
       this.init()
       this.$nextTick(() => {
@@ -122,7 +129,6 @@
             }
           }
         }
-
         if (apiBaseUrl.themeId === '5d26e11a064c25053c9b3def') {
           this.showF2Cprice = true
         }
