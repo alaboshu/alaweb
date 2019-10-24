@@ -1,0 +1,20 @@
+.x-form-label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .list-cell-left-A {
+    width: 80px;
+    padding-right: 5px;
+  }
+
+  .uni-input {
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .list-cell-right {
+    color: #999999;
+  }
+}

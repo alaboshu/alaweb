@@ -67,7 +67,7 @@
         var response = await this.$api.httpGet('/Api/Auto/Form', para)
         if (response.status === 1) {
           var result = convert.toConfig(response.result)
-          console.info('result', result)
+
           this.autoForm = result
           this.viewModel = service.getModel(this.autoForm)
           this.async = true

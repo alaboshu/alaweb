@@ -3,6 +3,9 @@
     <div class="boxItem" v-if="column.type==='textbox'" x-verify="已验证">
       <x-input v-model="viewModel" :label="column.name" :value="viewModel" :placeholder="column.placeHolder" :clearable="true"></x-input>
     </div>
+    <div class="boxItem" v-if="column.type==='label'" x-verify="已验证">
+      <x-form-label v-model="viewModel" :label="column.name"></x-form-label>
+    </div>
     <div class="boxItem" v-if="column.type==='dropdownlist'" x-verify="已验证">
       <x-select v-model="viewModel" :label="column.name" :placeholder="column.placeHolder" :apiUrl="column.dataSource"></x-select>
     </div>

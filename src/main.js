@@ -263,6 +263,7 @@ import xCell from '@/elements/all/x-cell/index.vue'
 import xCityPicker from '@/elements/all/x-city-picker/index.vue'
 import xCountDown from '@/elements/all/x-countDown/index.vue'
 import xDrawer from '@/elements/all/x-drawer/index.vue'
+import xFormLabel from '@/elements/all/x-form-label/index.vue'
 import xIcon from '@/elements/all/x-icon/index.vue'
 import xImage from '@/elements/all/x-image/index.vue'
 import xInput from '@/elements/all/x-input/index.vue'
@@ -526,6 +527,7 @@ Vue.component('x-cell', xCell)
 Vue.component('x-city-picker', xCityPicker)
 Vue.component('x-countDown', xCountDown)
 Vue.component('x-drawer', xDrawer)
+Vue.component('x-form-label', xFormLabel)
 Vue.component('x-icon', xIcon)
 Vue.component('x-image', xImage)
 Vue.component('x-input', xInput)

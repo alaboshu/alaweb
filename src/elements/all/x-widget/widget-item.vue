@@ -249,13 +249,13 @@
 </template>
 
 <script>
-  export default {
-    name: 'widget-item',
-    props: {
-      widget: {},
-      model: {}
-    },
-    methods: {
-    }
+export default {
+  name: 'widget-item',
+  props: {
+    widget: {},
+    model: {}
+  },
+  methods: {
   }
+}
 </script>
