@@ -1,29 +1,4 @@
 <template>
-  <!-- <scroll-view scroll-y="true" :style="'height: 500'+'px;overflow-y: auto;'" @scrolltolower="scrolltolower" v-if="async &&allDataList.length!==0">
-    <view>为什么不显示出来</view>
-    <view class="global" v-for="(item,index) in allDataList" :key="index">
-      <view @click="$api.to(item.url)">
-        <view class="mobile-x-list">
-          <view class="box">
-            <div class="xlist_box1">
-              <img :src="item.image" alt class="box1_img">
-            </div>
-          </view>
-          <view></view>
-          <view class="x-list_box2">
-            <view class="linhegt widthtext">
-              <view class="conters fontsize">{{item.title}}</view>
-              <view class="youce" v-if="item.value">{{item.value}}</view>
-            </view>
-            <view class="linhegt conters conters_botoom">{{item.intro}}</view>
-          </view>
-        </view>
-      </view>
-    </view>
-    <div class="loading-box" v-if="loading.show">
-      {{loading.text}}
-    </div>
-  </scroll-view> -->
   <view v-if="async">
     <page-item v-if="widget.isPage"></page-item>
     <common-item :viewModel="viewModel.productItems" :widget="widget" v-else></common-item>
@@ -101,9 +76,6 @@
         } else {
           this.screen.height = this.$api.screenHeight() - 46
         }
-        // if (this.viewModel.tabs !== null && this.viewModel.tabs.length !== 0) {
-        //   this.screen.height = this.$api.screenHeight() - 46 - 44
-        // }
       },
       // 标签切换
       async tapTab (tab, index) {
