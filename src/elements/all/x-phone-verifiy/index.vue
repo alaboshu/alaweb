@@ -28,9 +28,7 @@
     },
     methods: {
       init () {
-        if (this.widget.apiUrl === '/api/user/changepassword') {
-          this.defaultModel = this.$user.loginUser().mobile
-        }
+       
       },
 
       async   verification () {

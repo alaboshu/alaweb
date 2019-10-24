@@ -512,7 +512,6 @@ export const CIRCLE_QUERYDIC_GET = '/api/circle/querydic' // 根据Id获取单�
 
 //  Common相关的API接口
 export const COMMON_GETKEYVALUESBYENUM_GET = '/api/common/getkeyvaluesbyenum' // 根据枚举获取KeyValues
-export const COMMON_SENDMOBILEVERIFIYCODE_GET = '/api/common/sendmobileverifiycode' // 发送手机验证码
 export const COMMON_SENDMESSAGE_GET = '/api/common/sendmessage' // 发送短信
 export const COMMON_UPLOAD_POST = '/api/common/upload' // 获取上传状态
 export const COMMON_GETAUTOCONFIG_GET = '/api/common/getautoconfig' // 获取AutoConfig
