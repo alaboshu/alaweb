@@ -23,7 +23,8 @@
       init () {
         this.viewModel = {
           classIds: [10321, 3],
-          isPage: false
+          isPage: false,
+          styleStype: 'single'
         }
       }
     }

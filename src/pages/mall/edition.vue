@@ -4,23 +4,28 @@
     <view class="rob-tit">
       <view class="big-tit">好礼来袭</view>
     </view>
-    <zk-index-day-update :widget="dayUpdateData" style="background:#6573E1; "></zk-index-day-update>
+    <zk-product-list :widget="viewModel"></zk-product-list>
     <image src="https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-08-27/5d651e35d9eb362b7cfd8948.jpg" class="image-img"></image>
     <view class="rob-tit">
       <view class="big-tit">好货一折起</view>
     </view>
-    <!-- <zk-index-type-list :widget="typeListData"></zk-index-type-list> -->
+    <zk-product-list :widget="productList"></zk-product-list>
   </view>
 </template>
 <script>
-  // import dayUpdateJson from '../json/'
-  import dayUpdateJson from '../json/dayUpdate.json'
-  // import typeListJson from '../json/typeList.json'
   export default {
     data () {
       return {
-        dayUpdateData: dayUpdateJson
-        // typeListData: typeListJson
+        viewModel: {
+          classIds: [10321, 3],
+          isPage: false,
+          styleStype: 'single'
+        },
+        productList: {
+          classIds: [10321, 3],
+          isPage: false,
+          styleStype: 'product'
+        }
       }
     },
     mounted () {

@@ -26,7 +26,7 @@
   </scroll-view> -->
   <view v-if="async">
     <page-item v-if="widget.isPage"></page-item>
-    <common-item :viewModel="viewModel.productItems" v-else></common-item>
+    <common-item :viewModel="viewModel.productItems" :widget="widget" v-else></common-item>
   </view>
 </template>
 
@@ -72,16 +72,13 @@
           ...this.queryPara,
           ...widgetPara
         }
-        console.info('商品参数', this.widgetPara)
         var response = await this.$api.httpGet('/Api/Product/List', this.queryPara)
-        console.info('商品列表', this.queryPara, response.result)
         if (response.status === 1) {
           this.viewModel = response.result
           this.allDataList = [...this.allDataList, ...this.viewModel.productItems]
         } else {
           this.$api.toastWarn('数据获取失败')
         }
-        console.info('获取数据', response)
         this.height()
         this.async = true
       },

@@ -1,8 +1,7 @@
 <template>
   <view>
-    <single-item :viewModel="viewModel"></single-item>
-    <view>第二种样式表</view>
-    <product-item :viewModel="viewModel"></product-item>
+    <single-item :viewModel="viewModel" v-if="widget.styleStype == 'single'"></single-item>
+    <product-item :viewModel="viewModel" v-if="widget.styleStype == 'product'"></product-item>
   </view>
 </template>
 
@@ -16,7 +15,8 @@
       productItem
     },
     props: {
-      viewModel: {}
+      viewModel: {},
+      widget: {}
     }
   }
 </script>
