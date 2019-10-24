@@ -217,6 +217,24 @@
       "style": {
         "navigationBarTitleText": "头条详情"
       }
+    },
+    {
+      "path": "pages/mall/meal",
+      "style": {
+        "navigationBarTitleText": "套餐商城"
+      }
+    },
+    {
+      "path": "pages/mall/consume",
+      "style": {
+        "navigationBarTitleText": "消费商城"
+      }
+    },
+    {
+      "path": "pages/mall/edition",
+      "style": {
+        "navigationBarTitleText": "版通商城"
+      }
     }
   ],
   "globalStyle": {
