@@ -1,5 +1,6 @@
 {
-  "pages": [{
+  "pages": [
+    {
       "path": "pages/default",
       "style": {
         "navigationBarTitleText": "文房四宝",
@@ -26,6 +27,48 @@
       "path": "pages/user/rec",
       "style": {
         "navigationBarTitleText": "我的会员"
+      }
+    },
+    {
+      "path": "pages/reward/list",
+      "style": {
+        "navigationBarTitleText": "分润中心"
+      }
+    },
+    {
+      "path": "pages/asset/accout",
+      "style": {
+        "navigationBarTitleText": "钱包中心"
+      }
+    },
+    {
+      "path": "pages/asset/bill",
+      "style": {
+        "navigationBarTitleText": "财务明细"
+      }
+    },
+    {
+      "path": "pages/asset/bankcard",
+      "style": {
+        "navigationBarTitleText": "银行卡管理"
+      }
+    },
+    {
+      "path": "pages/asset/recharge",
+      "style": {
+        "navigationBarTitleText": "充值明细"
+      }
+    },
+    {
+      "path": "pages/asset/withdraw",
+      "style": {
+        "navigationBarTitleText": "提现明细"
+      }
+    },
+    {
+      "path": "pages/asset/transfer",
+      "style": {
+        "navigationBarTitleText": "转账明细"
       }
     },
     {
@@ -171,7 +214,8 @@
   },
   "condition": {
     "current": 0,
-    "list": [{
+    "list": [
+      {
         "name": "首页",
         "path": "pages/default"
       },
@@ -203,7 +247,8 @@
     "selectedColor": " #ff8329",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/default",
         "text": "首页",
         "iconPath": "static/img/index.png",

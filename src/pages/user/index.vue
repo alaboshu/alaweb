@@ -9,8 +9,8 @@
     <zk-grid :widget="platData"></zk-grid>
     <zk-parting-line style="background: #F0F0F0;"></zk-parting-line>
     <zk-image :widget="imageData" style="background: #F0F0F0;"></zk-image>
-    <zk-border-header :widget="privilegeData"></zk-border-header>
-    <zk-grid :widget="privilegeData"></zk-grid>
+    <zk-border-header :widget="privilegeData" v-if="false"></zk-border-header>
+    <zk-grid :widget="privilegeData" v-if="false"></zk-grid>
   </view>
 </template>
 

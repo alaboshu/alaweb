@@ -11,13 +11,13 @@
           "size": ""
         },
         "id": 1,
-        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a3.png",
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b3518cd6cb1510b5d7b6.png",
         "intro": "",
-        "name": "财务中心",
+        "name": "财务明细",
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/asset/bill"
         }
       },
       {
@@ -28,13 +28,13 @@
           "size": ""
         },
         "id": 1,
-        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a1.png",
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b3c68cd6cb1510b634fb.png",
         "intro": "",
-        "name": "注册客户",
+        "name": "线下充值",
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/asset/rechargeoffline"
         }
       },
       {
@@ -45,13 +45,13 @@
           "size": ""
         },
         "id": 1,
-        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a1.png",
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b3c68cd6cb1510b634fb.png",
         "intro": "",
-        "name": "我的客户",
+        "name": "充值管理",
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/asset/recharge"
         }
       },
       {
@@ -62,13 +62,13 @@
           "size": ""
         },
         "id": 1,
-        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d79e.png",
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b3c68cd6cb1510b634fb.png",
         "intro": "",
-        "name": "推广二维码",
+        "name": "转账",
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/asset/transferadd"
         }
       },
       {
@@ -79,13 +79,13 @@
           "size": ""
         },
         "id": 1,
-        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a2.png",
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b3c68cd6cb1510b634fb.png",
         "intro": "",
-        "name": "账户升级",
+        "name": "转账明细",
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/asset/transfer"
         }
       },
       {
@@ -96,13 +96,13 @@
           "size": ""
         },
         "id": 1,
-        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0742eb99b10b0ce007c039.png",
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b44b8cd6cb1510b6b173.png",
         "intro": "",
-        "name": "分润中心",
+        "name": "提现",
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/reward/list"
+          "value": "/pages/asset/withdrawadd"
         }
       },
       {
@@ -113,13 +113,13 @@
           "size": ""
         },
         "id": 1,
-        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a0.png",
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b4668cd6cb1510b6d096.png",
         "intro": "",
-        "name": "客服中心",
-        "show": true,
+        "name": "提现记录",
+        "show": false,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/asset/withdraw"
         }
       },
       {
@@ -130,13 +130,30 @@
           "size": ""
         },
         "id": 1,
-        "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d79f.png",
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b3c68cd6cb1510b634fb.png",
         "intro": "",
-        "name": "个人中心",
+        "name": "我的银行卡",
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/asset/bankcard"
+        }
+      },
+      {
+        "icon": {
+          "iconSecondColor": "",
+          "name": "",
+          "path": "",
+          "size": ""
+        },
+        "id": 1,
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b3c68cd6cb1510b634fb.png",
+        "intro": "",
+        "name": "添加银行卡",
+        "show": false,
+        "url": {
+          "type": "url",
+          "value": "/pages/asset/bankcardadd"
         }
       }
     ]
@@ -145,7 +162,7 @@
     "icon": {
       "color": ""
     },
-    "title": "核心特权",
+    "title": "钱包服务",
     "intro": ""
   }
 }

@@ -1,12 +1,10 @@
 <template>
-  <!-- <view class="zk-amount">{{widgetModel}}</view> -->
-  <view class="h5-zk-amount" element-path="h5/x-amount">
-    <!-- {{viewModel}} -->
+  <view class="h5-zk-amount">
     <view class="x-amount_zichan">
       <view class="x-amount_my">我的资产</view>
       <view class="x-amount_ul">
-        <ul>
-          <li class="x-amount_li" :style="'width:'+100/gridCol+'%'" v-for="(item,index) in viewModel" :key="index" :class="{'x-amount_lenght':viewModellenght>4}">
+        <ul v-if="viewModel">
+          <li class="x-amount_li" :style="'width:'+100/gridCol+'%'" v-for="(item,index) in viewModel" :key="index" :class="{'x-amount_lenght':viewModel.lenth>4}">
             <a>
               <span class="x-amount_span x-amount_color" ref="Xamountcolor">{{item.amount}}</span>
               <span class="x-amount_span x-amount_size">{{item.moneyTypeName}}</span>
@@ -15,7 +13,6 @@
         </ul>
       </view>
     </view>
-    <view class="x-amount_fuwu">服务</view>
   </view>
 </template>
 
@@ -25,10 +22,8 @@
 
     data () {
       return {
-        widgetModel: '',
-        viewModel: '',
-        gridCol: '4',
-        viewModellenght: ''
+        viewModel: null,
+        gridCol: '4'
       }
     },
     props: {
@@ -36,23 +31,18 @@
     },
     mounted () {
       this.init()
-      this.$bus.$off('strikeView').$on('strikeView', () => {
-        this.init()
-      })
     },
     methods: {
       async  init () {
-        //   this.widgetModel = await this.$api.themeWidget(this.widget)
-        // this.viewModel = this.widgetModel.value.result
-        // this.viewModellenght = this.viewModel.length
         var para = {
-          dataId: this.widget.dataId,
-          widgetId: this.widget.widgetId,
           userId: this.$user.id()
         }
-        var ponsen = await this.$api.httpGet('/api/user/account/allaccounts', para)
-        this.viewModel = ponsen.result
-        this.viewModellenght = this.viewModel.length
+        var response = await this.$api.httpGet('/api/account/allaccounts', para)
+        if (response.status === 1) {
+          this.viewModel = response.result
+        } else {
+          this.$api.toastWarn(response.message)
+        }
       }
     }
   }

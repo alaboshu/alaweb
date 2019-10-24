@@ -82,11 +82,11 @@
         "id": 1,
         "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a2.png",
         "intro": "",
-        "name": "账户升级",
+        "name": "我的钱包",
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/asset/accout"
         }
       },
       {
@@ -103,7 +103,7 @@
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/reward/list"
         }
       },
       {
@@ -116,11 +116,11 @@
         "id": 1,
         "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a0.png",
         "intro": "",
-        "name": "客服中心",
+        "name": "转账",
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/asset/transferadd"
         }
       },
       {
@@ -137,7 +137,7 @@
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/index?path=user_info"
         }
       }
     ]
