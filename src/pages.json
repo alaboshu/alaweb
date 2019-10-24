@@ -48,6 +48,30 @@
       }
     },
     {
+      "path": "pages/asset/bankcard",
+      "style": {
+        "navigationBarTitleText": "银行卡管理"
+      }
+    },
+    {
+      "path": "pages/asset/recharge",
+      "style": {
+        "navigationBarTitleText": "充值明细"
+      }
+    },
+    {
+      "path": "pages/asset/withdraw",
+      "style": {
+        "navigationBarTitleText": "提现明细"
+      }
+    },
+    {
+      "path": "pages/asset/transfer",
+      "style": {
+        "navigationBarTitleText": "转账明细"
+      }
+    },
+    {
       "path": "pages/user/login",
       "style": {
         "navigationBarTitleText": "",

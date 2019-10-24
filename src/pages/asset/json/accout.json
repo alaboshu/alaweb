@@ -30,11 +30,62 @@
         "id": 1,
         "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b3c68cd6cb1510b634fb.png",
         "intro": "",
-        "name": "我的银行卡",
+        "name": "线下充值",
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/user/rec"
+          "value": "/pages/asset/rechargeoffline"
+        }
+      },
+      {
+        "icon": {
+          "iconSecondColor": "",
+          "name": "",
+          "path": "",
+          "size": ""
+        },
+        "id": 1,
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b3c68cd6cb1510b634fb.png",
+        "intro": "",
+        "name": "充值管理",
+        "show": true,
+        "url": {
+          "type": "url",
+          "value": "/pages/asset/recharge"
+        }
+      },
+      {
+        "icon": {
+          "iconSecondColor": "",
+          "name": "",
+          "path": "",
+          "size": ""
+        },
+        "id": 1,
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b3c68cd6cb1510b634fb.png",
+        "intro": "",
+        "name": "转账",
+        "show": true,
+        "url": {
+          "type": "url",
+          "value": "/pages/asset/transferadd"
+        }
+      },
+      {
+        "icon": {
+          "iconSecondColor": "",
+          "name": "",
+          "path": "",
+          "size": ""
+        },
+        "id": 1,
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b3c68cd6cb1510b634fb.png",
+        "intro": "",
+        "name": "转账明细",
+        "show": true,
+        "url": {
+          "type": "url",
+          "value": "/pages/asset/transfer"
         }
       },
       {
@@ -51,7 +102,7 @@
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/active/list"
+          "value": "/pages/asset/withdrawadd"
         }
       },
       {
@@ -65,10 +116,44 @@
         "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b4668cd6cb1510b6d096.png",
         "intro": "",
         "name": "提现记录",
+        "show": false,
+        "url": {
+          "type": "url",
+          "value": "/pages/asset/withdraw"
+        }
+      },
+      {
+        "icon": {
+          "iconSecondColor": "",
+          "name": "",
+          "path": "",
+          "size": ""
+        },
+        "id": 1,
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b3c68cd6cb1510b634fb.png",
+        "intro": "",
+        "name": "我的银行卡",
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/asset/bankcard"
+        }
+      },
+      {
+        "icon": {
+          "iconSecondColor": "",
+          "name": "",
+          "path": "",
+          "size": ""
+        },
+        "id": 1,
+        "image": "https://diyservice.5ug.com/wwwroot/uploads/api/2019-03-23/5c95b3c68cd6cb1510b634fb.png",
+        "intro": "",
+        "name": "添加银行卡",
+        "show": false,
+        "url": {
+          "type": "url",
+          "value": "/pages/asset/bankcardadd"
         }
       }
     ]
