@@ -1,24 +1,28 @@
 <template>
   <view class="zk-school-headlines">
-    <view class="school-headlines_container">
-      <view class="video_list_head">
-        <span>新闻头条</span>
-        <!-- <span>查看更多
+    <!-- v-if="allDataList.length!==0" -->
+    <!-- :style="'height:'+screen.height+'px;overflow-y: auto;'" -->
+    <scroll-view scroll-y="true" @scrolltolower="scrolltolower">
+      <view class="school-headlines_container">
+        <view class="video_list_head">
+          <span>新闻头条</span>
+          <!-- <span>查看更多
           <x-icon name="icon-zk-jiantou" size="11"></x-icon>
         </span> -->
-      </view>
-      <view class="school-headlines_container_item">
-        <view class="item_list" v-for="(item,index) in widgetModel" :key="index" @click="goDetail(item.id)">
-          <view class="item_list_L">
-            <view class="item_list_L_name">{{item.title}}</view>
-            <view class="item_list_text">{{item.intro}}</view>
-          </view>
-          <view class="item_list_R">
-            <img :src="item.image" alt="">
+        </view>
+        <view class="school-headlines_container_item">
+          <view class="item_list" v-for="(item,index) in widgetModel.result" :key="index" @click="goDetail(item.id)">
+            <view class="item_list_L">
+              <view class="item_list_L_name">{{item.title}}</view>
+              <view class="item_list_text">{{item.createTime}}</view>
+            </view>
+            <view class="item_list_R">
+              <img :src="$api.baseUrl() + item.image" alt="">
+            </view>
           </view>
         </view>
       </view>
-    </view>
+    </scroll-view>
   </view>
 </template>
 
@@ -43,7 +47,6 @@
     },
     methods: {
       async init () {
-        // this.widgetModel = await this.$api.themeWidget(this.widget, editSetting.config)
         var para = {
           pageIndex: 1,
           pageSize: 10
@@ -55,11 +58,13 @@
             arr.push(res.result.apiDataList[i])
           }
         }
-        this.widgetModel = arr
         this.widgetModel = this.widget
       },
       goDetail (id) {
         this.$api.to('/pages/index?path=articles_topline_show&id=' + id)
+      },
+      scrolltolower () {
+
       }
     }
   }
