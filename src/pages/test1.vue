@@ -20,7 +20,8 @@
 
       init () {
         this.viewModel = {
-          classIds: [10321, 3]
+          classIds: [10321, 3],
+          isPage: false
         }
       }
     }
