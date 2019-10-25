@@ -1,6 +1,6 @@
 <template>
   <view v-if="async">
-    <page-item v-if="widget.isPage"></page-item>
+    <page-item v-if="widget.isPage" :widget="widget" :viewModel="viewModel.productItems"></page-item>
     <common-item :viewModel="viewModel.productItems" :widget="widget" v-else></common-item>
   </view>
 </template>
