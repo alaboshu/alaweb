@@ -241,6 +241,7 @@ import zkTypeClass from '@/components/themes/zk-type-class/index.vue'
 import zkVideoImage from '@/components/themes/zk-video-image/index.vue'
 import zkVideoList from '@/components/themes/zk-video-list/index.vue'
 import zkVideo from '@/components/themes/zk-video/index.vue'
+import zkExchange from '@/components/themes/zk-exchange/index.vue'
 import zkAddressEdit from '@/components/user/zk-address-edit/index.vue'
 import zkBindMobile from '@/components/user/zk-bind-mobile/index.vue'
 import zkForgetPassword from '@/components/user/zk-forget-password/index.vue'
@@ -431,6 +432,7 @@ Vue.component('zk-merchant-image', zkMerchantImage)
 Vue.component('zk-merchant-intro', zkMerchantIntro)
 Vue.component('zk-merchant-list', zkMerchantList)
 Vue.component('zk-merchant-pay', zkMerchantPay)
+Vue.component('zk-exchange', zkExchange)
 Vue.component('zk-must-fight-today', zkMustFightToday)
 Vue.component('zk-my-favorite', zkMyFavorite)
 Vue.component('zk-nav-swiper', zkNavSwiper)
@@ -552,11 +554,11 @@ Vue.config.productionTip = false
 
 // #ifdef H5
 Vue.prototype.$client = 'WapH5'
-    // #endif
+// #endif
 
 // #ifndef H5
 Vue.prototype.$client = 'WeChatLite'
-    // #endif
+// #endif
 
 Vue.prototype.$api = api
 Vue.prototype.$user = user
@@ -566,7 +568,7 @@ Vue.prototype.$store = store
 Vue.prototype.$bus = new Vue()
 weixin.login().then()
 const app = new Vue({
-    store,
-    ...App
+  store,
+  ...App
 })
 app.$mount()
