@@ -11,7 +11,10 @@
       loading: {
         default: false
       }, // 是否使用加载中,默认为false不使用
-      btnText: {}
+      btnText: {},
+      bgColor: {
+        default: '#C81432'
+      }
     },
     data () {
       return {

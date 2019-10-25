@@ -4,8 +4,109 @@
 
   .zk-exchange-card {
     margin: 10px 0;
-    height: 120px;
+    display: flex;
+    padding: 0 10px;
+    flex-direction: column;
+    justify-content: center;
+    height: 80px;
     background: linear-gradient(to right, #636E8C, #3C4262);
     border-radius: 10px;
+
+    .zk-exchange-name {
+      color: #8A94AE;
+      font-size: 12px;
+    }
+
+    .zk-exchange-account {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .zk-exchange-exchange {
+        color: #DDE2E7;
+        background: #515773;
+        font-size: 12px;
+        padding: 0 13px;
+        border-radius: 20px;
+        // background: linear-gradient(to right, #636E8C, #3C4262);
+      }
+    }
+  }
+
+  .zk-exchange-list {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+
+    .zk-exchange-list-title {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .zk-exchange-list-form {
+      display: flex;
+      flex-wrap: wrap;
+
+      .zk-exchange-list-cont {
+        width: 30%;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        border: 1px solid #5D647F;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        color: #5D647F;
+
+        .zk-exchange-title {
+          color: #5D647F;
+        }
+
+        .zk-exchang-intro {
+          font-size: 12px;
+        }
+      }
+
+      .actions {
+        border-color: #EC6526;
+        position: relative;
+
+        &::after {
+          content: '';
+          border: 8px solid #EC6526;
+          border-top: 8px solid transparent;
+          border-left: 8px solid transparent;
+          display: inline-block;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .zk-exchange-pay {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .zk-exchange-tips {
+    .zk-exchange-tips-list {
+      margin-top: 5px;
+
+      .zk-exchange-left,
+      .zk-exchange-tips-cont {
+        color: #DE9763;
+        font-size: 12px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
   }
 }
