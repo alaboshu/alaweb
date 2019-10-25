@@ -97,12 +97,22 @@
         if (this.dataModel) {
           this.viewModel = this.dataModel
         }
+      },
+      // 处理验证码，将当前表单的手机号传入到手机验证码中
+      watcthPhoneVerfity () {
+        console.info('this.$refs.verification', this.$refs.verification)
+        this.$nextTick(() => {
+          if (this.$refs.verification) {
+            console.info('x-item', this.viewModel, this.column)
+          }
+        })
       }
     },
     watch: {
       viewModel: {
         deep: true,
         handler (val) {
+          this.watcthPhoneVerfity()
           this.$emit('change', this.viewModel)
         }
       }

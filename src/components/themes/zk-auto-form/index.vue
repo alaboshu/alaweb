@@ -98,6 +98,14 @@
           url: conter.link
         })
       }
+    },
+    watch: {
+      viewModel: {
+        deep: true,
+        handler (val) {
+
+        }
+      }
     }
   }
 </script>
