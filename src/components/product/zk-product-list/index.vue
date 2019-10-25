@@ -7,8 +7,8 @@
 
 <script>
   import props from './props'
-  import commonItem from './styles/common.vue'
-  import pageItem from './styles/paging.vue'
+  import commonItem from './common-style.vue'
+  import pageItem from './page-style.vue'
   export default {
     components: {
       commonItem,
@@ -17,16 +17,8 @@
     data () {
       return {
         async: false,
-        screen: {
-          height: 0,
-          left: 0
-        }, // 屏幕相关信息
         allDataList: [], // 所有数据,每次刷新以后获取的数据叠加
         viewModel: {}, // 视图模型
-        loading: {
-          text: '暂无更多数据...',
-          show: false
-        }, // 加载数据
         queryPara: {
           pageIndex: 1,
           pageSize: this.pageSize
@@ -54,7 +46,6 @@
         } else {
           this.$api.toastWarn('数据获取失败')
         }
-        this.height()
         this.async = true
       },
       scrolltolower () {
@@ -65,16 +56,6 @@
           } else {
             this.init()
           }
-        }
-      },
-      // 内容宽度
-      height () {
-        this.screen.height = this.$api.screenHeight() - 46
-        console.info('内容宽度？', this.viewModel)
-        if (this.viewModel.searchOptions && this.viewModel.searchOptions.advancedForms !== null && this.viewModel.searchOptions.advancedForms.length !== 0) {
-          this.screen.height = this.$api.screenHeight() - 46
-        } else {
-          this.screen.height = this.$api.screenHeight() - 46
         }
       },
       // 标签切换
