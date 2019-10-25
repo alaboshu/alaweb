@@ -22,7 +22,7 @@
       <x-password v-model="viewModel" :label="column.name" :isNum="true" :placeHolder="column.placeHolder"></x-password>
     </div>
     <div class="boxItem" v-if="column.type==='phoneverifiy'" x-verify="已验证">
-      <x-phone-verifiy ref="verification" v-model="viewModel"></x-phone-verifiy>
+      <x-phone-verifiy ref="phoneVerifiy" v-model="viewModel"></x-phone-verifiy>
     </div>
 
     <div class="boxItem" v-if="column.type==='json'">
@@ -97,22 +97,12 @@
         if (this.dataModel) {
           this.viewModel = this.dataModel
         }
-      },
-      // 处理验证码，将当前表单的手机号传入到手机验证码中
-      watcthPhoneVerfity () {
-        console.info('this.$refs.verification', this.$refs.verification)
-        this.$nextTick(() => {
-          if (this.$refs.verification) {
-            console.info('x-item', this.viewModel, this.column)
-          }
-        })
       }
     },
     watch: {
       viewModel: {
         deep: true,
         handler (val) {
-          this.watcthPhoneVerfity()
           this.$emit('change', this.viewModel)
         }
       }

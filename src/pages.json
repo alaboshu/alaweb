@@ -78,6 +78,24 @@
       }
     },
     {
+      "path": "pages/app/exchage",
+      "style": {
+        "navigationBarTitleText": "交换通宝"
+      }
+    },
+    {
+      "path": "pages/app/recharge",
+      "style": {
+        "navigationBarTitleText": "通宝汇款"
+      }
+    },
+    {
+      "path": "pages/app/agree",
+      "style": {
+        "navigationBarTitleText": "服务协议"
+      }
+    },
+    {
       "path": "pages/user/login",
       "style": {
         "navigationBarTitleText": "",

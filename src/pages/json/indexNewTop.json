@@ -10,11 +10,11 @@
         "show": true,
         "link": {
           "type": "url",
-          "value": "/pages/user/reg"
+          "value": "/pages/app/exchage"
         },
         "url": {
           "type": "url",
-          "value": "/pages/user/reg"
+          "value": "/pages/app/exchage"
         }
       },
       {
