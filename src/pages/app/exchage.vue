@@ -1,7 +1,6 @@
 <template>
   <view class="exchange">
-    <!-- <zk-head title="交换通宝" :showHead="true"></zk-head> -->
-    <zk-exchange></zk-exchange>
+    <zk-exchange ref="zkChange"></zk-exchange>
   </view>
 </template>
 <script>
@@ -12,15 +11,24 @@
     methods: {
       init () {
         uni.setNavigationBarColor({
-          frontColor: '#000000',
-          backgroundColor: '#f0f0f0'
+          frontColor: '#ffffff',
+          backgroundColor: '#C81432'
         })
       }
+    },
+    onShow () {
+      this.$nextTick(() => {
+        this.$refs.zkChange.init()
+      })
     }
   }
 </script>
 <style lang="scss" scoped>
   .exchange {
     background-color: #f0f0f0;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    position: fixed;
   }
 </style>

@@ -38,7 +38,7 @@
         this.$emit('searchClick')
       },
       toCart () {
-        this.$api.to('/pages/index?path=order_cart')
+        this.$api.to('/pages/order/order_cart')
       },
       async init () {
         this.widgetModel = await this.$api.themeWidget(this.widget)
@@ -59,7 +59,7 @@
         this.$api.to('/pages/index?path=product_list&Keyword=' + this.searchMdel)
       },
       getCart () {
-        this.$api.to('/pages/index?path=order_cart')
+        this.$api.to('/pages/order/order_cart')
       }
     }
   }

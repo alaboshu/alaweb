@@ -4,7 +4,8 @@
       <view class="intro-title" id="showIntro">
         推荐商品
       </view>
-      <zk-product-item ref="product_item" :showPrice="isFrontShowPrice"></zk-product-item>
+      <!--<zk-product-item ref="product_item" :showPrice="isFrontShowPrice"></zk-product-item>-->
+      <zk-product-list :widget="viewModel" style="background: #f0f0f0;"></zk-product-list>
     </view>
   </view>
 </template>
@@ -15,7 +16,12 @@
     data () {
       return {
         isFrontShowPrice: true,
-        isLoading: false
+        isLoading: false,
+        viewModel: {
+          classIds: [],
+          isPage: false,
+          styleStype: 'product'
+        }
       }
     },
     props: {
@@ -30,9 +36,9 @@
         var _this = this
         setTimeout(async () => {
           let par = { productId: this.productView.id, userId: this.$user.id() }
-          if (this.widget.value !== null && this.widget.value.priceStyleId !== undefined) {
-            par.priceStyleId = this.widget.value.priceStyleId
-          }
+          // if (this.widget.value !== null && this.widget.value.priceStyleId !== undefined) {
+          //   par.priceStyleId = this.widget.value.priceStyleId
+          // }
           var list = await _this.$api.httpGet('Api/Product/GetRelation', par)
           var data = {
             productItems: list.result

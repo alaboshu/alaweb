@@ -198,8 +198,8 @@
       //     scene: 'WXSceneSession',
       //     type: 0,
       //     href: window.location.href, // 这地址太长了，就省略了
-      //     title: '文房四宝',
-      //     summary: '文房四宝商家盈利系统火热报名中，5月23日广东东莞常平',
+      //     title: '咚巴拉',
+      //     summary: '咚巴拉商家盈利系统火热报名中，5月23日广东东莞常平',
       //     imageUrl: 'https://s-open.qiniuniu99.com/wwwroot/Uploads/Core/2019/05/5cdea75089bdb517785b6ffb.png',
       //     success: function (res) {
       //     },
@@ -231,7 +231,7 @@
         this.showHtml = this.widgetModel.intro
         var detail = `${this.widgetModel.name}${this.widgetModel.startTime}至${this.widgetModel.endTime}${this.widgetModel.address}`
         if (this.$api.client() === 'WapH5' || this.$api.client() === 'WeChat') {
-          this.$api.share('文房四宝', 'https://s-open.qiniuniu99.com/wwwroot/Uploads/Core/2019/05/5cdea75089bdb517785b6ffb.png', detail)
+          this.$api.share('咚巴拉', 'https://s-open.qiniuniu99.com/wwwroot/Uploads/Core/2019/05/5cdea75089bdb517785b6ffb.png', detail)
         }
 
         // eslint-disable-next-line

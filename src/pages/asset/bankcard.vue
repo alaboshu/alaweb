@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <zk-head title="银行卡管理" :showHead="true"></zk-head>
-    <zk-list type="BillAutoList"></zk-list>
-  </div>
+  <zk-bank-card></zk-bank-card>
 </template>
 <script>
   export default {

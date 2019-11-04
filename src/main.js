@@ -16,7 +16,6 @@ import '@/assets/style/h5/index.scss'
 /* #ifndef H5 */
 import '@/assets/style/mp/index.scss'
 // #endif
-
 import zkAccountSecurity from '@/components/account/zk-account-security/index.vue'
 import zkGroupbuy from '@/components/activitys/zk-groupbuy/index.vue'
 import zkAbout from '@/components/articles/zk-about/index.vue'
@@ -24,6 +23,7 @@ import zkArticle from '@/components/articles/zk-article/index.vue'
 import zkFeedback from '@/components/articles/zk-feedback/index.vue'
 import zkHelp from '@/components/articles/zk-help/index.vue'
 import zkMarquee from '@/components/articles/zk-marquee/index.vue'
+import zkBankCard from '@/components/assets/zk-bank-card/index.vue'
 import zkBookIndex from '@/components/book/zk-book-index/index.vue'
 import zkBookMy from '@/components/book/zk-book-my/index.vue'
 import zkBorderHeader from '@/components/book/zk-border-header/index.vue'
@@ -84,6 +84,7 @@ import zkProductListpage from '@/components/product/zk-product-listpage/index.vu
 import zkProductSecondBuy from '@/components/product/zk-product-second-buy/index.vue'
 import zkProductShowpage from '@/components/product/zk-product-showpage/index.vue'
 import zkProductUser from '@/components/product/zk-product-user/index.vue'
+import uniIcon from '@/components/qiniuniu/uni-icon/index.vue'
 import zkMerchantInfo from '@/components/qiniuniu/zk-merchant-info/index.vue'
 import zkQiniuniuBtn from '@/components/qiniuniu/zk-qiniuniu-btn/index.vue'
 import zkQnnLogin from '@/components/qiniuniu/zk-qnn-login/index.vue'
@@ -113,7 +114,6 @@ import zkBurstList from '@/components/themes/zk-burst-list/index.vue'
 import zkBusinessCard from '@/components/themes/zk-business-card/index.vue'
 import zkBuyAddress from '@/components/themes/zk-buy-address/index.vue'
 import zkCardSwiper from '@/components/themes/zk-card-swiper/index.vue'
-import zkCard from '@/components/themes/zk-card/index.vue'
 import zkCell from '@/components/themes/zk-cell/index.vue'
 import zkCenterService from '@/components/themes/zk-center-service/index.vue'
 import zkCharges from '@/components/themes/zk-charges/index.vue'
@@ -131,6 +131,7 @@ import zkDiscountShopList from '@/components/themes/zk-discount-shop-list/index.
 import zkEggMachine from '@/components/themes/zk-egg-machine/index.vue'
 import zkEject from '@/components/themes/zk-eject/index.vue'
 import zkEnlargeSwiper from '@/components/themes/zk-enlarge-swiper/index.vue'
+import zkExchange from '@/components/themes/zk-exchange/index.vue'
 import zkFloatSwiper from '@/components/themes/zk-float-swiper/index.vue'
 import zkFoot from '@/components/themes/zk-foot/index.vue'
 import zkGridList from '@/components/themes/zk-grid-list/index.vue'
@@ -184,6 +185,8 @@ import zkPreferential from '@/components/themes/zk-preferential/index.vue'
 import zkPreview from '@/components/themes/zk-preview/index.vue'
 import zkProductLoad from '@/components/themes/zk-product-load/index.vue'
 import zkPurchaseShopsList from '@/components/themes/zk-purchase-shops-list/index.vue'
+import zkRechargeBlock from '@/components/themes/zk-recharge-block/index.vue'
+import zkRecharge from '@/components/themes/zk-recharge/index.vue'
 import zkRegistrationSuccess from '@/components/themes/zk-registration-success/index.vue'
 import zkResult from '@/components/themes/zk-result/index.vue'
 import zkRightbar from '@/components/themes/zk-rightbar/index.vue'
@@ -202,6 +205,7 @@ import zkSchoolTeamCard from '@/components/themes/zk-school-team-card/index.vue'
 import zkSchoolTimeline from '@/components/themes/zk-school-timeline/index.vue'
 import zkSchoolVideoList from '@/components/themes/zk-school-video-list/index.vue'
 import zkScrollList from '@/components/themes/zk-scroll-list/index.vue'
+import zkScrollView from '@/components/themes/zk-scroll-view/index.vue'
 import zkSearch from '@/components/themes/zk-search/index.vue'
 import zkSelectedShopList from '@/components/themes/zk-selected-shop-list/index.vue'
 import zkSelfMention from '@/components/themes/zk-self-mention/index.vue'
@@ -238,10 +242,10 @@ import zkTimingBooking from '@/components/themes/zk-timing-booking/index.vue'
 import zkTimingGrid from '@/components/themes/zk-timing-grid/index.vue'
 import zkTitle from '@/components/themes/zk-title/index.vue'
 import zkTypeClass from '@/components/themes/zk-type-class/index.vue'
+import zkUpdateImage from '@/components/themes/zk-update-image/index.vue'
 import zkVideoImage from '@/components/themes/zk-video-image/index.vue'
 import zkVideoList from '@/components/themes/zk-video-list/index.vue'
 import zkVideo from '@/components/themes/zk-video/index.vue'
-import zkExchange from '@/components/themes/zk-exchange/index.vue'
 import zkAddressEdit from '@/components/user/zk-address-edit/index.vue'
 import zkBindMobile from '@/components/user/zk-bind-mobile/index.vue'
 import zkForgetPassword from '@/components/user/zk-forget-password/index.vue'
@@ -280,6 +284,7 @@ import xRadio from '@/elements/all/x-radio/index.vue'
 import xScroll from '@/elements/all/x-scroll/index.vue'
 import xSelect from '@/elements/all/x-select/index.vue'
 import xTimePicker from '@/elements/all/x-time-picker/index.vue'
+import xUploadImage from '@/elements/all/x-upload-image/index.vue'
 import xWidget from '@/elements/all/x-widget/index.vue'
 import auto from '@/elements/auto/index.vue'
 import xAuthorization from '@/elements/mp/x-authorization/index.vue'
@@ -290,6 +295,7 @@ Vue.component('zk-article', zkArticle)
 Vue.component('zk-feedback', zkFeedback)
 Vue.component('zk-help', zkHelp)
 Vue.component('zk-marquee', zkMarquee)
+Vue.component('zk-bank-card', zkBankCard)
 Vue.component('zk-book-index', zkBookIndex)
 Vue.component('zk-book-my', zkBookMy)
 Vue.component('zk-border-header', zkBorderHeader)
@@ -350,6 +356,7 @@ Vue.component('zk-product-listpage', zkProductListpage)
 Vue.component('zk-product-second-buy', zkProductSecondBuy)
 Vue.component('zk-product-showpage', zkProductShowpage)
 Vue.component('zk-product-user', zkProductUser)
+Vue.component('uni-icon', uniIcon)
 Vue.component('zk-merchant-info', zkMerchantInfo)
 Vue.component('zk-qiniuniu-btn', zkQiniuniuBtn)
 Vue.component('zk-qnn-login', zkQnnLogin)
@@ -379,7 +386,6 @@ Vue.component('zk-burst-list', zkBurstList)
 Vue.component('zk-business-card', zkBusinessCard)
 Vue.component('zk-buy-address', zkBuyAddress)
 Vue.component('zk-card-swiper', zkCardSwiper)
-Vue.component('zk-card', zkCard)
 Vue.component('zk-cell', zkCell)
 Vue.component('zk-center-service', zkCenterService)
 Vue.component('zk-charges', zkCharges)
@@ -397,6 +403,7 @@ Vue.component('zk-discount-shop-list', zkDiscountShopList)
 Vue.component('zk-egg-machine', zkEggMachine)
 Vue.component('zk-eject', zkEject)
 Vue.component('zk-enlarge-swiper', zkEnlargeSwiper)
+Vue.component('zk-exchange', zkExchange)
 Vue.component('zk-float-swiper', zkFloatSwiper)
 Vue.component('zk-foot', zkFoot)
 Vue.component('zk-grid-list', zkGridList)
@@ -432,7 +439,6 @@ Vue.component('zk-merchant-image', zkMerchantImage)
 Vue.component('zk-merchant-intro', zkMerchantIntro)
 Vue.component('zk-merchant-list', zkMerchantList)
 Vue.component('zk-merchant-pay', zkMerchantPay)
-Vue.component('zk-exchange', zkExchange)
 Vue.component('zk-must-fight-today', zkMustFightToday)
 Vue.component('zk-my-favorite', zkMyFavorite)
 Vue.component('zk-nav-swiper', zkNavSwiper)
@@ -451,6 +457,8 @@ Vue.component('zk-preferential', zkPreferential)
 Vue.component('zk-preview', zkPreview)
 Vue.component('zk-product-load', zkProductLoad)
 Vue.component('zk-purchase-shops-list', zkPurchaseShopsList)
+Vue.component('zk-recharge-block', zkRechargeBlock)
+Vue.component('zk-recharge', zkRecharge)
 Vue.component('zk-registration-success', zkRegistrationSuccess)
 Vue.component('zk-result', zkResult)
 Vue.component('zk-rightbar', zkRightbar)
@@ -469,6 +477,7 @@ Vue.component('zk-school-team-card', zkSchoolTeamCard)
 Vue.component('zk-school-timeline', zkSchoolTimeline)
 Vue.component('zk-school-video-list', zkSchoolVideoList)
 Vue.component('zk-scroll-list', zkScrollList)
+Vue.component('zk-scroll-view', zkScrollView)
 Vue.component('zk-search', zkSearch)
 Vue.component('zk-selected-shop-list', zkSelectedShopList)
 Vue.component('zk-self-mention', zkSelfMention)
@@ -505,6 +514,7 @@ Vue.component('zk-timing-booking', zkTimingBooking)
 Vue.component('zk-timing-grid', zkTimingGrid)
 Vue.component('zk-title', zkTitle)
 Vue.component('zk-type-class', zkTypeClass)
+Vue.component('zk-update-image', zkUpdateImage)
 Vue.component('zk-video-image', zkVideoImage)
 Vue.component('zk-video-list', zkVideoList)
 Vue.component('zk-video', zkVideo)
@@ -546,6 +556,7 @@ Vue.component('x-radio', xRadio)
 Vue.component('x-scroll', xScroll)
 Vue.component('x-select', xSelect)
 Vue.component('x-time-picker', xTimePicker)
+Vue.component('x-upload-image', xUploadImage)
 Vue.component('x-widget', xWidget)
 Vue.component('auto', auto)
 Vue.component('x-authorization', xAuthorization)
@@ -559,6 +570,14 @@ Vue.prototype.$client = 'WapH5'
 // #ifndef H5
 Vue.prototype.$client = 'WeChatLite'
 // #endif
+
+Vue.directive('lazy', {
+  inserted: el => {
+    el.onerror = () => {
+      el.src = api.config().lazyImage
+    }
+  }
+})
 
 Vue.prototype.$api = api
 Vue.prototype.$user = user

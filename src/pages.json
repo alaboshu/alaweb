@@ -2,7 +2,7 @@
   "pages": [{
       "path": "pages/default",
       "style": {
-        "navigationBarTitleText": "文房四宝",
+        "navigationBarTitleText": "咚巴拉",
         "enablePullDownRefresh": false,
         "app-plus": {
           "titleNView": false
@@ -29,6 +29,20 @@
       }
     },
     {
+      "path": "pages/user/user_qrcode",
+      "style": {
+        "navigationBarTitleText": "我的二维码",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/user/user_address_index",
+      "style": {
+        "navigationBarTitleText": "收货地址",
+        "navigationStyle": "custom"
+      }
+    },
+    {
       "path": "pages/reward/list",
       "style": {
         "navigationBarTitleText": "分润中心"
@@ -37,7 +51,7 @@
     {
       "path": "pages/asset/accout",
       "style": {
-        "navigationBarTitleText": "钱包中心"
+        "navigationBarTitleText": "我的资产"
       }
     },
     {
@@ -56,6 +70,18 @@
       "path": "pages/asset/recharge",
       "style": {
         "navigationBarTitleText": "充值明细"
+      }
+    },
+    {
+      "path": "pages/asset/rechargeoffline",
+      "style": {
+        "navigationBarTitleText": "线下银卡汇款"
+      }
+    },
+    {
+      "path": "pages/asset/rechargeBlock",
+      "style": {
+        "navigationBarTitleText": "区块链付款"
       }
     },
     {
@@ -79,7 +105,7 @@
     {
       "path": "pages/app/exchage",
       "style": {
-        "navigationBarTitleText": "交换通宝",
+        "navigationBarTitleText": "流转资产",
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTextStyle": "black"
       }
@@ -87,13 +113,20 @@
     {
       "path": "pages/app/recharge",
       "style": {
-        "navigationBarTitleText": "通宝汇款"
+        "navigationBarTitleText": "确认付款"
       }
     },
     {
       "path": "pages/app/agree",
       "style": {
         "navigationBarTitleText": "服务协议"
+      }
+    },
+    {
+      "path": "pages/product/show",
+      "style": {
+        "navigationBarTitleText": "商品详情",
+        "navigationStyle": "custom"
       }
     },
     {
@@ -122,6 +155,12 @@
       "path": "pages/user/data",
       "style": {
         "navigationBarTitleText": "完善资料"
+      }
+    },
+    {
+      "path": "pages/user/user_info",
+      "style": {
+        "navigationBarTitleText": "账户信息"
       }
     },
     {
@@ -164,7 +203,7 @@
     {
       "path": "pages/tabbar/press",
       "style": {
-        "navigationBarTitleText": "新闻",
+        "navigationBarTitleText": "商学院",
         "enablePullDownRefresh": true
       }
     },
@@ -175,14 +214,14 @@
         "enablePullDownRefresh": true
       }
     },
-    {
-      "path": "pages/user/index",
-      "style": {
-        "navigationBarTitleText": "我的中心",
-        "enablePullDownRefresh": true,
-        "navigationStyle": "custom"
-      }
-    },
+    // {
+    //   "path": "pages/user/index",
+    //   "style": {
+    //     "navigationBarTitleText": "我的中心",
+    //     "enablePullDownRefresh": true,
+    //     "navigationStyle": "custom"
+    //   }
+    // },
     {
       "path": "pages/tabbar/order_cart",
       "style": {
@@ -254,13 +293,13 @@
     {
       "path": "pages/mall/meal",
       "style": {
-        "navigationBarTitleText": "套餐商城"
+        "navigationBarTitleText": "咚巴拉商城"
       }
     },
     {
       "path": "pages/mall/consume",
       "style": {
-        "navigationBarTitleText": "消费商城"
+        "navigationBarTitleText": "名品商城"
       }
     },
     {
@@ -274,17 +313,59 @@
       "style": {
         "navigationBarTitleText": "商品列表"
       }
+    },
+    {
+      "path": "pages/safe/set",
+      "style": {
+        "navigationBarTitleText": "安全设置"
+      }
+    },
+    {
+      "path": "pages/safe/user_password_login",
+      "style": {
+        "navigationBarTitleText": "修改登录密码"
+      }
+    },
+    {
+      "path": "pages/safe/user_password_safe",
+      "style": {
+        "navigationBarTitleText": "修改支付密码"
+      }
+    },
+    {
+      "path": "pages/find/find_password_safe",
+      "style": {
+        "navigationBarTitleText": "找回支付密码"
+      }
+    },
+    {
+      "path": "pages/find/find_password_login",
+      "style": {
+        "navigationBarTitleText": "找回密码"
+      }
+    },
+    {
+      "path": "pages/order/order_cart",
+      "style": {
+        "navigationBarTitleText": "购物车"
+      }
+    },
+    {
+      "path": "pages/order/order_index",
+      "style": {
+        "navigationBarTitleText": "订单中心"
+      }
     }
   ],
   "globalStyle": {
-    "navigationBarTitleText": "文房四宝",
+    "navigationBarTitleText": "咚巴拉",
     "navigationBarBackgroundColor": "#c81432",
     "backgroundColor": "#F8F8F8"
   },
   "condition": {
     "current": 0,
     "list": [{
-        "name": "首页",
+        "name": "咚巴拉",
         "path": "pages/default"
       },
       {
@@ -321,12 +402,12 @@
         "iconPath": "static/img/index.png",
         "selectedIconPath": "static/img/index-a.png"
       },
-      {
-        "pagePath": "pages/tabbar/product_class",
-        "text": "商城",
-        "iconPath": "static/img/class.png",
-        "selectedIconPath": "static/img/class-a.png"
-      },
+      // {
+      //   "pagePath": "pages/tabbar/product_class",
+      //   "text": "商城",
+      //   "iconPath": "static/img/class.png",
+      //   "selectedIconPath": "static/img/class-a.png"
+      // },
       // {
       //   "pagePath": "pages/tabbar/user_recommend",
       //   "text": "文交所",
@@ -334,8 +415,8 @@
       //   "selectedIconPath": "static/img/school-a.png"
       // },
       {
-        "pagePath": "pages/tabbar/press",
-        "text": "商学院",
+        "pagePath": "pages/mall/meal",
+        "text": "咚巴拉",
         "iconPath": "static/img/recommend.png",
         "selectedIconPath": "static/img/recommend-a.png"
       },

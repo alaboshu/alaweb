@@ -9,7 +9,7 @@
           <view class="user_img">
             <img class="tuclass" alt :src="imageUrl ">
           </view>
-          <view>
+          <view v-if="false">
             <i class="zk-right icon iconfont"></i>
           </view>
         </view>
@@ -36,7 +36,7 @@
             <p class="weui_margin">性别</p>
           </view>
           <view class="user_text">{{viewModel.sex}}</view>
-          <view>
+          <view v-if="false">
             <i class="zk-right icon iconfont"></i>
           </view>
         </view>
@@ -45,7 +45,7 @@
             <p class="weui_margin">邮箱</p>
           </view>
           <view class="user_text">{{viewModel.email}}</view>
-          <view>
+          <view v-if="false">
             <i class="zk-right icon iconfont"></i>
           </view>
         </view>
@@ -56,12 +56,6 @@
           </view>
           <view class="user_text">{{viewModel.gradeName}}</view>
         </view>
-        <!-- <view class="user-view_a">
-          <view class="user_conter">
-            <p class="weui_margin">所属区域</p>
-          </view>
-          <view class="user_text" v-if="viewModel.regionName">{{viewModel.regionName}}</view>
-        </view> -->
         <view class="user-view_a">
           <view class="user_conter">
             <p class="weui_margin">推荐人</p>
@@ -71,7 +65,7 @@
       </view>
       <view class="interlayer_box"></view>
       <view class="mobile_user">
-        <div class="user-view_a" @click="$api.to('/pages/index?path=user_qrcode')" v-if="showCode">
+        <div class="user-view_a" @click="$api.to('/pages/user/user_qrcode')" v-if="showCode">
           <view class="user_conter">
             <p class="weui_margin">我的二维码</p>
           </view>
@@ -79,7 +73,7 @@
             <i class="zk-right icon iconfont"></i>
           </view>
         </div>
-        <div class="user-view_a" @click="$api.to('/pages/index?path=user_address_index')">
+        <div class="user-view_a" @click="$api.to('/pages/user/user_address_index')">
           <view class="user_conter">
             <p class="weui_margin">收货地址</p>
           </view>
@@ -87,14 +81,16 @@
             <i class="zk-right icon iconfont"></i>
           </view>
         </div>
-        <div class="user-view_a" @click="$api.to('/pages/index?path=about_us_index')">
+        <!--
+          <div class="user-view_a" @click="$api.to('/pages/index?path=about_us_index')">
           <view class="user_conter">
-            <p class="weui_margin">关于文房四宝</p>
+            <p class="weui_margin">关于咚巴拉</p>
           </view>
           <view>
             <i class="zk-right icon iconfont"></i>
           </view>
         </div>
+        -->
         <!-- <div class="user-view_a" @click="$api.to('/pages/index?path=finance_account_index')">
           <view class="user_conter">
             <p class="weui_margin">我的资产</p>
@@ -282,8 +278,7 @@
         }
         if (this.$user.id() >= 1) {
           this.itemUrl = globalConfig.apiBaseUrl
-          // this.widgetModel = await this.$api.themeWidget(this.widget)
-          var userInfo = await this.$api.httpGet('/api/user/info', { 'LoginUserId': this.$user.id() })
+          var userInfo = await this.$api.httpGet('/api/user/info')
           if (userInfo.status === 1) {
             this.viewModel = userInfo.result
             this.imageUrl = this.viewModel.avator
@@ -344,19 +339,19 @@
         })
       },
       infoClick (identifying) {
-        this.isShow = false
-        if (identifying === 'avator') {
-          this.infoStatus.avator = true
-        }
-        if (identifying === 'email') {
-          this.infoStatus.email = true
-        }
+        // if (identifying === 'avator') {
+        //   this.infoStatus.avator = true
+        // }
+        // if (identifying === 'email') {
+        //   this.infoStatus.email = true
+        // }
         if (identifying === 'address') {
+          this.isShow = false
           this.infoStatus.address = true
         }
-        if (identifying === 'sex') {
-          this.infoStatus.sex = true
-        }
+        // if (identifying === 'sex') {
+        //   this.infoStatus.sex = true
+        // }
       },
       comeBack () {
         this.isShow = true

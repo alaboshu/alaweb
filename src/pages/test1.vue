@@ -1,28 +1,22 @@
 <template>
-  <view style="background: #f0f0f0">
-    <zk-product-list :widget="viewModel"></zk-product-list>
+  <view>
+    <zk-card></zk-card>
   </view>
 </template>
 <script>
   export default {
     data () {
       return {
-        viewModel: null,
+        viewModel: {
+          classIds: [],
+          isPage: true,
+          styleStype: 'single'
+        },
         array: ['中国', '美国']
       }
     },
     mounted () {
       this.init()
-    },
-
-    onLoad (option) {
-
-    },
-    onReachBottom () {
-      console.info('可不可以触发你')
-    },
-    onPullDownRefresh () {
-      console.info('下拉刷新')
     },
     methods: {
 
@@ -32,9 +26,16 @@
           isPage: true,
           styleStype: 'single'
         }
+      },
+      pagesScroll () {
+        console.info('就是你了a')
       }
     }
   }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
+  html,
+  body {
+    height: 100px !important;
+  }
 </style>

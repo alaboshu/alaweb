@@ -1,7 +1,7 @@
 <template>
   <div>
     <zk-head title="线下充值" :showHead="true"></zk-head>
-    <zk-auto-form type="RechargeOffline"></zk-auto-form>
+    <zk-auto-form type="RechargeOfflineForm"></zk-auto-form>
   </div>
 </template>
 <script>

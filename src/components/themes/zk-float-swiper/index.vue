@@ -81,7 +81,7 @@
         this.$api.back()
       },
       goCart () {
-        this.$api.to('/pages/index?path=order_cart')
+        this.$api.to('/pages/order/order_cart')
       }
     }
   }

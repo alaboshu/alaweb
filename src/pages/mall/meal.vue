@@ -1,6 +1,6 @@
 <template>
   <view class="meal">
-    <image src="https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-08-27/5d651e35d9eb362b7cfd8949.jpg" class="iamge" />
+    <image src="https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-08-28/5d66625817e52b28d8e3ff74.jpg" class="iamge" />
     <view class="rob-tit">
       <view class="big-tit">今日必抢</view>
     </view>
@@ -35,7 +35,7 @@
       init () {
         uni.setNavigationBarColor({
           frontColor: '#ffffff',
-          backgroundColor: '#4C030A'
+          backgroundColor: '#9816f4'
         })
       }
     }
@@ -44,7 +44,7 @@
 
 <style lang="scss">
   .meal {
-    background-color: #4c030a;
+    background-color: #9816f4;
     .image-img,
     .iamge {
       width: 100%;

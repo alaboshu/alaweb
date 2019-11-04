@@ -1,6 +1,5 @@
 <template>
   <div>
-    <zk-head title="转账" :showHead="true"></zk-head>
     <zk-auto-form type="TransferAddForm"></zk-auto-form>
   </div>
 </template>

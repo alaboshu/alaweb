@@ -16,17 +16,24 @@ import '@/assets/style/h5/index.scss'
 /* #ifndef H5 */
 import '@/assets/style/mp/index.scss'
 // #endif
-
 /* 5ug auto-import */
 Vue.config.productionTip = false
 
 // #ifdef H5
 Vue.prototype.$client = 'WapH5'
-    // #endif
+// #endif
 
 // #ifndef H5
 Vue.prototype.$client = 'WeChatLite'
-    // #endif
+// #endif
+
+Vue.directive('lazy', {
+  inserted: el => {
+    el.onerror = () => {
+      el.src = api.config().lazyImage
+    }
+  }
+})
 
 Vue.prototype.$api = api
 Vue.prototype.$user = user
@@ -36,7 +43,7 @@ Vue.prototype.$store = store
 Vue.prototype.$bus = new Vue()
 weixin.login().then()
 const app = new Vue({
-    store,
-    ...App
+  store,
+  ...App
 })
 app.$mount()

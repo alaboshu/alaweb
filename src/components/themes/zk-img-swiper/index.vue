@@ -55,7 +55,7 @@
         this.$api.to(url)
       },
       goCart () {
-        this.$api.to('/pages/index?path=order_cart')
+        this.$api.to('/pages/order/order_cart')
       },
       goSearch () {
         this.$api.to('/pages/index?path=product_list')

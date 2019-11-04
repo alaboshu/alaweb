@@ -1,6 +1,6 @@
 <template>
   <view v-if="async">
-    <view class="x-msg " :style="'width:'+boxWidth+'px;height:'+boxHeight+'px;'" v-if="isDefaultMsg">
+    <view class="x-msg" :style="'width:'+boxWidth+'px;height:'+boxHeight+'px;'" v-if="isDefaultMsg">
       <view class="default-msg">
         <view class="msg-icon">
           <i class="icon iconfont " :class="theme.icon" :style="'color:'+theme.color"></i>
@@ -9,7 +9,10 @@
           <view class="area-title">
             {{theme.title}}
           </view>
-          <view class="area-desc" v-if="caption">
+          <view class="area-desc" v-if="message">
+            {{message}}
+          </view>
+          <view class="area-desc" v-else-if="caption">
             {{caption}}
           </view>
         </view>
@@ -76,27 +79,15 @@
       },
       adminMsg: {
         default: false
+      },
+      message: {
+        default: null
       }
     },
     mounted () {
       this.init()
     },
     methods: {
-      customer () {
-        if (this.$api.client() === 'AppPlus') {
-          /* eslint-disable */
-          // var _this = this
-          // plus.runtime.openURL('https://chat.meiqiapaas.com/dist/standalone.html?eid=145450', function (res) {
-          //   _this.$api.toastWarn('跳转失败')
-          // })
-          var w = plus.webview.create('https://chat.meiqiapaas.com/dist/standalone.html?eid=145450');
-          w.show(); // 显示窗口
-        } else {
-          uni.navigateTo({
-            url: '/pages/vicePage/customerService'
-          })
-        }
-      },
       goDefault () {
         uni.reLaunch({
           url: '/pages/default'
@@ -105,28 +96,6 @@
       goReturn () {
         uni.navigateBack({
           delta: 1
-        })
-      },
-      codes () {
-        uni.downloadFile({
-          url: 'https://s-open.qiniuniu99.com/wwwroot/uploads/Core/2019/05/customerWechat.jpg',
-          success: (res) => {
-            uni.saveImageToPhotosAlbum({
-              filePath: res.tempFilePath,
-              success: function () {
-                uni.showToast({
-                  title: '保存成功',
-                  icon: 'none'
-                })
-              },
-              fail: function () {
-                uni.showToast({
-                  title: '保存失败，请稍后重试',
-                  icon: 'none'
-                })
-              }
-            })
-          }
         })
       },
       init () {
@@ -152,7 +121,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9987;
+    z-index: 100;
     padding-top: 36px;
     text-align: center;
     background: #ffffff;

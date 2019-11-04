@@ -46,6 +46,12 @@
       value: {},
       defaultValue: {
         default: ''
+      },
+      usercode: {
+        default: null
+      },
+      widget: {
+
       }
     },
     data () {
@@ -66,6 +72,9 @@
     },
     methods: {
       init () {
+        if (this.usercode && this.widget.field === 'parentUserName') {
+          this.inputValue = this.usercode
+        }
       },
       onKeyInput: function (event) {
         this.inputValue = event.target.value

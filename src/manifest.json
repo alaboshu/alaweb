@@ -1,10 +1,10 @@
 {
-    "name" : "文房四宝",
-    "appid" : "__UNI__FED8DFC",
+    "name" : "咚巴拉",
+    "appid" : "__UNI__1E983C1",
     "description" : "实体商家业绩倍增服务平台",
     "debug" : true,
-    "versionName" : "1.2.2",
-    "versionCode" : 430,
+    "versionName" : "0.0.1",
+    "versionCode" : 120,
     "transformPx" : false,
     "app-plus" : {
         "nvueCompiler" : "uni-app",
@@ -12,10 +12,7 @@
         "modules" : {
             "OAuth" : {},
             "VideoPlayer" : {},
-            "Share" : {},
-            "Payment" : {},
             "Push" : {},
-            "Maps" : {},
             "iBeacon" : {}
         },
         "distribute" : {
@@ -66,27 +63,16 @@
             },
             "sdkConfigs" : {
                 "speech" : {},
-                "maps" : {
-                    "amap" : {
-                        "appkey_ios" : "fc4bf2a7a7dd1efcf36f8d2ed69672f3",
-                        "appkey_android" : "b4abcee00161f3d86fb884288752545c"
-                    }
-                },
-                "payment" : {
-                    "weixin" : {
-                        "appid" : "wxce06b1724c6fdb80"
-                    },
-                    "alipay" : {}
-                },
-                "share" : {
-                    "weixin" : {
-                        "appid" : "wxce06b1724c6fdb80",
-                        "appsecret" : "835ad11030f3d8f425301973c8c6ba3a"
-                    }
-                },
-                "push" : {
-                    "unipush" : {}
-                }
+                "maps" : {},
+                // "appkey_ios" : "fc4bf2a7a7dd1efcf36f8d2ed69672f3",
+                // "appkey_android" : "b4abcee00161f3d86fb884288752545c"
+                "payment" : {},
+                "share" : {},
+                // "weixin" : {
+                //     "appid" : "wxce06b1724c6fdb80",
+                //     "appsecret" : "835ad11030f3d8f425301973c8c6ba3a"
+                // }
+                "push" : {}
             },
             "orientation" : [ "portrait-primary" ],
             "icons" : {
@@ -126,61 +112,32 @@
             "splashscreen" : {
                 "ios" : {
                     "iphone" : {
-                        "portrait-896h@3x" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1242x2688.png",
-                        "landscape-896h@3x" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/2688-1242.png",
-                        "portrait-896h@2x" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/828-1792.png",
-                        "landscape-896h@2x" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1792-828.png",
-                        "iphonex" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1125-2436.png",
-                        "iphonexl" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/2436-1125.png",
-                        "retina55" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1242-2208.png",
-                        "retina55l" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/2208-1242.png",
-                        "retina47" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/750-1334.png",
-                        "retina47l" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1334-750.png",
-                        "retina40" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/640-1136.png",
-                        "retina40l" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1136-640.png",
-                        "retina35" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/640-960.png"
+                        "portrait-896h@3x" : "C:/Users/Administrator/Desktop/微信图片_20191029175324.png",
+                        "landscape-896h@3x" : "C:/Users/Administrator/Desktop/微信图片_20191029175324.png",
+                        "portrait-896h@2x" : "C:/Users/Administrator/Desktop/微信图片_20191029175324.png",
+                        "landscape-896h@2x" : "C:/Users/Administrator/Desktop/微信图片_20191029175324.png",
+                        "iphonex" : "C:/Users/Administrator/Desktop/微信图片_20191029175324.png",
+                        "iphonexl" : "C:/Users/Administrator/Desktop/微信图片_20191029175324.png",
+                        "retina55" : "C:/Users/Administrator/Desktop/微信图片_20191029175324.png",
+                        "retina55l" : "C:/Users/Administrator/Desktop/微信图片_20191029175324.png",
+                        "retina47" : "C:/Users/Administrator/Desktop/微信图片_20191029175324.png",
+                        "retina47l" : "C:/Users/Administrator/Desktop/微信图片_20191029175324.png",
+                        "retina40" : "C:/Users/Administrator/Desktop/微信图片_20191029175324.png",
+                        "retina40l" : "C:/Users/Administrator/Desktop/微信图片_20191029175324.png",
+                        "retina35" : "C:/Users/Administrator/Desktop/微信图片_20191029175324.png"
                     }
                 },
                 "android" : {
-                    "hdpi" : "C:/Users/Administrator/Desktop/word/启动(1)/安卓/480-762.png",
-                    "xhdpi" : "C:/Users/Administrator/Desktop/word/启动(1)/安卓/720-1242.png",
-                    "xxhdpi" : "C:/Users/Administrator/Desktop/word/启动(1)/安卓/1080-1882.png"
+                    "hdpi" : "C:/Users/Administrator/Desktop/微信图片_20191029175324.png",
+                    "xhdpi" : "C:/Users/Administrator/Desktop/微信图片_20191029175324.png",
+                    "xxhdpi" : "C:/Users/Administrator/Desktop/微信图片_20191029175324.png"
                 }
             }
         },
         "splashscreen" : {
             "waiting" : false
         },
-        "nativePlugins" : {
-            "WUApp-Share" : {
-                "__plugin_info__" : {
-                    "name" : "iOS原生系统自带分享",
-                    "description" : "iOS原生系统分享，不需要去各种开放平台申请appid",
-                    "platforms" : "iOS",
-                    "url" : "https://ext.dcloud.net.cn/plugin?id=342",
-                    "android_package_name" : "com.zygj.qiniuniu",
-                    "ios_bundle_id" : "com.zygj.qiniuniu",
-                    "isCloud" : true,
-                    "bought" : 1,
-                    "pid" : "342",
-                    "parameters" : {}
-                }
-            },
-            "Xty-StoreKit" : {
-                "__plugin_info__" : {
-                    "name" : "StoreKit",
-                    "description" : "Appstore 评分",
-                    "platforms" : "iOS",
-                    "url" : "https://ext.dcloud.net.cn/plugin?id=107",
-                    "android_package_name" : "com.zygj.qiniuniu",
-                    "ios_bundle_id" : "com.zygj.qiniuniu",
-                    "isCloud" : true,
-                    "bought" : 1,
-                    "pid" : "107",
-                    "parameters" : {}
-                }
-            }
-        }
+        "nativePlugins" : {}
     },
     "quickapp" : {},
     "mp-weixin" : {

@@ -6,13 +6,19 @@
       <div v-if="column.type==='tab'">
         <div class="group-title">{{column.name}}</div>
         <div class="box" v-for="(tabColumn,tabColumnIndex) in column.columns" :key="tabColumnIndex">
-          <form-item v-model="viewModel[tabColumn.field]" :column="tabColumn"></form-item>
+          <form-item v-model="viewModel[tabColumn.field]" :column="tabColumn" :currentModel="viewModel"></form-item>
         </div>
       </div>
-      <form-item v-else v-model="viewModel[column.field]" :column="column"></form-item>
+      <div class="box" v-else>
+        <form-item v-model="viewModel[column.field]" :column="column" :currentModel="viewModel"></form-item>
+      </div>
     </div>
+    <view class="zk-exchange-pay" v-if="false">
+      <checkbox value="cb" checked="true" />
+      <view @click="$api.to('/pages/app/agree')">同意平台服务条款</view>
+    </view>
     <view class="btn-box">
-      <x-button :loading="loading" :btnText="autoForm.tooltip.bottonText" @change="sumbit"></x-button>
+      <x-button :loading="loading" :btnText="autoForm.tooltip.bottonText" @click="sumbit"></x-button>
     </view>
     <view v-if="autoForm.tooltip.buttomHelpText !== null && autoForm.tooltip.buttomHelpText !== undefined">
       <ul class="buttom-text">
@@ -24,6 +30,7 @@
         <p>{{item.name}}</p>
       </view>
     </view>
+    <x-msg v-if="isMsg" :message="msgText"></x-msg>
   </view>
 </template>
 
@@ -35,8 +42,18 @@
     components: {
       formItem
     },
+    model: {
+      prop: 'dataModel',
+      event: 'change'
+    },
     props: {
+      dataModel: {},
       widget: {},
+      afterSave: {
+        type: Boolean,
+        default: false
+      }, // 判断父组件中是否定义保存后执行单独的方法，如果设置为true，在需要定义afterSave事件  
+      // 示范用法：<zk-auto-form type="RecommendAddUser" @afterSave="afterSave" :afterSave="true"></zk-auto-form>
       type: {} // 如果type不为空的时候，表单从服务器上动态获取
     },
     data () {
@@ -44,15 +61,25 @@
         async: false,
         autoForm: null,
         viewModel: {},
-        loading: false
+        loading: false,
+        phone: null,
+        isMsg: false,
+        isAgree: false,
+        msgText: ''
       }
     },
     mounted () {
       this.init()
+      // 找到好方法后删除
+      if (this.$route.path === '/pages/user/reg') {
+        this.isAgree = true
+      }
     },
     methods: {
       async init () {
+        console.info('zk-auto-form', this.dataModel)
         var type = this.type
+        console.info('weims buchucian ', type)
         if (!type) {
           type = this.$crud.getType(this.$route)
         }
@@ -65,10 +92,16 @@
           id: this.$crud.id(this.$route)
         }
         var response = await this.$api.httpGet('/Api/Auto/Form', para)
+
         if (response.status === 1) {
+          // 暂时性更改，待确定更好方案,处理完善资料的事件
+          if (response.result.fromMessage !== null) {
+            this.msgText = response.result.fromMessage.message
+            this.isMsg = true
+          }
           var result = convert.toConfig(response.result)
           this.autoForm = result
-          this.viewModel = service.getModel(this.autoForm)
+          this.viewModel = service.getModel(this.autoForm, this.dataModel)
           this.async = true
         } else {
           this.$api.confirm(response.message)
@@ -82,29 +115,27 @@
           type: this.autoForm.key,
           model: JSON.stringify(this.viewModel)
         }
-
         var response = await this.$api.httpPost('/Api/Auto/Save', para)
         if (response.status === 1) {
-          this.$api.toastSuccess('操作成功')
+          if (this.afterSave) {
+            // 调用父组件中的afterSave方法
+            var data = {
+              ...response,
+              ...this.viewModel
+            }
+
+            this.$emit('afterSave', data)
+          } else {
+            this.isMsg = true
+          }
         } else {
-          this.$crud.message(response.message)
+          this.$api.toastWarn(response.message)
         }
-        setTimeout(() => {
-          this.loading = false
-        }, 300)
+        this.loading = false
       },
       toLink (conter) {
         uni.navigateTo({
           url: conter.link
-        })
-      },
-      // 处理验证码，将当前表单的手机号传入到手机验证码中
-      watcthPhoneVerfity () {
-        this.$nextTick(() => {
-          console.info('this.$refs.phoneVerifiy', this.$refs.phoneVerifiy)
-          if (this.$refs.phoneVerifiy) {
-            console.info('x-item', this.viewModel, this.column)
-          }
         })
       }
     },
@@ -112,7 +143,6 @@
       viewModel: {
         deep: true,
         handler (val) {
-          this.watcthPhoneVerfity()
         }
       }
     }

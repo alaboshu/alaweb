@@ -13,7 +13,7 @@
       }
     },
     onLoad (option) {
-      if (option.path !== undefined) {
+      if (option && option !== undefined) {
         this.option = option
       } else {
         this.option = option[0]

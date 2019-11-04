@@ -1,5 +1,6 @@
 import api from '@/service/api'
 import help from '@/service/core/helper'
+import config from '@/service/config'
 export default {
   // 判断是生成环境还是开发环境
   isBuild () {
@@ -8,6 +9,10 @@ export default {
     } else {
       return true
     }
+  },
+  // 远程图片地址
+  host () {
+    return config.apiBaseUrl
   },
   isDiy () {
     if (process.env.ZK_DIY === 'true') {
@@ -38,7 +43,11 @@ export default {
     }
     return fullPath
   },
-
+  // 客户端服务器地址，上传图片地址
+  clientUploadApi () {
+    var apiUrl = api.baseUrl() + '/api/StorageFile/upload'
+    return apiUrl
+  },
   // 实际页面路径
   path (option) {
     var path = null

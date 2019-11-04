@@ -114,7 +114,7 @@
         this.$api.to('/pages/index?path=product_list&Keyword=' + key)
       },
       goCart () {
-        this.$api.to('/pages/index?path=order_cart')
+        this.$api.to('/pages/order/order_cart')
       },
       searchConfirm (e) {
         this.boxshow = !this.boxshow

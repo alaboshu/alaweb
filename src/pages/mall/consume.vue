@@ -5,7 +5,7 @@
       <view class="big-tit">今日必抢</view>
     </view>
     <zk-product-list :widget="viewModel"></zk-product-list>
-    <!-- <zk-index-day-update :widget="dayUpdateData" style="background:#1c1a26; "></zk-index-day-update> -->
+    <!-- <zk-index-day-update :widget="dayUpdateData" style="background:#ff6a00; "></zk-index-day-update> -->
     <image src="https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-08-27/5d651e35d9eb362b7cfd8948.jpg" class="image-img" />
     <view class="rob-tit">
       <view class="big-tit">好货一折起</view>
@@ -39,7 +39,7 @@
       init () {
         uni.setNavigationBarColor({
           frontColor: '#ffffff',
-          backgroundColor: '#1C1A26'
+          backgroundColor: '#ff6a00'
         })
       }
     }
@@ -48,7 +48,7 @@
 
 <style lang="scss">
   .meal {
-    background-color: #1c1a26;
+    background-color: #ff6a00;
     .image-img,
     .iamge {
       width: 100%;

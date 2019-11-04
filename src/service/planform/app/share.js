@@ -2,7 +2,7 @@
 // #ifdef APP-PLUS
 // 如下为分享内容定义，可根据业务需求自行定义
 var strShareUrl = 'www.baidu.com'
-var strShareTitle = '文房四宝'
+var strShareTitle = '咚巴拉'
 var strShareSummary = '实体商家业绩倍增服务平台'
 var strShareImageUrl = 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4197136446,2654635374&fm=26&gp=0.jpg'
 

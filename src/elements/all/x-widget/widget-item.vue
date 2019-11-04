@@ -7,6 +7,7 @@
     <zk-feedback :widget="widget" v-if="widget.componentPath === '/articles/zk-feedback'"></zk-feedback>
     <zk-help :widget="widget" v-if="widget.componentPath === '/articles/zk-help'"></zk-help>
     <zk-marquee :widget="widget" v-if="widget.componentPath === '/articles/zk-marquee'"></zk-marquee>
+    <zk-bank-card :widget="widget" v-if="widget.componentPath === '/assets/zk-bank-card'"></zk-bank-card>
     <zk-book-index :widget="widget" v-if="widget.componentPath === '/book/zk-book-index'"></zk-book-index>
     <zk-book-my :widget="widget" v-if="widget.componentPath === '/book/zk-book-my'"></zk-book-my>
     <zk-border-header :widget="widget" v-if="widget.componentPath === '/book/zk-border-header'"></zk-border-header>
@@ -67,6 +68,7 @@
     <zk-product-second-buy :widget="widget" v-if="widget.componentPath === '/product/zk-product-second-buy'"></zk-product-second-buy>
     <zk-product-showpage :widget="widget" v-if="widget.componentPath === '/product/zk-product-showpage'"></zk-product-showpage>
     <zk-product-user :widget="widget" v-if="widget.componentPath === '/product/zk-product-user'"></zk-product-user>
+    <uni-icon :widget="widget" v-if="widget.componentPath === '/qiniuniu/uni-icon'"></uni-icon>
     <zk-merchant-info :widget="widget" v-if="widget.componentPath === '/qiniuniu/zk-merchant-info'"></zk-merchant-info>
     <zk-qiniuniu-btn :widget="widget" v-if="widget.componentPath === '/qiniuniu/zk-qiniuniu-btn'"></zk-qiniuniu-btn>
     <zk-qnn-login :widget="widget" v-if="widget.componentPath === '/qiniuniu/zk-qnn-login'"></zk-qnn-login>
@@ -89,7 +91,6 @@
     <picker :widget="widget" v-if="widget.componentPath === '/themes/zk-auto-form/form-item/picker'"></picker>
     <radio :widget="widget" v-if="widget.componentPath === '/themes/zk-auto-form/form-item/radio'"></radio>
     <upload :widget="widget" v-if="widget.componentPath === '/themes/zk-auto-form/form-item/upload'"></upload>
-    <verification :widget="widget" v-if="widget.componentPath === '/themes/zk-auto-form/form-item/verification'"></verification>
     <zk-auto-form :widget="widget" v-if="widget.componentPath === '/themes/zk-auto-form'"></zk-auto-form>
     <zk-avatar :widget="widget" v-if="widget.componentPath === '/themes/zk-avatar'"></zk-avatar>
     <zk-bags-shop-list :widget="widget" v-if="widget.componentPath === '/themes/zk-bags-shop-list'"></zk-bags-shop-list>
@@ -101,7 +102,6 @@
     <zk-business-card :widget="widget" v-if="widget.componentPath === '/themes/zk-business-card'"></zk-business-card>
     <zk-buy-address :widget="widget" v-if="widget.componentPath === '/themes/zk-buy-address'"></zk-buy-address>
     <zk-card-swiper :widget="widget" v-if="widget.componentPath === '/themes/zk-card-swiper'"></zk-card-swiper>
-    <zk-card :widget="widget" v-if="widget.componentPath === '/themes/zk-card'"></zk-card>
     <zk-cell :widget="widget" v-if="widget.componentPath === '/themes/zk-cell'"></zk-cell>
     <zk-center-service :widget="widget" v-if="widget.componentPath === '/themes/zk-center-service'"></zk-center-service>
     <zk-charges :widget="widget" v-if="widget.componentPath === '/themes/zk-charges'"></zk-charges>
@@ -119,6 +119,7 @@
     <zk-egg-machine :widget="widget" v-if="widget.componentPath === '/themes/zk-egg-machine'"></zk-egg-machine>
     <zk-eject :widget="widget" v-if="widget.componentPath === '/themes/zk-eject'"></zk-eject>
     <zk-enlarge-swiper :widget="widget" v-if="widget.componentPath === '/themes/zk-enlarge-swiper'"></zk-enlarge-swiper>
+    <zk-exchange :widget="widget" v-if="widget.componentPath === '/themes/zk-exchange'"></zk-exchange>
     <zk-float-swiper :widget="widget" v-if="widget.componentPath === '/themes/zk-float-swiper'"></zk-float-swiper>
     <zk-foot :widget="widget" v-if="widget.componentPath === '/themes/zk-foot'"></zk-foot>
     <zk-grid-list :widget="widget" v-if="widget.componentPath === '/themes/zk-grid-list'"></zk-grid-list>
@@ -172,6 +173,8 @@
     <zk-preview :widget="widget" v-if="widget.componentPath === '/themes/zk-preview'"></zk-preview>
     <zk-product-load :widget="widget" v-if="widget.componentPath === '/themes/zk-product-load'"></zk-product-load>
     <zk-purchase-shops-list :widget="widget" v-if="widget.componentPath === '/themes/zk-purchase-shops-list'"></zk-purchase-shops-list>
+    <zk-recharge-block :widget="widget" v-if="widget.componentPath === '/themes/zk-recharge-block'"></zk-recharge-block>
+    <zk-recharge :widget="widget" v-if="widget.componentPath === '/themes/zk-recharge'"></zk-recharge>
     <zk-registration-success :widget="widget" v-if="widget.componentPath === '/themes/zk-registration-success'"></zk-registration-success>
     <zk-result :widget="widget" v-if="widget.componentPath === '/themes/zk-result'"></zk-result>
     <zk-rightbar :widget="widget" v-if="widget.componentPath === '/themes/zk-rightbar'"></zk-rightbar>
@@ -190,6 +193,7 @@
     <zk-school-timeline :widget="widget" v-if="widget.componentPath === '/themes/zk-school-timeline'"></zk-school-timeline>
     <zk-school-video-list :widget="widget" v-if="widget.componentPath === '/themes/zk-school-video-list'"></zk-school-video-list>
     <zk-scroll-list :widget="widget" v-if="widget.componentPath === '/themes/zk-scroll-list'"></zk-scroll-list>
+    <zk-scroll-view :widget="widget" v-if="widget.componentPath === '/themes/zk-scroll-view'"></zk-scroll-view>
     <zk-search :widget="widget" v-if="widget.componentPath === '/themes/zk-search'"></zk-search>
     <zk-selected-shop-list :widget="widget" v-if="widget.componentPath === '/themes/zk-selected-shop-list'"></zk-selected-shop-list>
     <zk-self-mention :widget="widget" v-if="widget.componentPath === '/themes/zk-self-mention'"></zk-self-mention>
@@ -226,6 +230,7 @@
     <zk-timing-grid :widget="widget" v-if="widget.componentPath === '/themes/zk-timing-grid'"></zk-timing-grid>
     <zk-title :widget="widget" v-if="widget.componentPath === '/themes/zk-title'"></zk-title>
     <zk-type-class :widget="widget" v-if="widget.componentPath === '/themes/zk-type-class'"></zk-type-class>
+    <zk-update-image :widget="widget" v-if="widget.componentPath === '/themes/zk-update-image'"></zk-update-image>
     <zk-video-image :widget="widget" v-if="widget.componentPath === '/themes/zk-video-image'"></zk-video-image>
     <zk-video-list :widget="widget" v-if="widget.componentPath === '/themes/zk-video-list'"></zk-video-list>
     <zk-video :widget="widget" v-if="widget.componentPath === '/themes/zk-video'"></zk-video>

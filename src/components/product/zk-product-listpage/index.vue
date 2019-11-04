@@ -13,9 +13,6 @@
       </scroll-view>
       <zk-product-item ref="zkProductItem" :type="type" :isNot="false" v-if="!isNotData" :showPrice="productItem.isFrontShowPrice"></zk-product-item>
       <div class="listpage_not" v-if="isNotData">
-        <!-- <div class="infos">
-          <x-icon class="info-icon" name="zk-temporarily" size="72" color='#ddd'></x-icon>
-        </div> -->
         <div class="icon_data">
           <i class="icon iconfont zk-temporarily"></i>
         </div>
@@ -126,7 +123,9 @@
           this.fixed.searchBoxHeight = 0
           this.fixed.uniSwiperTabHiehgt = 46
         }
-        this.listPar.userId = this.$user.loginUser().id
+        if (this.$user.isLogin()) {
+          this.listPar.userId = this.$user.loginUser().id
+        }
         this.widgetModel = await this.$api.themeWidget(this.widget)
 
         if (!this.$api.isEmpty(this.widget.route.ClassIds)) {

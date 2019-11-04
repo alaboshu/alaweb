@@ -1,21 +1,20 @@
 <template>
-  <view class="zk-qrcode">
+  <view class="zk-qrcode" v-if="viewModel">
     <view class="qrcode_icon" @click="back" :style="'top:'+statusBarHeight+'px;'" v-if="isNotApp">
       <x-icon name="icon-zk-black" :color="'#ffffff'" :size="16"></x-icon>
     </view>
-    <img :src="vimodel" class="qrcode_image">
+    <img :src="viewModel" class="qrcode_image">
   </view>
 </template>
 
 <script>
-
   import apiBaseUrl from '@/service/config.js'
   export default {
 
     data () {
       return {
         widgetModel: '',
-        vimodel: '',
+        viewModel: '',
         imgUrl: apiBaseUrl.apiBaseUrl,
         statusBarHeight: '',
         isNotApp: false
@@ -32,17 +31,14 @@
         if (this.$api.client() === 'AppPlus') {
           this.statusBarHeight = this.$api.getSystemInfoSync().statusBarHeight + 15
         }
-        var para = {
-          userId: this.$user.loginUser().id
-        }
-        var reposen = await this.$api.httpGet('/api/userdetail/qrcode', para)
-        // this.widgetModel = await this.$api.themeWidget(this.widget)
-        this.vimodel = reposen.result
+        var reposen = await this.$api.httpGet('/api/qrcode/qrcode')
+        this.viewModel = this.$api.baseUrl() + reposen.result
         if (this.$api.client() === 'AppPlus') {
           this.isNotApp = false
         } else {
           this.isNotApp = true
         }
+        console.info('imageUrl', this.viewModel)
       },
       back () {
         uni.navigateBack({
@@ -76,6 +72,7 @@
     border-radius: 100%;
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
+    z-index: 999999;
     top: 15px;
     left: 15px;
     padding-left: 3px;

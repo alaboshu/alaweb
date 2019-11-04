@@ -3,7 +3,7 @@
     <div class="zk-index-day-updata-container">
       <div class="index-day-updata-container-box" v-for="(item, index) in viewModel" :key="index" @click="go(item.id)">
         <div class="updata-container-box-left">
-          <img :src="item.thumbnailUrl" alt="">
+          <img :src="$base.host()+ item.thumbnailUrl" alt="">
         </div>
         <div class="updata-container-box-right">
           <div class="updata-container-box-name">{{item.name}}</div>

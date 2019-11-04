@@ -13,10 +13,10 @@
             随着供给侧改革的推进，共享经济平台的诞生，以互联网+、大 数据、人工智能为代表的新经济日新月异。实体经济平台化，实体经 济与互联网深度融合，实体经济平台与资本嫁接，成为未来新经济发 展趋势。
           </view>
           <view class="text">
-            在2025工业4.0、智慧城市的前提下，中亚国际控股集团控股的企品 汇独创“文房四宝”智惠商业OMO生态体平台。以实体经济为基础，以 互联网+为方式，以商业为依托，重塑产业链，打造共享平台，实现 红利共享。
+            在2025工业4.0、智慧城市的前提下，中亚国际控股集团控股的企品 汇独创“咚巴拉”智惠商业OMO生态体平台。以实体经济为基础，以 互联网+为方式，以商业为依托，重塑产业链，打造共享平台，实现 红利共享。
           </view>
           <view class="text">
-            “文房四宝”首创S2F2B2C众享商业模式（S代表平台，F代表厂家/供 应链，B代表商家，C代表消费者），通过为B端商家提供超值产品、 系统服务、营销方案、商家授信、经营场所等五项全方位服务，一站 式解决方案落地，实现B端商家销量提升，业绩倍增。线上以“IP+社 群+自媒体”社群经济为基础，构建规模传播效应，线下以千万社区商 家为宣传媒介，线上线下OMO模式，为F端厂家释放产能产量，让更 多的品牌成为知名品牌，从而打造全产业链生态红利平台。
+            “咚巴拉”首创S2F2B2C众享商业模式（S代表平台，F代表厂家/供 应链，B代表商家，C代表消费者），通过为B端商家提供超值产品、 系统服务、营销方案、商家授信、经营场所等五项全方位服务，一站 式解决方案落地，实现B端商家销量提升，业绩倍增。线上以“IP+社 群+自媒体”社群经济为基础，构建规模传播效应，线下以千万社区商 家为宣传媒介，线上线下OMO模式，为F端厂家释放产能产量，让更 多的品牌成为知名品牌，从而打造全产业链生态红利平台。
           </view>
         </view>
       </view>
@@ -27,7 +27,7 @@
         <view class="zk-about-Month">
           <span class="zk-month">2019</span>
           <view class="zk-text">
-            <p class="content">文房四宝平台千人发布会</p>
+            <p class="content">咚巴拉平台千人发布会</p>
             <p class="month">01月</p>
           </view>
           <span class="zk-month-eighting">2018</span>
@@ -47,7 +47,7 @@
           </view>
           <span class="circleMonth-two"></span>
           <view class="zk-septemper">
-            <p class="content">文房四宝技术平台发展</p>
+            <p class="content">咚巴拉技术平台发展</p>
             <p class="twelve">09月</p>
           </view>
           <span class="zk-month-sixthing">2016</span>
@@ -62,7 +62,7 @@
           </view>
           <span class="circleMonth-four"></span>
           <view class="zk-septemperFirmQiNiuNiu">
-            <p class="content">25位创始人联合发起文房四宝项目</p>
+            <p class="content">25位创始人联合发起咚巴拉项目</p>
             <p class="twelve">年初</p>
           </view>
         </view>
@@ -91,7 +91,7 @@
             <view class="developfirst">
               <h3>
                 <p class="font-size">
-                  文房四宝
+                  咚巴拉
                   <span class="redColor">1.0</span>时代启幕战略铺开，步步为赢
                 </p>
               </h3>
@@ -111,7 +111,7 @@
             <view class="developfirst">
               <h3>
                 <p class="font-size">
-                  文房四宝
+                  咚巴拉
                   <span class="redColor">2.0</span>时代
                 </p>
               </h3>
@@ -137,7 +137,7 @@
             <view class="developfirst">
               <h3>
                 <p class="font-size">
-                  文房四宝
+                  咚巴拉
                   <span class="redColor">3.0</span>时代
                 </p>
               </h3>

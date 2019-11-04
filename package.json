@@ -27,19 +27,21 @@
   },
   "dependencies": {
     "aes": "^0.1.0",
+    "axios": "^0.19.0",
     "crypto-js": "^3.1.9-1",
     "css-loader": "^2.1.1",
-    "flyio": "^0.6.14",
+    "flyio": "^0.5.9",
     "fundebug-wxjs": "^1.3.1",
     "md5": "^2.2.1",
     "mescroll-uni": "^1.0.2",
+    "sass": "^1.23.1",
     "vue-video-player": "^5.0.2",
     "vuedraggable": "^2.22.0",
     "vuex": "^3.1.1",
-    "weixin-js-sdk": "^1.4.0-test"
+    "weixin-js-sdk": "^1.4.0-test",
+    "wx-axios-promise": "^2.3.3"
   },
   "devDependencies": {
-    "5ug-cli": "^0.5.6",
     "@dcloudio/uni-cli-shared": "0.2.963",
     "@dcloudio/uni-h5": "0.5.11",
     "@dcloudio/uni-mp-alipay": "0.0.821",

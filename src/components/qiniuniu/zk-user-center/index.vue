@@ -49,7 +49,7 @@
             <span v-else> 0</span>
           </view>
         </view>
-        <view class="user_bottom" @click="$api.to('/pages/index?path=user_qrcode')">
+        <view class="user_bottom" @click="$api.to('/pages/user/user_qrcode')">
           点击分享个人二维码
         </view>
       </view>
@@ -152,7 +152,7 @@
         this.async = true
       },
       skipSetting () {
-        this.$api.to('/pages/index?path=user_info')
+        this.$api.to('/pages/user/user_info')
       },
       onGredge () {
         this.$api.to('/pages/index?path=user_open&gradeId=' + this.viewModel.upgradeGradeId)

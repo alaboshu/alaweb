@@ -15,7 +15,7 @@
                   <p class="price_left-p1">市场销售价￥121525</p>
                   <p class="price_left-p2">折扣价<span>￥1960</span></p>
                 </view>
-                <view class="discount-price_right" @click="$api.to('/pages/index?path=order_cart')">
+                <view class="discount-price_right" @click="$api.to('/pages/order/order_cart')">
                   <x-icon name="icon-zk-cart" :color="'#c81432'" size="20"></x-icon>
                 </view> -->
                 <view class="discount-price_left">

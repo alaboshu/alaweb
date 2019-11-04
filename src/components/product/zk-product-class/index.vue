@@ -8,9 +8,9 @@
     <scroll-view class="nav-right" scroll-y :scroll-top="scrollTop" @scroll="scroll" :style="'height:'+height+'px'" scroll-with-animation v-if="!showkan">
       <view v-for="(foods,index) in viewModel" :key="index" class="nav-right-box">
         <view class="nav-right-title">{{foods.name}}</view>
-        <!-- <view> <img style="width:100%" :src="foods.icon" alt=""></view> -->
         <view class="nav-right-item" v-for="(item,i) in foods.childClass" :key="i" @click="cart(item.id)">
-          <image :src="item.icon" />
+          <!--<image :src="item.icon" v-lazy />-->
+          <img :src="item.icon" v-lazy alt="">
           <view>{{item.name}}</view>
         </view>
       </view>
@@ -140,7 +140,8 @@
         this.scrollTop = this.arr[index]
       },
       cart: function (id) {
-        var url = '/pages/index?path=product_list&ClassIds=' + id
+        // var url = '/pages/index?path=product_list&ClassIds=' + id
+        var url = '/pages/mall/product_list?ClassIds=' + id
         this.$api.to(url)
       },
       onBlur () {
@@ -214,7 +215,8 @@
     }
 
     .nav-right-item {
-      image {
+      image,
+      img {
         width: 75px;
         height: 75px;
       }

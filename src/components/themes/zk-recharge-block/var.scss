@@ -1,0 +1,85 @@
+.zk-recharge-block {
+  .zk_change_title {
+    width: 100%;
+    padding: 10px;
+    background: #c81432;
+
+    .zk-change_title_text {
+      font-size: 16px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .zk-change_title_intro {
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+
+  .zk-change_qrcode {
+    padding: 10px;
+    display: flex;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .zk-change_list_title {
+    padding: 10px;
+    background: #fbf9fe;
+    color: #999999;
+    border-bottom: 0.5px solid #e5e5e5;
+  }
+
+  .zk-change-list-cont {
+    background: #fff;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 0.5px solid #e5e5e5;
+  }
+
+  .zk-flex {
+    display: flex;
+
+    .zk-change-list-name {
+      width: 80px;
+      font-size: 13px;
+    }
+
+    .zk-change-list-text {
+      width: 70%;
+    }
+
+    .zk-rechange-text {
+      margin-top: 3px;
+      height: 30px !important;
+    }
+
+    .zk-change-tips {
+      font-size: 12px;
+      color: #666;
+    }
+  }
+
+  .x-button-list {
+    margin: 10px;
+  }
+
+  .zk-change-list-tips {
+    background-color: #fff;
+    padding-left: 20px;
+    margin-bottom: 10px;
+
+    .zk-exchange-left,
+    .zk-exchange-tips-cont {
+      color: #9699a2;
+      font-size: 12px;
+      margin-right: 10px;
+    }
+  }
+}

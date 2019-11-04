@@ -1,6 +1,6 @@
 <template>
   <view>
-    <zk-product-user :widget="widget"></zk-product-user>
+    <zk-product-user :widget="widget" ref="zkProductUser"></zk-product-user>
     <zk-parting-line style="background: #F0F0F0;"></zk-parting-line>
     <zk-border-header :widget="viewModel"></zk-border-header>
     <zk-grid :widget="viewModel"></zk-grid>
@@ -35,6 +35,11 @@
         imageData: imageJson,
         privilegeData: privilegeJson
       }
+    },
+    onShow () {
+      this.$nextTick(() => {
+        this.$refs.zkProductUser.init()
+      })
     }
   }
 </script>

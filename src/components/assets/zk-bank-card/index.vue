@@ -1,19 +1,5 @@
 <template>
   <view class="zk-card" v-if="widgetModel">
-    <!--  <ul class="zk-card-list">
-      <li class="zk-card-item" v-for="(item,index) in widgetModel" :key="index">
-        <p v-html="item.userName" class="user-name"></p>
-        <div class="zk-card-user-news">
-          <p class="car-name">{{item.name}}</p>
-          <p class="car-number">{{item.number}}</p>
-        </div>
-        <p class="car-address">{{item.address}}</p>
-        <p class="car-bottom" @click="delItem">
-          <span>删除</span>
-          <x-icon src="zk-deletes"></x-icon>
-        </p>
-      </li>
-    </ul> -->
     <view class="zk-card_al">
       <view class="list" v-for="(item, index) in widgetModel" :key="index" :style="'background: url('+item.bankLogo+') no-repeat;background-size: 100% 100%;background-position: center center;'">
         <view class="list_cont">
@@ -29,7 +15,7 @@
     </navigator>
     <view class="temporarily_box" v-if="!widgetModel || widgetModel.length===0">
       <view class="temporarily">
-        <img class="temporarily_img" src="http://ui.5ug.com/static/demo/imageList/02.png">
+        <img class="temporarily_img" src="http://www.szwft.me/img/nodata.png">
       </view>
     </view>
   </view>
@@ -41,7 +27,7 @@
 
     data () {
       return {
-        widgetModel: ''
+        widgetModel: null
       }
     },
     props: {
@@ -52,11 +38,7 @@
     },
     methods: {
       async  init () {
-        var para = {
-          userId: this.$user.id()
-        }
-        this.widgetModel = await this.$api.themeWidget(this.widget)
-        var response = await this.$api.httpGet('Api/BankCard/GetBankCardListByUserId', para)
+        var response = await this.$api.httpGet('Api/BankCard/GetBankCardListByUserId')
         if (response.status === 1) {
           this.widgetModel = response.result
         }

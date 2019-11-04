@@ -1,0 +1,41 @@
+{
+  "value": {
+    "links": [{
+        "icon": {
+          "color": "themeColor",
+          "name": "icon-zk-transfer",
+          "size": 12
+        },
+        "link": {
+          "type": "url",
+          "value": "/pages/asset/rechargeoffline"
+        },
+        "name": "线下银卡汇款",
+        "show": true,
+        "switch": false,
+        "url": {
+          "type": "url",
+          "value": "/pages/asset/rechargeoffline"
+        }
+      },
+      {
+        "icon": {
+          "color": "themeColor",
+          "name": "icon-zk-password",
+          "size": 12
+        },
+        "link": {
+          "type": "url",
+          "value": "/pages/asset/rechargeBlock"
+        },
+        "name": "区块链汇款",
+        "show": false,
+        "switch": false,
+        "url": {
+          "type": "url",
+          "value": "/pages/asset/rechargeBlock"
+        }
+      }
+    ]
+  }
+}

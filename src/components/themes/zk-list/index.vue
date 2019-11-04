@@ -9,7 +9,8 @@
       </view>
       <scroll-view scroll-y="true" :style="'height:'+screen.height+'px;overflow-y: auto;'" @scrolltolower="scrolltolower" v-if="allDataList.length!==0">
         <view class="global" v-for="(item,index) in allDataList" :key="index">
-          <view @click="$api.to(item.url)">
+          <!-- @click="$api.to(item.url)" -->
+          <view>
             <view class="mobile-x-list">
               <view class="box">
                 <div class="xlist_box1">

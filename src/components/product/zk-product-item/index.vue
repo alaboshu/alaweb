@@ -8,12 +8,6 @@
           </div>
           <div class="product-item-content">
             <div @click="goShow(item.id)" class="product-name">{{item.name}}</div>
-            <!-- 
-            <p class="produce-item-news">
-              <span class="product-item-price">
-                <span class="item-price_span">￥</span>{{item.price}}</span>
-              <span class="product-item-market_price">{{item.marketPrice}}</span>
-            </p> -->
             <p class="produce-item-news" v-if="showPrice &&!showF2Cprice">
               <span class="product-item-price">
                 <span class="item-price_span">￥</span>{{item.price}}</span>
@@ -27,7 +21,6 @@
             <p class="produce-item-news" v-else>
               <span class="product-item-price">
                 <span class="item-price_span">￥</span>{{item.marketPrice}}</span>
-              <!-- <span class="product-item-market_price">{{item.marketPrice}}</span> -->
             </p>
           </div>
         </li>
@@ -101,7 +94,7 @@
     },
     methods: {
       goShow (id) {
-        this.$api.to('/pages/index?path=product_show&id=' + id)
+        this.$api.to('/pages/product/show?id=' + id)
       },
       async init () {
         var this_ = this

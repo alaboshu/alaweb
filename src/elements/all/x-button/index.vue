@@ -1,5 +1,5 @@
 <template>
-  <view class="x-button" @click="submint">
+  <view class="x-button" @click="submint" :style="'background:'+ bgColor">
     <view class="x-button-icon" v-if="loading"></view>
     <view class="x-button-text">{{btnText}}</view>
   </view>
@@ -7,6 +7,9 @@
 
 <script>
   export default {
+    model: {
+      event: 'click'
+    },
     props: {
       loading: {
         default: false
@@ -26,7 +29,7 @@
     methods: {
       submint () {
         if (this.loading === false) {
-          this.$emit('change')
+          this.$emit('click')
         }
       }
     }

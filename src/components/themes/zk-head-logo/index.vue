@@ -3,7 +3,7 @@
     <view class="zk-head-logo-placeholder"></view>
     <view class="zk-head-logo" :style="'top:'+headLogoHeight+'px;width:'+headLogoWidth+'px'">
       <view class="head_logo">
-        <img :src="widget.value.image" alt="文房四宝">
+        <img :src="widget.value.image" alt="咚巴拉">
       </view>
       <view class="head_search" @click="showTag()">
         <i class="icon iconfont icon-zk-search"></i>
@@ -11,7 +11,7 @@
       </view>
       <view class="head_icon" v-if="widgetModel.value">
         <!-- <i class="icon iconfont " :class="widget.value.icon.name"></i> -->
-        <div @click="$api.to('/pages/index?path=order_cart')">
+        <div @click="$api.to('/pages/order/order_cart')">
           <x-icon :name="widgetModel.value.icon.name" :size="widgetModel.value.icon.size" :color="widgetModel.value.iconColor"></x-icon>
         </div>
         <div @click="shareClick()" v-if="isApp">
@@ -71,7 +71,7 @@
     },
     methods: {
       toCart () {
-        this.$api.to('/pages/index?path=order_cart')
+        this.$api.to('/pages/order/order_cart')
       },
       async init () {
         this.widgetModel = await this.$api.themeWidget(this.widget)
@@ -86,7 +86,7 @@
         }
       },
       shareClick () {
-        this.$api.share('文房四宝', 'http://s-open.qiniuniu99.com/wwwroot/uploads/image/20190524/logo.jpg', '实体商家业绩倍增服务平台', 'http://m.qiniuniu99.com/')
+        this.$api.share('咚巴拉', 'http://s-open.qiniuniu99.com/wwwroot/uploads/image/20190524/logo.jpg', '实体商家业绩倍增服务平台', 'http://m.qiniuniu99.com/')
       },
       showTag () {
         this.boxshow = !this.boxshow

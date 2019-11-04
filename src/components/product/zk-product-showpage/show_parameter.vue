@@ -236,11 +236,11 @@
           this.buCountMax = Number(this.productView.productActivityExtension.userPermissions.singleBuyCountMax)
         }
         this.async = true
-        if (this.widget.value !== null) {
-          if (this.widget.value.isShowCart !== undefined || this.widget.value.isShowCart !== '' || this.widget.value.isShowCart !== null) {
-            this.isShowCart = this.widget.value.isShowCart
-          }
-        }
+        // if (this.widget.value !== null) {
+        //   if (this.widget.value.isShowCart !== undefined || this.widget.value.isShowCart !== '' || this.widget.value.isShowCart !== null) {
+        //     this.isShowCart = this.widget.value.isShowCart
+        //   }
+        // }
       },
       gradePrice () {
         if (this.timeLimit.isTimeLimit) {
@@ -286,33 +286,17 @@
       async addCart () {
         var that = this
         if (this.$user.loginUser() === null) {
-          if (this.$api.client() !== 'WeChatLite') {
-            // var perUrl = window.location.pathname + window.location.search
-            // this.$api.localSet('previous_page_before_login', perUrl)
-            uni.showModal({
-              title: '提示',
-              content: '请先登录',
-              showCancel: false,
-              confirmText: '确定',
-              success: function (res) {
-                if (res.confirm) {
-                  that.$api.to('/pages/user/login')
-                }
+          uni.showModal({
+            title: '提示',
+            content: '请先登录',
+            showCancel: false,
+            confirmText: '确定',
+            success: function (res) {
+              if (res.confirm) {
+                that.$api.to('/pages/user/login')
               }
-            })
-          } else {
-            uni.showModal({
-              title: '提示',
-              content: '请先登录',
-              showCancel: false,
-              confirmText: '确定',
-              success: function (res) {
-                if (res.confirm) {
-                  that.$api.to('/pages/user/login')
-                }
-              }
-            })
-          }
+            }
+          })
         } else if (this.selectSku.stock === 0) {
           this.$api.toastWarn('库存不足')
         } else {

@@ -1,7 +1,6 @@
 <template>
   <view>
     <common-item :viewModel="viewModel" :widget="widget"></common-item>
-    这个是分页使用的页面
   </view>
 </template>
 
@@ -15,12 +14,19 @@
     components: {
       commonItem
     },
-    onReachBottom () {
-      console.info('可不可以触发你')
+    mounted () {
+      this.init()
     },
-    onPullDownRefresh () {
-      console.info('下拉刷新')
+    methods: {
+      init () {
+        // 监听触底事件
+        this.$bus.$off('pagesTouch').$on('pagesTouch', (res) => {
+          this.pagesReachBottom()
+        })
+      },
+      pagesReachBottom () {
+        console.info('已经触底了')
+      }
     }
-
   }
 </script>

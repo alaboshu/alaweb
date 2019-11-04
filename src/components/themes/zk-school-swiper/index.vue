@@ -12,7 +12,7 @@
         </view>
         <view class="index-icon">
           <view>
-            <x-icon name="icon-zk-cart" size="23" @click.native="$api.to('/pages/index?path=order_cart')"></x-icon>
+            <x-icon name="icon-zk-cart" size="23" @click.native="$api.to('/pages/order/order_cart')"></x-icon>
           </view>
           <x-icon name="icon-zk-home" size="24" @click.native="$api.to('/pages/index')"></x-icon>
         </view>

@@ -193,7 +193,7 @@
           "dataId": "5cc196aeb988fd3b1ce66d46",
           "componentPath": "/themes/zk-head-logo",
           "apiUrl": "/api/theme/getvalue",
-          "value": "{\"name\":\"\",\"image\":\"http://www.szwft.me/img/logo.jpg\",\"icon\":{\"name\":\"icon-zk-cart\",\"size\":20,\"color\":\"themeColor\"},\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=order_cart\"},\"icons\":{\"name\":\"icon-zk-add\",\"size\":20,\"color\":\"themeColor\"},\"undefined\":{\"name\":\"icon-zk-add\",\"size\":20,\"color\":\"themeColor\"},\"link\":{\"type\":\"url\",\"value\":\"/pages/index?path=order_cart\"},\"links\":[{\"name\":\"手表\",\"id\":\"jtcf8zlcsqmfhrynd\",\"show\":true},{\"name\":\"调理锅\",\"id\":\"jtcf93cdu4rqtjmxx\",\"show\":true},{\"name\":\"洁面乳\",\"id\":\"jtcf96oljyibkrzgfq\",\"show\":true}],\"iconColor\":\"#C91230\",\"iconsColor\":\"#C91230\"}",
+          "value": "{\"name\":\"\",\"image\":\"http://www.szwft.me/img/logo.jpg\",\"icon\":{\"name\":\"icon-zk-cart\",\"size\":20,\"color\":\"themeColor\"},\"url\":{\"type\":\"url\",\"value\":\"/pages/order/order_cart\"},\"icons\":{\"name\":\"icon-zk-add\",\"size\":20,\"color\":\"themeColor\"},\"undefined\":{\"name\":\"icon-zk-add\",\"size\":20,\"color\":\"themeColor\"},\"link\":{\"type\":\"url\",\"value\":\"/pages/order/order_cart\"},\"links\":[{\"name\":\"手表\",\"id\":\"jtcf8zlcsqmfhrynd\",\"show\":true},{\"name\":\"调理锅\",\"id\":\"jtcf93cdu4rqtjmxx\",\"show\":true},{\"name\":\"洁面乳\",\"id\":\"jtcf96oljyibkrzgfq\",\"show\":true}],\"iconColor\":\"#C91230\",\"iconsColor\":\"#C91230\"}",
           "layout": null,
           "title": "logo搜索",
           "style": null
@@ -2165,7 +2165,7 @@
     },
     {
       "isLayoutPage": false,
-      "name": "文房四宝登录",
+      "name": "咚巴拉登录",
       "url": "/user/qiniuniu/login",
       "path": "/user/qiniuniu/login",
       "layouts": [],
@@ -4148,7 +4148,7 @@
           "dataId": "5d43d6c143a2c710d49e3c97",
           "componentPath": "/themes/zk-search",
           "apiUrl": "Api/Theme/GetValue",
-          "value": "{\"name\":\"\",\"input_650\":\"阿斯蒂芬\",\"switch_602\":true,\"number\":10,\"switch\":true,\"links\":[{\"name\":\"文房四宝\",\"id\":\"jspym19yqf91qhw83\",\"show\":true},{\"name\":\"冰箱\",\"id\":\"jspymfy56dnepxqdn\",\"show\":false},{\"name\":\"电视机\",\"id\":\"jspymmnqelg94s5j0m\",\"show\":true},{\"name\":\"消毒机\",\"id\":\"jspyn7dp9pdfuz92bt\",\"show\":false}],\"null\":[],\"nema\":\"joiojij\",\"height\":8,\"priceStyleId\":\"e0000000-1478-49bd-bfc7-e73a5d699000\"}",
+          "value": "{\"name\":\"\",\"input_650\":\"阿斯蒂芬\",\"switch_602\":true,\"number\":10,\"switch\":true,\"links\":[{\"name\":\"咚巴拉\",\"id\":\"jspym19yqf91qhw83\",\"show\":true},{\"name\":\"冰箱\",\"id\":\"jspymfy56dnepxqdn\",\"show\":false},{\"name\":\"电视机\",\"id\":\"jspymmnqelg94s5j0m\",\"show\":true},{\"name\":\"消毒机\",\"id\":\"jspyn7dp9pdfuz92bt\",\"show\":false}],\"null\":[],\"nema\":\"joiojij\",\"height\":8,\"priceStyleId\":\"e0000000-1478-49bd-bfc7-e73a5d699000\"}",
           "layout": null,
           "title": "搜索款",
           "style": null
@@ -5719,7 +5719,7 @@
           "dataId": "5d43d6c143a2c710d49e3c3d",
           "componentPath": "/themes/zk-grid",
           "apiUrl": "Api/Theme/GetValue",
-          "value": "{\"iconSize\":32,\"count\":\"4\",\"links\":[{\"icon\":{\"name\":\"\",\"size\":\"\",\"iconSecondColor\":\"\",\"path\":\"\"},\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a1.png\",\"name\":\"商家开通\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=user_recommend\"},\"intro\":\"\",\"id\":\"jtinxyv7o7z55501ak\"},{\"icon\":{\"name\":\"\",\"size\":\"\",\"iconSecondColor\":\"\",\"path\":\"\"},\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d79d.png\",\"name\":\"商家管理\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=user_rec_index\"},\"intro\":\"\",\"id\":\"jtio0z9rx30l5q68o4\",\"show\":true},{\"icon\":{\"name\":\"\",\"size\":\"\",\"iconSecondColor\":\"\",\"path\":\"\"},\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a3.png\",\"name\":\"我的资产\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=finance_account_index\"},\"intro\":\"\",\"id\":\"jtio20qv9h1zkjvv7a\",\"show\":true},{\"icon\":{\"name\":\"\",\"size\":\"\",\"iconSecondColor\":\"\",\"path\":\"\"},\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d79c.png\",\"name\":\"分润中心\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=share_index\"},\"intro\":\"\",\"id\":\"jtio3e5489ysoxj5wl\"},{\"icon\":{\"name\":\"\",\"size\":\"\",\"iconSecondColor\":\"\",\"path\":\"\"},\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d79e.png\",\"name\":\"活动名额\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=activity_quota_list\"},\"intro\":\"\",\"id\":\"jtio6ssub3wrltspyk\"},{\"icon\":{\"name\":\"\",\"size\":\"\",\"iconSecondColor\":\"\",\"path\":\"\"},\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a2.png\",\"name\":\"营销中心\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=marketing_center\"},\"intro\":\"\",\"id\":\"jtio8mimqkj92ypkho\"},{\"icon\":{\"name\":\"\",\"size\":\"\",\"iconSecondColor\":\"\",\"path\":\"\"},\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a0.png\",\"name\":\"客服中心\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=articles_helps_index\"},\"intro\":\"\",\"id\":\"jtio9vchhn3lfow99a\",\"show\":false},{\"icon\":{\"name\":\"\",\"size\":\"\",\"iconSecondColor\":\"\",\"path\":\"\"},\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d79f.png\",\"name\":\"个人设置\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=user_info\"},\"intro\":\"本店订单\",\"id\":\"jwakjzv5w5occdxwpm\",\"show\":false}]}",
+          "value": "{\"iconSize\":32,\"count\":\"4\",\"links\":[{\"icon\":{\"name\":\"\",\"size\":\"\",\"iconSecondColor\":\"\",\"path\":\"\"},\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a1.png\",\"name\":\"商家开通\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=user_recommend\"},\"intro\":\"\",\"id\":\"jtinxyv7o7z55501ak\"},{\"icon\":{\"name\":\"\",\"size\":\"\",\"iconSecondColor\":\"\",\"path\":\"\"},\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d79d.png\",\"name\":\"商家管理\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=user_rec_index\"},\"intro\":\"\",\"id\":\"jtio0z9rx30l5q68o4\",\"show\":true},{\"icon\":{\"name\":\"\",\"size\":\"\",\"iconSecondColor\":\"\",\"path\":\"\"},\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a3.png\",\"name\":\"我的资产\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=finance_account_index\"},\"intro\":\"\",\"id\":\"jtio20qv9h1zkjvv7a\",\"show\":true},{\"icon\":{\"name\":\"\",\"size\":\"\",\"iconSecondColor\":\"\",\"path\":\"\"},\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d79c.png\",\"name\":\"分润中心\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=share_index\"},\"intro\":\"\",\"id\":\"jtio3e5489ysoxj5wl\"},{\"icon\":{\"name\":\"\",\"size\":\"\",\"iconSecondColor\":\"\",\"path\":\"\"},\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d79e.png\",\"name\":\"活动名额\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=activity_quota_list\"},\"intro\":\"\",\"id\":\"jtio6ssub3wrltspyk\"},{\"icon\":{\"name\":\"\",\"size\":\"\",\"iconSecondColor\":\"\",\"path\":\"\"},\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a2.png\",\"name\":\"营销中心\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=marketing_center\"},\"intro\":\"\",\"id\":\"jtio8mimqkj92ypkho\"},{\"icon\":{\"name\":\"\",\"size\":\"\",\"iconSecondColor\":\"\",\"path\":\"\"},\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a0.png\",\"name\":\"客服中心\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=articles_helps_index\"},\"intro\":\"\",\"id\":\"jtio9vchhn3lfow99a\",\"show\":false},{\"icon\":{\"name\":\"\",\"size\":\"\",\"iconSecondColor\":\"\",\"path\":\"\"},\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d79f.png\",\"name\":\"个人设置\",\"url\":{\"type\":\"url\",\"value\":\"/pages/user/user_info\"},\"intro\":\"本店订单\",\"id\":\"jwakjzv5w5occdxwpm\",\"show\":false}]}",
           "layout": null,
           "title": "会员快捷导航",
           "style": {
@@ -6343,7 +6343,7 @@
           "dataId": "5d49227d5815e31940a19ff7",
           "componentPath": "/themes/zk-image",
           "apiUrl": "Api/Theme/GetValue",
-          "value": "{\"name\":\"文房四宝\",\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-08-06/5d49230da5817923e86f17ef.jpg\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=shepherd_kings\"},\"link\":{\"$ref\":\"#/url\"},\"height\":160}",
+          "value": "{\"name\":\"咚巴拉\",\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-08-06/5d49230da5817923e86f17ef.jpg\",\"url\":{\"type\":\"url\",\"value\":\"/pages/index?path=shepherd_kings\"},\"link\":{\"$ref\":\"#/url\"},\"height\":160}",
           "layout": null,
           "title": "广告图列表",
           "style": null
@@ -7942,7 +7942,7 @@
           "dataId": "5d43d6c143a2c710d49e3bb6",
           "componentPath": "/themes/zk-school-video-list",
           "apiUrl": "Api/Theme/GetValue",
-          "value": "{\"links\":[{\"name\":\"5月9日刘剑董事长走进中亚主题演讲\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0509%E5%88%98%E5%89%91%E8%91%A3%E4%BA%8B%E9%95%BF%E8%B5%B0%E8%BF%9B%E4%B8%AD%E4%BA%9A%E4%B8%BB%E9%A2%98%E6%BC%94%E8%AE%B2_1.mp4\",\"id\":\"jx9tdh52kxveuq8og9\"},{\"name\":\"5月9日黄圣淘总裁城市运营中心推广方案介绍\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0509%E9%BB%84%E5%9C%A3%E6%B7%98%E5%9F%8E%E5%B8%82%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%E6%8E%A8%E5%B9%BF%E6%96%B9%E6%A1%88%E4%BB%8B%E7%BB%8D_1.mp4\",\"id\":\"jx9tdqim10aybpqt2o\"},{\"name\":\"6月12日何光永董事演讲\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0612%E4%BD%95%E5%85%89%E6%B0%B8%E8%91%A3%E4%BA%8B%E6%BC%94%E8%AE%B2_1.mp4\",\"id\":\"jx9te0omgl9l4qy5\",\"show\":false},{\"name\":\"6月12日徐三笑院长文房四宝平台介绍\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0612%E5%BE%90%E4%B8%89%E7%AC%91%E9%99%A2%E9%95%BF%E6%BC%94%E8%AE%B2_2.mp4\",\"id\":\"jx9te7umcpuafngcr\",\"show\":false}],\"name\":\"schoollinks\"}",
+          "value": "{\"links\":[{\"name\":\"5月9日刘剑董事长走进中亚主题演讲\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0509%E5%88%98%E5%89%91%E8%91%A3%E4%BA%8B%E9%95%BF%E8%B5%B0%E8%BF%9B%E4%B8%AD%E4%BA%9A%E4%B8%BB%E9%A2%98%E6%BC%94%E8%AE%B2_1.mp4\",\"id\":\"jx9tdh52kxveuq8og9\"},{\"name\":\"5月9日黄圣淘总裁城市运营中心推广方案介绍\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0509%E9%BB%84%E5%9C%A3%E6%B7%98%E5%9F%8E%E5%B8%82%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%E6%8E%A8%E5%B9%BF%E6%96%B9%E6%A1%88%E4%BB%8B%E7%BB%8D_1.mp4\",\"id\":\"jx9tdqim10aybpqt2o\"},{\"name\":\"6月12日何光永董事演讲\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0612%E4%BD%95%E5%85%89%E6%B0%B8%E8%91%A3%E4%BA%8B%E6%BC%94%E8%AE%B2_1.mp4\",\"id\":\"jx9te0omgl9l4qy5\",\"show\":false},{\"name\":\"6月12日徐三笑院长咚巴拉平台介绍\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0612%E5%BE%90%E4%B8%89%E7%AC%91%E9%99%A2%E9%95%BF%E6%BC%94%E8%AE%B2_2.mp4\",\"id\":\"jx9te7umcpuafngcr\",\"show\":false}],\"name\":\"schoollinks\"}",
           "layout": null,
           "title": "zk-school-video-list",
           "style": {
@@ -8027,7 +8027,7 @@
           "dataId": "5d43d6c143a2c710d49e3bb2",
           "componentPath": "/themes/zk-school-class-video",
           "apiUrl": "Api/Theme/GetValue",
-          "value": "{\"links\":[{\"name\":\"5月9日刘剑董事长走进中亚主题演讲\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0509%E5%88%98%E5%89%91%E8%91%A3%E4%BA%8B%E9%95%BF%E8%B5%B0%E8%BF%9B%E4%B8%AD%E4%BA%9A%E4%B8%BB%E9%A2%98%E6%BC%94%E8%AE%B2_1.mp4\",\"id\":\"jxb8cy5vjts8uzhgft\"},{\"name\":\" 5月9日黄圣淘总裁城市运营中心推广方案介绍\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0509%E9%BB%84%E5%9C%A3%E6%B7%98%E5%9F%8E%E5%B8%82%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%E6%8E%A8%E5%B9%BF%E6%96%B9%E6%A1%88%E4%BB%8B%E7%BB%8D_1.mp4\",\"id\":\"jxb8dbjuakaykgcmsg\"},{\"name\":\"6月12日何光永董事演讲\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0612%E4%BD%95%E5%85%89%E6%B0%B8%E8%91%A3%E4%BA%8B%E6%BC%94%E8%AE%B2_1.mp4\",\"id\":\"jxb8dpyi5i8ffo2m4h\"},{\"name\":\"6月12日徐三笑院长文房四宝平台介绍\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0612%E5%BE%90%E4%B8%89%E7%AC%91%E9%99%A2%E9%95%BF%E6%BC%94%E8%AE%B2_2.mp4\",\"id\":\"jxb8e31e6xevu0xy6\"}],\"tagName\":\"schoollinks\"}",
+          "value": "{\"links\":[{\"name\":\"5月9日刘剑董事长走进中亚主题演讲\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0509%E5%88%98%E5%89%91%E8%91%A3%E4%BA%8B%E9%95%BF%E8%B5%B0%E8%BF%9B%E4%B8%AD%E4%BA%9A%E4%B8%BB%E9%A2%98%E6%BC%94%E8%AE%B2_1.mp4\",\"id\":\"jxb8cy5vjts8uzhgft\"},{\"name\":\" 5月9日黄圣淘总裁城市运营中心推广方案介绍\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0509%E9%BB%84%E5%9C%A3%E6%B7%98%E5%9F%8E%E5%B8%82%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%E6%8E%A8%E5%B9%BF%E6%96%B9%E6%A1%88%E4%BB%8B%E7%BB%8D_1.mp4\",\"id\":\"jxb8dbjuakaykgcmsg\"},{\"name\":\"6月12日何光永董事演讲\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0612%E4%BD%95%E5%85%89%E6%B0%B8%E8%91%A3%E4%BA%8B%E6%BC%94%E8%AE%B2_1.mp4\",\"id\":\"jxb8dpyi5i8ffo2m4h\"},{\"name\":\"6月12日徐三笑院长咚巴拉平台介绍\",\"videoUrl\":\"http://ptl9kufla.bkt.clouddn.com/0612%E5%BE%90%E4%B8%89%E7%AC%91%E9%99%A2%E9%95%BF%E6%BC%94%E8%AE%B2_2.mp4\",\"id\":\"jxb8e31e6xevu0xy6\"}],\"tagName\":\"schoollinks\"}",
           "layout": null,
           "title": "zk-school-class-video",
           "style": null
@@ -8068,7 +8068,7 @@
     },
     {
       "isLayoutPage": false,
-      "name": "关于文房四宝",
+      "name": "关于咚巴拉",
       "url": "/about/us/index",
       "path": "/about/us/index",
       "layouts": [],
@@ -8082,7 +8082,7 @@
           "dataId": "5d43d6c143a2c710d49e3baf",
           "componentPath": "/themes/zk-about-us",
           "apiUrl": "Api/Theme/GetValue",
-          "value": "{\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-27/5d146afc36898020982a015b.png\",\"name\":\"文房四宝\",\"names\":\"文房四宝电子商务科技股份有限公司\"}",
+          "value": "{\"image\":\"https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-27/5d146afc36898020982a015b.png\",\"name\":\"咚巴拉\",\"names\":\"咚巴拉电子商务科技股份有限公司\"}",
           "layout": null,
           "title": "关于",
           "style": null
@@ -8180,7 +8180,7 @@
     },
     {
       "isLayoutPage": false,
-      "name": "文房四宝",
+      "name": "咚巴拉",
       "url": "/shepherd/kings",
       "path": "/shepherd/kings",
       "layouts": [],
@@ -8594,7 +8594,7 @@
       "null": [],
       "backGround": "#FFFFFF"
     },
-    "name": "文房四宝8月2号上线版本",
+    "name": "咚巴拉8月2号上线版本",
     "menu": null,
     "type": 1
   }

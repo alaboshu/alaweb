@@ -17,7 +17,7 @@
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/order/order_index?orderStatus=1"
         }
       },
       {
@@ -30,11 +30,11 @@
         "id": 1,
         "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a1.png",
         "intro": "",
-        "name": "交换通宝",
+        "name": "流转资产",
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/order/order_index?orderStatus=1"
         }
       },
       {
@@ -51,7 +51,7 @@
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/order/order_index?orderStatus=1"
         }
       },
       {
@@ -68,7 +68,7 @@
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/order/order_index?orderStatus=1"
         }
       },
       {
@@ -85,7 +85,7 @@
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/order/order_index?orderStatus=1"
         }
       },
       {
@@ -119,7 +119,7 @@
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/order/order_index?orderStatus=1"
         }
       },
       {
@@ -136,7 +136,7 @@
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/order/order_index?orderStatus=1"
         }
       }
     ]

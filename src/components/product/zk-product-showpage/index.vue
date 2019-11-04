@@ -19,6 +19,7 @@
       <show-parameter ref="show_parameter" :timeLimit="timeLimit" :productView="viewModel" v-if="ready" :isActivity="isActivity" :widget="widget"></show-parameter>
       <show-intro :productView="viewModel" v-if="ready"></show-intro>
       <show-recommend :widget="widget" :productView="viewModel" v-if="ready"></show-recommend>
+      <!--就是你了-->
       <show-bar @changeSaleState="showSaleModel" :productView="viewModel" v-if="ready" :isActivity="isActivity" :widget="widget"></show-bar>
       <view style="height:50px;"></view>
     </scroll-view>
@@ -38,7 +39,7 @@
       <show-parameter ref="show_parameter" :timeLimit="timeLimit" :productView="viewModel" v-if="ready" :isActivity="isActivity" :widget="widget"></show-parameter>
       <show-intro :productView="viewModel" v-if="ready"></show-intro>
       <show-recommend :widget="widget" :productView="viewModel" v-if="ready"></show-recommend>
-      <show-bar @changeSaleState="showSaleModel" :productView="viewModel" v-if="ready" :isActivity="isActivity" :widget="widget"></show-bar>
+      <!--<show-bar @changeSaleState="showSaleModel" :productView="viewModel" v-if="ready" :isActivity="isActivity" :widget="widget"></show-bar>-->
       <view style="height:50px;"></view>
     </div>
     <!-- <show-bar @changeSaleState="showSaleModel" :productView="viewModel" v-if="ready" :isActivity="isActivity"></show-bar> -->
@@ -54,10 +55,10 @@
   import ShowRecommend from './show_recommend'
   import ShowBar from './show_bar'
   import { PRODUCT_SHOW_GET } from '@/service/all/apiUrl'
- 
+
   import { setTimeout } from 'timers'
   export default {
-    
+
     data () {
       return {
         showheaderTop: false,
@@ -126,20 +127,15 @@
           this.wechatType = true
         }
         if (this.$api.client() === 'AppPlus') {
-          // this.isApp = true
           this.wechatType = false
           this.isApp = false
           this.statusBarHeight = this.$api.getSystemInfoSync().statusBarHeight + 5
-          // if (this.$api.payType() === 3) {
-
-          // }
         }
         if (this.$api.client() === 'AppPlus' && this.$api.payType() === 3) {
           this.isIosApp = false
         }
         let par = {
-          id: this.widget.route.id,
-          userId: this.$user.loginUser().id
+          id: this.widget.route.id
         }
         var productShowReponse = await this.$api.httpGet(PRODUCT_SHOW_GET, par)
         if (productShowReponse.status !== 1) {

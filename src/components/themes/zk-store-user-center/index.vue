@@ -12,8 +12,8 @@
           <x-icon name="icon-zk-renzheng" class="setIng" color="#ffffff" :size="18"></x-icon>
         </view>
       </view>
-      <view class="user-seting" @click="$api.to('/pages/index?path=user_info')">
-        <view @click="$api.to('/pages/index?path=user_info')">
+      <view class="user-seting" @click="$api.to('/pages/user/user_info')">
+        <view @click="$api.to('/pages/user/user_info')">
           <x-icon name="icon-zk-setting" color="#ffffff" :size="18"></x-icon>
         </view>
       </view>

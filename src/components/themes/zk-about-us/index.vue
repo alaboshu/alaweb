@@ -3,7 +3,7 @@
     <view class="about-us_head">
       <img class="us_head-img" src="http://www.szwft.me/img/logo.jpg" />
       <div class="us_head-title">
-        文房四宝
+        咚巴拉
       </div>
       <div class="us_head-version">
         <span>Version</span> <span>{{version}}</span>
@@ -21,7 +21,7 @@
     </view>
     <view class="about-us_foot">
       <p>Copyright&copy;2018-2019</p>
-      <p>文房四宝qiniuniu99.com版权所有</p>
+      <p>咚巴拉qiniuniu99.com版权所有</p>
     </view>
   </view>
 </template>

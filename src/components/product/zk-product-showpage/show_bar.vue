@@ -31,23 +31,21 @@
       </view>
       <view class="item-title " :class="{'themecolor':iconActive}">收藏</view>
     </div>
-    <div class="bar-item" @click="$api.to('/pages/index?path=order_cart')" v-if="isShowCart">
+    <div class="bar-item" @click="$api.to('/pages/order/order_cart')">
       <view class="item-icon">
         <x-icon :size="18" name="icon-zk-carts" :color="'#606266'"></x-icon>
       </view>
       <view class="item-title">购物车</view>
     </div>
-    <!-- <div path="javascript:" class="bar-button bar-disabled" v-if="isActivity&&!productView.productActivityExtension.userPermissions.isMemberLeverBuy" @click="gradeClick()">加入购物车</div> -->
-    <div path="javascript:" class="bar-button bar-disabled" v-if="!viewModel.isFrontShowPrice" @click="gradeClick()" v-show="isShowCart">加入购物车</div>
-    <div path="javascript:" class="bar-button bar-cart" @click="showSaleProperty()" v-else v-show="isShowCart">加入购物车</div>
 
-    <!-- <div path="javascript:" class="bar-button bar-disabled" v-if="isActivity&&!productView.productActivityExtension.userPermissions.isMemberLeverBuy" style="border-left:1px solid #e5e5e5" @click="gradeClick()">立即购买</div> -->
-    <div path="javascript:" class="bar-button bar-disabled" v-if="!viewModel.isFrontShowPrice" style="border-left:1px solid #e5e5e5" @click="gradeClick()">立即购买</div>
-    <div path="javascript:" class="bar-button bar-buy" @click="showSaleProperty() " v-else>立即购买</div>
+    <div path="javascript:" class="bar-button bar-cart" @click="showSaleProperty()">加入购物车</div>
+    <!--<div path="javascript:" class="bar-button bar-disabled" v-if="!viewModel.isFrontShowPrice" @click="gradeClick()" v-show="isShowCart">加入购物车</div>-->
+    <!--<div path="javascript:" class="bar-button bar-disabled" v-if="!viewModel.isFrontShowPrice" style="border-left:1px solid #e5e5e5" @click="gradeClick()">立即购买</div>-->
+
+    <div path="javascript:" class="bar-button bar-buy" @click="showSaleProperty() ">立即购买</div>
   </view>
 </template>
 <script>
-  // import themeId from '../../../service/config.js'
   export default {
 
     data () {
@@ -56,10 +54,6 @@
         viewModel: '',
         iconColor: 'themeColor',
         iconActive: false,
-        // isWeChatLite: false,
-        // isIosApp: false,
-        // isAndroidApp: false,
-        // isH5: false,
         isApp: false,
         isShowCart: true,
         customerLink: false,
@@ -97,21 +91,21 @@
             }
           }
           this.async = true
-          if (this.widget.value !== null) {
-            if (this.widget.value.isShowCart !== undefined) {
-              this.isShowCart = this.widget.value.isShowCart
-            }
-            if (this.widget.value.customerLink !== undefined && this.widget.value.customerLink !== '') {
-              this.customerLink = true
-            } else {
-              this.operation = true
-            }
-          }
-          if (this.$api.client() === 'AppPlus') {
-            this.isApp = false
-            this.customerLink = true
-            this.operation = false
-          }
+          // if (this.widget.value !== null) {
+          //   if (this.widget.value.isShowCart !== undefined) {
+          //     this.isShowCart = this.widget.value.isShowCart
+          //   }
+          //   if (this.widget.value.customerLink !== undefined && this.widget.value.customerLink !== '') {
+          //     this.customerLink = true
+          //   } else {
+          //     this.operation = true
+          //   }
+          // }
+          // if (this.$api.client() === 'AppPlus') {
+          //   this.isApp = false
+          //   this.customerLink = true
+          //   this.operation = false
+          // }
         }
         // 刷新销量
         setTimeout(async () => {
@@ -143,17 +137,6 @@
         this.$api.share(this.viewModel.name, this.viewModel.smallUrl, this.viewModel.name, url)
       },
       customer () {
-        // if (this.$api.client() === 'AppPlus') {
-        //   /* eslint-disable */
-        //   // var _this = this
-        //   // plus.runtime.openURL('https://chat.meiqiapaas.com/dist/standalone.html?eid=145450', function (res) {
-        //   //   _this.$api.toastWarn('跳转失败')
-        //   // })
-        //   var w = plus.webview.create('https://chat.meiqiapaas.com/dist/standalone.html?eid=145450', 'share', { top: "100px", height: '80%' });
-        //   w.show(); // 显示窗口
-        // } else {
-
-        // }
         uni.navigateTo({
           url: '/pages/vicePage/customerService'
         })
@@ -193,20 +176,19 @@
         }
       },
       showSaleProperty () {
-        this.$emit('changeSaleState')
-        // if (this.widget.value !== null) {
-        //   if (this.widget.value.orderPrompt !== undefined || this.widget.value.orderPrompt !== '') {
-        //     uni.showModal({
-        //       content: this.widget.value.orderPrompt,
-        //       success: (res) => {
-        //         if (res.confirm === true) {
-        //           this.$emit('changeSaleState')
-        //         }
-        //       }
-        //     })
-        //   } else {
-        //     this.$emit('changeSaleState')
-        //   }
+        uni.showToast({
+          title: '功能即将开通，敬请期待...',
+          icon: 'none'
+        })
+        // if (this.$user.isLogin() === false) {
+        //   uni.showModal({
+        //     title: '未登录',
+        //     content: '您还未登录，请先登录',
+        //     showCancel: false,
+        //     success: () => {
+        //       this.$api.to('/pages/user/login')
+        //     }
+        //   })
         // } else {
         //   this.$emit('changeSaleState')
         // }

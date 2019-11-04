@@ -71,7 +71,7 @@
         this.$api.to('/pages/index?path=user_password_index')
       },
       goSecurity () {
-        this.$api.to('/pages/index?path=user_info')
+        this.$api.to('/pages/user/user_info')
       },
       showId (id) {
         if (id === 'e97ccd1e-1478-49bd-bfc7-e73a5d699756' ||

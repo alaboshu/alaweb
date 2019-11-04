@@ -1,55 +1,58 @@
 <template>
   <div class="verification-box">
-    <div class="label">验证码</div>
-    <input class="uni-input" v-model="verificationModel" placeholder="请输入验证码" />
+    <div class="label">{{label}}</div>
+    <input class="uni-input" v-model="viewModel" placeholder="请输入验证码" />
     <div class="text" @click="verification" v-if="sendAuthCode">获取验证码</div>
     <div class="text" v-if="!sendAuthCode">{{countdownTime}}重新获取</div>
   </div>
 </template>
 <script>
   export default {
+    model: {
+      prop: 'dataModel',
+      event: 'change'
+    },
     data () {
       return {
         phone: '',
         sendAuthCode: true,
         countdownTime: '',
-        verificationModel: '',
-        defaultModel: ''
+        viewModel: ''
       }
     },
     props: {
-      value: {},
-      formModel: {},
-      config: {},
-      widget: {}
+      dataModel: {},
+      label: {},
+      currentModel: {},
+      column: {}
     },
     mounted () {
       this.init()
     },
     methods: {
       init () {
-       
+        if (this.dataModel) this.viewModel = this.dataModel
       },
-
-      async   verification () {
-        if (this.$api.client() === 'AppPlus') {
-          // this.phone = this.$store.state.phoneVerification
-          this.phone = this.$api.vuexGet('phoneVerification')
-        } else {
-          this.config.list.forEach((element) => {
-            if (element.name === '手机号') {
-              this.phone = this.formModel[element.model]
-            }
-          })
+      async  verification () {
+        if (!this.sendAuthCode) {
+          return
         }
+        this.sendAuthCode = false
+        var mark = null
+        if (this.column !== undefined && this.column !== null) {
+          mark = this.column.mark
+        }
+        if (!mark) {
+          mark = 'mobile'
+        }
+        this.phone = this.currentModel[mark]
         var myreg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/
         if (myreg.test(this.phone)) {
           let parament = {
-            mobile: String(this.phone)
+            mobile: this.phone
           }
-          var response = await this.$api.httpGet('Api/Sms/SendVerifiyCode', parament)
+          var response = await this.$api.httpPost('Api/Sms/SendVerifiyCode', parament)
           if (response.status === 1) {
-            this.sendAuthCode = false
             this.countdownTime = 60
             var vueThis = this
             var authTimetimer = setInterval(() => {
@@ -64,18 +67,23 @@
               icon: 'none',
               title: response.message
             })
+            this.sendAuthCode = true
           }
         } else {
           uni.showToast({
             icon: 'none',
             title: '手机号不正确'
           })
+          this.sendAuthCode = true
         }
       }
     },
     watch: {
-      verificationModel (val) {
-        this.$emit('input', val)
+      viewModel: {
+        deep: true,
+        handler (val) {
+          this.$emit('change', this.viewModel)
+        }
       }
     }
   }

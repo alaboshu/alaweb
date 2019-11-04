@@ -2,8 +2,7 @@
   "value": {
     "count": 4,
     "iconSize": 32,
-    "links": [
-      {
+    "links": [{
         "icon": {
           "iconSecondColor": "",
           "name": "",
@@ -17,7 +16,7 @@
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=order_index&orderStatus=1"
+          "value": "/pages/user/user_qrcode"
         }
       },
       {
@@ -48,7 +47,7 @@
         "id": 1,
         "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a1.png",
         "intro": "",
-        "name": "我的客户",
+        "name": "客户数量",
         "show": true,
         "url": {
           "type": "url",
@@ -65,11 +64,11 @@
         "id": 1,
         "image": "https://s-open.qiniuniu99.com/wwwroot/uploads/api/2019-06-17/5d0751faa437c81dd439d7a3.png",
         "intro": "",
-        "name": "完善资料",
+        "name": "充值汇款",
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/user/data"
+          "value": "/pages/asset/recharge"
         }
       },
 
@@ -138,7 +137,7 @@
         "show": true,
         "url": {
           "type": "url",
-          "value": "/pages/index?path=user_info"
+          "value": "/pages/user/user_info"
         }
       }
     ]

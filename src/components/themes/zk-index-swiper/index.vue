@@ -13,8 +13,8 @@
         </view>
         <view class="index-icon">
           <i class="icon iconfont icon-zk-scan" @click="barCode" v-if="iosAppsFool"></i>
-          <i class="icon iconfont icon-zk-cart" @click="$api.to('/pages/index?path=order_cart')"></i>
-          <i class="icon iconfont icon-zk-erweima" @click="$api.to('/pages/index?path=user_qrcode')"></i>
+          <i class="icon iconfont icon-zk-cart" @click="$api.to('/pages/order/order_cart')"></i>
+          <i class="icon iconfont icon-zk-erweima" @click="$api.to('/pages/user/user_qrcode')"></i>
         </view>
       </view>
       <div class="new-index-swiper-box">
@@ -67,7 +67,7 @@
         searchModel: '',
         liksT: [
           {
-            name: '文房四宝'
+            name: '咚巴拉'
           },
           {
             name: '茅台'

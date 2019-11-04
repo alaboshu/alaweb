@@ -17,7 +17,7 @@
               <view class="item_list_text">{{item.createTime}}</view>
             </view>
             <view class="item_list_R">
-              <img :src="$api.baseUrl() + item.image" alt="">
+              <img :src="$api.baseUrl() + item.image" v-lazy alt="">
             </view>
           </view>
         </view>

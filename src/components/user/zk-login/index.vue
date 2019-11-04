@@ -5,7 +5,7 @@
     </view>
     <view class="form-login">
       <view class="form-login_box">
-        <image class="form-login_img" src="http://www.szwft.me/img/logo.jpg" alt="" />
+        <image class="form-login_img" src="http://test.api.szwft.me/wwwroot/uploads/api/375-431-798/2019-10-30/5db9559598dea72ec88089cd.png" alt="" />
       </view>
     </view>
     <view class="head_yh">
@@ -39,11 +39,11 @@
       <!-- <div class="btn-row-login" @click="bindLogin">
         登录
       </div> -->
-      <x-button :loading="loading" btnText="登录" @change="bindLogin"></x-button>
+      <x-button :loading="loading" btnText="登录" @click="bindLogin"></x-button>
     </view>
     <view class="action-row">
       <navigator class="navigator" url="/pages/user/reg">注册账号</navigator>
-      <navigator class="navigator" url="/pages/index?path=user_password_find">忘记密码</navigator>
+      <navigator class="navigator" url="/pages/find/find_password_login">忘记密码</navigator>
     </view>
     <view class="oauth-row" v-if="hasProvider" v-bind:style="{top: positionTop + 'px'}">
       <view class="oauth-image" v-for="provider in providerList" :key="provider.value">
@@ -103,10 +103,11 @@
       },
       async bindLogin () {
         this.loading = true
-        this.$user.login(this.user)
-        setTimeout(() => {
-          this.loading = false
-        }, 300)
+        this.$user.login(this.user).then(() => {
+          setTimeout(() => {
+            this.loading = false
+          }, 300)
+        })
       },
       onFocus (e) {
         if (e.detail.value === '') {

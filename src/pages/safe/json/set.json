@@ -1,0 +1,60 @@
+{
+  "value": {
+    "links": [
+      {
+        "icon": {
+          "color": "themeColor",
+          "name": "icon-zk-transfer",
+          "size": 12
+        },
+        "link": {
+          "type": "url",
+          "value": "/pages/safe/user_password_login"
+        },
+        "name": "登录密码修改",
+        "show": true,
+        "switch": false,
+        "url": {
+          "type": "url",
+          "value": "/pages/safe/user_password_login"
+        }
+      },
+      {
+        "icon": {
+          "color": "themeColor",
+          "name": "icon-zk-password",
+          "size": 12
+        },
+        "link": {
+          "type": "url",
+          "value": "/pages/safe/user_password_safe"
+        },
+        "name": "支付密码修改",
+        "show": false,
+        "switch": false,
+        "url": {
+          "type": "url",
+          "value": "/pages/safe/user_password_safe"
+        }
+      },
+      {
+        "icon": {
+          "color": "themeColor",
+          "name": "icon-zk-password",
+          "size": 12
+        },
+        "link": {
+          "type": "url",
+          "value": "/pages/find/find_password_safe"
+        },
+        "name": "找回支付密码",
+        "show": false,
+        "switch": false,
+        "url": {
+          "type": "url",
+          "value": "/pages/find/find_password_safe"
+        }
+      }
+    ]
+  }
+}

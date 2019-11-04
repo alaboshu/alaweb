@@ -1,8 +1,8 @@
 <template>
   <view class="product-list">
-    <view class="product-list-cont" v-for="(item, index) in viewModel" :key="index">
+    <view class="product-list-cont" v-for="(item, index) in viewModel" :key="index" @click="pagesToDetail(item)">
       <view class="product-list-image">
-        <img :src="'http://api.szwft.me/'+ item.thumbnailUrl" alt="" srcset="">
+        <img :src="$base.host()+ item.thumbnailUrl" alt="" srcset="" v-lazy>
       </view>
       <view class="product-list-title">{{item.name}}</view>
       <view class="product-list-foot">
@@ -14,7 +14,9 @@
 </template>
 
 <script>
+  import minx from './minx'
   export default {
+    mixins: [minx],
     props: {
       viewModel: {}
     }
@@ -39,7 +41,9 @@
       .product-list-image {
         width: 100%;
         flex-grow: 2;
-        background: red;
+        img {
+          width: 100%;
+        }
       }
       .product-list-title {
         width: 100%;

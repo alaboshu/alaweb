@@ -60,9 +60,6 @@ export default {
       api.localSet('user_info', userInfo)
       if (response.result !== undefined) {
         this.setUser(response.result)
-        api.toastSuccess('登录成功')
-        // window.location.href = '/pages/index'
-        // this.$store.dispatch('UserLogin', loginUser.result)
         var openId = response.result.openId
         if (helper.length(openId) >= 12) {
           // api.localSet('wechat_openId', openId)
@@ -222,24 +219,32 @@ export default {
     var userIndex = '/pages/user/index'
     var isApp = true
     if (this.isLogin()) {
-      api.toastWarn('已成功登录')
-      // 跳转到上一级页面
-      if (getCurrentPages().length === 1) {
-        // 如果直接进入登录页面，跳转到会员中心
-        api.to(userIndex, isApp)
-      } else {
-        api.back()
-      }
+      uni.showModal({
+        title: '操作成功',
+        content: '恭喜您，您操作成功',
+        showCancel: false,
+        success: () => {
+          api.to(userIndex, isApp)
+        }
+      })
+      // // 跳转到上一级页面
+      // if (getCurrentPages().length === 1) {
+      //   // 如果直接进入登录页面，跳转到会员中心
+      //   api.to(userIndex, isApp)
+      // } else {
+      //   api.back()
+      // }
     }
   },
   // 检查是否需要登录，如果需要登录则跳转到登录页面，登录成功以后，返回到上一级页面
   checkLogin (option) {
-    console.info('sss')
     if (!this.isLogin()) {
-      var usercode = option.usercode
-      if (!api.isEmpty(usercode)) {
-        // url 包含推荐码时跳转
-        api.to('/pages/user/reg')
+      if (option) {
+        var usercode = option.usercode
+        if (!api.isEmpty(usercode)) {
+          // url 包含推荐码时跳转
+          api.to('/pages/user/reg')
+        }
       }
       uni.showModal({
         title: '未登录',
