@@ -8,21 +8,16 @@
     data () {
       return {
         option: {},
-        viewModel: '',
-        statusBarHeight: 0,
-        isNotIosApp: true
+        viewModel: ''
       }
     },
     onLoad (option) {
-
     },
-
     mounted () {
       this.init()
     },
     methods: {
       init () {
-
       }
     }
   }

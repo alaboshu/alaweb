@@ -1,7 +1,7 @@
 <template>
   <view v-if="async && viewModel" style="width:100%;overflow: hidden">
-    <zk-head :title="viewModel.name" :widget="viewModel" :showHead="viewModel.setting.showHead" ref="zkHead" v-if="isNotIosApp"></zk-head>
-    <div v-if="modelAsync">
+    <zk-head :title="viewModel.name" :widget="viewModel" :showHead="viewModel.setting.showHead" ref="zkHead"></zk-head>
+    <div>
       <view v-for="(widget, index) in viewModel.widgets" :key="index" :id="widget.widgetTheme" :style="widget.style && widget.style.css" :class="widget.borderClass">
         <widget-item :widget="widget" v-if="!widget.border&&!widget.layout" :model="viewModel" />
         <div class="border-header" v-if="widget.border">
@@ -37,17 +37,13 @@
     name: 'x-widget',
     components: {
       widgetItem
-      // MescrollUni
     },
     data () {
       return {
-        windowHieght: 0,
         viewModel: {
           widgets: []
         },
-        async: false,
-        modelAsync: true,
-        isNotIosApp: true
+        async: false
       }
     },
     props: {
@@ -60,28 +56,9 @@
     },
     async  mounted () {
       this.init()
-      this.$nextTick(() => {
-        this.$on('downRefresh', () => {
-          this.init()
-        })
-        this.$on('newPath', (viewModel) => {
-          this.viewModel = viewModel
-        })
-      })
     },
     methods: {
       async init () {
-        if (this.$user.isLogin()) {
-          if (this.$user.loginUser().gradeName !== '免费会员') {
-            this.$store.state.showPrice = true
-          } else {
-            this.$store.state.showPrice = false
-          }
-        }
-        if (this.$api.client() === 'AppPlus') {
-          this.isNotIosApp = false
-        }
-        this.windowHieght = uni.getSystemInfoSync().windowHeigh
         this.viewModel = await this.$api.themePage(this.option)
         if (this.viewModel.name !== '首页') {
           uni.setNavigationBarTitle({
@@ -90,10 +67,6 @@
         }
         console.log(this.viewModel.name, this.viewModel)
         this.async = true
-      },
-      async scrolltolower () {
-        this.$bus.$emit('onBottomBurst', true)
-        this.$bus.$emit('onBottom', true)
       }
     }
   }
