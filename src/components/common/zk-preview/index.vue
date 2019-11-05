@@ -16,19 +16,15 @@
               <div v-else>{{ item.value }}</div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
   </view>
 </template>
-
 <script>
- 
   import './var.scss'
   import './styles'
   export default {
-    
     data () {
       return {
         async: false,

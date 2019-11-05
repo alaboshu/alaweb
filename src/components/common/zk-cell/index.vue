@@ -14,9 +14,7 @@
 </template>
 
 <script>
- 
   export default {
-    
     data () {
       return {
         isLogin: false,
@@ -40,7 +38,7 @@
     methods: {
       async  init () {
         this.async = false
-                  this.widgetModel = await this.$api.themeWidget(this.widget)
+        this.widgetModel = await this.$api.themeWidget(this.widget)
         if (this.widget.apiUrl === '/api/theme/getlinkgroup') {
           this.isGroupLink = true
         }
@@ -51,6 +49,5 @@
 </script>
 <style scoped lang="scss">
   @import "@/assets/style/variable.scss";
-
   @import "./style.scss";
 </style>
