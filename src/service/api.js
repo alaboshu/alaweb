@@ -1,5 +1,4 @@
 import theme from '@/service/all/theme'
-import scroll from '@/service/all/scroll'
 import http from '@/service/all/http'
 import local from '@/service/utils/local'
 import loading from '@/service/utils/loading'
@@ -143,13 +142,6 @@ export default {
         }
       }
     })
-  },
-  // 上拉加载
-  scrollGetData (widget, parmenter) {
-    return scroll.getData(widget, parmenter)
-  },
-  scrollTolower (widget, parmenter, viewModel) {
-    return scroll.scrolltolower(widget, parmenter, viewModel)
   },
   // 微信提示
   weixinModel (message) {
