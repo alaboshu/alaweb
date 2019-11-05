@@ -11,15 +11,10 @@ export default {
       array: ['中国', '美国']
     }
   },
-  onLoad () {
-    uni.hideTabBar()
-  },
   mounted () {
     this.init()
     uni.hideTabBar()
   },
-
-  onLoad (option) {},
   onReachBottom () {},
   onPullDownRefresh () {},
   methods: {

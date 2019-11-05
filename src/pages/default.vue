@@ -1,9 +1,8 @@
 <template>
-  <view> </view>
+  <view>为什么不显示啊 </view>
 </template>
 
 <script>
-import pathJsonf from '../pages.json';
 export default {
   data () {
     return {}
@@ -13,15 +12,6 @@ export default {
       index: 0,
       text: 'text'
     })
-    uni.setTabBarItem({
-      index: 1,
-      text: 'aaaa'
-    })
-    uni.setTabBarItem({
-      idnex: 4,
-      text: '为什么'
-    })
-    console.info('就是了', pathJsonf)
   },
   onTabItemTap (ev) {
     console.info('ev', ev)

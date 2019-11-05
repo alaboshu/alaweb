@@ -1,5 +1,29 @@
 {
   "pages": [{
+      "path": "pages/tabber/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "enablePullDownRefresh": true
+      }
+    }, {
+      "path": "pages/tabber/mall",
+      "style": {
+        "navigationBarTitleText": "商城",
+        "enablePullDownRefresh": true
+      }
+    }, {
+      "path": "pages/tabber/sort",
+      "style": {
+        "navigationBarTitleText": "分类",
+        "enablePullDownRefresh": true
+      }
+    }, {
+      "path": "pages/tabber/user",
+      "style": {
+        "navigationBarTitleText": "个人中心",
+        "enablePullDownRefresh": true
+      }
+    }, {
       "path": "pages/default",
       "style": {
         "navigationBarTitleText": "阿拉博数",
@@ -16,14 +40,12 @@
         "enablePullDownRefresh": false
       }
     },
-    // #ifdef H5
     {
       "path": "pages/diy/index",
       "style": {
         "navigationBarTitleText": "diy"
       }
     },
-    // #endif
     {
       "path": "pages/test1",
       "style": {
@@ -84,7 +106,7 @@
         "selectedIconPath": "static/img/index-a.png"
       },
       {
-        "pagePath": "pages/tabber/stor",
+        "pagePath": "pages/tabber/sort",
         "text": "分类",
         "iconPath": "static/img/index.png",
         "selectedIconPath": "static/img/index-a.png"

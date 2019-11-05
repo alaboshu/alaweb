@@ -1,3 +1,3 @@
 <template>
-  <view class="mall"></view>
+  <view class="mall">商城页面</view>
 </template>
