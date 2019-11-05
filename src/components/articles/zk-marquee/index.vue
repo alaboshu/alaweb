@@ -23,10 +23,10 @@
   </view>
 </template>
 <script>
- 
+
   import { ARTICLE_TOPLINELIST_GET } from '@/service/all/apiUrl'
   export default {
-    
+
     data () {
       return {
         widgetModel: '',
