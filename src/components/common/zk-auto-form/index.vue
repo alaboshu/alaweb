@@ -101,9 +101,7 @@
       // 处理验证码，将当前表单的手机号传入到手机验证码中
       watcthPhoneVerfity () {
         this.$nextTick(() => {
-          console.info('this.$refs.phoneVerifiy', this.$refs.phoneVerifiy)
           if (this.$refs.phoneVerifiy) {
-            console.info('x-item', this.viewModel, this.column)
           }
         })
       }

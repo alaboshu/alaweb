@@ -86,7 +86,7 @@
         if (this.type) {
           this.apiUrl = '/Api/Auto/List?type=' + this.type // 通过type来设置Url
         }
-        console.info('apiUrl', this.apiUrl)
+
         if (!this.type && this.widget.apiUrl) {
           this.apiUrl = this.widget.apiUrl
         }
@@ -98,7 +98,7 @@
         } else {
           this.$api.toastWarn('数据获取失败')
         }
-        console.info('获取数据', response)
+
         this.height()
         this.async = true
       },

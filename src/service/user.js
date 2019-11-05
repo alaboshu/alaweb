@@ -234,7 +234,6 @@ export default {
   },
   // 检查是否需要登录，如果需要登录则跳转到登录页面，登录成功以后，返回到上一级页面
   checkLogin (option) {
-    console.info('sss')
     if (!this.isLogin()) {
       var usercode = option.usercode
       if (!api.isEmpty(usercode)) {

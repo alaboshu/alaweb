@@ -19,10 +19,8 @@
 
     },
     onReachBottom () {
-      console.info('可不可以触发你')
     },
     onPullDownRefresh () {
-      console.info('下拉刷新')
     },
     methods: {
 

@@ -107,7 +107,6 @@
         if (this.data.tabs !== null && this.data.tabs.length !== 0) {
           this.windowHeight = this.$api.screenHeight() - 46 - 44
         }
-        console.info('this.viewModel zk-list', this.viewModel)
         this.async = true
       },
       scrolltolower () {
