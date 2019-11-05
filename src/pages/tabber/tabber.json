@@ -1,0 +1,33 @@
+{
+  "tabber": [{
+      "name": "首页",
+      "index": 0,
+      "iconPath": "static/img/index.png",
+      "selectedIconPath": "static/img/index-a.png"
+    },
+    {
+      "name": "首页",
+      "index": 1,
+      "iconPath": "static/img/index.png",
+      "selectedIconPath": "static/img/index-a.png"
+    },
+    {
+      "name": "首页",
+      "index": 2,
+      "iconPath": "static/img/index.png",
+      "selectedIconPath": "static/img/index-a.png"
+    },
+    {
+      "name": "首页",
+      "index": 3,
+      "iconPath": "static/img/index.png",
+      "selectedIconPath": "static/img/index-a.png"
+    },
+    {
+      "name": "首页",
+      "index": 4,
+      "iconPath": "static/img/index.png",
+      "selectedIconPath": "static/img/index-a.png"
+    }
+  ]
+}

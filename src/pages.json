@@ -72,34 +72,28 @@
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [{
-        "pagePath": "pages/default",
+        "pagePath": "pages/tabber/index",
         "text": "首页",
         "iconPath": "static/img/index.png",
         "selectedIconPath": "static/img/index-a.png"
       },
       {
-        "pagePath": "pages/tabbar/product_class",
+        "pagePath": "pages/tabber/mall",
         "text": "商城",
-        "iconPath": "static/img/class.png",
-        "selectedIconPath": "static/img/class-a.png"
-      },
-      // {
-      //   "pagePath": "pages/tabbar/user_recommend",
-      //   "text": "文交所",
-      //   "iconPath": "static/img/school.png",
-      //   "selectedIconPath": "static/img/school-a.png"
-      // },
-      {
-        "pagePath": "pages/tabbar/press",
-        "text": "商学院",
-        "iconPath": "static/img/recommend.png",
-        "selectedIconPath": "static/img/recommend-a.png"
+        "iconPath": "static/img/index.png",
+        "selectedIconPath": "static/img/index-a.png"
       },
       {
-        "pagePath": "pages/user/index",
+        "pagePath": "pages/tabber/stor",
+        "text": "分类",
+        "iconPath": "static/img/index.png",
+        "selectedIconPath": "static/img/index-a.png"
+      },
+      {
+        "pagePath": "pages/tabber/user",
         "text": "我的",
-        "iconPath": "static/img/user.png",
-        "selectedIconPath": "static/img/user-a.png"
+        "iconPath": "static/img/index.png",
+        "selectedIconPath": "static/img/index-a.png"
       }
     ]
   }
