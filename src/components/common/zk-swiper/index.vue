@@ -34,10 +34,12 @@
     },
     mounted () {
       this.init()
+      console.info('就是这套停下来 ', this.widget)
     },
     methods: {
       async  init () {
         this.async = false
+
         this.widgetModel = await this.$api.themeWidget(this.widget)
         // this.swiperHeight = this.widget.value.height
         this.windowWidth = uni.getSystemInfoSync().windowWidth

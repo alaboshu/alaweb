@@ -17,11 +17,11 @@
   </view>
 </template>
 <script>
- 
+
   import './styles/index.js'
   import './var.scss'
   export default {
-    
+
     data () {
       return {
         widgetModel: '',
@@ -50,6 +50,7 @@
     methods: {
       async  init () {
         this.widgetModel = await this.$api.themeWidget(this.widget)
+
         if (this.widget !== undefined) {
           this.gridCol = this.widget.value.count
         }

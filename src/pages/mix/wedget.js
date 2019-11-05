@@ -1,14 +1,10 @@
+import theme from '@/service/all/theme'
 export default {
-  onLoad (option) {
+  onLoad(option) {
     this.option = option
     console.info('options', option)
   },
-  mounted () {
-    this.init()
-  },
   methods: {
-    init () {
-      console.info('哈哈哈')
-    }
+    async init() {}
   }
 }

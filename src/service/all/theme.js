@@ -30,26 +30,6 @@ export default {
   filerPageInfo (pageInfo, option) {
     pageInfo.widgets = this.filterWidgets(pageInfo.widgets)
     var setting = pageInfo.setting
-    // if (!api.isEmpty(setting)) {
-    // var title
-    // if (api.isEmpty(setting.title)) {
-    //   title = pageInfo.name
-    // } else {
-    //   title = setting.tit
-    // }
-    // uni.setNavigationBarTitle({
-    //   title: pageInfo.name
-    // })
-    // }
-    // if (!api.isEmpty(setting.background)) {
-    // uni.setNavigationBarColor({
-    //   frontColor: '#ffffff',
-    //   backgroundColor: setting.background
-    // })
-    // }
-    // if (option.path === 'user_bookingsignup_show') {
-    //   return pageInfo
-    // } else {
     // 登录信息判断
     if (setting.isLogin !== false) {
       if (!user.isLogin()) {
@@ -58,7 +38,6 @@ export default {
       } else {
         user.checkLogin(setting.isLogin)
       }
-      // }
     }
     return pageInfo
   },
