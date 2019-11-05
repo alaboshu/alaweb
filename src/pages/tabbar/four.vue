@@ -1,5 +1,5 @@
 <template>
-  <x-widget :option="option" ref="xWidget"></x-widget>
+  <x-widget :option="option"></x-widget>
 </template>
 
 <script>
@@ -7,16 +7,12 @@
   export default {
     data () {
       return {
-        option: {},
-        viewModel: '',
-        statusBarHeight: 0,
-        isNotIosApp: true
+        option: {}
       }
     },
     onLoad (option) {
-
+      this.option = option
     },
-
     mounted () {
       this.init()
     },
