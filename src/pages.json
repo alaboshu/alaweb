@@ -1,24 +1,24 @@
 {
   "pages": [{
-      "path": "pages/tabber/index",
+      "path": "pages/tabbar/one",
       "style": {
         "navigationBarTitleText": "首页",
         "enablePullDownRefresh": true
       }
     }, {
-      "path": "pages/tabber/mall",
+      "path": "pages/tabbar/two",
       "style": {
         "navigationBarTitleText": "商城",
         "enablePullDownRefresh": true
       }
     }, {
-      "path": "pages/tabber/sort",
+      "path": "pages/tabbar/three",
       "style": {
         "navigationBarTitleText": "分类",
         "enablePullDownRefresh": true
       }
     }, {
-      "path": "pages/tabber/user",
+      "path": "pages/tabbar/four",
       "style": {
         "navigationBarTitleText": "个人中心",
         "enablePullDownRefresh": true
@@ -94,25 +94,25 @@
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [{
-        "pagePath": "pages/tabber/index",
+        "pagePath": "pages/tabbar/one",
         "text": "首页",
         "iconPath": "static/img/index.png",
         "selectedIconPath": "static/img/index-a.png"
       },
       {
-        "pagePath": "pages/tabber/mall",
+        "pagePath": "pages/tabbar/two",
         "text": "商城",
         "iconPath": "static/img/index.png",
         "selectedIconPath": "static/img/index-a.png"
       },
       {
-        "pagePath": "pages/tabber/sort",
+        "pagePath": "pages/tabbar/three",
         "text": "分类",
         "iconPath": "static/img/index.png",
         "selectedIconPath": "static/img/index-a.png"
       },
       {
-        "pagePath": "pages/tabber/user",
+        "pagePath": "pages/tabbar/four",
         "text": "我的",
         "iconPath": "static/img/index.png",
         "selectedIconPath": "static/img/index-a.png"
