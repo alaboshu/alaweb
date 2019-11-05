@@ -2,7 +2,7 @@ import api from '@/service/api'
 import Vue from 'vue'
 
 export default {
-  async page (clientType, path) {
+  async page(clientType, path) {
     var result = {
       layouts: {},
       title: ''
@@ -25,7 +25,7 @@ export default {
   },
 
   // 模块信息,para 为附加参数
-  async widget (widget, config, appendPara) {
+  async widget(widget, config, appendPara) {
     var result = {
       path: config.path,
       widgetId: config.WidgetId,
@@ -52,7 +52,6 @@ export default {
           widgetId: result.widgetId,
           defaultDataId: result.defaultDataId,
           // 以下为额外参数
-          userId: loginUserId,
           userId: loginUserId,
           ...appendPara // 附加参数
         }
