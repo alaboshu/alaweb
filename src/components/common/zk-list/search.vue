@@ -57,10 +57,8 @@
 
 <script>
   import UniDrawer from './uni-drawer.vue'
-  import uniIcon from '../../order/zk-order-rate/stars/uni-icon.vue'
   export default {
     data () {
-      // let search = {}
       return {
         async: false,
         viewModel: {},
@@ -77,9 +75,7 @@
       widget: {}
     },
     components: {
-      UniDrawer,
-
-      uniIcon
+      UniDrawer
     },
     created () {
       // #ifdef MP-WEIXIN
