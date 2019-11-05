@@ -143,7 +143,7 @@
                 count: product.buyCount,
                 userId: vueThis.$user.loginUser().id
               }
-              var deleteCart = await vueThis.$api.httpGet(CART_REMOVECART_GET, paramenter)
+              var deleteCart = await vueThis.$api.httpGet('api/cart/removecart', paramenter)
               if (deleteCart.status === 1) {
                 vueThis.$api.toastSuccess('删除成功')
                 vueThis.init()

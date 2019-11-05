@@ -216,7 +216,7 @@
           userId: this.$user.id(),
           id: id
         }
-        var deleteResponse = await this.$api.httpGet(/api/order / cancel', parmenter)
+        var deleteResponse = await this.$api.httpGet('/api/order/cancel', parmenter)
         if (deleteResponse !== undefined) {
           if (deleteResponse.status === 1) {
             // this.type.title[tIndex].value.splice(sIndex, 1)
