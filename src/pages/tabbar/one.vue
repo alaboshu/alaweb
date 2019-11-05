@@ -3,23 +3,16 @@
 </template>
 
 <script>
-
-  export default {
-    data () {
-      return {
-        option: {}
-      }
-    },
-    onLoad (option) {
-      this.option = option
-    },
-    mounted () {
-      this.init()
-    },
-    methods: {
-      init () {
-
-      }
+import minx from '../mix/wedget';
+export default {
+  mixins: [minx],
+  data () {
+    return {
+      option: {}
     }
+  },
+  onLoad (option) {
+    this.option = option
   }
+}
 </script>
