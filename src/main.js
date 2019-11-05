@@ -131,6 +131,7 @@ import zkDiscountShopList from '@/components/themes/zk-discount-shop-list/index.
 import zkEggMachine from '@/components/themes/zk-egg-machine/index.vue'
 import zkEject from '@/components/themes/zk-eject/index.vue'
 import zkEnlargeSwiper from '@/components/themes/zk-enlarge-swiper/index.vue'
+import zkExchange from '@/components/themes/zk-exchange/index.vue'
 import zkFloatSwiper from '@/components/themes/zk-float-swiper/index.vue'
 import zkFoot from '@/components/themes/zk-foot/index.vue'
 import zkGridList from '@/components/themes/zk-grid-list/index.vue'
@@ -241,7 +242,6 @@ import zkTypeClass from '@/components/themes/zk-type-class/index.vue'
 import zkVideoImage from '@/components/themes/zk-video-image/index.vue'
 import zkVideoList from '@/components/themes/zk-video-list/index.vue'
 import zkVideo from '@/components/themes/zk-video/index.vue'
-import zkExchange from '@/components/themes/zk-exchange/index.vue'
 import zkAddressEdit from '@/components/user/zk-address-edit/index.vue'
 import zkBindMobile from '@/components/user/zk-bind-mobile/index.vue'
 import zkForgetPassword from '@/components/user/zk-forget-password/index.vue'
@@ -281,7 +281,6 @@ import xScroll from '@/elements/all/x-scroll/index.vue'
 import xSelect from '@/elements/all/x-select/index.vue'
 import xTimePicker from '@/elements/all/x-time-picker/index.vue'
 import xWidget from '@/elements/all/x-widget/index.vue'
-import auto from '@/elements/auto/index.vue'
 import xAuthorization from '@/elements/mp/x-authorization/index.vue'
 Vue.component('zk-account-security', zkAccountSecurity)
 Vue.component('zk-groupbuy', zkGroupbuy)
@@ -397,6 +396,7 @@ Vue.component('zk-discount-shop-list', zkDiscountShopList)
 Vue.component('zk-egg-machine', zkEggMachine)
 Vue.component('zk-eject', zkEject)
 Vue.component('zk-enlarge-swiper', zkEnlargeSwiper)
+Vue.component('zk-exchange', zkExchange)
 Vue.component('zk-float-swiper', zkFloatSwiper)
 Vue.component('zk-foot', zkFoot)
 Vue.component('zk-grid-list', zkGridList)
@@ -432,7 +432,6 @@ Vue.component('zk-merchant-image', zkMerchantImage)
 Vue.component('zk-merchant-intro', zkMerchantIntro)
 Vue.component('zk-merchant-list', zkMerchantList)
 Vue.component('zk-merchant-pay', zkMerchantPay)
-Vue.component('zk-exchange', zkExchange)
 Vue.component('zk-must-fight-today', zkMustFightToday)
 Vue.component('zk-my-favorite', zkMyFavorite)
 Vue.component('zk-nav-swiper', zkNavSwiper)
@@ -547,18 +546,17 @@ Vue.component('x-scroll', xScroll)
 Vue.component('x-select', xSelect)
 Vue.component('x-time-picker', xTimePicker)
 Vue.component('x-widget', xWidget)
-Vue.component('auto', auto)
 Vue.component('x-authorization', xAuthorization)
 
 Vue.config.productionTip = false
 
 // #ifdef H5
 Vue.prototype.$client = 'WapH5'
-// #endif
+    // #endif
 
 // #ifndef H5
 Vue.prototype.$client = 'WeChatLite'
-// #endif
+    // #endif
 
 Vue.prototype.$api = api
 Vue.prototype.$user = user
@@ -568,7 +566,7 @@ Vue.prototype.$store = store
 Vue.prototype.$bus = new Vue()
 weixin.login().then()
 const app = new Vue({
-  store,
-  ...App
+    store,
+    ...App
 })
 app.$mount()
