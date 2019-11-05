@@ -35,7 +35,7 @@
         </view>
       </view>
     </view>
-    <x-msg caption="支付成功" v-if="showmsg"></x-msg>
+    <x-message caption="支付成功" v-if="showmsg"></x-message>
   </view>
 </template>
 <script>

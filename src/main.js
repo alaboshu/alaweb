@@ -259,29 +259,27 @@ import zkUserGive from '@/components/user/zk-user-give/index.vue'
 import zkUserGrade from '@/components/user/zk-user-grade/index.vue'
 import zkUserIndex from '@/components/user/zk-user-index/index.vue'
 import zkUserView from '@/components/user/zk-user-view/index.vue'
-import xA from '@/elements/all/x-a/index.vue'
-import xButton from '@/elements/all/x-button/index.vue'
-import xCell from '@/elements/all/x-cell/index.vue'
-import xCityPicker from '@/elements/all/x-city-picker/index.vue'
-import xCountDown from '@/elements/all/x-countDown/index.vue'
-import xDrawer from '@/elements/all/x-drawer/index.vue'
-import xFormLabel from '@/elements/all/x-form-label/index.vue'
-import xIcon from '@/elements/all/x-icon/index.vue'
-import xImage from '@/elements/all/x-image/index.vue'
-import xInput from '@/elements/all/x-input/index.vue'
-import xMsg from '@/elements/all/x-msg/index.vue'
-import xNumber from '@/elements/all/x-number/index.vue'
-import xPassword from '@/elements/all/x-password/index.vue'
-import xPay from '@/elements/all/x-pay/index.vue'
-import xPhoneVerifiy from '@/elements/all/x-phone-verifiy/index.vue'
-import xPicker from '@/elements/all/x-picker/index.vue'
-import xPopup from '@/elements/all/x-popup/index.vue'
-import xRadio from '@/elements/all/x-radio/index.vue'
-import xScroll from '@/elements/all/x-scroll/index.vue'
-import xSelect from '@/elements/all/x-select/index.vue'
-import xTimePicker from '@/elements/all/x-time-picker/index.vue'
-import xWidget from '@/elements/all/x-widget/index.vue'
-import xAuthorization from '@/elements/mp/x-authorization/index.vue'
+import xA from '@/elements/x-a/index.vue'
+import xAuthorization from '@/elements/x-authorization/index.vue'
+import xButton from '@/elements/x-button/index.vue'
+import xCell from '@/elements/x-cell/index.vue'
+import xCityPicker from '@/elements/x-city-picker/index.vue'
+import xCountDown from '@/elements/x-countDown/index.vue'
+import xDrawer from '@/elements/x-drawer/index.vue'
+import xFormLabel from '@/elements/x-form-label/index.vue'
+import xIcon from '@/elements/x-icon/index.vue'
+import xImage from '@/elements/x-image/index.vue'
+import xInput from '@/elements/x-input/index.vue'
+import xMessage from '@/elements/x-message/index.vue'
+import xNumber from '@/elements/x-number/index.vue'
+import xPassword from '@/elements/x-password/index.vue'
+import xPay from '@/elements/x-pay/index.vue'
+import xPhoneVerifiy from '@/elements/x-phone-verifiy/index.vue'
+import xPicker from '@/elements/x-picker/index.vue'
+import xRadio from '@/elements/x-radio/index.vue'
+import xSelect from '@/elements/x-select/index.vue'
+import xTimePicker from '@/elements/x-time-picker/index.vue'
+import xWidget from '@/elements/x-widget/index.vue'
 Vue.component('zk-account-security', zkAccountSecurity)
 Vue.component('zk-groupbuy', zkGroupbuy)
 Vue.component('zk-about', zkAbout)
@@ -525,6 +523,7 @@ Vue.component('zk-user-grade', zkUserGrade)
 Vue.component('zk-user-index', zkUserIndex)
 Vue.component('zk-user-view', zkUserView)
 Vue.component('x-a', xA)
+Vue.component('x-authorization', xAuthorization)
 Vue.component('x-button', xButton)
 Vue.component('x-cell', xCell)
 Vue.component('x-city-picker', xCityPicker)
@@ -534,19 +533,16 @@ Vue.component('x-form-label', xFormLabel)
 Vue.component('x-icon', xIcon)
 Vue.component('x-image', xImage)
 Vue.component('x-input', xInput)
-Vue.component('x-msg', xMsg)
+Vue.component('x-message', xMessage)
 Vue.component('x-number', xNumber)
 Vue.component('x-password', xPassword)
 Vue.component('x-pay', xPay)
 Vue.component('x-phone-verifiy', xPhoneVerifiy)
 Vue.component('x-picker', xPicker)
-Vue.component('x-popup', xPopup)
 Vue.component('x-radio', xRadio)
-Vue.component('x-scroll', xScroll)
 Vue.component('x-select', xSelect)
 Vue.component('x-time-picker', xTimePicker)
 Vue.component('x-widget', xWidget)
-Vue.component('x-authorization', xAuthorization)
 
 Vue.config.productionTip = false
 

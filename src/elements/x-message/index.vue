@@ -1,6 +1,6 @@
 <template>
   <view v-if="async">
-    <view class="x-msg " :style="'width:'+boxWidth+'px;height:'+boxHeight+'px;'" v-if="isDefaultMsg">
+    <view class="x-message " :style="'width:'+boxWidth+'px;height:'+boxHeight+'px;'" v-if="isDefaultMsg">
       <view class="default-msg">
         <view class="msg-icon">
           <i class="icon iconfont " :class="theme.icon" :style="'color:'+theme.color"></i>
@@ -148,7 +148,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .x-msg {
+  .x-message {
     position: fixed;
     top: 0;
     left: 0;
