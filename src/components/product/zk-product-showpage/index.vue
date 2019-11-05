@@ -53,11 +53,9 @@
   import ShowIntro from './show_intro'
   import ShowRecommend from './show_recommend'
   import ShowBar from './show_bar'
-  import { PRODUCT_SHOW_GET } from '@/service/all/apiUrl'
- 
   import { setTimeout } from 'timers'
   export default {
-    
+
     data () {
       return {
         showheaderTop: false,
@@ -141,7 +139,7 @@
           id: this.widget.route.id,
           userId: this.$user.loginUser().id
         }
-        var productShowReponse = await this.$api.httpGet(PRODUCT_SHOW_GET, par)
+        var productShowReponse = await this.$api.httpGet('/api/product/show', par)
         if (productShowReponse.status !== 1) {
           var that = this
           uni.showModal({

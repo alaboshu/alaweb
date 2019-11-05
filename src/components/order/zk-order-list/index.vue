@@ -66,8 +66,6 @@
 </template>
 
 <script>
-
-  import { ORDER_CANCEL_GET, ORDER_PAY_GET } from '@/service/all/apiUrl'
   export default {
 
     data () {
@@ -193,7 +191,7 @@
           userId: this.$user.loginUser().id,
           id: id
         }
-        var buyInputResponse = await this.$api.httpGet(ORDER_PAY_GET, para)
+        var buyInputResponse = await this.$api.httpGet('api/order/pay', para)
         if (buyInputResponse.status !== 1) {
           this.$api.toastWarn(buyInputResponse.message)
           return
@@ -218,7 +216,7 @@
           userId: this.$user.id(),
           id: id
         }
-        var deleteResponse = await this.$api.httpGet(ORDER_CANCEL_GET, parmenter)
+        var deleteResponse = await this.$api.httpGet('/api/order/cancel', parmenter)
         if (deleteResponse !== undefined) {
           if (deleteResponse.status === 1) {
             // this.type.title[tIndex].value.splice(sIndex, 1)

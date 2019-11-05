@@ -27,8 +27,6 @@
 </template>
 
 <script>
-
-  import { PRODUCT_LIST_GET } from '@/service/all/apiUrl.js'
   import { setInterval, clearInterval } from 'timers'
   export default {
 
@@ -98,7 +96,7 @@
             var that = this
             var tiems = setInterval(async () => {
               that.loading = false
-              var produtList = await that.$api.httpGet(PRODUCT_LIST_GET, this.listPar)
+              var produtList = await that.$api.httpGet('/api/product/list', this.listPar)
               that.productItem = produtList.result
               that.$refs.zkProductItem.$emit('toProductItem', this.productItem, true)
               clearInterval(tiems)
@@ -143,7 +141,7 @@
         if (this.widget.value !== null && this.widget.value.priceStyleId !== undefined) {
           this.listPar.priceStyleId = this.widget.value.priceStyleId
         }
-        var produtList = await this.$api.httpGet(PRODUCT_LIST_GET, this.listPar)
+        var produtList = await this.$api.httpGet('/api/product/list', this.listPar)
         this.productItem = produtList.result
         if (this.productItem.productItems.length === 0) {
           this.isNotData = true
@@ -158,7 +156,7 @@
           id = ''
         }
         this.listPar.SortOrder = id
-        var produtList = await this.$api.httpGet(PRODUCT_LIST_GET, this.listPar)
+        var produtList = await this.$api.httpGet('/api/product/list', this.listPar)
         this.productItem = produtList.result
         if (this.productItem.productItems.length === 0) {
           this.isNotData = true

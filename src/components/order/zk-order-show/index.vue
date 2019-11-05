@@ -129,8 +129,6 @@
 </template>
 
 <script>
-
-  import { ORDER_PAY_GET } from '@/service/all/apiUrl'
   import local from '@/service/utils/local.js'
   import apiBaseUrl from '@/service/config.js'
   export default {
@@ -256,7 +254,7 @@
           id: this.viewModel.id,
           userId: this.$user.id()
         }
-        var buyInputResponse = await this.$api.httpGet(ORDER_PAY_GET, para)
+        var buyInputResponse = await this.$api.httpGet('api/order/pay', para)
         this.$refs.show_pay.$emit('payMethod', buyInputResponse.result.payId, buyInputResponse.result.payAmount, buyInputResponse.result.orderIds) // 唤起支付窗口
       },
       async getCancel (api) {

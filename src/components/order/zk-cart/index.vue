@@ -76,7 +76,6 @@
 
 <script>
   import configUrl from '@/service/config.js'
-  import { CART_REMOVECART_GET, CART_GETCART_GET } from '@/service/all/apiUrl.js'
 
   export default {
 
@@ -103,7 +102,7 @@
     },
     methods: {
       async  init () {
-        var response = await this.$api.httpGet(CART_GETCART_GET, { 'loginUserId': this.$user.id() })
+        var response = await this.$api.httpGet('/api/cart/getcart', { 'loginUserId': this.$user.id() })
         if (response.status === 1) {
           this.widgetModel = response.result
           this.widgetModel.storeItems.forEach((store, storeIndex) => {
@@ -144,7 +143,7 @@
                 count: product.buyCount,
                 userId: vueThis.$user.loginUser().id
               }
-              var deleteCart = await vueThis.$api.httpGet(CART_REMOVECART_GET, paramenter)
+              var deleteCart = await vueThis.$api.httpGet('api/cart/removecart', paramenter)
               if (deleteCart.status === 1) {
                 vueThis.$api.toastSuccess('删除成功')
                 vueThis.init()

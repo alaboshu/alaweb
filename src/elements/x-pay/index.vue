@@ -82,7 +82,6 @@
 </template>
 
 <script>
-  import { PAY_GETLIST_GET, PAY_PAY_POST } from '@/service/all/apiUrl.js'
   import weixin from '@/service/core/weixin'
   import { setTimeout } from 'timers'
   import appPay from './appPay'
@@ -176,7 +175,7 @@
           payId: this.payId,
           userId: this.$user.id()
         }
-        var response = await this.$api.httpGet(PAY_GETLIST_GET, paras) // 获取支付方式列表
+        var response = await this.$api.httpGet('/api/pay/pay', paras) // 获取支付方式列表
         if (response.status === 1) {
           this.asyncFlag = true
           var pays = response.result.payTypeList // 所有的支付方式
@@ -214,10 +213,10 @@
           await appPay.appWxPay(this, paras, this.orderIds, 'wxpay')
         } else if (this.$api.client() === 'AppPlus' && this.selectPayType === 4) {
           // app支付宝支付
-          var response = await this.$api.httpPost(PAY_PAY_POST, paras)
+          var response = await this.$api.httpPost('/api/pay/pay', paras)
           appPay.appAliPay(this, response, this.orderIds)
         } else {
-          var response = await this.$api.httpPost(PAY_PAY_POST, paras)
+          var response = await this.$api.httpPost('/api/pay/pay', paras)
           if (response.status === 1) {
             this.showPupop = false
             this.showPayPassword = false

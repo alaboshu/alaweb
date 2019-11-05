@@ -1,4 +1,4 @@
-import { THEME_GETPAGEINFO_GET } from '@/service/all/apiUrl'
+
 import globalConfig from '@/service/config'
 import http from '@/service/all/http'
 import api from '@/service/api'
@@ -223,7 +223,7 @@ export default {
       path: path
     }
     if (findPageInfo === null) {
-      var getPageInfo = await http.get(THEME_GETPAGEINFO_GET, para)
+      var getPageInfo = await http.get('/api/theme/getpageinfo', para)
       findPageInfo = getPageInfo.result
     }
     return findPageInfo
