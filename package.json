@@ -26,12 +26,15 @@
   },
   "dependencies": {
     "aes": "^0.1.0",
+    "axios": "^0.19.0",
     "crypto-js": "^3.1.9-1",
+    "flyio": "^0.6.14",
     "md5": "^2.2.1",
     "vue-video-player": "^5.0.2",
     "vuedraggable": "^2.22.0",
     "vuex": "^3.1.1",
-    "weixin-js-sdk": "^1.4.0-test"
+    "weixin-js-sdk": "^1.4.0-test",
+    "wx-axios-promise": "^2.3.3"
   },
   "devDependencies": {
     "@dcloudio/uni-cli-shared": "0.2.963",

@@ -4,19 +4,21 @@ import token from "@/service/all/token";
 import api from "@/service/api";
 import user from "@/service/user";
 import globalConfig from "@/service/config";
-import axios from 'axios'
+import axios from "wx-axios-promise";
 
 export default {
   async get(apiUrl, data) {
-    this.getAxios(apiUrl)
-    var response = await axios.get(globalConfig.apiBaseUrl + apiUrl, {
+    var axiosWx = axios();
+    this.getAxios(apiUrl);
+    var response = await axiosWx.get(globalConfig.apiBaseUrl + apiUrl, {
       params: data
     });
     return response.data;
   },
   async post(apiUrl, data) {
-    this.getAxios(apiUrl)
-    var response = await axios.post(globalConfig.apiBaseUrl + apiUrl, data)
+    this.getAxios(apiUrl);
+    var axiosWx = axios();
+    var response = await axiosWx.post(globalConfig.apiBaseUrl + apiUrl, data);
     return response.data;
   },
   //  Put方法：改
@@ -25,14 +27,15 @@ export default {
     return response;
   },
   getAxios(apiUrl) {
-    axios.interceptors.request.use((config) => {
-      console.info('config', config)
+    var axiosWx = axios();
+    axiosWx.interceptors.request.use(config => {
+      console.info("config", config);
       config.headers = {
         ...config.headers,
         ...this.getHead(apiUrl)
-      }
-      return config
-    })
+      };
+      return config;
+    });
   },
   getHead(apiUrl) {
     var headObj = {
