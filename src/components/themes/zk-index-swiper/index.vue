@@ -67,7 +67,7 @@
         searchModel: '',
         liksT: [
           {
-            name: '文房四宝'
+            name: '阿拉博数'
           },
           {
             name: '茅台'

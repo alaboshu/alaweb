@@ -1,7 +1,7 @@
 <template>
   <view class="zk-cource-home">
     <view class="zk-qiNNHeader">
-      <view class="header">文房四宝</view>
+      <view class="header">阿拉博数</view>
     </view>
     <view class="zk-qiNN-content">
       <view class="zk-couse-type">
@@ -9,7 +9,7 @@
           <!-- <img src="../../../static/img/zk-course/view1.png"  class="clicks"> -->
           <p class="content-title">选择课程</p>
           <view class="goNext">
-            <p>文房四宝课程预定</p> &nbsp;
+            <p>阿拉博数课程预定</p> &nbsp;
             <x-icon src="zk-jiantou" size="12"></x-icon>
           </view>
         </view>

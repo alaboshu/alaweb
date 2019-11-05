@@ -57,7 +57,7 @@
               <img src="https://s-open.qiniuniu99.com/wwwroot/uploads/apiImg/228.jpg">
             </div>
             <div class="start-btn" @click="closeBootUp">
-              开享文房四宝之旅
+              开享阿拉博数之旅
             </div>
           </div>
         </view>

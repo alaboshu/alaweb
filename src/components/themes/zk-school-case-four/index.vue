@@ -12,7 +12,7 @@
       </view>
       <view class="case_card_text" v-if="widgetModel[3].switch">
         <!-- <view class="case_card_text_title" v-if="widgetModel[0]">{{widgetModel[0].name}}</view> -->
-        <view class="case_card_text_info" v-html="widgetModel[3].detail">商家简介 --- 文房四宝是一个完善的营销系统，我们不仅仅提供营销工具与策略，背后更是有一个强大的“产品供应链+仓储物流+互联网技术”作为支撑。为您降低风险、解决后顾之忧。</view>
+        <view class="case_card_text_info" v-html="widgetModel[3].detail">商家简介 --- 阿拉博数是一个完善的营销系统，我们不仅仅提供营销工具与策略，背后更是有一个强大的“产品供应链+仓储物流+互联网技术”作为支撑。为您降低风险、解决后顾之忧。</view>
       </view>
       <view class="case_card_btn" v-if="showTag">
         <view class="case_card_btn_top">
