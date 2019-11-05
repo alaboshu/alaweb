@@ -72,10 +72,29 @@
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [{
-      "pagePath": "pages/default",
-      "text": "首页",
-      "iconPath": "static/img/index.png",
-      "selectedIconPath": "static/img/index-a.png"
-    }]
+        "pagePath": "pages/tabber/index",
+        "text": "首页",
+        "iconPath": "static/img/index.png",
+        "selectedIconPath": "static/img/index-a.png"
+      },
+      {
+        "pagePath": "pages/tabber/mall",
+        "text": "商城",
+        "iconPath": "static/img/index.png",
+        "selectedIconPath": "static/img/index-a.png"
+      },
+      {
+        "pagePath": "pages/tabber/stor",
+        "text": "分类",
+        "iconPath": "static/img/index.png",
+        "selectedIconPath": "static/img/index-a.png"
+      },
+      {
+        "pagePath": "pages/tabber/user",
+        "text": "我的",
+        "iconPath": "static/img/index.png",
+        "selectedIconPath": "static/img/index-a.png"
+      }
+    ]
   }
 }

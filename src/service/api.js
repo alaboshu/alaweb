@@ -1,5 +1,6 @@
 import theme from '@/service/all/theme'
 import http from '@/service/all/http'
+import httpWx from '@/service/all/http.wx'
 import local from '@/service/utils/local'
 import loading from '@/service/utils/loading'
 import toast from '@/service/utils/toast'
@@ -41,6 +42,7 @@ export default {
   // 输出信息,发布环境不输出
   info () {
     if (process.env.NODE_ENV === 'development') {
+      console.info(arguments)
     }
   },
   // 添加日志
@@ -65,10 +67,16 @@ export default {
   /** http请求  ***************************************************************************** */
   // http请求,api接口get方法
   async httpGet (apiUrl, data) {
+    if (this.client() === 'WeChatLite') {
+      return httpWx.get(apiUrl, data)
+    }
     return http.get(apiUrl, data)
   },
   //   http请求,Post方法 :增
   async httpPost (apiUrl, data) {
+    if (this.client() === 'WeChatLite') {
+      return httpWx.post(apiUrl, data)
+    }
     return http.post(apiUrl, data)
   },
   //   http请求,Put方法：改
@@ -255,11 +263,7 @@ export default {
               uni.navigateTo({
                 url: '/pages/user/login'
               })
-            } else if (res.cancel) {
-              // uni.reLaunch({
-              //   url: '/pages/default'
-              // })
-            }
+            } else if (res.cancel) {}
           }
         })
       } else {

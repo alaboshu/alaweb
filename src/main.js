@@ -40,6 +40,7 @@ import zkProductClass from '@/components/product/zk-product-class/index.vue'
 import zkProductList from '@/components/product/zk-product-list/index.vue'
 import zkProductListpage from '@/components/product/zk-product-listpage/index.vue'
 import zkProductShowpage from '@/components/product/zk-product-showpage/index.vue'
+import zkTabber from '@/components/tabber/zk-tabber/index.vue'
 import zkHead from '@/components/themes/zk-head/index.vue'
 import zkSearch from '@/components/themes/zk-search/index.vue'
 import zkTabbar from '@/components/themes/zk-tabbar/index.vue'
@@ -92,6 +93,7 @@ Vue.component('zk-product-class', zkProductClass)
 Vue.component('zk-product-list', zkProductList)
 Vue.component('zk-product-listpage', zkProductListpage)
 Vue.component('zk-product-showpage', zkProductShowpage)
+Vue.component('zk-tabber', zkTabber)
 Vue.component('zk-head', zkHead)
 Vue.component('zk-search', zkSearch)
 Vue.component('zk-tabbar', zkTabbar)
