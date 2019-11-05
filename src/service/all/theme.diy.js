@@ -1,9 +1,4 @@
-import {
-  THEME_GETPAGEINFO_GET
-} from '@/service/all/apiUrl'
-import {
-  api
-} from '@/service/api'
+import api from '@/service/api'
 import Vue from 'vue'
 
 export default {
@@ -19,8 +14,7 @@ export default {
       clientType: clientType,
       url: path
     }
-
-    var response = await api.get(THEME_GETPAGEINFO_GET, para)
+    var response = await api.get('/api/theme/getpageinfo', para)
     if (response !== null) {
       result.title = response.title
       if (response.layouts.length >= 1) {

@@ -76,7 +76,6 @@
 
 <script>
   import configUrl from '@/service/config.js'
-  import { CART_REMOVECART_GET, CART_GETCART_GET } from '@/service/all/apiUrl.js'
 
   export default {
 
@@ -103,7 +102,7 @@
     },
     methods: {
       async  init () {
-        var response = await this.$api.httpGet(CART_GETCART_GET, { 'loginUserId': this.$user.id() })
+        var response = await this.$api.httpGet('/api/cart/getcart', { 'loginUserId': this.$user.id() })
         if (response.status === 1) {
           this.widgetModel = response.result
           this.widgetModel.storeItems.forEach((store, storeIndex) => {

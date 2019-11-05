@@ -167,7 +167,7 @@
 </template>
 
 <script>
-  import { ORDER_BUYINFO_POST, ORDER_GETPRICE_POST, ORDER_BUY_POST } from '@/service/all/apiUrl'
+
   import apiBaseUrl from '@/service/config.js'
 
   // import { setTimeout } from 'timers'
@@ -287,7 +287,7 @@
           userId: this.$user.loginUser().id,
           productJson: JSON.stringify(buyProductInfo)
         }
-        var initResponse = await this.$api.httpPost(ORDER_BUYINFO_POST, buyInfoInput)
+        var initResponse = await this.$api.httpPost('api/order/buyinfo', buyInfoInput)
         if (initResponse.status !== 1) {
           this.$api.toastWarn(initResponse.message)
           return false
@@ -403,7 +403,7 @@
           storeExpressJson: JSON.stringify(storeDelivery),
           CouponJson: JSON.stringify(this.CouponList)
         }
-        var priceResponse = await this.$api.httpPost(ORDER_GETPRICE_POST, priceInput)
+        var priceResponse = await this.$api.httpPost('api/order/getprice', priceInput)
         if (priceResponse.status !== 1) {
           // this.$api.toastWarn(priceResponse.message)
           var _this = this
@@ -506,7 +506,7 @@
             // activityRecordId: this.activityRecordId
             CouponJson: JSON.stringify(this.CouponList)
           }
-          var response = await this.$api.httpPost(ORDER_BUY_POST, buyInput)
+          var response = await this.$api.httpPost('/api/order/buy', buyInput)
           if (response.status === 1) {
             uni.hideLoading()
             this.$refs.show_pay.$emit('payMethod', response.result.payId, response.result.payAmount, response.result.orderIds) // 唤起支付窗口

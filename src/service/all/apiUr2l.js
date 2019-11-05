@@ -64,7 +64,7 @@ export const USERADDRESS_SAVEUSERINFOADDRESS_POST = '/api/useraddress/saveuserin
 export const USERADDRESS_GET_GET = '/api/useraddress/get' // 获取用户地址数据
 export const USERADDRESS_DELETE_GET = '/api/useraddress/delete' // 删除用户地址
 export const USERADDRESS_SETDEFAULT_POST = '/api/useraddress/setdefault' // 设置默认地址
-export const USERADDRESS_SINGLE_GET = '/api/useraddress/single' // id值为空获取默认地址 如果没有默认地址则返回值为空 id 值存在则获取与id相同的地址
+export const '/api/useraddress/single' = '/api/useraddress/single' // id值为空获取默认地址 如果没有默认地址则返回值为空 id 值存在则获取与id相同的地址
 export const USERADDRESS_QUERYUSERLIST_GET = '/api/useraddress/queryuserlist' // 查询登录用户分页数据
 export const USERADDRESS_QUERYFIELDVALUE_GET = '/api/useraddress/queryfieldvalue' //  根据Id和字段名称,获取单个字段的值
 export const USERADDRESS_NEXTBYID_GET = '/api/useraddress/nextbyid' // 根据Id获取下一条记录
@@ -92,7 +92,7 @@ export const USER_GETREGFORM_GET = '/api/user/getregform' // 获取注册客户�
 export const USER_GETLOGINFORM_GET = '/api/user/getloginform' // 获取会员登陆视图
 export const USER_GETFINDPASSWORDFORM_GET = '/api/user/getfindpasswordform' // 获取会员找回密码视图
 export const USER_GETPASSWORDFORM_GET = '/api/user/getpasswordform' // 获取会员修改密码视图
-export const USER_REG_POST = '/Api/Member/Reg' // 注册客户
+export const '/api/member/reg' = '/Api/Member/Reg' // 注册客户
 export const USER_UPDATE_POST = '/api/user/update' // 修该用户信息
 export const USER_CHANGEPASSWORD_POST = '/api/user/changepassword' // 修改密码，密码传入明文
 export const USER_FINDPASSWORD_POST = '/api/user/findpassword' // 找回密码，密码传入明文
@@ -199,7 +199,7 @@ export const USERTYPE_QUERYBYID_GET = '/api/usertype/querybyid' // 根据Id获�
 export const USERTYPE_QUERYDIC_GET = '/api/usertype/querydic' // 根据Id获取单个实例字典集合
 
 //  Theme相关的API接口
-export const THEME_GETPAGEINFO_GET = '/api/theme/getpageinfo' // 获取页面配置
+export const '/api/theme/getpageinfo' = '/api/theme/getpageinfo' // 获取页面配置
 export const THEME_GETALLPAGEINFO_GET = '/api/theme/getallpageinfo' // 获取所有页面配置
 export const THEME_GETLINK_GET = '/api/theme/getlink' // 链接
 export const THEME_GETLINKGROUP_GET = '/api/theme/getlinkgroup' // 链接分组
@@ -410,7 +410,7 @@ export const BILL_QUERYDIC_GET = '/api/bill/querydic' // 根据Id获取单个实
 
 //  Pay相关的API接口
 export const PAY_GETLIST_GET = '/api/pay/getlist' // 获取终端类型，返回支付类型
-export const PAY_PAY_POST = '/api/pay/pay' // 传入通用订单和支付方式并完成相对应的支付
+export const '/api/pay/pay' = '/api/pay/pay' // 传入通用订单和支付方式并完成相对应的支付
 export const PAY_PAYCHECKLIST_GET = '/api/pay/paychecklist' // 收银台
 export const PAY_PREVIEW_GET = '/api/pay/preview' // 收银详情
 export const PAY_QUERYUSERLIST_GET = '/api/pay/queryuserlist' // 查询登录用户分页数据
@@ -1605,8 +1605,8 @@ export const STORE_QUERYBYID_GET = '/api/store/querybyid' // 根据Id获取单�
 export const STORE_QUERYDIC_GET = '/api/store/querydic' // 根据Id获取单个实例字典集合
 
 //  Product相关的API接口
-export const PRODUCT_SHOW_GET = '/api/product/show' // 商品详情
-export const PRODUCT_LIST_GET = '/api/product/list' // 商品列表，对应zk-product-item
+export const '/api/product/show' = '/api/product/show' // 商品详情
+export const '/api/product/list' = '/api/product/list' // 商品列表，对应zk-product-item
 export const PRODUCT_GETLISTITEM_GET = '/api/product/getlistitem' // 商品列表，对应zk-product-item
 export const PRODUCT_CLASS_GET = '/api/product/class' // 商品分类Api接口
 export const PRODUCT_QUERYUSERLIST_GET = '/api/product/queryuserlist' // 查询登录用户分页数据
@@ -1673,9 +1673,9 @@ export const PRODUCTSKU_QUERYBYID_GET = '/api/productsku/querybyid' // 根据Id�
 export const PRODUCTSKU_QUERYDIC_GET = '/api/productsku/querydic' // 根据Id获取单个实例字典集合
 
 //  Cart相关的API接口
-export const CART_ADDCART_POST = '/api/cart/addcart' // 添加商品到购物车
-export const CART_GETCART_GET = '/api/cart/getcart' // 获取购物车数据
-export const CART_REMOVECART_GET = '/api/cart/removecart' // 删除购物车
+export const '/api/cart/addcart' = '/api/cart/addcart' // 添加商品到购物车
+export const '/api/cart/getcart' = '/api/cart/getcart' // 获取购物车数据
+export const / api / cart / removecart = '/api/cart/removecart' // 删除购物车
 export const CART_UPDATECART_PUT = '/api/cart/updatecart' // 更新购物车
 export const CART_QUERYUSERLIST_GET = '/api/cart/queryuserlist' // 查询登录用户分页数据
 export const CART_QUERYFIELDVALUE_GET = '/api/cart/queryfieldvalue' //  根据Id和字段名称,获取单个字段的值
@@ -1709,13 +1709,13 @@ export const ORDERACTION_QUERYBYID_GET = '/api/orderaction/querybyid' // 根据I
 export const ORDERACTION_QUERYDIC_GET = '/api/orderaction/querydic' // 根据Id获取单个实例字典集合
 
 //  Order相关的API接口
-export const ORDER_PAY_GET = '/api/order/pay' // 代付款订单支付
-export const ORDER_CANCEL_GET = '/api/order/cancel' // 订单取消
+export const 'api/order/pay' = '/api/order/pay' // 代付款订单支付
+export const / api / order / cancel ' = ' / api / order / cancel ' // 订单取消
 export const ORDER_SHOW_GET = '/api/order/show' // 订单详情
-export const ORDER_GETPRICE_POST = '/api/order/getprice' // 获取价格
+export const 'api/order/getprice' = '/api/order/getprice' // 获取价格
 export const ORDER_BUY_POST = '/api/order/buy' // 立即购买，商品购买，提交订单时候用，包括购物车购买
 export const ORDER_INDEX_GET = '/api/order/index' // 我的订单
-export const ORDER_BUYINFO_POST = '/api/order/buyinfo' // 商品的SKUid，确认订单页面，获取商品购买信息，每次修改ORDER_BUYINFO_POST价格通过此方法计算，在/order/buy页面使用
+export const 'api/order/buyinfo' = '/api/order/buyinfo' // 商品的SKUid，确认订单页面，获取商品购买信息，每次修改ORDER_BUYINFO_POST价格通过此方法计算，在/order/buy页面使用
 export const ORDER_RATE_POST = '/api/order/rate' // 用户评论
 export const ORDER_CONFIRM_POST = '/api/order/confirm' // 收货确认
 export const ORDER_QUERYUSERLIST_GET = '/api/order/queryuserlist' // 查询登录用户分页数据
@@ -1867,4 +1867,3 @@ export const ACTIVITYRECORD_QUERYUSERDELETE_DELETE = '/api/activityrecord/queryu
 export const ACTIVITYRECORD_BATCHDELETE_POST = '/api/activityrecord/batchdelete' // 删除单条记录
 export const ACTIVITYRECORD_QUERYBYID_GET = '/api/activityrecord/querybyid' // 根据Id获取单个实例
 export const ACTIVITYRECORD_QUERYDIC_GET = '/api/activityrecord/querydic' // 根据Id获取单个实例字典集合
-

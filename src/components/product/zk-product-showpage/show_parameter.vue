@@ -168,7 +168,6 @@
   </view>
 </template>
 <script>
-  import { CART_ADDCART_POST } from '@/service/all/apiUrl'
   import apiBaseUrl from '@/service/config.js'
   // import { setTimeout } from 'timers'
   export default {
@@ -323,7 +322,7 @@
             count: this.buyCount,
             userId: this.$user.loginUser().id
           }
-          var message = await this.$api.httpPost(CART_ADDCART_POST, params)
+          var message = await this.$api.httpPost('/api/cart/addcart', params)
           if (message.status === 1) {
             this.$api.toastWarn('成功加入购物车')
             this.popupSale = false

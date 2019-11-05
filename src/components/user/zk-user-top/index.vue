@@ -59,12 +59,8 @@
 </template>
 
 <script>
-  import { USERADDRESS_SINGLE_GET } from '@/service/all/apiUrl'
-
   import './var.scss'
   import './styles'
-
-
   export default {
 
     data () {
@@ -109,7 +105,7 @@
           id: this.pagesId,
           userId: this.$user.loginUser().id
         }
-        var singleAddress = await this.$api.httpGet(USERADDRESS_SINGLE_GET, parament)
+        var singleAddress = await this.$api.httpGet('/api/useraddress/single', parament)
 
         if (singleAddress.status === 1) {
           var singleMsg = singleAddress.result

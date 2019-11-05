@@ -24,7 +24,6 @@
 </template>
 <script>
 
-  import { ARTICLE_TOPLINELIST_GET } from '@/service/all/apiUrl'
   export default {
 
     data () {
@@ -49,7 +48,7 @@
     },
     methods: {
       async  init () {
-        var topLineResponse = await this.$api.httpGet(ARTICLE_TOPLINELIST_GET)
+        var topLineResponse = await this.$api.httpGet('/api/article/toplinelist')
         if (topLineResponse !== undefined) {
           this.viewModel = topLineResponse.result.apiDataList
           this.imageUrl = this.viewModel[0].image

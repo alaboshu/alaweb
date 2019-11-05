@@ -62,8 +62,6 @@
 </template>
 
 <script>
-  import { USER_REG_POST } from '@/service/all/apiUrl'
-
   export default {
     created () {
       if (this.$user.isLogin()) {
@@ -136,7 +134,7 @@
       },
       async submitForm () {
         this.zceuser.ConfirmPassword = this.zceuser.Password
-        var suconter = await this.$api.httpPost(USER_REG_POST, this.zceuser)
+        var suconter = await this.$api.httpPost('/api/member/reg', this.zceuser)
         if (suconter !== undefined) {
           if (suconter.status === 1) {
             this.$api.toastSuccess('注册成功')
