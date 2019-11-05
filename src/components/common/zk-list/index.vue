@@ -86,19 +86,16 @@
         if (this.type) {
           this.apiUrl = '/Api/Auto/List?type=' + this.type // 通过type来设置Url
         }
-
         if (!this.type && this.widget.apiUrl) {
           this.apiUrl = this.widget.apiUrl
         }
         var response = await this.$api.httpGet(this.apiUrl, this.queryPara)
-
         if (response.status === 1) {
           this.viewModel = response.result
           this.allDataList = [...this.allDataList, ...this.viewModel.data.result]
         } else {
           this.$api.toastWarn('数据获取失败')
         }
-
         this.height()
         this.async = true
       },
