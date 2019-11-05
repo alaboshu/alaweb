@@ -61,11 +61,6 @@
     async  mounted () {
       this.init()
       this.$nextTick(() => {
-        // this.$on('xWidget', (msg) => {
-        //   if (this.$user.isLogin() === false) {
-        //     this.init()
-        //   }
-        // })
         this.$on('downRefresh', () => {
           this.init()
         })
@@ -88,7 +83,6 @@
         }
         this.windowHieght = uni.getSystemInfoSync().windowHeigh
         this.viewModel = await this.$api.themePage(this.option)
-        console.info('hahahahha', this.viewModel)
         if (this.viewModel.name !== '首页') {
           uni.setNavigationBarTitle({
             title: this.viewModel.name

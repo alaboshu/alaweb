@@ -1,4 +1,3 @@
-
 import globalConfig from '@/service/config'
 import http from '@/service/all/http'
 import api from '@/service/api'
@@ -7,7 +6,7 @@ import pagesInfo from '@/build.json'
 // import data from '@/data'
 import user from '../user'
 export default {
-  async page (option) {
+  async page(option) {
     var path = base.path(option)
     if (path === '/index') {
       api.localSet('preUrl', path)
@@ -27,7 +26,7 @@ export default {
   },
 
   // 过滤页面信息
-  filerPageInfo (pageInfo, option) {
+  filerPageInfo(pageInfo, option) {
     pageInfo.widgets = this.filterWidgets(pageInfo.widgets)
     var setting = pageInfo.setting
     // 登录信息判断
@@ -43,7 +42,7 @@ export default {
   },
 
   // 模块信息,para 为附加参数
-  async widget (widget, appendPara) {
+  async widget(widget, appendPara) {
     var parameter = {
       apiUrl: '',
       value: null
@@ -112,15 +111,14 @@ export default {
     }
     if (parameter.value === null || parameter.value === undefined) {
       // 从数据库中获取数据
-      if (parameter.apiUrl === null) {
-      } else {
+      if (parameter.apiUrl === null) {} else {
         parameter = await this.getWidgetValueByApiUrl(parameter, para)
       }
     }
     return parameter
   },
   // 处理widgets
-  filterWidgets (widgets) {
+  filterWidgets(widgets) {
     if (widgets === null) {
       return null
     }
@@ -177,7 +175,7 @@ export default {
     return widgets
   },
   // 获取值
-  async getWidgetValueByApiUrl (parameter, para) {
+  async getWidgetValueByApiUrl(parameter, para) {
     if (parameter.apiUrl !== undefined) {
       var response = await http.get(parameter.apiUrl, para)
       parameter.value = response
@@ -185,7 +183,7 @@ export default {
     return parameter
   },
   // 当前访问的页面
-  async getPageInfo (path) {
+  async getPageInfo(path) {
     var allPageInfo = await this.getAllPageList()
     var findPageInfo = null
     if (allPageInfo !== undefined && allPageInfo != null) {
@@ -208,7 +206,7 @@ export default {
     return findPageInfo
   },
   // 所有页面记录，并写入缓存
-  async getAllPageList () {
+  async getAllPageList() {
     if (base.isBuild()) {
       api.localRemove('addressData')
       return pagesInfo

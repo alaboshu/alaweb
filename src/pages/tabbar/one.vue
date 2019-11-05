@@ -12,7 +12,7 @@
       }
     },
     onLoad (option) {
-      this.option = 'tabbar/one'
+      this.option.path = 'tabbar/one'
     },
     mounted () {
       this.init().then(() => {

@@ -34,7 +34,6 @@
     },
     mounted () {
       this.init()
-      console.info('就是这套停下来 ', this.widget)
     },
     methods: {
       async  init () {
@@ -42,6 +41,7 @@
 
         this.widgetModel = await this.$api.themeWidget(this.widget)
         // this.swiperHeight = this.widget.value.height
+        console.info('没有数据', this.widgetModel)
         this.windowWidth = uni.getSystemInfoSync().windowWidth
         this.swiperHeight = this.windowWidth * Number(this.widget.value.height)
         this.async = true
