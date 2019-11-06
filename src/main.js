@@ -40,6 +40,7 @@ import zkProductClass from '@/components/product/zk-product-class/index.vue'
 import zkProductList from '@/components/product/zk-product-list/index.vue'
 import zkProductListpage from '@/components/product/zk-product-listpage/index.vue'
 import zkProductShowpage from '@/components/product/zk-product-showpage/index.vue'
+import zkSwiperList from '@/components/swiper/zk-swiper-list/index.vue'
 import zkTabber from '@/components/tabber/zk-tabber/index.vue'
 import zkHead from '@/components/themes/zk-head/index.vue'
 import zkSearch from '@/components/themes/zk-search/index.vue'
@@ -54,7 +55,7 @@ import xAuthorization from '@/elements/x-authorization/index.vue'
 import xButton from '@/elements/x-button/index.vue'
 import xCell from '@/elements/x-cell/index.vue'
 import xCityPicker from '@/elements/x-city-picker/index.vue'
-import xCountDown from '@/elements/x-countDown/index.vue'
+import xCountDown from '@/elements/x-count-down/index.vue'
 import xDrawer from '@/elements/x-drawer/index.vue'
 import xFormLabel from '@/elements/x-form-label/index.vue'
 import xIcon from '@/elements/x-icon/index.vue'
@@ -93,6 +94,7 @@ Vue.component('zk-product-class', zkProductClass)
 Vue.component('zk-product-list', zkProductList)
 Vue.component('zk-product-listpage', zkProductListpage)
 Vue.component('zk-product-showpage', zkProductShowpage)
+Vue.component('zk-swiper-list', zkSwiperList)
 Vue.component('zk-tabber', zkTabber)
 Vue.component('zk-head', zkHead)
 Vue.component('zk-search', zkSearch)
@@ -107,7 +109,7 @@ Vue.component('x-authorization', xAuthorization)
 Vue.component('x-button', xButton)
 Vue.component('x-cell', xCell)
 Vue.component('x-city-picker', xCityPicker)
-Vue.component('x-countDown', xCountDown)
+Vue.component('x-count-down', xCountDown)
 Vue.component('x-drawer', xDrawer)
 Vue.component('x-form-label', xFormLabel)
 Vue.component('x-icon', xIcon)
