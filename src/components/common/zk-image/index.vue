@@ -1,7 +1,7 @@
 <template>
   <view v-if="widgetModel && asyns" class="zk-image">
     <view :title="widgetModel.name" @click="goLinks(widgetModel.url.value)" :style="{height:height+'px'}">
-      <image :src="widgetModel.image" :alt="widgetModel.name" class="zk-image-bg" />
+      <image :src="widgetModel.imgupload" :alt="widgetModel.name" class="zk-image-bg" />
     </view>
   </view>
 </template>

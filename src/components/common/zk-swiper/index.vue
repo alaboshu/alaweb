@@ -1,7 +1,7 @@
 <template>
   <div v-if="async">
     <swiper :autoplay="false" :circular="true" :indicator-dots="true" indicator-active-color="#c91230" indicator-color="#ebedf0" :style="{height:swiperHeight+'px'}">
-      <swiper-item v-for="(item,index) in widget.value.links" :key="index">
+      <swiper-item v-for="(item,index) in widget.value.swiperForm" :key="index">
         <view :title="item.name" @click="goLinks(item.url.value)">
           <img :src="item.image" :alt="item.intro" :style="{height:swiperHeight+'px'}" class="bgImg" />
         </view>
@@ -41,7 +41,6 @@
 
         this.widgetModel = await this.$api.themeWidget(this.widget)
         // this.swiperHeight = this.widget.value.height
-        console.info('没有数据', this.widgetModel)
         this.windowWidth = uni.getSystemInfoSync().windowWidth
         this.swiperHeight = this.windowWidth * Number(this.widget.value.height)
         this.async = true
