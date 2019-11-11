@@ -13,7 +13,7 @@
     data () {
       return {
         widgetModel: null,
-        height: '',
+        height: 100,
         asyns: false
       }
     },
@@ -29,6 +29,7 @@
     methods: {
       async  init () {
         this.widgetModel = this.widget.value
+        console.info('啊哈哈哈哈', this.widgetModel.imgupload)
         if (this.widgetModel.height > 0) {
           this.height = this.widgetModel.height
         }
