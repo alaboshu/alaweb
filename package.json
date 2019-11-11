@@ -30,6 +30,7 @@
     "crypto-js": "^3.1.9-1",
     "flyio": "^0.6.14",
     "md5": "^2.2.1",
+    "sass": "^1.23.3",
     "vue-video-player": "^5.0.2",
     "vuedraggable": "^2.22.0",
     "vuex": "^3.1.1",
