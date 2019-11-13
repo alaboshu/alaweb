@@ -54,7 +54,7 @@
       <div class="diy-dottedbox" />
       <div class="diy-widget-actions">
         <span class="diy-widget-actions-span" @click="eidtTabBar()">编辑</span>
-        <span class="diy-widget-actions-span" @click="postMessage('pageSet',viewModel)">设置</span>
+        <span class="diy-widget-actions-span" @click="postMessage('pageSet',viewModel)" v-if="false">设置</span>
       </div>
     </view>
   </div>
