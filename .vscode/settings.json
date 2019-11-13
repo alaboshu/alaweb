@@ -1,6 +1,5 @@
 {
   "editor.tabSize": 2,
-  "prettier.semi": false,
   "explorer.confirmDelete": false,
   "git.autofetch": true,
   "explorer.confirmDragAndDrop": false,
@@ -13,8 +12,6 @@
   "vetur.format.defaultFormatter.html": "js-beautify-html",
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 3000,
-  "prettier.eslintIntegration": true,
-  "prettier.singleQuote": true,
   "eslint.run": "onSave",
   "vetur.format.styleInitialIndent": true,
   "vetur.format.scriptInitialIndent": true,
