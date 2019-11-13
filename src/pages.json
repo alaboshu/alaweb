@@ -95,27 +95,27 @@
     "backgroundColor": "#ffffff",
     "list": [{
         "pagePath": "pages/tabbar/one",
-        "text": "首页",
-        "iconPath": "static/img/index.png",
-        "selectedIconPath": "static/img/index-a.png"
+        "text": "",
+        "iconPath": "static/tabbar/white.png",
+        "selectedIconPath": "static/tabbar/white.png"
       },
       {
         "pagePath": "pages/tabbar/two",
-        "text": "商城",
-        "iconPath": "static/img/index.png",
-        "selectedIconPath": "static/img/index-a.png"
+        "text": "",
+        "iconPath": "static/tabbar/white.png",
+        "selectedIconPath": "static/tabbar/white.png"
       },
       {
         "pagePath": "pages/tabbar/three",
-        "text": "分类",
-        "iconPath": "static/img/index.png",
-        "selectedIconPath": "static/img/index-a.png"
+        "text": "",
+        "iconPath": "static/tabbar/white.png",
+        "selectedIconPath": "static/tabbar/white.png"
       },
       {
         "pagePath": "pages/tabbar/four",
-        "text": "我的",
-        "iconPath": "static/img/index.png",
-        "selectedIconPath": "static/img/index-a.png"
+        "text": "",
+        "iconPath": "static/tabbar/white.png",
+        "selectedIconPath": "static/tabbar/white.png"
       }
     ]
   }
