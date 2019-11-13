@@ -237,7 +237,7 @@
       eidtTabBar () {
         var widget = {
           name: 'zk-tabbar',
-          widgetId: '5c7b08e3a1355908e48cf4f3'
+          widgetId: '5dc201f5c8267a146475c41d'
         }
         this.postMessage('editWidget', widget)
       },
