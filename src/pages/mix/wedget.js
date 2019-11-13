@@ -2,7 +2,7 @@ import theme from '@/service/all/theme'
 export default {
   onLoad (option) {
     this.option = option
-    console.info('options', option)
+    console.info('aaaaaaaaaaaa', this.option)
   },
   methods: {
     async init () {
@@ -15,9 +15,14 @@ export default {
     getTabbar (data) {
       if (data) {
         // 动态修改底部tabbar
+        var color = data.tabbarForm.color ? data.tabbarForm.color : '#a2a2a2'
+        var selectColor = data.tabbarForm.selectColor ? data.tabbarForm.selectColor : '#FF8C85'
+        uni.setTabBarStyle({
+          color: color,
+          selectedColor: selectColor
+        })
         if (data.tabbarForm.links) {
           data.tabbarForm.links.forEach((element, index) => {
-            console.info('element', element.imageGroup)
             uni.setTabBarItem({
               index: index,
               text: element.link.name,

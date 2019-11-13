@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import minx from '../mix/wedget'
+import minx from '../mix/wedget';
 export default {
   mixins: [minx],
   data () {
@@ -16,9 +16,6 @@ export default {
   },
   mounted () {
     this.init()
-  },
-  methods: {
-    init () {}
   }
 }
 </script>

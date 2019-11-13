@@ -1,24 +1,22 @@
 <template>
   <view class="zk-grid zk-grid-b">
-    <view class="weui-grid_div" v-if="widget ">
-      <view class="weui-grid_a" @click="goPages(item.url.value)" v-for="(item, index) in widget.value.gridList" :key="index" :class="{'weui-grid_gridCol':index>gridCol-1}" :style="'width:'+100/gridCol+'%'">
+    <view class="weui-grid_div" v-if="widgetModel && widgetModel.value">
+      <view class="weui-grid_a" @click="goPages(item.url.value)" v-for="(item, index) in widgetModel.value.gridForm" :key="index" :class="{ 'weui-grid_gridCol': index > gridCol - 1 }" :style="'width:' + 100 / gridCol + '%'">
         <view class="weui-grid__icon">
-          <x-icon :icon="item.icon" v-if="item.icon.name" :iconSecondColor="item.iconColor" v-show="!isApp"></x-icon>
-          <i v-if="item.icon.name" :class=" 'grid__icon icon iconfont  ' +item.icon.name" :style="'font-size:'+item.icon.size+'px;color:'+item.iconColor+';'" v-show="isApp"></i>
-          <x-icon :src="item.image" :size="iconSize" v-else-if="item.image||item.image.length!==0"></x-icon>
-          <x-icon :name="item.icon" :size="item.size" :color="item.color" v-else-if="item.icon"></x-icon>
+          <!-- <x-icon :icon="item.icon" v-if="item.icon.name" :iconSecondColor="item.iconColor" v-show="!isApp"></x-icon> -->
+          <!-- <i v-if="item.icon.name" :class="'grid__icon icon iconfont  ' + item.icon.name" :style=" 'font-size:' + item.icon.size + 'px;color:' + item.iconColor + ';' " v-show="isApp"></i> -->
+          <x-icon :src="item.image" :size="iconSize" v-if="item.image || item.image.length !== 0"></x-icon>
+          <x-icon :name="item.icon.name" :size="item.size" :color="item.color" v-else-if="item.icon"></x-icon>
         </view>
-        <p class="weui-grid__label">{{item.name}}</p>
+        <p class="weui-grid__label">{{ item.link.name }}</p>
       </view>
     </view>
   </view>
 </template>
 <script>
-
   import './styles/index.js'
   import './var.scss'
   export default {
-
     data () {
       return {
         widgetModel: '',
@@ -46,12 +44,11 @@
       this.init()
     },
     methods: {
-      async  init () {
+      async init () {
         this.widgetModel = await this.$api.themeWidget(this.widget)
-        if (this.widget !== undefined) {
-          this.gridCol = this.widget.value.gridList
-        }
-        console.info('this', this.widgetModel)
+        // if (this.widget !== undefined) {
+        //   this.gridCol = this.widget.value.gridList
+        // }
         if (this.widget.value.iconSize !== undefined) {
           this.iconSize = this.widget.value.iconSize
         } else {
@@ -65,4 +62,3 @@
     }
   }
 </script>
-

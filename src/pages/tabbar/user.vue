@@ -12,13 +12,10 @@ export default {
     }
   },
   onLoad (option) {
-    this.option.path = '/tabbar/user';
+    this.option.path = '/tabbar/user'
   },
   mounted () {
     this.init()
-  },
-  methods: {
-    init () {}
   }
 }
 </script>
