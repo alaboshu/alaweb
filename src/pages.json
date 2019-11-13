@@ -1,6 +1,6 @@
 {
   "pages": [{
-      "path": "pages/tabbar/one",
+      "path": "pages/tabbar/index",
       "style": {
         "navigationBarTitleText": "首页",
         "enablePullDownRefresh": true
@@ -18,7 +18,7 @@
         "enablePullDownRefresh": true
       }
     }, {
-      "path": "pages/tabbar/four",
+      "path": "pages/tabbar/user",
       "style": {
         "navigationBarTitleText": "个人中心",
         "enablePullDownRefresh": true
@@ -94,7 +94,7 @@
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [{
-        "pagePath": "pages/tabbar/one",
+        "pagePath": "pages/tabbar/index",
         "text": "",
         "iconPath": "static/tabbar/white.png",
         "selectedIconPath": "static/tabbar/white.png"
@@ -112,7 +112,7 @@
         "selectedIconPath": "static/tabbar/white.png"
       },
       {
-        "pagePath": "pages/tabbar/four",
+        "pagePath": "pages/tabbar/user",
         "text": "",
         "iconPath": "static/tabbar/white.png",
         "selectedIconPath": "static/tabbar/white.png"

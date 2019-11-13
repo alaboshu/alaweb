@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import minx from '../mix/wedget'
+import minx from '../mix/wedget';
 export default {
   mixins: [minx],
   data () {
@@ -12,13 +12,10 @@ export default {
     }
   },
   onLoad (option) {
-    this.option.path = '/tabbar/two';
+    this.option.path = '/tabbar/index';
   },
   mounted () {
     this.init()
-  },
-  methods: {
-    init () {}
   }
 }
 </script>
