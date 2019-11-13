@@ -199,10 +199,6 @@ export default {
       clientType: 'WapH5',
       path: path
     }
-    if (findPageInfo === null) {
-      var getPageInfo = await http.get('/api/theme/getpageinfo', para)
-      findPageInfo = getPageInfo.result
-    }
     return findPageInfo
   },
   // 所有页面记录，并写入缓存
