@@ -197,10 +197,6 @@ export default {
         }
       }
     }
-    var para = {
-      clientType: 'WapH5',
-      path: path
-    }
     return findPageInfo
   },
   // 所有页面记录，并写入缓存
