@@ -1,7 +1,8 @@
 <template>
   <view class="zk-grid zk-grid-b">
     <view class="weui-grid_div" v-if="widgetModel && widgetModel.value">
-      <view class="weui-grid_a" @click="goPages(item.url.value)" v-for="(item, index) in widgetModel.value.gridForm" :key="index" :class="{ 'weui-grid_gridCol': index > gridCol - 1 }" :style="'width:' + 100 / gridCol + '%'">
+      <!-- :style="'width:' + 100 / gridCol + '%'" -->
+      <view class="weui-grid_a" @click="goPages(item.url.value)" v-for="(item, index) in widgetModel.value.gridForm" :key="index" :class="{ 'weui-grid_gridCol': index > gridCol - 1 }" :style="'width:25%;'">
         <view class="weui-grid__icon">
           <!-- <x-icon :icon="item.icon" v-if="item.icon.name" :iconSecondColor="item.iconColor" v-show="!isApp"></x-icon> -->
           <!-- <i v-if="item.icon.name" :class="'grid__icon icon iconfont  ' + item.icon.name" :style=" 'font-size:' + item.icon.size + 'px;color:' + item.iconColor + ';' " v-show="isApp"></i> -->
@@ -30,7 +31,7 @@
     },
     onLoad () {
       this.init()
-      if (this.widget !== undefined) {
+      if (this.widget !== undefined && this.widget.value) {
         this.gridCol = this.widget.value.count
       }
 
@@ -46,9 +47,6 @@
     methods: {
       async init () {
         this.widgetModel = await this.$api.themeWidget(this.widget)
-        // if (this.widget !== undefined) {
-        //   this.gridCol = this.widget.value.gridList
-        // }
         if (this.widget.value.iconSize !== undefined) {
           this.iconSize = this.widget.value.iconSize
         } else {
