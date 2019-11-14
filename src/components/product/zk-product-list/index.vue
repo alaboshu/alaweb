@@ -1,7 +1,7 @@
 <template>
-  <view v-if="async">
-    <page-item v-if="widget.isPage" :widget="widget" :viewModel="viewModel.productItems"></page-item>
-    <common-item :viewModel="viewModel.productItems" :widget="widget" v-else></common-item>
+  <view v-if="async" style="background: #f2f2f2">
+    <page-item v-if="widget.isPage" :widget="widget" :viewModel="allDataList"></page-item>
+    <common-item :viewModel="allDataList" :widget="widget" v-else></common-item>
   </view>
 </template>
 
@@ -37,9 +37,9 @@
         var widgetPara = this.widget
         this.queryPara = {
           ...this.queryPara,
-          ...widgetPara
+          ...widgetPara.value
         }
-        var response = await this.$api.httpGet('/Api/Product/List', this.queryPara)
+        var response = await this.$api.httpGet('/Api/Product/List')
         if (response.status === 1) {
           this.viewModel = response.result
           this.allDataList = [...this.allDataList, ...this.viewModel.productItems]

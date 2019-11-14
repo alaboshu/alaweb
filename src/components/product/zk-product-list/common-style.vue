@@ -1,7 +1,7 @@
 <template>
   <view>
-    <single-item :viewModel="viewModel" v-if="widget.styleStype == 'single'"></single-item>
-    <product-item :viewModel="viewModel" v-if="widget.styleStype == 'product'"></product-item>
+    <!-- <single-item :viewModel="viewModel" v-if="type == 'single'"></single-item> -->
+    <product-item :viewModel="viewModel"></product-item>
   </view>
 </template>
 
@@ -16,7 +16,10 @@
     },
     props: {
       viewModel: {},
-      widget: {}
+      widget: {},
+      type: {
+        defualt: 'product'
+      }
     }
   }
 </script>
