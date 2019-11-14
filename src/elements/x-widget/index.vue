@@ -37,7 +37,7 @@
 </template>
 
 <script>
-  import widgetItem from './widget-item';
+  import widgetItem from './widget-item'
   export default {
     name: 'x-widget',
     components: {
@@ -64,12 +64,13 @@
     methods: {
       async init () {
         this.viewModel = await this.$api.themePage(this.option)
+        console.info('这个是从哪里冒出来的', this.viewModel)
         if (this.viewModel.name !== '首页') {
           uni.setNavigationBarTitle({
             title: this.viewModel.name
           })
         }
-        console.info('这个是从哪里冒出来的', this.widget)
+
         console.log(this.viewModel.name, this.viewModel)
         this.async = true
       }

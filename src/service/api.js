@@ -27,7 +27,7 @@ const wushare = uni.requireNativePlugin('WUApp-Share')
 
 export default {
   // 当前租户
-  tenant() {
+  tenant () {
     if (config.isTenant === true) {
       var tenant = this.vuexLocalGet('tenant')
       return tenant
@@ -36,107 +36,107 @@ export default {
     }
   },
   // 是否为租户模式
-  isTenant() {
+  isTenant () {
     return config.isTenant
   },
   // 输出信息,发布环境不输出
-  info() {
+  info () {
     if (process.env.NODE_ENV === 'development') {
       console.info(arguments)
     }
   },
   // 添加日志
-  async log() {
+  async log () {
     var para = {
       message: JSON.stringify(arguments)
     }
     await this.httpPost('/api/logs/add', para)
   },
   // config信息
-  config() {
+  config () {
     return config
   },
   /** theme模板  ***************************************************************************** */
-  async themePage(option, url) {
+  async themePage (option, url) {
     return theme.page(option)
   },
   // 模块信息
-  async themeWidget(widget, appendPara) {
+  async themeWidget (widget, appendPara) {
     return theme.widget(widget, appendPara)
   },
   /** http请求  ***************************************************************************** */
   // http请求,api接口get方法
-  async httpGet(apiUrl, data) {
+  async httpGet (apiUrl, data) {
     if (this.client() === 'WeChatLite') {
       return httpWx.get(apiUrl, data)
     }
     return http.get(apiUrl, data)
   },
   //   http请求,Post方法 :增
-  async httpPost(apiUrl, data) {
+  async httpPost (apiUrl, data) {
     if (this.client() === 'WeChatLite') {
       return httpWx.post(apiUrl, data)
     }
     return http.post(apiUrl, data)
   },
   //   http请求,Put方法：改
-  async httpPut(apiUrl, data) {
+  async httpPut (apiUrl, data) {
     return http.put(apiUrl, data)
   },
   //  http请求,delete方法：删
-  async httpDelete(apiUrl, data) {
+  async httpDelete (apiUrl, data) {
     return http.delete(apiUrl, data)
   },
   //  延时加载数据到缓存
-  async httpLazy(apiUrl, para, cacheKey) {
+  async httpLazy (apiUrl, para, cacheKey) {
     return http.delete(apiUrl, cacheKey, para)
   },
   /** loading  ***************************************************************************** */
-  loadingOpen(time) {
+  loadingOpen (time) {
     return loading.open(time)
   },
-  loadingClose(time, isLoad) {
+  loadingClose (time, isLoad) {
     return loading.close(time, isLoad)
   },
   /** local 缓存  ***************************************************************************** */
   // 获取缓存
-  localGet(name) {
+  localGet (name) {
     return local.get(name)
   },
   // 设置缓存
-  localSet(name, data) {
+  localSet (name, data) {
     return local.set(name, data)
   },
   // 删除缓存
-  localRemove(name) {
+  localRemove (name) {
     return local.remove(name)
   },
   // 判断是否有值
-  hasValue(name) {
+  hasValue (name) {
     return local.hasValue(name)
   },
   /** toast  **************************************************************************** */
   // 成功提示
-  toast(message) {
+  toast (message) {
     return toast.success(message)
   },
-  toastSuccess(message) {
+  toastSuccess (message) {
     return toast.success(message)
   },
   // 温馨提示、错误提示
-  toastWarn(message) {
+  toastWarn (message) {
     return toast.warn(message)
   },
   // 底部文字提示
-  toastButton(message) {
+  toastButton (message) {
     return toast.botton(message)
   },
   // 中间文字
-  centerButton(message) {
+  centerButton (message) {
     return toast.center(message)
   },
   // 弹出确认消息
-  confirm(message) {
+  confirm (message) {
     var _this = this
     uni.showModal({
       title: '提示',
@@ -152,7 +152,7 @@ export default {
     })
   },
   // 微信提示
-  weixinModel(message) {
+  weixinModel (message) {
     uni.showModal({
       title: '提示',
       content: message,
@@ -162,7 +162,7 @@ export default {
     })
   },
   /** 微信分享  ***************************************************************************** */
-  share(title, imageUrl, desc, url) {
+  share (title, imageUrl, desc, url) {
     if (this.client() === 'AppPlus' && this.payType() === 4) {
       shareApp.appShare(title, url, desc, imageUrl)
     } else if (this.client() === 'AppPlus' && this.payType() === 3) {
@@ -182,23 +182,23 @@ export default {
       }, 500)
     }
   },
-  shareApp(title, imageUrl, summary, url) {
+  shareApp (title, imageUrl, summary, url) {
     shareApp.appShare(title, url, summary, imageUrl)
   },
   /** widget  ***************************************************************************** */
   // 获取模块
-  widgetGetByPath(widgets, path) {
+  widgetGetByPath (widgets, path) {
     return widget.getByPath(widgets, path)
   },
   // 判断字符串是否为空，或在null 或者undefined
-  isEmpty(str) {
+  isEmpty (str) {
     return help.isEmpty(str)
   },
-  baseUrl() {
+  baseUrl () {
     return config.apiBaseUrl
   },
   // 终端类型 ：包括小程序，APP，H5包括微信公众号的判断
-  client() {
+  client () {
     // #ifdef H5
     var u = navigator.userAgent
     var client = 'WapH5'
@@ -219,7 +219,7 @@ export default {
     // #endif
   },
   // 支付类型
-  payType() {
+  payType () {
     if (this.client() === 'WapH5') {
       // 手机Wap
       return 2
@@ -245,7 +245,7 @@ export default {
   },
   // 页面跳转
   // // 页面跳转
-  to(url, isApp) {
+  to (url, isApp) {
     if (url === '/pages/default' || url.includes('pages/tabbar')) {
       uni.reLaunch({
         url: url
@@ -291,7 +291,7 @@ export default {
     this.historys(url)
   },
   // 设置历史记录，保留5条历史记录
-  historys(url) {
+  historys (url) {
     var historys = this.localGet('browse_historys')
     if (this.isEmpty(historys)) {
       historys = []
@@ -305,7 +305,7 @@ export default {
       this.localSet('browse_historys', historys)
     }
   },
-  back(url) {
+  back (url) {
     var historys = this.localGet('browse_historys')
     if (url === 'login' && user.isLogin() === false) {
       uni.reLaunch({
@@ -358,7 +358,7 @@ export default {
       })
     }
   },
-  async checkUpdatin() {
+  async checkUpdatin () {
     /* eslint-disable */
     var version
     var _this = this

@@ -11,11 +11,9 @@ export default {
     if (path === '/index') {
       api.localSet('preUrl', path)
     }
-    console.info('path', path)
     var pageInfo = await this.getPageInfo(path)
     var widgets = []
     if (pageInfo !== undefined && pageInfo !== null) {
-      console.info('aaaa', pageInfo)
       for (var i = 0; i < pageInfo.widgets.length; i++) {
         var widgetItem = pageInfo.widgets[i]
         widgetItem.route = option
@@ -225,7 +223,7 @@ export default {
       }
     }
     if (isRequest) {
-      var response = await http.get('Api/Theme/GetAllClientPages', para)
+      var response = await api.httpGet('Api/Theme/GetAllClientPages', para)
       allPageInfo = response.result
       api.localRemove('addressData')
       api.vuexSet(allPageCacheKey, allPageInfo)
