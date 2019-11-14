@@ -11,9 +11,11 @@ export default {
     if (path === '/index') {
       api.localSet('preUrl', path)
     }
+    console.info('path', path)
     var pageInfo = await this.getPageInfo(path)
     var widgets = []
-    if (pageInfo !== undefined) {
+    if (pageInfo !== undefined && pageInfo !== null) {
+      console.info('aaaa', pageInfo)
       for (var i = 0; i < pageInfo.widgets.length; i++) {
         var widgetItem = pageInfo.widgets[i]
         widgetItem.route = option
@@ -27,18 +29,20 @@ export default {
 
   // 过滤页面信息
   filerPageInfo (pageInfo, option) {
-    pageInfo.widgets = this.filterWidgets(pageInfo.widgets)
-    var setting = pageInfo.setting
-    // 登录信息判断
-    if (setting.isLogin !== false) {
-      if (!user.isLogin()) {
-        user.checkLogin(setting.isLogin)
-        return false
-      } else {
-        user.checkLogin(setting.isLogin)
+    if (pageInfo) {
+      pageInfo.widgets = this.filterWidgets(pageInfo.widgets)
+      var setting = pageInfo.setting
+      // 登录信息判断
+      if (setting.isLogin !== false) {
+        if (!user.isLogin()) {
+          user.checkLogin(setting.isLogin)
+          return false
+        } else {
+          user.checkLogin(setting.isLogin)
+        }
       }
+      return pageInfo
     }
-    return pageInfo
   },
 
   // 模块信息,para 为附加参数

@@ -3,23 +3,19 @@
 </template>
 
 <script>
-
-  export default {
-    data () {
-      return {
-        option: {}
-      }
-    },
-    onLoad (option) {
-      this.option.path = 'tabbar/three'
-    },
-    mounted () {
-      this.init()
-    },
-    methods: {
-      init () {
-
-      }
+import minx from '../mix/wedget';
+export default {
+  mixins: [minx],
+  data () {
+    return {
+      option: {}
     }
+  },
+  onLoad (option) {
+    this.option.path = 'tabbar/three';
+  },
+  mounted () {
+    this.init()
   }
+}
 </script>

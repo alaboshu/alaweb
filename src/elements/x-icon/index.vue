@@ -46,7 +46,6 @@
         if (this.icon) {
           this.isImage = false
           this.iconSize = this.icon.size
-          // this.iconColor = this.icon.color)
           if (this.icon.iconSecondColor) {
             this.iconColor = this.icon.iconSecondColor
           } else {

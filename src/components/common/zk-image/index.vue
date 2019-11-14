@@ -1,6 +1,6 @@
 <template>
   <view v-if="widgetModel && asyns" class="zk-image">
-    <view :title="widgetModel.name" @click="goLinks(widgetModel.url.value)" :style="{height:height+'px'}">
+    <view :title="widgetModel.name" @click="goLinks(widgetModel.link)" :style="{height:height+'px'}">
       <image :src="widgetModel.imgupload" :alt="widgetModel.name" class="zk-image-bg" />
     </view>
   </view>
@@ -29,7 +29,7 @@
     methods: {
       async  init () {
         this.widgetModel = this.widget.value
-        console.info('啊哈哈哈哈', this.widgetModel.imgupload)
+        console.info('啊哈哈哈哈', this.widgetModel)
         if (this.widgetModel.height > 0) {
           this.height = this.widgetModel.height
         }

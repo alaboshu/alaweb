@@ -12,7 +12,7 @@ export default {
     }
   },
   onLoad (option) {
-    this.option.path = '/tabbar/two';
+    this.option.path = '/tabbar/index';
   },
   mounted () {
     this.init()

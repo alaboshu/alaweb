@@ -1,9 +1,9 @@
 <template>
   <div v-if="async">
-    <swiper :autoplay="false" :circular="true" :indicator-dots="true" indicator-active-color="#c91230" indicator-color="#ebedf0" :style="{height:swiperHeight+'px'}">
-      <swiper-item v-for="(item,index) in widget.value.swiperForm" :key="index">
+    <swiper :autoplay="false" :circular="true" :indicator-dots="true" indicator-active-color="#c91230" indicator-color="#ebedf0" :style="{ height: swiperHeight + 'px' }">
+      <swiper-item v-for="(item, index) in widget.value.swiperForm.swiperList" :key="index">
         <view :title="item.name" @click="goLinks(item.url.value)">
-          <img :src="item.image" :alt="item.intro" :style="{height:swiperHeight+'px'}" class="bgImg" />
+          <img :src="item.image" :alt="item.intro" :style="{ height: swiperHeight + 'px' }" class="bgImg" />
         </view>
       </swiper-item>
     </swiper>
@@ -11,9 +11,7 @@
 </template>
 
 <script>
-
   export default {
-
     data () {
       return {
         async: false,
@@ -36,11 +34,9 @@
       this.init()
     },
     methods: {
-      async  init () {
+      async init () {
         this.async = false
-
         this.widgetModel = await this.$api.themeWidget(this.widget)
-        // this.swiperHeight = this.widget.value.height
         this.windowWidth = uni.getSystemInfoSync().windowWidth
         this.swiperHeight = this.windowWidth * Number(this.widget.value.height)
         this.async = true
