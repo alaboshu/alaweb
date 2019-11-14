@@ -2,18 +2,19 @@
   <div v-if="show">
     <div class="foot-box"></div>
     <uni-tabbar>
-      <view :style="{background:backgroundColor}" class="uni-tabbar">
+      <view :style="{background: '#fff'}" class="uni-tabbar">
         <view class="uni-tabbar-border" />
         <view v-for="(item,index) in list" :key="index" class="new-uni-tabbar__item" @click="_switchTab(item,index,)">
           <view class="new-uni-tabbar__bd">
-            <view class="new-view-icon" v-if="item.icon">
-              <x-icon ref="xIcon" :icon="item.icon" :changeColor="tabIndex===index?item.changecolor:''"></x-icon>
+            <view class="new-view-icon">
+              <img v-if="index === tabIndex" :src="'/static/tabbar/'+item.imageGroup.selectImage+'.png'" class="image">
+              <img v-else :src="'/static/tabbar/'+item.imageGroup.image+'.png'" class="image">
             </view>
-            <view class="new-tabbar-title" style="color:#999;" :style="'color:'+item.changecolor" v-if="tabIndex===index">
-              {{ item.name }}
+            <view class="new-tabbar-title" style="color:#999;" :style="'color:'+viewModel.selectColor" v-if="tabIndex===index">
+              {{ item.link.name }}
             </view>
-            <view class="new-tabbar-title" style="color:#999;" v-if="tabIndex!==index">
-              {{ item.name }}
+            <view class="new-tabbar-title" style="color:#999;" :style="'color:'+viewModel.color" v-if="tabIndex!==index">
+              {{ item.link.name }}
             </view>
           </view>
         </view>
@@ -51,7 +52,7 @@
       return {
         widgetModel: '',
         list: [],
-        tabbarIndex: '/pages/index',
+        tabbarIndex: '/pages/tabbar/index',
         backgroundColor: '#ffffff',
         tabIndex: '',
         activeFooter: ''
@@ -61,7 +62,7 @@
       if (this.$route) {
         this.tabbarIndex = this.$route.fullPath
         if (this.$route.fullPath === '/') {
-          this.tabbarIndex = '/pages/index'
+          this.tabbarIndex = '/pages/tabbar/index'
         }
       } else {
         let path = '/' + getCurrentPages()[0].route
@@ -88,15 +89,17 @@
     methods: {
       async init () {
         this.widgetModel = await theme.getAllPageList()
-        if (this.widgetModel.theme.tabBarSetting !== '') {
+        this.viewModel = this.widgetModel.theme.tabBarSetting.tabbarForm
+        if (this.viewModel !== '') {
           this.backgroundColor = this.widgetModel.theme.tabBarSetting.backGround
-          this.list = this.widgetModel.theme.tabBarSetting.links
+          this.list = this.widgetModel.theme.tabBarSetting.tabbarForm.links
+
           const pages = getCurrentPages()
           this.list.forEach((link, linkIndex) => {
-            if (link.url.value === '/' || link.url.value === '/index') {
+            if (link.link.url === '/pages/tabbar/one' || link.link.url === '/index') {
               this.tabIndex = 0
             } else if (!this.$api.isEmpty(pages[0].option)) {
-              if (link.url.value === pages[0].option.path) {
+              if (link.link.url === pages[0].option.path) {
                 this.tabIndex = linkIndex
               }
             }
@@ -186,5 +189,9 @@
   }
   .foot-box {
     height: 50px;
+  }
+  .image {
+    width: 22px;
+    height: 22px;
   }
 </style>
