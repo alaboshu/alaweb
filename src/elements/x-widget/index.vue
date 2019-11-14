@@ -37,7 +37,7 @@
 </template>
 
 <script>
-  import widgetItem from './widget-item';
+  import widgetItem from './widget-item'
   export default {
     name: 'x-widget',
     components: {

@@ -1,3 +1,4 @@
+import theme from '@/service/all/theme'
 export default {
   onLoad (option) {
     this.option = option
