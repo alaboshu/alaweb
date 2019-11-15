@@ -47,7 +47,6 @@
     },
     methods: {
       async init () {
-        console.info('aaaaaaaaaaaa这是为什么', this.widget)
         this.widgetModel = await this.$api.themeWidget(this.widget)
 
         this.viewModel = this.widget.value.gridForm

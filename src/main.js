@@ -43,6 +43,7 @@ import zkProductShowpage from '@/components/product/zk-product-showpage/index.vu
 import zkSwiperList from '@/components/swiper/zk-swiper-list/index.vue'
 import zkTabber from '@/components/tabber/zk-tabber/index.vue'
 import zkHead from '@/components/themes/zk-head/index.vue'
+import zkScrollView from '@/components/themes/zk-scroll-view/index.vue'
 import zkSearch from '@/components/themes/zk-search/index.vue'
 import zkTabbar from '@/components/themes/zk-tabbar/index.vue'
 import zkLogin from '@/components/user/zk-login/index.vue'
@@ -97,6 +98,7 @@ Vue.component('zk-product-showpage', zkProductShowpage)
 Vue.component('zk-swiper-list', zkSwiperList)
 Vue.component('zk-tabber', zkTabber)
 Vue.component('zk-head', zkHead)
+Vue.component('zk-scroll-view', zkScrollView)
 Vue.component('zk-search', zkSearch)
 Vue.component('zk-tabbar', zkTabbar)
 Vue.component('zk-login', zkLogin)

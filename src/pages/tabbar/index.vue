@@ -12,7 +12,6 @@
       }
     },
     onLoad (option) {
-      console.info('aaaaaaaaaaaaaaaaaaaaa')
       this.option[0].path = '/tabbar/index'
     },
     mounted () {
