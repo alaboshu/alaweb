@@ -10,7 +10,7 @@ export default {
     var path = base.path(option)
     var pageInfo = await this.getPageInfo(path)
     var widgets = []
-    if (pageInfo !== undefined && pageInfo !== null) {
+    if (pageInfo !== undefined && pageInfo !== null && pageInfo.widgets) {
       for (var i = 0; i < pageInfo.widgets.length; i++) {
         var widgetItem = pageInfo.widgets[i]
         widgetItem.route = option

@@ -1,6 +1,6 @@
 <template>
-  <view class="zk-html" v-if="widgetModel.value">
-    <rich-text :nodes="widgetModel.value.dataEditor"></rich-text>
+  <view class="zk-html" v-if="widget">
+    <rich-text :nodes="widget.value.dataEditor"></rich-text>
   </view>
 </template>
 

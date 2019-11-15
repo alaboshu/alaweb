@@ -17,12 +17,10 @@
   }
 
   .common-right {
-    flex-grow: 3;
     padding: 0 10px;
 
-    .common-title {
-      display: -webkit-box;
-      width: 450upx;
+    .common-title-product {
+      width: 70% !important;
       font-weight: 700;
       font-size: 17px;
       overflow: hidden;

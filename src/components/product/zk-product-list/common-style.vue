@@ -20,6 +20,8 @@
       type: {
         defualt: 'product'
       }
+    },
+    mounted () {
     }
   }
 </script>

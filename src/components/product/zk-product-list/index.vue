@@ -1,7 +1,7 @@
 <template>
   <view v-if="async" style="background: #f2f2f2">
-    <page-item v-if="widget.isPage" :widget="widget" :viewModel="allDataList"></page-item>
-    <common-item :viewModel="allDataList" :widget="widget" v-else></common-item>
+    <!-- <page-item v-if="widget.isPage" :widget="widget" :viewModel="allDataList"></page-item> -->
+    <common-item :viewModel="allDataList" :widget="widget"></common-item>
   </view>
 </template>
 
