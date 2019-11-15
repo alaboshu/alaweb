@@ -2,7 +2,7 @@
   <view class="product-list">
     <view class="product-list-cont" v-for="(item, index) in viewModel" :key="index">
       <view class="product-list-image">
-        <img :src=" $api.baseUrl()+item.thumbnailUrl" v-lazy alt="" srcset="">
+        <img :src="'http://retail_v13.api.5ug.com/'+item.thumbnailUrl" v-lazy alt="" srcset="">
       </view>
       <view class="product-list-title">{{item.name}}</view>
       <view class="product-list-foot">
@@ -28,7 +28,7 @@
     flex-wrap: wrap;
     margin: 0 10px;
     .product-list-cont {
-      width: 47%;
+      width: 46.5%;
       box-sizing: border-box;
       background: #fff;
       border-radius: 10px;
@@ -41,7 +41,7 @@
         flex-grow: 2;
         img {
           width: 100%;
-          height: 100%;
+          height: 145px;
         }
       }
       .product-list-title {

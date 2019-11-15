@@ -64,7 +64,6 @@
     methods: {
       async init () {
         this.viewModel = await this.$api.themePage(this.option)
-        console.info('这个是从哪里冒出来的', this.viewModel)
         if (this.viewModel.name !== '首页') {
           uni.setNavigationBarTitle({
             title: this.viewModel.name
