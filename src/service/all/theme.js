@@ -160,7 +160,6 @@ export default {
     if (isRequest) {
       var response = await api.httpGet('Api/Theme/GetAllClientPages', para)
       allPageInfo = response.result
-      api.localRemove('addressData')
       api.vuexSet(allPageCacheKey, allPageInfo)
       api.localSet(allPageCacheKey, allPageInfo)
     }

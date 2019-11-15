@@ -14,9 +14,8 @@
       }
     },
     onLoad (option) {
-
+      this.option = option
     },
-
     mounted () {
       this.init()
     },

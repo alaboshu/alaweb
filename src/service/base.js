@@ -43,16 +43,12 @@ export default {
   path (option) {
     var path = null
     // 当前访问页面
-    if (api.isEmpty(path)) {
-      if (!api.isEmpty(option)) {
-        path = option.path
-      }
+    if (option) {
+      path = option[0].path
     }
-
-    if (api.isEmpty(path)) {
+    if (!path) {
       path = '/pages/index'
     }
-
     path = path
       .replace('_', '/')
       .replace('_', '/')
@@ -86,7 +82,7 @@ export default {
    * isCache 是否缓存当前路由
    * 
    * 功能：缓存十个跳转路由
-   * 有跳转路由相同者，吧路由提到第一位
+   * 有跳转路由相同者，把路由提到第一位
    * 
    */
   to (data, isCache = true) {
