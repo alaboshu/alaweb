@@ -2,21 +2,21 @@ import api from '@/service/api'
 import help from '@/service/core/helper'
 export default {
   // 判断是生成环境还是开发环境
-  isBuild() {
+  isBuild () {
     if (process.env.NODE_ENV === 'development') {
       return false
     } else {
       return true
     }
   },
-  isDiy() {
+  isDiy () {
     if (process.env.ZK_DIY === 'true') {
       return true
     } else {
       return false
     }
   },
-  diy(widget) {
+  diy (widget) {
     if (this.isDiy() && !help.isEmpty(widget)) {
       var diyWidget = {
         'component-path': widget.componentPath,
@@ -28,7 +28,7 @@ export default {
     return null
   },
   // 当前页面的完整路径
-  fullPath() {
+  fullPath () {
     var pages = getCurrentPages()
     var fullPath
     if (api.client() === 'WeChatLite') {
@@ -40,7 +40,7 @@ export default {
   },
 
   // 实际页面路径
-  path(option) {
+  path (option) {
     var path = null
     // 当前访问页面
     if (api.isEmpty(path)) {
@@ -89,7 +89,7 @@ export default {
    * 有跳转路由相同者，吧路由提到第一位
    * 
    */
-  to(data, isCache = true) {
+  to (data, isCache = true) {
     var historys = api.vuexLocalGet('historys_record_links')
     if (data.isTab) {
       uni.switchTab({
@@ -127,7 +127,7 @@ export default {
    * 
    * 
    */
-  back(delta = 1) {
+  back (delta = 1) {
     var historys = api.vuexLocalGet('historys_record_links')
     if (historys && historys.length > 0 && delta <= historys.length) {
       var data

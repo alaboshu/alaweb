@@ -3,7 +3,7 @@
     <view class="common" v-for="(item,index) in viewModel" :key="index">
       <view class="common-left">
         <view class="common-image">
-          <img :src="'http://api.szwft.me/'+ item.thumbnailUrl" alt="">
+          <img :src="$api.baseUrl()+ item.thumbnailUrl" alt="" v-lazy>
         </view>
       </view>
       <view class="common-right">

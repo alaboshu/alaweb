@@ -8,9 +8,7 @@ import user from '../user'
 export default {
   async page (option) {
     var path = base.path(option)
-    if (path === '/index') {
-      api.localSet('preUrl', path)
-    }
+    console.info('path  path', path)
     var pageInfo = await this.getPageInfo(path)
     var widgets = []
     if (pageInfo !== undefined && pageInfo !== null) {
@@ -21,12 +19,12 @@ export default {
       }
       pageInfo.widgets = widgets
     }
-    pageInfo = this.filerPageInfo(pageInfo, option)
+    pageInfo = this.filerPageInfo(pageInfo)
     return pageInfo
   },
 
   // 过滤页面信息
-  filerPageInfo (pageInfo, option) {
+  filerPageInfo (pageInfo) {
     if (pageInfo) {
       pageInfo.widgets = this.filterWidgets(pageInfo.widgets)
       var setting = pageInfo.setting
@@ -56,55 +54,6 @@ export default {
     var para = {
       // ...widget.value,
       ...appendPara
-    }
-    if (widget !== null || widget !== '') {
-      if (widget.value !== null && widget.value !== undefined) {
-        if (widget.value.classIds !== undefined) {
-          var classIds = ''
-          if (typeof widget.value.classIds === 'object') {
-            for (var i in widget.value.classIds) {
-              if (i === String(widget.value.classIds.length - 1)) {
-                classIds += widget.value.classIds[i]
-              } else {
-                classIds += widget.value.classIds[i] + ','
-              }
-            }
-          } else if (typeof widget.value.classIds === 'string') {
-            if (widget.value.classIds.indexOf('NaN,') !== -1) {
-              widget.value.classIds = widget.value.classIds.replace('NaN,', '')
-            } else {
-              classIds = widget.value.classIds
-            }
-          }
-          para.classIds = classIds
-        }
-        if (widget.value.tagIds !== undefined) {
-          var tagIds = ''
-          if (typeof widget.value.tagIds === 'object') {
-            for (var i in widget.value.tagIds) {
-              if (i === String(widget.value.tagIds.length - 1)) {
-                tagIds += widget.value.tagIds[i]
-              } else {
-                tagIds += widget.value.tagIds[i] + ','
-              }
-            }
-          } else if (typeof widget.value.tagIds === 'string') {
-            if (widget.value.tagIds.indexOf('NaN,') !== -1) {
-              widget.value.tagIds = widget.value.tagIds.replace('NaN,', '')
-              tagIds = widget.value.tagIds
-            } else {
-              tagIds = widget.value.tagIds
-            }
-          }
-          para.tagIds = tagIds
-        }
-        if (widget.value.priceStyleId !== undefined) {
-          para.priceStyleId = widget.value.priceStyleId
-        }
-        if (widget.value.stock !== undefined) {
-          para.stock = widget.value.stock
-        }
-      }
     }
     // widget.value 不为空时，发起请求
     if (widget && widget.isApiRequest && widget.value) {
@@ -136,16 +85,6 @@ export default {
             element.borderClass += styleBorder.colorName + ' '
           }
         }
-        // if (!api.isEmpty(element.style.css)) {
-        //   var css = JSON.parse(element.style.border)
-        //   element.css = css
-        //   element.blockList = ''
-        //   for (let item in css) {
-        //     if (css[item] !== 0) {
-        //       element.blockList += 'block_' + item + '__' + css[item] + ' '
-        //     }
-        //   }
-        // }
       }
       if (api.isEmpty(element.layout)) {
         element.layout = null

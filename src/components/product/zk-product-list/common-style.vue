@@ -1,7 +1,7 @@
 <template>
   <view>
-    <!-- <single-item :viewModel="viewModel" v-if="type == 'single'"></single-item> -->
-    <product-item :viewModel="viewModel"></product-item>
+    <single-item :viewModel="viewModel" v-if="widget.value.productType == 'single'"></single-item>
+    <product-item :viewModel="viewModel" v-if="widget.value.productType == 'product'"></product-item>
   </view>
 </template>
 
@@ -20,6 +20,9 @@
       type: {
         defualt: 'product'
       }
+    },
+    mounted () {
+      console.info('aaaaaaaaaaaaaaaaaa', this.widget.value.productType)
     }
   }
 </script>
