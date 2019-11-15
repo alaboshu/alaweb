@@ -1,6 +1,6 @@
 <template>
   <view class="zk-grid zk-grid-b">
-    <view class="weui-grid_div" v-if="widgetModel && widgetModel.value">
+    <view class="weui-grid_div" v-if="widget && widget.value && viewModel">
       <!-- :style="'width:' + 100 / gridCol + '%'" -->
       <view class="weui-grid_a" @click="goPages(item.url.value)" v-for="(item, index) in viewModel.gridList" :key="index" :class="{ 'weui-grid_gridCol': index > gridCol - 1 }" :style="'width:'+(100/ viewModel.gridCount)+'%'">
         <view class="weui-grid__icon">
@@ -47,8 +47,8 @@
     },
     methods: {
       async init () {
-        this.widgetModel = await this.$api.themeWidget(this.widget)
-        this.viewModel = this.widgetModel.value.gridForm
+        // this.widgetModel = await this.$api.themeWidget(this.widget)
+        this.viewModel = this.widget.value.gridForm
         if (this.widget.value.iconSize !== undefined) {
           this.iconSize = this.widget.value.iconSize
         } else {
