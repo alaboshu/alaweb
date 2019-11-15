@@ -43,11 +43,10 @@ export default {
   path (option) {
     var path = null
     // 当前访问页面
-    console.info('aaaaaaaaaaaaaa', option)
-    if (option) {
+    if (option && option.length > 0) {
       path = option[0].path
     }
-   
+
     if (!path) {
       path = '/pages/index'
     }

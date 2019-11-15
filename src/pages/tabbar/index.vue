@@ -8,12 +8,12 @@
     mixins: [minx],
     data () {
       return {
-        option: [{ path: '' }]
+        option: [{ path: '/tabbar/index' }]
       }
     },
     onLoad (option) {
+      console.info('aaaaaaaaaaaaaaaaaaaaa')
       this.option[0].path = '/tabbar/index'
-      // this.option.path = '/tabbar/index'
     },
     mounted () {
       this.init()

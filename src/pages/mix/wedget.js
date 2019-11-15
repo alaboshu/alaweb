@@ -1,11 +1,7 @@
 import theme from '@/service/all/theme'
 export default {
-  onLoad (option) {
-    this.option = option
-  },
   methods: {
     async init () {
-      this.viewModel = await this.$api.themePage(this.option)
       var response = await theme.getAllPageList()
       if (response) {
         this.getTabbar(response.theme.tabBarSetting)

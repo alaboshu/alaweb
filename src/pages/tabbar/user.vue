@@ -8,7 +8,7 @@
     mixins: [minx],
     data () {
       return {
-        option: {}
+        option: [{ path: 'tabar/user' }]
       }
     },
     onLoad (option) {

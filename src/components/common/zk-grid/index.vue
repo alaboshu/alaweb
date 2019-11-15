@@ -47,7 +47,9 @@
     },
     methods: {
       async init () {
-        // this.widgetModel = await this.$api.themeWidget(this.widget)
+        console.info('aaaaaaaaaaaa这是为什么', this.widget)
+        this.widgetModel = await this.$api.themeWidget(this.widget)
+
         this.viewModel = this.widget.value.gridForm
         if (this.widget.value.iconSize !== undefined) {
           this.iconSize = this.widget.value.iconSize
