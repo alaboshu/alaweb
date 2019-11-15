@@ -20,9 +20,6 @@
       type: {
         defualt: 'product'
       }
-    },
-    mounted () {
-      console.info('aaaaaaaaaaaaaaaaaa', this.widget.value.productType)
     }
   }
 </script>
