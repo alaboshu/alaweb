@@ -53,7 +53,7 @@
     </view>
     <view class="user-dimensional-code" @click="$api.to('/pages/index?path=user_qrcode')">
       <!-- <view class="dimensional-code_text">点击分享个人二维码</view> -->
-      <image class="dimensional-code_image" :src="widget.value.image" alt="" />
+      <!-- <image class="dimensional-code_image" :src="widget.value.image" alt="" /> -->
     </view>
   </view>
 </template>
@@ -90,6 +90,7 @@
           var para = {
             userId: this.$user.loginUser().id
           }
+          console.info('进来这里不')
           var response = await this.$crud.widget(this, 'MemberWidget', para)
           this.viewModel = response
           var localMsg = this.$user.loginUser()

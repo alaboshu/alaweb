@@ -8,11 +8,12 @@
     mixins: [minx],
     data () {
       return {
-        option: {}
+        option: [{ path: '' }]
       }
     },
     onLoad (option) {
       this.option[0].path = '/tabbar/index'
+      // this.option.path = '/tabbar/index'
     },
     mounted () {
       this.init()

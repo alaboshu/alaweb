@@ -30,6 +30,7 @@
     <zk-login :widget="widget" v-if="widget.componentPath === '/user/zk-login'"></zk-login>
     <zk-qrcode :widget="widget" v-if="widget.componentPath === '/user/zk-qrcode'"></zk-qrcode>
     <zk-reg :widget="widget" v-if="widget.componentPath === '/user/zk-reg'"></zk-reg>
+    <zk-user-top :widget="widget" v-if="widget.componentPath === '/user/zk-user-top'"></zk-user-top>
   </view>
 </template>
 
