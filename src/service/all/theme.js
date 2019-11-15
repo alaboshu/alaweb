@@ -8,7 +8,6 @@ import user from '../user'
 export default {
   async page (option) {
     var path = base.path(option)
-    console.info('path  path', path)
     var pageInfo = await this.getPageInfo(path)
     var widgets = []
     if (pageInfo !== undefined && pageInfo !== null) {
@@ -43,30 +42,30 @@ export default {
 
   // 模块信息,para 为附加参数
   async widget (widget, appendPara) {
-    var parameter = {
-      apiUrl: '',
-      value: null
-    }
-    if (widget !== null && widget !== undefined) {
-      parameter.apiUrl = widget.apiUrl
-      parameter.value = widget.value
-    }
-    var para = {
-      // ...widget.value,
-      ...appendPara
-    }
-    // widget.value 不为空时，发起请求
-    if (widget && widget.isApiRequest && widget.value) {
-      parameter = await this.getWidgetValueByApiUrl(parameter, para)
-      return parameter
-    }
-    if (parameter.value === null || parameter.value === undefined) {
-      // 从数据库中获取数据
-      if (parameter.apiUrl === null) {} else {
-        parameter = await this.getWidgetValueByApiUrl(parameter, para)
-      }
-    }
-    return parameter
+    // var parameter = {
+    //   apiUrl: '',
+    //   value: null
+    // }
+    // if (widget !== null && widget !== undefined) {
+    //   parameter.apiUrl = widget.apiUrl
+    //   parameter.value = widget.value
+    // }
+    // var para = {
+    //   // ...widget.value,
+    //   ...appendPara
+    // }
+    // // widget.value 不为空时，发起请求
+    // if (widget && widget.isApiRequest && widget.value) {
+    //   parameter = await this.getWidgetValueByApiUrl(parameter, para)
+    //   return parameter
+    // }
+    // if (parameter.value === null || parameter.value === undefined) {
+    //   // 从数据库中获取数据
+    //   if (parameter.apiUrl === null) {} else {
+    //     parameter = await this.getWidgetValueByApiUrl(parameter, para)
+    //   }
+    // }
+    // return parameter
   },
   // 处理widgets
   filterWidgets (widgets) {

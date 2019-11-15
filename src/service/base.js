@@ -49,6 +49,7 @@ export default {
     if (!path) {
       path = '/pages/index'
     }
+
     path = path
       .replace('_', '/')
       .replace('_', '/')

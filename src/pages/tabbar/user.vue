@@ -12,7 +12,7 @@
       }
     },
     onLoad (option) {
-      this.option.path = '/tabbar/user'
+      this.option[0].path = '/tabbar/user'
     },
     mounted () {
       this.init()
