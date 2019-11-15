@@ -15,6 +15,8 @@
     },
     onLoad (option) {
       this.option = option
+      console.info('index getCurrentPages', getCurrentPages())
+      console.info('fullPath', this.$base.fullPath())
     },
     mounted () {
       this.init()

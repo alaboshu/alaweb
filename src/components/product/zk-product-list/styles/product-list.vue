@@ -1,6 +1,6 @@
 <template>
   <view class="product-list">
-    <view class="product-list-cont" v-for="(item, index) in viewModel" :key="index">
+    <view class="product-list-cont" v-for="(item, index) in viewModel" :key="index" @click="$api.to('/product/show?id='+item.id)">
       <view class="product-list-image">
         <img :src="'http://retail_v13.api.5ug.com/'+item.thumbnailUrl" v-lazy alt="" srcset="">
       </view>
@@ -17,6 +17,11 @@
   export default {
     props: {
       viewModel: {}
+    },
+    methods: {
+      toProductShow (item) {
+        console.info('item', item)
+      }
     }
   }
 </script>
@@ -26,13 +31,15 @@
   .product-list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 10px;
+    width: 100%;
+    justify-content: space-around;
     .product-list-cont {
-      width: 46.5%;
+      cursor: pointer;
+      width: 46.8%;
       box-sizing: border-box;
       background: #fff;
       border-radius: 10px;
-      margin: 5px;
+      margin: 4px;
       display: flex;
       flex-wrap: wrap;
       padding: 10px;

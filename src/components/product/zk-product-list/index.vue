@@ -76,7 +76,7 @@
         }
       },
       // 搜索
-      async   search (par) {
+      async  search (par) {
         this.queryPara.pageIndex = 1
         this.queryPara = {
           ...this.queryPara,

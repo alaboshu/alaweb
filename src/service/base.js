@@ -74,47 +74,15 @@ export default {
     }
     return path
   },
-  /**
-   * 兼容底部跳转
-   * 三个参数
-   * to: 将要去往的页面
-   * from： 当前页面的路由
-   * isTab： 是不是跳转到底部
-   * 
-   * isCache 是否缓存当前路由
-   * 
-   * 功能：缓存十个跳转路由
-   * 有跳转路由相同者，把路由提到第一位
-   * 
-   */
-  to (data, isCache = true) {
-    var historys = api.vuexLocalGet('historys_record_links')
-    if (data.isTab) {
+  to (toPages) {
+    if (toPages.indexOf('/pages/tabbar') > -1) {
       uni.switchTab({
-        url: data.to
+        url: toPages
       })
     } else {
       uni.navigateTo({
-        url: data.to
+        url: toPages
       })
-    }
-    if (isCache) {
-      if (historys && historys.length > 0) {
-        historys.forEach((item, index) => {
-          if (item === data.from) {
-            historys.unshift(historys.splice(index, 1)[0])
-          } else if (historys.length <= 10) {
-            historys.unshift(data.from)
-          } else {
-            historys.splice(historys.length - 1, 1)
-            historys.unshift(data.from)
-          }
-        })
-      } else {
-        historys = []
-        historys.push(data.from)
-      }
-      api.vuexLocalSet('historys_record_links', historys)
     }
   },
   /**

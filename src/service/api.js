@@ -246,6 +246,7 @@ export default {
   // 页面跳转
   // // 页面跳转
   to (url, isApp) {
+    console.info('api to', url)
     if (url === '/pages/default' || url.includes('pages/tabbar')) {
       uni.reLaunch({
         url: url
@@ -408,7 +409,7 @@ export default {
   },
   vuexLocalSet(name, value) {
     store[name] = value
-    local.set(name, data)
+    local.set(name, value)
   },
   // 判断是否使用diy接口请求数据，并返回请求结果
   async isApiReqGet(widget, data, url) {

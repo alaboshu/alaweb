@@ -38,6 +38,7 @@
 
 <script>
   import widgetItem from './widget-item'
+  import service from './service'
   export default {
     name: 'x-widget',
     components: {
@@ -64,13 +65,12 @@
     methods: {
       async init () {
         this.viewModel = await this.$api.themePage(this.option)
-        if (this.viewModel.name !== '首页') {
-          uni.setNavigationBarTitle({
-            title: this.viewModel.name
-          })
-        }
-
+        uni.setNavigationBarTitle({
+          title: this.viewModel.name
+        })
         console.log(this.viewModel.name, this.viewModel)
+        service.histModel(this)
+        this.$base.to('/pages/tabbar/user')
         this.async = true
       }
     }
