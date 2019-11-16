@@ -135,8 +135,9 @@
         if (this.$api.client() === 'AppPlus' && this.$api.payType() === 3) {
           this.isIosApp = false
         }
+        console.info('aaaaaaaaaaaaaaaaaa', this.$user.loginUser())
         let par = {
-          id: this.widget.route.id,
+          id: this.widget.route[0].id,
           userId: this.$user.loginUser().id
         }
         var productShowReponse = await this.$api.httpGet('/api/product/show', par)

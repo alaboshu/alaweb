@@ -1,6 +1,6 @@
 <template>
   <view class="product-list">
-    <view class="product-list-cont" v-for="(item, index) in viewModel" :key="index" @click="$api.to('/product/show?id='+item.id)">
+    <view class="product-list-cont" v-for="(item, index) in viewModel" :key="index" @click="$base.to('/pages/index?path=product_show&id='+item.id)">
       <view class="product-list-image">
         <img :src="'http://retail_v13.api.5ug.com/'+item.thumbnailUrl" v-lazy alt="" srcset="">
       </view>
