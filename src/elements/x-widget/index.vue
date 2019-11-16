@@ -60,6 +60,7 @@
       // this.option = option
     },
     async mounted () {
+      service.histModel(this)
       this.init()
     },
     methods: {
@@ -69,7 +70,7 @@
           title: this.viewModel.name
         })
         console.log(this.viewModel.name, this.viewModel)
-        service.histModel(this)
+        
         this.async = true
       }
     }
