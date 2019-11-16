@@ -70,7 +70,6 @@
         })
         console.log(this.viewModel.name, this.viewModel)
         service.histModel(this)
-        this.$base.to('/pages/tabbar/user')
         this.async = true
       }
     }
