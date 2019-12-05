@@ -3,25 +3,29 @@
       "path": "pages/tabbar/index",
       "style": {
         "navigationBarTitleText": "首页",
-        "enablePullDownRefresh": true
+        "enablePullDownRefresh": true,
+        "navigationStyle": "custom"
       }
     }, {
       "path": "pages/tabbar/two",
       "style": {
         "navigationBarTitleText": "商城",
-        "enablePullDownRefresh": true
+        "enablePullDownRefresh": true,
+        "navigationStyle": "custom"
       }
     }, {
       "path": "pages/tabbar/three",
       "style": {
         "navigationBarTitleText": "分类",
-        "enablePullDownRefresh": true
+        "enablePullDownRefresh": true,
+        "navigationStyle": "custom"
       }
     }, {
       "path": "pages/tabbar/user",
       "style": {
         "navigationBarTitleText": "个人中心",
-        "enablePullDownRefresh": true
+        "enablePullDownRefresh": true,
+        "navigationStyle": "custom"
       }
     }, {
       "path": "pages/default",

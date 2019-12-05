@@ -1,7 +1,7 @@
 <template>
-  <view v-if="widgetModel && asyns" class="zk-image">
+  <view v-if="widgetModel && asyns" class="zk-image" :style="{padding:padding+'px'}">
     <view :title="widgetModel.name" @click="goLinks(widgetModel.link)" :style="{height:height+'px'}">
-      <image :src="widgetModel.imgupload" :alt="widgetModel.name" class="zk-image-bg" />
+      <image :src="widgetModel.imgupload" :alt="widgetModel.name" class="zk-image-bg" :class="{isActive:padding != 0}" />
     </view>
   </view>
 </template>
@@ -14,6 +14,7 @@
       return {
         widgetModel: null,
         height: 100,
+        padding: 0,
         asyns: false
       }
     },
@@ -32,6 +33,9 @@
         if (this.widgetModel.height > 0) {
           this.height = this.widgetModel.height
         }
+        if (this.widgetModel.imagePad) {
+          this.padd = this.widgetModel.imagePad
+        }
         this.asyns = true
       },
       goLinks (url) {
@@ -45,7 +49,6 @@
   @import "@/assets/style/variable.scss";
 
   .zk-image {
-    padding: 8px;
     a {
       display: block;
       width: 100%;
@@ -54,7 +57,9 @@
     .zk-image-bg {
       width: 100%;
       height: 100%;
-      border-radius: 5px;
+      &.isActive {
+        border-radius: 5px;
+      }
     }
   }
 </style>

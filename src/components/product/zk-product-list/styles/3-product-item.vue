@@ -38,7 +38,6 @@
       width: 46.8%;
       box-sizing: border-box;
       background: #fff;
-      border-radius: 10px;
       margin: 4px;
       display: flex;
       flex-wrap: wrap;

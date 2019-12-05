@@ -40,7 +40,7 @@
         this.windowWidth = uni.getSystemInfoSync().windowWidth
         this.swiperHeight = this.windowWidth * Number(this.widget.value.height)
         this.async = true
-        if (this.widget.route.path === undefined) {
+        if (this.widget.route && this.widget.route.path === undefined) {
           this.showIntroductionBanner = true
         }
       },
