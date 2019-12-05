@@ -5,17 +5,15 @@
       <zk-search :widget="widgetModel" :shows="true" @searchClick="listPage" :inputModel="listPar.Keyword "></zk-search>
     </div>
     <view class="uni-tab-bar">
-      <div class="uni-swiper-tab-placeholder"></div>
+      <!-- <div class="uni-swiper-tab-placeholder"></div> -->
       <scroll-view id="tab-bar" class="uni-swiper-tab" scroll-x :scroll-left="scrollLeft" :style="'top:'+fixed.uniSwiperTabHiehgt+'px'">
         <div class="swiper-tab-item " v-for="(tab,tabIndex) in tabBars" :key="tabIndex" :class="{'tabItem-active':tab.id===tabIndexs}" @click="tabClick(tab.id)">
           <span>{{tab.name}}</span>
         </div>
       </scroll-view>
-      <zk-product-item ref="zkProductItem" :type="type" :isNot="false" v-if="!isNotData" :showPrice="productItem.isFrontShowPrice"></zk-product-item>
+      <zk-product-list :widget="{value: {productType: 3}}"></zk-product-list>
+      <!-- <zk-product-item ref="zkProductItem" :type="type" :isNot="false" v-if="!isNotData" :showPrice="productItem.isFrontShowPrice"></zk-product-item> -->
       <div class="listpage_not" v-if="isNotData">
-        <!-- <div class="infos">
-          <x-icon class="info-icon" name="zk-temporarily" size="72" color='#ddd'></x-icon>
-        </div> -->
         <div class="icon_data">
           <i class="icon iconfont zk-temporarily"></i>
         </div>

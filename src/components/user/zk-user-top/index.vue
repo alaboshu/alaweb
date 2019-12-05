@@ -90,7 +90,6 @@
           var para = {
             userId: this.$user.loginUser().id
           }
-          console.info('进来这里不')
           var response = await this.$crud.widget(this, 'MemberWidget', para)
           this.viewModel = response
           var localMsg = this.$user.loginUser()

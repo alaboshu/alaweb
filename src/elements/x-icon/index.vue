@@ -1,7 +1,7 @@
 <template>
   <view class="x-icon" v-if="async">
     <i :class="iconName +'  icon iconfont '+ xClass" v-if="!isImage" :style="'font-size:'+iconSize+'px;color:'+iconColor+';'"></i>
-    <image class="images" :lazy-load="true" :src="imgSrc" :style="'width:'+size+'px;height:'+size+'px'" v-if="isImage" />
+    <img class="images" :lazy-load="true" :src="imgSrc" :style="'width:'+size+'px;height:'+size+'px'" v-if="isImage" />
   </view>
 </template>
 

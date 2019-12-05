@@ -1,5 +1,5 @@
 <template>
-  <div class="diy-wrap" :class="'diy-wrap_'+masterPageIndex" id="wrap" v-if="viewModel">
+  <div class="diy-wrap" :class="'diy-wrap_'+masterPageIndex" :style="{background: viewModel.setting? viewModel.setting.background :''}" id="wrap" v-if="viewModel">
     <draggable v-model="viewModel.widgets" @change="dragEnd">
       <div v-for="(widget, index) in viewModel.widgets" :key="index" class="widgets-box">
         <layout-item v-if="!widget.layout" :widget="widget" @removeWidget="removeWidget" @editWidget="editWidget" @handleCheck="handleCheck" :removeIndex="index" ref="layoutitem"></layout-item>
@@ -64,6 +64,7 @@
   import theme from '@/service/all/theme'
   import draggable from 'vuedraggable'
   import layoutItem from './layout-item'
+  import serivce from './service'
 
   export default {
     name: 'diy',
@@ -124,6 +125,7 @@
         }
         this.$api.vuexSet('diyClientHost', data.clientHost)
         this.viewModel = theme.filerPageInfo(this.viewModel)
+        serivce.setTabbar(this, this.viewModel)
         console.info(this.viewModel.name, this.viewModel)
         this.postMessage('clientIframeLoadSuccessful', true)
       },

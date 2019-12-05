@@ -4,9 +4,7 @@
       <!-- :style="'width:' + 100 / gridCol + '%'" -->
       <view class="weui-grid_a" @click="goPages(item.url.value)" v-for="(item, index) in viewModel.gridList" :key="index" :class="{ 'weui-grid_gridCol': index > gridCol - 1 }" :style="'width:'+(100/ viewModel.gridCount)+'%'">
         <view class="weui-grid__icon">
-          <!-- <x-icon :icon="item.icon" v-if="item.icon.name" :iconSecondColor="item.iconColor" v-show="!isApp"></x-icon> -->
-          <!-- <i v-if="item.icon.name" :class="'grid__icon icon iconfont  ' + item.icon.name" :style=" 'font-size:' + item.icon.size + 'px;color:' + item.iconColor + ';' " v-show="isApp"></i> -->
-          <x-icon :src="item.image" :size="iconSize" v-if="item.image || item.image.length !== 0"></x-icon>
+          <x-icon :src="$api.baseUrl() + item.image" :size="iconSize" v-if="item.image || item.image.length !== 0"></x-icon>
           <x-icon :name="item.icon.name" :size="item.size" :color="item.color" v-else-if="item.icon"></x-icon>
         </view>
         <p class="weui-grid__label">{{ item.link.name }}</p>
