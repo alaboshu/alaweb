@@ -40,6 +40,7 @@ import zkProductClass from '@/components/product/zk-product-class/index.vue'
 import zkProductList from '@/components/product/zk-product-list/index.vue'
 import zkProductListpage from '@/components/product/zk-product-listpage/index.vue'
 import zkProductShowpage from '@/components/product/zk-product-showpage/index.vue'
+import zkSwiperList from '@/components/swiper/zk-swiper-list/index.vue'
 import zkTabber from '@/components/tabber/zk-tabber/index.vue'
 import zkHead from '@/components/themes/zk-head/index.vue'
 import zkScrollView from '@/components/themes/zk-scroll-view/index.vue'
@@ -94,6 +95,7 @@ Vue.component('zk-product-class', zkProductClass)
 Vue.component('zk-product-list', zkProductList)
 Vue.component('zk-product-listpage', zkProductListpage)
 Vue.component('zk-product-showpage', zkProductShowpage)
+Vue.component('zk-swiper-list', zkSwiperList)
 Vue.component('zk-tabber', zkTabber)
 Vue.component('zk-head', zkHead)
 Vue.component('zk-scroll-view', zkScrollView)

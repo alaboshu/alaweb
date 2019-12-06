@@ -31,6 +31,7 @@
     <zk-qrcode :widget="widget" v-if="widget.componentPath === '/user/zk-qrcode'"></zk-qrcode>
     <zk-reg :widget="widget" v-if="widget.componentPath === '/user/zk-reg'"></zk-reg>
     <zk-user-top :widget="widget" v-if="widget.componentPath === '/user/zk-user-top'"></zk-user-top>
+    <zk-swiper-list :widget="widget" v-if="widget.componentPath === '/swiper/zk-swiper-list'"></zk-swiper-list>
   </view>
 </template>
 
