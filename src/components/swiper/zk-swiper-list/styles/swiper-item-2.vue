@@ -1,12 +1,12 @@
 <template>
-  <view class="swiper-item-2">
+  <view class="swiper-item-2" v-if="swiperList">
     <view class="swiper-bgColor" :style="{background: swiperBgColor}"></view>
     <view class="swiper-head">
       <swiper-search></swiper-search>
     </view>
     <view class="swiper-cont">
       <swiper :autoplay="true" @change="changeSwiper" :circular="true" :indicator-dots="true" indicator-active-color="#c91230" indicator-color="#ebedf0" :style="{ height: swiperHeight + 'px' }">
-        <swiper-item v-for="(item, index) in swiperModel" :key="index">
+        <swiper-item v-for="(item, index) in swiperList" :key="index">
           <view :title="item.name" @click="goLinks(item.url.value)">
             <img :src="item.image" :alt="item.intro" :style="{ height: swiperHeight + 'px' }" class="bgImg" />
           </view>
@@ -18,7 +18,9 @@
 </template>
 <script>
   import swiperSearch from './swiper-search'
+  import mxins from './mixins'
   export default {
+    mixins: [mxins],
     components: { swiperSearch },
     data () {
       return {
@@ -26,7 +28,8 @@
         widgetModel: '',
         swiperHeight: 150,
         windowWidth: '',
-        swiperBgColor: '#421f7d'
+        swiperBgColor: '#421f7d',
+        swiperList: []
       }
     },
     props: {
@@ -36,23 +39,15 @@
         default: 150
       }
     },
-    onLoad () {
-      this.init()
-    },
     mounted () {
       this.init()
     },
     methods: {
-      async init () {
-        this.swiperBgColor = this.swiperModel[0].colors
-      },
-
       goLinks (url) {
         this.$api.to(url)
       },
       changeSwiper (ev) {
-        console.info('您好呀', ev.detail.current, this.swiperModel[ev.detail.current].colors)
-        this.swiperBgColor = this.swiperModel[ev.detail.current].colors
+        this.swiperBgColor = this.swiperList[ev.detail.current].colors
       }
     },
     watch: {

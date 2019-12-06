@@ -16,7 +16,8 @@
         async: false,
         widgetModel: '',
         swiperHeight: 150,
-        windowWidth: ''
+        windowWidth: '',
+        swiperList: null
       }
     },
     props: {
@@ -38,9 +39,6 @@
 
       goLinks (url) {
         this.$api.to(url)
-      },
-      watchWidget () {
-        this.init()
       }
     },
     watch: {
