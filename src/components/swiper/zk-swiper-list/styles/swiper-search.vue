@@ -20,10 +20,15 @@
 
 <style lang="scss" scoped>
   .swiper-search {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 45px;
+    width: 100%;
     padding: 0 10px;
     display: flex;
     align-items: center;
+    z-index: 998;
     .left {
       width: 85%;
       height: 30px;

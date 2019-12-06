@@ -13,6 +13,7 @@
         </swiper-item>
       </swiper>
     </view>
+
   </view>
 </template>
 <script>
@@ -50,7 +51,7 @@
         this.$api.to(url)
       },
       changeSwiper (ev) {
-        console.info('您好呀', ev.detail.current)
+        console.info('您好呀', ev.detail.current, this.swiperModel[ev.detail.current].colors)
         this.swiperBgColor = this.swiperModel[ev.detail.current].colors
       }
     },
@@ -69,13 +70,14 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 150px;
+      height: 180px;
       background: #421f7d;
       border-radius: 0 0 15px 15px;
-      z-index: -1;
     }
     .swiper-head {
       width: 100%;
+      position: relative;
+      height: 45px;
     }
     .swiper-cont {
       padding: 0 10px;
