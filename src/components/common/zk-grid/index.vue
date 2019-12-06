@@ -2,9 +2,9 @@
   <view class="zk-grid zk-grid-b">
     <view class="weui-grid_div" v-if="widget && widget.value && viewModel">
       <!-- :style="'width:' + 100 / gridCol + '%'" -->
-      <view class="weui-grid_a" @click="goPages(item.url.value)" v-for="(item, index) in viewModel.gridList" :key="index" :class="{ 'weui-grid_gridCol': index > gridCol - 1 }" :style="'width:'+(100/ viewModel.gridCount)+'%'">
+      <view class="weui-grid_a" @click="goPages(item)" v-for="(item, index) in viewModel.gridList" :key="index" :class="{ 'weui-grid_gridCol': index > gridCol - 1 }" :style="'width:'+(100/ viewModel.gridCount)+'%'">
         <view class="weui-grid__icon">
-          <x-icon :src="$api.baseUrl() + item.image" :size="iconSize" v-if="item.image || item.image.length !== 0"></x-icon>
+          <x-icon :src="item.image" :size="iconSize" v-if="item.image || item.image.length !== 0"></x-icon>
           <x-icon :name="item.icon.name" :size="item.size" :color="item.color" v-else-if="item.icon"></x-icon>
         </view>
         <p class="weui-grid__label">{{ item.link.name }}</p>
@@ -55,7 +55,22 @@
         }
         this.isApp = this.$api.client() === 'AppPlus'
       },
-      goPages (url) {
+      goPages (item) {
+        var url
+        // 处理跳转链接
+        if (item.link.url.indexOf('/tabbar') === -1) {
+          var linkSplit = item.link.url.split('/')
+          url = '/pages/index?path='
+          if (linkSplit.length === 2) {
+            url += linkSplit[1]
+          } else if (linkSplit.length === 3) {
+            url += linkSplit[1] + '_' + linkSplit[2]
+          } else if (linkSplit.length === 4) {
+            url += linkSplit[1] + '_' + linkSplit[2] + '_' + linkSplit[3]
+          }
+        } else {
+          url = item.link.url
+        }
         this.$api.to(url)
       }
     }
