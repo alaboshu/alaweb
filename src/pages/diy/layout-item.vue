@@ -54,9 +54,7 @@
     methods: {
       handleCheck (widget) {
         if (this.$refs.moduleId.$el) {
-          widget.style = {
-            styleId: this.$refs.moduleId.$el.id
-          }
+          widget.style.styleId = this.$refs.moduleId.$el.id
         }
         let value = {
           widget: widget,
