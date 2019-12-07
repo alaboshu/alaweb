@@ -54,7 +54,13 @@
     methods: {
       handleCheck (widget) {
         if (this.$refs.moduleId.$el) {
-          widget.style.styleId = this.$refs.moduleId.$el.id
+          if (widget.style) {
+            widget.style.styleId = this.$refs.moduleId.$el.id
+          } else {
+            widget.style = {
+              styleId: this.$refs.moduleId.$el.id
+            }
+          }
         }
         let value = {
           widget: widget,
