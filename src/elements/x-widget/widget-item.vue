@@ -33,6 +33,7 @@
     <zk-user-top :widget="widget" v-if="widget.componentPath === '/user/zk-user-top'"></zk-user-top>
     <zk-user-info :widget="widget" v-if="widget.componentPath === '/user/zk-user-info'"></zk-user-info>
     <zk-user-address :widget="widget" v-if="widget.componentPath === '/user/zk-user-address'"></zk-user-address>
+    <zk-user-service :widget="widget" v-if="widget.componentPath === '/user/zk-user-service'"></zk-user-service>
     <zk-swiper-list :widget="widget" v-if="widget.componentPath === '/swiper/zk-swiper-list'"></zk-swiper-list>
     <zk-address-edit :widget="widget" v-if="widget.componentPath === '/themes/zk-address-edit'"></zk-address-edit>
   </view>

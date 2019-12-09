@@ -1,0 +1,103 @@
+{
+  "links": [{
+      "name": "商家服务",
+      "image": "http://retail_v13.api.5ug.com//wwwroot/uploads/api/375-431-798/2019-12-09/5dedeb3dc563b42120abc1fb.png"
+    },
+    {
+      "name": "订单服务",
+      "image": "http://retail_v13.api.5ug.com//wwwroot/uploads/api/375-431-798/2019-12-09/5dedeb3dc563b42120abc1fd.png"
+    },
+    {
+      "name": "供应链服务",
+      "image": "http://retail_v13.api.5ug.com//wwwroot/uploads/api/375-431-798/2019-12-09/5dedeb3dc563b42120abc1fc.png"
+    },
+    {
+      "name": "联系我们",
+      "image": "http://retail_v13.api.5ug.com//wwwroot/uploads/api/375-431-798/2019-12-09/5dedeb3dc563b42120abc1fa.png"
+    }
+  ],
+  "commonModel": [{
+      "name": "购物指南",
+      "links": [{
+        "name": "登录问题"
+      }, {
+        "name": "用户认证"
+      }, {
+        "name": "购物流程"
+      }, {
+        "name": "交易条款"
+      }]
+    },
+    {
+      "name": "订单问题",
+      "links": [{
+          "name": "订单常见问题"
+        },
+        {
+          "name": "订单修改"
+        },
+        {
+          "name": "异常订单"
+        },
+        {
+          "name": "订单取消"
+        },
+        {
+          "name": "提交订单"
+        }
+      ]
+    },
+    {
+      "name": "支付问题",
+      "links": [{
+          "name": "支付不成功"
+        },
+        {
+          "name": "物流到付"
+        }, {
+          "name": "支付方式"
+        }
+      ]
+    },
+    {
+      "name": "签收与配送问题",
+      "links": [{
+          "name": "运价计算方式"
+        },
+        {
+          "name": "配送时效问题"
+        },
+        {
+          "name": "运费问题"
+        },
+        {
+          "name": "验货签收"
+        },
+        {
+          "name": "收发货信息"
+        },
+        {
+          "name": "商品发货"
+        }
+      ]
+    },
+    {
+      "name": "售后服务",
+      "links": [{
+          "name": "发票操作流程"
+        }, {
+          "name": "联系客服"
+        },
+        {
+          "name": "退换货规则"
+        }
+      ]
+    },
+    {
+      "name": "关于我们",
+      "links": [{
+        "name": "联系我们"
+      }]
+    }
+  ]
+}

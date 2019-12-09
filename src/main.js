@@ -55,6 +55,7 @@ import zkQrcode from '@/components/user/zk-qrcode/index.vue'
 import zkReg from '@/components/user/zk-reg/index.vue'
 import zkUserAddress from '@/components/user/zk-user-address/index.vue'
 import zkUserInfo from '@/components/user/zk-user-info/index.vue'
+import zkUserService from '@/components/user/zk-user-service/index.vue'
 import zkUserTop from '@/components/user/zk-user-top/index.vue'
 import xA from '@/elements/x-a/index.vue'
 import xAuthorization from '@/elements/x-authorization/index.vue'
@@ -115,6 +116,7 @@ Vue.component('zk-qrcode', zkQrcode)
 Vue.component('zk-reg', zkReg)
 Vue.component('zk-user-address', zkUserAddress)
 Vue.component('zk-user-info', zkUserInfo)
+Vue.component('zk-user-service', zkUserService)
 Vue.component('zk-user-top', zkUserTop)
 Vue.component('x-a', xA)
 Vue.component('x-authorization', xAuthorization)

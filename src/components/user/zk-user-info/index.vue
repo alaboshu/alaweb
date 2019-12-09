@@ -31,6 +31,9 @@
         if (userData) {
           this.list.infoView.forEach(element => {
             element.value = userData[element.infoType]
+            if (element.infoType === 'avator') {
+              element.value = 'http://retail_v13.api.5ug.com//wwwroot/static/images/avator/man_64.png'
+            }
           })
         }
         this.async = true

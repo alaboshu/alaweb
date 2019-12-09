@@ -12,6 +12,7 @@
 import api from '@/service/api'
 import helper from '@/service/core/helper'
 import crypto from '@/utils/crypto'
+import base from './base'
 // import base from './base'
 
 export default {
@@ -216,7 +217,7 @@ export default {
   // 跳转到登录页面
   toLogin () {
     api.toastWarn('请先登录')
-    api.to('/pages/user/login')
+    api.to('/user/login')
   },
   loginTo () {
     var userIndex = '/pages/user/index'
@@ -245,9 +246,10 @@ export default {
         content: '请先登录',
         success: function (res) {
           if (res.confirm) {
-            uni.navigateTo({
-              url: '/pages/user/login'
-            })
+            base.to('/user/login')
+            // uni.navigateTo({
+            //   url: '/pages/user/login'
+            // })
           } else if (res.cancel) {
             uni.reLaunch({
               url: '/pages/tabbar/index'

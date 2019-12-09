@@ -80,8 +80,8 @@
             { name: '待付款', value: [] },
             { name: '待发货', value: [] },
             { name: '待收货', value: [] },
-            { name: '待评价', value: [] }
-            // { name: '已关闭', value: [] }
+            { name: '评价', value: [] },
+            { name: '售后', value: [] }
           ]
         },
         scrollLeft: 0,
@@ -356,7 +356,6 @@
     .content-item_box {
       height: 100%;
       overflow: auto;
-      // border-radius: 10px;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       margin-left: 0;
@@ -504,6 +503,9 @@
   .uni-swiper-tab {
     background-color: $gl-light;
     border-bottom: 1px solid $gl-border1;
+    // .swiper-tab-list{
+
+    // }
     .navActive {
       color: $gl-themeColor;
     }
