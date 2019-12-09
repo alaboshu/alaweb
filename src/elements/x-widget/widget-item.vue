@@ -23,7 +23,7 @@
     <zk-list :widget="widget" v-if="widget.componentPath === '/common/zk-list'"></zk-list>
     <zk-logout :widget="widget" v-if="widget.componentPath === '/common/zk-logout'"></zk-logout>
     <zk-preview :widget="widget" v-if="widget.componentPath === '/common/zk-preview'"></zk-preview>
-    <zk-search :widget="widget" v-if="widget.componentPath === '/common/zk-search'"></zk-search>
+    <zk-search :widget="widget" v-if="widget.componentPath === '/themes/zk-search'"></zk-search>
     <zk-swiper :widget="widget" v-if="widget.componentPath === '/common/zk-swiper'"></zk-swiper>
     <zk-tabbar :widget="widget" v-if="widget.componentPath === '/common/zk-tabbar'"></zk-tabbar>
     <zk-video :widget="widget" v-if="widget.componentPath === '/common/zk-video'"></zk-video>

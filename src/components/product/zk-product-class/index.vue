@@ -8,7 +8,6 @@
     <scroll-view class="nav-right" scroll-y :scroll-top="scrollTop" @scroll="scroll" :style="'height:'+height+'px'" scroll-with-animation v-if="!showkan">
       <view v-for="(foods,index) in viewModel" :key="index" class="nav-right-box">
         <view class="nav-right-title">{{foods.name}}</view>
-        <!-- <view> <img style="width:100%" :src="foods.icon" alt=""></view> -->
         <view class="nav-right-item" v-for="(item,i) in foods.childClass" :key="i" @click="cart(item.id)">
           <image :src="item.icon" />
           <view>{{item.name}}</view>
@@ -98,21 +97,25 @@
     },
     methods: {
       async init () {
+        this.widget.apiUrl = '/Api/relation/getclass?type=ProductClassRelation&userId=1'
         this.widgetModel = await this.$api.themeWidget(this.widget)
-        this.viewModel = this.widgetModel.value.result
+        this.viewModel = this.widgetModel.value.result.datas
         if (this.$api.client() === 'AppPlus') {
           if (this.$api.payType() === 4) {
             this.statusBarHeight = this.$api.getSystemInfoSync().statusBarHeight
-            this.height = this.$api.getSystemInfoSync().windowHeight
+            // this.height = this.$api.getSystemInfoSync().windowHeight
+            console.info('1')
+            this.height = '400'
           } else {
             this.statusBarHeight = this.$api.getSystemInfoSync().statusBarHeight
-            this.height = this.$api.getSystemInfoSync().windowHeight - 46 - this.statusBarHeight
+            // this.height = this.$api.getSystemInfoSync().windowHeight - 46 - this.statusBarHeight
+            this.height = '400'
+            console.info('2')
           }
         } else {
           this.height = this.$api.getSystemInfoSync().windowHeight - 46
+          console.info('3', this.height)
         }
-
-        // this.viewModel = this.widgetModel.value.result
         this.async = true
       },
       scroll (e) {

@@ -83,6 +83,7 @@
     },
     methods: {
       async  init () {
+        console.info('可以进来这里吗', this.widget)
         if (this.type) {
           this.apiUrl = '/Api/Auto/List?type=' + this.type // 通过type来设置Url
         }

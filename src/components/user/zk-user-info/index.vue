@@ -10,7 +10,8 @@
   import listJson from './styles/list.json'
   export default {
     props: {
-      userModel: {}
+      userModel: {},
+      widget: {}
     },
     components: {
       listItem
@@ -26,9 +27,10 @@
     },
     methods: {
       init () {
-        if (this.userModel) {
+        var userData = this.$user.loginUser()
+        if (userData) {
           this.list.infoView.forEach(element => {
-            element.value = this.userModel[element.infoType]
+            element.value = userData[element.infoType]
           })
         }
         this.async = true
