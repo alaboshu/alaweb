@@ -42,8 +42,7 @@
       <x-button :loading="loading" btnText="登录" @change="bindLogin"></x-button>
     </view>
     <view class="action-row">
-      <navigator class="navigator" url="/pages/user/reg">注册账号</navigator>
-      <navigator class="navigator" url="/pages/index?path=user_password_find">忘记密码</navigator>
+      <view class="navigator" v-for="(item, index) in widgetModel.loginForm" :key="index" @click="$base.to(item.link.url)">{{item.link.name}}</view>
     </view>
     <view class="oauth-row" v-if="hasProvider" v-bind:style="{top: positionTop + 'px'}">
       <view class="oauth-image" v-for="provider in providerList" :key="provider.value">
@@ -89,7 +88,10 @@
     },
     methods: {
       async  init () {
-        this.widgetModel = await this.$api.themeWidget(this.widget)
+        console.info('this.widget', this.widget.value)
+        if (this.widget && this.widget.value) {
+          this.widgetModel = this.widget.value
+        }
       },
       onBack () {
         this.$api.back('login')

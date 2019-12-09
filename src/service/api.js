@@ -247,7 +247,7 @@ export default {
   // // 页面跳转
   to (url, isApp) {
     console.info('api to', url)
-    if (url === '/pages/default' || url.includes('pages/tabbar')) {
+    if (url === '/pages/tabbar/index' || url.includes('pages/tabbar')) {
       uni.reLaunch({
         url: url
       })
@@ -310,7 +310,7 @@ export default {
     var historys = this.localGet('browse_historys')
     if (url === 'login' && user.isLogin() === false) {
       uni.reLaunch({
-        url: '/pages/default'
+        url: '/pages/tabbar/index'
       })
       return false
     }
@@ -326,7 +326,7 @@ export default {
       } else {
         if (getCurrentPages().length === 1) {
           uni.reLaunch({
-            url: '/pages/default'
+            url: '/pages/tabbar/index'
           })
         } else {
           if (this.client() === 'AppPlus') {
@@ -355,7 +355,7 @@ export default {
       }
     } else {
       uni.reLaunch({
-        url: '/pages/default'
+        url: '/pages/tabbar/index'
       })
     }
   },

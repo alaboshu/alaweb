@@ -75,15 +75,35 @@ export default {
     return path
   },
   to (toPages) {
-    if (toPages.indexOf('/pages/tabbar') > -1) {
+    var url = this.getPathUrl(toPages)
+    if (url.indexOf('/pages/tabbar') > -1) {
       uni.switchTab({
-        url: toPages
+        url: url
       })
     } else {
       uni.navigateTo({
-        url: toPages
+        url: url
       })
     }
+  },
+  // 处理请求链接
+  getPathUrl (toPages) {
+    var url
+    // 处理跳转链接
+    if (toPages.indexOf('/tabbar') === -1) {
+      var linkSplit = toPages.split('/')
+      url = '/pages/index?path='
+      if (linkSplit.length === 2) {
+        url += linkSplit[1]
+      } else if (linkSplit.length === 3) {
+        url += linkSplit[1] + '_' + linkSplit[2]
+      } else if (linkSplit.length === 4) {
+        url += linkSplit[1] + '_' + linkSplit[2] + '_' + linkSplit[3]
+      }
+    } else {
+      url = toPages
+    }
+    return url
   },
   /**
    * 返回按钮， 

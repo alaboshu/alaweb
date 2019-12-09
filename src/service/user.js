@@ -250,7 +250,7 @@ export default {
             })
           } else if (res.cancel) {
             uni.reLaunch({
-              url: '/pages/default'
+              url: '/pages/tabbar/index'
             })
           }
         }

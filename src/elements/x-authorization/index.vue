@@ -144,7 +144,7 @@
           uni.hideLoading()
           this.showAuthorization = false
           uni.reLaunch({
-            url: '/pages/default'
+            url: '/pages/tabbar/index'
           })
         } else {
           uni.hideLoading()

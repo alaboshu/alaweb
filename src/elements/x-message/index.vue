@@ -99,7 +99,7 @@
       },
       goDefault () {
         uni.reLaunch({
-          url: '/pages/default'
+          url: '/pages/tabbar/index'
         })
       },
       goReturn () {

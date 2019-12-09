@@ -32,7 +32,7 @@
               this.$api.localRemove(this.$user.userKey())
               this.$api.localRemove('wechat_openId') // 移除当前openId
               uni.reLaunch({
-                url: '/pages/default'
+                url: '/pages/tabbar/index'
               })
             }
             if (val.cancel) {
