@@ -39,7 +39,7 @@
       box-sizing: border-box;
       background: #fff;
       border-radius: 10px;
-      margin: 5.5px;
+      margin: 1.6%;
       display: flex;
       flex-wrap: wrap;
       padding: 10px;

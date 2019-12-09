@@ -3,7 +3,7 @@
     <zk-article :widget="widget" v-if="widget.componentPath === '/articles/zk-article'"></zk-article>
     <zk-help :widget="widget" v-if="widget.componentPath === '/articles/zk-help'"></zk-help>
     <zk-marquee :widget="widget" v-if="widget.componentPath === '/articles/zk-marquee'"></zk-marquee>
-    <zk-amount :widget="widget" v-if="widget.componentPath === '/finance/zk-amount'"></zk-amount>
+    <zk-amount :widget="widget" v-if="widget.componentPath === '/assets/zk-amount'"></zk-amount>
     <zk-buy :widget="widget" v-if="widget.componentPath === '/order/zk-buy'"></zk-buy>
     <zk-cart :widget="widget" v-if="widget.componentPath === '/order/zk-cart'"></zk-cart>
     <zk-order-list :widget="widget" v-if="widget.componentPath === '/order/zk-order-list'"></zk-order-list>

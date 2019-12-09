@@ -30,22 +30,22 @@
       </view>
     </view>
     <view class="user-ul">
-      <view class="user-li" @click="$api.to('/pages/index?path=finance_account_index')">
+      <view class="user-li" @click="$base.to('/account/index')">
         <p class="p1">我的余额</p>
         <p class="p2" v-if="viewModel.storeRevenue">{{viewModel.storeRevenue}}</p>
         <p class="p2" v-else>0</p>
       </view>
-      <view class="user-li" @click="$api.to('/pages/index?path=order_index&orderStatus=1')">
+      <view class="user-li" @click="$base.to('/order/list?orderStatus=1')">
         <p class="p1">今日订单</p>
         <p class="p2" v-if="viewModel.todayOrderCount">{{viewModel.todayOrderCount}}</p>
         <p class="p2" v-else>0</p>
       </view>
-      <view class="user-li" @click="$api.to('/pages/index?path=user_rec_index')">
+      <view class="user-li" v-if="false" @click="$api.to('/pages/index?path=user_rec_index')">
         <p class="p1">会员数量</p>
         <p class="p2" v-if="viewModel.fansCount">{{viewModel.fansCount}}</p>
         <p class="p2" v-else>0</p>
       </view>
-      <view class="user-li" @click="$api.to('/pages/index?path=user_favorite_index')">
+      <view class="user-li" @click="$base.to('/collect/list')">
         <p class="p1">我的收藏</p>
         <p class="p2" v-if="viewModel.favorite">{{viewModel.favorite}}</p>
         <p class="p2" v-else>0</p>

@@ -39,7 +39,7 @@
       box-sizing: border-box;
       background: #fff;
       box-shadow: 0 1px 15px 1px rgba(69, 65, 78, 0.1);
-      margin: 4px;
+      margin: 1.6%;
       display: flex;
       flex-wrap: wrap;
       padding: 10px;
