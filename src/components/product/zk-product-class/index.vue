@@ -97,9 +97,9 @@
     },
     methods: {
       async init () {
-        this.widget.apiUrl = '/Api/relation/getclass?type=ProductClassRelation&userId=1'
+        this.widget.apiUrl = '/api/product/class?id=1'
         this.widgetModel = await this.$api.themeWidget(this.widget)
-        this.viewModel = this.widgetModel.value.result.datas
+        this.viewModel = this.widgetModel.value.result
         if (this.$api.client() === 'AppPlus') {
           if (this.$api.payType() === 4) {
             this.statusBarHeight = this.$api.getSystemInfoSync().statusBarHeight

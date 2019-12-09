@@ -125,6 +125,7 @@
         }
         this.$api.vuexSet('diyClientHost', data.clientHost)
         this.viewModel = theme.filerPageInfo(this.viewModel)
+        
         serivce.setTabbar(this, this.viewModel)
         console.info(this.viewModel.name, this.viewModel)
         this.postMessage('clientIframeLoadSuccessful', true)
