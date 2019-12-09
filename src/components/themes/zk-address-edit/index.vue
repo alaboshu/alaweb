@@ -133,7 +133,6 @@
       async sumbit () {
         if (this.isSumbit) {
           var that = this
-          // this.isSumbit = false
           this.addressInput.userId = this.$user.loginUser().id
           if (this.pagesId !== undefined) {
             this.addressInput.id = this.pagesId

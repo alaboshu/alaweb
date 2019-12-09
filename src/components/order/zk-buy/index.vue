@@ -296,8 +296,6 @@
           if (this.viewModel.allowMoneys.length !== 0) {
             this.reduceMoneysItem = [{ key: this.viewModel.allowMoneys[0].moneyId, value: this.viewModel.allowMoneys[0].maxPayPrice }]
           }
-          // this.reduceMoneysItem = this.viewModel.allowMoneys[0]
-          // this.reduceMoneysItem = { 'key': this.viewModel.allowMoneys[0].moneyId, 'value': this.viewModel.allowMoneys[0].maxPayPrice }
           for (var i = 0; i < this.viewModel.storeItems.length; i++) {
             this.showDeliveryTyoe[i] = {}
             this.showDelivery[i] = {}

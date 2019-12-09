@@ -74,7 +74,6 @@
         let parameter = {
           LoginUserId: this.$user.loginUser().id
         }
-
         var response = await this.$api.httpGet('/api/useraddress/get', parameter)
         if (response.status === 1) {
           this.addressList = response.result
@@ -128,10 +127,10 @@
       },
       editAddress (id) {
         this.$api.localSet('edit_address', true)
-        this.$api.to('/pages/my/address_edit?id=' + id)
+        this.$base.to('/user/address/edit?id=' + id)
       },
       addAddress () {
-        this.$api.to('/pages/index?path=user_address_edit')
+        this.$$base.to('/user/address/edit')
       },
       watchRoute () {
         this.init()

@@ -37,11 +37,8 @@
       </view>
       <view class="item-title">购物车</view>
     </div>
-    <!-- <div path="javascript:" class="bar-button bar-disabled" v-if="isActivity&&!productView.productActivityExtension.userPermissions.isMemberLeverBuy" @click="gradeClick()">加入购物车</div> -->
     <div path="javascript:" class="bar-button bar-disabled" v-if="!viewModel.isFrontShowPrice" @click="gradeClick()" v-show="isShowCart">加入购物车</div>
     <div path="javascript:" class="bar-button bar-cart" @click="showSaleProperty()" v-else v-show="isShowCart">加入购物车</div>
-
-    <!-- <div path="javascript:" class="bar-button bar-disabled" v-if="isActivity&&!productView.productActivityExtension.userPermissions.isMemberLeverBuy" style="border-left:1px solid #e5e5e5" @click="gradeClick()">立即购买</div> -->
     <div path="javascript:" class="bar-button bar-disabled" v-if="!viewModel.isFrontShowPrice" style="border-left:1px solid #e5e5e5" @click="gradeClick()">立即购买</div>
     <div path="javascript:" class="bar-button bar-buy" @click="showSaleProperty() " v-else>立即购买</div>
   </view>

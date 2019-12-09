@@ -286,8 +286,6 @@
         var that = this
         if (this.$user.loginUser() === null) {
           if (this.$api.client() !== 'WeChatLite') {
-            // var perUrl = window.location.pathname + window.location.search
-            // this.$api.localSet('previous_page_before_login', perUrl)
             uni.showModal({
               title: '提示',
               content: '请先登录',
@@ -295,7 +293,7 @@
               confirmText: '确定',
               success: function (res) {
                 if (res.confirm) {
-                  that.$api.to('/pages/user/login')
+                  that.$base.to('/user/login')
                 }
               }
             })
@@ -307,7 +305,7 @@
               confirmText: '确定',
               success: function (res) {
                 if (res.confirm) {
-                  that.$api.to('/pages/user/login')
+                  that.$base.to('/user/login')
                 }
               }
             })

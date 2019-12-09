@@ -28,11 +28,6 @@
           <x-icon name="icon-zk-return" :size="15" color="#fff"></x-icon>
         </div>
       </div>
-      <!-- <div v-if="isApp" class="app_bottom" :style="'top:'+statusBarHeight+'px'" @click="clickShare()">
-        <div>
-          <x-icon name="icon-zk-share" :size="15" color="#fff"></x-icon>
-        </div>
-      </div> -->
       <show-thumbnail id="shangpin" :productView="viewModel" v-if="ready"></show-thumbnail>
       <show-title ref="showTitle" :timeLimit="timeLimit" :productView="viewModel" v-if="ready" :isActivity="isActivity"></show-title>
       <show-parameter ref="show_parameter" :timeLimit="timeLimit" :productView="viewModel" v-if="ready" :isActivity="isActivity" :widget="widget"></show-parameter>
@@ -41,7 +36,6 @@
       <show-bar @changeSaleState="showSaleModel" :productView="viewModel" v-if="ready" :isActivity="isActivity" :widget="widget"></show-bar>
       <view style="height:50px;"></view>
     </div>
-    <!-- <show-bar @changeSaleState="showSaleModel" :productView="viewModel" v-if="ready" :isActivity="isActivity"></show-bar> -->
   </view>
 </template>
 
