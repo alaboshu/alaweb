@@ -151,7 +151,7 @@
           </view>
         </view>
       </zk-popup>
-      <zk-popup :show="popupParameter" v-on:hidePopup="popupParameter=false" v-if="!isClient">
+      <zk-popup :show="popupParameter" v-on:hidePopup="popupParameter=false" v-if="!isClient && false">
         <view class="showParameter">
           <view class="p-title">
             商品参数

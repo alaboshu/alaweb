@@ -28,6 +28,7 @@ import zkHtml from '@/components/common/zk-html/index.vue'
 import zkImageList from '@/components/common/zk-image-list/index.vue'
 import zkImage from '@/components/common/zk-image/index.vue'
 import zkList from '@/components/common/zk-list/index.vue'
+import zkPopup from '@/components/common/zk-popup/index.vue'
 import zkPreview from '@/components/common/zk-preview/index.vue'
 import zkSwiper from '@/components/common/zk-swiper/index.vue'
 import zkVideo from '@/components/common/zk-video/index.vue'
@@ -37,6 +38,7 @@ import zkOrderList from '@/components/order/zk-order-list/index.vue'
 import zkOrderRefund from '@/components/order/zk-order-refund/index.vue'
 import zkOrderShow from '@/components/order/zk-order-show/index.vue'
 import zkProductClass from '@/components/product/zk-product-class/index.vue'
+import zkProductItem from '@/components/product/zk-product-item/index.vue'
 import zkProductList from '@/components/product/zk-product-list/index.vue'
 import zkProductListpage from '@/components/product/zk-product-listpage/index.vue'
 import zkProductShowpage from '@/components/product/zk-product-showpage/index.vue'
@@ -84,6 +86,7 @@ Vue.component('zk-html', zkHtml)
 Vue.component('zk-image-list', zkImageList)
 Vue.component('zk-image', zkImage)
 Vue.component('zk-list', zkList)
+Vue.component('zk-popup', zkPopup)
 Vue.component('zk-preview', zkPreview)
 Vue.component('zk-swiper', zkSwiper)
 Vue.component('zk-video', zkVideo)
@@ -93,6 +96,7 @@ Vue.component('zk-order-list', zkOrderList)
 Vue.component('zk-order-refund', zkOrderRefund)
 Vue.component('zk-order-show', zkOrderShow)
 Vue.component('zk-product-class', zkProductClass)
+Vue.component('zk-product-item', zkProductItem)
 Vue.component('zk-product-list', zkProductList)
 Vue.component('zk-product-listpage', zkProductListpage)
 Vue.component('zk-product-showpage', zkProductShowpage)
