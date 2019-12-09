@@ -1,6 +1,6 @@
 <template>
-  <view style="background: #f0f0f0">
-    <x-countDown></x-countDown>
+  <view class="add">
+    试
   </view>
 </template>
 <script>
@@ -28,4 +28,10 @@
     }
   }
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  .add {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(20deg, red 10%, green 65%);
+  }
+</style>
