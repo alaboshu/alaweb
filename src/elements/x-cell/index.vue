@@ -1,13 +1,13 @@
 <template>
   <view v-if="async">
     <view class="x-cell_uni-list" v-if="isArray">
-      <view class="uni-list-cell" hover-class="uni-list-cell-hover" @click="onClick(item.url.value)" v-for="(item,index) in viewModel" :key="index">
-        <view class="uni-list-cell-navigate" :class="{'uni-navigate-right':item.url.value!==''}">
+      <view class="uni-list-cell" hover-class="uni-list-cell-hover" @click="onClick(item.link.url)" v-for="(item,index) in viewModel" :key="index">
+        <view class="uni-list-cell-navigate" :class="{'uni-navigate-right':item.link.url!==''}">
           <view class="uni-navigate-left conter_ly">
             <view class="box1">
               <x-icon :src="item.icon.name" :name="item.icon.name" :size="16"></x-icon>
             </view>
-            <view class="box2">{{item.name}}</view>
+            <view class="box2">{{item.link.name}}</view>
             <view v-if="item.remark" class="remark">{{item.remark}}</view>
           </view>
         </view>
@@ -71,7 +71,7 @@
       onClick (url) {
         this.$emit('click')
         if (url !== undefined) {
-          this.$api.to(url)
+          this.$base.to(url)
         }
       }
     }

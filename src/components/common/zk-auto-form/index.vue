@@ -57,6 +57,10 @@
           type = this.$crud.getType(this.$route)
         }
         if (!type) {
+          type = this.widget.value.form.type
+          console.info('aaaaaaaaaaaaa', this.widget.value.form.type)
+        }
+        if (!type) {
           this.$api.confirm('表单type不存在,请传入')
           this.$api.back()
         }

@@ -1,12 +1,12 @@
 <template>
   <view v-if="async">
     <view v-if="isGroupLink">
-      <view class="zk-cell_box" v-for="(group,groupIndex) in widget.value" :key="groupIndex">
+      <view class="zk-cell_box" v-for="(group,groupIndex) in viewModel" :key="groupIndex">
         <x-cell :elementData="group"></x-cell>
       </view>
     </view>
     <view v-else>
-      <view v-for="(group,groupIndex) in widget.value" :key="groupIndex">
+      <view v-for="(group,groupIndex) in viewModel" :key="groupIndex">
         <x-cell :elementData="group"></x-cell>
       </view>
     </view>
@@ -23,7 +23,8 @@
         isGroupLink: false, // 分组链接
         tuchulist: [
           { name: '退出登陆', image: 'zk-orderlist' }
-        ]
+        ],
+        viewModel: null
       }
     },
     props: {
@@ -38,8 +39,11 @@
     methods: {
       async  init () {
         this.async = false
-        this.widgetModel = await this.$api.themeWidget(this.widget)
-        if (this.widget.apiUrl === '/api/theme/getlinkgroup') {
+        console.info('this.widget', this.widget)
+        if (this.widget && this.widget.value) {
+          this.viewModel = this.widget.value
+        }
+        if (this.widget && this.widget.apiUrl === '/api/theme/getlinkgroup') {
           this.isGroupLink = true
         }
         this.async = true

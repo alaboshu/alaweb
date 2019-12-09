@@ -18,7 +18,7 @@
       </view>
       <view class="user-active-seting">
         <view class="user-seting">
-          <view @click="$api.to('/pages/index?path=user_password_index')">
+          <view @click="$base.to('/user/set')">
             <x-icon name="icon-zk-renzheng" class="setIng" color="#ffffff" :size="18"></x-icon>
           </view>
         </view>
