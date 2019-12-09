@@ -52,6 +52,7 @@ import zkLogin from '@/components/user/zk-login/index.vue'
 import zkLogout from '@/components/user/zk-logout/index.vue'
 import zkQrcode from '@/components/user/zk-qrcode/index.vue'
 import zkReg from '@/components/user/zk-reg/index.vue'
+import zkUserAddress from '@/components/user/zk-user-address/index.vue'
 import zkUserInfo from '@/components/user/zk-user-info/index.vue'
 import zkUserTop from '@/components/user/zk-user-top/index.vue'
 import xA from '@/elements/x-a/index.vue'
@@ -110,6 +111,7 @@ Vue.component('zk-login', zkLogin)
 Vue.component('zk-logout', zkLogout)
 Vue.component('zk-qrcode', zkQrcode)
 Vue.component('zk-reg', zkReg)
+Vue.component('zk-user-address', zkUserAddress)
 Vue.component('zk-user-info', zkUserInfo)
 Vue.component('zk-user-top', zkUserTop)
 Vue.component('x-a', xA)
