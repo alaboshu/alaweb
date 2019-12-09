@@ -1,0 +1,56 @@
+{
+  "infoView": [{
+      "infoType": "avator",
+      "type": "头像",
+      "value": "",
+      "icon": "zk-right",
+      "url": "",
+      "show": true,
+      "isAct": true,
+      "image": "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3209370120,2008812818&fm=26&gp=0.jpg"
+    },
+    {
+      "infoType": "name",
+      "type": "名字",
+      "value": "",
+      "icon": "",
+      "show": false
+    },
+    {
+      "infoType": "userName",
+      "type": "用户名",
+      "value": "",
+      "icon": "",
+      "show": false
+    },
+    {
+      "infoType": "mobile",
+      "type": "手机号",
+      "value": "",
+      "icon": "",
+      "show": false
+    },
+    {
+      "infoType": "sex",
+      "type": "性别",
+      "value": "",
+      "icon": "",
+      "show": false
+    },
+    {
+      "infoType": "email",
+      "type": "邮箱",
+      "value": "",
+      "icon": "",
+      "show": false
+    }
+  ],
+  "infoOut": [{
+    "infoType": "loginOut",
+    "type": "退出登录",
+    "name": "",
+    "icon": "zk-right",
+    "url": "",
+    "show": true
+  }]
+}
