@@ -50,11 +50,11 @@
     width: 100%;
     background: #fff;
     padding: 12px 15px;
-    border-radius: 8;
-    -webkit-border-radius: 8;
-    -moz-border-radius: 8;
-    -ms-border-radius: 8;
-    -o-border-radius: 8;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
     box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .1);
 
     .cont-head {
@@ -97,6 +97,43 @@
         .test {
           background: #F1F1F1;
         }
+      }
+    }
+  }
+
+  .foot {
+    position: fixed;
+    height: 90px;
+    width: 100%;
+    background: #fff;
+    bottom: 0;
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      height: 50px;
+      background: linear-gradient(1turn, #ff4848, #ff7b64);
+      box-shadow: 0 1px 7px 1px #ff4848;
+      border-radius: 30px;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      -ms-border-radius: 30px;
+      -o-border-radius: 30px;
+
+      .test {
+        padding: 3px 0;
+        font-size: 12px;
+        color: #fff;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
       }
     }
   }

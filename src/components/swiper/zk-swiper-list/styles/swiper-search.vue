@@ -7,16 +7,25 @@
       <input type="text" placeholder="请输入您所需要搜索的内容" class="input" />
     </view>
     <view class="right">
-      <view class="iconList">
+      <view class="iconList" @click="$base.to('/order/cart')">
         <x-icon name="zk-cart-1" size="20" color="#ffffff"></x-icon>
       </view>
-      <view class="iconList">
+      <view class="iconList" @click="$base.to('/user/qrcode')">
         <x-icon name="zk-qrcode" size="20" color="#ffffff"></x-icon>
       </view>
     </view>
   </view>
 </template>
 
+<script>
+  export default {
+    methods: {
+      clickLink () {
+        console.info('点击点击')
+      }
+    }
+  }
+</script>
 
 <style lang="scss" scoped>
   .swiper-search {

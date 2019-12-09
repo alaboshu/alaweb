@@ -17,7 +17,12 @@
             <view class="cont-show-list" v-for="(linkItem , linkIndex) in item.links" :key="linkIndex">{{linkItem.name}}</view>
           </view>
         </view>
-
+      </view>
+    </view>
+    <view class="foot">
+      <view class="center">
+        <view class="test">电话客服 400-680-9088</view>
+        <view class="test">周一至周五 09:00 - 18:00</view>
       </view>
     </view>
   </view>
