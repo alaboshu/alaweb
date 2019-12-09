@@ -34,7 +34,7 @@
           this.height = this.widgetModel.height
         }
         if (this.widgetModel.imagePad) {
-          this.padd = this.widgetModel.imagePad
+          this.padding = this.widgetModel.imagePad
         }
         this.asyns = true
       },
