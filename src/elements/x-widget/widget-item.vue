@@ -10,7 +10,7 @@
     <zk-order-refund :widget="widget" v-if="widget.componentPath === '/order/zk-order-refund'"></zk-order-refund>
     <zk-order-show :widget="widget" v-if="widget.componentPath === '/order/zk-order-show'"></zk-order-show>
     <zk-product-class :widget="widget" v-if="widget.componentPath === '/product/zk-product-class'"></zk-product-class>
-    <zk-product-list :widget="widget" v-if="widget.componentPath === '/product/zk-product-list'"></zk-product-list>
+    <zk-product-list ref="zkProductList" :widget="widget" v-if="widget.componentPath === '/product/zk-product-list'"></zk-product-list>
     <zk-product-listpage :widget="widget" v-if="widget.componentPath === '/product/zk-product-listpage'"></zk-product-listpage>
     <zk-product-showpage :widget="widget" v-if="widget.componentPath === '/product/zk-product-showpage'"></zk-product-showpage>
     <zk-auto-form :widget="widget" v-if="widget.componentPath === '/common/zk-auto-form'"></zk-auto-form>

@@ -1,7 +1,6 @@
 <template>
   <view v-if="async">
-    <!-- <page-item v-if="widget.isPage" :widget="widget" :viewModel="allDataList"></page-item> -->
-    <common-item :viewModel="allDataList" :widget="widget"></common-item>
+    <common-item ref="commonItem" :viewModel="allDataList" :widget="widget"></common-item>
   </view>
 </template>
 
@@ -33,6 +32,10 @@
       this.init()
     },
     methods: {
+      // 下拉菜单事件
+      scrollView () {
+        this.init()
+      },
       async  init () {
         var widgetPara = this.widget
         this.queryPara = {

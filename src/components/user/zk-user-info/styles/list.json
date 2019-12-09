@@ -46,6 +46,13 @@
     }
   ],
   "infoOut": [{
+    "infoType": "editAddress",
+    "type": "收货地址",
+    "name": "",
+    "icon": "zk-right",
+    "url": "",
+    "show": true
+  }, {
     "infoType": "loginOut",
     "type": "退出登录",
     "name": "",

@@ -25,6 +25,9 @@
         if (item.infoType === 'loginOut') {
           this.$user.loginOut()
         }
+        if (item.infoType === 'editAddress') {
+          this.$base.to('/user/address/select')
+        }
       }
     }
   }

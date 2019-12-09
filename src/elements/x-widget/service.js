@@ -27,5 +27,14 @@ export default {
     }
     jsThis.$api.vuexLocalSet('historys_record_links', historys)
     addPath = true
+  },
+  // 下拉刷新，只在最后一个是列表时触发
+  scrollChange (jsThis) {
+    if (jsThis.$refs.widgetItem) {
+      var swiperWidget = jsThis.$refs.widgetItem[jsThis.$refs.widgetItem.length - 1]
+      if (swiperWidget.widget.name === 'zk-product-list') {
+        swiperWidget.$refs.zkProductList.scrollView()
+      }
+    }
   }
 }

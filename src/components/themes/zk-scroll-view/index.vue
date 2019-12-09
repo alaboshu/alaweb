@@ -19,13 +19,18 @@
     },
     methods: {
       init () {
-        // uni.getSystemInfoSync
         var getSystemInfoSync = uni.getSystemInfoSync()
         this.height = getSystemInfoSync.windowHeight
-        console.info('uni.getSystemInfoSync', getSystemInfoSync.windowHeight)
       },
       scrollView (ev) {
-        console.info('ev', ev)
+        if (ev.target.scrollTop > 50) {
+          this.$bus.$emit('bk_search_view', true)
+        } else {
+          this.$bus.$emit('bk_search_view', false)
+        }
+        if (ev.target.scrollHeight - (this.height + ev.target.scrollTop) < 6) {
+          this.$emit('change')
+        }
       }
     }
   }

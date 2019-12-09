@@ -21,6 +21,10 @@
     methods: {
       toProductShow (item) {
         console.info('item', item)
+      },
+      // 下拉菜单事件
+      scrollView () {
+        console.info('这是为什么啊')
       }
     }
   }
