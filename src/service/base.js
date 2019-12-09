@@ -90,8 +90,15 @@ export default {
   getPathUrl (toPages) {
     var url
     // 处理跳转链接
-    if (toPages.indexOf('/tabbar') === -1) {
-      var linkSplit = toPages.split('/')
+    var toPagesUrl = toPages
+    var showSplit
+    console.info('toPages', toPages)
+    if (toPages.indexOf('?') > -1) {
+      toPagesUrl = toPages.split('?')[0]
+      showSplit = toPages.split('?')[1]
+    }
+    if (toPagesUrl.indexOf('/tabbar') === -1) {
+      var linkSplit = toPagesUrl.split('/')
       url = '/pages/index?path='
       if (linkSplit.length === 2) {
         url += linkSplit[1]
@@ -100,6 +107,7 @@ export default {
       } else if (linkSplit.length === 4) {
         url += linkSplit[1] + '_' + linkSplit[2] + '_' + linkSplit[3]
       }
+      url += `&${showSplit}`
     } else {
       url = toPages
     }
