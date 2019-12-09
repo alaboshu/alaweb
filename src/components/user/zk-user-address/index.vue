@@ -37,7 +37,7 @@
           添加地址
         </view>
         <view class="address-btn" @click="addAddress()" v-else-if="addressList.length === 0">
-          添加地址
+          添加地址就是你了
         </view>
       </view>
     </view>
@@ -47,7 +47,6 @@
 
 <script>
   import mapL from './map'
-
   import apiId from '@/service/config'
   export default {
 
@@ -75,7 +74,7 @@
         let parameter = {
           LoginUserId: this.$user.loginUser().id
         }
-        // var sing = await this.$api.httpGet(USERADDRESS_SINGLE_GET , parameter)
+
         var response = await this.$api.httpGet('/api/useraddress/get', parameter)
         if (response.status === 1) {
           this.addressList = response.result

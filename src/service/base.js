@@ -107,7 +107,9 @@ export default {
       } else if (linkSplit.length === 4) {
         url += linkSplit[1] + '_' + linkSplit[2] + '_' + linkSplit[3]
       }
-      url += `&${showSplit}`
+      if (showSplit) {
+        url += `&${showSplit}`
+      }
     } else {
       url = toPages
     }
