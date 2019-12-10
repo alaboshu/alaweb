@@ -1,8 +1,8 @@
 <template>
   <view class="common-style">
-    <single-item :viewModel="viewModel" v-if="widget.value.productType == 1"></single-item>
-    <product-item :viewModel="viewModel" v-if="widget.value.productType == 2"></product-item>
-    <product-item-3 :viewModel="viewModel" v-if="widget.value.productType == 3"></product-item-3>
+    <singleItem :viewModel="viewModel" v-if="widget.value.productType == 1"></singleItem>
+    <productItem :viewModel="viewModel" v-else-if="widget.value.productType == 2"></productItem>
+    <productItem3 :viewModel="viewModel" v-else-if="widget.value.productType == 3"></productItem3>
   </view>
 </template>
 

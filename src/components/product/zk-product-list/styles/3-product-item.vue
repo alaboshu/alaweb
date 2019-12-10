@@ -1,5 +1,5 @@
 <template>
-  <view class="product-list">
+  <view class="product-item-3">
     <view class="product-list-cont" v-for="(item, index) in viewModel" :key="index" @click="$base.to('/product/show?id='+item.id)">
       <view class="product-list-image">
         <img :src="'http://retail_v13.api.5ug.com/'+item.thumbnailUrl" v-lazy alt="" srcset="">
@@ -32,11 +32,12 @@
 
 
 <style lang="scss">
-  .product-list {
+  .product-item-3 {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     padding: 5px;
+    box-sizing: border-box;
     .product-list-cont {
       cursor: pointer;
       width: 46.8%;
