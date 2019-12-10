@@ -1,6 +1,6 @@
 <template>
   <view class="swiper-item-4" v-if="swiperList">
-    <view class="swiper-bgColor" :style="{background: swiperBgColor}"></view>
+    <view class="swiper-bgColor"></view>
     <view class="swiper-head">
       <search type="2"></search>
     </view>
@@ -31,7 +31,7 @@
       return {
         async: false,
         widgetModel: '',
-        swiperHeight: 150,
+        swiperHeight: 120,
         windowWidth: '',
         swiperBgColor: '#421f7d',
         swiperList: []
@@ -70,9 +70,8 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 180px;
-      background: #421f7d;
-      border-radius: 0 0 15px 15px;
+      height: 205px;
+      background: #ff4a2d;
     }
     .swiper-head {
       width: 100%;
@@ -81,11 +80,12 @@
     }
     .swiper-class {
       width: 100%;
-      height: 100px;
+      height: 30px;
       position: relative;
     }
     .swiper-cont {
       padding: 0 10px;
+      margin-bottom: 10px;
       .uni-swiper-item {
         padding-top: 0px !important;
       }
