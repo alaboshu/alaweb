@@ -3,6 +3,7 @@
     <swiper-item-1 v-if="swiperModel.swiperType == 1" :swiperModel="swiperModel.swiperList"></swiper-item-1>
     <swiper-item-2 v-if="swiperModel.swiperType == 2" :swiperModel="swiperModel.swiperList"></swiper-item-2>
     <swiper-item-3 v-if="swiperModel.swiperType == 3" :swiperModel="swiperModel.swiperList"></swiper-item-3>
+    <!-- <swiper-item-4 :swiperModel="swiperModel.swiperList"></swiper-item-4> -->
   </view>
 </template>
 

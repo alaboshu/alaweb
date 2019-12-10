@@ -1,8 +1,11 @@
 <template>
-  <view class="swiper-item-2" v-if="swiperList">
+  <view class="swiper-item-4" v-if="swiperList">
     <view class="swiper-bgColor" :style="{background: swiperBgColor}"></view>
     <view class="swiper-head">
-      <search type="1"></search>
+      <search type="2"></search>
+    </view>
+    <view class="swiper-class">
+      <swiperClass></swiperClass>
     </view>
     <view class="swiper-cont">
       <swiper :autoplay="true" @change="changeSwiper" :circular="true" :indicator-dots="true" indicator-active-color="#c91230" indicator-color="#ebedf0" :style="{ height: swiperHeight + 'px' }">
@@ -19,10 +22,11 @@
 <script>
   import swiperSearch from './swiper-search'
   import search from '../search/index'
+  import swiperClass from '../swiper-class/index'
   import mxins from './mixins'
   export default {
     mixins: [mxins],
-    components: { swiperSearch, search },
+    components: { swiperSearch, search, swiperClass },
     data () {
       return {
         async: false,
@@ -59,7 +63,7 @@
 <style scoped lang="scss">
   @import "@/assets/style/variable.scss";
 
-  .swiper-item-2 {
+  .swiper-item-4 {
     position: relative;
     .swiper-bgColor {
       position: absolute;
@@ -74,6 +78,11 @@
       width: 100%;
       position: relative;
       height: 45px;
+    }
+    .swiper-class {
+      width: 100%;
+      height: 100px;
+      position: relative;
     }
     .swiper-cont {
       padding: 0 10px;
