@@ -44,13 +44,18 @@
     },
     methods: {
       init () {
-        console.info('aaaaaaaaaaaaaaaa', this.swiperModel.swiperList)
+        var para = {
+          detail: {
+            current: 0
+          }
+        }
+        this.changeSwiper(para)
       },
       goLinks (url) {
         this.$api.to(url)
       },
       changeSwiper (ev) {
-        this.swiperBgColor = this.swiperList[ev.detail.current].colors
+        this.swiperBgColor = this.swiperModel.swiperList[ev.detail.current].colors
       }
     },
     watch: {

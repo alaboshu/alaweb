@@ -1,13 +1,13 @@
 <template>
-  <view class="swiper-class-item-1">
-    <view class="left">
+  <view class="swiper-class-item-1" :style="widget.style.css">
+    <view class="left" :style="widget.style.css">
       <scroll-view style="width: 100%;height: 30px;" :show-scrollbar="false" :scroll-x="true" @scroll="scrollChange">
         <view class="left-ul" :style="{width: (50*swiperLength) +'px'}">
           <view class="left-list" :class="{active: swiperIndex === index}" @click="swiperIndex = index" v-for="(item, index) in swiperHeadModel" :key="index">{{item.name}}</view>
         </view>
       </scroll-view>
     </view>
-    <view class="right">
+    <view class="right" :style="widget.style.css">
       <view class="iconList">
         <x-icon name="zk-qrcode" size="20" color="#efd6b4"></x-icon>
       </view>
@@ -18,6 +18,9 @@
 <script>
   import indexJson from './swiper-class.json'
   export default {
+    props: {
+      widget: {}
+    },
     data () {
       return {
         swiperHeadModel: indexJson,

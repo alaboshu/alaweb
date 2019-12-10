@@ -1,6 +1,6 @@
 <template>
   <view>
-    <swiperClassItem1></swiperClassItem1>
+    <swiperClassItem1 :widget="widget"></swiperClassItem1>
   </view>
 </template>
 
@@ -9,6 +9,9 @@
   export default {
     components: {
       swiperClassItem1
+    },
+    props: {
+      widget: {}
     }
   }
 </script>

@@ -1,11 +1,11 @@
 <template>
   <view class="swiper-item-4" v-if="swiperModel.swiperList">
-    <view class="swiper-bgColor"></view>
+    <view class="swiper-bgColor" :style="widget.style.css"></view>
     <view class="swiper-head">
       <search type="2"></search>
     </view>
     <view class="swiper-class">
-      <swiperClass></swiperClass>
+      <swiperClass :widget="widget"></swiperClass>
     </view>
     <view class="swiper-cont">
       <swiper :autoplay="true" @change="changeSwiper" :circular="true" :indicator-dots="true" indicator-active-color="#c91230" indicator-color="#ebedf0" :style="{ height: swiperHeight + 'px' }">
@@ -39,6 +39,7 @@
     },
     props: {
       swiperModel: {},
+      widget: {},
       height: {
         type: Number,
         default: 150
@@ -48,11 +49,14 @@
       this.init()
     },
     methods: {
+      init () {
+        console.info('aaaaaaaaaaaaa', this.widget.style.css)
+      },
       goLinks (url) {
         this.$api.to(url)
       },
       changeSwiper (ev) {
-        this.swiperBgColor = this.swiperList[ev.detail.current].colors
+
       }
     },
     watch: {
