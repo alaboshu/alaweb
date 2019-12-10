@@ -1,5 +1,4 @@
 <template>
-  <!-- <zk-scroll-view @change="scrollChange"> -->
   <view v-if="async && viewModel" :style="{background: viewModel.setting.background+';width:100%;overflow: hidden'}">
     <zk-head :title="viewModel.name" :widget="viewModel" :showHead="viewModel.setting.showHead" ref="zkHead"></zk-head>
     <view v-for="(widget, index) in viewModel.widgets" :key="index" :id="widget.widgetTheme" :style="widget.style && widget.style.css" :class="widget.borderClass">
@@ -35,7 +34,6 @@
       </div>
     </view>
   </view>
-  <!-- </zk-scroll-view> -->
 </template>
 
 <script>
