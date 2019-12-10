@@ -23,12 +23,12 @@
         this.height = getSystemInfoSync.windowHeight
       },
       scrollView (ev) {
-        if (ev.target.scrollTop > 50) {
+        if (ev.detail.scrollTop > 50) {
           this.$bus.$emit('bk_search_view', true)
         } else {
           this.$bus.$emit('bk_search_view', false)
         }
-        if (ev.target.scrollHeight - (this.height + ev.target.scrollTop) < 6) {
+        if (ev.detail.scrollHeight - (this.height + ev.detail.scrollTop) < 6) {
           this.$emit('change')
         }
       }

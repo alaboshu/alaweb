@@ -50,6 +50,7 @@ import zkScrollView from '@/components/themes/zk-scroll-view/index.vue'
 import zkSearch from '@/components/themes/zk-search/index.vue'
 import zkTabbar from '@/components/themes/zk-tabbar/index.vue'
 import zkLogin from '@/components/user/zk-login/index.vue'
+import zkLogin1 from '@/components/user/zk-login1/index.vue'
 import zkLogout from '@/components/user/zk-logout/index.vue'
 import zkQrcode from '@/components/user/zk-qrcode/index.vue'
 import zkReg from '@/components/user/zk-reg/index.vue'
@@ -112,6 +113,7 @@ Vue.component('zk-scroll-view', zkScrollView)
 Vue.component('zk-search', zkSearch)
 Vue.component('zk-tabbar', zkTabbar)
 Vue.component('zk-login', zkLogin)
+Vue.component('zk-login1', zkLogin1)
 Vue.component('zk-logout', zkLogout)
 Vue.component('zk-qrcode', zkQrcode)
 Vue.component('zk-reg', zkReg)
