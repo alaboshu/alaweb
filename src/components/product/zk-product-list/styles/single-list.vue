@@ -29,7 +29,6 @@
       viewModel: {}
     },
     mounted () {
-      console.info('aaaaaaaaaaaaa', this.viewModel)
     },
     methods: {
       // 下拉菜单事件

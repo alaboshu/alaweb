@@ -14,7 +14,13 @@
       }
     },
     onLoad (option) {
-      this.option = option
+      if (this.$api.client() === 'WeChatLite') {
+        this.option = []
+        this.option.push(option)
+      } else {
+        this.option = option
+      }
+      console.info('optionsabcdefghijk', this.option)
       console.info('index getCurrentPages', getCurrentPages())
       console.info('fullPath', this.$base.fullPath())
     },
@@ -23,7 +29,7 @@
     },
     methods: {
       init () {
-
+        console.info('触发不')
       }
     }
   }

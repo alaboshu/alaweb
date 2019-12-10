@@ -129,7 +129,6 @@
         if (this.$api.client() === 'AppPlus' && this.$api.payType() === 3) {
           this.isIosApp = false
         }
-        // console.info('aaaaaaaaaaaaaaaaaa', this.w)
         let par = {
           id: this.widget.route[0].id,
           userId: this.$user.loginUser().id
