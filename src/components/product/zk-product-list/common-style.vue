@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view class="common-style">
     <single-item :viewModel="viewModel" v-if="widget.value.productType == 1"></single-item>
     <product-item :viewModel="viewModel" v-if="widget.value.productType == 2"></product-item>
     <product-item-3 :viewModel="viewModel" v-if="widget.value.productType == 3"></product-item-3>
@@ -28,6 +28,14 @@
       console.info('options', optinos)
     },
     mounted () {
+
     }
   }
 </script>
+
+<style lang="scss" scoped>
+  .common-style {
+    width: 100%;
+    box-sizing: border-box;
+  }
+</style>

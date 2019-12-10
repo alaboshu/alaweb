@@ -1,5 +1,5 @@
 <template>
-  <view v-if="async">
+  <view v-if="async" :style="{width: width +'px'}" class="zk-product-list">
     <common-item ref="commonItem" :viewModel="allDataList" :widget="widget"></common-item>
   </view>
 </template>
@@ -16,6 +16,7 @@
     data () {
       return {
         async: false,
+        width: '375',
         allDataList: [], // 所有数据,每次刷新以后获取的数据叠加
         viewModel: {}, // 视图模型
         queryPara: {
@@ -49,6 +50,7 @@
         } else {
           this.$api.toastWarn('数据获取失败')
         }
+        this.width = this.$api.screenWidth()
         this.async = true
       },
       scrolltolower () {

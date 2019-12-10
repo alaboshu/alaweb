@@ -1,22 +1,34 @@
 <template>
-  <view v-if="swiperModel">
-    <swiper-item-1 v-if="swiperModel.swiperType == 1" :swiperModel="swiperModel.swiperList"></swiper-item-1>
-    <swiper-item-2 v-if="swiperModel.swiperType == 2" :swiperModel="swiperModel.swiperList"></swiper-item-2>
-    <swiper-item-3 v-if="swiperModel.swiperType == 3" :swiperModel="swiperModel.swiperList"></swiper-item-3>
-    <!-- <swiper-item-4 :swiperModel="swiperModel.swiperList"></swiper-item-4> -->
+  <view v-if="async">
+    <swiperItem1 v-if="swiperModel.swiperType == 1" :swiperModel="swiperModel.swiperList"></swiperItem1>
+    <swiperItem2 v-if="swiperModel.swiperType == 2" :swiperModel="swiperModel.swiperList"></swiperItem2>
+    <swiperItem3 v-if="swiperModel.swiperType == 3" :swiperModel="swiperModel.swiperList"></swiperItem3>
+    <swiperItem4 v-if="swiperModel.swiperType == 4" :swiperModel="swiperModel.swiperList"></swiperItem4>
+    <swiperItem5 v-if="swiperModel.swiperType == 5" :swiperModel="swiperModel.swiperList"></swiperItem5>
   </view>
 </template>
 
 <script>
-  import styleMix from './styles/style-mix'
+  import swiperItem1 from './styles/swiper-item-1'
+  import swiperItem2 from './styles/swiper-item-2'
+  import swiperItem3 from './styles/swiper-item-3'
+  import swiperItem4 from './styles/swiper-item-4'
+  import swiperItem5 from './styles/swiper-item-5'
   export default {
-    mixins: [styleMix],
     props: {
       widget: {}
     },
+    components: {
+      swiperItem1,
+      swiperItem2,
+      swiperItem3,
+      swiperItem4,
+      swiperItem5
+    },
     data () {
       return {
-        swiperModel: null
+        swiperModel: null,
+        async: false
       }
     },
     mounted () {
@@ -28,6 +40,7 @@
         if (this.widget && this.widget.value) {
           this.swiperModel = this.widget.value.swiperForm
         }
+        this.async = true
       }
     }
   }
