@@ -1,9 +1,17 @@
 .common {
   display: flex;
-  margin: 10px;
+  margin: 10px 0;
   padding: 15px;
   background-color: #fff;
   border-radius: 10px;
+
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
 
   .common-image {
     width: 103px;

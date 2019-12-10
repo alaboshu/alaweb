@@ -4,7 +4,8 @@
       <swiper :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval" :duration="duration" :style="'height:'+winWidth+'px'">
         <swiper-item v-for="(item,index) in productView.productExtensions.productThums" :key="index">
           <view class="product_image" :style="'height:'+ winWidth+'px'">
-            <img :src="repImage(item.showCaseUrl)" class="show-img">
+            <img v-if="$api.client() !=='WeChatLite'" :src="repImage(item.showCaseUrl)" class="show-img">
+            <img v-else :src="$api.baseUrl() + item.showCaseUrl" class="show-img">
           </view>
         </swiper-item>
       </swiper>

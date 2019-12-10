@@ -157,7 +157,7 @@ Vue.prototype.$client = 'WeChatLite'
 Vue.directive('lazy', {
   inserted: el => {
     el.onerror = () => {
-      el.src = api.config().lazyImage
+      el.src = 'http://retail_v13.api.5ug.com/wwwroot/static/images/nopic.jpg'
     }
   }
 })
