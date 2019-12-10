@@ -1,5 +1,5 @@
 <template>
-  <view class="zk-scroll-view">
+  <view class="zk-scroll-view" v-if="async">
     <scroll-view :scroll-y="true" @scroll="scrollView" class="scroll" :style="'height:'+height+'px'">
       <slot></slot>
     </scroll-view>
@@ -11,7 +11,8 @@
   export default {
     data () {
       return {
-        height: '100'
+        height: '100',
+        async: false
       }
     },
     mounted () {
@@ -21,6 +22,7 @@
       init () {
         var getSystemInfoSync = uni.getSystemInfoSync()
         this.height = getSystemInfoSync.windowHeight
+        this.async = true
       },
       scrollView (ev) {
         if (ev.detail.scrollTop > 50) {

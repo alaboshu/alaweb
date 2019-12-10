@@ -1,5 +1,5 @@
 <template>
-  <view class="page-body" :style="'height:'+(height)+'px'" v-if="async">
+  <view class="page-body" :style="'height:'+height+'px'" v-if="async">
     <scroll-view class="nav-left" scroll-y :style="'height:'+height+'px'" :scroll-top="scrollLeftTop" scroll-with-animation v-if="!showkan">
       <view class="nav-left-item" @click="categoryClickMain(index)" :key="index" :class="index==categoryActive?'active':''" v-for="(item,index) in viewModel">
         {{item.name}}
