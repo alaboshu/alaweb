@@ -66,6 +66,7 @@
     min-height: 130px;
     width: 100%;
     padding: 10px;
+    box-sizing: border-box;
     .scroll-view {
       height: 100%;
       .ul {
