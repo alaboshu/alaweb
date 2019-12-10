@@ -1,7 +1,7 @@
 <template>
   <view class="zk-scroll-view">
     <scroll-view :scroll-y="true" @scroll="scrollView" class="scroll" :style="'height:'+height+'px'">
-      <slot></slot>
+      <slot name="scrollView"></slot>
     </scroll-view>
   </view>
 </template>
