@@ -1,5 +1,5 @@
 import globalConfig from '@/service/config'
-import http from '@/service/all/http'
+// import http from '@/service/all/http'
 import api from '@/service/api'
 import base from '@/service/base'
 import pagesInfo from '@/build.json'
@@ -117,7 +117,7 @@ export default {
   // 获取值
   async getWidgetValueByApiUrl (parameter, para) {
     if (parameter.apiUrl !== undefined) {
-      var response = await http.get(parameter.apiUrl, para)
+      var response = await api.httpGet(parameter.apiUrl, para)
       parameter.value = response
     }
     return parameter
