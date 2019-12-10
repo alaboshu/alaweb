@@ -1,7 +1,5 @@
 <template>
-  <view class="add">
-    你可以显示不
-  </view>
+  <zk-grid-list></zk-grid-list>
 </template>
 <script>
   export default {

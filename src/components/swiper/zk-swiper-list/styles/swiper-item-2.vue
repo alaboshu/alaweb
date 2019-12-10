@@ -96,7 +96,7 @@
       }
       .bgImg {
         width: 100%;
-        border-radius: 15px;
+        border-radius: 10px;
       }
     }
   }
