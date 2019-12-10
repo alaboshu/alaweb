@@ -50,7 +50,6 @@
     },
     methods: {
       init () {
-        console.info('aaaaaaaaaaaaa', this.widget.style.css)
       },
       goLinks (url) {
         this.$api.to(url)
@@ -74,7 +73,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 205px;
+      height: 200px;
       background: #ff4a2d;
     }
     .swiper-head {
@@ -89,7 +88,7 @@
     }
     .swiper-cont {
       padding: 0 10px;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       .uni-swiper-item {
         padding-top: 0px !important;
       }

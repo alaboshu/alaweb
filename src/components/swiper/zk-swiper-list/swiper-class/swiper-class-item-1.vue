@@ -49,7 +49,7 @@
     padding-right: 10px;
     display: flex;
     align-items: center;
-    z-index: 10;
+    z-index: 2;
     background: #ff4a2d;
     .left {
       width: 90%;

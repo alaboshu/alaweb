@@ -23,6 +23,7 @@ import zkMarquee from '@/components/articles/zk-marquee/index.vue'
 import zkAmount from '@/components/assets/zk-amount/index.vue'
 import zkAutoForm from '@/components/common/zk-auto-form/index.vue'
 import zkCell from '@/components/common/zk-cell/index.vue'
+import zkGridList from '@/components/common/zk-grid-list/index.vue'
 import zkGrid from '@/components/common/zk-grid/index.vue'
 import zkHtml from '@/components/common/zk-html/index.vue'
 import zkImageList from '@/components/common/zk-image-list/index.vue'
@@ -86,6 +87,7 @@ Vue.component('zk-marquee', zkMarquee)
 Vue.component('zk-amount', zkAmount)
 Vue.component('zk-auto-form', zkAutoForm)
 Vue.component('zk-cell', zkCell)
+Vue.component('zk-grid-list', zkGridList)
 Vue.component('zk-grid', zkGrid)
 Vue.component('zk-html', zkHtml)
 Vue.component('zk-image-list', zkImageList)

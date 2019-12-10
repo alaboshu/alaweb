@@ -1,5 +1,5 @@
 <template>
-  <view class="search-item-2">
+  <view class="search-item-3">
     <view class="iconList lefticon-list" @click="$base.to('/order/cart')">
       <x-icon name="zk-cart-1" size="20" color="#ffffff"></x-icon>
     </view>
@@ -28,7 +28,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .search-item-2 {
+  .search-item-3 {
     position: absolute;
     top: 0;
     left: 0;

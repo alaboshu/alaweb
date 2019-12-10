@@ -2,7 +2,7 @@
   <view class="swiper-item-3">
     <view class=""></view>
     <view class="swiper-cont">
-      <swiper :style="{width: '100%', height: swiperHeight+'px'}" :indicator-dots="true" indicator-color="#ebedf0" indicator-active-color="#c91230" :autoplay="true" :circular="true" @change="changeSwiper" previous-margin="20px" next-margin="20px">
+      <swiper :style="{width: '100%', height: swiperHeight+'px;'}" :indicator-dots="true" indicator-color="#ebedf0" indicator-active-color="#c91230" :autoplay="true" :circular="true" @change="changeSwiper" previous-margin="20px" next-margin="20px">
         <swiper-item v-for="(item, index) in swiperModel.swiperList" :key="index">
           <view :style="{
             boxSizing: 'border-box', 
@@ -10,6 +10,7 @@
             transform: curIndex===index?'scale(' + 1.02 + ',' + 1.08 + ')':'scale(1,1)',
             transitionDuration: '.5s',
             transitionTimingFunction: 'ease',
+            height: swiperHeight+'px',
             padding: curIndex===0?((index===listLen-1)?'10px 26rpx 0 0':(index===1?'10px 0 0 26rpx':'10px 0 0 0')):(curIndex===listLen-1?(index===0?'10px 0 0 26rpx':(index===listLen-2?'10px 26rpx 0 0':'10px 0 0 0')):(index===curIndex-1?'10px 26rpx 0 0':(index===curIndex+1?'10px 0 0 26rpx':'10px 0 0 0')))
           }">
             <img :src="item.image" :alt="item.intro" :style="{
@@ -70,7 +71,7 @@
       },
       changeSwiper (ev) {
         this.curIndex = ev.detail.current
-        this.swiperBgColor = this.swiperList[ev.detail.current].colors
+        // this.swiperBgColor = this.swiperList[ev.detail.current].colors
       }
     }
   }
