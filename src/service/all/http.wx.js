@@ -8,13 +8,11 @@ export default {
   async get (apiUrl, data) {
     var axiosWx = axios()
     this.getAxios(apiUrl)
-    console.info('jinlai meiyou')
     var response = await axiosWx.get(globalConfig.apiBaseUrl + apiUrl, data)
     return response.data
   },
   async post (apiUrl, data) {
     this.getAxios(apiUrl)
-    console.info('jinlai meiyou')
     var axiosWx = axios()
     var response = await axiosWx.post(globalConfig.apiBaseUrl + apiUrl, data)
     return response.data

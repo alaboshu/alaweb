@@ -1,6 +1,6 @@
 <template>
   <view class="add">
-    试
+    你可以显示不
   </view>
 </template>
 <script>
