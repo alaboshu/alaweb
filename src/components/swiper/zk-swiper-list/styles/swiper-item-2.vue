@@ -1,12 +1,12 @@
 <template>
-  <view class="swiper-item-2" v-if="swiperList">
+  <view class="swiper-item-2" v-if="swiperModel.swiperList">
     <view class="swiper-bgColor" :style="{background: swiperBgColor}"></view>
     <view class="swiper-head">
       <swiper-search></swiper-search>
     </view>
     <view class="swiper-cont">
       <swiper :autoplay="true" @change="changeSwiper" :circular="true" :indicator-dots="true" indicator-active-color="#c91230" indicator-color="#ebedf0" :style="{ height: swiperHeight + 'px' }">
-        <swiper-item v-for="(item, index) in swiperList" :key="index">
+        <swiper-item v-for="(item, index) in swiperModel.swiperList" :key="index">
           <view :title="item.name" @click="goLinks(item.url.value)">
             <img :src="item.image" :alt="item.intro" :style="{ height: swiperHeight + 'px' }" class="bgImg" />
           </view>
@@ -43,6 +43,9 @@
       this.init()
     },
     methods: {
+      init () {
+        console.info('aaaaaaaaaaaaaaaa', this.swiperModel.swiperList)
+      },
       goLinks (url) {
         this.$api.to(url)
       },

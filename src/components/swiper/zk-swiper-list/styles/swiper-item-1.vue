@@ -1,7 +1,7 @@
 <template>
   <view class="swiper-item-1">
     <swiper :autoplay="false" :circular="true" :indicator-dots="true" indicator-active-color="#c91230" indicator-color="#ebedf0" :style="{ height: swiperHeight + 'px' }">
-      <swiper-item v-for="(item, index) in swiperModel" :key="index">
+      <swiper-item v-for="(item, index) in swiperModel.swiperList" :key="index">
         <view :title="item.name" @click="goLinks(item.url.value)">
           <img :src="item.image" :alt="item.intro" :style="{ height: swiperHeight + 'px' }" class="bgImg" />
         </view>
@@ -30,12 +30,7 @@
     onLoad () {
       this.init()
     },
-    mounted () {
-      this.init()
-    },
     methods: {
-      async init () {
-      },
 
       goLinks (url) {
         this.$api.to(url)

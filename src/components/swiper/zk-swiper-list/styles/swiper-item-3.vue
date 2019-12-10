@@ -3,7 +3,7 @@
     <view class=""></view>
     <view class="swiper-cont">
       <swiper :style="{width: '100%', height: swiperHeight+'px'}" :indicator-dots="true" indicator-color="#ebedf0" indicator-active-color="#c91230" :autoplay="true" :circular="true" @change="changeSwiper" previous-margin="20px" next-margin="20px">
-        <swiper-item v-for="(item, index) in swiperList" :key="index">
+        <swiper-item v-for="(item, index) in swiperModel.swiperList" :key="index">
           <view :style="{
             boxSizing: 'border-box', 
             display: 'flex',

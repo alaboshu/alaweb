@@ -1,5 +1,5 @@
 <template>
-  <view class="swiper-item-4" v-if="swiperList">
+  <view class="swiper-item-4" v-if="swiperModel.swiperList">
     <view class="swiper-bgColor"></view>
     <view class="swiper-head">
       <search type="2"></search>
@@ -9,7 +9,7 @@
     </view>
     <view class="swiper-cont">
       <swiper :autoplay="true" @change="changeSwiper" :circular="true" :indicator-dots="true" indicator-active-color="#c91230" indicator-color="#ebedf0" :style="{ height: swiperHeight + 'px' }">
-        <swiper-item v-for="(item, index) in swiperList" :key="index">
+        <swiper-item v-for="(item, index) in swiperModel.swiperList" :key="index">
           <view :title="item.name" @click="goLinks(item.url.value)">
             <img :src="item.image" :alt="item.intro" :style="{ height: swiperHeight + 'px' }" class="bgImg" />
           </view>
