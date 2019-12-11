@@ -27,15 +27,6 @@
         "enablePullDownRefresh": true,
         "navigationStyle": "custom"
       }
-    }, {
-      "path": "pages/default",
-      "style": {
-        "navigationBarTitleText": "阿拉博数",
-        "enablePullDownRefresh": false,
-        "app-plus": {
-          "titleNView": false
-        }
-      }
     },
     {
       "path": "pages/index",
@@ -65,10 +56,7 @@
   },
   "condition": {
     "current": 0,
-    "list": [{
-        "name": "首页",
-        "path": "pages/default"
-      },
+    "list": [
       {
         "name": "首页",
         "path": "pages/index"
@@ -82,14 +70,6 @@
         "name": "test1",
         "path": "pages/test1"
       },
-      {
-        "name": "test2",
-        "path": "pages/test2"
-      },
-      {
-        "name": "test3",
-        "path": "pages/test3"
-      }
     ]
   },
   "tabBar": {

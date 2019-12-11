@@ -50,21 +50,6 @@ export default {
       parameter.apiUrl = widget.apiUrl
       parameter.value = widget.value
     }
-    var para = {
-      // ...widget.value,
-      ...appendPara
-    }
-    // widget.value 不为空时，发起请求
-    if (widget && widget.isApiRequest && widget.value) {
-      parameter = await this.getWidgetValueByApiUrl(parameter, para)
-      return parameter
-    }
-    if (parameter.value === null || parameter.value === undefined) {
-      // 从数据库中获取数据
-      if (parameter.apiUrl === null) {} else {
-        parameter = await this.getWidgetValueByApiUrl(parameter, para)
-      }
-    }
     return parameter
   },
   // 处理widgets
@@ -113,14 +98,6 @@ export default {
       }
     })
     return widgets
-  },
-  // 获取值
-  async getWidgetValueByApiUrl (parameter, para) {
-    if (parameter.apiUrl !== undefined) {
-      var response = await api.httpGet(parameter.apiUrl, para)
-      parameter.value = response
-    }
-    return parameter
   },
   // 当前访问的页面
   async getPageInfo (path) {
