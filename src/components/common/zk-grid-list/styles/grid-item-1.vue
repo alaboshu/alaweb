@@ -1,15 +1,15 @@
 <template>
   <view class="grid-item-1" v-if="async">
-    <scroll-view class="scroll-view" :style="`width:${this.$api.screenWidth() - 20}px;`" :scroll-x="true" :show-scrollbar="false" @scroll="scrollChange">
-      <view class="ul" :style="`width: ${gridWidth*gridLength}px;`">
-        <view class="list" :style="`width: ${gridWidth}px;`" v-for="(item, index) in gridModel.gridList" :key="index">
+    <scroll-view class="scroll-view" :style="{width:(this.$api.screenWidth() - 20)+'px;'}" :scroll-x="true" :show-scrollbar="false" @scroll="scrollChange">
+      <view class="ul" :style="{width: gridWidth*gridLength + 'px;'}">
+        <view class="list" :style="{width: gridWidth+'px;'}" v-for="(item, index) in gridModel.gridList" :key="index">
           <img :src="item.image" class="image" alt="">
           <view class="test">{{item.link.name}}</view>
         </view>
       </view>
     </scroll-view>
     <view class="foot-item">
-      <view class="scroll-for" :style="`left:${flotLeft};`"></view>
+      <view class="scroll-for" :style="{left:flotLeft}"></view>
     </view>
   </view>
 </template>
