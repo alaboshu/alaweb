@@ -1,8 +1,8 @@
 <template>
   <view class="grid-item-2">
     <view class="ul">
-      <view class="list" :style="'width:'+ (100/gridModel.gridCount) +'%;'" v-for="(item, index) in gridList" :key="index">
-        <img :src="item.image" class="image" alt="">
+      <view class="list" :style="'width:'+ (100/gridModel.gridCount) +'%;'" v-for="(item, index) in list" @click="$base.to(item.link.url)" :key="index">
+        <img v-if="item.image" :src="item.image" class="image" alt="">
         <view class="test">{{item.link.name}}</view>
       </view>
     </view>
@@ -18,7 +18,8 @@
     },
     data () {
       return {
-        count: 3
+        count: 3,
+        list: []
       }
     },
     mounted () {
@@ -26,7 +27,15 @@
     },
     methods: {
       init () {
-        console.info('aaaaaaaaaaaaa', this.gridList)
+        this.list = this.gridList
+        if (this.gridList) {
+          var num = this.gridModel.gridCount - (this.gridList.length % this.gridModel.gridCount)
+          if (num > 0) {
+            for (let i = 0; i < num; i++) {
+              this.list.push({ link: {} })
+            }
+          }
+        }
       }
     }
   }
@@ -38,8 +47,8 @@
     width: 100%;
     box-sizing: border-box;
     padding: 5px 10px;
-    background: red;
     .ul {
+      border-left: 1px solid #f4f4f4;
       border-top: 1px solid #f4f4f4;
       width: 100%;
       background: #ffffff;
