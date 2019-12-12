@@ -42,7 +42,6 @@
         "navigationBarTitleText": "diy"
       }
     },
-    // #endif
     {
       "path": "pages/test1",
       "style": {
@@ -50,6 +49,7 @@
         "enablePullDownRefresh": true
       }
     }
+    // #endif
   ],
   "globalStyle": {
     "navigationBarTitleText": "阿拉博数",
