@@ -34,10 +34,7 @@
 </template>
 
 <script>
-  // import provinceData from './city-data/province.js'
-  // import cityData from './city-data/city.js'
-  // import areaData from './city-data/area.js'
-  import widget from '@/service/all/widget.js'
+  import widget from '@/service/api/address.api.js'
   export default {
     data () {
       return {

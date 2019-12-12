@@ -4,7 +4,6 @@ import httpWx from '@/service/all/http.wx'
 import local from '@/service/utils/local'
 import loading from '@/service/utils/loading'
 import toast from '@/service/utils/toast'
-import widget from '@/service/all/widget'
 import help from '@/service/core/helper'
 import config from '@/service/config'
 import user from '@/service/user'
@@ -363,21 +362,5 @@ export default {
   vuexLocalSet (name, value) {
     store[name] = value
     local.set(name, value)
-  },
-  getSystemInfoSync () {
-    if (store.state.getSystemInfoSync === null) {
-      store.state.getSystemInfoSync = uni.getSystemInfoSync()
-      return store.state.getSystemInfoSync
-    } else {
-      return store.state.getSystemInfoSync
-    }
-  },
-  // 屏幕高度
-  screenHeight () {
-    return this.getSystemInfoSync().screenHeight
-  },
-  // 屏幕宽度
-  screenWidth () {
-    return this.getSystemInfoSync().windowWidth
   }
 }
