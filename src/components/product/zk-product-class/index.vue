@@ -61,7 +61,6 @@
           let top = 0
           this.viewModel.forEach((item) => {
             _this.leftItemHeight = 50
-            // _this.leftItemHeight = Math.ceil(item.childClass.length / 3) * 50
             _this.diff = _this.navLeftHeight - _this.height
             top += 70 + (Math.ceil(item.childClass.length / 3) * 110)
             arr.push(top)
@@ -70,8 +69,9 @@
         } else {
           let selectorQuery = uni.createSelectorQuery()
           selectorQuery.selectAll('.nav-left-item').boundingClientRect(function (rects) {
-            _this.leftItemHeight = rects[0].height
-            // _this.navLeftHeight = _this.leftItemHeight * this.classifyData.length
+            if (rects.length > 0) {
+              _this.leftItemHeight = rects[0].height
+            }
             _this.diff = _this.navLeftHeight - _this.height
           })
           selectorQuery.selectAll('.nav-right-box').boundingClientRect(function (rects) {

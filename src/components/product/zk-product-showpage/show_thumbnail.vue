@@ -1,11 +1,10 @@
 <template>
-  <view class="show-thumbnail" v-if="productView">
+  <view class="show-thumbnail" v-if="productView && async">
     <view>
       <swiper :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval" :duration="duration" :style="'height:'+winWidth+'px'">
         <swiper-item v-for="(item,index) in productView.productExtensions.productThums" :key="index">
           <view class="product_image" :style="'height:'+ winWidth+'px'">
-            <img v-if="$api.client() !=='WeChatLite'" :src="repImage(item.showCaseUrl)" class="show-img">
-            <img v-else :src="$api.baseUrl() + item.showCaseUrl" class="show-img">
+            <img :src="item.showCaseUrl" class="show-img" />
           </view>
         </swiper-item>
       </swiper>
@@ -24,14 +23,7 @@
     methods: {
       init () {
         this.winWidth = this.$api.getSystemInfoSync().windowWidth
-      },
-      repImage (image) {
-        if (image.substring(0, 10) === 'http://127') {
-          return image.replace(/http:\/\/127.0.0.1:55555/g, 'https://s-open.qiniuniu99.com')
-        } else if (image.indexOf('http//127.0.0.1:55555') > -1) {
-          return image.replace(/http\/\/127.0.0.1:55555\//g, '/')
-        }
-        return image
+        this.async = true
       }
     },
     data () {
@@ -40,7 +32,8 @@
         autoplay: false,
         interval: 5000,
         duration: 1000,
-        winWidth: ''
+        winWidth: '',
+        async: false
       }
     }
   }

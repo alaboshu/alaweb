@@ -124,7 +124,7 @@
           })
           this.totalPirce()
         }
-        if (this.$route.type === 'switchTab') {
+        if (this.$route && this.$route.type === 'switchTab') {
           this.changeBottom = true
         }
       },
