@@ -1,7 +1,7 @@
 <template>
   <view class="grid-item-2">
     <view class="ul">
-      <view class="list" :style="'width:'+ (100/gridModel.gridCount) +'%;'" v-for="(item, index) in list" @click="$base.to(item.link.url)" :key="index">
+      <view class="list" :style="'width:'+ (100/gridModel.gridCount) +'%;'" v-for="(item, index) in list" @click="linkTo(item.link.url)" :key="index">
         <img v-if="item.image" :src="item.image" class="image" alt="">
         <view class="test">{{item.link.name}}</view>
       </view>
@@ -35,6 +35,11 @@
               this.list.push({ link: {} })
             }
           }
+        }
+      },
+      linkTo (url) {
+        if (url) {
+          this.$base.to(url)
         }
       }
     }

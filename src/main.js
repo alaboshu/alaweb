@@ -6,6 +6,7 @@ import user from '@/service/user.js'
 import base from '@/service/base.js'
 import crud from '@/service/crud.js'
 import weixin from '@/service/core/weixin'
+
 // #ifdef H5
 import '@/assets/style/h5/index.scss'
 // #endif
@@ -19,6 +20,7 @@ import zkHelp from '@/components/articles/zk-help/index.vue'
 import zkMarquee from '@/components/articles/zk-marquee/index.vue'
 import zkAmount from '@/components/assets/zk-amount/index.vue'
 import zkAutoForm from '@/components/common/zk-auto-form/index.vue'
+import zkBankList from '@/components/common/zk-bank-list/index.vue'
 import zkCell from '@/components/common/zk-cell/index.vue'
 import zkGridList from '@/components/common/zk-grid-list/index.vue'
 import zkGrid from '@/components/common/zk-grid/index.vue'
@@ -83,6 +85,7 @@ Vue.component('zk-help', zkHelp)
 Vue.component('zk-marquee', zkMarquee)
 Vue.component('zk-amount', zkAmount)
 Vue.component('zk-auto-form', zkAutoForm)
+Vue.component('zk-bank-list', zkBankList)
 Vue.component('zk-cell', zkCell)
 Vue.component('zk-grid-list', zkGridList)
 Vue.component('zk-grid', zkGrid)

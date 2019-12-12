@@ -1,6 +1,6 @@
 <template>
   <view class="add">
-    <zk-grid-list></zk-grid-list>
+    <zk-bank-list></zk-bank-list>
   </view>
 </template>
 <script>
