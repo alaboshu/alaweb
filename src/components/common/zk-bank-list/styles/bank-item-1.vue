@@ -6,7 +6,7 @@
       <view class="test">{{item.number}}</view>
     </view>
     <view class="foot">
-      <view class="buttom" @click="$base.to('/bank/edit')">添加银行卡</view>
+      <view class="buttom" @click="$api.to('/bank/edit')">添加银行卡</view>
     </view>
     <view style="height: 55px;" v-if="bankList.length > 4"></view>
   </view>

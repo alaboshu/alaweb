@@ -293,7 +293,7 @@
               confirmText: '确定',
               success: function (res) {
                 if (res.confirm) {
-                  that.$base.to('/user/login')
+                  that.$api.to('/user/login')
                 }
               }
             })
@@ -305,7 +305,7 @@
               confirmText: '确定',
               success: function (res) {
                 if (res.confirm) {
-                  that.$base.to('/user/login')
+                  that.$api.to('/user/login')
                 }
               }
             })

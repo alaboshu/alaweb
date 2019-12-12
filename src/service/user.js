@@ -246,7 +246,7 @@ export default {
         content: '请先登录',
         success: function (res) {
           if (res.confirm) {
-            base.to('/user/login')
+            api.to('/user/login')
             // uni.navigateTo({
             //   url: '/pages/user/login'
             // })

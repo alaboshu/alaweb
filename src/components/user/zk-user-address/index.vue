@@ -123,10 +123,10 @@
       },
       editAddress (id) {
         this.$api.localSet('edit_address', true)
-        this.$base.to('/user/address/edit?id=' + id)
+        this.$api.to('/user/address/edit?id=' + id)
       },
       addAddress () {
-        this.$$base.to('/user/address/edit')
+        this.$$api.to('/user/address/edit')
       },
       watchRoute () {
         this.init()

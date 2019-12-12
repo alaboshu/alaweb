@@ -1,6 +1,6 @@
 <template>
   <view style="padding: 10px 10px 0 10px;">
-    <view class="common" v-for="(item,index) in viewModel" :key="index" @click="$base.to('/product/show?id='+item.id)">
+    <view class="common" v-for="(item,index) in viewModel" :key="index" @click="$api.to('/product/show?id='+item.id)">
       <view class="common-left">
         <view class="common-image">
           <img :src="'http://retail_v13.api.5ug.com/'+ item.thumbnailUrl" alt="" v-lazy>

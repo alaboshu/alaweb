@@ -71,7 +71,7 @@
       onClick (url) {
         this.$emit('click')
         if (url !== undefined) {
-          this.$base.to(url)
+          this.$api.to(url)
         }
       }
     }

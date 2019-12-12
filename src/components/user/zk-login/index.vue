@@ -39,7 +39,7 @@
       <x-button :loading="loading" btnText="登录" @change="bindLogin"></x-button>
     </view>
     <view class="action-row">
-      <view class="navigator" v-for="(item, index) in widgetModel.loginForm" :key="index" @click="$base.to(item.link.url)">{{item.link.name}}</view>
+      <view class="navigator" v-for="(item, index) in widgetModel.loginForm" :key="index" @click="$api.to(item.link.url)">{{item.link.name}}</view>
     </view>
     <view class="oauth-row" v-if="hasProvider" v-bind:style="{top: positionTop + 'px'}">
       <view class="oauth-image" v-for="provider in providerList" :key="provider.value">

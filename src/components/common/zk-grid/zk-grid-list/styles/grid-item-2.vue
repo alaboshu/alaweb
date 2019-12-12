@@ -39,7 +39,7 @@
       },
       linkTo (url) {
         if (url) {
-          this.$base.to(url)
+          this.$api.to(url)
         }
       }
     }

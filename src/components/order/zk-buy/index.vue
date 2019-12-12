@@ -267,7 +267,7 @@
       },
       addAddress () {
         this.$api.localSet('addressJump', '/pages/index?path=order_buy')
-        this.$base.to('/user/address/select')
+        this.$api.to('/user/address/select')
         this.popupVisible1 = true
       },
       async init () {

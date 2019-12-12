@@ -1,6 +1,6 @@
 <template>
   <view class="search-item-2">
-    <view class="iconList lefticon-list" @click="$base.to('/order/cart')">
+    <view class="iconList lefticon-list" @click="$api.to('/order/cart')">
       <x-icon name="zk-cart-1" size="20" color="#ffffff"></x-icon>
     </view>
     <view class="left ">
@@ -10,7 +10,7 @@
       <input type="text" placeholder="请输入您所需要搜索的内容" class="input" />
     </view>
     <view class="right">
-      <view class="iconList" @click="$base.to('/user/qrcode')">
+      <view class="iconList" @click="$api.to('/user/qrcode')">
         <x-icon name="zk-qrcode" size="20" color="#ffffff"></x-icon>
       </view>
     </view>

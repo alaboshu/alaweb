@@ -17,7 +17,7 @@
       </view>
       <view class="user-active-seting">
         <view class="user-seting">
-          <view @click="$base.to('/user/set')">
+          <view @click="$api.to('/user/set')">
             <x-icon name="icon-zk-renzheng" class="setIng" color="#ffffff" :size="18"></x-icon>
           </view>
         </view>
@@ -29,12 +29,12 @@
       </view>
     </view>
     <view class="user-ul">
-      <view class="user-li" @click="$base.to('/account/index')">
+      <view class="user-li" @click="$api.to('/account/index')">
         <p class="p1">我的余额</p>
         <p class="p2" v-if="viewModel.storeRevenue">{{viewModel.storeRevenue}}</p>
         <p class="p2" v-else>0</p>
       </view>
-      <view class="user-li" @click="$base.to('/order/list?orderStatus=1')">
+      <view class="user-li" @click="$api.to('/order/list?orderStatus=1')">
         <p class="p1">今日订单</p>
         <p class="p2" v-if="viewModel.todayOrderCount">{{viewModel.todayOrderCount}}</p>
         <p class="p2" v-else>0</p>
@@ -44,7 +44,7 @@
         <p class="p2" v-if="viewModel.fansCount">{{viewModel.fansCount}}</p>
         <p class="p2" v-else>0</p>
       </view>
-      <view class="user-li" @click="$base.to('/collect/list')">
+      <view class="user-li" @click="$api.to('/collect/list')">
         <p class="p1">我的收藏</p>
         <p class="p2" v-if="viewModel.favorite">{{viewModel.favorite}}</p>
         <p class="p2" v-else>0</p>

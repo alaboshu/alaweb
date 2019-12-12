@@ -15,7 +15,7 @@ export default {
     this.historys(url)
   },
   back (url) {
-    var historys = this.vuexLocalGet('browse_historys')
+    var historys = api.vuexLocalGet('browse_historys')
     if (url === 'login' && user.isLogin() === false) {
       uni.reLaunch({
         url: '/pages/tabbar/index'
@@ -79,7 +79,7 @@ export default {
       if (historys.length > 5) {
         historys.splice(0, 1)
       }
-      this.vuexLocalSet('browse_historys', historys)
+      api.vuexLocalSet('browse_historys', historys)
     }
   },
   getCurrentPath (toPages) {
