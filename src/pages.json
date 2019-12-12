@@ -35,12 +35,14 @@
         "enablePullDownRefresh": false
       }
     },
+    // #ifdef H5
     {
       "path": "pages/diy/index",
       "style": {
         "navigationBarTitleText": "diy"
       }
     },
+    // #endif
     {
       "path": "pages/test1",
       "style": {
