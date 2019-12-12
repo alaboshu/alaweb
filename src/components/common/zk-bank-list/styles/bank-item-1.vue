@@ -13,11 +13,9 @@
 </template>
 
 <script>
-  import indexJson from './index.json'
   export default {
     data () {
       return {
-        list: indexJson,
         bankList: null
       }
     },
