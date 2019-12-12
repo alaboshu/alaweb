@@ -114,10 +114,7 @@ export default {
   localRemove (name) {
     return local.remove(name)
   },
-  // 判断是否有值
-  hasValue (name) {
-    return local.hasValue(name)
-  },
+
   /** toast  **************************************************************************** */
   // 成功提示
   toast (message) {
@@ -296,21 +293,21 @@ export default {
   },
   // 设置历史记录，保留5条历史记录
   historys (url) {
-    var historys = this.localGet('browse_historys')
+    var historys = this.vuexLocalGet('browse_historys')
     if (this.isEmpty(historys)) {
       historys = []
       historys[0] = url
-      this.localSet('browse_historys', historys)
+      this.vuexLocalSet('browse_historys', historys)
     } else {
       historys[historys.length] = url
       if (historys.length > 5) {
         historys.splice(0, 1)
       }
-      this.localSet('browse_historys', historys)
+      this.vuexLocalSet('browse_historys', historys)
     }
   },
   back (url) {
-    var historys = this.localGet('browse_historys')
+    var historys = this.vuexLocalGet('browse_historys')
     if (url === 'login' && user.isLogin() === false) {
       uni.reLaunch({
         url: '/pages/tabbar/index'
@@ -343,7 +340,7 @@ export default {
               getCurrentPages()[getCurrentPages().length - 1].option.path ===
               'user_login'
             ) {
-              var historys = this.localGet('browse_historys')
+              var historys = this.vuexLocalGet('browse_historys')
               var backUrl = historys[historys.length - 1]
               uni.reLaunch({
                 url: backUrl
@@ -413,19 +410,6 @@ export default {
   vuexLocalSet(name, value) {
     store[name] = value
     local.set(name, value)
-  },
-  // 判断是否使用diy接口请求数据，并返回请求结果
-  async isApiReqGet(widget, data, url) {
-    var response
-    if (widget.isApiRequest) {
-      response = await this.themeWidget(widget, data)
-      return response.value.result
-    }
-    response = await this.httpGet(url, data)
-    return response
-  },
-  showPrice() {
-    return store.state.showPrice
   },
   getSystemInfoSync() {
     if (store.state.getSystemInfoSync === null) {
