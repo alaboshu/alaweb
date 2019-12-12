@@ -59,7 +59,6 @@
 
 <script>
   import './var.scss'
-  import './styles'
   export default {
 
     data () {
