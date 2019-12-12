@@ -1,10 +1,11 @@
 <script>
+  import api from '@/service/api/version.api.js'
   export default {
     name: 'App',
     mpType: 'app',
     async onLaunch () {
       /* eslint-disable */
-      await this.$api.checkUpdatin()
+      await api.checkVersion()
       // #ifdef APP-PLUS  
       plus.push.addEventListener('click', function (message) {
         // plus.nativeUI.toast('push click')

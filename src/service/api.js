@@ -4,7 +4,6 @@ import httpWx from '@/service/all/http.wx'
 import local from '@/service/utils/local'
 import loading from '@/service/utils/loading'
 import toast from '@/service/utils/toast'
-// import store from '@/service/store/index'
 import widget from '@/service/all/widget'
 import help from '@/service/core/helper'
 import config from '@/service/config'
@@ -22,8 +21,6 @@ const wushare = uni.requireNativePlugin('WUApp-Share')
 // // #ifndef H5
 // import share from '@/service/planform/mp/share'
 // // #endif
-
-// 方法名格式：文件名+方法名
 
 export default {
   // 当前租户
@@ -177,18 +174,12 @@ export default {
   shareApp (title, imageUrl, summary, url) {
     shareApp.appShare(title, url, summary, imageUrl)
   },
-  /** widget  ***************************************************************************** */
-  // 获取模块
-  widgetGetByPath (widgets, path) {
-    return widget.getByPath(widgets, path)
-  },
+ 
   // 判断字符串是否为空，或在null 或者undefined
   isEmpty (str) {
     return help.isEmpty(str)
   },
-  baseUrl () {
-    return config.apiBaseUrl
-  },
+ 
   // 终端类型 ：包括小程序，APP，H5包括微信公众号的判断
   client () {
     // #ifdef H5
@@ -351,36 +342,7 @@ export default {
       })
     }
   },
-  async checkUpdatin () {
-    /* eslint-disable */
-    var version
-    var _this = this
-    if (this.client() === 'AppPlus' && this.payType() === 4) {
-      plus.runtime.getProperty(plus.runtime.appid, async function (wgtinfo) {
-        version = wgtinfo.version
-
-        let par = {
-          AppClient: _this.payType(),
-          Version: version
-        }
-        var response = await _this.httpGet('Api/ApiStore/AppCheckVersion', par)
-        if (response.status === 1) {
-          if (response.result.status === 1) {
-            uni.showModal({
-              title: '发现新版本',
-              content: response.result.note,
-              success: function (res) {
-                if (res.confirm) {
-                  // var url = encodeURI(response.result.url)
-                  // plus.runtime.openURL(url, function (res) {})
-                } else if (res.cancel) {}
-              }
-            })
-          }
-        }
-      })
-    }
-  },
+ 
   vuexSet(name, value) {
     store.state[name] = value
   },
