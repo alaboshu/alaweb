@@ -1,26 +1,47 @@
 {
-  "pages": [{
+  "pages": [
+    // #ifdef H5
+    {
+      "path": "pages/diy/index",
+      "style": {
+        "navigationBarTitleText": "diy"
+      }
+    },
+    // #endif
+    {
       "path": "pages/tabbar/index",
       "style": {
         "navigationBarTitleText": "首页",
         "enablePullDownRefresh": true,
         "navigationStyle": "custom"
       }
-    }, {
+    },
+    // #ifdef H5
+    {
+      "path": "pages/test1",
+      "style": {
+        "navigationBarTitleText": "测试一",
+        "enablePullDownRefresh": true
+      }
+    },
+    // #endif
+    {
       "path": "pages/tabbar/two",
       "style": {
         "navigationBarTitleText": "商城",
         "enablePullDownRefresh": true,
         "navigationStyle": "custom"
       }
-    }, {
+    },
+    {
       "path": "pages/tabbar/three",
       "style": {
         "navigationBarTitleText": "分类",
         "enablePullDownRefresh": true,
         "navigationStyle": "custom"
       }
-    }, {
+    },
+    {
       "path": "pages/tabbar/user",
       "style": {
         "navigationBarTitleText": "个人中心",
@@ -34,20 +55,8 @@
         "onReachBottomDistance": 20,
         "enablePullDownRefresh": false
       }
-    },
-    {
-      "path": "pages/diy/index",
-      "style": {
-        "navigationBarTitleText": "diy"
-      }
-    },
-    {
-      "path": "pages/test1",
-      "style": {
-        "navigationBarTitleText": "测试一",
-        "enablePullDownRefresh": true
-      }
     }
+
   ],
   "globalStyle": {
     "navigationBarTitleText": "阿拉博数",
