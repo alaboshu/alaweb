@@ -174,12 +174,12 @@ export default {
   shareApp (title, imageUrl, summary, url) {
     shareApp.appShare(title, url, summary, imageUrl)
   },
- 
+
   // 判断字符串是否为空，或在null 或者undefined
   isEmpty (str) {
     return help.isEmpty(str)
   },
- 
+
   // 终端类型 ：包括小程序，APP，H5包括微信公众号的判断
   client () {
     // #ifdef H5
@@ -342,18 +342,17 @@ export default {
       })
     }
   },
- 
-  vuexSet(name, value) {
+  vuexSet (name, value) {
     store.state[name] = value
   },
-  vuexGet(name) {
+  vuexGet (name) {
     return store.state[name]
   },
-  vuexLocalGet(name) {
-    if (!this.isEmpty(store.state[name])) {
+  vuexLocalGet (name) {
+    if (!store.state[name]) {
       return store.state[name]
     } else {
-      if (!this.isEmpty(this.localGet(name))) {
+      if (!store.state[name]) {
         this.vuexSet(name, this.localGet(name))
         return this.localGet(name)
       } else {
@@ -361,11 +360,11 @@ export default {
       }
     }
   },
-  vuexLocalSet(name, value) {
+  vuexLocalSet (name, value) {
     store[name] = value
     local.set(name, value)
   },
-  getSystemInfoSync() {
+  getSystemInfoSync () {
     if (store.state.getSystemInfoSync === null) {
       store.state.getSystemInfoSync = uni.getSystemInfoSync()
       return store.state.getSystemInfoSync
@@ -374,11 +373,11 @@ export default {
     }
   },
   // 屏幕高度
-  screenHeight() {
+  screenHeight () {
     return this.getSystemInfoSync().screenHeight
   },
   // 屏幕宽度
-  screenWidth() {
+  screenWidth () {
     return this.getSystemInfoSync().windowWidth
   }
 }
