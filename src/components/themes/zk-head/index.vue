@@ -57,25 +57,34 @@
     },
     methods: {
       async init () {
+        console.info('widget', this.widget)
         if (this.color) {
           this.bgColor = this.color
         }
+        console.info('a', this.$api.client())
         if (this.$api.client() === 'WeChatLite') {
-          this.headClient = false
-        } else {
-          this.headClient = this.showHead
+          this.statusBar = true
+          this.statusBarHeight = 30
+          this.statusBarBackGround = '#C81234'
         }
-        if (this.$api.client() === 'AppPlus') {
-          this.statusBar = false
-        } else {
-          this.statusBar = false
-        }
-        if (this.showHead !== true) {
-          this.statusBarBackGround = '#ffffff'
-        }
-        if (this.$api.client() === 'AppPlus') {
-          this.statusBarHeight = this.$api.getSystemInfoSync().statusBarHeight
-        }
+        // if (this.$api.client() === 'WeChatLite') {
+        //   this.statusBar = true
+        //   this.headClient = false
+        //   this.statusBarHeight = 30
+        // } else {
+        //   this.headClient = this.showHead
+        // }
+        // if (this.$api.client() === 'AppPlus') {
+        //   this.statusBar = false
+        // } else {
+        //   this.statusBar = false
+        // }
+        // if (this.showHead !== true) {
+        //   this.statusBarBackGround = '#ffffff'
+        // }
+        // if (this.$api.client() === 'AppPlus') {
+        //   this.statusBarHeight = this.$api.getSystemInfoSync().statusBarHeight
+        // }
         this.async = true
       },
       onClickLeft () {
