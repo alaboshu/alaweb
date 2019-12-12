@@ -25,7 +25,6 @@ export default {
   getAxios (apiUrl) {
     var axiosWx = axios()
     axiosWx.interceptors.request.use(config => {
-      console.info('config', config)
       config.headers = {
         ...config.headers,
         ...this.getHead(apiUrl)

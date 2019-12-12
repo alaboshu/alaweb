@@ -72,7 +72,6 @@
           })
         }
         // console.log(this.viewModel.name, this.viewModel)
-
         this.async = true
       },
       scrollChange () {

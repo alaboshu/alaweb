@@ -2,7 +2,6 @@ import globalConfig from '@/service/config'
 // import http from '@/service/all/http'
 import api from '@/service/api'
 import base from '@/service/base'
-import pagesInfo from '@/build.json'
 // import data from '@/data'
 import user from '../user'
 export default {
@@ -116,10 +115,10 @@ export default {
   },
   // 所有页面记录，并写入缓存
   async getAllPageList () {
-    if (base.isBuild()) {
-      api.localRemove('addressData')
-      return pagesInfo
-    }
+    // if (base.isBuild()) {
+    //   api.localRemove('addressData')
+    //   return pagesInfo
+    // }
     var para = {
       clientType: 'WapH5',
       path: '/index'

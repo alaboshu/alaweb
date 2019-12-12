@@ -17,7 +17,6 @@
     },
     methods: {
       scrollChange () {
-        // console.info('aaaaaaaaaaaaa', )
         service.scrollChange(this)
       }
     }

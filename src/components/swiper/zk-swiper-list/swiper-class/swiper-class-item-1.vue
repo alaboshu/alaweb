@@ -32,7 +32,6 @@
     },
     methods: {
       scrollChange () {
-        console.info('aaaaaaaaaa')
       }
     }
   }
