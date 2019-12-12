@@ -10,7 +10,7 @@ export default {
   },
   // 屏幕高度
   height () {
-    return this.getSystemInfoSync().screenHeight
+    return this.getSystemInfoSync().windowHeight
   },
   // 屏幕宽度
   width () {

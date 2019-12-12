@@ -98,14 +98,14 @@
           this.viewModel = [...this.viewModel, ...this.widgetModel.value.result.result.result]
         }
         this.data = this.widgetModel.value.result
-        this.windowHeight = this.$api.screenHeight() - 46
+        this.windowHeight = this.$base.screenHeight() - 46
         if (this.data.searchOptions.advancedForms !== null && this.data.searchOptions.advancedForms.length !== 0) {
-          this.windowHeight = this.$api.screenHeight() - 46
+          this.windowHeight = this.$base.screenHeight() - 46
         } else {
-          this.windowHeight = this.$api.screenHeight() - 46
+          this.windowHeight = this.$base.screenHeight() - 46
         }
         if (this.data.tabs !== null && this.data.tabs.length !== 0) {
-          this.windowHeight = this.$api.screenHeight() - 46 - 44
+          this.windowHeight = this.$base.screenHeight() - 46 - 44
         }
         this.async = true
       },

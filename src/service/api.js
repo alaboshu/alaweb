@@ -27,20 +27,13 @@ export default {
       return ''
     }
   },
-
   // 输出信息,发布环境不输出
   info () {
     if (process.env.NODE_ENV === 'development') {
       console.info(arguments)
     }
   },
-  // 添加日志
-  async log () {
-    var para = {
-      message: JSON.stringify(arguments)
-    }
-    await this.httpPost('/api/logs/add', para)
-  },
+
   // config信息
   config () {
     return config
@@ -204,5 +197,12 @@ export default {
   vuexLocalSet (name, value) {
     store[name] = value
     local.set(name, value)
+  },
+  // 添加日志
+  async log () {
+    var para = {
+      message: JSON.stringify(arguments)
+    }
+    await this.httpPost('/api/logs/add', para)
   }
 }

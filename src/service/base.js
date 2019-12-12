@@ -1,5 +1,17 @@
 import api from '@/service/api'
+import screen from '@/service/utils/screen'
 export default {
+  // 屏幕宽度
+  screenWidth () {
+    return screen.width()
+  },
+  // 屏幕高度
+  screenHeight () {
+    return screen.height()
+  },
+  getSystemInfoSync () {
+     return screen.getSystemInfoSync()
+  },
   // 判断是生成环境还是开发环境
   isBuild () {
     if (process.env.NODE_ENV === 'development') {

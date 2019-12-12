@@ -93,7 +93,7 @@
       scroll: function (e) {
       },
       async init () {
-        this.windowHeight = this.$api.getSystemInfoSync().windowHeight - 44
+        this.windowHeight = this.$base.getSystemInfoSync().windowHeight - 44
         this.async = true
       },
       sumbit () {

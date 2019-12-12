@@ -136,7 +136,7 @@
             this.notScrolltolower = true
           }
         }
-        var getSystemInfoSync = this.$api.getSystemInfoSync()
+        var getSystemInfoSync = this.$base.getSystemInfoSync()
         this.ksheight = getSystemInfoSync.windowHeight - 46
         this.scrollViewHeight = this.ksheight - 50
       },

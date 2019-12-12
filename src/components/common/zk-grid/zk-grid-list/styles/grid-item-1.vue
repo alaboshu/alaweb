@@ -1,6 +1,6 @@
 <template>
   <view class="grid-item-1" v-if="async">
-    <scroll-view class="scroll-view" :style="'width:'+(this.$api.screenWidth() - 20)+'px;'" :scroll-x="true" :show-scrollbar="true" @scroll="scrollChange">
+    <scroll-view class="scroll-view" :style="'width:'+(this.$base.screenWidth() - 20)+'px;'" :scroll-x="true" :show-scrollbar="true" @scroll="scrollChange">
       <view class="ul" :style="'width:'+ gridWidth*gridLength + 'px;'">
         <view class="list" :style="'width:'+ gridWidth+'px;'" v-for="(item, index) in gridList" :key="index">
           <img :src="item.image" class="image" alt="">
@@ -33,7 +33,7 @@
     },
     methods: {
       init () {
-        this.gridWidth = (this.$api.screenWidth() - 20) / this.gridModel.gridCount
+        this.gridWidth = (this.$base.screenWidth() - 20) / this.gridModel.gridCount
         if (this.gridModel.gridList) {
           if (this.gridModel.gridList.length / this.gridModel.gridCount > 2) {
             this.gridLength = this.gridModel.gridList.length
@@ -48,7 +48,7 @@
         if (ev.detail) {
           var scrollWidth = ev.detail.scrollWidth
           var scrollLeft = ev.detail.scrollLeft
-          var width = this.$api.screenWidth() - 20
+          var width = this.$base.screenWidth() - 20
           var footLeft = (scrollLeft / (scrollWidth - width)).toFixed(2)
           // toFixed
           // 小数转百分比

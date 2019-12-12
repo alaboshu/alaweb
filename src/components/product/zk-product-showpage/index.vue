@@ -121,7 +121,7 @@
           // this.isApp = true
           this.wechatType = false
           this.isApp = false
-          this.statusBarHeight = this.$api.getSystemInfoSync().statusBarHeight + 5
+          this.statusBarHeight = this.$base.getSystemInfoSync().statusBarHeight + 5
           // if (this.$api.payType() === 3) {
 
           // }

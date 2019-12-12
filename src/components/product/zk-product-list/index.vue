@@ -52,7 +52,7 @@
         } else {
           this.$api.toastWarn('数据获取失败')
         }
-        this.width = this.$api.screenWidth()
+        this.width = this.$base.screenWidth()
         this.async = true
       },
       scrolltolower () {

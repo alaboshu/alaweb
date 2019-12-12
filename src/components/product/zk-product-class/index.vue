@@ -103,16 +103,16 @@
         }
         if (this.$api.client() === 'AppPlus') {
           if (this.$api.payType() === 4) {
-            this.statusBarHeight = this.$api.getSystemInfoSync().statusBarHeight
-            // this.height = this.$api.getSystemInfoSync().windowHeight
+            this.statusBarHeight = this.$base.getSystemInfoSync().statusBarHeight
+            // this.height = this.$base.getSystemInfoSync().windowHeight
             this.height = '400'
           } else {
-            this.statusBarHeight = this.$api.getSystemInfoSync().statusBarHeight
-            // this.height = this.$api.getSystemInfoSync().windowHeight - 46 - this.statusBarHeight
+            this.statusBarHeight = this.$base.getSystemInfoSync().statusBarHeight
+            // this.height = this.$base.getSystemInfoSync().windowHeight - 46 - this.statusBarHeight
             this.height = '400'
           }
         } else {
-          this.height = this.$api.getSystemInfoSync().windowHeight - 46
+          this.height = this.$base.getSystemInfoSync().windowHeight - 46
         }
         this.async = true
       },

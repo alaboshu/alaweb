@@ -112,14 +112,14 @@
       },
       // 内容宽度
       height () {
-        this.screen.height = this.$api.screenHeight() - 46
+        this.screen.height = this.$base.screenHeight() - 46
         if (this.viewModel.searchOptions.advancedForms !== null && this.viewModel.searchOptions.advancedForms.length !== 0) {
-          this.screen.height = this.$api.screenHeight() - 46
+          this.screen.height = this.$base.screenHeight() - 46
         } else {
-          this.screen.height = this.$api.screenHeight() - 46
+          this.screen.height = this.$base.screenHeight() - 46
         }
         if (this.viewModel.tabs !== null && this.viewModel.tabs.length !== 0) {
-          this.screen.height = this.$api.screenHeight() - 46 - 44
+          this.screen.height = this.$base.screenHeight() - 46 - 44
         }
       },
       // 标签切换

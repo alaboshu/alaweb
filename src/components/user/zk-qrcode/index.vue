@@ -30,7 +30,7 @@
     methods: {
       async  init () {
         if (this.$api.client() === 'AppPlus') {
-          this.statusBarHeight = this.$api.getSystemInfoSync().statusBarHeight + 15
+          this.statusBarHeight = this.$base.getSystemInfoSync().statusBarHeight + 15
         }
         var para = {
           userId: this.$user.loginUser().id

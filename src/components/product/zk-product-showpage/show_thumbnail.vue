@@ -22,7 +22,7 @@
     },
     methods: {
       init () {
-        this.winWidth = this.$api.getSystemInfoSync().windowWidth
+        this.winWidth = this.$base.getSystemInfoSync().windowWidth
         this.async = true
       }
     },
