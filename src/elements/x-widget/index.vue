@@ -1,7 +1,7 @@
 <template>
-  <zk-scroll-view @change="scrollChange">
+  <x-scroll-view @change="scrollChange">
     <scrollItem ref="scrollItem" :option="option"></scrollItem>
-  </zk-scroll-view>
+  </x-scroll-view>
 </template>
 
 <script>

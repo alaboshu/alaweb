@@ -1,5 +1,5 @@
 <template>
-  <view class="zk-popup">
+  <view class="x-popup">
     <view class="uni-mask" v-show="show" :style="{top:offsetTop + 'px'}" @click="hide"></view>
     <view :class="['uni-popup','uni-popup-'+type]" v-show="show" :style="'min-height:'+height">
       <slot></slot>
@@ -8,9 +8,9 @@
 </template>
 
 <script>
- 
+
   export default {
-    
+
     data () {
       let offsetTop = 0
       // #ifdef H5
@@ -68,7 +68,7 @@
 <style lang="scss">
   @import "@/assets/style/variable.scss";
 
-  .zk-popup {
+  .x-popup {
     .uni-mask {
       position: fixed;
       z-index: 998;
@@ -113,7 +113,7 @@
       bottom: 0;
       width: 100%;
       /* height: 100upx;
-            line-height: 100upx; */
+              line-height: 100upx; */
     }
   }
 </style>
