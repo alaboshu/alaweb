@@ -12,8 +12,6 @@
 import api from '@/service/api'
 import helper from '@/service/core/helper'
 import crypto from '@/utils/crypto'
-import base from './base'
-// import base from './base'
 
 export default {
   // 登录
@@ -205,7 +203,6 @@ export default {
     }
     var userToken
     userToken = user.token
-    // api.localSet('user_token', user.token)
     uni.setStorageSync('user_token', user.token)
     api.vuexSet('loginUser', user)
     var userText = crypto.encrypt(JSON.stringify(user), userToken)
