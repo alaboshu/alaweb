@@ -42,7 +42,7 @@ import zkResult from '@/components/themes/zk-result'
 import zkPurchaseShopsList from '@/components/themes/zk-purchase-shops-list'
 import zkProductLoad from '@/components/themes/zk-product-load'
 import zkPreview from '@/components/themes/zk-preview'
-import zkPopup from '@/components/themes/zk-popup'
+import zkPopup from '@/components/themes/x-popup'
 import zkNotice from '@/components/themes/zk-notice'
 import zkNodata from '@/components/themes/zk-nodata'
 import zkNewsHeadline from '@/components/themes/zk-news-headline'
@@ -119,7 +119,7 @@ import zkCommentsList from '@/components/product/zk-comments-list'
 import zkWaterfullList from '@/components/plug/zk-waterfull-list'
 import zkTimeline from '@/components/plug/zk-timeline'
 import zkScrolling from '@/components/plug/zk-scrolling'
-import zkPopupBanner from '@/components/plug/zk-popup-banner'
+import zkPopupBanner from '@/components/plug/x-popup-banner'
 import zkOrderShow from '@/components/order/zk-order-show'
 import zkOrderRefund from '@/components/order/zk-order-refund'
 import zkOrderRate from '@/components/order/zk-order-rate'
@@ -207,7 +207,7 @@ Vue.component('zk-order-list', zkOrderList)
 Vue.component('zk-order-rate', zkOrderRate)
 Vue.component('zk-order-refund', zkOrderRefund)
 Vue.component('zk-order-show', zkOrderShow)
-Vue.component('zk-popup-banner', zkPopupBanner)
+Vue.component('x-popup-banner', zkPopupBanner)
 Vue.component('zk-scrolling', zkScrolling)
 Vue.component('zk-timeline', zkTimeline)
 Vue.component('zk-waterfull-list', zkWaterfullList)
@@ -284,7 +284,7 @@ Vue.component('zk-new-shops-list', zkNewShopsList)
 Vue.component('zk-news-headline', zkNewsHeadline)
 Vue.component('zk-nodata', zkNodata)
 Vue.component('zk-notice', zkNotice)
-Vue.component('zk-popup', zkPopup)
+Vue.component('x-popup', zkPopup)
 Vue.component('zk-preview', zkPreview)
 Vue.component('zk-product-load', zkProductLoad)
 Vue.component('zk-purchase-shops-list', zkPurchaseShopsList)

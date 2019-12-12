@@ -1,76 +1,47 @@
 <template>
-  <div v-if="async">
-    <swiper :autoplay="false" :circular="true" :indicator-dots="true" indicator-active-color="#c91230" indicator-color="#ebedf0" :style="{ height: swiperHeight + 'px' }">
-      <swiper-item v-for="(item, index) in widget.value.swiperForm.swiperList" :key="index">
-        <view :title="item.name" @click="goLinks(item.url.value)">
-          <img :src="item.image" :alt="item.intro" :style="{ height: swiperHeight + 'px' }" class="bgImg" />
-        </view>
-      </swiper-item>
-    </swiper>
-  </div>
+  <view v-if="async">
+    <swiperItem1 v-if="swiperModel.swiperType == 1" :swiperModel="swiperModel"></swiperItem1>
+    <swiperItem2 v-if="swiperModel.swiperType == 2" :swiperModel="swiperModel"></swiperItem2>
+    <swiperItem3 v-if="swiperModel.swiperType == 3" :swiperModel="swiperModel"></swiperItem3>
+    <swiperItem4 v-if="swiperModel.swiperType == 4" :widget="widget" :swiperModel="swiperModel"></swiperItem4>
+    <swiperItem5 v-if="swiperModel.swiperType == 5" :swiperModel="swiperModel.swiperList"></swiperItem5>
+  </view>
 </template>
 
 <script>
+  import swiperItem1 from './styles/swiper-item-1'
+  import swiperItem2 from './styles/swiper-item-2'
+  import swiperItem3 from './styles/swiper-item-3'
+  import swiperItem4 from './styles/swiper-item-4'
+  import swiperItem5 from './styles/swiper-item-5'
   export default {
+    props: {
+      widget: {}
+    },
+    components: {
+      swiperItem1,
+      swiperItem2,
+      swiperItem3,
+      swiperItem4,
+      swiperItem5
+    },
     data () {
       return {
-        async: false,
-        widgetModel: '',
-        swiperHeight: '',
-        windowWidth: ''
+        swiperModel: null,
+        async: false
       }
-    },
-    props: {
-      widget: {},
-      height: {
-        type: Number,
-        default: 150
-      }
-    },
-    onLoad () {
-      this.init()
     },
     mounted () {
       this.init()
     },
     methods: {
-      async init () {
-        this.async = false
-        this.widgetModel = await this.$api.themeWidget(this.widget)
-        this.windowWidth = uni.getSystemInfoSync().windowWidth
-        this.swiperHeight = this.windowWidth * Number(this.widget.value.height)
-        this.async = true
-        if (this.widget.route && this.widget.route.path === undefined) {
-          this.showIntroductionBanner = true
+      init () {
+        console.info('this.vew', this.widget)
+        if (this.widget && this.widget.value) {
+          this.swiperModel = this.widget.value.swiperForm
         }
-      },
-
-      goLinks (url) {
-        this.$api.to(url)
-      },
-      watchWidget () {
-        this.init()
+        this.async = true
       }
-    },
-    watch: {
-      widget: 'watchWidget'
     }
   }
 </script>
-<style scoped lang="scss">
-  @import "@/assets/style/variable.scss";
-
-  .uni-swiper-item {
-    padding-top: 0px !important;
-  }
-  .uni-swiper {
-    height: 180px;
-  }
-  .uni-swiper .uni-swiper-dot {
-    width: 6px;
-    height: 6px;
-  }
-  .bgImg {
-    width: 100%;
-  }
-</style>

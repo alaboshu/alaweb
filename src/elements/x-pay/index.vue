@@ -30,9 +30,9 @@
         </div>
       </div>
     </view>
-    <!-- <zk-popup :show="showPupop" v-on:hidePopup="showPupop=false">
+    <!-- <x-popup :show="showPupop" v-on:hidePopup="showPupop=false">
 
-    </zk-popup>-->
+    </x-popup>-->
     <view class="uni-mask" v-show="showPayPassword"></view>
     <view class="uni-popup uni-popup_buy uni-popup-bottom_popup" v-show="showPayPassword">
       <div class="pay-tool">
@@ -75,9 +75,9 @@
         </div>
       </div>
     </view>
-    <!-- <zk-popup :show="showPayPassword" v-on:hidePopup="showPayPassword=false">
+    <!-- <x-popup :show="showPayPassword" v-on:hidePopup="showPayPassword=false">
 
-    </zk-popup>-->
+    </x-popup>-->
   </div>
 </template>
 

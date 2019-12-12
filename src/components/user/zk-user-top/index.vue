@@ -13,8 +13,7 @@
       </view>
       <view class="user-active_text">
         <view class="user-active_username">{{viewModel.userName}}</view>
-        <view class="user-active_merchant" v-if="isNotIosApp">{{viewModel.versionName}}</view>
-        <view class="user-active_merchant" v-if="!isNotIosApp">{{loginUser.name}}</view>
+        <view class="user-active_merchant">{{loginUser.name}} {{loginUser.gradeName}}</view>
       </view>
       <view class="user-active-seting">
         <view class="user-seting">
@@ -51,7 +50,7 @@
         <p class="p2" v-else>0</p>
       </view>
     </view>
-    <view class="user-dimensional-code" @click="$api.to('/pages/index?path=user_qrcode')">
+    <view class="user-dimensional-code" v-if="false" @click="$api.to('/pages/index?path=user_qrcode')">
       <!-- <view class="dimensional-code_text">点击分享个人二维码</view> -->
       <!-- <image class="dimensional-code_image" :src="widget.value.image" alt="" /> -->
     </view>
@@ -60,16 +59,13 @@
 
 <script>
   import './var.scss'
-  import './styles'
   export default {
 
     data () {
       return {
         widgetModel: {},
         viewModel: '',
-        isNotIosApp: true,
-        loginUser: '',
-        addressInput: {}
+        loginUser: ''
       }
     },
     props: {
@@ -77,12 +73,6 @@
     },
     mounted () {
       this.init()
-      this.$bus.$off('pages_loginUser').$on('strikeView', () => {
-        this.init()
-      })
-      this.$bus.$off('pages_loginUser').$on('pages_loginUser', () => {
-        this.init()
-      })
     },
     methods: {
       async init () {
@@ -92,30 +82,7 @@
           }
           var response = await this.$crud.widget(this, 'MemberWidget', para)
           this.viewModel = response
-          var localMsg = this.$user.loginUser()
-          localMsg.gradeName = this.viewModel.versionName
-          localMsg.gradeId = this.viewModel.upgradeGradeId
-          this.$user.setUser(localMsg)
           this.loginUser = this.$user.loginUser()
-          if (this.$api.client() === 'AppPlus' && this.$api.payType() === 3) {
-            this.isNotIosApp = false
-          }
-        }
-        let parament = {
-          id: this.pagesId,
-          userId: this.$user.loginUser().id
-        }
-        var singleAddress = await this.$api.httpGet('/api/useraddress/single', parament)
-
-        if (singleAddress.status === 1) {
-          var singleMsg = singleAddress.result
-          this.addressInput.name = singleMsg.name
-          this.addressInput.mobile = singleMsg.mobile
-          this.addressInput.address = singleMsg.address
-          this.addressInput.isDefault = singleMsg.isDefault
-        } else {
-          this.addressInput.name = this.$user.loginUser().name
-          this.addressInput.mobile = this.$user.loginUser().mobile
         }
       }
     }

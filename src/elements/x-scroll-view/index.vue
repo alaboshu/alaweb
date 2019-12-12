@@ -1,5 +1,5 @@
 <template>
-  <view class="zk-scroll-view" v-if="async">
+  <view class="x-scroll-view" v-if="async">
     <scroll-view :scroll-y="true" @scroll="scrollView" class="scroll" :style="'height:'+height+'px'">
       <slot></slot>
     </scroll-view>
@@ -39,7 +39,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .zk-scroll-view {
+  .x-scroll-view {
     .scroll {
       width: 100%;
     }

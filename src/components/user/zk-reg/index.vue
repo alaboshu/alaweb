@@ -1,16 +1,7 @@
 <template>
-  <!-- <view class="zk-reg1">{{widgetModel}}</view> -->
   <view>
     <view class="input_box">
       <view class="phone_text reg_ju">
-        <!-- <view class="mobei_conter reg_view">
-          <view class="text_1">
-            <i class="icon iconfont zk-mobilephone icontsty"></i>
-          </view>
-          <view class="text_2 borderleft">
-            <input class="phope border-bottom" placeholder="请输入手机号/账号" />
-          </view>
-        </view> -->
         <view class="mobei_conter reg_view">
           <view class="text_1">
             <i class="icon iconfont zk-mobilephone icontsty"></i>

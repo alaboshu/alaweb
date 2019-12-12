@@ -11,13 +11,6 @@
         </picker>
       </view>
     </view>
-    <!-- <view class="order-refund">
-      <view class="text">退款金额</view>
-      <view class="input-width">
-        <input class="input" :disabled="!inshow" v-model="viewModel.amount" @input="input" type="text" />
-        <view class="bottom-text" v-if="inshow">总金额{{orderDetail.totalAmount}}，最高退款金额{{orderDetail.totalAmount-orderDetail.expressAmount}}，邮费{{orderDetail.expressAmount}}</view>
-      </view>
-    </view> -->
     <view class="order-refund">
       <view class="text">退款说明</view>
       <view class="text-width">
@@ -60,16 +53,10 @@
 </template>
 
 <script>
- 
-  import upload from './upload/upload.vue'
   import local from '@/service/utils/local.js'
   import './var.scss'
-  import './styles'
-
-
   export default {
-    
-    components: { upload },
+
     data () {
       return {
         widgetModel: {},

@@ -82,7 +82,7 @@
           </view>
         </view>
       </view>
-      <zk-popup :show="popupSale" v-on:hidePopup="popupSale=false" v-if="!isClient">
+      <x-popup :show="popupSale" v-on:hidePopup="popupSale=false" v-if="!isClient">
         <view class="showSale">
           <view class="sale-info">
             <view class="info-img">
@@ -150,8 +150,8 @@
             </view>
           </view>
         </view>
-      </zk-popup>
-      <zk-popup :show="popupParameter" v-on:hidePopup="popupParameter=false" v-if="!isClient && false">
+      </x-popup>
+      <x-popup :show="popupParameter" v-on:hidePopup="popupParameter=false" v-if="!isClient && false">
         <view class="showParameter">
           <view class="p-title">
             商品参数
@@ -163,7 +163,7 @@
             确定
           </view>
         </view>
-      </zk-popup>
+      </x-popup>
     </view>
   </view>
 </template>

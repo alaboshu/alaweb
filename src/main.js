@@ -22,13 +22,11 @@ import zkAmount from '@/components/assets/zk-amount/index.vue'
 import zkAutoForm from '@/components/common/zk-auto-form/index.vue'
 import zkBankList from '@/components/common/zk-bank-list/index.vue'
 import zkCell from '@/components/common/zk-cell/index.vue'
-import zkGridList from '@/components/common/zk-grid-list/index.vue'
 import zkGrid from '@/components/common/zk-grid/index.vue'
 import zkHtml from '@/components/common/zk-html/index.vue'
 import zkImageList from '@/components/common/zk-image-list/index.vue'
 import zkImage from '@/components/common/zk-image/index.vue'
 import zkList from '@/components/common/zk-list/index.vue'
-import zkPopup from '@/components/common/zk-popup/index.vue'
 import zkPreview from '@/components/common/zk-preview/index.vue'
 import zkSwiper from '@/components/common/zk-swiper/index.vue'
 import zkVideo from '@/components/common/zk-video/index.vue'
@@ -38,19 +36,13 @@ import zkOrderList from '@/components/order/zk-order-list/index.vue'
 import zkOrderRefund from '@/components/order/zk-order-refund/index.vue'
 import zkOrderShow from '@/components/order/zk-order-show/index.vue'
 import zkProductClass from '@/components/product/zk-product-class/index.vue'
-import zkProductItem from '@/components/product/zk-product-item/index.vue'
 import zkProductList from '@/components/product/zk-product-list/index.vue'
 import zkProductListpage from '@/components/product/zk-product-listpage/index.vue'
 import zkProductShowpage from '@/components/product/zk-product-showpage/index.vue'
-import zkSwiperList from '@/components/swiper/zk-swiper-list/index.vue'
-import zkTabber from '@/components/tabber/zk-tabber/index.vue'
 import zkAddressEdit from '@/components/themes/zk-address-edit/index.vue'
 import zkHead from '@/components/themes/zk-head/index.vue'
-import zkScrollView from '@/components/themes/zk-scroll-view/index.vue'
 import zkSearch from '@/components/themes/zk-search/index.vue'
-import zkTabbar from '@/components/themes/zk-tabbar/index.vue'
 import zkLogin from '@/components/user/zk-login/index.vue'
-import zkLogin1 from '@/components/user/zk-login1/index.vue'
 import zkLogout from '@/components/user/zk-logout/index.vue'
 import zkQrcode from '@/components/user/zk-qrcode/index.vue'
 import zkReg from '@/components/user/zk-reg/index.vue'
@@ -76,9 +68,12 @@ import xPassword from '@/elements/x-password/index.vue'
 import xPay from '@/elements/x-pay/index.vue'
 import xPhoneVerifiy from '@/elements/x-phone-verifiy/index.vue'
 import xPicker from '@/elements/x-picker/index.vue'
+import xPopup from '@/elements/x-popup/index.vue'
 import xRadio from '@/elements/x-radio/index.vue'
+import xScrollView from '@/elements/x-scroll-view/index.vue'
 import xSelect from '@/elements/x-select/index.vue'
 import xTimePicker from '@/elements/x-time-picker/index.vue'
+import xUpload from '@/elements/x-upload/index.vue'
 import xWidget from '@/elements/x-widget/index.vue'
 Vue.component('zk-article', zkArticle)
 Vue.component('zk-help', zkHelp)
@@ -87,13 +82,11 @@ Vue.component('zk-amount', zkAmount)
 Vue.component('zk-auto-form', zkAutoForm)
 Vue.component('zk-bank-list', zkBankList)
 Vue.component('zk-cell', zkCell)
-Vue.component('zk-grid-list', zkGridList)
 Vue.component('zk-grid', zkGrid)
 Vue.component('zk-html', zkHtml)
 Vue.component('zk-image-list', zkImageList)
 Vue.component('zk-image', zkImage)
 Vue.component('zk-list', zkList)
-Vue.component('zk-popup', zkPopup)
 Vue.component('zk-preview', zkPreview)
 Vue.component('zk-swiper', zkSwiper)
 Vue.component('zk-video', zkVideo)
@@ -103,19 +96,13 @@ Vue.component('zk-order-list', zkOrderList)
 Vue.component('zk-order-refund', zkOrderRefund)
 Vue.component('zk-order-show', zkOrderShow)
 Vue.component('zk-product-class', zkProductClass)
-Vue.component('zk-product-item', zkProductItem)
 Vue.component('zk-product-list', zkProductList)
 Vue.component('zk-product-listpage', zkProductListpage)
 Vue.component('zk-product-showpage', zkProductShowpage)
-Vue.component('zk-swiper-list', zkSwiperList)
-Vue.component('zk-tabber', zkTabber)
 Vue.component('zk-address-edit', zkAddressEdit)
 Vue.component('zk-head', zkHead)
-Vue.component('zk-scroll-view', zkScrollView)
 Vue.component('zk-search', zkSearch)
-Vue.component('zk-tabbar', zkTabbar)
 Vue.component('zk-login', zkLogin)
-Vue.component('zk-login1', zkLogin1)
 Vue.component('zk-logout', zkLogout)
 Vue.component('zk-qrcode', zkQrcode)
 Vue.component('zk-reg', zkReg)
@@ -141,9 +128,12 @@ Vue.component('x-password', xPassword)
 Vue.component('x-pay', xPay)
 Vue.component('x-phone-verifiy', xPhoneVerifiy)
 Vue.component('x-picker', xPicker)
+Vue.component('x-popup', xPopup)
 Vue.component('x-radio', xRadio)
+Vue.component('x-scroll-view', xScrollView)
 Vue.component('x-select', xSelect)
 Vue.component('x-time-picker', xTimePicker)
+Vue.component('x-upload', xUpload)
 Vue.component('x-widget', xWidget)
 
 Vue.config.productionTip = false

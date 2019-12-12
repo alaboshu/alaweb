@@ -22,7 +22,6 @@
 </template>
 
 <script>
-  // import classifyData from '../../common/classify.data.js'
   export default {
     data () {
       return {
@@ -106,17 +105,14 @@
           if (this.$api.payType() === 4) {
             this.statusBarHeight = this.$api.getSystemInfoSync().statusBarHeight
             // this.height = this.$api.getSystemInfoSync().windowHeight
-            console.info('1')
             this.height = '400'
           } else {
             this.statusBarHeight = this.$api.getSystemInfoSync().statusBarHeight
             // this.height = this.$api.getSystemInfoSync().windowHeight - 46 - this.statusBarHeight
             this.height = '400'
-            console.info('2')
           }
         } else {
           this.height = this.$api.getSystemInfoSync().windowHeight - 46
-          console.info('3', this.height)
         }
         this.async = true
       },
@@ -163,78 +159,5 @@
 </script>
 
 <style scoped lang="scss">
-  .page-body {
-    display: flex;
-    background: #fff;
-    overflow: hidden;
-    .nav {
-      display: flex;
-      width: 100%;
-    }
-
-    .nav-left {
-      width: 94px;
-      background: #fafafa;
-    }
-    .nav-right-title {
-      height: 50px;
-      line-height: 50px;
-      border-bottom: solid 1px #f1f1f1;
-      font-size: 30upx;
-      padding-left: 5px;
-    }
-    .nav-left-item {
-      height: 50px;
-      border-right: solid 1px #f1f1f1;
-      border-bottom: solid 1px #f1f1f1;
-      font-size: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .nav-left-item:last-child {
-      border-bottom: none;
-    }
-    .nav-right {
-      width: 75%;
-      // height: 100%;
-      // padding-bottom: 300px;
-    }
-    .nav-right-box {
-      display: block;
-      overflow: hidden;
-      border-bottom: 10px solid #f3f3f3;
-    }
-    .nav-right-box:last-child {
-      border: none;
-    }
-    .nav-right-item {
-      width: 28%;
-      height: 110px;
-      float: left;
-      text-align: center;
-      padding: 5px;
-      font-size: 14px;
-      background: #fff;
-    }
-
-    .nav-right-item {
-      image {
-        width: 75px;
-        height: 75px;
-      }
-    }
-
-    .active {
-      color: #ff80ab;
-      background: #fff;
-      border-right: 0;
-    }
-    &::-webkit-scrollbar {
-      /*取消小程序的默认导航条样式*/
-      width: 0;
-      height: 0;
-      color: transparent;
-    }
-  }
+  @import "./style.scss";
 </style>

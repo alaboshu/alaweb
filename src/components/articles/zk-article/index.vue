@@ -1,10 +1,5 @@
 <template>
   <view class="mobile-x-article" v-if="widgetModel">
-    <!--  <h1 class="page__title pagetitle">{{widgetModel.title}}</h1>
-    <p class="page__title__desc pagetitle">
-      <span class="subTitle">{{widgetModel.subTitle}}</span>
-      <span class="createTime">{{widgetModel.createTime}}</span>
-    </p> -->
     <view class="uni-common-mt" style="background:#FFF; font-size:16px;margin-bottom:50px;">
       <rich-text :nodes="widgetModel.content" class="uni-box" style="text-index:20px"></rich-text>
     </view>
