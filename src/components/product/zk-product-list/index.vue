@@ -1,6 +1,6 @@
 <template>
   <view v-if="async" :style="{width: width +'px'}" class="zk-product-list">
-    <common-item ref="commonItem" :viewModel="allDataList" :widget="widget"></common-item>
+    <common-item ref="commonItem" :viewModel="allDataList" :widget="widgetModel"></common-item>
   </view>
 </template>
 
@@ -16,6 +16,7 @@
     data () {
       return {
         async: false,
+        widgetModel: {},
         width: '375',
         allDataList: [], // 所有数据,每次刷新以后获取的数据叠加
         viewModel: {}, // 视图模型
@@ -38,10 +39,16 @@
         this.init()
       },
       async  init () {
-        if (this.widget) {
+        var widgetPara = this.widget
+        if (widgetPara) {
           this.queryPara = {
             ...this.queryPara,
-            ...this.value
+            ...widgetPara.value
+          }
+          this.widgetModel = this.widget
+        } else {
+          this.widgetModel = {
+            value: props.widget
           }
         }
         var response = await this.$api.httpGet('/Api/Product/List')
