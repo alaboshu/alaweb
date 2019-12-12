@@ -5,12 +5,8 @@
       <widget-item ref='widgetItem' :widget="widget" v-if="!widget.border && !widget.layout" :model="viewModel" />
       <div class="border-header" v-if="widget.border">
         <x-icon class="border-header-icon" v-if="widget.border.icon" :icon="widget.border" :color="widget.border.icon.color"></x-icon>
-        <view class="border-header-title" v-if="widget.border.title">{{
-          widget.border.title
-        }}</view>
-        <view class="border-header-desc" v-if="widget.border.intro">{{
-          widget.border.intro
-        }}</view>
+        <view class="border-header-title" v-if="widget.border.title">{{ widget.border.title }}</view>
+        <view class="border-header-desc" v-if="widget.border.intro">{{ widget.border.intro}}</view>
       </div>
       <view class="border-body" v-if="widget.border">
         <widget-item ref='widgetItem' :widget="widget" :model="viewModel" />

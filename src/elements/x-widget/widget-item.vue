@@ -44,12 +44,9 @@
 
 <script>
   export default {
-    name: 'widget-item',
     props: {
       widget: {},
       model: {}
-    },
-    methods: {
     }
   }
 </script>
