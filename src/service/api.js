@@ -7,20 +7,8 @@ import loading from '@/service/utils/loading'
 import toast from '@/service/utils/toast'
 import help from '@/service/core/helper'
 import config from '@/service/config'
-import user from '@/service/user'
 import store from '@/service/store'
-// #ifdef H5
-import share from '@/service/planform/h5/share'
-// #endif
-
-import shareApp from '@/service/planform/app/share'
-
-// #ifdef APP-PLUS
-const wushare = uni.requireNativePlugin('WUApp-Share')
-// #endif
-// // #ifndef H5
-// import share from '@/service/planform/mp/share'
-// // #endif
+import share from '@/service/planform/share'
 
 export default {
   // 当前租户
@@ -141,30 +129,13 @@ export default {
   },
   /** 微信分享 */
   share (title, imageUrl, desc, url) {
-    if (this.client() === 'AppPlus' && this.payType() === 4) {
-      shareApp.appShare(title, url, desc, imageUrl)
-    } else if (this.client() === 'AppPlus' && this.payType() === 3) {
-      // #ifdef APP-PLUS
-      wushare.iosShare({
-          text: title,
-          url: url
-        },
-        result => {
-          if (result.completed) {} else {}
-        }
-      )
-      // #endif
-    } else {
-      setTimeout(function () {
-        return share.show(title, imageUrl, desc, url)
-      }, 500)
-    }
+    share.share(title, imageUrl, desc, url)
   },
   // 判断字符串是否为空
   isEmpty (str) {
     return help.isEmpty(str)
   },
-  // 终端类型 
+  // 终端类型
   client () {
     // #ifdef H5
     var u = navigator.userAgent
@@ -177,12 +148,12 @@ export default {
 
     // #ifdef MP-WEIXIN
     // eslint-disable-next-line
-    return 'WeChatLite'
+    return 'WeChatLite';
     // #endif
 
     // #ifdef APP-PLUS
     // eslint-disable-next-line
-    return 'AppPlus'
+    return 'AppPlus';
     // #endif
   },
   // 支付类型
