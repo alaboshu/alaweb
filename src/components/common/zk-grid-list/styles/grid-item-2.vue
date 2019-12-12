@@ -1,7 +1,7 @@
 <template>
   <view class="grid-item-2">
     <view class="ul">
-      <view class="list" :style="'width:'+ (100/gridModel.gridCount) +'%;'" v-for="(item, index) in gridModel.gridList" :key="index">
+      <view class="list" :style="'width:'+ (100/gridModel.gridCount) +'%;'" v-for="(item, index) in gridList" :key="index">
         <img :src="item.image" class="image" alt="">
         <view class="test">{{item.link.name}}</view>
       </view>
@@ -13,7 +13,7 @@
 <script>
   export default {
     props: {
-      widget: {},
+      gridList: {},
       gridModel: {}
     },
     data () {

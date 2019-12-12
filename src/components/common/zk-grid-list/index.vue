@@ -1,7 +1,7 @@
 <template>
   <view class="zk-grid-list" v-if="gridModel">
-    <gridItem1 v-if="gridModel.gridType == 1" :widget="widget" :gridModel="gridModel"></gridItem1>
-    <gridItem2 v-if="gridModel.gridType == 2" :gridModel="gridModel" :widget="widget"></gridItem2>
+    <gridItem1 v-if="gridModel.gridType == 1" :gridModel="gridModel" :gridList="gridList"></gridItem1>
+    <gridItem2 v-if="gridModel.gridType == 2" :gridModel="gridModel" :gridList="gridList"></gridItem2>
   </view>
 </template>
 
@@ -14,7 +14,8 @@
     },
     data () {
       return {
-        gridModel: null
+        gridModel: null,
+        gridList: null
       }
     },
     components: {
@@ -28,6 +29,15 @@
       init () {
         if (this.widget && this.widget.value) {
           this.gridModel = this.widget.value.gridForm
+        }
+        if (this.gridModelgridList) {
+          var data = []
+          this.gridModelgridList.forEach(element => {
+            if (element.isEnable) {
+              data.push(element)
+            }
+          })
+          this.gridList = data
         }
       }
     }
