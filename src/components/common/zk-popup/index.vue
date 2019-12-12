@@ -1,5 +1,4 @@
 <template>
-  <!-- <x-popup :elementData="widgetModel.value"></x-popup> -->
   <view class="zk-popup">
     <view class="uni-mask" v-show="show" :style="{top:offsetTop + 'px'}" @click="hide"></view>
     <view :class="['uni-popup','uni-popup-'+type]" v-show="show" :style="'min-height:'+height">
