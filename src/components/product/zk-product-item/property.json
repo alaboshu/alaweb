@@ -1,9 +1,0 @@
-{
-  "id": "5c4bafafee6f7855bc7838f3",
-  "autoFormId": "5c62163e9e39e141585e78e2",
-  "key": "zk-product-item",
-  "path": "/product/zk-product-item",
-  "name": "zk-product-item",
-  "apiUrl": "Api/Theme/GetValue",
-  "versionNumber": 59
-}
