@@ -1,6 +1,4 @@
 const webpack = require('webpack')
-// const ThemePlugin = require('./lib/theme-plugin')
-
 const {
   UNI_PLATFORM,
   ZK_DIY
@@ -8,9 +6,6 @@ const {
 
 
 module.exports = {
-  // css: {
-  //   extract: !!ZK_DIY
-  // },
   configureWebpack: {
     devServer: {
       host: '0.0.0.0',
@@ -27,15 +22,6 @@ module.exports = {
     ]
   },
   chainWebpack (config) {
-    if (ZK_DIY) {
-      // config
-      //   .plugin('theme')
-      //   .use(ThemePlugin)
 
-      // config
-      //   .resolveLoader
-      //   .alias
-      //   .set('sass-loader', './lib/diy-loader')
-    }
   }
 }

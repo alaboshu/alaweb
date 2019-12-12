@@ -56,7 +56,6 @@ export default {
   config () {
     return config
   },
-  /** theme模板  ***************************************************************************** */
   async themePage (option, url) {
     return theme.page(option)
   },
@@ -64,8 +63,7 @@ export default {
   async themeWidget (widget, appendPara) {
     return theme.widget(widget, appendPara)
   },
-  /** http请求  ***************************************************************************** */
-  // http请求,api接口get方法
+  // http get
   async httpGet (apiUrl, data) {
     if (this.client() === 'WeChatLite') {
       return httpWx.get(apiUrl, data)
@@ -90,18 +88,13 @@ export default {
     }
     return http.delete(apiUrl, data)
   },
-  //  延时加载数据到缓存
-  async httpLazy (apiUrl, para, cacheKey) {
-    return http.delete(apiUrl, cacheKey, para)
-  },
-  /** loading  ***************************************************************************** */
+
   loadingOpen (time) {
     return loading.open(time)
   },
   loadingClose (time, isLoad) {
     return loading.close(time, isLoad)
   },
-  /** local 缓存  ***************************************************************************** */
   // 获取缓存
   localGet (name) {
     return local.get(name)
@@ -115,7 +108,6 @@ export default {
     return local.remove(name)
   },
 
-  /** toast  **************************************************************************** */
   // 成功提示
   toast (message) {
     return toast.success(message)

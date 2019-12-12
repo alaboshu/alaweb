@@ -2,7 +2,7 @@ import api from '@/service/api.js'
 
 export default {
   // 获取类型的keyvalues对象 // 优先从Url中获取数据
-  async getKeyValues (type, apiUrl) {
+  async checkVersion(type, apiUrl) {
     if (apiUrl) {
       var respone = await api.httpGet(apiUrl)
       if (respone.status === 1) {
