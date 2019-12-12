@@ -36,9 +36,6 @@
       </view>
     </view>
     <view class="btn-row">
-      <!-- <div class="btn-row-login" @click="bindLogin">
-        登录
-      </div> -->
       <x-button :loading="loading" btnText="登录" @change="bindLogin"></x-button>
     </view>
     <view class="action-row">

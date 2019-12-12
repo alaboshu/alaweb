@@ -36,7 +36,6 @@
           userId: this.$user.loginUser().id
         }
         var reposen = await this.$api.httpGet('/api/userdetail/qrcode', para)
-        // this.widgetModel = await this.$api.themeWidget(this.widget)
         this.vimodel = reposen.result
         if (this.$api.client() === 'AppPlus') {
           this.isNotApp = false
@@ -55,7 +54,6 @@
 
 <style lang="scss">
   @import "@/assets/style/variable.scss";
-
   .zk-qrcode {
     font-size: $gl-size-base;
     width: 100vw;
