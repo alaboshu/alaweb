@@ -82,21 +82,6 @@
       this.init()
     },
     methods: {
-      customer () {
-        if (this.$api.client() === 'AppPlus') {
-          /* eslint-disable */
-          // var _this = this
-          // plus.runtime.openURL('https://chat.meiqiapaas.com/dist/standalone.html?eid=145450', function (res) {
-          //   _this.$api.toastWarn('跳转失败')
-          // })
-          var w = plus.webview.create('https://chat.meiqiapaas.com/dist/standalone.html?eid=145450');
-          w.show(); // 显示窗口
-        } else {
-          uni.navigateTo({
-            url: '/pages/vicePage/customerService'
-          })
-        }
-      },
       goDefault () {
         uni.reLaunch({
           url: '/pages/tabbar/index'
@@ -105,28 +90,6 @@
       goReturn () {
         uni.navigateBack({
           delta: 1
-        })
-      },
-      codes () {
-        uni.downloadFile({
-          url: 'https://s-open.qiniuniu99.com/wwwroot/uploads/Core/2019/05/customerWechat.jpg',
-          success: (res) => {
-            uni.saveImageToPhotosAlbum({
-              filePath: res.tempFilePath,
-              success: function () {
-                uni.showToast({
-                  title: '保存成功',
-                  icon: 'none'
-                })
-              },
-              fail: function () {
-                uni.showToast({
-                  title: '保存失败，请稍后重试',
-                  icon: 'none'
-                })
-              }
-            })
-          }
         })
       },
       init () {

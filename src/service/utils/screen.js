@@ -1,3 +1,4 @@
+import store from '@/service/store'
 export default {
   getSystemInfoSync () {
     if (store.state.getSystemInfoSync === null) {
@@ -8,11 +9,11 @@ export default {
     }
   },
   // 屏幕高度
-  screenHeight () {
+  height () {
     return this.getSystemInfoSync().screenHeight
   },
   // 屏幕宽度
-  screenWidth () {
+  width () {
     return this.getSystemInfoSync().windowWidth
   }
 }
