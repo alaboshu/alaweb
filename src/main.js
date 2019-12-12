@@ -43,7 +43,6 @@ import zkAddressEdit from '@/components/themes/zk-address-edit/index.vue'
 import zkHead from '@/components/themes/zk-head/index.vue'
 import zkSearch from '@/components/themes/zk-search/index.vue'
 import zkLogin from '@/components/user/zk-login/index.vue'
-import zkLogin1 from '@/components/user/zk-login1/index.vue'
 import zkLogout from '@/components/user/zk-logout/index.vue'
 import zkQrcode from '@/components/user/zk-qrcode/index.vue'
 import zkReg from '@/components/user/zk-reg/index.vue'
@@ -104,7 +103,6 @@ Vue.component('zk-address-edit', zkAddressEdit)
 Vue.component('zk-head', zkHead)
 Vue.component('zk-search', zkSearch)
 Vue.component('zk-login', zkLogin)
-Vue.component('zk-login1', zkLogin1)
 Vue.component('zk-logout', zkLogout)
 Vue.component('zk-qrcode', zkQrcode)
 Vue.component('zk-reg', zkReg)
