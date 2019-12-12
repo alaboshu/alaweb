@@ -1,6 +1,6 @@
 <template>
   <view v-if="async">
-    <view class="x-message " :style="'width:'+boxWidth+'px;height:'+boxHeight+'px;'" v-if="isDefaultMsg">
+    <view class="x-message " :style="'width:'+boxWidth+'px;height:'+boxHeight+'px;'" >
       <view class="default-msg">
         <view class="msg-icon">
           <i class="icon iconfont " :class="theme.icon" :style="'color:'+theme.color"></i>
@@ -59,9 +59,7 @@
         msgTitle: {
           success: '操作成功'
         },
-        showHead: false,
-        isDefaultMsg: false,
-        isAdminMsg: false
+        showHead: false
       }
     },
     props: {
@@ -102,8 +100,6 @@
         } else if (this.type === 'warn') {
           this.theme = this.msg.warn
         }
-        this.isDefaultMsg = this.defaultMsgss
-        this.isAdminMsg = this.adminMsg
         this.async = true
       }
     }

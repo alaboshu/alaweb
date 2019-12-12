@@ -103,7 +103,6 @@ export default {
   localRemove (name) {
     return local.remove(name)
   },
-
   // 成功提示
   toast (message) {
     return toast.success(message)
@@ -111,7 +110,7 @@ export default {
   toastSuccess (message) {
     return toast.success(message)
   },
-  // 温馨提示、错误提示
+  // 错误提示
   toastWarn (message) {
     return toast.warn(message)
   },
@@ -149,7 +148,7 @@ export default {
       }
     })
   },
-  /** 微信分享  ***************************************************************************** */
+  /** 微信分享 */
   share (title, imageUrl, desc, url) {
     if (this.client() === 'AppPlus' && this.payType() === 4) {
       shareApp.appShare(title, url, desc, imageUrl)
@@ -228,7 +227,6 @@ export default {
   // 页面跳转
   // // 页面跳转
   to (url, isApp) {
-    console.info('api to', url)
     if (url === '/pages/tabbar/index' || url.includes('pages/tabbar')) {
       uni.reLaunch({
         url: url

@@ -1,5 +1,4 @@
 import api from '@/service/api'
-import help from '@/service/core/helper'
 export default {
   // 判断是生成环境还是开发环境
   isBuild () {
@@ -9,30 +8,12 @@ export default {
       return true
     }
   },
-  isDiy () {
-    if (process.env.ZK_DIY === 'true') {
-      return true
-    } else {
-      return false
-    }
-  },
-  diy (widget) {
-    if (this.isDiy() && !help.isEmpty(widget)) {
-      var diyWidget = {
-        'component-path': widget.componentPath,
-        'data-id': widget.dataId,
-        'widget-id': widget.widgetId
-      }
-      return diyWidget
-    }
-    return null
-  },
-  // 当前页面的完整路径
+  // 完整路径
   fullPath () {
     var pages = getCurrentPages()
     var fullPath
     if (api.client() === 'WeChatLite') {
-      fullPath = 'http://192.168.1.121:2001/' + pages[0].route
+      fullPath = 'http://localhost:2000/' + pages[0].route
     } else {
       fullPath = location.href
     }
@@ -50,7 +31,6 @@ export default {
     if (!path) {
       path = '/pages/index'
     }
-
     path = path
       .replace('_', '/')
       .replace('_', '/')

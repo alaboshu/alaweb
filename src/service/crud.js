@@ -34,19 +34,7 @@ export default {
     }
     var response = await intance.$api.httpPost(apiUrl, para)
     // 继续或返回上一页
-    if (response.status === 1) {
-      // intance.$confirm('保存成功 是否继续?', '提示', {
-      //     confirmButtonText: '继续',
-      //     cancelButtonText: '返回上一页',
-      //     type: 'success'
-      //   })
-      //   .then(() => {
-      //     intance.$bus.$emit('empty')
-      //   })
-      //   .catch(() => {
-      //     window.history.back(-1)
-      //   })
-    }
+    if (response.status === 1) {}
   },
   // 将url参数解析为一个对象
   routeToObject (route) {
