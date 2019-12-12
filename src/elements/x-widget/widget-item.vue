@@ -28,6 +28,7 @@
     <zk-tabbar :widget="widget" v-if="widget.componentPath === '/common/zk-tabbar'"></zk-tabbar>
     <zk-video :widget="widget" v-if="widget.componentPath === '/common/zk-video'"></zk-video>
     <zk-grid-list :widget="widget" v-if="widget.componentPath === '/common/zk-grid-list'"></zk-grid-list>
+    <zk-bank-list :widget="widget" v-if="widget.componentPath === '/common/zk-bank-list'"></zk-bank-list>
     <zk-login :widget="widget" v-if="widget.componentPath === '/user/zk-login'"></zk-login>
     <zk-qrcode :widget="widget" v-if="widget.componentPath === '/user/zk-qrcode'"></zk-qrcode>
     <zk-reg :widget="widget" v-if="widget.componentPath === '/user/zk-reg'"></zk-reg>
