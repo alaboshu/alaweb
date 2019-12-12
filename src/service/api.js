@@ -11,6 +11,13 @@ import store from '@/service/store'
 import share from '@/service/planform/share'
 
 export default {
+  // 页面跳转
+  to (url) {
+    history.to(url)
+  },
+  back (url) {
+    history.back(url)
+  },
   // 当前租户
   tenant () {
     if (config.isTenant === true) {
@@ -20,10 +27,7 @@ export default {
       return ''
     }
   },
-  // 是否为租户模式
-  isTenant () {
-    return config.isTenant
-  },
+
   // 输出信息,发布环境不输出
   info () {
     if (process.env.NODE_ENV === 'development') {
@@ -178,13 +182,6 @@ export default {
     ) {
       return 4
     }
-  },
-  // 页面跳转
-  to (url) {
-    history.to(url)
-  },
-  back (url) {
-    history.back(url)
   },
   vuexSet (name, value) {
     store.state[name] = value
