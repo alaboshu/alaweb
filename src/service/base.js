@@ -92,7 +92,6 @@ export default {
     // 处理跳转链接
     var toPagesUrl = toPages
     var showSplit
-    console.info('toPages', toPages)
     if (toPages.indexOf('?') > -1) {
       toPagesUrl = toPages.split('?')[0]
       showSplit = toPages.split('?')[1]

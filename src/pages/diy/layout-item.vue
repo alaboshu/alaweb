@@ -50,6 +50,7 @@
           }
         })
       })
+      console.info('aaaaaaaaaaaaaa', this.widget)
     },
     methods: {
       handleCheck (widget) {

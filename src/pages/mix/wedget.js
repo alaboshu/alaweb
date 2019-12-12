@@ -10,13 +10,13 @@ export default {
     getTabbar (data) {
       if (data) {
         // 动态修改底部tabbar
-        var color = data.tabbarForm.color ? data.tabbarForm.color : '#a2a2a2'
-        var selectColor = data.tabbarForm.selectColor ? data.tabbarForm.selectColor : '#FF8C85'
+        var color = data.tabbarForm && data.tabbarForm.color ? data.tabbarForm.color : '#a2a2a2'
+        var selectColor = data.tabbarForm && data.tabbarForm.selectColor ? data.tabbarForm.selectColor : '#FF8C85'
         uni.setTabBarStyle({
           color: color,
           selectedColor: selectColor
         })
-        if (data.tabbarForm.links) {
+        if (data.tabbarForm && data.tabbarForm.links) {
           data.tabbarForm.links.forEach((element, index) => {
             uni.setTabBarItem({
               index: index,

@@ -66,10 +66,12 @@
     methods: {
       async init () {
         this.viewModel = await this.$api.themePage(this.option)
-        uni.setNavigationBarTitle({
-          title: this.viewModel.name
-        })
-        console.log(this.viewModel.name, this.viewModel)
+        if (this.viewModel) {
+          uni.setNavigationBarTitle({
+            title: this.viewModel.name
+          })
+        }
+        // console.log(this.viewModel.name, this.viewModel)
 
         this.async = true
       },

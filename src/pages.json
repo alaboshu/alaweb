@@ -56,8 +56,7 @@
   },
   "condition": {
     "current": 0,
-    "list": [
-      {
+    "list": [{
         "name": "首页",
         "path": "pages/index"
       },
@@ -69,7 +68,7 @@
       {
         "name": "test1",
         "path": "pages/test1"
-      },
+      }
     ]
   },
   "tabBar": {

@@ -1,5 +1,7 @@
 <template>
-  <zk-grid-list></zk-grid-list>
+  <view class="add">
+    <view class="border-style">fsfaf</view>
+  </view>
 </template>
 <script>
   export default {
@@ -27,9 +29,5 @@
   }
 </script>
 <style lang="scss" scoped>
-  .add {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(20deg, red 10%, green 65%);
-  }
+  @import "@/assets/border/styles/index.scss";
 </style>
