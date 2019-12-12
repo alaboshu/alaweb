@@ -22,7 +22,6 @@ import zkAmount from '@/components/assets/zk-amount/index.vue'
 import zkAutoForm from '@/components/common/zk-auto-form/index.vue'
 import zkBankList from '@/components/common/zk-bank-list/index.vue'
 import zkCell from '@/components/common/zk-cell/index.vue'
-import zkGridList from '@/components/common/zk-grid-list/index.vue'
 import zkGrid from '@/components/common/zk-grid/index.vue'
 import zkHtml from '@/components/common/zk-html/index.vue'
 import zkImageList from '@/components/common/zk-image-list/index.vue'
@@ -76,6 +75,7 @@ import xRadio from '@/elements/x-radio/index.vue'
 import xScrollView from '@/elements/x-scroll-view/index.vue'
 import xSelect from '@/elements/x-select/index.vue'
 import xTimePicker from '@/elements/x-time-picker/index.vue'
+import xUpload from '@/elements/x-upload/index.vue'
 import xWidget from '@/elements/x-widget/index.vue'
 Vue.component('zk-article', zkArticle)
 Vue.component('zk-help', zkHelp)
@@ -84,7 +84,6 @@ Vue.component('zk-amount', zkAmount)
 Vue.component('zk-auto-form', zkAutoForm)
 Vue.component('zk-bank-list', zkBankList)
 Vue.component('zk-cell', zkCell)
-Vue.component('zk-grid-list', zkGridList)
 Vue.component('zk-grid', zkGrid)
 Vue.component('zk-html', zkHtml)
 Vue.component('zk-image-list', zkImageList)
@@ -138,6 +137,7 @@ Vue.component('x-radio', xRadio)
 Vue.component('x-scroll-view', xScrollView)
 Vue.component('x-select', xSelect)
 Vue.component('x-time-picker', xTimePicker)
+Vue.component('x-upload', xUpload)
 Vue.component('x-widget', xWidget)
 
 Vue.config.productionTip = false
