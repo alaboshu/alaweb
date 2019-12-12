@@ -11,7 +11,6 @@
 </template>
 
 <script>
- 
   import './var.scss'
   import './styles/index'
   export default {

@@ -29,7 +29,6 @@
 
 <style lang="scss">
   @import "@/assets/style/variable.scss";
-
   .zk-html {
     font-size: $gl-size-base;
   }
