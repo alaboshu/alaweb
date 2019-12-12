@@ -3,7 +3,7 @@ let props = {
   widget: {
     styleStype: {
       type: String,
-      default: ''
+      default: 1
     }, // 风格样式
     keyword: {
       type: String

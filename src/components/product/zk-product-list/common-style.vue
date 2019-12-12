@@ -19,13 +19,11 @@
     },
     props: {
       viewModel: {},
-      widget: {},
+      widget: {
+      },
       type: {
         defualt: 'product'
       }
-    },
-    onShow (optinos) {
-      console.info('options', optinos)
     },
     mounted () {
 

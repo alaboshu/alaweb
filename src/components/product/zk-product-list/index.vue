@@ -38,11 +38,10 @@
         this.init()
       },
       async  init () {
-        var widgetPara = this.widget
-        if (widgetPara) {
+        if (this.widget) {
           this.queryPara = {
             ...this.queryPara,
-            ...widgetPara.value
+            ...this.value
           }
         }
         var response = await this.$api.httpGet('/Api/Product/List')

@@ -73,7 +73,7 @@ export default {
     if (!historys) {
       historys = []
       historys[0] = url
-      this.vuexLocalSet('browse_historys', historys)
+      api.vuexLocalSet('browse_historys', historys)
     } else {
       historys[historys.length] = url
       if (historys.length > 5) {
