@@ -160,16 +160,11 @@ export default {
       }, 500)
     }
   },
-  shareApp (title, imageUrl, summary, url) {
-    shareApp.appShare(title, url, summary, imageUrl)
-  },
-
-  // 判断字符串是否为空，或在null 或者undefined
+  // 判断字符串是否为空
   isEmpty (str) {
     return help.isEmpty(str)
   },
-
-  // 终端类型 ：包括小程序，APP，H5包括微信公众号的判断
+  // 终端类型 
   client () {
     // #ifdef H5
     var u = navigator.userAgent
@@ -205,13 +200,11 @@ export default {
       this.client() === 'AppPlus' &&
       this.getSystemInfoSync().platform === 'ios'
     ) {
-      // ios
       return 3
     } else if (
       this.client() === 'AppPlus' &&
       this.getSystemInfoSync().platform === 'android'
     ) {
-      // adnroid
       return 4
     }
   },

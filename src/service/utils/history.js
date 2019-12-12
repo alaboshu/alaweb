@@ -1,4 +1,5 @@
 import user from '@/service/user'
+import api from '@/service/api'
 export default {
   to (url) {
     url = this.getCurrentPath(url)
@@ -68,8 +69,8 @@ export default {
   },
   // 历史记录，保留5条
   historys (url) {
-    var historys = this.vuexLocalGet('browse_historys')
-    if (this.isEmpty(historys)) {
+    var historys = api.vuexLocalGet('browse_historys')
+    if (!historys) {
       historys = []
       historys[0] = url
       this.vuexLocalSet('browse_historys', historys)

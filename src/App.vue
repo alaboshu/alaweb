@@ -5,14 +5,13 @@
     mpType: 'app',
     async onLaunch () {
       /* eslint-disable */
-      await api.checkVersion()
       // #ifdef APP-PLUS  
+      await api.checkVersion()
       plus.push.addEventListener('click', function (message) {
         // plus.nativeUI.toast('push click')
         // _handlePush(message)
       })
       plus.push.addEventListener('receive', function (message) {
-        // plus.nativeUI.toast('push receive')
         plus.push.createMessage(message.title)
         // _handlePush(message)
       })
