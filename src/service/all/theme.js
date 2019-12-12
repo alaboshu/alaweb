@@ -1,8 +1,6 @@
 import globalConfig from '@/service/config'
-// import http from '@/service/all/http'
 import api from '@/service/api'
 import base from '@/service/base'
-// import data from '@/data'
 import user from '../user'
 export default {
   async page (option) {
@@ -39,8 +37,8 @@ export default {
     }
   },
 
-  // 模块信息,para 为附加参数
-  async widget (widget, appendPara) {
+  // 模块信息
+  async widget (widget) {
     var parameter = {
       apiUrl: '',
       value: null
@@ -113,19 +111,15 @@ export default {
     }
     return findPageInfo
   },
-  // 所有页面记录，并写入缓存
+  // 所有页面
   async getAllPageList () {
-    // if (base.isBuild()) {
-    //   api.localRemove('addressData')
-    //   return pagesInfo
-    // }
     var para = {
       clientType: 'WapH5',
       path: '/index'
     }
     var allPageCacheKey = 'allPageInfo_' + globalConfig.version
     var allPageInfo = api.localGet(allPageCacheKey)
-    var isRequest = true // 是否重新请求
+    var isRequest = true // 是否请求
     if (!api.isEmpty(allPageInfo)) {
       let timestamp = Math.round(new Date().getTime() / 1000)
       if (allPageInfo.lastUpdate > timestamp) {
