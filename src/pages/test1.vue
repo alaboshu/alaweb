@@ -1,6 +1,6 @@
 <template>
   <view class="add">
-    <view class="border-style">fsfaf</view>
+    <zk-grid-list></zk-grid-list>
   </view>
 </template>
 <script>
