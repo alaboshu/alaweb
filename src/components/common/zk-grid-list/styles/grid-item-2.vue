@@ -26,7 +26,7 @@
     },
     methods: {
       init () {
-        console.info('aaaaaaaaaaaaa', this.gridModel)
+        console.info('aaaaaaaaaaaaa', this.gridList)
       }
     }
   }

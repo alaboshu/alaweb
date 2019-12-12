@@ -30,9 +30,9 @@
         if (this.widget && this.widget.value) {
           this.gridModel = this.widget.value.gridForm
         }
-        if (this.gridModelgridList) {
+        if (this.gridModel.gridList) {
           var data = []
-          this.gridModelgridList.forEach(element => {
+          this.gridModel.gridList.forEach(element => {
             if (element.isEnable) {
               data.push(element)
             }
