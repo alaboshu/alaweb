@@ -39,9 +39,11 @@
       },
       async  init () {
         var widgetPara = this.widget
-        this.queryPara = {
-          ...this.queryPara,
-          ...widgetPara.value
+        if (widgetPara) {
+          this.queryPara = {
+            ...this.queryPara,
+            ...widgetPara.value
+          }
         }
         var response = await this.$api.httpGet('/Api/Product/List')
         if (response.status === 1) {

@@ -87,7 +87,7 @@
           </div>
         </div>
       </div>
-      <div class="i_other" >
+      <div class="i_other">
         <div class="i_other-repertory">库存{{productView.stock}}件</div>
         <div class="i_other-sold">已售{{productView.soldCount}}件</div>
       </div>
@@ -261,7 +261,7 @@
     color: #666;
     position: relative;
     background: #fff;
-    padding: 15px 10px 10px 10px;
+    padding: 5px 10px 10px 10px;
     .i_title-row {
       .i_title {
         font-size: 18px;

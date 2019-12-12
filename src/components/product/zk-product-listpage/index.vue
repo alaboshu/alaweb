@@ -12,7 +12,7 @@
         </div>
       </scroll-view>
       <zk-product-list :widget="{value: {productType: 3}}"></zk-product-list>
-      <!-- <zk-product-item ref="zkProductItem" :type="type" :isNot="false" v-if="!isNotData" :showPrice="productItem.isFrontShowPrice"></zk-product-item> -->
+      <!-- <zk-product-list ref="zkProductItem" :type="type" :isNot="false" v-if="!isNotData" :showPrice="productItem.isFrontShowPrice"></zk-product-list> -->
       <div class="listpage_not" v-if="isNotData">
         <div class="icon_data">
           <i class="icon iconfont zk-temporarily"></i>

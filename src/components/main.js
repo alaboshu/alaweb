@@ -111,7 +111,7 @@ import zkQiniuniuBtn from '@/components/qiniuniu/zk-qiniuniu-btn'
 import zkMerchantInfo from '@/components/qiniuniu/zk-merchant-info'
 import zkProductShowpage from '@/components/product/zk-product-showpage'
 import zkProductListpage from '@/components/product/zk-product-listpage'
-import zkProductItem from '@/components/product/zk-product-item'
+import zkProductItem from '@/components/product/zk-product-list'
 import zkProductFavorite from '@/components/product/zk-product-favorite'
 import zkProductData from '@/components/product/zk-product-data'
 import zkProductClass from '@/components/product/zk-product-class'
@@ -215,7 +215,7 @@ Vue.component('zk-comments-list', zkCommentsList)
 Vue.component('zk-product-class', zkProductClass)
 Vue.component('zk-product-data', zkProductData)
 Vue.component('zk-product-favorite', zkProductFavorite)
-Vue.component('zk-product-item', zkProductItem)
+Vue.component('zk-product-list', zkProductItem)
 Vue.component('zk-product-listpage', zkProductListpage)
 Vue.component('zk-product-showpage', zkProductShowpage)
 Vue.component('zk-merchant-info', zkMerchantInfo)

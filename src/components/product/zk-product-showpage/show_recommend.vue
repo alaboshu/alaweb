@@ -4,7 +4,7 @@
       <view class="intro-title" id="showIntro">
         推荐商品
       </view>
-      <zk-product-item ref="product_item" :showPrice="isFrontShowPrice"></zk-product-item>
+      <zk-product-list ref="product_item" :showPrice="isFrontShowPrice"></zk-product-list>
     </view>
   </view>
 </template>
