@@ -1,5 +1,6 @@
 import theme from '@/service/all/theme'
 import http from '@/service/all/http'
+import history from '@/service/utils/history'
 import httpWx from '@/service/all/http.wx'
 import local from '@/service/utils/local'
 import loading from '@/service/utils/loading'
@@ -138,16 +139,6 @@ export default {
       }
     })
   },
-  // 微信提示
-  weixinModel (message) {
-    uni.showModal({
-      title: '提示',
-      content: message,
-      success: function (res) {
-        if (res.confirm) {} else if (res.cancel) {}
-      }
-    })
-  },
   /** 微信分享 */
   share (title, imageUrl, desc, url) {
     if (this.client() === 'AppPlus' && this.payType() === 4) {
@@ -225,51 +216,8 @@ export default {
     }
   },
   // 页面跳转
-  // // 页面跳转
-  to (url, isApp) {
-    if (url === '/pages/tabbar/index' || url.includes('pages/tabbar')) {
-      uni.reLaunch({
-        url: url
-      })
-      return
-    }
-    if (this.client() === 'AppPlus') {
-      if (user.isLogin() === false) {
-        // var this = this
-        uni.showModal({
-          title: '未登录',
-          content: '请先登录',
-          success: function (res) {
-            if (res.confirm) {
-              uni.navigateTo({
-                url: '/pages/user/login'
-              })
-            } else if (res.cancel) {}
-          }
-        })
-      } else {
-        if (isApp) {
-          uni.switchTab({
-            url: url
-          })
-        } else {
-          uni.navigateTo({
-            url: url
-          })
-        }
-      }
-    } else {
-      if (isApp) {
-        uni.switchTab({
-          url: url
-        })
-      } else {
-        uni.navigateTo({
-          url: url
-        })
-      }
-    }
-    this.historys(url)
+  to (url) {
+    history.to(url)
   },
   // 设置历史记录，保留5条历史记录
   historys (url) {

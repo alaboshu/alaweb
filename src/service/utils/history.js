@@ -1,3 +1,4 @@
+import user from '@/service/user'
 export default {
   to (url) {
     url = this.getCurrentPath(url)
@@ -9,6 +10,75 @@ export default {
       uni.navigateTo({
         url: url
       })
+    }
+    this.historys(url)
+  },
+  back (url) {
+    var historys = this.vuexLocalGet('browse_historys')
+    if (url === 'login' && user.isLogin() === false) {
+      uni.reLaunch({
+        url: '/pages/tabbar/index'
+      })
+      return false
+    }
+    if (historys && historys.length > 1) {
+      if (url === '/pages/user?path=order_show') {
+        this.to('/pages/index?path=order_index')
+      } else if (url === '/pages/user?path=order_index') {
+        this.to('/pages/user/index', true)
+      } else if (url === 'login' && user.isLogin() === false) {
+        uni.navigateBack({
+          delta: 1
+        })
+      } else {
+        if (getCurrentPages().length === 1) {
+          uni.reLaunch({
+            url: '/pages/tabbar/index'
+          })
+        } else {
+          if (this.client() === 'AppPlus') {
+            uni.navigateBack({
+              delta: 1
+            })
+          } else {
+            if (
+              getCurrentPages()[getCurrentPages().length - 1] &&
+              getCurrentPages()[getCurrentPages().length - 1].option &&
+              getCurrentPages()[getCurrentPages().length - 1].option.path ===
+              'user_login'
+            ) {
+              var historys = this.vuexLocalGet('browse_historys')
+              var backUrl = historys[historys.length - 1]
+              uni.reLaunch({
+                url: backUrl
+              })
+            } else {
+              uni.navigateBack({
+                delta: 1
+              })
+            }
+          }
+        }
+      }
+    } else {
+      uni.reLaunch({
+        url: '/pages/tabbar/index'
+      })
+    }
+  },
+  // 历史记录，保留5条
+  historys (url) {
+    var historys = this.vuexLocalGet('browse_historys')
+    if (this.isEmpty(historys)) {
+      historys = []
+      historys[0] = url
+      this.vuexLocalSet('browse_historys', historys)
+    } else {
+      historys[historys.length] = url
+      if (historys.length > 5) {
+        historys.splice(0, 1)
+      }
+      this.vuexLocalSet('browse_historys', historys)
     }
   },
   getCurrentPath (toPages) {
