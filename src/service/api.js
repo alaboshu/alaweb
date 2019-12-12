@@ -85,6 +85,9 @@ export default {
   },
   //  http请求,delete方法：删
   async httpDelete (apiUrl, data) {
+    if (this.client() === 'WeChatLite') {
+      return httpWx.delete(apiUrl, data)
+    }
     return http.delete(apiUrl, data)
   },
   //  延时加载数据到缓存

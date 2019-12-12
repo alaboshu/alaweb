@@ -22,6 +22,27 @@ export default {
     var response = await this.getRequest(apiUrl).put(apiUrl, data)
     return response
   },
+  async delete (apiUrl, data) {
+    this.getAxios(apiUrl)
+    var para = this.parseParams(data)
+    var axiosWx = axios()
+    var response = await axiosWx.delete(globalConfig.apiBaseUrl + apiUrl + '?' + para)
+    return response.data
+  },
+  parseParams (data) {
+    try {
+      var tempArr = []
+      for (var i in data) {
+        var key = encodeURIComponent(i)
+        var value = encodeURIComponent(data[i])
+        tempArr.push(key + '=' + value)
+      }
+      var urlParamsStr = tempArr.join('&')
+      return urlParamsStr
+    } catch (err) {
+      return ''
+    }
+  },
   getAxios (apiUrl) {
     var axiosWx = axios()
     axiosWx.interceptors.request.use(config => {

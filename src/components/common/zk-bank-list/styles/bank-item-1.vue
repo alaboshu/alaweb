@@ -30,7 +30,6 @@
           userId: this.$user.id()
         }
         var response = await this.$api.httpGet('/Api/BankCard/GetBankCardListByUserId', para)
-        console.info('response', response)
         if (response.status === 1) {
           this.bankList = response.result
         }
