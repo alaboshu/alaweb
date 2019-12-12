@@ -16,7 +16,7 @@
         "navigationStyle": "custom"
       }
     },
-    // #ifdef H5
+
     {
       "path": "pages/test1",
       "style": {
@@ -24,7 +24,7 @@
         "enablePullDownRefresh": true
       }
     },
-    // #endif
+
     {
       "path": "pages/tabbar/two",
       "style": {
@@ -67,12 +67,11 @@
     "current": 0,
     "list": [{
         "name": "首页",
-        "path": "pages/index"
+        "path": "pages/tabbar/index"
       },
       {
         "name": "会员中心",
-        "path": "pages/index",
-        "query": "path=user_index"
+        "path": "pages/tabbar/user"
       },
       {
         "name": "test1",
