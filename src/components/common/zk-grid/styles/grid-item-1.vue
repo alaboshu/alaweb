@@ -1,15 +1,15 @@
 <template>
   <view class="grid-item-1" v-if="async">
-    <scroll-view class="scroll-view" :style="'width:'+(this.$base.screenWidth() - 20)+'px;'" :scroll-x="true" :show-scrollbar="true" @scroll="scrollChange">
-      <view class="ul" :style="'width:'+ gridWidth*gridLength + 'px;'">
-        <view class="list" :style="'width:'+ gridWidth+'px;'" v-for="(item, index) in gridList" :key="index">
-          <img :src="item.image" class="image" alt="">
-          <view class="test">{{item.link.name}}</view>
+    <scroll-view class="scroll-view" :style="'width:' + (this.$base.screenWidth() - 20) + 'px;'" :scroll-x="isScroll" @scroll="scrollChange">
+      <view class="ul" :style="'width:' + gridWidth * gridLength + 'px;'">
+        <view class="list" :style="'width:' + gridWidth + 'px;'" v-for="(item, index) in gridList" :key="index">
+          <img :src="item.image" class="image" alt="" />
+          <view class="test">{{ item.link.name }}</view>
         </view>
       </view>
     </scroll-view>
-    <view class="foot-item">
-      <view class="scroll-for" :style="{left:flotLeft}"></view>
+    <view class="foot-item" v-if="isScroll">
+      <view class="scroll-for" :style="{ left: flotLeft }"></view>
     </view>
   </view>
 </template>
@@ -23,9 +23,10 @@
     data () {
       return {
         async: false,
-        gridWidth: 0,
-        flotLeft: 0,
-        gridLength: 0
+        gridWidth: 0, // 每个图标宽度
+        flotLeft: 0, // 轮播滚动距离
+        gridLength: 4, // 每行展示数量默认为四个
+        isScroll: false // 是否支持滚动，默认为不支持
       }
     },
     mounted () {
@@ -33,12 +34,15 @@
     },
     methods: {
       init () {
-        this.gridWidth = (this.$base.screenWidth() - 20) / this.gridModel.gridCount
-        if (this.gridModel.gridList) {
-          if (this.gridModel.gridList.length / this.gridModel.gridCount > 2) {
-            this.gridLength = this.gridModel.gridList.length
+        this.gridWidth =
+          (this.$base.screenWidth() - 20) / this.gridModel.gridCount
+        if (this.gridList) {
+          if (this.gridList.length / this.gridModel.gridCount > 2) {
+            this.gridLength = Math.ceil(this.gridList.length / 2)
+            this.isScroll = true
           } else {
             this.gridLength = 5
+            this.isScroll = false
           }
         }
         this.async = true
@@ -52,14 +56,13 @@
           var footLeft = (scrollLeft / (scrollWidth - width)).toFixed(2)
           // toFixed
           // 小数转百分比
-          this.flotLeft = (Number(footLeft * 100) / 2) + '%'
+          this.flotLeft = Number(footLeft * 100) / 2 + '%'
         }
         // console.info('ev', ev.detail)
       }
     }
   }
 </script>
-
 
 <style lang="scss" scoped>
   .grid-item-1 {
@@ -104,7 +107,7 @@
         left: 0;
         width: 15px;
         height: 100%;
-        background: yellow;
+        background: #fff;
       }
     }
   }
