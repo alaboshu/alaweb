@@ -47,7 +47,6 @@
   import ShowIntro from './show_intro'
   import ShowRecommend from './show_recommend'
   import ShowBar from './show_bar'
-  import { setTimeout } from 'timers'
   export default {
 
     data () {
@@ -95,14 +94,11 @@
       widget: {},
       option: {}
     },
-    onPageScroll (e) {
-
-    },
     onShow () {
-      this.init()
+      // this.init()
     },
     onLoad () {
-      this.init()
+      //  this.init()
     },
     mounted () {
       this.init()
@@ -118,13 +114,9 @@
           this.wechatType = true
         }
         if (this.$api.client() === 'AppPlus') {
-          // this.isApp = true
           this.wechatType = false
           this.isApp = false
           this.statusBarHeight = this.$base.getSystemInfoSync().statusBarHeight + 5
-          // if (this.$api.payType() === 3) {
-
-          // }
         }
         if (this.$api.client() === 'AppPlus' && this.$api.payType() === 3) {
           this.isIosApp = false
@@ -177,14 +169,14 @@
 
           if (this.$api.client() !== 'WeChatLite' && this.$api.client() !== 'AppPlus') {
             var that = this
-            setTimeout(() => {
-              uni.createSelectorQuery().select('#showRecommended').boundingClientRect(res => {
-                that.imgAge.showRecommended = res.bottom
-              }).exec()
-              uni.createSelectorQuery().select('#showIntro').boundingClientRect(res => {
-                that.imgAge.showIntro = res.bottom
-              }).exec()
-            }, 500)
+            // setTimeout(() => {
+            //   uni.createSelectorQuery().select('#showRecommended').boundingClientRect(res => {
+            //     that.imgAge.showRecommended = res.bottom
+            //   }).exec()
+            //   uni.createSelectorQuery().select('#showIntro').boundingClientRect(res => {
+            //     that.imgAge.showIntro = res.bottom
+            //   }).exec()
+            // }, 500)
           }
           this.ready = true
         }
