@@ -29,6 +29,7 @@ import zkImage from '@/components/common/zk-image/index.vue'
 import zkList from '@/components/common/zk-list/index.vue'
 import zkPreview from '@/components/common/zk-preview/index.vue'
 import zkSwiper from '@/components/common/zk-swiper/index.vue'
+import zkTabbar from '@/components/common/zk-tabbar/index.vue'
 import zkVideo from '@/components/common/zk-video/index.vue'
 import zkBuy from '@/components/order/zk-buy/index.vue'
 import zkCart from '@/components/order/zk-cart/index.vue'
@@ -89,6 +90,7 @@ Vue.component('zk-image', zkImage)
 Vue.component('zk-list', zkList)
 Vue.component('zk-preview', zkPreview)
 Vue.component('zk-swiper', zkSwiper)
+Vue.component('zk-tabbar', zkTabbar)
 Vue.component('zk-video', zkVideo)
 Vue.component('zk-buy', zkBuy)
 Vue.component('zk-cart', zkCart)
