@@ -29,7 +29,6 @@
 
                       </div>
                       <div class="buycounts">x{{productItem.buyCount}}
-                        <!-- <x-number v-model="productItem.buyCount"></x-number> -->
                       </div>
                     </div>
                   </view>
@@ -112,7 +111,7 @@
               if (_this.$api.client() === 'WeChatLite' || _this.$api.client() === 'AppPlus') {
                 _this.noDataHeight = res.windowHeight - 50
               } else {
-                _this.noDataHeight = res.windowHeight - 46 - 50
+                _this.noDataHeight = res.windowHeight
               }
             }
           })
@@ -253,10 +252,6 @@
           })
           this.$api.localSet('buyProductInfo', buyProductInfo)
           this.$api.to('/pages/index?path=order_buy&isFromCart=true')
-          // var vueThis = this
-          // setTimeout(function () {
-          //   vueThis.$api.to('/pages/index?path=order_buy&isFromCart=true')
-          // }, 2000)
         }
       },
       goDetails (id) {
@@ -269,11 +264,14 @@
   @import "@/assets/style/variable.scss";
   @import "@/assets/style/theme.scss";
   .zk-Cart {
+    height: 100%;
     .zk-cart-box {
       background: #eee;
       padding-bottom: 55px;
     }
     .zk-cart-notdata {
+      width: 100%;
+      box-sizing: border-box;
       background: #fff;
       .nodata-box {
         position: absolute;
@@ -294,6 +292,9 @@
           font-size: 16px;
           color: #ddd;
         }
+      }
+      .temporarily_img {
+        width: 100%;
       }
     }
     .zk-cart_item {
