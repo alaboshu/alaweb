@@ -70,6 +70,7 @@ export default {
   // 历史记录，保留5条
   add (url) {
     var historys = api.vuexLocalGet('browse_historys')
+    console.info('add historys', historys, url)
     if (!historys) {
       historys = []
       historys[0] = url
