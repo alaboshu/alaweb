@@ -1,208 +1,206 @@
 {
-    "name" : "阿拉博数",
-    "appid" : "__UNI__FED8DFC",
-    "description" : "实体商家业绩倍增服务平台",
-    "debug" : true,
-    "versionName" : "1.2.2",
-    "versionCode" : 430,
-    "transformPx" : false,
-    "app-plus" : {
-        "nvueCompiler" : "uni-app",
-        "usingComponents" : true,
-        "modules" : {
-            "OAuth" : {},
-            "VideoPlayer" : {},
-            "Share" : {},
-            "Payment" : {},
-            "Push" : {},
-            "Maps" : {},
-            "iBeacon" : {}
+  "name": "阿拉博数",
+  "appid": "__UNI__FED8DFC",
+  "description": "实体商家业绩倍增服务平台",
+  "debug": true,
+  "versionName": "1.2.2",
+  "versionCode": 430,
+  "transformPx": false,
+  "app-plus": {
+    "nvueCompiler": "uni-app",
+    "usingComponents": true,
+    "modules": {
+      "OAuth": {},
+      "VideoPlayer": {},
+      "Share": {},
+      "Payment": {},
+      "Push": {},
+      "Maps": {},
+      "iBeacon": {}
+    },
+    "distribute": {
+      "android": {
+        "permissions": [
+          "<uses-feature android:name=\"android.hardware.camera\"/>",
+          "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_MOCK_LOCATION\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.BLUETOOTH\"/>",
+          "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\"/>",
+          "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+          "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+          "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+          "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+          "<uses-permission android:name=\"android.permission.GET_TASKS\"/>",
+          "<uses-permission android:name=\"android.permission.GET_TOP_ACTIVITY_INFO\"/>",
+          "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+          "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+          "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+          "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+          "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+          "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.READ_SMS\"/>",
+          "<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>",
+          "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+          "<uses-permission android:name=\"android.permission.SEND_SMS\"/>",
+          "<uses-permission android:name=\"android.permission.SYSTEM_ALERT_WINDOW\"/>",
+          "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+          "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_SMS\"/>",
+          "<uses-permission android:name=\"android.permission.RECEIVE_USER_PRESENT\"/>",
+          "<uses-permission android:name=\"android.permission.BLUETOOTH\"/>",
+          "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\"/>"
+        ],
+        "targetSdkVersion": 26
+      },
+      "ios": {
+        "UIBackgroundModes": ["audio"]
+      },
+      "sdkConfigs": {
+        "speech": {},
+        "maps": {
+          "amap": {
+            "appkey_ios": "fc4bf2a7a7dd1efcf36f8d2ed69672f3",
+            "appkey_android": "b4abcee00161f3d86fb884288752545c"
+          }
         },
-        "distribute" : {
-            "android" : {
-                "permissions" : [
-                    "<uses-feature android:name=\"android.hardware.camera\"/>",
-                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
-                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
-                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
-                    "<uses-permission android:name=\"android.permission.ACCESS_MOCK_LOCATION\"/>",
-                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.BLUETOOTH\"/>",
-                    "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\"/>",
-                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
-                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
-                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
-                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
-                    "<uses-permission android:name=\"android.permission.GET_TASKS\"/>",
-                    "<uses-permission android:name=\"android.permission.GET_TOP_ACTIVITY_INFO\"/>",
-                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
-                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
-                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
-                    "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
-                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
-                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.READ_SMS\"/>",
-                    "<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>",
-                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
-                    "<uses-permission android:name=\"android.permission.SEND_SMS\"/>",
-                    "<uses-permission android:name=\"android.permission.SYSTEM_ALERT_WINDOW\"/>",
-                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
-                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
-                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
-                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
-                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
-                    "<uses-permission android:name=\"android.permission.WRITE_SMS\"/>",
-                    "<uses-permission android:name=\"android.permission.RECEIVE_USER_PRESENT\"/>",
-                    "<uses-permission android:name=\"android.permission.BLUETOOTH\"/>",
-                    "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\"/>"
-                ],
-                "targetSdkVersion" : 26
-            },
-            "ios" : {
-                "UIBackgroundModes" : [ "audio" ]
-            },
-            "sdkConfigs" : {
-                "speech" : {},
-                "maps" : {
-                    "amap" : {
-                        "appkey_ios" : "fc4bf2a7a7dd1efcf36f8d2ed69672f3",
-                        "appkey_android" : "b4abcee00161f3d86fb884288752545c"
-                    }
-                },
-                "payment" : {
-                    "weixin" : {
-                        "appid" : "wxce06b1724c6fdb80"
-                    },
-                    "alipay" : {}
-                },
-                "share" : {
-                    "weixin" : {
-                        "appid" : "wxce06b1724c6fdb80",
-                        "appsecret" : "835ad11030f3d8f425301973c8c6ba3a"
-                    }
-                },
-                "push" : {
-                    "unipush" : {}
-                }
-            },
-            "orientation" : [ "portrait-primary" ],
-            "icons" : {
-                "ios" : {
-                    "appstore" : "unpackage/res/icons/1024x1024.png",
-                    "ipad" : {
-                        "app" : "unpackage/res/icons/76x76.png",
-                        "app@2x" : "unpackage/res/icons/152x152.png",
-                        "notification" : "unpackage/res/icons/20x20.png",
-                        "notification@2x" : "unpackage/res/icons/40x40.png",
-                        "proapp@2x" : "unpackage/res/icons/167x167.png",
-                        "settings" : "unpackage/res/icons/29x29.png",
-                        "settings@2x" : "unpackage/res/icons/58x58.png",
-                        "spotlight" : "unpackage/res/icons/40x40.png",
-                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
-                    },
-                    "iphone" : {
-                        "app@2x" : "unpackage/res/icons/120x120.png",
-                        "app@3x" : "unpackage/res/icons/180x180.png",
-                        "notification@2x" : "unpackage/res/icons/40x40.png",
-                        "notification@3x" : "unpackage/res/icons/60x60.png",
-                        "settings@2x" : "unpackage/res/icons/58x58.png",
-                        "settings@3x" : "unpackage/res/icons/87x87.png",
-                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
-                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
-                    }
-                },
-                "android" : {
-                    "hdpi" : "unpackage/res/icons/72x72.png",
-                    "ldpi" : "unpackage/res/icons/48x48.png",
-                    "mdpi" : "unpackage/res/icons/48x48.png",
-                    "xhdpi" : "unpackage/res/icons/96x96.png",
-                    "xxhdpi" : "unpackage/res/icons/144x144.png",
-                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
-                }
-            },
-            "splashscreen" : {
-                "ios" : {
-                    "iphone" : {
-                        "portrait-896h@3x" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1242x2688.png",
-                        "landscape-896h@3x" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/2688-1242.png",
-                        "portrait-896h@2x" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/828-1792.png",
-                        "landscape-896h@2x" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1792-828.png",
-                        "iphonex" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1125-2436.png",
-                        "iphonexl" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/2436-1125.png",
-                        "retina55" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1242-2208.png",
-                        "retina55l" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/2208-1242.png",
-                        "retina47" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/750-1334.png",
-                        "retina47l" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1334-750.png",
-                        "retina40" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/640-1136.png",
-                        "retina40l" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1136-640.png",
-                        "retina35" : "C:/Users/Administrator/Desktop/word/启动(1)/苹果/640-960.png"
-                    }
-                },
-                "android" : {
-                    "hdpi" : "C:/Users/Administrator/Desktop/word/启动(1)/安卓/480-762.png",
-                    "xhdpi" : "C:/Users/Administrator/Desktop/word/启动(1)/安卓/720-1242.png",
-                    "xxhdpi" : "C:/Users/Administrator/Desktop/word/启动(1)/安卓/1080-1882.png"
-                }
-            }
+        "payment": {
+          "weixin": {
+            "appid": "wxce06b1724c6fdb80"
+          },
+          "alipay": {}
         },
-        "splashscreen" : {
-            "waiting" : false
+        "share": {
+          "weixin": {
+            "appid": "wxce06b1724c6fdb80",
+            "appsecret": "835ad11030f3d8f425301973c8c6ba3a"
+          }
         },
-        "nativePlugins" : {
-            "WUApp-Share" : {
-                "__plugin_info__" : {
-                    "name" : "iOS原生系统自带分享",
-                    "description" : "iOS原生系统分享，不需要去各种开放平台申请appid",
-                    "platforms" : "iOS",
-                    "url" : "https://ext.dcloud.net.cn/plugin?id=342",
-                    "android_package_name" : "com.zygj.qiniuniu",
-                    "ios_bundle_id" : "com.zygj.qiniuniu",
-                    "isCloud" : true,
-                    "bought" : 1,
-                    "pid" : "342",
-                    "parameters" : {}
-                }
-            },
-            "Xty-StoreKit" : {
-                "__plugin_info__" : {
-                    "name" : "StoreKit",
-                    "description" : "Appstore 评分",
-                    "platforms" : "iOS",
-                    "url" : "https://ext.dcloud.net.cn/plugin?id=107",
-                    "android_package_name" : "com.zygj.qiniuniu",
-                    "ios_bundle_id" : "com.zygj.qiniuniu",
-                    "isCloud" : true,
-                    "bought" : 1,
-                    "pid" : "107",
-                    "parameters" : {}
-                }
-            }
+        "push": {
+          "unipush": {}
         }
+      },
+      "orientation": ["portrait-primary"],
+      "icons": {
+        "ios": {
+          "appstore": "unpackage/res/icons/1024x1024.png",
+          "ipad": {
+            "app": "unpackage/res/icons/76x76.png",
+            "app@2x": "unpackage/res/icons/152x152.png",
+            "notification": "unpackage/res/icons/20x20.png",
+            "notification@2x": "unpackage/res/icons/40x40.png",
+            "proapp@2x": "unpackage/res/icons/167x167.png",
+            "settings": "unpackage/res/icons/29x29.png",
+            "settings@2x": "unpackage/res/icons/58x58.png",
+            "spotlight": "unpackage/res/icons/40x40.png",
+            "spotlight@2x": "unpackage/res/icons/80x80.png"
+          },
+          "iphone": {
+            "app@2x": "unpackage/res/icons/120x120.png",
+            "app@3x": "unpackage/res/icons/180x180.png",
+            "notification@2x": "unpackage/res/icons/40x40.png",
+            "notification@3x": "unpackage/res/icons/60x60.png",
+            "settings@2x": "unpackage/res/icons/58x58.png",
+            "settings@3x": "unpackage/res/icons/87x87.png",
+            "spotlight@2x": "unpackage/res/icons/80x80.png",
+            "spotlight@3x": "unpackage/res/icons/120x120.png"
+          }
+        },
+        "android": {
+          "hdpi": "unpackage/res/icons/72x72.png",
+          "ldpi": "unpackage/res/icons/48x48.png",
+          "mdpi": "unpackage/res/icons/48x48.png",
+          "xhdpi": "unpackage/res/icons/96x96.png",
+          "xxhdpi": "unpackage/res/icons/144x144.png",
+          "xxxhdpi": "unpackage/res/icons/192x192.png"
+        }
+      },
+      "splashscreen": {
+        "ios": {
+          "iphone": {
+            "portrait-896h@3x": "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1242x2688.png",
+            "landscape-896h@3x": "C:/Users/Administrator/Desktop/word/启动(1)/苹果/2688-1242.png",
+            "portrait-896h@2x": "C:/Users/Administrator/Desktop/word/启动(1)/苹果/828-1792.png",
+            "landscape-896h@2x": "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1792-828.png",
+            "iphonex": "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1125-2436.png",
+            "iphonexl": "C:/Users/Administrator/Desktop/word/启动(1)/苹果/2436-1125.png",
+            "retina55": "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1242-2208.png",
+            "retina55l": "C:/Users/Administrator/Desktop/word/启动(1)/苹果/2208-1242.png",
+            "retina47": "C:/Users/Administrator/Desktop/word/启动(1)/苹果/750-1334.png",
+            "retina47l": "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1334-750.png",
+            "retina40": "C:/Users/Administrator/Desktop/word/启动(1)/苹果/640-1136.png",
+            "retina40l": "C:/Users/Administrator/Desktop/word/启动(1)/苹果/1136-640.png",
+            "retina35": "C:/Users/Administrator/Desktop/word/启动(1)/苹果/640-960.png"
+          }
+        },
+        "android": {
+          "hdpi": "C:/Users/Administrator/Desktop/word/启动(1)/安卓/480-762.png",
+          "xhdpi": "C:/Users/Administrator/Desktop/word/启动(1)/安卓/720-1242.png",
+          "xxhdpi": "C:/Users/Administrator/Desktop/word/启动(1)/安卓/1080-1882.png"
+        }
+      }
     },
-    "quickapp" : {},
-    "mp-weixin" : {
-        "appid" : "",
-        "setting" : {
-            "urlCheck" : false,
-            "es6" : false
-        },
-        "permission" : {}
+    "splashscreen": {
+      "waiting": false
     },
-    "h5" : {
-        "template" : "index.html",
-        "router" : {
-            "mode" : "history",
-            "base" : ""
-        },
-        "async" : {
-            "loading" : "zk-loading",
-            "error" : "zk-error",
-            "delay" : 200,
-            "timeout" : 3000
-        },
-        "title" : ""
+    "nativePlugins": {
+      "WUApp-Share": {
+        "__plugin_info__": {
+          "name": "iOS原生系统自带分享",
+          "description": "iOS原生系统分享，不需要去各种开放平台申请appid",
+          "platforms": "iOS",
+          "url": "https://ext.dcloud.net.cn/plugin?id=342",
+          "android_package_name": "com.zygj.qiniuniu",
+          "ios_bundle_id": "com.zygj.qiniuniu",
+          "isCloud": true,
+          "bought": 1,
+          "pid": "342",
+          "parameters": {}
+        }
+      },
+      "Xty-StoreKit": {
+        "__plugin_info__": {
+          "name": "StoreKit",
+          "description": "Appstore 评分",
+          "platforms": "iOS",
+          "url": "https://ext.dcloud.net.cn/plugin?id=107",
+          "android_package_name": "com.zygj.qiniuniu",
+          "ios_bundle_id": "com.zygj.qiniuniu",
+          "isCloud": true,
+          "bought": 1,
+          "pid": "107",
+          "parameters": {}
+        }
+      }
     }
+  },
+  "quickapp": {},
+  "mp-weixin": {
+    "appid": "",
+    "setting": {
+      "urlCheck": false,
+      "es6": false
+    },
+    "permission": {}
+  },
+  "h5": {
+    "template": "index.html",
+    "router": {
+      "mode": "history",
+      "base": ""
+    },
+    "async": {
+      "delay": 200,
+      "timeout": 3000
+    },
+    "title": ""
+  }
 }

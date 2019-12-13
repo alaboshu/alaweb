@@ -31,6 +31,7 @@
 
 <script>
   import widgetItem from './widget-item'
+  import history from '@/service/utils/history'
   import service from './service'
   export default {
     name: 'x-widget',
@@ -60,7 +61,7 @@
           })
         }
         this.async = true
-        service.histModel()
+        history.add(this.$base.fullPath())
       },
       scrollChange () {
         service.scrollChange()

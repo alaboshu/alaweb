@@ -12,7 +12,7 @@ export default {
         url: url
       })
     }
-    this.historys(url)
+    this.add(url)
   },
   back (url) {
     var historys = api.vuexLocalGet('browse_historys')
@@ -68,16 +68,30 @@ export default {
     }
   },
   // 历史记录，保留5条
-  historys (url) {
+  add (url) {
     var historys = api.vuexLocalGet('browse_historys')
     if (!historys) {
       historys = []
       historys[0] = url
+      console.info('url asl', url)
       api.vuexLocalSet('browse_historys', historys)
     } else {
-      historys[historys.length] = url
-      if (historys.length > 5) {
-        historys.splice(0, 1)
+      var isExist = false
+      for (var i = 0; i < historys.length; i++) {
+        var element = historys[i]
+        if (element === url) {
+          isExist = true
+          break
+        }
+      }
+      if (isExist) {
+        historys = historys.filter(r => r === url)
+      }
+      if (!isExist) {
+        historys.unshift(url)
+        if (historys.length > 10) {
+          historys.pop()
+        }
       }
       api.vuexLocalSet('browse_historys', historys)
     }
