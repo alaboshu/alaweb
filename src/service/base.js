@@ -10,7 +10,7 @@ export default {
     return screen.height()
   },
   getSystemInfoSync () {
-     return screen.getSystemInfoSync()
+    return screen.getSystemInfoSync()
   },
   // 判断是生成环境还是开发环境
   isBuild () {
@@ -23,6 +23,7 @@ export default {
   // 完整路径
   fullPath () {
     var pages = getCurrentPages()
+    console.info('pages', pages, pages.route)
     var fullPath
     if (api.client() === 'WeChatLite') {
       fullPath = 'http://localhost:2000/' + pages[0].route
