@@ -49,13 +49,7 @@
       </div>
     </div>
     <div class="zk-cart-notdata" v-else :style="'height:'+noDataHeight+'px'">
-      <div class="nodata-box">
-        <!-- <x-icon class="icon_data" name="zk-temporarily" :size="72" color="#ddd"></x-icon> -->
-        <div class="icon_data">
-          <i class="icon iconfont zk-temporarily"></i>
-        </div>
-        <p>暂无数据</p>
-      </div>
+      <img class="temporarily_img" src="http://ui.5ug.com/static/static/nodata.png">
     </div>
     <view class="zk-Cart-foot" :class="{'changeBottom':changeBottom===true}">
       <view class="zk-Cart-foot-submit">

@@ -1,11 +1,11 @@
 <template>
   <view class="zk-login">
-    <view class="pushButton" v-if="returnButtom" @click="onBack">
-      <!-- <x-icon name="zk-arrows-left_black" size="16" :color="'#999999'"></x-icon> -->
+    <view class="pushButton" v-if="returnButtom" @click="$api.back()">
+      <x-icon name="uni-btn-icon" size="16" :color="'#999999'"></x-icon>
     </view>
     <view class="form-login">
       <view class="form-login_box">
-        <image class="form-login_img" src="http://www.szwft.me/img/logo.jpg" alt="" />
+        <image class="form-login_img" :src="logo" alt="" />
       </view>
     </view>
     <view class="head_yh">
@@ -50,13 +50,13 @@
 </template>
 
 <script>
-
+  import config from '@/service/api/config.api.js'
   export default {
 
     data () {
       return {
-        showPassword: true,
         widgetModel: {},
+        logo: null,
         viewModel: {},
         returnButtom: true,
         user: {
@@ -85,19 +85,14 @@
     },
     methods: {
       async  init () {
-        console.info('this.widget', this.widget.value)
+        this.logo = await config.logo()
         if (this.widget && this.widget.value) {
           this.widgetModel = this.widget.value
         }
       },
-      onBack () {
-        this.$api.back('login')
-      },
+
       initPosition () {
-        /**
-           * 使用 absolute 定位，并且设置 bottom 值进行定位。软键盘弹出时，底部会因为窗口变化而被顶上来。
-           * 反向使用 top 进行定位，可以避免此问题。
-           */
+        // 软键盘
         this.positionTop = this.$base.getSystemInfoSync().windowHeight - 100
       },
       async bindLogin () {

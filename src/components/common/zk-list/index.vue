@@ -34,7 +34,7 @@
     </view>
     <view class="temporarily_box" v-if="allDataList.length===0" :style="'height:'+screen.height+'px;'">
       <view class="temporarily">
-        <img class="temporarily_img" src="http://www.szwft.me/img/nodata.png">
+        <img class="temporarily_img" src="http://ui.5ug.com/static/static/nodata.png">
       </view>
     </view>
   </view>
