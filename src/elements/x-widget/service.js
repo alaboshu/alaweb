@@ -5,6 +5,7 @@ export default {
   histModel () {
     var historys = Vue.prototype.$api.vuexLocalGet('historys_record_links')
     var pageView = Vue.prototype.$base.fullPath()
+    console.info('pageView', pageView)
     var pageIndex = pageView.indexOf('/pages')
     var pageLast = pageView.lenght
     var hisRoute = pageView.substr(pageIndex, pageLast)
