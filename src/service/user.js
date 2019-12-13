@@ -1,7 +1,7 @@
 // 接口说明
 // isLogin() 判断是否登录
-// id()
-// userName()
+// id() 获取已登录用户id
+// userName() 获取用户名称
 // loginUser()
 // toLogin()
 // checkLogin()
