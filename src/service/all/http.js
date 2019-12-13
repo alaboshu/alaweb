@@ -3,6 +3,7 @@ import api from '@/service/api'
 import user from '@/service/user'
 import globalConfig from '@/service/config'
 import axios from 'axios'
+import axiosWx from 'wx-axios-promise'
 
 export default {
   async get (apiUrl, data) {
@@ -40,6 +41,9 @@ export default {
     } catch (err) {
       return ''
     }
+  },
+  axiosCore () {
+    return axios
   },
   getAxios (apiUrl) {
     axios.interceptors.request.use((config) => {

@@ -12,6 +12,9 @@ module.exports = {
       port: '2000',
       disableHostCheck: true
     },
+    resolve: {
+      alias: {}
+    },
     plugins: [
       new webpack.DefinePlugin({
         'process.env': {
