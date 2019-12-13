@@ -217,7 +217,7 @@ export default {
     api.to('/user/login')
   },
   loginTo () {
-    var userIndex = '/pages/user/index'
+    var userIndex = '/pages/tabbar/user'
     var isApp = true
     if (this.isLogin()) {
       api.toastWarn('已成功登录')
@@ -236,7 +236,7 @@ export default {
       var usercode = option.usercode
       if (!api.isEmpty(usercode)) {
         // url 包含推荐码时跳转
-        api.to('/pages/user/reg')
+        api.to('/user/reg')
       }
       uni.showModal({
         title: '未登录',

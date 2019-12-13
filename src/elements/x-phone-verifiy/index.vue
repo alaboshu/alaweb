@@ -28,19 +28,20 @@
     },
     methods: {
       init () {
-       
+
       },
 
       async   verification () {
         if (this.$api.client() === 'AppPlus') {
-          // this.phone = this.$store.state.phoneVerification
           this.phone = this.$api.vuexGet('phoneVerification')
         } else {
-          this.config.list.forEach((element) => {
-            if (element.name === '手机号') {
-              this.phone = this.formModel[element.model]
-            }
-          })
+          if (this.config && this.config.list) {
+            this.config.list.forEach((element) => {
+              if (element.name === '手机号') {
+                this.phone = this.formModel[element.model]
+              }
+            })
+          }
         }
         var myreg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/
         if (myreg.test(this.phone)) {

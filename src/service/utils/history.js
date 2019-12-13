@@ -15,6 +15,11 @@ export default {
   backUrl () {
     var historys = api.vuexLocalGet('browse_historys')
     var url = '/pages/tabbar/index'
+    var currentUrl = historys[0]
+    // 登录页面后退
+    if (currentUrl.indexOf('user_login') > -1) {
+      url = '/pages/tabbar/index'
+    }
     if (historys && historys.length > 1) {
       url = historys[1]
     }

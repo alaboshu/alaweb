@@ -36,7 +36,6 @@
     },
     methods: {
       init () {
-        console.info('this.vew', this.widget)
         if (this.widget && this.widget.value) {
           this.swiperModel = this.widget.value.swiperForm
         }
