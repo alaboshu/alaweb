@@ -22,7 +22,15 @@ export default {
   },
   back () {
     var url = this.backUrl()
-    this.to(url)
+    if (url.indexOf('/pages/tabbar') > -1) {
+      uni.switchTab({
+        url: url
+      })
+    } else {
+      uni.navigateTo({
+        url: url
+      })
+    }
   },
   // 历史记录
   add (url) {
