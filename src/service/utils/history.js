@@ -70,32 +70,16 @@ export default {
   // 历史记录，保留5条
   add (url) {
     var historys = api.vuexLocalGet('browse_historys')
-    console.info('add historys', historys, url)
     if (!historys) {
       historys = []
-      historys[0] = url
-      console.info('url asl', url)
-      api.vuexLocalSet('browse_historys', historys)
     } else {
-      var isExist = false
-      for (var i = 0; i < historys.length; i++) {
-        var element = historys[i]
-        if (element === url) {
-          isExist = true
-          break
-        }
-      }
-      if (isExist) {
-        historys = historys.filter(r => r === url)
-      }
-      if (!isExist) {
-        historys.unshift(url)
-        if (historys.length > 10) {
-          historys.pop()
-        }
-      }
-      api.vuexLocalSet('browse_historys', historys)
+      historys = historys.filter(r => r !== url)
     }
+    historys.unshift(url)
+    if (historys.length > 10) {
+      historys.pop()
+    }
+    api.vuexLocalSet('browse_historys', historys)
   },
   getCurrentPath (toPages) {
     var url

@@ -173,19 +173,17 @@ export default {
     return store.state[name]
   },
   vuexLocalGet (name) {
-    if (!store.state[name]) {
-      return store.state[name]
+    var data = this.vuexGet(name)
+    if (data) {
+      return data
     } else {
-      if (!store.state[name]) {
-        this.vuexSet(name, this.localGet(name))
-        return this.localGet(name)
-      } else {
-        return null
-      }
+      data = this.localGet(name)
+      this.vuexSet(name, data)
+      return data
     }
   },
   vuexLocalSet (name, value) {
-    store[name] = value
+    this.vuexSet(name, value)
     local.set(name, value)
   },
   // 添加日志
