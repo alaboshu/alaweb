@@ -1,7 +1,6 @@
 import theme from '@/service/all/theme'
 import http from '@/service/all/http'
 import history from '@/service/utils/history'
-import httpWx from '@/service/all/http.wx'
 import local from '@/service/utils/local'
 import loading from '@/service/utils/loading'
 import toast from '@/service/utils/toast'
@@ -47,16 +46,10 @@ export default {
   },
   // http get
   async httpGet (apiUrl, data) {
-    if (this.client() === 'WeChatLite') {
-      return httpWx.get(apiUrl, data)
-    }
     return http.get(apiUrl, data)
   },
   //   http请求,Post方法 :增
   async httpPost (apiUrl, data) {
-    if (this.client() === 'WeChatLite') {
-      return httpWx.post(apiUrl, data)
-    }
     return http.post(apiUrl, data)
   },
   //   http请求,Put方法：改
@@ -65,9 +58,6 @@ export default {
   },
   //  http请求,delete方法：删
   async httpDelete (apiUrl, data) {
-    if (this.client() === 'WeChatLite') {
-      return httpWx.delete(apiUrl, data)
-    }
     return http.delete(apiUrl, data)
   },
 

@@ -7,15 +7,17 @@ import axiosWx from 'wx-axios-promise'
 
 export default {
   async get (apiUrl, data) {
+    var axiosApi = this.axiosCore()
     this.getAxios(apiUrl)
-    var response = await axios.get(globalConfig.apiBaseUrl + apiUrl, {
+    var response = await axiosApi.get(globalConfig.apiBaseUrl + apiUrl, {
       params: data
     })
     return response.data
   },
   async post (apiUrl, data) {
+    var axiosApi = this.axiosCore()
     this.getAxios(apiUrl)
-    var response = await axios.post(globalConfig.apiBaseUrl + apiUrl, data)
+    var response = await axiosApi.post(globalConfig.apiBaseUrl + apiUrl, data)
     return response.data
   },
   //  Put方法：改
@@ -24,8 +26,9 @@ export default {
     return response
   },
   async delete (apiUrl, data) {
+    var axiosApi = this.axiosCore()
     var para = this.parseParams(data)
-    var response = await axios.delete(globalConfig.apiBaseUrl + apiUrl + '?' + para)
+    var response = await axiosApi.delete(globalConfig.apiBaseUrl + apiUrl + '?' + para)
     return response.data
   },
   parseParams (data) {
@@ -43,6 +46,9 @@ export default {
     }
   },
   axiosCore () {
+    if (api.client() === 'WeChatLite' || api.client() === 'WeChat') {
+      return axiosWx()
+    }
     return axios
   },
   getAxios (apiUrl) {
