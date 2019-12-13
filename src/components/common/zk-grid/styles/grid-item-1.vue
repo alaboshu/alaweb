@@ -41,7 +41,7 @@
             this.gridLength = Math.ceil(this.gridList.length / 2)
             this.isScroll = true
           } else {
-            this.gridLength = 5
+            this.gridLength = this.gridModel.gridCount
             this.isScroll = false
           }
         }
