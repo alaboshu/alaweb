@@ -8,10 +8,10 @@
     </view>
     <view class="right">
       <view class="iconList" @click="$api.to('/order/cart')">
-        <x-icon name="zk-cart-1" size="20" color="#ffffff"></x-icon>
+        <x-icon name="icon-cart" size="20" color="#ffffff"></x-icon>
       </view>
       <view class="iconList" @click="$api.to('/user/qrcode')">
-        <x-icon name="zk-qrcode" size="20" color="#ffffff"></x-icon>
+        <x-icon name="icon-qrcode" size="20" color="#ffffff"></x-icon>
       </view>
     </view>
   </view>

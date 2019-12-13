@@ -18,12 +18,12 @@
       <view class="user-active-seting">
         <view class="user-seting">
           <view @click="$api.to('/user/set')">
-            <x-icon name="icon-zk-renzheng" class="setIng" color="#ffffff" :size="18"></x-icon>
+            <x-icon name="icon-security" class="setIng" color="#ffffff" :size="18"></x-icon>
           </view>
         </view>
         <view class="user-seting" @click="$api.to('/pages/index?path=user_info')">
           <view @click="$api.to('/pages/index?path=user_info')">
-            <x-icon name="icon-zk-setting" color="#ffffff" :size="18"></x-icon>
+            <x-icon name="icon-setting" color="#ffffff" :size="18"></x-icon>
           </view>
         </view>
       </view>

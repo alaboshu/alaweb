@@ -27,13 +27,13 @@
     </div>
     <div class="bar-item" @click="favorite()">
       <view class="item-icon">
-        <x-icon :size="18" name="icon-zk-favorite" :color="'#606266'" :xClass="iconActive===true?'themecolor':''"></x-icon>
+        <x-icon :size="18" name="icon-charity" :color="'#606266'" :xClass="iconActive===true?'themecolor':''"></x-icon>
       </view>
       <view class="item-title " :class="{'themecolor':iconActive}">收藏</view>
     </div>
-    <div class="bar-item" @click="$api.to('/pages/index?path=order_cart')" v-if="isShowCart">
+    <div class="bar-item" @click="$api.to('/order/cart')" v-if="isShowCart">
       <view class="item-icon">
-        <x-icon :size="18" name="icon-zk-carts" :color="'#606266'"></x-icon>
+        <x-icon :size="18" name="icon-ui-cartok" :color="'#606266'"></x-icon>
       </view>
       <view class="item-title">购物车</view>
     </div>
