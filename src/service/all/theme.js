@@ -18,7 +18,18 @@ export default {
     pageInfo = this.filerPageInfo(pageInfo)
     return pageInfo
   },
-
+  // 模块信息
+  async widget (widget) {
+    var parameter = {
+      apiUrl: '',
+      value: null
+    }
+    if (widget !== null && widget !== undefined) {
+      parameter.apiUrl = widget.apiUrl
+      parameter.value = widget.value
+    }
+    return parameter
+  },
   // 过滤页面信息
   filerPageInfo (pageInfo) {
     if (pageInfo) {
@@ -35,19 +46,6 @@ export default {
       }
       return pageInfo
     }
-  },
-
-  // 模块信息
-  async widget (widget) {
-    var parameter = {
-      apiUrl: '',
-      value: null
-    }
-    if (widget !== null && widget !== undefined) {
-      parameter.apiUrl = widget.apiUrl
-      parameter.value = widget.value
-    }
-    return parameter
   },
   // 处理widgets
   filterWidgets (widgets) {

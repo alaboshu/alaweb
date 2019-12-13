@@ -4,10 +4,6 @@
     <zk-help :widget="widget" v-if="widget.componentPath === '/articles/zk-help'"></zk-help>
     <zk-marquee :widget="widget" v-if="widget.componentPath === '/articles/zk-marquee'"></zk-marquee>
     <zk-amount :widget="widget" v-if="widget.componentPath === '/assets/zk-amount'"></zk-amount>
-    <check :widget="widget" v-if="widget.componentPath === '/common/zk-auto-form/form-item/check'"></check>
-    <picker :widget="widget" v-if="widget.componentPath === '/common/zk-auto-form/form-item/picker'"></picker>
-    <radio :widget="widget" v-if="widget.componentPath === '/common/zk-auto-form/form-item/radio'"></radio>
-    <upload :widget="widget" v-if="widget.componentPath === '/common/zk-auto-form/form-item/upload'"></upload>
     <zk-auto-form :widget="widget" v-if="widget.componentPath === '/common/zk-auto-form'"></zk-auto-form>
     <zk-bank-list :widget="widget" v-if="widget.componentPath === '/common/zk-bank-list'"></zk-bank-list>
     <zk-cell :widget="widget" v-if="widget.componentPath === '/common/zk-cell'"></zk-cell>
@@ -19,8 +15,6 @@
     <zk-list :widget="widget" v-if="widget.componentPath === '/common/zk-list'"></zk-list>
     <zk-preview :widget="widget" v-if="widget.componentPath === '/common/zk-preview'"></zk-preview>
     <zk-swiper :widget="widget" v-if="widget.componentPath === '/common/zk-swiper'"></zk-swiper>
-    <search :widget="widget" v-if="widget.componentPath === '/common/zk-swiper/search'"></search>
-    <swiper-class :widget="widget" v-if="widget.componentPath === '/common/zk-swiper/swiper-class'"></swiper-class>
     <zk-tabbar :widget="widget" v-if="widget.componentPath === '/common/zk-tabbar'"></zk-tabbar>
     <zk-video :widget="widget" v-if="widget.componentPath === '/common/zk-video'"></zk-video>
     <zk-buy :widget="widget" v-if="widget.componentPath === '/order/zk-buy'"></zk-buy>
