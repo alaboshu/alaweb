@@ -27,7 +27,8 @@ export default {
   },
   back () {
     var url = this.backUrl()
-    if (url.indexOf('/pages/tabbar') > -1) {
+    var historys = api.vuexLocalGet('browse_historys')
+    if (url.indexOf('/pages/tabbar') > -1 || url === '/') {
       uni.switchTab({
         url: url
       })
@@ -36,6 +37,8 @@ export default {
         url: url
       })
     }
+    historys.splice(0, 1)
+    api.vuexLocalSet('browse_historys', historys)
   },
   // 历史记录
   add (url) {
