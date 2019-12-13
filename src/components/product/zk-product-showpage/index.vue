@@ -4,8 +4,8 @@
       <view v-if="ready&&showHeader">
         <div id="showHeader" :class="{'show_header':showheaderTop,'show_header_top':!showheaderTop}">
           <div class="show_header-return" @click="clickShowHeader()" v-if="isIosApp">
-            <x-icon v-show="!showheaderTop" name="icon-zk-return" :size="15" color="#fff"></x-icon>
-            <x-icon v-show="showheaderTop" name="icon-zk-return" :size="15" color="#000"></x-icon>
+            <x-icon v-show="!showheaderTop" name="icon-black" :size="15" color="#fff"></x-icon>
+            <x-icon v-show="showheaderTop" name="icon-black" :size="15" color="#000"></x-icon>
           </div>
           <ul v-show="showheaderTop">
             <li @tap="goTop(imgAge.showProduct)" :class="{'active':productShowHead===imgAge.showProduct}">商品</li>

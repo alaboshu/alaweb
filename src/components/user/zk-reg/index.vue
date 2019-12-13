@@ -57,7 +57,7 @@
     created () {
       if (this.$user.isLogin()) {
         uni.reLaunch({
-          url: '/pages/user/index'
+          url: '/'
         })
       }
     },

@@ -4,9 +4,9 @@
 </template>
 
 <script>
- 
+
   export default {
-    
+
     data () {
       return {
         widgetModel: ''
@@ -21,7 +21,7 @@
     methods: {
       async  init () {
         this.$api.localRemove('wechat_logincount')
-          this.widgetModel = await this.$api.themeWidget(this.widget)
+        this.widgetModel = await this.$api.themeWidget(this.widget)
         uni.showModal({
           title: '',
           content: '是否退出登录',
@@ -37,7 +37,7 @@
             }
             if (val.cancel) {
               uni.reLaunch({
-                url: '/pages/user/index'
+                url: '/'
               })
             }
           }

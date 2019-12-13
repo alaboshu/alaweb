@@ -1,7 +1,7 @@
 <template>
   <view class="zk-login">
-    <view class="pushButton" v-if="returnButtom" @click="$api.back()">
-      <x-icon name="uni-btn-icon" size="16" :color="'#999999'"></x-icon>
+    <view class="pushButton" @click="$api.back()">
+      <x-icon name="icon-black" size="16" :color="'#fff'"></x-icon>
     </view>
     <view class="form-login">
       <view class="form-login_box">
@@ -75,9 +75,7 @@
     },
     created () {
       if (this.$user.isLogin()) {
-        uni.reLaunch({
-          url: '/pages/user/index'
-        })
+        uni.switchTab({ url: '/' })
       }
     },
     mounted () {

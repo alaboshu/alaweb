@@ -92,7 +92,7 @@ export default {
       api.toastSuccess('注册成功')
       this.setUser(response.result)
       uni.hideLoading()
-      api.to('/pages/user/index')
+      api.to('/')
     } else {
       api.toastWarn(response.message)
     }
