@@ -1,6 +1,7 @@
 <template>
   <view class="add">
-    {{viewModel2}}
+    <span class="i-name icon-topsearch">icon-topsearch</span>
+    <x-icon name="icon-upgrad"></x-icon>
   </view>
 </template>
 <script>

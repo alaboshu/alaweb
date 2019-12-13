@@ -6,7 +6,7 @@ import user from '@/service/user.js'
 import base from '@/service/base.js'
 import crud from '@/service/crud.js'
 import weixin from '@/service/core/weixin'
-
+import '@/assets/style/iconfont/css/iconfount.css'
 // #ifdef H5
 import '@/assets/style/h5/index.scss'
 // #endif
