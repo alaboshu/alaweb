@@ -66,12 +66,14 @@
 
 <style lang="scss" scoped>
   .grid-item-1 {
-    min-height: 130px;
+    min-height: 60px;
     width: 100%;
-    padding: 10px;
     box-sizing: border-box;
+    padding: 5px 10px;
     .scroll-view {
       height: 100%;
+      background: #fff;
+      border-radius: 3px;
       .ul {
         display: flex;
         flex-wrap: wrap;
@@ -87,7 +89,7 @@
             border-radius: 50%;
           }
           .test {
-            color: #fff;
+            color: #333;
             height: 20px;
             line-height: 20px;
             font-size: 12px;

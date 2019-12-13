@@ -1,5 +1,6 @@
 .protlet-border {
   margin: 10px;
+  margin-bottom: 0;
   background: #fff;
   border-radius: 5px;
 
@@ -11,6 +12,11 @@
       -moz-border-radius: 5px 5px 5px 5px;
       -ms-border-radius: 5px 5px 5px 5px;
       -o-border-radius: 5px 5px 5px 5px;
+    }
+
+    .grid-item-1 {
+      padding: 3px 0;
+      border-top: 1px solid #e5e5e5;
     }
   }
 
