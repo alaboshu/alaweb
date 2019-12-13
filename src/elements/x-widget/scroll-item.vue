@@ -60,10 +60,10 @@
           })
         }
         this.async = true
-        service.histModel(this)
+        service.histModel()
       },
       scrollChange () {
-        service.scrollChange(this)
+        service.scrollChange()
       }
     }
   }
