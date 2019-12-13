@@ -1,9 +1,10 @@
+import Vue from 'vue'
 export default {
 
   // 记录十条页面跳转信息,只做数据记录
-  histModel (jsThis) {
-    var historys = jsThis.$api.vuexLocalGet('historys_record_links')
-    var pageView = jsThis.$base.fullPath()
+  histModel () {
+    var historys = Vue.prototype.$api.vuexLocalGet('historys_record_links')
+    var pageView = Vue.prototype.$base.fullPath()
     var pageIndex = pageView.indexOf('/pages')
     var pageLast = pageView.lenght
     var hisRoute = pageView.substr(pageIndex, pageLast)
@@ -25,13 +26,13 @@ export default {
       historys = []
       historys.push(hisRoute)
     }
-    jsThis.$api.vuexLocalSet('historys_record_links', historys)
+    Vue.prototype.$api.vuexLocalSet('historys_record_links', historys)
     addPath = true
   },
   // 下拉刷新，只在最后一个是列表时触发
-  scrollChange (jsThis) {
-    if (jsThis.$refs.scrollItem) {
-      var scrollItem = jsThis.$refs.scrollItem
+  scrollChange () {
+    if (Vue.prototype.$refs.scrollItem) {
+      var scrollItem = Vue.prototype.$refs.scrollItem
       if (scrollItem.$refs.widgetItem) {
         var swiperWidget = scrollItem.$refs.widgetItem[scrollItem.$refs.widgetItem.length - 1]
         if (swiperWidget.widget.name === 'zk-product-list') {
