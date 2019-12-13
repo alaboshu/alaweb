@@ -23,12 +23,11 @@ export default {
   // 完整路径
   fullPath () {
     var pages = getCurrentPages()
-    console.info('pages', pages, pages.route)
     var fullPath
     if (api.client() === 'WeChatLite') {
-      fullPath = 'http://localhost:2000/' + pages[0].route
+      fullPath = pages[0].route
     } else {
-      fullPath = location.href
+      fullPath = pages[0].$route.fullPath
     }
     return fullPath
   },
