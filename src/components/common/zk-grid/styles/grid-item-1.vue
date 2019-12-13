@@ -2,7 +2,7 @@
   <view class="grid-item-1" v-if="async">
     <scroll-view class="scroll-view" :style="'width:' + (this.$base.screenWidth() - 20) + 'px;'" :scroll-x="isScroll" @scroll="scrollChange">
       <view class="ul" :style="'width:' + gridWidth * gridLength + 'px;'">
-        <view class="list" :style="'width:' + gridWidth + 'px;'" v-for="(item, index) in gridList" :key="index">
+        <view class="list" :style="'width:' + gridWidth + 'px;'" v-for="(item, index) in gridList" :key="index" @click="$api.to(item.link.url)">
           <img :src="item.image" class="image" alt="" />
           <view class="test">{{ item.link.name }}</view>
         </view>
@@ -59,6 +59,9 @@
           this.flotLeft = Number(footLeft * 100) / 2 + '%'
         }
         // console.info('ev', ev.detail)
+      },
+      clickLink (item) {
+        console.info('item', item.link.url)
       }
     }
   }

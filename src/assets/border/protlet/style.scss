@@ -16,13 +16,18 @@
 
     .grid-item-1 {
       padding: 3px 0;
-      border-top: 1px solid #e5e5e5;
+    }
+
+    .zk-product {
+      padding: 0;
+      width: 100%;
     }
   }
 
   .border-heade {
     height: 30px;
     line-height: 30px;
+    border-bottom: 1px solid #e5e5e5;
 
     .border-header-title {
       font-size: 14px;

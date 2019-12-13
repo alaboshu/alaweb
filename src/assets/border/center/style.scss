@@ -34,15 +34,26 @@
 
 
 .center-border {
-  margin: 10px;
+  &.widget_border {
+    .border-header {
+      justify-content: center;
+
+      .border-header-title {
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+    }
+  }
 
   .border-heade {
     height: 30px;
+    line-height: 30px;
 
     .border-header-title {
       font-size: 16px;
       font-family: 'PingFang SC';
-      font-weight: 700;
+
       color: #202020;
     }
 
@@ -59,6 +70,9 @@
   }
 
   .border-body {
+    width: 100%;
+    box-sizing: border-box;
+
     .grid-item-2 {
       padding-top: 0;
       border-radius: 5px 5px 5px 5px;
@@ -67,14 +81,18 @@
       -ms-border-radius: 5px 5px 5px 5px;
       -o-border-radius: 5px 5px 5px 5px;
     }
+
+    .zk-product {
+      padding: 0 10px 10px 10px;
+    }
   }
 }
 
 @mixin widget_border($name, $color, $text-color) {
   .center-border__#{$name} {
     .border-header {
-      background: $color !important;
-      justify-content: center;
+      background: $color;
+      justify-content: center !important;
       border-radius: 3px 3px 0px 0;
       -webkit-border-radius: 3px 3px 0px 0;
       -moz-border-radius: 3px 3px 0px 0;

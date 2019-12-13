@@ -1,5 +1,5 @@
 <template>
-  <view style="padding: 10px 10px 0 10px;">
+  <view class="zk-product">
     <view class="common" v-for="(item,index) in viewModel" :key="index" @click="$api.to('/product/show?id='+item.id)">
       <view class="common-left">
         <view class="common-image">
@@ -40,4 +40,7 @@
 
 <style lang="scss" scope>
   @import "./single-list.scss";
+  .zk-product {
+    padding: 10px 10px 0 10px;
+  }
 </style>
