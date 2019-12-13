@@ -42,6 +42,7 @@
   .x-scroll-view {
     .scroll {
       width: 100%;
+      box-sizing: border-box;
     }
   }
 </style>

@@ -56,7 +56,6 @@
       border-left: 1px solid #f4f4f4;
       border-top: 1px solid #f4f4f4;
       width: 100%;
-      background: #ffffff;
       display: flex;
       flex-wrap: wrap;
       .list {

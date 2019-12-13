@@ -59,7 +59,8 @@ export default {
         if (!api.isEmpty(element.style.border)) {
           var styleBorder = JSON.parse(element.style.border)
           element.border = styleBorder
-          element.borderClass = 'widget_border ' + styleBorder.name + ' '
+          // element.borderClass = 'widget_border ' + styleBorder.name + ' '
+          element.borderClass = styleBorder.class
           if (!api.isEmpty(styleBorder.colorName)) {
             element.borderClass += styleBorder.colorName + ' '
           }
