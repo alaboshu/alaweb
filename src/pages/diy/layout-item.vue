@@ -4,8 +4,8 @@
     <template v-if="widget.status !== 'small'">
       <div v-if="widget.border&&widget.border.name!=''">
         <div class="border-header" v-if="widget.border">
-          <x-icon class="border-header-icon" v-if="widget.border.icon" :icon="widget.border" :size="14"></x-icon>
-          <view class="border-header-title" v-if="widget.border.title">{{widget.border.title}}</view>
+          <x-icon class="border-header-icon" v-if="widget.border.icon" :icon="widget.border.icon" :color="widget.border.fontColor" :size="14"></x-icon>
+          <view class="border-header-title" :style="'color:'+widget.border.fontColor+'!important;'" v-if="widget.border.title">{{widget.border.title}}</view>
           <view class="border-header-desc" v-if="widget.border.intro">{{widget.border.intro}}</view>
           <view class="border-header-tools"></view>
         </div>

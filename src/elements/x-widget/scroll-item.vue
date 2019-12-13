@@ -4,8 +4,8 @@
     <view v-for="(widget, index) in viewModel.widgets" :key="index" :id="widget.widgetTheme" :style="widget.style && widget.style.css" :class="widget.borderClass">
       <widget-item ref='widgetItem' :widget="widget" v-if="!widget.border && !widget.layout" :model="viewModel" />
       <div class="border-header" v-if="widget.border">
-        <x-icon class="border-header-icon" v-if="widget.border.icon" :icon="widget.border" :color="widget.border.icon.color"></x-icon>
-        <view class="border-header-title" v-if="widget.border.title">{{ widget.border.title }}</view>
+        <x-icon class="border-header-icon" v-if="widget.border.icon" :icon="widget.border.icon" :color="widget.border.fontColor"></x-icon>
+        <view class="border-header-title" :style="'color:'+widget.border.fontColor+'!important;'" v-if="widget.border.title">{{ widget.border.title }}</view>
         <view class="border-header-desc" v-if="widget.border.intro">{{ widget.border.intro}}</view>
       </div>
       <view class="border-body" v-if="widget.border">

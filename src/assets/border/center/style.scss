@@ -1,25 +1,81 @@
+// .center-border {
+//   .border-header {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: row-reverse;
+//     padding: 5px 0px;
+
+//     .border-header-title {
+//       font-size: 18px;
+//       font-family: 'Source Han Sans CN';
+//       font-weight: 700;
+//       color: #202020;
+//       text-align: center;
+//       height: 40px;
+//       line-height: 40px;
+//     }
+//   }
+// }
+
+// @mixin widget_border($name, $color, $text-color) {
+//   .center-border__#{$name} {}
+// }
+
+// @each $name,
+// $colors in $component-colors {
+//   @include widget_border($name, map-get($colors, base), map-get($colors, font));
+// }
+
+// @each $name,
+// $colors in $theme-colors {
+//   @include widget_border($name, map-get($colors, base), map-get($colors, font));
+// }
+
+
 .center-border {
-  .border-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row-reverse;
-    padding: 5px 0px;
+  margin: 10px;
+
+  .border-heade {
+    height: 30px;
 
     .border-header-title {
-      font-size: 18px;
-      font-family: 'Source Han Sans CN';
+      font-size: 16px;
+      font-family: 'PingFang SC';
       font-weight: 700;
       color: #202020;
-      text-align: center;
-      height: 40px;
-      line-height: 40px;
+    }
+
+    .border-header-desc {
+      margin-top: 2px;
+      height: 13px;
+      line-height: 13px;
+      padding: 0px 5px;
+      color: #999999;
+      border-left: 1px solid #d9d8d8;
+      font-family: 'PingFang SC';
+      color: #666666;
     }
   }
 }
 
 @mixin widget_border($name, $color, $text-color) {
-  .center-border__#{$name} {}
+  .center-border__#{$name} {
+    .border-header {
+      background: $color !important;
+      justify-content: center;
+      border-radius: 5px 5px 0px 0;
+      -webkit-border-radius: 5px 5px 0px 0;
+      -moz-border-radius: 5px 5px 0px 0;
+      -ms-border-radius: 5px 5px 0px 0;
+      -o-border-radius: 5px 5px 0px 0;
+    }
+
+    .border-header-title {
+      font-size: 14px !important;
+      color: $text-color !important;
+    }
+  }
 }
 
 @each $name,
