@@ -20,8 +20,6 @@
     methods: {
       init () {
         this.$api.vuexLocalSet('test343434', this.viewModel)
-        this.viewModel2 = this.$api.vuexGet('test343434')
-        console.info('this.viewModel2', this.viewModel2)
       }
     }
   }

@@ -1,5 +1,13 @@
 import api from '@/service/api.js'
+import config from '@/service/config'
+
 export default {
+  async logo () {
+    var webSiteConfig = await this.get('webSiteConfig')
+    if (webSiteConfig) {
+      return config.apiBaseUrl + webSiteConfig.logo
+    }
+  },
   /// 获取配置信息
   async get (name) {
     var para = {

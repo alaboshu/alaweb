@@ -51,7 +51,7 @@ export default {
       return url
     } else {
       var showSplit
-      var toPagesUrl
+      var toPagesUrl = url
       if (url.indexOf('?') > -1) {
         toPagesUrl = url.split('?')[0]
         showSplit = url.split('?')[1]
