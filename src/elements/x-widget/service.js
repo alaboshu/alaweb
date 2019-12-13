@@ -1,4 +1,5 @@
 export default {
+
   // 下拉刷新，只在最后一个是列表时触发
   scrollChange (jsThis) {
     if (jsThis.$refs.scrollItem) {

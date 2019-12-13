@@ -1,8 +1,7 @@
-import user from '@/service/user'
 import api from '@/service/api'
 export default {
   to (url) {
-    url = this.getCurrentPath(url)
+    url = this.convertUrl(url)
     if (url.indexOf('/pages/tabbar') > -1) {
       uni.switchTab({
         url: url
@@ -12,100 +11,51 @@ export default {
         url: url
       })
     }
-    this.add(url)
   },
-  back (url) {
+  backUrl () {
     var historys = api.vuexLocalGet('browse_historys')
-    if (url === 'login' && user.isLogin() === false) {
-      uni.reLaunch({
-        url: '/pages/tabbar/index'
-      })
-      return false
-    }
+    var url = '/pages/tabbar/index'
     if (historys && historys.length > 1) {
-      if (url === '/pages/user?path=order_show') {
-        this.to('/pages/index?path=order_index')
-      } else if (url === '/pages/user?path=order_index') {
-        this.to('/pages/user/index', true)
-      } else if (url === 'login' && user.isLogin() === false) {
-        uni.navigateBack({
-          delta: 1
-        })
-      } else {
-        if (getCurrentPages().length === 1) {
-          uni.reLaunch({
-            url: '/pages/tabbar/index'
-          })
-        } else {
-          if (this.client() === 'AppPlus') {
-            uni.navigateBack({
-              delta: 1
-            })
-          } else {
-            if (
-              getCurrentPages()[getCurrentPages().length - 1] &&
-              getCurrentPages()[getCurrentPages().length - 1].option &&
-              getCurrentPages()[getCurrentPages().length - 1].option.path ===
-              'user_login'
-            ) {
-              var historys = this.vuexLocalGet('browse_historys')
-              var backUrl = historys[historys.length - 1]
-              uni.reLaunch({
-                url: backUrl
-              })
-            } else {
-              uni.navigateBack({
-                delta: 1
-              })
-            }
-          }
-        }
-      }
+      url = historys[1]
+    }
+    return url
+  },
+  back () {
+    var url = this.backUrl()
+    if (url.indexOf('/pages/tabbar') > -1) {
+      uni.switchTab({
+        url: url
+      })
     } else {
-      uni.reLaunch({
-        url: '/pages/tabbar/index'
+      uni.navigateTo({
+        url: url
       })
     }
   },
-  // 历史记录，保留5条
+  // 历史记录
   add (url) {
     var historys = api.vuexLocalGet('browse_historys')
-    console.info('add historys', historys, url)
     if (!historys) {
       historys = []
-      historys[0] = url
-      console.info('url asl', url)
-      api.vuexLocalSet('browse_historys', historys)
     } else {
-      var isExist = false
-      for (var i = 0; i < historys.length; i++) {
-        var element = historys[i]
-        if (element === url) {
-          isExist = true
-          break
-        }
-      }
-      if (isExist) {
-        historys = historys.filter(r => r === url)
-      }
-      if (!isExist) {
-        historys.unshift(url)
-        if (historys.length > 10) {
-          historys.pop()
-        }
-      }
-      api.vuexLocalSet('browse_historys', historys)
+      historys = historys.filter(r => r !== url)
     }
+    historys.unshift(url)
+    if (historys.length > 10) {
+      historys.pop()
+    }
+    api.vuexLocalSet('browse_historys', historys)
   },
-  getCurrentPath (toPages) {
-    var url
-    var toPagesUrl = toPages
-    var showSplit
-    if (toPages.indexOf('?') > -1) {
-      toPagesUrl = toPages.split('?')[0]
-      showSplit = toPages.split('?')[1]
-    }
-    if (toPagesUrl.indexOf('/tabbar') === -1) {
+  convertUrl (url) {
+    if (url.indexOf('/tabbar') > -1 || url.indexOf('/pages/index') > -1) {
+      return url
+    } else {
+      var showSplit
+      var toPagesUrl
+      if (url.indexOf('?') > -1) {
+        toPagesUrl = url.split('?')[0]
+        showSplit = url.split('?')[1]
+      }
       var linkSplit = toPagesUrl.split('/')
       url = '/pages/index?path='
       if (linkSplit.length === 2) {
@@ -118,9 +68,7 @@ export default {
       if (showSplit) {
         url += `&${showSplit}`
       }
-    } else {
-      url = toPages
+      return url
     }
-    return url
   }
 }
