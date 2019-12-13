@@ -14,8 +14,8 @@ export default {
   to (url) {
     history.to(url)
   },
-  back (url) {
-    history.back(url)
+  back () {
+    history.back()
   },
   // 当前租户
   tenant () {
