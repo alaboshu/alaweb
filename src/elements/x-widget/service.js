@@ -7,7 +7,11 @@ export default {
       if (scrollItem.$refs.widgetItem) {
         var swiperWidget = scrollItem.$refs.widgetItem[scrollItem.$refs.widgetItem.length - 1]
         if (swiperWidget.widget.name === 'zk-product-list') {
-          swiperWidget.$children[0].$children[0].scrollView()
+          if (jsThis.$api.client() === 'WeChatLite') {
+            swiperWidget.$children[0].scrollView()
+          } else {
+            swiperWidget.$children[0].$children[0].scrollView()
+          }
         }
       }
     }
