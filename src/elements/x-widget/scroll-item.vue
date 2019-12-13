@@ -54,6 +54,7 @@
     methods: {
       async init () {
         this.viewModel = await this.$api.themePage(this.option)
+        console.info('this.viewModel', this.viewModel)
         if (this.viewModel) {
           uni.setNavigationBarTitle({
             title: this.viewModel.name

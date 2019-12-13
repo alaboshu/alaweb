@@ -9,9 +9,13 @@ export default {
   async get (apiUrl, data) {
     var axiosApi = this.axiosCore()
     this.getAxios(apiUrl)
-    var response = await axiosApi.get(globalConfig.apiBaseUrl + apiUrl, {
+    var para = {
       params: data
-    })
+    }
+    if (api.client() === 'WeChatLite') {
+      para = data
+    }
+    var response = await axiosApi.get(globalConfig.apiBaseUrl + apiUrl, para)
     return response.data
   },
   async post (apiUrl, data) {
