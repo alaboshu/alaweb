@@ -14,10 +14,7 @@
       <div v-if="widget.layout === 'tab-layer'">
         <view class="uni-tab-bar">
           <scroll-view id="tab-bar" class="uni-swiper-tab" scroll-x :scroll-left="scrollLeft">
-            <view v-for="(columns, columnsIndex) in widget.columns" :key="columnsIndex" :class="[
-                'swiper-tab-list',
-                tabIndex == columnsIndex ? 'active' : ''
-              ]" :id="columnsIndex" :data-current="columnsIndex" @click="tabIndex = columnsIndex">{{ columns.option.name }}</view>
+            <view v-for="(columns, columnsIndex) in widget.columns" :key="columnsIndex" :class="[ 'swiper-tab-list',  tabIndex == columnsIndex ? 'active' : '']" :id="columnsIndex" :data-current="columnsIndex" @click="tabIndex = columnsIndex">{{ columns.option.name }}</view>
           </scroll-view>
           <swiper :current="tabIndex" duration="300">
             <swiper-item v-for="(tab, tabIndex) in widget.columns" :key="tabIndex">
@@ -51,12 +48,7 @@
     props: {
       option: {}
     },
-    onShow () { },
-    onLoad (option) {
-      // this.option = option
-    },
     async mounted () {
-      service.histModel(this)
       this.init()
     },
     methods: {
@@ -67,8 +59,8 @@
             title: this.viewModel.name
           })
         }
-        // console.log(this.viewModel.name, this.viewModel)
         this.async = true
+        service.histModel(this)
       },
       scrollChange () {
         service.scrollChange(this)
