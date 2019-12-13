@@ -1,5 +1,12 @@
 {
-  "pages": [
+  "pages": [{
+      "path": "pages/tabbar/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "enablePullDownRefresh": true,
+        "navigationStyle": "custom"
+      }
+    },
     // #ifdef H5
     {
       "path": "pages/diy/index",
@@ -8,14 +15,6 @@
       }
     },
     // #endif
-    {
-      "path": "pages/tabbar/index",
-      "style": {
-        "navigationBarTitleText": "首页",
-        "enablePullDownRefresh": true,
-        "navigationStyle": "custom"
-      }
-    },
 
     {
       "path": "pages/test1",
