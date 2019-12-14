@@ -164,8 +164,6 @@
         showDeliveryName: [],
         reduceMoneys: [], // 非人民币资产信息
         addressId: '00000000-0000-0000-0000-000000000000', // 地址选择，默认为空,
-
-        addressType: false,
         isFromCart: false, // 是否来自购物车
         isFromOrder: false, // 是否来自订货页面
         activityRecordId: 0,
@@ -209,11 +207,7 @@
           this.getPrice()
         }
       },
-      addAddress () {
-        this.$api.localSet('addressJump', '/pages/index?path=order_buy')
-        this.$api.to('/user/address/select')
-        this.popupVisible1 = true
-      },
+
       async init () {
         this.gardeName = this.$user.loginUser().gradeName
         var buyProductInfo = await this.$api.localGet('buyProductInfo')

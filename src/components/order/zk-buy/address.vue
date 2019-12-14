@@ -56,7 +56,7 @@
             confirmText: '确定',
             success: (res) => {
               if (res.confirm) {
-                this.addAddress()
+                //   this.addAddress()
               }
             }
           })
