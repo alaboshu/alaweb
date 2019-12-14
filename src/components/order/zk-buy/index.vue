@@ -1,6 +1,6 @@
 <template>
   <view>
-    <order-address></order-address>
+    <order-address v-model="addressId"></order-address>
     <view v-if="ready">
       <view v-for="(item,index) in viewModel.storeItems" :key="index">
         <x-cell :title="item.storeName"></x-cell>
@@ -47,7 +47,7 @@
           <!-- </checkbox-group> -->
           <!--  </div>
         </div> -->
-          <div class="grade" v-if="showAdmin&&checkedFC">会员优惠({{gardeName}})
+          <div class="grade" v-if="showAdmin&&checkedFC">会员优惠({{$user.loginUser().gradeName}})
             <span style="color:#c81432;">-￥{{storePrices[index].memberDiscountAmount}}</span>
           </div>
           <div class="grade">
@@ -153,7 +153,6 @@
         widgetModel: '',
         pageInfo: '',
         viewModel: null,
-        asyncFlag: false,
         popupVisible1: false,
         userMessages: [], // 卖家留言
         priceView: '', // 价格显示模型
@@ -172,7 +171,6 @@
         xbuy: true,
         disBtn: false,
         showBtn: true,
-        gardeName: '',
         totalPrice: [],
         expressType: [],
         reduceMoneysItem: [],
@@ -187,11 +185,6 @@
     },
     props: {
       widget: {}
-    },
-    computed: {
-    },
-    created () {
-      //  this.single()
     },
     mounted () {
       this.init()
@@ -209,7 +202,6 @@
       },
 
       async init () {
-        this.gardeName = this.$user.loginUser().gradeName
         var buyProductInfo = await this.$api.localGet('buyProductInfo')
         if (buyProductInfo === undefined) {
           this.$api.toastWarn('暂无商品，清先购买商品')
@@ -225,6 +217,7 @@
           productJson: JSON.stringify(buyProductInfo)
         }
         var initResponse = await this.$api.httpPost('api/order/buyinfo', buyInfoInput)
+        console.info('initResponse', initResponse)
         if (initResponse.status !== 1) {
           this.$api.toastWarn(initResponse.message)
           return false
@@ -254,7 +247,6 @@
           for (var k = 0; k < this.viewModel.allowMoneys.length; k++) {
             this.reduceMoneys[k] = true
           }
-          this.asyncFlag = true
           this.getPrice()
         }
       },
@@ -303,29 +295,7 @@
         }
         var priceResponse = await this.$api.httpPost('api/order/getprice', priceInput)
         if (priceResponse.status !== 1) {
-          // this.$api.toastWarn(priceResponse.message)
-          var _this = this
-          if (priceResponse.message === '您选择地址不存在') {
-            uni.showModal({
-              content: priceResponse.message,
-              showCancel: false,
-              success: function (res) {
-                uni.showModal({
-                  title: '提示',
-                  content: '请先添加地址',
-                  showCancel: true,
-                  confirmText: '确定',
-                  success: (res) => {
-                    if (res.confirm) {
-                      _this.addAddress()
-                    } else if (res.cancel) {
-                    }
-                  }
-                })
-              }
-            })
-          }
-
+          this.$api.toastWarn(priceResponse.message)
           this.showBtn = false
         } else {
           this.priceView = priceResponse.result

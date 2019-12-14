@@ -31,6 +31,10 @@
 </template>
 <script>
   export default {
+    model: {
+      prop: 'dataModel',
+      event: 'change'
+    },
     data () {
       return {
         async: false,
@@ -76,6 +80,14 @@
       setDefaultAddress (defaultAddress) {
         if (defaultAddress) {
           this.$api.localSet('default_address', defaultAddress)
+        }
+      }
+    },
+    watch: {
+      orderAddress: {
+        deep: true,
+        handler (val) {
+          this.$emit('change', this.orderAddress.id)
         }
       }
     }
