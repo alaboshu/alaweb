@@ -60,7 +60,6 @@
               }
             }
           })
-          this.addAddress()
         } else {
           this.setDefaultAddress()
         }
@@ -68,7 +67,7 @@
       addAddress () {
         this.$api.localSet('addressJump', '/pages/index?path=order_buy')
         this.$api.toastWarn('请先添加地址')
-        this.$api.to('/user/address/select')
+        this.$api.to('/user/address')
       },
       setDefaultAddress (defaultAddress) {
         if (defaultAddress) {
