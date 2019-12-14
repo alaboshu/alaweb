@@ -1,6 +1,6 @@
 <template>
-  <view>
-    <div v-if="!orderAddress" class="address-message" @click="$api.to('/pages/index?path=user_address_select')">
+  <view v-if="async">
+    <div v-if="orderAddress" class="address-message" @click="$api.to('user/address?type=select')">
       <div class="address_icon">
         <x-icon name="icon-zk-address" :size="20" :color="'#606266'"></x-icon>
       </div>
@@ -33,6 +33,7 @@
   export default {
     data () {
       return {
+        async: false,
         orderAddress: null
       }
     },
@@ -43,7 +44,7 @@
       async init () {
         var defaultAddress = this.$api.localGet('default_address')
         if (!defaultAddress) {
-          var response = this.$api.httpGet('/Api/UserAddress/Single')
+          var response = await this.$api.httpGet('/Api/UserAddress/Single')
           if (response.status === 1) {
             defaultAddress = response.result
           }
@@ -61,8 +62,11 @@
             }
           })
         } else {
-          this.setDefaultAddress()
+          this.orderAddress = defaultAddress
+          this.setDefaultAddress(defaultAddress)
         }
+        this.async = true
+        console.info('orderAddress', this.orderAddress)
       },
       addAddress () {
         this.$api.localSet('addressJump', '/pages/index?path=order_buy')
@@ -73,29 +77,72 @@
         if (defaultAddress) {
           this.$api.localSet('default_address', defaultAddress)
         }
-      },
-      async getDefaultAddress (jsThis) {
-        // var _this = this
-        if (await jsThis.$api.localGet('default_address') === undefined) {
-          let parameter = {
-            userId: jsThis.$user.loginUser().id
-          }
-          var Single = await jsThis.$api.httpGet('/Api/UserAddress/Single', parameter)
-          if (Single.status === 1) {
-            jsThis.$api.localSet('default_address', Single.result)
-            jsThis.addressMsg = Single.result
-            jsThis.addressId = Single.result.id
-            jsThis.addressType = true
-          } else {
-            jsThis.addressType = false
-          }
-        } else {
-          jsThis.addressType = true
-          jsThis.addressMsg = await jsThis.$api.localGet('default_address')
-          jsThis.addressId = await jsThis.$api.localGet('default_address').id
-        }
       }
     }
   }
   </script>
  
+<style scoped lang="scss">
+  @import "@/assets/style/variable.scss";
+
+  .address-message {
+    padding: 10px 40px;
+    display: flex;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    .address_icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 40px;
+      text-align: center;
+    }
+    .address_select {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 40px;
+      text-align: center;
+    }
+    .address_info {
+      flex: 1;
+      .info_hd {
+        display: flex;
+        .info_hd-name {
+          font-size: $gl-h5-size;
+        }
+        .info_hd-mobile {
+          font-size: $gl-h5-size;
+          flex: 1;
+          text-align: right;
+        }
+      }
+      .info_ft {
+        font-size: $gl-h6-size;
+        color: #575962;
+        word-break: break-all;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        display: -webkit-box !important;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+    }
+  }
+  .address-add {
+    padding: 8px 15px;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    .address_select {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 40px;
+      text-align: center;
+    }
+  }
+</style>
