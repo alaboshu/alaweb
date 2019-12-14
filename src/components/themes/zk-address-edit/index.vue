@@ -26,12 +26,6 @@
           <input class="phopes vercate" placeholder="请输入详细地址" v-model="addressInput.address">
         </div>
       </div>
-      <!-- <div class="item">
-        <div class="label">是否默认：</div>
-        <div class="address-content content-switch">
-          <switch @change="switch1Change" :checked="addressInput.isDefault" />
-        </div>
-      </div> -->
       <div class="item">
         <div class="label">是否默认：</div>
         <div class="address-content switch-box">
@@ -86,10 +80,6 @@
     },
     methods: {
       async  init () {
-        // if (this.$api.isEmpty(this.$api.localGet('addressData'))) {
-        //   var addressData = await widgetData.loadAllAddress()
-        //   this.$api.localSet('addressData', addressData)
-        // }
         this.pagesId = this.widget.route[0].id
         // this.pagesId = this.$route.query.id
         if (this.$api.isEmpty(await this.$api.localGet('edit_address')) === false) {
