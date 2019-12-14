@@ -1,32 +1,6 @@
 <template>
   <view>
-    <div v-if="addressType" class="address-message" @click="$api.to('/pages/index?path=user_address_select')">
-      <div class="address_icon">
-        <x-icon name="icon-zk-address" :size="20" :color="'#606266'"></x-icon>
-      </div>
-      <div class="address_info">
-        <div class="info_hd">
-          <div class="info_hd-name">
-            {{addressMsg.name}}
-          </div>
-          <div class="info_hd-mobile">
-            {{addressMsg.mobile}}
-          </div>
-        </div>
-        <div class="info_ft">
-          {{addressMsg.address}}
-        </div>
-      </div>
-      <div class="address_select">
-        <x-icon name="icon-zk-right" color="#dddddd"></x-icon>
-      </div>
-    </div>
-    <div class="address-add" v-if="!addressType" @click="addAddress()">
-      请先添加地址
-      <div class="address_select">
-        <x-icon name="icon-zk-right" color="#dddddd"></x-icon>
-      </div>
-    </div>
+    <order-address></order-address>
     <view v-if="ready">
       <view v-for="(item,index) in viewModel.storeItems" :key="index">
         <x-cell :title="item.storeName"></x-cell>
@@ -167,41 +141,13 @@
 </template>
 
 <script>
-
-  import apiBaseUrl from '@/service/config.js'
-
-  // import { setTimeout } from 'timers'
-  // import widgetData from '@/service/all/widget.js'
+  import orderAddress from './address.vue'
   export default {
-
+    components: {
+      orderAddress
+    },
     data () {
       return {
-        items: [{
-          value: 'USA',
-          name: '美国'
-        },
-        {
-          value: 'CHN',
-          name: '中国',
-          checked: 'true'
-        },
-        {
-          value: 'BRA',
-          name: '巴西'
-        },
-        {
-          value: 'JPN',
-          name: '日本'
-        },
-        {
-          value: 'ENG',
-          name: '英国'
-        },
-        {
-          value: 'FRA',
-          name: '法国'
-        }
-        ],
         currentss: -1,
         current: '-1',
         widgetModel: '',
@@ -218,8 +164,6 @@
         showDeliveryName: [],
         reduceMoneys: [], // 非人民币资产信息
         addressId: '00000000-0000-0000-0000-000000000000', // 地址选择，默认为空,
-        addressMsg: '',
-        addressType: false,
         isFromCart: false, // 是否来自购物车
         isFromOrder: false, // 是否来自订货页面
         activityRecordId: 0,
@@ -227,8 +171,6 @@
         textarbool: true,
         xbuy: true,
         disBtn: false,
-        // current: 0,
-        apiUrl: '',
         showBtn: true,
         gardeName: '',
         totalPrice: [],
@@ -249,7 +191,7 @@
     computed: {
     },
     created () {
-      this.single()
+      //  this.single()
     },
     mounted () {
       this.init()
@@ -265,13 +207,8 @@
           this.getPrice()
         }
       },
-      addAddress () {
-        this.$api.localSet('addressJump', '/pages/index?path=order_buy')
-        this.$api.to('/user/address/select')
-        this.popupVisible1 = true
-      },
+
       async init () {
-        this.apiUrl = apiBaseUrl.apiBaseUrl
         this.gardeName = this.$user.loginUser().gradeName
         var buyProductInfo = await this.$api.localGet('buyProductInfo')
         if (buyProductInfo === undefined) {
@@ -320,9 +257,6 @@
           this.asyncFlag = true
           this.getPrice()
         }
-        if (apiBaseUrl.themeId === '5d26e11a064c25053c9b3def') {
-          this.showAdmin = false
-        }
       },
       couponsClick (coupons) {
         if (this.radioChanges) {
@@ -347,40 +281,6 @@
           this.$set(this.expressType, [index], 0)
         }
         this.getPrice()
-      },
-      async single () {
-        var _this = this
-        if (await this.$api.localGet('default_address') === undefined) {
-          let parameter = {
-            userId: this.$user.loginUser().id
-          }
-          var Single = await this.$api.httpGet('/Api/UserAddress/Single', parameter)
-          if (Single.status === 1) {
-            this.$api.localSet('default_address', Single.result)
-            this.addressMsg = Single.result
-            this.addressId = Single.result.id
-            this.addressType = true
-          } else {
-            this.$api.toastWarn('请先添加地址')
-            uni.showModal({
-              title: '提示',
-              content: '请先添加地址',
-              showCancel: true,
-              confirmText: '确定',
-              success: (res) => {
-                if (res.confirm) {
-                  _this.addAddress()
-                } else if (res.cancel) {
-                }
-              }
-            })
-            this.addressType = false
-          }
-        } else {
-          this.addressType = true
-          this.addressMsg = await this.$api.localGet('default_address')
-          this.addressId = await this.$api.localGet('default_address').id
-        }
       },
       async getPrice () {
         var storeDelivery = []
@@ -529,393 +429,5 @@
 </script>
 
 <style scoped lang="scss">
-  @import "@/assets/style/variable.scss";
-  .uni-popup-bottom_popup {
-    z-index: 9999;
-    position: fixed;
-    background: #fff;
-  }
-  .show-popup {
-    height: 400px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    overflow: hidden;
-    // position: relative;
-  }
-  .discounts-pla {
-    height: 50px;
-  }
-  .discounts-title {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    border: 1px solid #e5e5e5;
-  }
-  .discounts-box {
-    height: 400px;
-    overflow-y: auto;
-
-    .uni-list-cell {
-      justify-content: space-between;
-      padding: 5px 10px;
-      .discounts-item {
-        .discounts-item-top {
-          font-size: 12px;
-        }
-        .discounts-item-bottom {
-          font-size: 12px;
-          color: $gl-text2;
-        }
-      }
-    }
-  }
-  .pages-order-buy {
-    width: 100%;
-  }
-  .brand {
-    color: $gl-brand;
-    font-size: 14px;
-  }
-  .brand_span {
-    margin-right: 5px;
-  }
-  .border-bottom:after {
-    content: " ";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 0.08333333rem;
-    border-bottom: 1px solid #e5e5e5;
-    color: #e5e5e5;
-    -webkit-transform-origin: 0 100%;
-    transform-origin: 0 100%;
-    -webkit-transform: scaleY(0.5);
-    transform: scaleY(0.5);
-  }
-  .storeNmae {
-    padding: 5px 10px;
-    color: #000;
-  }
-
-  .order-buy-content {
-    min-height: 50 * $gl-rem;
-    .content-item_box {
-      .content-item {
-        padding: 10px;
-        display: flex;
-        .content-item_left {
-          width: 85px;
-          height: 85px;
-          .content_img {
-            width: 100%;
-            height: 100%;
-          }
-        }
-        .content-item_right {
-          flex: 1;
-          padding-left: 10px;
-          position: relative;
-          .item_title {
-            font-size: 12px;
-            margin: 0px;
-            word-break: break-all;
-            text-overflow: ellipsis;
-            display: -webkit-box !important;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
-            overflow: hidden;
-          }
-          .item_specification {
-            font-size: 12px;
-            color: $gl-text3;
-            margin: 0px;
-          }
-          .item-price-box {
-            position: absolute;
-            left: 10px;
-            bottom: 0;
-            .item-price_now {
-              color: $gl-brand;
-              font-size: 14px;
-              font-weight: bold;
-              margin: 0px;
-            }
-            .item-price_old {
-              color: $gl-text3;
-              font-size: $gl-h6-size;
-              text-decoration: line-through;
-            }
-          }
-          .item_quantity {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            color: $gl-text1;
-            font-size: 13px;
-          }
-        }
-      }
-    }
-  }
-  .order-buy_modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 950;
-  }
-  .popup-radio {
-    // height: 70vh !important;
-    position: fixed;
-    z-index: 992;
-    background: #fff;
-  }
-  .order-buy-account {
-    // height: 40px;
-    position: relative;
-    .grade {
-      text-align: right;
-      padding: 5px 15px;
-      font-size: 13px;
-      display: flex;
-      justify-content: space-between;
-      span {
-        display: block;
-      }
-    }
-    .account-content {
-      font-size: 12px;
-      padding: 0px 15px;
-      span {
-        display: block;
-      }
-    }
-  }
-  .order-buy-account::before {
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    height: 1px;
-    border-top: 1px solid #e5e5e5;
-    color: #e5e5e5;
-    transform-origin: 0 0;
-    transform: scaleY(0.5);
-  }
-  .order-buy-bottom {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    border-top: 1px solid $gl-border3;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    background: $gl-light;
-    z-index: 990;
-    .buy-bottom_left {
-      flex: 1;
-      text-align: left;
-      height: 100%;
-      line-height: 50px;
-      color: $gl-black;
-      padding-left: 10px;
-      padding-right: 10px;
-      .brand {
-        font-size: 14px;
-      }
-    }
-    .buy-bottom_right {
-      width: 110px;
-      height: 100%;
-      .buy_button {
-        margin: 0px;
-        padding: 0px;
-        outline: none;
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        color: $gl-light;
-        background: $gl-brand;
-        font-size: 14px;
-        border: none;
-        text-align: center;
-      }
-      .disabled {
-        background: #555555;
-        color: #fff;
-      }
-    }
-  }
-  .order-buy-bottom_placeholder {
-    height: 50px;
-  }
-  .order-buy-bottom::before {
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    height: 0.08333333rem;
-    border-top: 1px solid #c0bfc4;
-    color: #c0bfc4;
-    transform-origin: 0 0;
-    transform: scaleY(0.5);
-  }
-  .gweli {
-    width: 100%;
-    height: 10px;
-    background-color: #f7f7f7;
-  }
-  .xiaoshi {
-    width: 100%;
-    height: 45px;
-    text-align: center;
-    line-height: 45px;
-    color: $gl-light;
-    background-color: $gl-brand;
-    position: absolute;
-    bottom: 0px;
-    z-index: 995;
-  }
-  .leave-word_box {
-    padding: 5px 10px;
-    height: 30px;
-    padding: 0 10px;
-    display: flex;
-    justify-items: center;
-    div {
-      width: 50px;
-      text-align: right;
-    }
-    .word_input {
-      flex: 1;
-      line-height: 23px;
-    }
-  }
-  .address-message {
-    padding: 10px 40px;
-    display: flex;
-    border-bottom: 1px solid #e5e5e5;
-    position: relative;
-    .address_icon {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
-      width: 40px;
-      text-align: center;
-    }
-    .address_select {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 0;
-      width: 40px;
-      text-align: center;
-    }
-    .address_info {
-      flex: 1;
-      .info_hd {
-        display: flex;
-        .info_hd-name {
-          font-size: $gl-h5-size;
-        }
-        .info_hd-mobile {
-          font-size: $gl-h5-size;
-          flex: 1;
-          text-align: right;
-        }
-      }
-      .info_ft {
-        font-size: $gl-h6-size;
-        color: #575962;
-        word-break: break-all;
-        -o-text-overflow: ellipsis;
-        text-overflow: ellipsis;
-        display: -webkit-box !important;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        overflow: hidden;
-      }
-    }
-  }
-  .address-add {
-    padding: 8px 15px;
-    border-bottom: 1px solid #e5e5e5;
-    position: relative;
-
-    .address_select {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 0;
-      width: 40px;
-      text-align: center;
-    }
-  }
-  .uni-mask {
-    position: fixed;
-    z-index: 998;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .min-popup {
-    position: fixed;
-    bottom: 0px;
-    z-index: 9999;
-    background-color: #ffffff;
-    box-shadow: 0 0 30upx rgba(0, 0, 0, 0.1);
-  }
-  // .min-x-buy {
-  // }
-  .uni-popup-middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 380upx;
-    height: 380upx;
-    border-radius: 10upx;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    justify-content: center;
-    padding: 30upx;
-  }
-
-  .uni-popup-top {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100upx;
-    line-height: 100upx;
-  }
-
-  .uni-popup-bottom {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
-  .uni-popup-bottom_popup {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
-  .discount {
-    padding: 11px 0px;
-  }
+  @import "./style.scss";
 </style>
