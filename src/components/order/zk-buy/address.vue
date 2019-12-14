@@ -40,13 +40,61 @@
       this.init()
     },
     methods: {
+      async init () {
+        var defaultAddress = this.$api.localGet('default_address')
+        if (!defaultAddress) {
+          var response = this.$api.httpGet('/Api/UserAddress/Single')
+          if (response.status === 1) {
+            defaultAddress = response.result
+          }
+        }
+        if (!defaultAddress) {
+          uni.showModal({
+            title: '提示',
+            content: '请先添加地址',
+            showCancel: true,
+            confirmText: '确定',
+            success: (res) => {
+              if (res.confirm) {
+                this.addAddress()
+              }
+            }
+          })
+          this.addAddress()
+        } else {
+          this.setDefaultAddress()
+        }
+      },
       addAddress () {
         this.$api.localSet('addressJump', '/pages/index?path=order_buy')
+        this.$api.toastWarn('请先添加地址')
         this.$api.to('/user/address/select')
-        this.popupVisible1 = true
       },
-      async init () {
-
+      setDefaultAddress (defaultAddress) {
+        if (defaultAddress) {
+          this.$api.localSet('default_address', defaultAddress)
+        }
+      },
+      async getDefaultAddress (jsThis) {
+        // var _this = this
+        if (await jsThis.$api.localGet('default_address') === undefined) {
+          let parameter = {
+            userId: jsThis.$user.loginUser().id
+          }
+          var Single = await jsThis.$api.httpGet('/Api/UserAddress/Single', parameter)
+          if (Single.status === 1) {
+            jsThis.$api.localSet('default_address', Single.result)
+            jsThis.addressMsg = Single.result
+            jsThis.addressId = Single.result.id
+            jsThis.addressType = true
+          } else {
+            jsThis.addressType = false
+          }
+        } else {
+          jsThis.addressType = true
+          jsThis.addressMsg = await jsThis.$api.localGet('default_address')
+          jsThis.addressId = await jsThis.$api.localGet('default_address').id
+        }
       }
     }
   }
