@@ -24,6 +24,13 @@
       "show": false
     },
     {
+      "infoType": "gradeName",
+      "type": "会员等级",
+      "value": "",
+      "icon": "",
+      "show": false
+    },
+    {
       "infoType": "mobile",
       "type": "手机号",
       "value": "",
@@ -40,6 +47,20 @@
     {
       "infoType": "email",
       "type": "邮箱",
+      "value": "",
+      "icon": "",
+      "show": false
+    },
+    {
+      "infoType": "parentUserName",
+      "type": "推荐人",
+      "value": "",
+      "icon": "",
+      "show": false
+    },
+    {
+      "infoType": "identityStatusName",
+      "type": "实名状态",
       "value": "",
       "icon": "",
       "show": false

@@ -1,0 +1,17 @@
+.x-upload-image {
+  width: 100%;
+
+  .x-upload-image-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f7f7f7;
+  }
+
+  .uni-input {
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

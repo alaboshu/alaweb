@@ -28,7 +28,7 @@ export default {
     return formConfig
   },
   toNoTabConfig (autoFormConfig) {
-    if (autoFormConfig) {
+    if (autoFormConfig && autoFormConfig.groups.length > 0) {
       autoFormConfig.columns = autoFormConfig.groups[0].items
     }
     autoFormConfig.groups = null
