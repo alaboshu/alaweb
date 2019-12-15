@@ -165,9 +165,9 @@
     methods: {
       async  init () {
         let parameter = {
-          id: this.widget.route.id,
-          userId: this.$user.id()
+          id: this.widget.route.id
         }
+        console.info('this.widget', this.widget)
         var orderShowResponse = await this.$api.httpGet('/Api/Order/GetOrder', parameter)
 
         this.gradeName = this.$user.loginUser().gradeName
@@ -216,7 +216,7 @@
         this.async = true
         for (var i = 0; i < this.viewModel.methods.length; i++) {
           if (this.viewModel.methods[i].type === 'Refund') {
-  
+
           }
         }
         if (apiBaseUrl.themeId === '5d26e11a064c25053c9b3def') {

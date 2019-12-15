@@ -95,7 +95,7 @@
     },
     methods: {
       async  init () {
-        var response = await this.$api.httpGet('/api/cart/getcart', { 'loginUserId': this.$user.id() })
+        var response = await this.$api.httpGet('/api/cart/getcart')
         if (response.status === 1) {
           this.widgetModel = response.result
           this.widgetModel.storeItems.forEach((store, storeIndex) => {

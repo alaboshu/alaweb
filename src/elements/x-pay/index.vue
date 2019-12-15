@@ -52,7 +52,7 @@
           <div class="pay-tool-link">
             <!-- <router-link class="link" to="/getP">忘记密码？</router-link> -->
           </div>
-          <div class="pay-tool-tips" v-if="false">
+          <div class="pay-tool-tips">
             <div v-if="$user.loginUser().isNeedSetPayPassword">当前支付密码为空,第一次输入的支付密码为支付密码
               <button>设置支付密码</button>
             </div>
@@ -175,7 +175,8 @@
           payId: this.payId,
           userId: this.$user.id()
         }
-        var response = await this.$api.httpGet('/api/pay/pay', paras) // 获取支付方式列表
+
+        var response = await this.$api.httpGet('/api/pay/GetList', paras) // 获取支付方式列表
         if (response.status === 1) {
           this.asyncFlag = true
           var pays = response.result.payTypeList // 所有的支付方式

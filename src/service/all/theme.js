@@ -10,7 +10,7 @@ export default {
     if (pageInfo !== undefined && pageInfo !== null && pageInfo.widgets) {
       for (var i = 0; i < pageInfo.widgets.length; i++) {
         var widgetItem = pageInfo.widgets[i]
-        widgetItem.route = option
+        widgetItem.route = option[0]
         widgets.push(widgetItem)
       }
       pageInfo.widgets = widgets
