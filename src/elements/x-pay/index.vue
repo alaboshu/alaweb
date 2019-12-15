@@ -1,6 +1,6 @@
 <template>
   <div class="h5-x-pay" element-path="h5/x-pay">
-    <view class="uni-mask" v-show="showPupop"></view>
+    <view class="uni-mask" v-show="showPupop" @click="showPupop = false,payClose()"></view>
     <view class="uni-popup uni-popup_buy uni-popup-bottom_popup" v-show="showPupop">
       <div class="pay-box">
         <div class="pay_title">确认付款</div>
@@ -18,29 +18,29 @@
               <p class="item_p">{{item.desc}}</p>
             </div>
             <div class="item-check">
-              <!-- <i class="van-icon check_style" :class="{'van-icon-checked':item.key===selectPayType,'van-icon-check':item.key!==selectPayType}"></i> -->
-              <x-icon name="icon-zk-success" xClass="i-color" v-if="item.key===selectPayType"></x-icon>
+              <x-icon name="icon-success" xClass="i-color" v-if="item.key===selectPayType"></x-icon>
               <div class="check-border" v-if="item.key!==selectPayType"></div>
             </div>
           </div>
           <div class="content-btn" @click="payClick()">确认支付{{amount}}元</div>
         </div>
         <div class="pay-close" @click="showPupop=false,payClose()">
-          <x-icon name="icon-zk-close" :size="30" color="#fff" style="margin-top:-4px;"></x-icon>
+          <x-icon name="icon-close" :size="30" color="#fff" style="margin-top:-4px;"></x-icon>
         </div>
       </div>
     </view>
-    <!-- <x-popup :show="showPupop" v-on:hidePopup="showPupop=false">
-
-    </x-popup>-->
+    <!-- 支付密码 -->
     <view class="uni-mask" v-show="showPayPassword"></view>
     <view class="uni-popup uni-popup_buy uni-popup-bottom_popup" v-show="showPayPassword">
       <div class="pay-tool">
         <div class="zlcl_color" @click="closePay()">
-          <x-icon name="icon-zk-cuowu" :size="25" :color="'#909399'" style="margin-top:-4px;"></x-icon>
+          <x-icon name="icon-cuowu" :size="25" :color="'#909399'" style="margin-top:-4px;"></x-icon>
         </div>
         <div class="pay-tool-title border-bottom">
-          <span class="icon icon-back" @click="backHandle"></span>
+          <span class="left-list">
+            <x-icon name="icon-back" size="25" color="#939BB7"></x-icon>
+          </span>
+          <!-- <span class="icon icon-back" @click="backHandle"></span> -->
           <strong class="trade-password">请输入支付密码</strong>
         </div>
         <div class="pay-tool-content">
@@ -57,8 +57,8 @@
               <button>设置支付密码</button>
             </div>
             <div v-else>
-              <a href="/pages/index?path=user_password_safe">修改支付密码</a>
-              <a href="/pages/index?path=user_paypassword_find">找回支付密码</a>
+              <text class="pay-test" @click="$api.to('/user/password/payedit')">修改支付密码</text>
+              <text class="pay-test" @click="$api.to('/user/password/payfind')">找回支付密码</text>
             </div>
           </div>
         </div>
@@ -68,16 +68,13 @@
             <li @click="keyUpHandle($event ,val)" v-for="val in keys" :key="val" class="keyboard_li">{{ val }}</li>
             <li class="del keyboard_li" @click="delHandle">
               <p class="icon-del" style="dispaly:block">
-                <x-icon name="icon-zk-cuowu" :size="26"></x-icon>
+                <x-icon name="icon-cuowu" :size="26"></x-icon>
               </p>
             </li>
           </ul>
         </div>
       </div>
     </view>
-    <!-- <x-popup :show="showPayPassword" v-on:hidePopup="showPayPassword=false">
-
-    </x-popup>-->
   </div>
 </template>
 
@@ -506,8 +503,9 @@
         color: #979797;
         text-align: center;
         font-size: 13px;
-        a {
+        .pay-test {
           margin: 0 3px;
+          text-decoration: underline;
         }
       }
       .pay-tool-link {
@@ -577,6 +575,18 @@
     height: 40px;
     border-bottom: 1px solid $gl-border1;
     line-height: 40px;
+    position: relative;
+    .left-list {
+      float: left;
+      margin-top: 10px;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      .x-icon {
+        height: 20px;
+      }
+    }
+
     .trade-password {
       height: 40px;
       line-height: 40px;
