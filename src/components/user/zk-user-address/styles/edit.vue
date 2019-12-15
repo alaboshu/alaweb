@@ -73,7 +73,8 @@
         this.addressInput = {
           name: user.name,
           mobile: user.mobile,
-          userId: user.id
+          userId: user.id,
+          isDefault: false
         }
         if (data) {
           this.pagesId = data.id
