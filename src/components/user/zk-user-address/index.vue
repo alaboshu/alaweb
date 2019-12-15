@@ -17,7 +17,7 @@
     },
     data () {
       return {
-        type: 'select',
+        type: 'list',
         isShowBtn: true
       }
     },

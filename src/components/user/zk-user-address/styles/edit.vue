@@ -1,5 +1,5 @@
 <template>
-  <view class="user-add-edit">
+  <view class="user-add-edit" v-if="async">
     <view class="input_boxs">
       <div class="item">
         <div class="label">姓名：</div>
@@ -62,11 +62,13 @@
           type: 1
         },
         pagesId: null,
-        formType: 'list' // 添加成功后的返回页面，默认为list, 
+        formType: 'list', // 添加成功后的返回页面，默认为list, 
+        async: false
       }
     },
     methods: {
       async init (data, formType) {
+        console.info('data, formType', data, formType)
         this.formType = formType
         var user = this.$user.loginUser()
         this.addressInput = {
@@ -76,8 +78,9 @@
         }
         if (data) {
           this.pagesId = data.id
-          styleApi.editAddress(this, data)
+          this.addressInput = await styleApi.editAddress(this, data)
         }
+        this.async = true
       },
       async sumbit () {
         this.addressInput.userId = this.$user.loginUser().id
