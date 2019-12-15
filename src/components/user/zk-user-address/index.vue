@@ -15,13 +15,24 @@
       addEdit,
       addSelect
     },
+    props: {
+      widget: {}
+    },
     data () {
       return {
         type: 'list',
         isShowBtn: true
       }
     },
+    mounted () {
+      this.init()
+    },
     methods: {
+      init () {
+        if (this.widget && this.widget.route && this.widget.route.type) {
+          this.type = this.widget.route.type
+        }
+      },
       changeClick ({ data, type, form }) {
         this.type = type
         this.$nextTick(() => {

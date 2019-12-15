@@ -1,7 +1,7 @@
 <template>
   <view>
     <view class="select-list" v-if="addList">
-      <view class="list" v-for="(item, index) in addList" :key="index">
+      <view class="list" v-for="(item, index) in addList" :key="index" @click="$api.back()">
         <view class="image" v-if="item.name">{{ item.name.substr(0, 1) }}</view>
         <view class="cont">
           <view class="cont-title">

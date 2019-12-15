@@ -68,7 +68,6 @@
     },
     methods: {
       async init (data, formType) {
-        console.info('data, formType', data, formType)
         this.formType = formType
         var user = this.$user.loginUser()
         this.addressInput = {
@@ -96,7 +95,7 @@
           } else {
             this.$api.toastSuccess('添加成功')
             setTimeout(() => {
-              this.$emit('change', this.formType)
+              this.$emit('change', { type: this.formType })
             }, 300)
           }
         } else {

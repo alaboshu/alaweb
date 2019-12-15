@@ -1,19 +1,25 @@
 <template>
   <view>
-    <view class="add-list" v-if="addList">
-      <view class="list" v-for="(item, index) in addList" :key="index">
-        <view class="image" v-if="item.name">{{item.name.substr(0, 1)}}</view>
-        <view class="cont">
-          <view class="cont-title">
-            <text>{{item.name}}</text>
-            <text class="phone">{{item.mobile}}</text>
+    <view class="add-list" v-if="addList && async">
+      <view v-for="(item, index) in addList" :key="index">
+        <scroll-view class="scroll-list" :style="'width:' + screenWidth + 'px;'" :show-scrollbar="false" :scroll-x="true">
+          <view class="list" :style="'width:' + (screenWidth+50) + 'px;'">
+            <view class="image" v-if="item.name">{{item.name.substr(0, 1)}}</view>
+            <view class="cont">
+              <view class="cont-title">
+                <text>{{item.name}}</text>
+                <text class="phone">{{item.mobile}}</text>
+              </view>
+              <view class="cont-foot">
+                <text class="select" v-if="item.isDefault">默认</text>
+                <text class="test">{{item.addressDescription}} {{item.address}}</text>
+              </view>
+            </view>
+            <view class="right" @click="editClick(item)">编辑</view>
+            <view class="delete" @click="deleteClick(item)">删除</view>
           </view>
-          <view class="cont-foot">
-            <text class="select" v-if="item.isDefault">默认</text>
-            <text class="test">{{item.addressDescription}} {{item.address}}</text>
-          </view>
-        </view>
-        <view class="right" @click="editClick(item)">编辑</view>
+        </scroll-view>
+
       </view>
     </view>
     <addButton></addButton>
@@ -28,7 +34,9 @@
     components: { addButton },
     data () {
       return {
-        addList: null
+        addList: null,
+        screenWidth: 0, // 屏幕宽度
+        async: false
       }
     },
     mounted () {
@@ -36,11 +44,33 @@
     },
     methods: {
       async init () {
+        // 计算屏幕宽度
+        this.screenWidth = this.$base.screenWidth()
+        console.info('screenWidth', this.screenWidth)
         this.addList = await styleApi.getAddress(this)
+        this.async = true
       },
       // 编辑地址
       editClick (item) {
         this.$emit('change', { data: item, type: 'edit', form: 'list' })
+      },
+      // 删除地址
+      deleteClick (item) {
+        uni.showModal({
+          content: '确认删除此地址？',
+          success: async (res) => {
+            if (res.confirm) {
+              var response = await this.$api.httpDelete('/api/userAddress/delete', { id: item.id })
+              if (response.status === 1) {
+                this.$api.toast('删除成功')
+              } else {
+                this.$api.toastWarn(response.message)
+              }
+              this.init()
+            } else if (res.cancel) {
+              console.log('用户点击取消')
+            }
+          } })
       }
     }
   }
@@ -50,9 +80,12 @@
 <style lang="scss" scoped>
   .add-list {
     background: #f2f2f2;
-    .list {
-      height: 55px;
+    .scroll-list {
       width: 100%;
+    }
+    .list {
+      position: relative;
+      height: 55px;
       box-sizing: border-box;
       padding: 10px;
       background: #fff;
@@ -110,6 +143,18 @@
         height: 20px;
         line-height: 20px;
         padding: 0px 5px;
+        margin-right: 50px;
+      }
+      .delete {
+        width: 50px;
+        height: 100%;
+        background: #f74c31;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fff;
+        text-align: center;
+        line-height: 55px;
       }
     }
   }
