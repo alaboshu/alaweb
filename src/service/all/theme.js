@@ -5,12 +5,13 @@ import user from '../user'
 export default {
   async page (option) {
     var path = base.path(option)
+    console.info('页面路径', option[0])
     var pageInfo = await this.getPageInfo(path)
     var widgets = []
     if (pageInfo !== undefined && pageInfo !== null && pageInfo.widgets) {
       for (var i = 0; i < pageInfo.widgets.length; i++) {
         var widgetItem = pageInfo.widgets[i]
-        widgetItem.route = option
+        widgetItem.route = option[0]
         widgets.push(widgetItem)
       }
       pageInfo.widgets = widgets
