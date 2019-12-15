@@ -9,9 +9,9 @@
         客服
       </view>
     </div>
-    <div @click="$api.to('/pages/tabbar/index')" class="bar-item" style="color:#606266;text-decoration:none" v-if="operation">
+    <div @click="$api.to('/pages/tabbar/index')" class="bar-item" style="color:#606266;text-decoration:none">
       <view class="item-icon">
-        <x-icon :size="18" :color="'#606266'" name="icon-zk-home"></x-icon>
+        <x-icon :size="18" :color="'#606266'" name="icon-home"></x-icon>
       </view>
       <view class="item-title">
         首页

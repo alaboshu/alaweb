@@ -70,7 +70,6 @@
           this.setDefaultAddress(defaultAddress)
         }
         this.async = true
-        console.info('orderAddress', this.orderAddress)
       },
       addAddress () {
         this.$api.localSet('addressJump', '/pages/index?path=order_buy')
