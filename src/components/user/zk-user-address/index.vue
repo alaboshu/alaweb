@@ -2,7 +2,7 @@
   <view>
     <addList v-if="type=== 'list'"></addList>
     <addEdit v-if="type === 'edit'" @change="changeClick"></addEdit>
-    <!-- <addSelect v-if="type === 'select'"></addSelect> -->
+    <addSelect v-if="type === 'select'"></addSelect>
     <addButton v-if="type !== 'edit'" @change="changeClick"></addButton>
   </view>
 </template>
@@ -20,7 +20,7 @@
     },
     data () {
       return {
-        type: 'list',
+        type: 'select',
         isShowBtn: true
       }
     },
