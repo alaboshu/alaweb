@@ -39,7 +39,6 @@
     methods: {
       async  init () {
         this.async = false
-        console.info('this.widget', this.widget)
         if (this.widget && this.widget.value) {
           this.viewModel = this.widget.value
         }

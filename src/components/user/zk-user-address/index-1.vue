@@ -32,7 +32,7 @@
     <view>
       <view class="address-btn_foot"></view>
       <view class="address-btn_boxs">
-        <view class="address-btn" @click="addAddress()" >
+        <view class="address-btn" @click="addAddress()">
           添加地址
         </view>
       </view>
@@ -68,7 +68,7 @@
     methods: {
       async  init (type) {
         let parameter = {
-          LoginUserId: this.$user.loginUser().id
+          userId: this.$user.loginUser().id
         }
         var response = await this.$api.httpGet('/api/useraddress/get', parameter)
         if (response.status === 1) {
@@ -108,7 +108,7 @@
       },
       async deleteAddress (id) {
         let parameter = {
-          loginUserId: this.$user.loginUser().id,
+          userId: this.$user.loginUser().id,
           id: id
         }
         var deleteMsg = await this.$api.httpDelete('/api/useraddress/delete', parameter)

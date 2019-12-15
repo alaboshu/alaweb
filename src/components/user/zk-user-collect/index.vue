@@ -28,7 +28,7 @@
     methods: {
       async init () {
         var para = {
-          loginUserId: this.$user.id()
+          userId: this.$user.id()
         }
         var response = await this.$api.httpGet('/Api/Favorite/List', para)
         if (response.status === 1) {

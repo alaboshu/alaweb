@@ -101,9 +101,6 @@
         <view class="sub_message-item">
           <span class="sub_span">总金额:</span>￥{{viewModel.totalAmount}}
         </view>
-        <view class="sub_message-item" v-if="!showMember&&FCTitle!==''">
-          <span class="sub_span" style="width:160px;">{{FCTitle}}</span>
-        </view>
         <view class="sub_message-item">
           <span class="sub_span">现金支付:</span>￥{{viewModel.paymentAmount}}
         </view>
@@ -152,7 +149,6 @@
         discounts: 0,
         tenementFool: true,
         showMember: true,
-        FCTitle: '',
         LeaveMessage: ''
       }
     },
@@ -167,7 +163,6 @@
         let parameter = {
           id: this.widget.route.id
         }
-        console.info('this.widget', this.widget)
         var orderShowResponse = await this.$api.httpGet('/Api/Order/GetOrder', parameter)
 
         this.gradeName = this.$user.loginUser().gradeName
@@ -222,7 +217,6 @@
         if (apiBaseUrl.themeId === '5d26e11a064c25053c9b3def') {
           this.showMember = false
         }
-        this.FCTitle = orderShowResponse.result.order.orderExtension.allowMoneys[0].title
         this.LeaveMessage = orderShowResponse.result.order.orderExtension.message.buyerMessage
       },
       changePassword: function () {
@@ -255,7 +249,12 @@
           userId: this.$user.id()
         }
         var buyInputResponse = await this.$api.httpGet('api/order/pay', para)
-        this.$refs.show_pay.$emit('payMethod', buyInputResponse.result.payId, buyInputResponse.result.payAmount, buyInputResponse.result.orderIds) // 唤起支付窗口
+        console.info('buyInputResponse', para, buyInputResponse)
+        if (buyInputResponse.status === 1) {
+          this.$refs.show_pay.$emit('payMethod', buyInputResponse.result.payId, buyInputResponse.result.payAmount, buyInputResponse.result.orderIds)
+        } else {
+          this.$api.toastWarn(buyInputResponse.message)
+        }
       },
       async getCancel (api) {
         var para = {
