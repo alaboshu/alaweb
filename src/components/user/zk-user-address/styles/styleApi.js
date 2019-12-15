@@ -27,13 +27,16 @@ export default {
       id: data.id
     }
     var resposne = await jsThis.$api.httpGet('/api/useraddress/single', para)
+    var obtainModel = {}
     if (resposne.status === 1) {
       var singleMsg = resposne.result
-      jsThis.addressInput.name = singleMsg.name
-      jsThis.addressInput.mobile = singleMsg.mobile
-      jsThis.addressInput.address = singleMsg.address
-      jsThis.addressInput.isDefault = singleMsg.isDefault
-      jsThis.addressInput.regionId = singleMsg.regionId
+      console.info('aaaaaaaaaaa', singleMsg)
+      obtainModel.name = singleMsg.name
+      obtainModel.mobile = singleMsg.mobile
+      obtainModel.address = singleMsg.address
+      obtainModel.isDefault = singleMsg.isDefault
+      obtainModel.regionId = singleMsg.regionId
     }
+    return obtainModel
   }
 }
