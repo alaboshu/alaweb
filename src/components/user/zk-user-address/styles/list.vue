@@ -1,26 +1,31 @@
 <template>
-  <view class="add-list" v-if="addList">
-    <view class="list" v-for="(item, index) in addList" :key="index">
-      <view class="image" v-if="item.name">{{item.name.substr(0, 1)}}</view>
-      <view class="cont">
-        <view class="cont-title">
-          <text>{{item.name}}</text>
-          <text class="phone">{{item.mobile}}</text>
+  <view>
+    <view class="add-list" v-if="addList">
+      <view class="list" v-for="(item, index) in addList" :key="index">
+        <view class="image" v-if="item.name">{{item.name.substr(0, 1)}}</view>
+        <view class="cont">
+          <view class="cont-title">
+            <text>{{item.name}}</text>
+            <text class="phone">{{item.mobile}}</text>
+          </view>
+          <view class="cont-foot">
+            <text class="select" v-if="item.isDefault">默认</text>
+            <text class="test">{{item.addressDescription}} {{item.address}}</text>
+          </view>
         </view>
-        <view class="cont-foot">
-          <text class="select" v-if="item.isDefault">默认</text>
-          <text class="test">{{item.addressDescription}} {{item.address}}</text>
-        </view>
+        <view class="right" @click="editClick(item)">编辑</view>
       </view>
-      <view class="right">编辑</view>
     </view>
+    <addButton></addButton>
   </view>
 </template>
 
 
 <script>
   import styleApi from './styleApi'
+  import addButton from './button'
   export default {
+    components: { addButton },
     data () {
       return {
         addList: null
@@ -32,7 +37,10 @@
     methods: {
       async init () {
         this.addList = await styleApi.getAddress(this)
-        console.info('resposne', this.addList)
+      },
+      // 编辑地址
+      editClick (item) {
+        this.$emit('change', { data: item, type: 'edit', form: 'list' })
       }
     }
   }

@@ -45,6 +45,7 @@
 
 
 <script>
+  import styleApi from './styleApi'
   export default {
     data () {
       return {
@@ -59,24 +60,28 @@
           userId: '',
           regionId: '',
           type: 1
-        }
+        },
+        pagesId: null,
+        formType: 'list' // 添加成功后的返回页面，默认为list, 
       }
     },
-    mounted () {
-      this.init()
-    },
     methods: {
-      init () {
+      async init (data, formType) {
+        this.formType = formType
         var user = this.$user.loginUser()
         this.addressInput = {
           name: user.name,
           mobile: user.mobile,
           userId: user.id
         }
+        if (data) {
+          this.pagesId = data.id
+          styleApi.editAddress(this, data)
+        }
       },
       async sumbit () {
         this.addressInput.userId = this.$user.loginUser().id
-        if (this.pagesId !== undefined) { this.addressInput.id = this.pagesId }
+        if (this.pagesId) { this.addressInput.id = this.pagesId }
         var response = await this.$api.httpPost('/Api/UserAddress/SaveOrderAddress', this.addressInput)
         if (response.status === 1) {
           this.$api.toastSuccess('添加成功')
@@ -88,7 +93,7 @@
           } else {
             this.$api.toastSuccess('添加成功')
             setTimeout(() => {
-              this.$emit('change', 'list')
+              this.$emit('change', this.formType)
             }, 300)
           }
         } else {
