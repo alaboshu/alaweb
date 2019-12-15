@@ -62,7 +62,7 @@
           type: 1
         },
         pagesId: null,
-        formType: 'list', // 添加成功后的返回页面，默认为list, 
+        formType: null, // 添加成功后的返回页面，默认为list, 
         async: false
       }
     },
@@ -95,7 +95,11 @@
           } else {
             this.$api.toastSuccess('添加成功')
             setTimeout(() => {
-              this.$emit('change', { type: this.formType })
+              if (this.formType) {
+                this.$emit('change', { type: this.formType })
+              } else {
+                this.$api.back()
+              }
             }, 300)
           }
         } else {

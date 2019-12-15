@@ -67,8 +67,6 @@
                 this.$api.toastWarn(response.message)
               }
               this.init()
-            } else if (res.cancel) {
-              console.log('用户点击取消')
             }
           } })
       }

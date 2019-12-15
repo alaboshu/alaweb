@@ -38,6 +38,9 @@
     methods: {
       async init () {
         this.addList = await styleApi.getAddress(this)
+        if (!this.addList) {
+          this.$emit('change', { type: 'edit' })
+        }
       },
       changeClick () {
         this.$emit('change', { type: 'edit', form: 'select' })

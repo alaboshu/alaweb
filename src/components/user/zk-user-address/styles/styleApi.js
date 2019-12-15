@@ -7,7 +7,7 @@ export default {
     var resposne = await jsThis.$api.httpGet('/api/useraddress/get', para)
     if (resposne.status === 1) {
       if (resposne.result.length === 0) {
-        this.$api.localRemove('default_address')
+        // this.$api.localRemove('default_address')
       }
       var data = this.sortAddress(resposne.result)
       return data
@@ -16,9 +16,11 @@ export default {
   },
   // 处理默认地址为第一位
   sortAddress (data) {
-    var dataIndex = data.findIndex(r => r.isDefault === true)
-    data.splice(0, 0, data.splice(dataIndex, 1)[0])
-    return data
+    if (data.length > 0) {
+      var dataIndex = data.findIndex(r => r.isDefault === true)
+      data.splice(0, 0, data.splice(dataIndex, 1)[0])
+      return data
+    }
   },
   // 编辑地址处理
   async editAddress (jsThis, data) {
