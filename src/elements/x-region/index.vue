@@ -1,7 +1,7 @@
 <template>
   <view class="x-region">
     <view class="x-region-form">
-      <view class="test">选择地址</view>
+      <view class="test">选择地址:</view>
       <view class="form-item" @click="$refs.cityPicker.show()">
         <text v-if="!widgetModel">请选择地址</text>
         <text v-else>{{widgetModel.label}}</text>
@@ -39,7 +39,6 @@
         this.viewModel = this.dataModel
       },
       onConfirm (e) {
-        console.info('e', e)
         this.widgetModel = e
         this.viewModel = e.cityCode
       }
@@ -60,8 +59,6 @@
 <style lang="scss" scoped>
   .x-region {
     width: 100%;
-    height: 100px;
-    padding: 0 10px;
     .x-region-form {
       width: 100%;
       height: 40px;
@@ -70,6 +67,7 @@
         width: 80px;
         height: 40px;
         line-height: 40px;
+        font-size: 13px;
       }
       .form-item {
         flex-grow: 2;

@@ -14,11 +14,12 @@
         </div>
       </div>
       <div class="item">
-        <div class="label">地区：</div>
+        <!-- <div class="label">地区：</div>
         <div class="address-content" @click="$refs.mpvueCityPicker.show()">
           <view class="address-edit_area" :class="{placeholder_area: pickerValue === '请选择地区'}">{{pickerValue}}</view>
           <x-icon name="icon-zk-right" size="12" color="#C8C8CD"></x-icon>
-        </div>
+        </div> -->
+        <x-region v-model="addressInput.regionId"></x-region>
       </div>
       <div class="item">
         <div class="label">详细地址：</div>
