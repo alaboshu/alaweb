@@ -2,11 +2,12 @@
   <view class="x-region">
     <view class="x-region-form">
       <view class="test">选择地址</view>
-      <view class="form-item">
-        <!-- <textarea value="为什么" class="cont"></textarea> -->
+      <view class="form-item" @click="$refs.cityPicker.show()">
+        <text v-if="!widgetModel">请选择地址</text>
+        <text v-else>{{widgetModel.label}}</text>
       </view>
     </view>
-    <cityPicker></cityPicker>
+    <cityPicker ref="cityPicker" v-model="viewModel" @onConfirm="onConfirm" :model="410702"></cityPicker>
   </view>
 </template>
 
@@ -16,6 +17,40 @@
   export default {
     components: {
       cityPicker
+    },
+    model: {
+      prop: 'dataModel',
+      event: 'change'
+    },
+    props: {
+      dataModel: {}
+    },
+    data () {
+      return {
+        viewModel: '410702',
+        widgetModel: null
+      }
+    },
+    mounted () {
+      this.init()
+    },
+    methods: {
+      init () {
+        this.viewModel = this.dataModel
+      },
+      onConfirm (e) {
+        console.info('e', e)
+        this.widgetModel = e
+        this.viewModel = e.cityCode
+      }
+    },
+    watch: {
+      viewModel: {
+        deep: true,
+        handler (val) {
+          this.$emit('change', this.viewModel)
+        }
+      }
     }
 
   }
@@ -34,15 +69,13 @@
       .test {
         width: 80px;
         height: 40px;
-        text-align: center;
         line-height: 40px;
       }
       .form-item {
         flex-grow: 2;
         height: 40px;
-        margin-left: 10px;
+        line-height: 40px;
         box-sizing: border-box;
-        background: red;
         .cont {
           width: 100%;
           height: 100%;

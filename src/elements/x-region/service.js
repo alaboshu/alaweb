@@ -16,11 +16,11 @@ export default {
     jsThis.areaDataList = addressModel.areaData[jsThis.pickerValueDefault[0]][jsThis.pickerValueDefault[1]]
     // 对 pickerValueDefault 做兼容处理
     this.handPickValueDefault(jsThis)
-    if (!jsThis.$api.isEmpty(jsThis.model)) {
+    if (!jsThis.$api.isEmpty(jsThis.dataModel)) {
       addressModel.areaData.forEach((one, oneIndex) => {
         one.forEach((two, twoIndex) => {
           two.forEach((three, threeIndex) => {
-            if (Number(three.value) === jsThis.model) {
+            if (Number(three.value) === Number(jsThis.dataModel)) {
               jsThis.cityDataList = addressModel.cityData[oneIndex]
               jsThis.areaDataList = addressModel.areaData[oneIndex][twoIndex]
               jsThis.pickerValue = [oneIndex, twoIndex, threeIndex]

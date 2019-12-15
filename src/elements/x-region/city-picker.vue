@@ -1,9 +1,6 @@
 <template>
   <div>
     <div @click="show" v-if="showMessage" class="city-picker-cell">
-      <div class="picker-title">
-        {{ title }}
-      </div>
       <div class="city-text">
         {{ cityText }}
       </div>
@@ -44,9 +41,12 @@
 <script>
   import service from './service'
   export default {
+    model: {
+      prop: 'dataModel'
+    },
     data () {
       return {
-        pickerValue: this.value,
+        pickerValue: this.dataModel,
         provinceDataList: [], // 全国省份列表
         cityDataList: [], // 当前省份中的城市列表
         areaDataList: [], // 当前城市的区域列表
@@ -59,21 +59,13 @@
       this.init()
     },
     props: {
-      /* 默认值 */
+      dataModel: {},
       pickerValueDefault: {
         type: Array,
         default () {
           return [0, 0, 0]
         }
-      },
-      title: {
-        // default: '区域选择'
-      },
-      value: {
-        default () {
-          return [0, 0, 0]
-        }
-      },
+      }, // 设置默认值
       /* 主题色 */
       themeColor: String,
       showMessage: {
@@ -89,10 +81,11 @@
         this.$emit('input', val)
       }
     },
-    mounted () { },
     methods: {
       // 初始化
       async init () {
+        this.pickerValue = this.pickerValueDefault
+        console.info('dataModel', this.dataModel)
         service.initAddress(this)
       },
       // 控制显示隐藏
