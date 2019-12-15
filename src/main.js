@@ -7,7 +7,6 @@ import base from '@/service/base.js'
 import crud from '@/service/crud.js'
 import weixin from '@/service/core/weixin'
 import '@/assets/style/iconfont/css/iconfount.css'
-
 // #ifdef H5
 import '@/assets/style/h5/index.scss'
 // #endif
@@ -44,6 +43,7 @@ import zkProductShowpage from '@/components/product/zk-product-showpage/index.vu
 import zkAddressEdit from '@/components/themes/zk-address-edit/index.vue'
 import zkHead from '@/components/themes/zk-head/index.vue'
 import zkSearch from '@/components/themes/zk-search/index.vue'
+import zkChangeAvator from '@/components/user/zk-change-avator/index.vue'
 import zkLogin from '@/components/user/zk-login/index.vue'
 import zkLogout from '@/components/user/zk-logout/index.vue'
 import zkQrcode from '@/components/user/zk-qrcode/index.vue'
@@ -72,6 +72,7 @@ import xPhoneVerifiy from '@/elements/x-phone-verifiy/index.vue'
 import xPicker from '@/elements/x-picker/index.vue'
 import xPopup from '@/elements/x-popup/index.vue'
 import xRadio from '@/elements/x-radio/index.vue'
+import xRegion from '@/elements/x-region/index.vue'
 import xScrollView from '@/elements/x-scroll-view/index.vue'
 import xSelect from '@/elements/x-select/index.vue'
 import xTimePicker from '@/elements/x-time-picker/index.vue'
@@ -105,6 +106,7 @@ Vue.component('zk-product-showpage', zkProductShowpage)
 Vue.component('zk-address-edit', zkAddressEdit)
 Vue.component('zk-head', zkHead)
 Vue.component('zk-search', zkSearch)
+Vue.component('zk-change-avator', zkChangeAvator)
 Vue.component('zk-login', zkLogin)
 Vue.component('zk-logout', zkLogout)
 Vue.component('zk-qrcode', zkQrcode)
@@ -133,6 +135,7 @@ Vue.component('x-phone-verifiy', xPhoneVerifiy)
 Vue.component('x-picker', xPicker)
 Vue.component('x-popup', xPopup)
 Vue.component('x-radio', xRadio)
+Vue.component('x-region', xRegion)
 Vue.component('x-scroll-view', xScrollView)
 Vue.component('x-select', xSelect)
 Vue.component('x-time-picker', xTimePicker)

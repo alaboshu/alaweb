@@ -1,7 +1,6 @@
 <template>
   <view class="add">
-    <span class="i-name icon-topsearch">icon-topsearch</span>
-    <x-icon name="icon-upgrad"></x-icon>
+    <x-region></x-region>
   </view>
 </template>
 <script>
