@@ -22,7 +22,7 @@
 
       </view>
     </view>
-    <addButton></addButton>
+    <addButton @change="$emit('change', { type: 'edit', form: 'list' })"></addButton>
   </view>
 </template>
 

@@ -38,15 +38,6 @@
           <input placeholder="请填写备注信息" v-model="userMessages[index]" class="word_input" />
         </view>
         <div class="order-buy-account " v-if="ready">
-          <!-- <div class="grade">自提
-          <div> -->
-          <!-- <checkbox-group> -->
-          <!-- <label @click="checkboxChange(index)">
-              <checkbox value="true" />
-            </label> -->
-          <!-- </checkbox-group> -->
-          <!--  </div>
-        </div> -->
           <div class="grade" v-if="showAdmin&&checkedFC">会员优惠({{$user.loginUser().gradeName}})
             <span style="color:#c81432;">-￥{{storePrices[index].memberDiscountAmount}}</span>
           </div>

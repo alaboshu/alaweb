@@ -1,9 +1,9 @@
 <template>
   <view v-if="async">
     <div v-if="orderAddress" class="address-message" @click="$api.to('/user/address?type=select')">
-      <div class="address_icon">
-        <x-icon name="icon-zk-address" :size="20" :color="'#606266'"></x-icon>
-      </div>
+      <view class="address_icon">
+        <x-icon name="icon-address" :size="20" :color="'#606266'"></x-icon>
+      </view>
       <div class="address_info">
         <div class="info_hd">
           <div class="info_hd-name">
@@ -14,11 +14,11 @@
           </div>
         </div>
         <div class="info_ft">
-          {{ orderAddress.address }}
+          {{orderAddress.addressDescription}} {{ orderAddress.address }}
         </div>
       </div>
       <div class="address_select">
-        <x-icon name="icon-zk-right" color="#dddddd"></x-icon>
+        <x-icon name="icon-jiantou" color="#dddddd"></x-icon>
       </div>
     </div>
     <div class="address-add" v-if="!orderAddress" @click="addAddress()">
@@ -107,6 +107,7 @@
       left: 0;
       width: 40px;
       text-align: center;
+      height: 40px;
     }
     .address_select {
       position: absolute;

@@ -46,7 +46,8 @@
         this.$emit('change', { type: 'edit', form: 'select' })
       },
       selectClick (item) {
-        console.info('item', item)
+        this.$api.localSet('shop_order_select_address', item)
+        this.$api.back()
       }
     }
   }
