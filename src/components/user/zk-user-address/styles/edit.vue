@@ -14,11 +14,6 @@
         </div>
       </div>
       <div class="item">
-        <!-- <div class="label">地区：</div>
-        <div class="address-content" @click="$refs.mpvueCityPicker.show()">
-          <view class="address-edit_area" :class="{placeholder_area: pickerValue === '请选择地区'}">{{pickerValue}}</view>
-          <x-icon name="icon-zk-right" size="12" color="#C8C8CD"></x-icon>
-        </div> -->
         <x-region v-model="addressInput.regionId"></x-region>
       </div>
       <div class="item">
@@ -37,7 +32,6 @@
       </div>
     </view>
     <div></div>
-    <x-city-picker :model="addressInput.regionId" :themeColor="themeColor" ref="mpvueCityPicker" :pickerValueDefault="cityPickerValueDefault" @onConfirm="onConfirm"></x-city-picker>
     <view class="address-edit_btn">
       <div class="edit_btn" @click="sumbit()">确定</div>
     </view>
@@ -107,10 +101,6 @@
         } else {
           this.$api.toastWarn(response.message)
         }
-      },
-      onConfirm (e) {
-        this.addressInput.regionId = e.cityCode
-        this.pickerValue = e.label
       }
     }
   }

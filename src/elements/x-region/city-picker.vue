@@ -85,7 +85,6 @@
       // 初始化
       async init () {
         this.pickerValue = this.pickerValueDefault
-        console.info('dataModel', this.dataModel)
         service.initAddress(this)
       },
       // 控制显示隐藏

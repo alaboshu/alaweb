@@ -1,5 +1,5 @@
 <template>
-  <view class="x-region">
+  <view class="x-region" v-if="async">
     <view class="x-region-form">
       <view class="test">选择地址:</view>
       <view class="form-item" @click="$refs.cityPicker.show()">
@@ -7,7 +7,7 @@
         <text v-else>{{widgetModel.label}}</text>
       </view>
     </view>
-    <cityPicker ref="cityPicker" v-model="viewModel" @onConfirm="onConfirm" :model="410702"></cityPicker>
+    <cityPicker ref="cityPicker" v-model="viewModel" @onConfirm="onConfirm"></cityPicker>
   </view>
 </template>
 
@@ -27,8 +27,9 @@
     },
     data () {
       return {
-        viewModel: '410702',
-        widgetModel: null
+        viewModel: '',
+        widgetModel: null,
+        async: false
       }
     },
     mounted () {
@@ -37,21 +38,14 @@
     methods: {
       init () {
         this.viewModel = this.dataModel
+        this.async = true
       },
       onConfirm (e) {
         this.widgetModel = e
         this.viewModel = e.cityCode
-      }
-    },
-    watch: {
-      viewModel: {
-        deep: true,
-        handler (val) {
-          this.$emit('change', this.viewModel)
-        }
+        this.$emit('change', this.viewModel)
       }
     }
-
   }
 </script>
 
