@@ -62,7 +62,18 @@
         }
       }
     },
+    mounted () {
+      this.init()
+    },
     methods: {
+      init () {
+        var user = this.$user.loginUser()
+        this.addressInput = {
+          name: user.name,
+          mobile: user.mobile,
+          userId: user.id
+        }
+      },
       async sumbit () {
         this.addressInput.userId = this.$user.loginUser().id
         if (this.pagesId !== undefined) { this.addressInput.id = this.pagesId }

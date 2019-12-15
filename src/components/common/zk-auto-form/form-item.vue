@@ -1,7 +1,10 @@
 <template>
   <div v-if="async">
     <div class="boxItem" v-if="column.type==='textbox'" x-verify="已验证">
-      <x-input v-model="viewModel" :label="column.name" :value="viewModel" :placeholder="column.placeHolder" :clearable="true"></x-input>
+      <x-input v-model="viewModel" :usercode="usercode" :widget="column" :label="column.name" :value="viewModel" :placeholder="column.placeHolder" :clearable="true"></x-input>
+    </div>
+    <div class="boxItem" v-if="column.type==='hidden' && false" x-verify="已验证">
+      <x-input v-model="viewModel" :widget="column" :label="column.name" :value="viewModel" :placeholder="column.placeHolder" :clearable="true"></x-input>
     </div>
     <div class="boxItem" v-if="column.type==='label'" x-verify="已验证">
       <x-form-label v-model="viewModel" :label="column.name"></x-form-label>
@@ -22,9 +25,11 @@
       <x-password v-model="viewModel" :label="column.name" :isNum="true" :placeHolder="column.placeHolder"></x-password>
     </div>
     <div class="boxItem" v-if="column.type==='phoneverifiy'" x-verify="已验证">
-      <x-phone-verifiy ref="phoneVerifiy" v-model="viewModel"></x-phone-verifiy>
+      <x-phone-verifiy v-model="viewModel" :label="column.name" ref="phoneVerifiy" :currentModel="currentModel" :column="column"></x-phone-verifiy>
     </div>
-
+    <div class="boxItem" v-if="column.type === 'image'" x-verify="已验证">
+      <x-upload-image v-model="viewModel" :label="column.name"></x-upload-image>
+    </div>
     <div class="boxItem" v-if="column.type==='json'">
       <x-city-picker v-model="viewModel" ref="cityPicker" title="cityPicker"></x-city-picker>
     </div>
@@ -77,9 +82,10 @@
     },
     props: {
       column: {},
-      widget: {},
+      currentModel: {}, // 当前输入的ViewModel，监听客户输入
       value: {},
-      dataModel: {}
+      dataModel: {},
+      usercode: {}
     },
     data () {
       return {

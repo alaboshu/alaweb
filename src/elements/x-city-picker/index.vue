@@ -87,11 +87,6 @@
     methods: {
       async init () {
         var addressInt = await widget.loadAllAddress()
-        // if (this.$api.isEmpty(this.$api.localGet('addressData'))) {
-        //   addressInt = await widget.loadAllAddress()
-        // } else {
-        //   addressInt = this.$api.localGet('addressData')
-        // }
         this.provinceData = JSON.parse(addressInt.province.message)
         this.cityData = JSON.parse(addressInt.city.message)
         this.areaData = JSON.parse(addressInt.area.message)
