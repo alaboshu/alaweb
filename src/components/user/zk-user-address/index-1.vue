@@ -74,7 +74,7 @@
         if (response.status === 1) {
           this.addressList = response.result
           if (this.addressList.length === 0) {
-            this.$api.localRemove('default_address')
+            this.$api.localRemove('shop_order_select_address')
           }
           this.isDefault = []
           for (var i = 0; i < this.addressList.length; i++) {

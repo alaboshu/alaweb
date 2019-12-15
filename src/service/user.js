@@ -114,12 +114,12 @@ export default {
             title: '加载中..'
           })
           api.localRemove(_this.userKey())
-          api.localRemove('default_address')
+          api.localRemove('shop_order_select_address')
           api.vuexSet('loginUser', null)
           // this_.$api.localRemove('wechat_openId')
           var itemOut = setTimeout(() => {
             api.localRemove(_this.userKey())
-            api.localRemove('default_address')
+            api.localRemove('shop_order_select_address')
             api.vuexSet('loginUser', null)
             uni.hideLoading()
             clearTimeout(itemOut)

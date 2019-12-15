@@ -7,7 +7,7 @@ export default {
     var resposne = await jsThis.$api.httpGet('/api/useraddress/get', para)
     if (resposne.status === 1) {
       if (resposne.result.length === 0) {
-        // this.$api.localRemove('default_address')
+        // this.$api.localRemove('shop_order_select_address')
       }
       var data = this.sortAddress(resposne.result)
       return data

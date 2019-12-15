@@ -46,7 +46,7 @@
     },
     methods: {
       async init () {
-        var defaultAddress = this.$api.localGet('default_address')
+        var defaultAddress = this.$api.localGet('shop_order_select_address')
         if (!defaultAddress) {
           var response = await this.$api.httpGet('/Api/UserAddress/Single')
           if (response.status === 1) {
@@ -72,13 +72,12 @@
         this.async = true
       },
       addAddress () {
-        this.$api.localSet('addressJump', '/pages/index?path=order_buy')
         this.$api.toastWarn('请先添加地址')
-        this.$api.to('/user/address')
+        this.$api.to('/user/address?type=select')
       },
       setDefaultAddress (defaultAddress) {
         if (defaultAddress) {
-          this.$api.localSet('default_address', defaultAddress)
+          this.$api.localSet('shop_order_select_address', defaultAddress)
         }
       }
     },
