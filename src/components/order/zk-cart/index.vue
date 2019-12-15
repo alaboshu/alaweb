@@ -48,7 +48,7 @@
       </div>
     </div>
     <div class="zk-cart-notdata" v-else :style="'height:'+noDataHeight+'px'">
-      <img class="temporarily_img" src="http://ui.5ug.com/static/static/nodata.png">
+      <img class="temporarily_img" src="http://ui.5ug.com/static/static/nodata.webp">
     </div>
     <view class="zk-Cart-foot" :class="{'changeBottom':changeBottom===true}">
       <view class="zk-Cart-foot-submit">

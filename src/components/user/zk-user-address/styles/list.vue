@@ -46,7 +46,6 @@
       async init () {
         // 计算屏幕宽度
         this.screenWidth = this.$base.screenWidth()
-        console.info('screenWidth', this.screenWidth)
         this.addList = await styleApi.getAddress(this)
         this.async = true
       },
@@ -62,6 +61,7 @@
             if (res.confirm) {
               var response = await this.$api.httpDelete('/api/userAddress/delete', { id: item.id })
               if (response.status === 1) {
+                this.$api.localRemove('shop_order_select_address')
                 this.$api.toast('删除成功')
               } else {
                 this.$api.toastWarn(response.message)
