@@ -2,7 +2,7 @@ export default {
   // 获取地址列表
   async getAddress (jsThis) {
     var para = {
-      loginUserId: jsThis.$user.id()
+      userId: jsThis.$user.id()
     }
     var resposne = await jsThis.$api.httpGet('/api/useraddress/get', para)
     if (resposne.status === 1) {

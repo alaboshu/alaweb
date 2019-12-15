@@ -87,7 +87,7 @@
         if (this.$api.isEmpty(this.pagesId) !== true) {
           let parament = {
             id: this.pagesId,
-            LoginUserId: this.$user.loginUser().id
+            userId: this.$user.loginUser().id
           }
           var singleAddress = await this.$api.httpGet('/api/useraddress/single', parament)
           if (singleAddress.status === 1) {
