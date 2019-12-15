@@ -320,7 +320,6 @@
             count: this.buyCount,
             userId: this.$user.loginUser().id
           }
-          console.info('参数', params, this.productView)
           var message = await this.$api.httpPost('/api/cart/addcart', params)
           if (message.status === 1) {
             this.$api.toastWarn('成功加入购物车')
