@@ -60,7 +60,9 @@
             title: this.viewModel.name
           })
         }
-        console.info(this.viewModel.name, this.viewModel)
+        if (process.env.NODE_ENV === 'development') {
+          console.info(this.viewModel.name, this.viewModel)
+        }
         this.async = true
         history.add(this.$base.fullPath())
       },
