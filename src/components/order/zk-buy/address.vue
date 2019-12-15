@@ -1,6 +1,6 @@
 <template>
   <view v-if="async">
-    <div v-if="orderAddress" class="address-message" @click="$api.to('user/address?type=select')">
+    <div v-if="orderAddress" class="address-message" @click="$api.to('/user/address?type=select')">
       <div class="address_icon">
         <x-icon name="icon-zk-address" :size="20" :color="'#606266'"></x-icon>
       </div>

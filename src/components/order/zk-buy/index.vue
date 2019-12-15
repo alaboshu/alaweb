@@ -217,7 +217,6 @@
           productJson: JSON.stringify(buyProductInfo)
         }
         var initResponse = await this.$api.httpPost('api/order/buyinfo', buyInfoInput)
-        console.info('initResponse', initResponse)
         if (initResponse.status !== 1) {
           this.$api.toastWarn(initResponse.message)
           return false
