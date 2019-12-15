@@ -122,7 +122,7 @@
           this.isIosApp = false
         }
         let par = {
-          id: this.widget.route[0].id,
+          id: this.widget.route.id,
           userId: this.$user.loginUser().id
         }
         var productShowReponse = await this.$api.httpGet('/api/product/show', par)

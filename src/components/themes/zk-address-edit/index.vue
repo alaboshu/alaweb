@@ -80,8 +80,7 @@
     },
     methods: {
       async  init () {
-        this.pagesId = this.widget.route[0].id
-        // this.pagesId = this.$route.query.id
+        this.pagesId = this.widget.route.id
         if (this.$api.isEmpty(await this.$api.localGet('edit_address')) === false) {
           this.$api.localRemove('edit_address')
         }

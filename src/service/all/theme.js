@@ -5,7 +5,6 @@ import user from '../user'
 export default {
   async page (option) {
     var path = base.path(option)
-    console.info('页面路径', option[0])
     var pageInfo = await this.getPageInfo(path)
     var widgets = []
     if (pageInfo !== undefined && pageInfo !== null && pageInfo.widgets) {
