@@ -1,10 +1,10 @@
 <template>
   <view class="zk-update-image">
-    <view class="zk-update-list" v-if="count == 1 && viewModel" @click="showImage=viewModel, isShowImage=true">
-      <img :src="$api.baseUrl() + viewModel" alt="" class="update_image">
+    <view v-if="count == 1 && viewModel" class="zk-update-list" @click="showImage=viewModel, isShowImage=true">
+      <img :src="$api.baseUrl() + viewModel" alt="" class="update_image" />
     </view>
-    <view v-else-if="count > 1 && viewModel" class="zk-update-list" @click="showImage=item, isShowImage=true" v-for="(item, index) in viewModel" :key="index">
-      <img :src="$api.baseUrl() + item" alt="" class="update_image">
+    <view v-show="count > 1 && viewModel" class="zk-update-list" @click="showImage=item, isShowImage=true" v-for="(item, index) in viewModel" :key="index">
+      <img :src="$api.baseUrl() + item" alt="" class="update_image" />
     </view>
     <view class="show-delete" v-if="isShowImage" @click.stop="isShowImage = false">
       <img :src="$api.baseUrl() + showImage" class="show-image" alt="" srcset="">
