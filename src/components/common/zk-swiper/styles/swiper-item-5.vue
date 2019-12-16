@@ -5,7 +5,7 @@
 <script>
   export default {
     mounted () {
-      console.info('为什么不显示啊')
+
     }
   }
 </script>

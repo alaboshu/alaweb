@@ -20,7 +20,7 @@
     },
     methods: {
       toProductShow (item) {
-        console.info('item', item)
+
       },
       // 下拉菜单事件
       scrollView () {
