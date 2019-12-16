@@ -6,10 +6,10 @@
     <view class="center">
       <view>全选</view>
       <view>
-        合计:<span class="price">￥0.00</span>
+        合计:<span class="price">￥{{money}}</span>
       </view>
     </view>
-    <view class="right">提交</view>
+    <view class="right" @click="save">提交</view>
   </view>
 </template>
 
@@ -17,13 +17,29 @@
   export default {
     data () {
       return {
-        isRadio: false
+        isRadio: false,
+        money: '0.00'
       }
     },
     methods: {
       radioClick () {
         this.isRadio = !this.isRadio
         this.$emit('change', this.isRadio)
+      },
+      computePrice (data) {
+        if (data.length > 0) {
+          var num = 0
+          data.forEach(element => {
+            num += element.price * element.buyCount
+          })
+          this.money = num.toFixed(2)
+        } else {
+          this.money = '0.00'
+        }
+      },
+      // 提交订单
+      save () {
+        this.$emit('save')
       }
     }
   }

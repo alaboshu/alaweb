@@ -22,6 +22,7 @@ export default {
     jsThis.$set(jsThis.productRadio[data.storeIndex], [data.productIndex], !productRadio)
     this.isStoreRadio(jsThis, data.storeIndex)
     this.isAllStoreRadio(jsThis)
+    this.radioProduct(jsThis)
   },
   // 购物车单个店铺选中
   storeClick (jsThis, index) {
@@ -32,6 +33,7 @@ export default {
     })
     jsThis.$set(jsThis.productStoreRadio, [index], !storeRadio)
     this.isAllStoreRadio(jsThis)
+    this.radioProduct(jsThis)
   },
   // 判断购物车，单个店铺内商品是否全部选中
   isStoreRadio (jsThis, storeIndex) {
@@ -48,6 +50,19 @@ export default {
     jsThis.productStoreRadio.forEach((store, storeIndex) => {
       this.storeClick(jsThis, storeIndex)
     })
+  },
+
+  // 存储选中商品
+  radioProduct (jsThis) {
+    var radioModel = []
+    jsThis.widgetModel.storeItems.forEach((store, storeIndex) => {
+      store.productSkuItems.forEach((product, productIndex) => {
+        if (jsThis.productRadio[storeIndex][productIndex]) {
+          radioModel.push(product)
+        }
+      })
+    })
+    jsThis.$refs.cartSumbit.computePrice(radioModel)
   },
 
   // 删除购物车商品
@@ -78,5 +93,36 @@ export default {
         }
       }
     })
+  },
+  // 提交订单
+  save (jsThis) {
+    var buyProductInfo = []
+    if (jsThis.widgetModel.storeItems.length > 0) {
+      jsThis.widgetModel.storeItems.forEach((store, storeIndex) => {
+        store.productSkuItems.forEach((product, productIndex) => {
+          if (jsThis.productRadio[storeIndex][productIndex]) {
+            let productinfo = {
+              ProductSkuId: product.productSkuId,
+              Count: product.buyCount,
+              ProductId: product.productId,
+              storeId: store.storeId,
+              userId: jsThis.$user.id()
+            }
+            buyProductInfo.push(productinfo)
+          }
+        })
+      })
+      if (buyProductInfo.length > 0) {
+        uni.showLoading({
+          title: 'loading'
+        })
+        jsThis.$api.localSet('buyProductInfo', buyProductInfo)
+        jsThis.$api.to('/pages/index?path=order_buy&isFromCart=true')
+      } else {
+        jsThis.$api.toastWarn('请先选择商品')
+      }
+    } else {
+      jsThis.$api.toastWarn('请先添加商品入购物车')
+    }
   }
 }

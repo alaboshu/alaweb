@@ -31,7 +31,7 @@
       </view>
     </view>
     <view class="cart-item-2-bg"></view>
-    <cartSumbit @change="radioChange" ref="cartSumbit"></cartSumbit>
+    <cartSumbit @change="radioChange" ref="cartSumbit" @save="save"></cartSumbit>
   </view>
 </template>
 
@@ -81,6 +81,10 @@
       // 监听全选
       radioChange (isRadio) {
         service.radioChange(this, isRadio)
+      },
+      // 提交订单
+      save () {
+        service.save(this)
       }
     }
   }
