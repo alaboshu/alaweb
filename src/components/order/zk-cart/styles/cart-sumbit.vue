@@ -1,5 +1,5 @@
 <template>
-  <view class="submit-cart">
+  <view class="submit-cart" :style="'bottom:'+bottom+'px;'">
     <view class="left" :class="{'left-active': isRadio}" @click="radioClick">
       <x-icon name="icon-testsu" size="20" color="#007AFF" v-if="isRadio"></x-icon>
     </view>
@@ -15,13 +15,27 @@
 
 <script>
   export default {
+    props: {
+      widget: {}
+    },
     data () {
       return {
         isRadio: false,
-        money: '0.00'
+        money: '0.00',
+        bottom: 0
       }
     },
+    mounted () {
+      this.init()
+    },
     methods: {
+      init () {
+        if (this.widget && this.widget.route) {
+          if (this.widget.route.path.indexOf('tabbar') > -1) {
+            this.bottom = 50
+          }
+        }
+      },
       radioClick () {
         this.isRadio = !this.isRadio
         this.$emit('change', this.isRadio)
@@ -51,7 +65,6 @@
     width: 100%;
     height: 50px;
     position: fixed;
-    bottom: 50px;
     display: flex;
     align-items: center;
     background: #fff;
