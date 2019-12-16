@@ -1,6 +1,6 @@
 <template>
-  <view class="zk-head" v-if="showHead">
-    <view class="h5" v-if="h5Show">
+  <view class="zk-head">
+    <view class="h5" v-if="h5Show && showHead">
       <view class="zk-head-show-h5">
         <view class="icon" @click="$api.back()" v-if="isShowBack">
           <x-icon name="icon-black" size="18" class="show-icon" color="#fff"></x-icon>
@@ -9,14 +9,16 @@
       </view>
     </view>
     <view class="wx" v-if="wxShow">
-      <view class="zk-head-show-wx">
-        <view class="icon" @click="$api.back()" v-if="isShowBack">
-          <x-icon name="icon-black" size="14" class="show-icon" color="#fff"></x-icon>
+      <view class="wx-show" v-if="showHead">
+        <view class="zk-head-show-wx">
+          <view class="icon" @click="$api.back()" v-if="isShowBack">
+            <x-icon name="icon-black" size="14" class="show-icon" color="#fff"></x-icon>
+          </view>
+          <view class="test">{{title}}</view>
         </view>
-        <view class="test">{{title}}</view>
       </view>
+      <view v-else class="wx-show-2"></view>
     </view>
-
   </view>
 </template>
 
@@ -96,37 +98,44 @@
       }
     }
     .wx {
-      width: 100%;
-      height: 65px;
-      position: relative;
-      .zk-head-show-wx {
+      .wx-show {
         width: 100%;
         height: 65px;
-        box-sizing: border-box;
-        position: fixed;
-        top: 0;
-        left: 0;
-        padding-bottom: 3px;
+        position: relative;
+        .zk-head-show-wx {
+          width: 100%;
+          height: 65px;
+          box-sizing: border-box;
+          position: fixed;
+          top: 0;
+          left: 0;
+          padding-bottom: 3px;
 
-        z-index: 9999999;
-        background: #c70f2c;
-        display: flex;
-        align-items: flex-end;
-        .icon {
-          width: 20px;
-          height: 25px;
-          margin-left: 10px;
-          .show-icon {
-            width: 100%;
-            height: 100%;
+          z-index: 9999999;
+          background: #c70f2c;
+          display: flex;
+          align-items: flex-end;
+          .icon {
+            width: 20px;
+            height: 25px;
+            margin-left: 10px;
+            .show-icon {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .test {
+            color: #ffffff;
+            font-size: 14px;
+            height: 25px;
+            line-height: 25px;
           }
         }
-        .test {
-          color: #ffffff;
-          font-size: 14px;
-          height: 25px;
-          line-height: 25px;
-        }
+      }
+      .wx-show-2 {
+        width: 100%;
+        height: 30px;
+        background: #c70f2c;
       }
     }
   }
