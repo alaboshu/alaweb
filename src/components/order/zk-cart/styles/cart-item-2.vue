@@ -31,7 +31,7 @@
       </view>
     </view>
     <view class="cart-item-2-bg"></view>
-    <cartSumbit @change="radioChange" ref="cartSumbit" @save="save"></cartSumbit>
+    <cartSumbit :widget="widget" @change="radioChange" ref="cartSumbit" @save="save"></cartSumbit>
   </view>
 </template>
 
