@@ -15,7 +15,7 @@
     props: {
       widget: {},
       type: {
-        default: 1
+        default: 2
       }
     }
   }
