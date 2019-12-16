@@ -288,7 +288,7 @@
       },
       async returned (value) {
         local.set('OrderDetails', this.viewModel)
-        this.$api.to('/pages/index?path=order_refund_edit&id=' + this.viewModel.id + '&type=' + value.type)
+        this.$api.to('/order/refund&id=' + this.viewModel.id + '&type=' + value.type)
       },
       async layerAffirm () {
         var para = {
@@ -309,7 +309,7 @@
         }
       },
       async refundDetail (value) {
-        this.$api.to('/pages/index?path=order_refund_edit&id=' + this.viewModel.id + '&type=' + value.type)
+        this.$api.to('/order/refund&id=' + this.viewModel.id + '&type=' + value.type)
       }
     }
   }
