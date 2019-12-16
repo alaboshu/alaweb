@@ -15,6 +15,7 @@ export default {
         })
       }
     }
+    console.info('这里进来了吧', response)
   },
   // 购物车商品选中
   radioClick (jsThis, data) {

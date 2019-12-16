@@ -61,7 +61,9 @@
       "style": {
         "onReachBottomDistance": 20,
         "enablePullDownRefresh": false,
-        "navigationStyle": "custom"
+        "h5": {
+          "titleNView": false
+        }
       }
     }
 
