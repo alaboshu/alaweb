@@ -18,16 +18,10 @@
       </view>
     </view>
     <view class="order-refund upload" v-if="inshow">
-      <view class="text">上传凭证</view>
-      <view>
-        <upload :inshow="inshow" :viewModel="viewModel"></upload>
-      </view>
+      <x-upload label="上传凭证" v-model="viewModel.images" :count="3"></x-upload>
     </view>
     <view class="order-refund upload" v-else-if="viewModel.images.length !== 0">
-      <view class="text">上传凭证</view>
-      <view>
-        <upload :inshow="inshow" :viewModel="viewModel"></upload>
-      </view>
+      <x-upload label="上传凭证" v-model="viewModel.images" :count="Number(3)"></x-upload>
     </view>
     <view v-if="!inshow">
       <view class="order-refund" v-if="viewModel.address">

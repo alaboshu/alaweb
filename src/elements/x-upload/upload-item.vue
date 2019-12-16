@@ -2,15 +2,18 @@
   <view class="zk-update-image">
     <view class="zk-update-list" v-if="count == 1 && viewModel">
       <img :src="$api.baseUrl() + viewModel" alt="" class="update_image">
-    </view>
-    <view v-else-if="count > 1 && viewModel">
-      <view class="zk-update-list" v-for="(item, index) in viewModel" :key="index">
-        <img :src="$api.baseUrl() + item" alt="" class="update_image">
+      <view class="show-delete">
+        <x-icon name="icon-remove" size="18" color="#fff" class="uni_icon"></x-icon>
       </view>
     </view>
-
-    <view class="zk-update" @click="updateImageCount" v-if="count== 1 && !viewModel">
-      <uni-icon type="plusempty" size="60" color="#A3A3A3" class="uni_icon-list"></uni-icon>
+    <view v-else-if="count > 1 && viewModel" class="zk-update-list" v-for="(item, index) in viewModel" :key="index">
+      <img :src="$api.baseUrl() + item" alt="" class="update_image">
+      <view class="show-delete">
+        <x-icon name="icon-remove" size="18" color="#fff" class="uni_icon" @click.native="deleteImage(item, index)"></x-icon>
+      </view>
+    </view>
+    <view class="zk-update" @click="updateImageCount">
+      <x-icon name="icon-add" size="20" color="#A3A3A3" class="uni_icon-list"></x-icon>
     </view>
   </view>
 </template>
@@ -69,7 +72,7 @@
           count: this.count,
           success: (res) => {
             uni.uploadFile({
-              url: this.$base.clientUploadApi(),
+              url: vueThis.$api.baseUrl() + '/api/StorageFile/upload',
               filePath: res.tempFilePaths[0],
               fileType: 'image',
               name: 'data',
@@ -92,6 +95,14 @@
           })
         }
         this.updateImage()
+      },
+      // 删除图片
+      deleteImage (item, index) {
+        if (this.count > 1) {
+          this.viewModel.splice(index, 1)
+        } else {
+          this.viewModel = ''
+        }
       }
     },
     watch: {
@@ -108,6 +119,7 @@
 
 <style lang="scss">
   .zk-update-image {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin: 10px 0;
@@ -117,9 +129,27 @@
       border-radius: 5px;
       margin-right: 10px;
       margin-bottom: 10px;
+      position: relative;
       .update_image {
         width: 100%;
         height: 100%;
+      }
+      .show-delete {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        .uni_icon {
+          height: 73px;
+        }
+      }
+    }
+    .zk-update-list:hover {
+      .show-delete {
+        display: block;
       }
     }
     .zk-update {

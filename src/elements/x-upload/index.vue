@@ -4,7 +4,7 @@
       <view>{{label}}</view>
       <view>{{uploadNum}}/{{countImage}}</view>
     </view>
-    <upload-item v-model="viewModel" ref="updateImage"></upload-item>
+    <upload-item v-model="viewModel" :count="count" ref="updateImage"></upload-item>
   </view>
 </template>
 
@@ -27,7 +27,11 @@
     },
     props: {
       dataModel: {},
-      label: {}
+      label: {},
+      count: {
+        type: Number,
+        default: 1
+      }
     },
     mounted () {
       this.init()

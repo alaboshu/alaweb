@@ -37,6 +37,10 @@ export default {
   config () {
     return config
   },
+  // 返回当前路由
+  baseUrl () {
+    return config.apiBaseUrl
+  },
   async themePage (option, url) {
     return theme.page(option)
   },
