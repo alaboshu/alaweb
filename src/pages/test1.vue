@@ -1,6 +1,6 @@
 <template>
   <view class="add">
-    <x-region></x-region>
+    <zk-cart type="2"></zk-cart>
   </view>
 </template>
 <script>

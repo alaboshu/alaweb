@@ -2,7 +2,7 @@
   <view class="zk-head" v-if="showHead">
     <view class="h5" v-if="h5Show">
       <view class="zk-head-show-h5">
-        <view class="icon" @click="$api.back()">
+        <view class="icon" @click="$api.back()" v-if="isShowBack">
           <x-icon name="icon-black" size="18" class="show-icon" color="#fff"></x-icon>
         </view>
         <view class="test">{{title}}</view>
@@ -10,7 +10,7 @@
     </view>
     <view class="wx" v-if="wxShow">
       <view class="zk-head-show-wx">
-        <view class="icon" @click="$api.back()">
+        <view class="icon" @click="$api.back()" v-if="isShowBack">
           <x-icon name="icon-black" size="14" class="show-icon" color="#fff"></x-icon>
         </view>
         <view class="test">{{title}}</view>
@@ -32,7 +32,8 @@
     data () {
       return {
         h5Show: false,
-        wxShow: false
+        wxShow: false,
+        isShowBack: true // 是否显示返回按钮
       }
     },
     mounted () {
@@ -41,10 +42,18 @@
     methods: {
       init () {
         // WeChatLite
+        this.isBack()
         if (this.$api.client() === 'WapH5') {
           this.h5Show = true
         } else if (this.$api.client() === 'WeChatLite') {
           this.wxShow = true
+        }
+      },
+      // 判断是否显示返回按钮
+      isBack () {
+        console.info('widget', this.widget)
+        if (this.widget.url.indexOf('/tabbar') > -1) {
+          this.isShowBack = false
         }
       }
     }
