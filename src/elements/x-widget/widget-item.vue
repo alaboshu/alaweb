@@ -8,7 +8,6 @@
     <zk-bank-list :widget="widget" v-if="widget.componentPath === '/common/zk-bank-list'"></zk-bank-list>
     <zk-cell :widget="widget" v-if="widget.componentPath === '/common/zk-cell'"></zk-cell>
     <zk-grid :widget="widget" v-if="widget.componentPath === '/common/zk-grid'"></zk-grid>
-    <zk-grid-list :widget="widget" v-if="widget.componentPath === '/common/zk-grid/zk-grid-list'"></zk-grid-list>
     <zk-html :widget="widget" v-if="widget.componentPath === '/common/zk-html'"></zk-html>
     <zk-image-list :widget="widget" v-if="widget.componentPath === '/common/zk-image-list'"></zk-image-list>
     <zk-image :widget="widget" v-if="widget.componentPath === '/common/zk-image'"></zk-image>
@@ -29,6 +28,7 @@
     <zk-address-edit :widget="widget" v-if="widget.componentPath === '/themes/zk-address-edit'"></zk-address-edit>
     <zk-head :widget="widget" v-if="widget.componentPath === '/themes/zk-head'"></zk-head>
     <zk-search :widget="widget" v-if="widget.componentPath === '/themes/zk-search'"></zk-search>
+    <zk-change-avator :widget="widget" v-if="widget.componentPath === '/user/zk-change-avator'"></zk-change-avator>
     <zk-login :widget="widget" v-if="widget.componentPath === '/user/zk-login'"></zk-login>
     <zk-logout :widget="widget" v-if="widget.componentPath === '/user/zk-logout'"></zk-logout>
     <zk-qrcode :widget="widget" v-if="widget.componentPath === '/user/zk-qrcode'"></zk-qrcode>
