@@ -1,16 +1,14 @@
 <template>
   <view class="zk-update-image">
-    <view class="zk-update-list" v-if="count == 1 && viewModel">
+    <view class="zk-update-list" v-if="count == 1 && viewModel" @click="showImage=viewModel, isShowImage=true">
       <img :src="$api.baseUrl() + viewModel" alt="" class="update_image">
-      <view class="show-delete">
-        <x-icon name="icon-remove" size="18" color="#fff" class="uni_icon"></x-icon>
-      </view>
     </view>
-    <view v-else-if="count > 1 && viewModel" class="zk-update-list" v-for="(item, index) in viewModel" :key="index">
+    <view v-else-if="count > 1 && viewModel" class="zk-update-list" @click="showImage=item, isShowImage=true" v-for="(item, index) in viewModel" :key="index">
       <img :src="$api.baseUrl() + item" alt="" class="update_image">
-      <view class="show-delete">
-        <x-icon name="icon-remove" size="18" color="#fff" class="uni_icon" @click.native="deleteImage(item, index)"></x-icon>
-      </view>
+    </view>
+    <view class="show-delete" v-if="isShowImage" @click.stop="isShowImage = false">
+      <img :src="$api.baseUrl() + showImage" class="show-image" alt="" srcset="">
+      <x-icon name="icon-remove" size="18" color="#fff" class="uni_icon" @click.native="deleteImage"></x-icon>
     </view>
     <view class="zk-update" @click="updateImageCount">
       <x-icon name="icon-add" size="20" color="#A3A3A3" class="uni_icon-list"></x-icon>
@@ -50,7 +48,9 @@
         sourceType: ['拍照', '相册', '拍照或相册'],
         sizeTypeIndex: 2,
         sizeType: ['压缩', '原图', '压缩或原图'],
-        viewModel: null
+        viewModel: null,
+        isShowImage: false, // 是否查看图片
+        showImage: null
       }
     },
     mounted () {
@@ -97,12 +97,15 @@
         this.updateImage()
       },
       // 删除图片
-      deleteImage (item, index) {
+      deleteImage () {
         if (this.count > 1) {
-          this.viewModel.splice(index, 1)
+          var imageIndex = this.viewModel.findIndex(r => r === this.showImage)
+          this.viewModel.splice(imageIndex, 1)
         } else {
           this.viewModel = ''
         }
+        this.showImage = ''
+        this.isShowImage = false
       }
     },
     watch: {
@@ -134,22 +137,29 @@
         width: 100%;
         height: 100%;
       }
-      .show-delete {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        .uni_icon {
-          height: 73px;
-        }
-      }
     }
-    .zk-update-list:hover {
-      .show-delete {
-        display: block;
+    .show-delete {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 1);
+      .uni_icon {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        height: 73px;
+      }
+      .show-image {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -100%);
+        width: 100%;
+        height: 50%;
+        margin-top: 40%;
       }
     }
     .zk-update {
