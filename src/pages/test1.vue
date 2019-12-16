@@ -18,6 +18,10 @@
     },
     methods: {
       init () {
+        uni.setNavigationBarTitle({
+          title: '新的标题',
+          titleNView: false
+        })
         this.$api.vuexLocalSet('test343434', this.viewModel)
       }
     }
