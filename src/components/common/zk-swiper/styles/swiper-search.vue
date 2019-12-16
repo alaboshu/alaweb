@@ -33,6 +33,7 @@
     left: 0;
     height: 45px;
     width: 100%;
+    box-sizing: border-box;
     padding: 0 10px;
     display: flex;
     align-items: center;

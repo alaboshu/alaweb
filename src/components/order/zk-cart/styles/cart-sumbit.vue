@@ -30,9 +30,11 @@
     },
     methods: {
       init () {
-        if (this.widget && this.widget.route) {
-          if (this.widget.route.path.indexOf('tabbar') > -1) {
-            this.bottom = 50
+        if (this.$api.client() === 'WapH5') {
+          if (this.widget && this.widget.route) {
+            if (this.widget.route.path.indexOf('tabbar') > -1) {
+              this.bottom = 50
+            }
           }
         }
       },

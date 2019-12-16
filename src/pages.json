@@ -4,7 +4,9 @@
       "style": {
         "navigationBarTitleText": "首页",
         "enablePullDownRefresh": true,
-        "navigationStyle": "custom"
+        "h5": {
+          "titleNView": false
+        }
       }
     },
     // #ifdef H5
@@ -29,7 +31,9 @@
       "style": {
         "navigationBarTitleText": "商城",
         "enablePullDownRefresh": true,
-        "navigationStyle": "custom"
+        "h5": {
+          "titleNView": false
+        }
       }
     },
     {
@@ -37,7 +41,9 @@
       "style": {
         "navigationBarTitleText": "分类",
         "enablePullDownRefresh": true,
-        "navigationStyle": "custom"
+        "h5": {
+          "titleNView": false
+        }
       }
     },
     {
@@ -45,7 +51,9 @@
       "style": {
         "navigationBarTitleText": "个人中心",
         "enablePullDownRefresh": true,
-        "navigationStyle": "custom"
+        "h5": {
+          "titleNView": false
+        }
       }
     },
     {

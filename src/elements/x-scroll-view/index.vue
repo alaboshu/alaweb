@@ -40,6 +40,8 @@
 
 <style lang="scss" scoped>
   .x-scroll-view {
+    width: 100%;
+    box-sizing: border-box;
     .scroll {
       width: 100%;
       box-sizing: border-box;

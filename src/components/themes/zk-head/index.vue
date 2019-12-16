@@ -8,7 +8,7 @@
         <view class="test">{{title}}</view>
       </view>
     </view>
-    <view class="wx" v-if="wxShow">
+    <!-- <view class="wx" v-if="wxShow">
       <view class="wx-show" v-if="showHead">
         <view class="zk-head-show-wx">
           <view class="icon" @click="$api.back()" v-if="isShowBack">
@@ -17,8 +17,10 @@
           <view class="test">{{title}}</view>
         </view>
       </view>
-      <view v-else class="wx-show-2"></view>
-    </view>
+      <view v-else class="wx-show-2">
+        <view class="wx-show-title"></view>
+      </view>
+    </view> -->
   </view>
 </template>
 
@@ -134,8 +136,16 @@
       }
       .wx-show-2 {
         width: 100%;
-        height: 30px;
-        background: #c70f2c;
+        height: var(--status-bar-height);
+        .wx-show-title {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: var(--status-bar-height);
+          z-index: 99999;
+          background: #c70f2c;
+        }
       }
     }
   }

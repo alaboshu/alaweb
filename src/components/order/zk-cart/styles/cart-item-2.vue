@@ -1,5 +1,5 @@
 <template>
-  <view class="cart-item-2" v-if="async">
+  <view class="cart-item-2" v-if="async" :style="$api.client() ==='WapH5'?'margin-bottom:50px;': ''">
     <view v-for="(storeItem, index) in widgetModel.storeItems" :key="index">
       <view class="store-title">
         <view class="left" @click="storeClick(index)" :class="{'left-active': productStoreRadio[index]}">
