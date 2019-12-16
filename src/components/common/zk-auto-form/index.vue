@@ -79,14 +79,17 @@
       async init () {
         console.info('zk-auto-form', this.dataModel)
         var type = this.type
-        console.info('weims buchucian ', type)
         if (!type) {
           type = this.$crud.getType(this.$route)
+        }
+        if (!type) {
+          type = this.widget.value.form.type
         }
         if (!type) {
           this.$api.confirm('表单type不存在,请传入')
           this.$api.back()
         }
+
         var para = {
           type: type,
           id: this.$crud.id(this.$route)
