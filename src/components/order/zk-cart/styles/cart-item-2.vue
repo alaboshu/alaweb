@@ -62,8 +62,6 @@
         // 计算屏幕宽度
         this.screenWidth = this.$base.screenWidth()
         service.initCart(this)
-        console.info('productRadio', this.productRadio)
-        console.info('widget', this.widgetModel)
         this.async = true
       },
       // 商品点击

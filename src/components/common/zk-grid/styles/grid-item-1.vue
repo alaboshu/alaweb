@@ -58,10 +58,8 @@
           // 小数转百分比
           this.flotLeft = Number(footLeft * 100) / 2 + '%'
         }
-        // console.info('ev', ev.detail)
       },
       clickLink (item) {
-        console.info('item', item.link.url)
       }
     }
   }

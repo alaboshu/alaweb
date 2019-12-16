@@ -77,7 +77,6 @@
     },
     methods: {
       async init () {
-        console.info('zk-auto-form', this.dataModel)
         var type = this.type
         if (!type) {
           type = this.$crud.getType(this.$route)

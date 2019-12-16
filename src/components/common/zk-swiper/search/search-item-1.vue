@@ -21,7 +21,6 @@
   export default {
     methods: {
       clickLink () {
-        console.info('点击点击')
       }
     }
   }

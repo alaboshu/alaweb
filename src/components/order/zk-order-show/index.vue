@@ -249,7 +249,6 @@
           userId: this.$user.id()
         }
         var buyInputResponse = await this.$api.httpGet('api/order/pay', para)
-        console.info('buyInputResponse', para, buyInputResponse)
         if (buyInputResponse.status === 1) {
           this.$refs.show_pay.$emit('payMethod', buyInputResponse.result.payId, buyInputResponse.result.payAmount, buyInputResponse.result.orderIds)
         } else {

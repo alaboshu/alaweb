@@ -53,7 +53,6 @@
       },
       // 判断是否显示返回按钮
       isBack () {
-        console.info('widget', this.widget)
         if (this.widget.url.indexOf('/tabbar') > -1) {
           this.isShowBack = false
         }
