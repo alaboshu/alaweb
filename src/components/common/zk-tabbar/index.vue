@@ -7,8 +7,8 @@
         <view v-for="(item, index) in list" :key="index" class="new-uni-tabbar__item" @click="_switchTab(item, index)">
           <view class="new-uni-tabbar__bd">
             <view class="new-view-icon">
-              <img v-if="index === tabIndex" :src="'/static/tabbar/' + item.imageGroup.selectImage + '.webp'" class="image" />
-              <img v-else :src="'/static/tabbar/' + item.imageGroup.image + '.webp'" class="image" />
+              <img v-if="index === tabIndex" :src="'/static/tabbar/' + item.imageGroup.selectImage + '.png'" class="image" />
+              <img v-else :src="'/static/tabbar/' + item.imageGroup.image + '.png'" class="image" />
             </view>
             <view class="new-tabbar-title" style="color:#999;" :style="'color:' + viewModel.selectColor" v-if="tabIndex === index">
               {{ item.link.name }}

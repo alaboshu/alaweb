@@ -28,9 +28,8 @@
       init () {
         this.list = this.gridList
         if (this.gridList) {
-          var num =
-            this.gridModel.gridCount -
-            (this.gridList.length % this.gridModel.gridCount)
+          var remainder = this.gridList.length % this.gridModel.gridCount
+          var num = remainder === 0 ? 0 : this.gridModel.gridCount - remainder
           if (num > 0) {
             for (let i = 0; i < num; i++) {
               this.list.push({ link: {} })
