@@ -1,7 +1,8 @@
 <template>
   <view class="x-password">
     <div class="x-input_label" v-if="label" :style="'color:'+colorIndex?'red':''">{{label}}</div>
-    <!-- <input class="uni-input" v-model="viewModel" :type="showPassword?'password':'test'" :placeholder="placeHolder" :maxlength="6" @input="changeInput" /> -->
+    <input class="uni-input" v-model="viewModel" type="password" v-if="showPassword" :maxlength="6" :placeholder="placeHolder" @input="changeInput" />
+    <input class="uni-input" v-model="viewModel" type="test" v-if="!showPassword" :placeholder="placeHolder" @input="changeInput" />
     <view class="uni-icon uni-icon-eye" :class="!showPassword ? 'uni-active' : ''" @click="showPassword = !showPassword"></view>
   </view>
 </template>
