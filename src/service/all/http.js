@@ -15,7 +15,9 @@ export default {
     if (api.client() === 'WeChatLite') {
       para = data
     }
+    const timer = api.loadingOpen(500) // 500ms内不提示加载
     var response = await axiosApi.get(globalConfig.apiBaseUrl + apiUrl, para)
+    api.loadingClose(timer)
     return response.data
   },
   async post (apiUrl, data) {

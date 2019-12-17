@@ -48,5 +48,8 @@
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
   "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
   "typescript.format.insertSpaceAfterConstructor": true,
-  "javascript.format.insertSpaceAfterConstructor": true
+  "javascript.format.insertSpaceAfterConstructor": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
