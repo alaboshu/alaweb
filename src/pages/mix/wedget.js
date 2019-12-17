@@ -22,8 +22,8 @@ export default {
             uni.setTabBarItem({
               index: index,
               text: element.link.name,
-              iconPath: `static/tabbar/${element.imageGroup.image}.webp`,
-              selectedIconPath: `static/tabbar/${element.imageGroup.selectImage}.webp`
+              iconPath: `static/tabbar/${element.imageGroup.image}.png`,
+              selectedIconPath: `static/tabbar/${element.imageGroup.selectImage}.png`
             })
           })
         }
