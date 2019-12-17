@@ -70,17 +70,19 @@
     },
     mounted () {
       this.init()
+      console.info('admin', this.widget.route)
       // 找到好方法后删除
-      if (this.$route.path === '/pages/user/reg') {
-        this.isAgree = true
-      }
+      // if (this.$route.path === '/pages/user/reg') {
+      //   this.isAgree = true
+      // }
     },
     methods: {
       async init () {
         var type = this.type
         if (!type) {
-          type = this.$crud.getType(this.$route)
+          type = this.$crud.getType(this.widget.route)
         }
+
         if (!type) {
           type = this.widget.value.form.type
         }
@@ -88,10 +90,9 @@
           this.$api.confirm('表单type不存在,请传入')
           this.$api.back()
         }
-
         var para = {
           type: type,
-          id: this.$crud.id(this.$route)
+          id: this.$crud.id(this.widget.route)
         }
         var response = await this.$api.httpGet('/Api/Auto/Form', para)
 

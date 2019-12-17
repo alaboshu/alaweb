@@ -58,26 +58,19 @@ export default {
   },
   // 根据路由获取类型
   getType (route) {
-    if (route.query !== undefined && route.query.Type !== undefined) {
-      return route.query.Type
-    }
-    if (route.query !== undefined && route.query.type !== undefined) {
-      return route.query.type
-    }
-    if (route.query !== undefined && route.query.key !== undefined) {
-      return route.query.key
-    }
-    if (route.query !== undefined && route.query.Key !== undefined) {
-      return route.query.Key
-    }
-    if (route.meta !== undefined && route.meta.type !== undefined) {
-      return route.meta.type
+    if (route) {
+      if (route.Type !== undefined) {
+        return route.Type
+      }
+      if (route.type !== undefined) {
+        return route.type
+      }
     }
   },
   // 获取URL中的ID
   id (route) {
-    if (route.query !== undefined && route.query.id !== undefined) {
-      return route.query.id
+    if (route !== undefined && route.id !== undefined) {
+      return route.id
     } else {
       return 0
     }
