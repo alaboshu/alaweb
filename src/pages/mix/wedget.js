@@ -18,7 +18,6 @@ export default {
         })
         if (data.tabbarForm && data.tabbarForm.links) {
           data.tabbarForm.links.forEach((element, index) => {
-            // static/tabbar/${element.imageGroup.image}.png
             uni.setTabBarItem({
               index: index,
               text: element.link.name,

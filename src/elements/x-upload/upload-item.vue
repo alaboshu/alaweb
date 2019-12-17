@@ -1,17 +1,19 @@
 <template>
   <view class="zk-update-image">
     <view v-if="count == 1 && viewModel" class="zk-update-list" @click="showImage=viewModel, isShowImage=true">
-      <img :src="$api.baseUrl() + viewModel" alt="" class="update_image" />
+      <img :src="viewModel" alt="" class="update_image" />
     </view>
     <view v-show="count > 1 && viewModel" class="zk-update-list" @click="showImage=item, isShowImage=true" v-for="(item, index) in viewModel" :key="index">
-      <img :src="$api.baseUrl() + item" alt="" class="update_image" />
+      <img :src="item" alt="" class="update_image" />
     </view>
     <view class="show-delete" v-if="isShowImage" @click.stop="isShowImage = false">
-      <img :src="$api.baseUrl() + showImage" class="show-image" alt="" srcset="">
-      <x-icon name="icon-remove" size="18" color="#fff" class="uni_icon" @click.native="deleteImage"></x-icon>
+      <img :src="showImage" class="show-image" alt="" srcset="">
+      <view class="uni_icon" @click="deleteImage">
+         <x-icon name="icon-remove" size="18" color="#fff"></x-icon>
+      </view>
     </view>
     <view class="zk-update" @click="updateImageCount">
-      <x-icon name="icon-add" size="20" color="#A3A3A3" class="uni_icon-list"></x-icon>
+      <x-icon name="icon-add" size="20" color="#A3A3A3"></x-icon>
     </view>
   </view>
 </template>
@@ -78,9 +80,10 @@
               name: 'data',
               success (res) {
                 if (vueThis.count === 1) {
-                  vueThis.viewModel = JSON.parse(res.data).result.path
+                  vueThis.viewModel = vueThis.$api.baseUrl() + JSON.parse(res.data).result.path
                 } else {
-                  vueThis.viewModel.push(JSON.parse(res.data).result.path)
+                  var imageUrl = vueThis.$api.baseUrl() + JSON.parse(res.data).result.path
+                  vueThis.viewModel.push(imageUrl)
                 }
               }
             })
@@ -152,6 +155,7 @@
         left: 50%;
         transform: translate(-50%, 0);
         height: 73px;
+        width: 20px;
       }
       .show-image {
         position: absolute;
@@ -168,7 +172,9 @@
       border-radius: 2px;
       background: #ededed;
       position: relative;
-      .uni_icon-list {
+      .x-icon{
+        width: 20px;
+        height: 20px;
         position: absolute;
         top: 50%;
         left: 50%;

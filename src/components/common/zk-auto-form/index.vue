@@ -18,7 +18,7 @@
       <view @click="$api.to('/pages/app/agree')">同意平台服务条款</view>
     </view>
     <view class="btn-box">
-      <x-button :loading="loading" :btnText="autoForm.tooltip.bottonText" @click="sumbit"></x-button>
+      <x-button :loading="loading" :btnText="autoForm.tooltip.bottonText" @change="sumbit"></x-button>
     </view>
     <view v-if="autoForm.tooltip.buttomHelpText !== null && autoForm.tooltip.buttomHelpText !== undefined">
       <ul class="buttom-text">
