@@ -66,7 +66,6 @@ export default {
         ...config.headers,
         ...this.getHead(apiUrl)
       }
-      console.info('cakl ', config)
       return config
     })
   },

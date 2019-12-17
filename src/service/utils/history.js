@@ -28,7 +28,11 @@ export default {
   back () {
     var url = this.backUrl()
     var historys = api.vuexLocalGet('browse_historys')
-    if (url.indexOf('/pages/tabbar') > -1 || url === '/') {
+    if (url.indexOf('/pages/tabbar') > -1 || url === '/' || url.indexOf('pages/tabbar') > -1) {
+      // 兼容小程序跳转
+      if (api.client() === 'WeChatLite' && url.indexOf('pages/tabbar') > -1) {
+        url = '/' + url
+      }
       uni.switchTab({
         url: url
       })

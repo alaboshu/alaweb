@@ -37,6 +37,7 @@
   .list-item {
     .list {
       width: 100%;
+      box-sizing: border-box;
       min-height: 50px;
       display: flex;
       align-items: center;

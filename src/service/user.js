@@ -60,8 +60,6 @@ export default {
       if (response.result !== undefined) {
         this.setUser(response.result)
         api.toastSuccess('登录成功')
-        // window.location.href = '/pages/index'
-        // this.$store.dispatch('UserLogin', loginUser.result)
         var openId = response.result.openId
         if (helper.length(openId) >= 12) {
           // api.localSet('wechat_openId', openId)
