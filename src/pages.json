@@ -17,7 +17,7 @@
     // #endif
 
     {
-      "path": "pages/test1",
+      "path": "pages/test",
       "style": {
         "navigationBarTitleText": "测试一",
         "enablePullDownRefresh": true
@@ -74,8 +74,8 @@
         "path": "pages/tabbar/user"
       },
       {
-        "name": "test1",
-        "path": "pages/test1"
+        "name": "test",
+        "path": "pages/test"
       }
     ]
   },

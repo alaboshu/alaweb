@@ -28,5 +28,4 @@
   }
 </script>
 <style lang="scss" scoped>
-  @import "@/assets/border/styles/index.scss";
 </style>
