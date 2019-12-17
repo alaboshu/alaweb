@@ -2,7 +2,7 @@
   <view class="zk-search-a">
     <view class="zk-head-logo">
       <view class="search_icon_left">
-        <i class="icon iconfont icon-zk-cart" v-show="!shows" @click="getCart" style="margin-right:5px;"></i>
+        <i class="icon iconfont icon-cart" v-show="!shows" @click="getCart" style="margin-right:5px;"></i>
         <i class="icon iconfont zk-arrows-left_black" v-show="shows" @click="$api.back()" v-if="isNotApp"></i>
       </view>
       <view class="head_search">

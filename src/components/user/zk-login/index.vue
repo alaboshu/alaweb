@@ -1,6 +1,6 @@
 <template>
   <view class="zk-login">
-    <view class="pushButton" @click="$api.back()">
+    <view class="pushButton" @click="$api.back()" v-if="isWx">
       <x-icon name="icon-black" size="16" :color="'#fff'"></x-icon>
     </view>
     <view class="form-login">
@@ -72,6 +72,11 @@
     },
     props: {
       widget: {}
+    },
+    computed: {
+      isWx () {
+        return this.$api.client() !== 'WeChatLite'
+      }
     },
     created () {
       if (this.$user.isLogin()) {

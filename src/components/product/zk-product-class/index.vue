@@ -68,6 +68,7 @@
         } else {
           let selectorQuery = uni.createSelectorQuery()
           selectorQuery.selectAll('.nav-left-item').boundingClientRect(function (rects) {
+            console.info('aaaaaaaaaaaaaa', rects)
             if (rects.length > 0) {
               _this.leftItemHeight = rects[0].height
             }
@@ -77,39 +78,30 @@
             let arr = [0]
             let top = 0
             rects.forEach(function (rect) {
-              // 					rect.id      // 节点的ID
-              // 					rect.dataset // 节点的dataset
-              // 					rect.left    // 节点的左边界坐标
-              // 					rect.right   // 节点的右边界坐标
-              // 					rect.top     // 节点的上边界坐标
-              // 					rect.bottom  // 节点的下边界坐标
-              // 					rect.width   // 节点的宽度
-              // 					rect.height  // 节点的高度
-
               top += rect.height
               arr.push(top)
             })
             _this.arr = arr
-          }).exec()
+          })
         }
       })
     },
     methods: {
       async init () {
-        this.widget.apiUrl = '/api/product/class?id=1'
-        this.widgetModel = await this.$api.themeWidget(this.widget)
-        if (this.widgetModel && this.widgetModel.value) {
-          this.viewModel = this.widgetModel.value.result
+        var para = {
+          id: this.$user.id()
+        }
+        var response = await this.$api.httpGet('/api/product/class', para)
+        if (response.status === 1) {
+          this.viewModel = response.result
         }
         if (this.$api.client() === 'AppPlus') {
           if (this.$api.payType() === 4) {
             this.statusBarHeight = this.$base.getSystemInfoSync().statusBarHeight
-            // this.height = this.$base.getSystemInfoSync().windowHeight
-            this.height = '400'
+            this.height = this.$base.getSystemInfoSync().windowHeight
           } else {
             this.statusBarHeight = this.$base.getSystemInfoSync().statusBarHeight
-            // this.height = this.$base.getSystemInfoSync().windowHeight - 46 - this.statusBarHeight
-            this.height = '400'
+            this.height = this.$base.getSystemInfoSync().windowHeight - 46 - this.statusBarHeight
           }
         } else {
           this.height = this.$base.getSystemInfoSync().windowHeight - 46
