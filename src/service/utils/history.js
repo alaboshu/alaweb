@@ -1,6 +1,6 @@
 import api from '@/service/api'
 export default {
-  to(url) {
+  to (url) {
     url = this.convertUrl(url)
     if (url.indexOf('/pages/tabbar') > -1) {
       uni.switchTab({
@@ -12,7 +12,7 @@ export default {
       })
     }
   },
-  backUrl() {
+  backUrl () {
     var historys = api.vuexLocalGet('browse_historys')
     var url = '/pages/tabbar/index'
     var currentUrl = historys[0]
@@ -25,7 +25,7 @@ export default {
     }
     return url
   },
-  back() {
+  back () {
     var url = this.backUrl()
     var historys = api.vuexLocalGet('browse_historys')
     url = this.hisClient(url)
@@ -42,14 +42,14 @@ export default {
     api.vuexLocalSet('browse_historys', historys)
   },
   // 兼容小程序跳转
-  hisClient(url) {
+  hisClient (url) {
     if (api.client() === 'WeChatLite') {
       return '/' + url
     }
     return url
   },
   // 历史记录
-  add(url) {
+  add (url) {
     var historys = api.vuexLocalGet('browse_historys')
     if (!historys) {
       historys = []
@@ -62,7 +62,7 @@ export default {
     }
     api.vuexLocalSet('browse_historys', historys)
   },
-  convertUrl(url) {
+  convertUrl (url) {
     if (url.indexOf('/tabbar') > -1 || url.indexOf('/pages/index') > -1) {
       return url
     } else {
