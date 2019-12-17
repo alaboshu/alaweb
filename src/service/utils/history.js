@@ -43,7 +43,7 @@ export default {
   },
   // 兼容小程序跳转
   hisClient (url) {
-    if (api.client() === 'WeChatLite') {
+    if (api.client() === 'WeChatLite' && url.indexOf('pages/') > -1) {
       return '/' + url
     }
     return url
