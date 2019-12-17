@@ -7,7 +7,7 @@ import axiosWx from 'wx-axios-promise'
 
 export default {
   async get (apiUrl, data) {
-    var axiosApi = this.axiosCore()
+    var axiosApi = this.axiosCore(apiUrl)
     this.getAxios(apiUrl)
     var para = {
       params: data
@@ -19,7 +19,7 @@ export default {
     return response.data
   },
   async post (apiUrl, data) {
-    var axiosApi = this.axiosCore()
+    var axiosApi = this.axiosCore(apiUrl)
     this.getAxios(apiUrl)
     var response = await axiosApi.post(globalConfig.apiBaseUrl + apiUrl, data)
     return response.data
@@ -30,7 +30,7 @@ export default {
     return response
   },
   async delete (apiUrl, data) {
-    var axiosApi = this.axiosCore()
+    var axiosApi = this.axiosCore(apiUrl)
     var para = this.parseParams(data)
     var response = await axiosApi.delete(globalConfig.apiBaseUrl + apiUrl + '?' + para)
     return response.data
@@ -49,18 +49,24 @@ export default {
       return ''
     }
   },
-  axiosCore () {
+  axiosCore (apiUrl) {
     if (api.client() === 'WeChatLite' || api.client() === 'WeChat') {
-      return axiosWx()
+      return axiosWx({
+        header: {
+          ...this.getHead(apiUrl)
+        }
+      })
     }
     return axios
   },
   getAxios (apiUrl) {
-    axios.interceptors.request.use((config) => {
+    var axiosApi = this.axiosCore(apiUrl)
+    axiosApi.interceptors.request.use((config) => {
       config.headers = {
         ...config.headers,
         ...this.getHead(apiUrl)
       }
+      console.info('cakl ', config)
       return config
     })
   },
