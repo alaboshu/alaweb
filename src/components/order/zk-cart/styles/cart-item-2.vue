@@ -8,8 +8,8 @@
         <view class="store-name">自营店铺</view>
       </view>
       <!-- 商品列表 -->
-      <view class="scroll-list" :style="'width:' + screenWidth + 'px;'" v-for="(productItem, productIndex) in storeItem.productSkuItems" :key="productIndex">
-        <view class="list" :style="'width:' + (screenWidth+50) + 'px;'">
+      <scroll-view class="scroll-list" :style="'width:' + screenWidth + 'px;'" :scroll-x="true" v-for="(productItem, productIndex) in storeItem.productSkuItems" :key="productIndex">
+        <view class="list" :style="'width:' + (screenWidth+fuseWidth) + 'px;'">
           <view class="left">
             <view class="left-check" @click="radioClick(index, productIndex)" :class="{'left-check-active':productRadio[index][productIndex]}">
               <x-icon name="icon-testsu" size="20" color="#007AFF" v-if="productRadio[index][productIndex]"></x-icon>
@@ -17,7 +17,7 @@
           </view>
           <view class="center">
             <img :src="productItem.thumbnailUrl" class="image" alt="" srcset="">
-            <view class="cont">
+            <view class="cont" :style="'width:'+(screenWidth -100) +'px;'">
               <view class="title">{{productItem.name}}</view>
               <view class="intro">{{productItem.propertyValueDesc}}</view>
               <view class="foot">
@@ -28,7 +28,7 @@
           </view>
           <view class="right" @click="deleletClick(storeItem,productItem)">删除</view>
         </view>
-      </view>
+      </scroll-view>
     </view>
     <view class="cart-item-2-bg"></view>
     <cartSumbit :widget="widget" @change="radioChange" ref="cartSumbit" @save="save"></cartSumbit>
@@ -37,6 +37,7 @@
 
 <script>
   import service from './service'
+  import compatible from './compatible'
   import cartSumbit from './cart-sumbit'
   export default {
     components: {
@@ -51,7 +52,8 @@
         screenWidth: 0,
         widgetModel: {}, // 存储购物车返回数据
         productRadio: [], // 所有商品的选框
-        productStoreRadio: [] // 所有店铺的选框
+        productStoreRadio: [], // 所有店铺的选框
+        fuseWidth: 0 // 兼容h5，小程序宽度
       }
     },
     mounted () {
@@ -61,6 +63,7 @@
       async init () {
         // 计算屏幕宽度
         this.screenWidth = this.$base.screenWidth()
+        this.fuseWidth = compatible.screenWidth(this)
         service.initCart(this)
         this.async = true
       },
@@ -172,7 +175,6 @@
         background: #f74c31;
       }
       .center {
-        width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
@@ -182,7 +184,6 @@
           border-radius: 3px;
         }
         .cont {
-          flex-grow: 1;
           height: 72px;
           padding: 0 10px;
           .title {

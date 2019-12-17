@@ -25,7 +25,11 @@ export default {
     var pages = getCurrentPages()
     var fullPath
     if (api.client() === 'WeChatLite') {
-      fullPath = pages[0].route
+      fullPath = pages[pages.length - 1].route
+      var path = this.parseParams(pages[pages.length - 1].options)
+      if (path) {
+        fullPath = `${pages[pages.length - 1].route}?${path}`
+      }
     } else {
       fullPath = pages[0].$route.fullPath
     }
@@ -65,5 +69,20 @@ export default {
       path = path.substr(0, index)
     }
     return path
+  },
+  // 处理路由拼接
+  parseParams (data) {
+    try {
+      var tempArr = []
+      for (var i in data) {
+        var key = encodeURIComponent(i)
+        var value = encodeURIComponent(data[i])
+        tempArr.push(key + '=' + value)
+      }
+      var urlParamsStr = tempArr.join('&')
+      return urlParamsStr
+    } catch (err) {
+      return null
+    }
   }
 }
