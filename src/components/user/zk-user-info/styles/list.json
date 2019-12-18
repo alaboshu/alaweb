@@ -3,8 +3,8 @@
       "infoType": "avator",
       "type": "头像",
       "value": "",
-      "icon": "zk-right",
-      "url": "",
+      "icon": "icon-right",
+      "url": "/user/avator",
       "show": true,
       "isAct": true,
       "image": ""
@@ -70,14 +70,14 @@
     "infoType": "editAddress",
     "type": "收货地址",
     "name": "",
-    "icon": "zk-right",
+    "icon": "icon-right",
     "url": "",
     "show": true
   }, {
     "infoType": "loginOut",
     "type": "退出登录",
     "name": "",
-    "icon": "zk-right",
+    "icon": "icon-right",
     "url": "",
     "show": true
   }]

@@ -38,17 +38,18 @@
     <zk-user-info :widget="widget" v-if="widget.componentPath === '/user/zk-user-info'"></zk-user-info>
     <zk-user-service :widget="widget" v-if="widget.componentPath === '/user/zk-user-service'"></zk-user-service>
     <zk-user-top :widget="widget" v-if="widget.componentPath === '/user/zk-user-top'"></zk-user-top>
+    <zk-usr-avator :widget="widget" v-if="widget.componentPath === '/user/zk-usr-avator'"></zk-usr-avator>
   </view>
 </template>
 
 <script>
-export default {
-  name: 'widget-item',
-  props: {
-    widget: {},
-    model: {}
-  },
-  methods: {
+  export default {
+    name: 'widget-item',
+    props: {
+      widget: {},
+      model: {}
+    },
+    methods: {
+    }
   }
-}
 </script>

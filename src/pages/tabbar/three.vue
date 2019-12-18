@@ -1,5 +1,5 @@
 <template>
-  <x-widget :option="option"></x-widget>
+  <x-widget ref="xWidget" :option="option"></x-widget>
   <!-- <zk-swiper-list></zk-swiper-list> -->
 </template>
 
@@ -11,6 +11,11 @@
       return {
         option: [{ path: 'tabbar/three' }]
       }
+    },
+    onShow () {
+      this.$nextTick(() => {
+        this.$refs.xWidget.$refs.scrollItem.init()
+      })
     },
     onLoad (option) {
       this.option[0].path = 'tabbar/three'

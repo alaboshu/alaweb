@@ -6,7 +6,7 @@ import axios from 'axios'
 import axiosWx from 'wx-axios-promise'
 
 export default {
-  async get(apiUrl, data) {
+  async get (apiUrl, data) {
     var axiosApi = this.axiosCore(apiUrl)
     this.getAxios(apiUrl)
     const timer = api.loadingOpen(500) // 500ms内不提示加载
@@ -25,24 +25,24 @@ export default {
       return ''
     }
   },
-  async post(apiUrl, data) {
+  async post (apiUrl, data) {
     var axiosApi = this.axiosCore(apiUrl)
     this.getAxios(apiUrl)
     var response = await axiosApi.post(globalConfig.apiBaseUrl + apiUrl, data)
     return response.data
   },
   //  Put方法：改
-  async put(apiUrl, data) {
+  async put (apiUrl, data) {
     var response = await this.getRequest(apiUrl).put(apiUrl, data)
     return response
   },
-  async delete(apiUrl, data) {
+  async delete (apiUrl, data) {
     var axiosApi = this.axiosCore(apiUrl)
     var para = this.parseParams(data)
     var response = await axiosApi.delete(globalConfig.apiBaseUrl + apiUrl + '?' + para)
     return response.data
   },
-  parseParams(data) {
+  parseParams (data) {
     try {
       var tempArr = []
       for (var i in data) {
@@ -56,7 +56,7 @@ export default {
       return ''
     }
   },
-  axiosCore(apiUrl) {
+  axiosCore (apiUrl) {
     if (api.client() === 'WeChatLite' || api.client() === 'WeChat') {
       return axiosWx({
         header: {
@@ -66,7 +66,7 @@ export default {
     }
     return axios
   },
-  getAxios(apiUrl) {
+  getAxios (apiUrl) {
     var axiosApi = this.axiosCore(apiUrl)
     axiosApi.interceptors.request.use((config) => {
       config.headers = {
@@ -76,7 +76,7 @@ export default {
       return config
     })
   },
-  getHead(apiUrl) {
+  getHead (apiUrl) {
     var headObj = {
       'zk-token': token.getToken(apiUrl),
       'zk-user-id': user.id(),

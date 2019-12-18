@@ -28,6 +28,9 @@
         if (item.infoType === 'editAddress') {
           this.$api.to('/user/address')
         }
+        if (item.url) {
+          this.$api.to(item.url)
+        }
       }
     }
   }
@@ -52,7 +55,7 @@
         display: flex;
         align-items: center;
         .right-icon {
-          width: 20px;
+          width: 15px;
           height: 25px;
           color: #d4cbcd;
         }
