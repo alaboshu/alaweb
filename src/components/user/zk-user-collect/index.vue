@@ -10,7 +10,9 @@
         </view>
       </view>
     </view>
-
+    <view v-else class="noData-image">
+      <img class="temporarily_img" src="http://ui.5ug.com/static/static/nodata.webp">
+    </view>
   </div>
 </template>
 

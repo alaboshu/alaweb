@@ -1,8 +1,5 @@
 <template>
   <div v-if="showAuthorization">
-    <!-- < <open-data type="userNickName"></open-data>
-    <open-data type="userAvatarUrl"></open-data>
-    <open-data type="userGender" lang="zh_CN"></open-data>-->
     <div class="mask"></div>
     <div v-if="authorizationphone">
       <div class="authorization-popup">
@@ -211,6 +208,7 @@
                           that.failed()
                         } else {
                           if (loginWXresponse.status === 1) {
+                            that.authorizationphone = true
                             if (loginWXresponse.result.isLogin) {
                               that.$user.setUser(loginWXresponse.result.userInfo)
                               uni.hideLoading()
