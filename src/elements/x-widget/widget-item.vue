@@ -39,6 +39,7 @@
     <zk-user-service :widget="widget" v-if="widget.componentPath === '/user/zk-user-service'"></zk-user-service>
     <zk-user-top :widget="widget" v-if="widget.componentPath === '/user/zk-user-top'"></zk-user-top>
     <zk-usr-avator :widget="widget" v-if="widget.componentPath === '/user/zk-usr-avator'"></zk-usr-avator>
+    <zk-user-reg :widget="widget" v-if="widget.componentPath === '/user/zk-user-reg'"></zk-user-reg>
   </view>
 </template>
 

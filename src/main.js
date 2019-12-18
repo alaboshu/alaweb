@@ -51,6 +51,7 @@ import zkReg from '@/components/user/zk-reg/index.vue'
 import zkUserAddress from '@/components/user/zk-user-address/index.vue'
 import zkUserCollect from '@/components/user/zk-user-collect/index.vue'
 import zkUserInfo from '@/components/user/zk-user-info/index.vue'
+import zkUserReg from '@/components/user/zk-user-reg/index.vue'
 import zkUserService from '@/components/user/zk-user-service/index.vue'
 import zkUserTop from '@/components/user/zk-user-top/index.vue'
 import zkUsrAvator from '@/components/user/zk-usr-avator/index.vue'
@@ -115,6 +116,7 @@ Vue.component('zk-reg', zkReg)
 Vue.component('zk-user-address', zkUserAddress)
 Vue.component('zk-user-collect', zkUserCollect)
 Vue.component('zk-user-info', zkUserInfo)
+Vue.component('zk-user-reg', zkUserReg)
 Vue.component('zk-user-service', zkUserService)
 Vue.component('zk-user-top', zkUserTop)
 Vue.component('zk-usr-avator', zkUsrAvator)
