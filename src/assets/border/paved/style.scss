@@ -1,0 +1,80 @@
+.paved-border {
+  margin: 10px 0;
+  background: #fff;
+  border-radius: 5px;
+
+
+  &.widget_border {
+    .border-header {
+      padding-left: 10px;
+      height: 40px;
+      line-height: 40px;
+
+      .border-header-title {
+        font-size: 13px;
+        padding-left: 3px;
+      }
+    }
+  }
+
+  .border-body {
+    .grid-item-2 {
+      padding-top: 0;
+      border-radius: 5px 5px 5px 5px;
+      -webkit-border-radius: 5px 5px 5px 5px;
+      -moz-border-radius: 5px 5px 5px 5px;
+      -ms-border-radius: 5px 5px 5px 5px;
+      -o-border-radius: 5px 5px 5px 5px;
+    }
+
+    .grid-item-1 {
+      padding: 3px 0;
+    }
+
+    .zk-product {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .border-heade {
+    border-bottom: 1px solid #e5e5e5;
+
+    .border-header-desc {
+      margin-top: 2px;
+      height: 13px;
+      line-height: 13px;
+      padding: 0px 5px;
+      color: #999999;
+      border-left: 1px solid #d9d8d8;
+      font-family: 'PingFang SC';
+      color: #666666;
+    }
+  }
+}
+
+@mixin widget_border($name, $color, $text-color) {
+  .paved-border__#{$name} {
+    background: $color !important;
+
+    .border-body {
+      .grid-item-2 {
+        background: $color;
+      }
+    }
+
+    .border-header-title {
+      color: $text-color !important;
+    }
+  }
+}
+
+@each $name,
+$colors in $component-colors {
+  @include widget_border($name, map-get($colors, base), map-get($colors, font));
+}
+
+@each $name,
+$colors in $theme-colors {
+  @include widget_border($name, map-get($colors, base), map-get($colors, font));
+}

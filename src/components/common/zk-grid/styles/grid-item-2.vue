@@ -1,7 +1,7 @@
 <template>
   <view class="grid-item-2">
     <view class="ul">
-      <view class="list" :style="'width:' + 100 / gridModel.gridCount + '%;'" v-for="(item, index) in list" @click="linkTo(item.link.url)" :key="index">
+      <view class="list" :style="'width:' + (screenWidth / gridModel.gridCount-1) + 'px;'" v-for="(item, index) in list" @click="linkTo(item.link.url)" :key="index">
         <img v-if="item.image" :src="item.image" class="image" alt="" />
         <view class="test">{{ item.link.name }}</view>
       </view>
@@ -18,7 +18,8 @@
     data () {
       return {
         count: 3,
-        list: []
+        list: [],
+        screenWidth: 0
       }
     },
     mounted () {
@@ -27,6 +28,7 @@
     methods: {
       init () {
         this.list = this.gridList
+        this.screenWidth = this.$base.screenWidth()
         if (this.gridList) {
           var remainder = this.gridList.length % this.gridModel.gridCount
           var num = remainder === 0 ? 0 : this.gridModel.gridCount - remainder
@@ -52,15 +54,15 @@
     box-sizing: border-box;
     padding: 5px 10px;
     .ul {
-      border-left: 1px solid #f4f4f4;
-      border-top: 1px solid #f4f4f4;
+      border-left: 1px solid #e4e7ed;
+      border-top: 1px solid #e4e7ed;
       width: 100%;
       display: flex;
       flex-wrap: wrap;
       .list {
         height: 100px;
-        border-right: 1px solid #f4f4f4;
-        border-bottom: 1px solid #f4f4f4;
+        border-right: 1px solid #e4e7ed;
+        border-bottom: 1px solid #e4e7ed;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -72,6 +74,18 @@
         .test {
           margin-top: 5px;
           font-size: 12px;
+        }
+      }
+    }
+  }
+  .paved-border {
+    .grid-item-2 {
+      padding: 0;
+      .ul {
+        border-left: none;
+        .list {
+          border-left: 1px solid #e4e7ed;
+          border-right: none;
         }
       }
     }

@@ -1,7 +1,7 @@
 <template>
   <view class="h5-zk-amount">
     <view class="x-amount_zichan">
-      <view class="x-amount_my">我的资产</view>
+      <view class="x-amount_my" v-if="false">我的资产</view>
       <view class="x-amount_ul">
         <ul v-if="viewModel">
           <li class="x-amount_li" :style="'width:'+100/gridCol+'%'" v-for="(item,index) in viewModel" :key="index" :class="{'x-amount_lenght':viewModel.lenth>4}">
@@ -75,7 +75,12 @@
     float: left;
     text-align: center;
     border-right: 1px solid $gl-border2;
+    border-bottom: 1px solid $gl-border2;
     padding: 10px 0px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     box-sizing: border-box;
   }
   .x-amount_li:nth-child(4n) {
