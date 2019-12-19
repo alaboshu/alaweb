@@ -26,8 +26,6 @@
     display: flex;
     align-items: center;
     padding: 5px;
-    margin: 5px 0;
-    background: #ffffff;
 
     .list {
       width: 30%;
@@ -43,6 +41,7 @@
       img {
         width: 100%;
         height: 80px;
+        margin-top: 1px;
         border-radius: 5px 5px 0 0;
       }
       .test {
@@ -62,6 +61,12 @@
           text-decoration: line-through;
         }
       }
+    }
+  }
+  .protlet-border {
+    .product-item-2 {
+      padding: 5px;
+      height: 110px;
     }
   }
 </style>

@@ -2,7 +2,7 @@
   <view class="product-list">
     <view class="product-list-cont" v-for="(item, index) in viewModel" :key="index" @click="linkTo(item)">
       <view class="product-list-image">
-        <img :src="'http://retail_v13.api.5ug.com/'+item.thumbnailUrl" v-lazy alt="" srcset="">
+        <img :src="$api.baseUrl()+item.thumbnailUrl" v-lazy alt="" srcset="">
       </view>
       <view class="product-list-title">{{item.name}}</view>
       <view class="product-list-foot">

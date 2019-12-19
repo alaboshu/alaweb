@@ -3,7 +3,7 @@
     <view class="common" v-for="(item,index) in viewModel" :key="index" @click="linkTo(item)">
       <view class="common-left">
         <view class="common-image">
-          <img :src="'http://retail_v13.api.5ug.com/'+ item.thumbnailUrl" alt="" v-lazy>
+          <img :src="$api.baseUrl()+item.thumbnailUrl" alt="" v-lazy>
         </view>
       </view>
       <view class="common-right">

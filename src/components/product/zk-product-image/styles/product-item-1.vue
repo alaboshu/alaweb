@@ -28,12 +28,12 @@
 
 <style lang="scss" scoped>
   .product-item-1 {
-    box-sizing: border-box;
     padding: 10px;
     height: 100px;
-    width: 100%;
-    background: #fff;
+    border-radius: 5px;
     display: flex;
+    margin: 0 10px;
+    background: #fff;
     .left {
       width: 110px;
       height: 100%;
@@ -77,7 +77,7 @@
         justify-content: center;
         align-items: center;
         .image {
-          width: 78px;
+          width: 75px;
           height: 60px;
         }
 
