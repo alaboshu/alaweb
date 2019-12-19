@@ -1,6 +1,6 @@
 <template>
   <view class="zk-product">
-    <view class="common" v-for="(item,index) in viewModel" :key="index" @click="$api.to('/product/show?id='+item.id)">
+    <view class="common" v-for="(item,index) in viewModel" :key="index" @click="linkTo(item)">
       <view class="common-left">
         <view class="common-image">
           <img :src="'http://retail_v13.api.5ug.com/'+ item.thumbnailUrl" alt="" v-lazy>
@@ -33,6 +33,9 @@
     methods: {
       // 下拉菜单事件
       scrollView () {
+      },
+      linkTo (item) {
+        this.$api.to(`/product/show?id=${item.id}`)
       }
     }
   }

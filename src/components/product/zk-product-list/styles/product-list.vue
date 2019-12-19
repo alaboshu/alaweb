@@ -1,6 +1,6 @@
 <template>
   <view class="product-list">
-    <view class="product-list-cont" v-for="(item, index) in viewModel" :key="index" @click="$api.to('/product/show?id='+item.id)">
+    <view class="product-list-cont" v-for="(item, index) in viewModel" :key="index" @click="linkTo(item)">
       <view class="product-list-image">
         <img :src="'http://retail_v13.api.5ug.com/'+item.thumbnailUrl" v-lazy alt="" srcset="">
       </view>
@@ -24,6 +24,9 @@
       },
       // 下拉菜单事件
       scrollView () {
+      },
+      linkTo (item) {
+        this.$api.to(`/product/show?id=${item.id}`)
       }
     }
   }

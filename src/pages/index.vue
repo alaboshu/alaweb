@@ -14,7 +14,7 @@
       }
     },
     onLoad (option) {
-      if (this.$api.client() === 'WeChatLite') {
+      if (this.$api.client() !== 'WapH5') {
         this.option = []
         this.option.push(option)
       } else {

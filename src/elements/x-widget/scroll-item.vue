@@ -62,9 +62,9 @@
             title
           })
         }
-        if (this.viewModel.url === '/index') {
-          this.$api.to('/pages/tabbar/index')
-        }
+        // if (this.viewModel.url === '/index') {
+        //   this.$api.to('/pages/tabbar/index')
+        // }
         if (process.env.NODE_ENV === 'development') {
           console.info(this.viewModel.name, this.viewModel)
         }
