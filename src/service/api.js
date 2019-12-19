@@ -8,17 +8,20 @@ import help from '@/service/core/helper'
 import config from '@/service/config'
 import store from '@/service/store'
 import share from '@/service/planform/share'
+import screen from '@/service/utils/screen'
+
+
 
 export default {
   // 页面跳转
-  to (url) {
+  to(url) {
     history.to(url)
   },
-  back () {
+  back() {
     history.back()
   },
   // 当前租户
-  tenant () {
+  tenant() {
     if (config.isTenant === true) {
       var tenant = this.vuexLocalGet('tenant')
       return tenant
@@ -27,83 +30,83 @@ export default {
     }
   },
   // 输出信息,发布环境不输出
-  info () {
+  info() {
     if (process.env.NODE_ENV === 'development') {
       console.info(arguments)
     }
   },
 
   // config信息
-  config () {
+  config() {
     return config
   },
   // 返回当前路由
-  baseUrl () {
+  baseUrl() {
     return config.apiBaseUrl
   },
-  async themePage (option, url) {
+  async themePage(option, url) {
     return theme.page(option)
   },
   // 模块信息
-  async themeWidget (widget, appendPara) {
+  async themeWidget(widget, appendPara) {
     return theme.widget(widget, appendPara)
   },
   // http get
-  async httpGet (apiUrl, data) {
+  async httpGet(apiUrl, data) {
     return http.get(apiUrl, data)
   },
   //   http请求,Post方法 :增
-  async httpPost (apiUrl, data) {
+  async httpPost(apiUrl, data) {
     return http.post(apiUrl, data)
   },
   //   http请求,Put方法：改
-  async httpPut (apiUrl, data) {
+  async httpPut(apiUrl, data) {
     return http.put(apiUrl, data)
   },
   //  http请求,delete方法：删
-  async httpDelete (apiUrl, data) {
+  async httpDelete(apiUrl, data) {
     return http.delete(apiUrl, data)
   },
 
-  loadingOpen (time) {
+  loadingOpen(time) {
     return loading.open(time)
   },
-  loadingClose (time, isLoad) {
+  loadingClose(time, isLoad) {
     return loading.close(time, isLoad)
   },
   // 获取缓存
-  localGet (name) {
+  localGet(name) {
     return local.get(name)
   },
   // 设置缓存
-  localSet (name, data) {
+  localSet(name, data) {
     return local.set(name, data)
   },
   // 删除缓存
-  localRemove (name) {
+  localRemove(name) {
     return local.remove(name)
   },
   // 成功提示
-  toast (message) {
+  toast(message) {
     return toast.success(message)
   },
-  toastSuccess (message) {
+  toastSuccess(message) {
     return toast.success(message)
   },
   // 错误提示
-  toastWarn (message) {
+  toastWarn(message) {
     return toast.warn(message)
   },
   // 底部文字提示
-  toastButton (message) {
+  toastButton(message) {
     return toast.botton(message)
   },
   // 中间文字
-  centerButton (message) {
+  centerButton(message) {
     return toast.center(message)
   },
   // 弹出确认消息
-  confirm (message) {
+  confirm(message) {
     var _this = this
     uni.showModal({
       title: '提示',
@@ -119,15 +122,15 @@ export default {
     })
   },
   /** 微信分享 */
-  share (title, imageUrl, desc, url) {
+  share(title, imageUrl, desc, url) {
     share.share(title, imageUrl, desc, url)
   },
   // 判断字符串是否为空
-  isEmpty (str) {
+  isEmpty(str) {
     return help.isEmpty(str)
   },
   // 终端类型
-  client () {
+  client() {
     // #ifdef H5
     var u = navigator.userAgent
     var client = 'WapH5'
@@ -148,7 +151,7 @@ export default {
     // #endif
   },
   // 支付类型
-  payType () {
+  payType() {
     if (this.client() === 'WapH5') {
       // 手机Wap
       return 2
@@ -158,25 +161,19 @@ export default {
     } else if (this.client() === 'WeChatLite') {
       // 小程序
       return 6
-    } else if (
-      this.client() === 'AppPlus' &&
-      this.getSystemInfoSync().platform === 'ios'
-    ) {
+    } else if (this.client() === 'AppPlus' && screen.getSystemInfoSync().platform === 'ios') {
       return 3
-    } else if (
-      this.client() === 'AppPlus' &&
-      this.getSystemInfoSync().platform === 'android'
-    ) {
+    } else if (this.client() === 'AppPlus' && screen.getSystemInfoSync().platform === 'android') {
       return 4
     }
   },
-  vuexSet (name, value) {
+  vuexSet(name, value) {
     store.state[name] = value
   },
-  vuexGet (name) {
+  vuexGet(name) {
     return store.state[name]
   },
-  vuexLocalGet (name) {
+  vuexLocalGet(name) {
     var data = this.vuexGet(name)
     if (data) {
       return data
@@ -186,12 +183,12 @@ export default {
       return data
     }
   },
-  vuexLocalSet (name, value) {
+  vuexLocalSet(name, value) {
     this.vuexSet(name, value)
     local.set(name, value)
   },
   // 添加日志
-  async log () {
+  async log() {
     var para = {
       message: JSON.stringify(arguments)
     }
