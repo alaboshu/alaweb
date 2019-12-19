@@ -25,6 +25,7 @@
         this.async = true
       },
       scrollView (ev) {
+        this.$bus.$emit('sreach_view_list', ev)
         if (ev.detail.scrollTop > 50) {
           this.$bus.$emit('bk_search_view', true)
         } else {

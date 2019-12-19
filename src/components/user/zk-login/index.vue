@@ -75,7 +75,7 @@
     },
     computed: {
       isWx () {
-        return this.$api.client() !== 'WeChatLite'
+        return this.$api.client() === 'WapH5'
       }
     },
     created () {

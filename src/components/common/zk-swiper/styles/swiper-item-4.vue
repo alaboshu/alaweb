@@ -2,7 +2,7 @@
   <view class="swiper-item-4" v-if="swiperModel.swiperList">
     <view class="swiper-bgColor" :style="widget.style.css"></view>
     <view class="swiper-head">
-      <search type="2"></search>
+      <search type="2" :css="widget.style.css"></search>
     </view>
     <view class="swiper-class">
       <swiperClass :widget="widget"></swiperClass>

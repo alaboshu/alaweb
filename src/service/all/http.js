@@ -13,8 +13,6 @@ export default {
 
     var para = this.parseParams(data)
     try {
-      var all = `clientType=WapH5&path=/index`
-      console.info('cccccccccccccccccccccccccc', para)
       var response = await axiosApi.get(globalConfig.apiBaseUrl + apiUrl + '?' + para).then(res => {
         return res
       })

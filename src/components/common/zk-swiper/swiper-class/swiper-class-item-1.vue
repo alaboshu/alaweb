@@ -9,7 +9,7 @@
     </view>
     <view class="right" :style="widget.style.css">
       <view class="iconList">
-        <x-icon name="zk-qrcode" size="20" color="#efd6b4"></x-icon>
+        <x-icon name="icon-qrcode" size="20" color="#efd6b4"></x-icon>
       </view>
     </view>
   </view>
