@@ -6,7 +6,6 @@ import user from '@/service/user.js'
 import base from '@/service/base.js'
 import crud from '@/service/crud.js'
 import weixin from '@/service/core/weixin'
-   import promise from 'es6-promise'
 import '@/assets/style/iconfont/css/iconfount.css'
 // #ifdef H5
 import '@/assets/style/h5/index.scss'
@@ -38,6 +37,7 @@ import zkOrderList from '@/components/order/zk-order-list/index.vue'
 import zkOrderRefund from '@/components/order/zk-order-refund/index.vue'
 import zkOrderShow from '@/components/order/zk-order-show/index.vue'
 import zkProductClass from '@/components/product/zk-product-class/index.vue'
+import zkProductImage from '@/components/product/zk-product-image/index.vue'
 import zkProductList from '@/components/product/zk-product-list/index.vue'
 import zkProductListpage from '@/components/product/zk-product-listpage/index.vue'
 import zkProductShowpage from '@/components/product/zk-product-showpage/index.vue'
@@ -103,6 +103,7 @@ Vue.component('zk-order-list', zkOrderList)
 Vue.component('zk-order-refund', zkOrderRefund)
 Vue.component('zk-order-show', zkOrderShow)
 Vue.component('zk-product-class', zkProductClass)
+Vue.component('zk-product-image', zkProductImage)
 Vue.component('zk-product-list', zkProductList)
 Vue.component('zk-product-listpage', zkProductListpage)
 Vue.component('zk-product-showpage', zkProductShowpage)
@@ -168,7 +169,6 @@ Vue.directive('lazy', {
 
 
 
-promise.polyfill()
 Vue.prototype.$api = api
 Vue.prototype.$user = user
 Vue.prototype.$base = base
