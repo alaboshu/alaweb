@@ -1,5 +1,5 @@
 <template>
-  <view class="zk-product-image" v-if="widgetModel">
+  <view class="zk-product-image" v-if="async">
     <productItem1 :viewModel="viewModel" v-if="widgetModel.productType == 1"></productItem1>
     <productItem2 :viewModel="viewModel" v-if="widgetModel.productType == 2"></productItem2>
     <productItem3 :viewModel="viewModel" v-if="widgetModel.productType == 3"></productItem3>
@@ -25,7 +25,8 @@
     data () {
       return {
         viewModel: [],
-        widgetModel: null
+        widgetModel: null,
+        async: false
       }
     },
     mounted () {
@@ -40,7 +41,7 @@
         if (response.status === 1) {
           this.viewModel = response.result
         }
-        console.info('aaaaaaaaaaaa', this.viewModel)
+        this.async = true
       }
     }
   }

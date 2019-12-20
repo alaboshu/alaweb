@@ -9,8 +9,8 @@
       </view>
     </view>
     <view class="right">
-      <view class="list" v-for="(item, index) in viewModel.productItems" :key="index" v-show="index< 3">
-        <img :src="$api.baseUrl() + item.thumbnailUrl" class="image" alt="">
+      <view class="list" v-for="(item, index) in list" :key="index">
+        <img :src="'http://retail_v13.api.5ug.com/' + item.thumbnailUrl" class="image" alt="">
         <view class="text">会员价￥{{item.price}}</view>
       </view>
     </view>
@@ -21,6 +21,26 @@
   export default {
     props: {
       viewModel: {}
+    },
+    data () {
+      return {
+        list: []
+      }
+    },
+    mounted () {
+      this.init()
+    },
+    methods: {
+      init () {
+        if (this.viewModel) {
+          console.info('this.view', this.viewModel)
+          for (let i = 0; i < this.viewModel.productItems.length; i++) {
+            if (i < 3) {
+              this.list.push(this.viewModel.productItems[i])
+            }
+          }
+        }
+      }
     }
   }
 </script>
@@ -51,7 +71,8 @@
       }
       .buttom {
         margin-top: 5px;
-        display: inline-block;
+        display: flex;
+        width: 60px;
         color: #8d7b53;
         background: #f0f1e1;
         padding: 0 5px;
@@ -77,10 +98,9 @@
         justify-content: center;
         align-items: center;
         .image {
-          width: 75px;
+          width: 100%;
           height: 60px;
         }
-
         .text {
           height: 15px;
           line-height: 15px;

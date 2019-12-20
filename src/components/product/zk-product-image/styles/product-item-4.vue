@@ -7,15 +7,40 @@
     <view class="right">
       <scroll-view class="scroll-view">
         <view class="ul">
-          <view class="list" v-for="item in 3" :key="item">
-            <img src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4094400000,3327666375&fm=26&gp=0.jpg" alt="">
-            <view class="buttom">果盘果篮</view>
+          <view class="list" v-for="(item, index) in list" :key="index">
+            <img :src="'http://retail_v13.api.5ug.com/' + item.thumbnailUrl" alt="">
+            <view class="buttom">{{item.price}}</view>
           </view>
         </view>
       </scroll-view>
     </view>
   </view>
 </template>
+
+<script>
+  export default {
+    props: {
+      viewModel: {}
+    },
+    data () {
+      return {
+        list: []
+      }
+    },
+    mounted () {
+      this.init()
+    },
+    methods: {
+      init () {
+        for (let i = 0; i < this.viewModel.productItems.length; i++) {
+          if (i < 3) {
+            this.list.push(this.viewModel.productItems[i])
+          }
+        }
+      }
+    }
+  }
+</script>
 
 
 <style lang="scss" scoped>

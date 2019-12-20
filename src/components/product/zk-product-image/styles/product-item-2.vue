@@ -1,7 +1,7 @@
 <template>
   <view class="product-item-2">
-    <view class="list" v-for="(item, index) in viewModel.productItems" :key="index" v-show="index < 4">
-      <img :src="$api.baseUrl() + item.thumbnailUrl" alt="" srcset="" />
+    <view class="list" v-for="(item, index) in list" :key="index">
+      <img :src="'http://retail_v13.api.5ug.com/' + item.thumbnailUrl" alt="" srcset="" />
       <view class="test">
         <text class="price">￥{{item.price}}</text>
         <text class="un-price">{{item.price}}</text>
@@ -14,6 +14,23 @@
   export default {
     props: {
       viewModel: {}
+    },
+    data () {
+      return {
+        list: []
+      }
+    },
+    mounted () {
+      this.init()
+    },
+    methods: {
+      init () {
+        for (let i = 0; i < this.viewModel.productItems.length; i++) {
+          if (i < 4) {
+            this.list.push(this.viewModel.productItems[i])
+          }
+        }
+      }
     }
   }
 </script>

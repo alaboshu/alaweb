@@ -1,7 +1,7 @@
 <template>
   <view class="product-item-list-4">
     <view class="list" v-for="(item, index) in viewModel" :key="index" @click="linkto(item)">
-      <img :src="$api.baseUrl()+item.thumbnailUrl" alt="">
+      <img :src="'http://retail_v13.api.5ug.com/'+item.thumbnailUrl" alt="">
       <view class="cont">
         <view class="title">{{item.name}}</view>
         <view class="price">
@@ -37,7 +37,6 @@
     column-gap: 10px;
     .list {
       margin-bottom: 10px;
-      width: 100%;
       min-height: 100px;
       background: #fff;
       display: flex;
